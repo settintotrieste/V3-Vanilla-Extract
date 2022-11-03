@@ -164,7 +164,7 @@
 		}			
 		create_trade_route = {
 			goods = luxury_clothes
-			level = 9
+			level = 4
 			direction = import
 			target = c:FRA.market
 		}			
@@ -870,7 +870,7 @@
 		}
 		create_trade_route = {
 			goods = hardwood
-			level = 5
+			level = 3
 			direction = import
 			target = c:RUS.market
 		}		
@@ -1543,7 +1543,7 @@
 	c:FRA = {
 		create_trade_route = {
 			goods = wine
-			level = 12
+			level = 10
 			direction = export
 			target = c:USA.market
 		}	
@@ -1567,7 +1567,7 @@
 		}
 		create_trade_route = {
 			goods = hardwood
-			level = 11
+			level = 9
 			direction = import
 			target = c:RUS.market
 		}			

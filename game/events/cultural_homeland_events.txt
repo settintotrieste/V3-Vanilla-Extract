@@ -24,11 +24,11 @@ cultural_homeland_events.1 = { #Majority Culture blames minority culture
 	trigger = {
 		any_scope_state = {
 			is_homeland_of_country_cultures = ROOT
-			any_scope_pop = {
-				pop_is_discriminated = yes
+			any_scope_culture = {
+				culture_is_discriminated_in = ROOT
 			}
-			any_scope_pop = {
-				pop_has_primary_culture = yes
+			any_scope_culture = {
+				is_primary_culture_of = ROOT
 			}
 			average_sol < 10
 		}
@@ -38,26 +38,24 @@ cultural_homeland_events.1 = { #Majority Culture blames minority culture
 		random_scope_state = {
 			limit = {
 				is_homeland_of_country_cultures = ROOT
-				any_scope_pop = {
-					pop_is_discriminated = yes
+				any_scope_culture = {
+					culture_is_discriminated_in = ROOT
 				}
-				any_scope_pop = {
-					pop_has_primary_culture = yes
+				any_scope_culture = {
+					is_primary_culture_of = ROOT
 				}
 				average_sol < 10
 			}
 			save_scope_as = culture_state
-			random_scope_pop = {
-				limit = {
-					pop_has_primary_culture = yes
-				}
-				culture = { save_scope_as = state_majority_culture }
+			random_scope_culture = {
+				limit = { culture_is_discriminated_in = ROOT }
+				save_scope_as = state_minority_culture
 			}
 			random_scope_culture = {
-				limit = {
-					culture_is_discriminated_in = ROOT
+				limit = { 
+					is_primary_culture_of = ROOT 
 				}
-				save_scope_as = state_minority_culture
+				save_scope_as = state_majority_culture
 			}
 		}
 	}
@@ -112,11 +110,11 @@ cultural_homeland_events.10 = { #Newspaper writes article about minority culture
 	trigger = {
 		any_scope_state = {
 			is_homeland_of_country_cultures = ROOT
-			any_scope_pop = {
-				pop_is_discriminated = yes
+			any_scope_culture = {
+				culture_is_discriminated_in = ROOT
 			}
-			any_scope_pop = {
-				pop_has_primary_culture = yes
+			any_scope_culture = {
+				is_primary_culture_of = ROOT
 			}
 		}
 	}
@@ -125,31 +123,23 @@ cultural_homeland_events.10 = { #Newspaper writes article about minority culture
 		random_scope_state = {
 			limit = {
 				is_homeland_of_country_cultures = ROOT
-				any_scope_pop = {
-					pop_is_discriminated = yes
+				any_scope_culture = {
+					culture_is_discriminated_in = ROOT
 				}
-				any_scope_pop = {
-					pop_has_primary_culture = yes
+				any_scope_culture = {
+					is_primary_culture_of = ROOT
 				}
 			}
 			save_scope_as = culture_state
-			random_scope_pop = {
-				limit = {
-					pop_has_primary_culture = yes
-				}
-				culture = { 
-					save_scope_as = state_majority_culture 
-				}
+			random_scope_culture = {
+				limit = { culture_is_discriminated_in = ROOT }
+				save_scope_as = state_minority_culture
 			}
-			random_scope_pop = {
-				limit = {
-					culture = { 
-						culture_is_discriminated_in = ROOT 
-					}
+			random_scope_culture = {
+				limit = { 
+					is_primary_culture_of = ROOT 
 				}
-				culture = { 
-					save_scope_as = state_minority_culture 
-				}
+				save_scope_as = state_majority_culture
 			}
 		}
 	}

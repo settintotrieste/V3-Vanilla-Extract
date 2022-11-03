@@ -50,8 +50,8 @@ NAI = {
 	DECLARE_BANKRUPTCY_MIN_DAYS_IN_DEFAULT = 30 # After this many days in default, the AI will declare bankruptcy
 
 	BASE_AGGRESSION = 0.5 # Base chance that AI will consider starting a diplo play each time the goal is checked (1 = 1%)
-	UNIFICATION_AGRESSION_MULT_HIGHER_TIR = 20 # AI aggression is multiplied by this for calculating whether they should try to start a unification/leadership play, if the country would end up forming a nation of a higher tier
-	UNIFICATION_AGRESSION_MULT_SAME_TIER = 0.1 # AI aggression is multiplied by this for calculating whether they should try to start a unification/leadership play, if the country would end up forming a nation of the same tier
+	UNIFICATION_AGGRESSION_MULT_HIGHER_TIER = 20 # AI aggression is multiplied by this for calculating whether they should try to start a unification/leadership play, if the country would end up forming a nation of a higher tier
+	UNIFICATION_AGGRESSION_MULT_SAME_TIER = 0.1 # AI aggression is multiplied by this for calculating whether they should try to start a unification/leadership play, if the country would end up forming a nation of the same tier
 	
 	DIPLO_PROPOSAL_DAYS_LEFT_MAX = 12  # AI will not answer a proposal when it has more than this amount of days left (should map to DIPLOMATIC_ACTION_PENDING_APPROVAL_DAYS)
 	DIPLO_PROPOSAL_DAYS_LEFT_MIN = 4	# AI will always answer a proposal when it has this or less amount of days left (should map to DIPLOMATIC_ACTION_PENDING_APPROVAL_DAYS)
@@ -99,7 +99,7 @@ NAI = {
 	RECRUITABLE_COMMANDER_DISFAVORED_IG_FACTOR = 0.5	# If a recruitable commander comes from an IG the AI dislikes, multiply score by this
 	
 	COMBAT_UNIT_ASSIGNMENT_THRESHOLD = 0.75			# If combat units assigned to a HQ is at least this of wanted amount, don't try to assign more units
-	COMBAT_UNIT_ASSIGNMENT_STICKYNESS = 0.10		# If moving a commander makes a HQ's unit ratio worse than the ratio of target HQ + this, don't do the move
+	COMBAT_UNIT_ASSIGNMENT_STICKINESS = 0.10		# If moving a commander makes a HQ's unit ratio worse than the ratio of target HQ + this, don't do the move
 	
 	CONSCRIPTION_ESTIMATED_MILITARY_POWER_MULT = 0.5 		# AI multiplies the value of conscriptable battalions by this to estimate potential combat power
 	
@@ -188,24 +188,25 @@ NAI = {
 	START_DIPLO_PLAY_LIKELY_ALLY_STRENGTH_WEIGHT = 0.5 # Consider participants that will likely to join a side with this amount of their forces
 	START_DIPLO_PLAY_POTENTIAL_ALLY_STRENGTH_WEIGHT = 0.33 # Consider participants that might be swayed to our side with with this amount of their forces
 	
-	DIPLO_PLAY_BACK_DOWN_CHANCE_THRESHOLD = 25 # If ( confidence + boldness ) is less than this, consider backing down 
+	DIPLO_PLAY_BACK_DOWN_CHANCE_THRESHOLD = 0 # If ( confidence + boldness ) is less than this, consider backing down 
 	DIPLO_PLAY_BACK_DOWN_CHANCE_ESCALATION = 30 # Above this escalation, AI will consider backing down
-	DIPLO_PLAY_BACK_DOWN_GUARANTEED_THRESHOLD = -25 # If ( confidence + boldness ) is less than this, always back down before the play goes to war
+	DIPLO_PLAY_BACK_DOWN_GUARANTEED_THRESHOLD = -50 # If ( confidence + boldness ) is less than this, always back down before the play goes to war
 	DIPLO_PLAY_BACK_DOWN_GUARANTEED_ESCALATION = 95 # Above this escalation, AI will always back down if it's supposed to
 	DIPLO_PLAY_BACK_DOWN_CHANCE_LOW_ESCALATION = 0.1 # 1.0 = 1% (chance each tick) - used before countdown to war starts
 	DIPLO_PLAY_BACK_DOWN_CHANCE_HIGH_ESCALATION = 0.5 # 1.0 = 1% (chance each tick) - used after countdown to war starts
-	DIPLO_PLAY_BACK_DOWN_CHANCE_WAR_LOSSES_MULT = 0.5 # Multiply chance of backing down due to additional wargoal demands ( 1 + this * relative impact of additional wargoals )
+	DIPLO_PLAY_BACK_DOWN_CHANCE_WAR_LOSSES_MULT = 0.05 # Multiply chance of backing down due to additional wargoal demands ( 1 + this * relative impact of additional wargoals )
 	DIPLO_PLAY_BACK_DOWN_CHANCE_WAR_LOSSES_MAX = 3.0 # Max multiplier for impact of additional wargoal demands (including the base of 1)
 	DIPLO_PLAY_SWAY_THRESHOLD = 2.0 # If AI has this much military strength compared to enemy, don't bother trying to sway anyone
 	DIPLO_PLAY_DECIDE_ON_SUPPORT_ESCALATION = 30 # Above this escalation, AI will potentially start taking sides (or declare neutrality) even if not swayed
-	DIPLO_PLAY_TAKE_SIDES_MIN_BOLDNESS = 50 # Boldness must be at least this for AI to want to take a side with no gain
+	DIPLO_PLAY_TAKE_SIDES_MIN_BOLDNESS = 25 # Boldness must be at least this for AI to want to take a side with no gain
 	DIPLO_PLAY_TAKE_SIDES_CHANCE = 0.001 # Multiplied by boldness for chance of taking sides each tick
 	DIPLO_PLAY_TAKE_SIDES_CONTAINMENT_MULT = 10 # Chance of taking sides in a containment play is multiplied by this 
 	DIPLO_PLAY_DECLARE_NEUTRALITY_CHANCE = 0.001 # Multiplied by neutrality for chance of declaring neutrality each tick (only if there's no side the country prefers OR play has reached countdown to war)
 	DIPLO_PLAY_DECLARE_NEUTRALITY_HIGH_ESCALATION_MULT = 20 # Chance of declaring neutrality during countdown to war is multiplied by this
 	DIPLO_PLAY_ABANDON_SUPPORT_CHANCE = 0.1 # Multiplied with negative support score
 	DIPLO_PLAY_SWAY_COUNTRIES_ESCALATION = 20 # Above this escalation, AI will potentially start swaying countries
-	DIPLO_PLAY_SWAY_COUNTRIES_CHANCE = 5 # Chance each tick that the AI will try to sway someone
+	DIPLO_PLAY_SWAY_COUNTRIES_CHANCE_SCALED = 5 # Chance each tick that the AI will try to sway someone (scaled by relative strength of the two sides)
+	DIPLO_PLAY_SWAY_COUNTRIES_CHANCE_MAX = 25 # Max chance each tick that the AI will try to sway someone 
 	DIPLO_PLAY_TIMED_WEIGHT_DURATION = 12 # When AI randomly determines sympathy for one side of a diplo play, how long does that weight stay
 	DIPLO_PLAY_PREFERENCE_THRESHOLD = 25 # At this delta, an AI country is considered to have a preference for that side of the diplo play
 	DIPLO_PLAY_WEAK_ABANDON_SUPPORT_THRESHOLD = -25 # If support for the side an AI country is backing drops below this, consider abandoning it
@@ -263,7 +264,7 @@ NAI = {
 	DIPLO_PLAY_NEUTRALITY_FROM_DEVASTATION_LEVEL = 100 # At 100% devastation across the country (weighted by state population), add this amount of neutrality score
 	DIPLO_PLAY_NEUTRALITY_FROM_TURMOIL = 100 # At 100% turmoil across the country (weighted by state population), add this amount of neutrality score
 	DIPLO_PLAY_NEUTRALITY_IN_SUBJECT_CONFLICT = -50 # If either side in the play is a subject, subtract this amount of neutrality score
-	DIPLO_PLAY_NEUTRALITY_IN_NATIVE_UPRISING = 50 # Added to neutrality score for native uprising type conflicts
+	DIPLO_PLAY_NEUTRALITY_IN_NATIVE_UPRISING = 25 # Added to neutrality score for native uprising type conflicts
 	DIPLO_PLAY_NEUTRALITY_FROM_ONGOING_CONFLICTS = 200 # If in a conflict where military strength compared to the enemy is equal to or above DIPLO_PLAY_FORCE_BALANCE_SCALE, add this amount of neutrality score
 	DIPLO_PLAY_NEUTRALITY_FROM_LOWER_RANK = 5 # For each rank value difference between us and the lowest ranked participant in the play, if we're higher rank than them
 	DIPLO_PLAY_NEUTRALITY_FROM_NO_ARMY = 1000 # If we have no army at all, add this to neutrality score
@@ -278,9 +279,9 @@ NAI = {
 	DIPLO_PLAY_SYMPATHY_ENEMY_OF_SUBJECT_TARGET = -25 # Subtracted from sympathy range for enemies of our subjects if the enemy is the defender
 	DIPLO_PLAY_SYMPATHY_ENEMY_OF_ALLY_INITIATOR = -50 # Subtracted from sympathy range for enemies of our allies if the enemy is the attacker
 	DIPLO_PLAY_SYMPATHY_ENEMY_OF_ALLY_TARGET = -25 # Subtracted from sympathy range for enemies of our allies if the enemy is the defender
-	DIPLO_PLAY_SYMPATHY_ENEMY_OF_INFAMOUS_COUNTRY = 25 # Added to sympathy range for enemy of infamous country
-	DIPLO_PLAY_SYMPATHY_ENEMY_OF_NOTORIOUS_COUNTRY = 50 # Added to sympathy range for enemy of notorious country
-	DIPLO_PLAY_SYMPATHY_ENEMY_OF_PARIAH_COUNTRY = 100 # Added to sympathy range for enemy of pariah country
+	DIPLO_PLAY_SYMPATHY_ENEMY_OF_INFAMOUS_COUNTRY = 35 # Added to sympathy range for enemy of infamous country
+	DIPLO_PLAY_SYMPATHY_ENEMY_OF_NOTORIOUS_COUNTRY = 75 # Added to sympathy range for enemy of notorious country
+	DIPLO_PLAY_SYMPATHY_ENEMY_OF_PARIAH_COUNTRY = 200 # Added to sympathy range for enemy of pariah country
 	DIPLO_PLAY_SYMPATHY_LENIENT_AI_GAME_RULE = 35 # Added to sympathy range for player when using lenient AI game rule
 	DIPLO_PLAY_SYMPATHY_HARSH_AI_GAME_RULE = -35 # Subtracted to sympathy range for player when using harsh AI game rule
 	DIPLO_PLAY_SYMPATHY_INCREASE_GAINED_BACKER = 100 # Sympathy is increased by up to this amount for enemy of a side which receives a new backer, scaled by their number of battalions compared to total forces in the play
@@ -391,7 +392,7 @@ NAI = {
 	
     # Below data is used for General Orders:
 	HQ_DEFENSE_MIN_THEATER_SCORE = 100								# Theater of local HQ must have at least this importance score to have a minimum garrison
-	HQ_DEFENSE_MIN_WANTED_LAND_GARRISON = 0.15						# Keep at least this number of local troops to garrison important HQs against enemy invasion
+	HQ_DEFENSE_MIN_WANTED_GARRISON = 0.15						# Keep at least this number of local troops to garrison important HQs against enemy invasion
 	
 	MAX_CONVOY_USAGE_FOR_SUPPLY_ROUTES = 0.5						# AI will not commit more than this fraction of its convoys to supporting overseas operations
 	
@@ -574,7 +575,7 @@ NAI = {
 	EMBARGO_BUILDING_CONSUMPTION_VALUE_FACTOR = 10 # For each % of ( buy orders * base price ) in the market that is building consumption of this good, add this score
 	EMBARGO_GOODS_HIGH_PRICE_LEVEL_MULT = 5.0 	# Goods price level above baseline is multiplied by this and then applied as a multiplicative effect on embargo score
 	EMBARGO_GOODS_EXPORTED_SHORTAGE_MULT = 10.0 	# If a goods is in shortage and being exported, multiply embargo score by this (overrides EMBARGO_GOODS_HIGH_PRICE_LEVEL_MULT)
-	EMBARGO_STICKYNESS = 1.5 				# How much higher is an existing embargo scored
+	EMBARGO_STICKINESS = 1.5 				# How much higher is an existing embargo scored
 	EMBARGO_MIN_DURATION = 12 				# AI will not consider removing a recently placed embargo for this number of months
 	EMBARGO_MAX_SPENDING_FRACTION = 0.25 	# How much of its total Influence production is the AI willing to use for embargos
 	
@@ -595,7 +596,7 @@ NAI = {
 	PRODUCTION_BUILDING_OUTPUT_NEW_GOODS_FACTOR = 2.0 # Add this value to a building for each unit of money worth of goods that currently isn't available in our market but the AI wants to prioritize
 	PRODUCTION_BUILDING_OUTPUT_WANTED_INDUSTRIAL_GOODS_FACTOR = 0.25 # Add this value to a building for each unit of money worth of industrial goods that aren't overproduced in the country and are used by buildings
 	PRODUCTION_BUILDING_OUTPUT_WANTED_MILITARY_GOODS_FACTOR = 0.25 # Add this value to a building for each unit of money worth of military goods that aren't overproduced in the country and are used by buildings
-	RODUCTION_BUILDING_OUTPUT_NEEDED_INDUSTRIAL_GOODS_FACTOR = 0.5 # Add this value to a building for each unit of money worth of industrial goods that are underproduced in the country and are used by buildings
+	PRODUCTION_BUILDING_OUTPUT_NEEDED_INDUSTRIAL_GOODS_FACTOR = 0.5 # Add this value to a building for each unit of money worth of industrial goods that are underproduced in the country and are used by buildings
 	PRODUCTION_BUILDING_OUTPUT_NEEDED_MILITARY_GOODS_FACTOR = 0.5 # Add this value to a building for each unit of money worth of military goods that are underproduced in the country and are used by buildings
 	PRODUCTION_BUILDING_CAN_USE_INVESTMENT_POOL_MULT = 1.25 #  Total weight is multiplied by this if the building can be funded by the country's investment pool
 	PRODUCTION_BUILDING_NEW_GOODS_OUTPUT_MULT = 1.25 #  Total weight is multiplied by this if the building outputs a good not available in our market
@@ -638,7 +639,7 @@ NAI = {
 	PRODUCTION_METHOD_DISFAVORED_GOODS_FACTOR = -0.25 # Per base cost * units of goods produced that the AI disfavors
 	PRODUCTION_METHOD_UNDESIRABLE_GOODS_PRICE_THRESHOLD = 1.5 # If a PM using the 'most productive' logic makes use of a good whose price is above ( base * this ), reduce the score
 	PRODUCTION_METHOD_UNDESIRABLE_GOODS_PRICE_FACTOR = -0.5 # Per base cost * units of goods whose price is above undesirable price threshold
-	PRODUCTION_METHOD_STICKYNESS = 1.25 # Score of current method is multiplied by this
+	PRODUCTION_METHOD_STICKINESS = 1.25 # Score of current method is multiplied by this
 	PRODUCTION_METHOD_CHANCE_TO_CHANGE = 0.1 # Chance that the AI will consider changing a production method when evaluating methods
 	PRODUCTION_METHOD_LOW_POP_THRESHOLD = 50000 # If a state's population is less than this, use the scoring factor below for low-pop PMs
 	PRODUCTION_METHOD_LOW_POP_FACTOR = 100 # If a state's population is less than PRODUCTION_METHOD_LOW_POP_THRESHOLD, multiply score by this
@@ -671,7 +672,7 @@ NAI = {
 	AI_PEACE_DESIRE_FROM_GOLD_RESERVES = -50 # Subtract this amount of peace desire at 100% gold reserves
 	
 	# AI country-specific goal data
-	SECRET_GOAL_STICKYNESS = 2.0 # The higher this is, the less likely the AI is to change an established secret goal during recalculation
+	SECRET_GOAL_STICKINESS = 2.0 # The higher this is, the less likely the AI is to change an established secret goal during recalculation
 	SECRET_GOAL_SAME_GOAL_BONUS = 1.5
 	SECRET_GOAL_WRONG_TYPE_FOR_DIPLOMATIC_PLAY_MULTIPLIER = 0.25 # Added to friendly secret goals for enemies in a play, and hostile secret goals for allies in a play 
 	ATTITUDE_STRONG_GOAL_SCORE_THRESHOLD = 100
@@ -823,7 +824,7 @@ NPolitics = {
 	IG_IN_GOVERNMENT_APPROVAL = 0		# Added if IG is in government
 	IG_IN_OPPOSITION_APPROVAL = 0		# Added if IG is in opposition (and not powerful)
 	IG_POWERFUL_IN_OPPOSITION_APPROVAL = -1 # Added if powerful IG in opposition
-	STARTUP_MIN_LEGITIMACY_IG_BARIER = 40 # Min legitimacy when on startup we allow to remove IGs from goverment that decrease legitimacy
+	STARTUP_MIN_LEGITIMACY_IG_BARRIER = 40 # Min legitimacy when on startup we allow to remove IGs from goverment that decrease legitimacy
 	APPROVAL_THRESHOLD_ANGRY = -10		# At this or below approval, IG is considered angry
 	APPROVAL_THRESHOLD_UNHAPPY = -5		# At this or below approval, IG is considered unhappy
 	APPROVAL_THRESHOLD_HAPPY = 5		# At this or above approval, IG is considered happy
@@ -836,7 +837,7 @@ NPolitics = {
 	LAW_ENACTMENT_ADVANCE_FACTOR = 2		# The _base_ advance chance is the success chance multiplied by this factor [>=1]
 	LAW_ENACTMENT_RULER_IDEOLOGY_EFFECT = 0.05 # Ruler ideology has this impact on a law's chance to pass or stall depending on relative approval
 	LAW_ENACTMENT_MOVEMENT_SUPPORT_PASS_EFFECT = 0.01 # Movement support has this impact on a law's chance to pass	
-	LAW_ENACTMENT_MOVEMENT_SUPPORT_STALL_EFFECT = 0.005 # Movement support has this impact on a law's chance to stall	
+	LAW_ENACTMENT_MOVEMENT_SUPPORT_STALL_EFFECT = 0.01 # Movement support has this impact on a law's chance to stall	
 	
 	STATE_BUREAUCRACY_BASE_COST = 10		# The base cost per incorporated state
 	STATE_BUREAUCRACY_POP_BASE_COST = 4		# The base BUR multiplier per population multiple
@@ -861,8 +862,8 @@ NPolitics = {
 	POLITICAL_MOVEMENT_START_CHANCE_SCALED = 0.05 # Additional chance of a political movement starting scaled with potential support
 	POLITICAL_MOVEMENT_START_CHANCE_NUM_MOVEMENTS_DIVISOR = 2 # If we already have movements, divide start chance of a new movement by ( 1 + this * cur num movements )
 	POLITICAL_MOVEMENT_TO_PRESERVE_CHECK_TO_START_CHANCE = 25 # Chance that a political movement is checked at all on a daily basis if it's a movement to preserve (for performance reasons)
-	POLITICAL_MOVEMENT_TO_RESTORE_CHECK_TO_START_CHANCE = 0.5 # Chance that a political movement is checked at all on a daily basis if it's a movement to restore (for performance reasons)
-	POLITICAL_MOVEMENT_TO_ENACT_CHECK_TO_START_CHANCE = 0.2 # Chance that a political movement is checked at all on a daily basis if it's a movement to enact (for performance reasons)
+	POLITICAL_MOVEMENT_TO_RESTORE_CHECK_TO_START_CHANCE = 2.0 # Chance that a political movement is checked at all on a daily basis if it's a movement to restore (for performance reasons)
+	POLITICAL_MOVEMENT_TO_ENACT_CHECK_TO_START_CHANCE = 1.0 # Chance that a political movement is checked at all on a daily basis if it's a movement to enact (for performance reasons)
 	POLITICAL_MOVEMENT_MIN_SUPPORT_TO_START = 10 # If a political movement would have less support than this, it can't start
 	POLITICAL_MOVEMENT_MIN_SUPPORT_TO_REMAIN = 5 # If a political movement falls to less support than this, disband it
 	POLITICAL_MOVEMENT_RADICALISM_TARGET_FROM_ANGRY_IG_CLOUT = 300 # At 100% clout of angry IGs supporting this, increase radicalism by this much
@@ -1089,8 +1090,10 @@ NEconomy = {
 	SLAVE_BASKET_SCALED_MIN = 0.5				# Multiplied by lowest non-slave wealth in the building 
 	SLAVE_BASKET_SCALED_MAX = 1					# Multiplied by lowest non-slave wealth in the building
 
-	DEBT_SLAVERY_ENSLAVEMENT_RATE = 0.05		# Under debt slavery up to this much of a state's populace can be enslaved for their debts
-	DEBT_SLAVERY_ENSLAVEMENT_RATE_DROP_OFF_PER_WEALTH = 0.2 # Under debt slavery every point of wealth protects this much of a pop's size from enslavement
+	DEBT_SLAVERY_ENSLAVEMENT_RATE = 0.005		# Under debt slavery up to this much of a state's populace can be enslaved for their debts each week
+	DEBT_SLAVERY_ENSLAVEMENT_RATE_PER_POP = 0.1 # No more than this fraction of a single pop can be enslaved each week
+	DEBT_SLAVERY_ENSLAVEMENT_RATE_DROP_OFF_PER_WEALTH = 0.01 # Each point of wealth reduces max enslavement rate on a pop by this 
+	DEBT_SLAVERY_MAX_STATE_SLAVE_FRACTION = 0.2 # If more than this % of a state's population are slaves, do not enslave any more pops under debt slavery
 
 	SLAVE_TRADE_MIN_VACANCIES_NEEDED_TO_IMPORT = 500 # There needs to be at least this many (non-subsistence) vacancies in buildings that can be filled by slaves in order for slave import to happen
 	SLAVE_TRADE_MIN_POPULATION_TO_EXPORT = 100000	 # There needs to be at least this many people in the state in order for it to be selected, or remain valid, as a slave import target
@@ -1279,7 +1282,7 @@ NDiplomacy = {
 	TENSION_NUM_PROVINCE_SCALING_BASE = 10 # Below this amount of provinces a decentralized country gets additional tension when their provinces are colonized
 	TENSION_NUM_PROVINCE_SCALING_RATE = 2.0 # Max multiplier increase in tension per province taken from having only a few provinces
 	TENSION_INCREASE_RATE_ADJACENT = 0.5 # Multiplied to tension increase when it is neighboring countries' provinces that are colonized
-	TENSION_UPRISING_CHANCE = 0.05 # Chance of war breaking out instead of the next province being colonized (base when tension is at least TENSION_THRESHOLD_VOLATILE)
+	TENSION_UPRISING_CHANCE = 0.01 # Chance of war breaking out instead of the next province being colonized (base when tension is at least TENSION_THRESHOLD_VOLATILE)
 	
 	SWAY_OFFER_TIMEOUT_DAYS = 14
 	SWAY_OFFER_OBLIGATION_MANEUVERS_COST = 20

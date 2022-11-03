@@ -82,7 +82,8 @@ heavenly.1 = {
 				months = normal_modifier_time
 			}
 			convert_population = {
-				target = rel:protestant value = 0.05
+				target = rel:protestant 
+				value = 0.05
 			}
 		}
 	}
@@ -90,7 +91,7 @@ heavenly.1 = {
 		name = heavenly.1.b
 		change_relations = {
 			country = scope:treaty_port_owner
-			value = -1
+			value = -10
 		}
 		scope:missionary_state = {
 			convert_population = {

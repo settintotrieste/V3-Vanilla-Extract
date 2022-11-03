@@ -113,46 +113,6 @@ sg_fix_budget_deficit = {
 	}
 }
 
-#	#Import Goods
-#	sg_import_goods = {
-#		category = sgcat_tutorial
-#	
-#		unlocking_subgoals_all = {
-#			sg_expand_productive_building
-#		}
-#	
-#		trigger = {
-#			market_capital.market = {
-#				market_has_goods_shortage = yes
-#				any_scope_goods = {
-#					in_short_supply = yes
-#					can_be_traded = yes
-#				}
-#			}
-#		}
-#	
-#		on_start = {
-#			market_capital.market = {			
-#				if = {
-#					limit = {
-#						random_scope_goods = { 
-#							in_short_supply = yes
-#							can_be_traded = yes
-#						}		
-#					 save_scope_as = expensive_goods
-#					}
-#				}
-#			}
-#		}
-#	
-#		add_journal_entry = {
-#				type = je_tutorial_import_goods
-#				objective_subgoal = sg_import_goods
-#				target = scope:expensive_goods
-#			}
-#		}
-#	}	
-
 # Change Production Method
 sg_change_production_method = {
 	category = sgcat_tutorial
@@ -601,10 +561,8 @@ sg_fix_unproductive_building = {
 				NOR = { 
 					is_building_type = building_urban_center
 					is_building_type = building_trade_center
+					is_building_group = bg_monuments_hidden
 				}
-			#	primary_building_input_goods = { market_goods_pricier > 0.25 }
-        	#    primary_building_output_goods = { market_goods_cheaper > 0.25 }
-        	#    can_be_subsidized = yes
 				is_under_construction = no
 				is_subsidized = no
 				is_subsistence_building = no
@@ -639,10 +597,8 @@ sg_fix_unproductive_building = {
 						NOR = { 
 							is_building_type = building_urban_center
 							is_building_type = building_trade_center
+							is_building_group = bg_monuments_hidden 
 						}
-					#	primary_building_input_goods = { market_goods_pricier > 0.25 }
-        	   		#	primary_building_output_goods = { market_goods_cheaper > 0.25 }
-        	   		#	can_be_subsidized = yes
 						is_under_construction = no
 						is_subsidized = no
 						is_subsistence_building = no
@@ -658,10 +614,8 @@ sg_fix_unproductive_building = {
 						NOR = { 
 							is_building_type = building_urban_center
 							is_building_type = building_trade_center
+							is_building_group = bg_monuments_hidden
 						}
-					#	primary_building_input_goods = { market_goods_pricier > 0.25 }
-        	  		#	primary_building_output_goods = { market_goods_cheaper > 0.25 }
-        	  		#	can_be_subsidized = yes
 						is_under_construction = no
 						is_subsidized = no
 						is_subsistence_building = no
@@ -679,10 +633,8 @@ sg_fix_unproductive_building = {
 					NOR = { 
 						is_building_type = building_urban_center
 						is_building_type = building_trade_center
+						is_building_group = bg_monuments_hidden
 					}
-				#	primary_building_input_goods = { market_goods_pricier > 0.25 }
-        	    #	primary_building_output_goods = { market_goods_cheaper > 0.25 }
-        	    #	can_be_subsidized = yes
 					is_under_construction = no
 					is_subsidized = no
 					is_subsistence_building = no
@@ -696,10 +648,8 @@ sg_fix_unproductive_building = {
 					NOR = { 
 						is_building_type = building_urban_center
 						is_building_type = building_trade_center
+						is_building_group = bg_monuments_hidden
 					}
-				#	primary_building_input_goods = { market_goods_pricier > 0.25 }
-        	    #	primary_building_output_goods = { market_goods_cheaper > 0.25 }
-        	    #	can_be_subsidized = yes
 					is_under_construction = no
 					is_subsidized = no
 					is_subsistence_building = no
@@ -1052,37 +1002,29 @@ sg_enact_institution_law = {
 		or = {
 			and = {
 				has_law = law_type:law_no_home_affairs
-#				can_enact_law_in_law_group = law_group:lawgroup_internal_security
 			}
 			and = {
 				has_law = law_type:law_no_health_system
-#				can_enact_law_in_law_group = law_group:lawgroup_health_system
 			}
 			and = {
 				has_law = law_type:law_no_police
-#				can_enact_law_in_law_group = law_group:lawgroup_policing
 			}
 			and = {
 				has_law = law_type:law_no_social_security
-#				can_enact_law_in_law_group = law_group:lawgroup_welfare
 			}
 			and = {
 				has_law = law_type:law_no_schools
-#				can_enact_law_in_law_group = law_group:lawgroup_education_system
 			}
 			and = {
 				has_law = law_type:law_no_colonial_affairs
-#				can_enact_law_in_law_group = law_group:lawgroup_colonization
 			}
 		}
-#		can_afford_base_institution = yes
 	}
 	
 	on_start = {
 		if = {
 			limit = {
 				has_law = law_type:law_no_schools
-#				can_enact_law_in_law_group = law_group:lawgroup_education_system
 			}
 			law_type:law_no_schools = {
 				save_scope_as = tut_institution_lawtype
@@ -1092,7 +1034,6 @@ sg_enact_institution_law = {
 		else_if = {
 			limit = {
 				has_law = law_type:law_no_health_system
-#				can_enact_law_in_law_group = law_group:lawgroup_health_system
 			}
 			law_type:law_no_health_system = {
 				save_scope_as = tut_institution_lawtype
@@ -1102,7 +1043,6 @@ sg_enact_institution_law = {
 		else_if = {
 			limit = {
 				has_law = law_type:law_no_police
-#				can_enact_law_in_law_group = law_group:lawgroup_policing
 			}
 			law_type:law_no_police = {
 				save_scope_as = tut_institution_lawtype
@@ -1112,7 +1052,6 @@ sg_enact_institution_law = {
 		else_if = {
 			limit = {
 				has_law = law_type:law_no_home_affairs
-#				can_enact_law_in_law_group = law_group:lawgroup_internal_security
 			}
 			law_type:law_no_home_affairs = {
 				save_scope_as = tut_institution_lawtype
@@ -1122,7 +1061,6 @@ sg_enact_institution_law = {
 		else_if = {
 			limit = {
 				has_law = law_type:law_no_social_security
-#				can_enact_law_in_law_group = law_group:lawgroup_welfare
 			}
 			law_type:law_no_social_security = {
 				save_scope_as = tut_institution_lawtype
@@ -1132,7 +1070,6 @@ sg_enact_institution_law = {
 		else_if = {
 			limit = {
 				has_law = law_type:law_no_colonial_affairs
-#				can_enact_law_in_law_group = law_group:lawgroup_colonization
 			}
 			law_type:law_no_colonial_affairs = {
 				save_scope_as = tut_institution_lawtype
@@ -1684,24 +1621,10 @@ sg_colonize_state = {
 		sg_declare_an_interest
 	}
 
-	trigger = {
-		any_state = {
-#			can_be_colonized = yes
-		}
-	}
-
 	on_start = {
-		random_scope_state = {
-			limit = {
-#				can_be_colonized = yes
-			}
-			save_scope_as = tut_colonzied_state
-		}
-
 		add_journal_entry = {
 			type = je_tutorial_colonize_state
 			objective_subgoal = sg_colonize_state
-#			target = scope:tut_colonzied_state
 		}
 	}
 }
@@ -1771,6 +1694,7 @@ sg_declare_an_interest = {
 	}
 
 	trigger = {	
+		has_decreasing_interests = NO
 		num_declared_interests < max_num_declared_interests
 	}
 	
