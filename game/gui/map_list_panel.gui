@@ -798,32 +798,16 @@ types map_list_panel_types {
 				elide = right
 			}
 
-			widget = {
+			textbox = {
+				margin = { 5 0 }
+				margin_right = 10
 				size = { 90 25 }
+				align = right|nobaseline
+				datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
+				text = "#v @money![Building.GetBuildingType.GetExpansionProductivityImpact(Building.Self, Building.GetState)|+]#!"
+				tooltip = "[Building.GetBuildingType.GetExpansionProductivityImpactDesc(Building.Self, Building.GetState)]"
 				parentanchor = vcenter
-				textbox = {
-					datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
-					visible = "[And(GreaterThan_int32(Building.GetExpansionLevel,'(int32)0'), Not(MapListBuildingPanel.GetBuildingType.IsGovernmentFunded))]"
-					using = competitiveness_building_type_tooltip_with_graph
-					using = tooltip_above
-					margin = { 5 0 }
-					size = { 90 25 }
-					align = right|nobaseline
-					text = "[Building.GetProfitabilityInType] ([Building.GetProfitabilityCompareIconInType])"
-					parentanchor = vcenter
-					elide = right
-				}
-				textbox = {
-					datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
-					visible = "[Not(And(GreaterThan_int32(Building.GetExpansionLevel,'(int32)0'), Not(MapListBuildingPanel.GetBuildingType.IsGovernmentFunded)))]"
-					margin = { 5 0 }
-					size = { 90 25 }
-					align = right|nobaseline
-					text = "NOT_AVAILABLE"
-					alpha = "[TransparentIfTrue(Not(And(GreaterThan_int32(Building.GetExpansionLevel,'(int32)0'), Not(MapListBuildingPanel.GetBuildingType.IsGovernmentFunded))))]"
-					parentanchor = vcenter
-					elide = right
-				}
+				elide = right
 			}
 
 			textbox = {
@@ -832,8 +816,8 @@ types map_list_panel_types {
 				size = { 100 25 }
 				align = right|nobaseline
 				datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
-				text = "#v [Building.GetBuildingType.GetExpansionProfitImpact(Building.Self, Building.GetState)|K+=]#!"
-				tooltip = "[Building.GetBuildingType.GetExpansionProfitImpactDesc(Building.Self, Building.GetState)]"
+				text = "#v [Building.GetBuildingType.GetExpansionRevenueImpact(Building.Self, Building.GetState)|K+=]#!"
+				tooltip = "[Building.GetBuildingType.GetExpansionRevenueImpactDesc(Building.Self, Building.GetState)]"
 				parentanchor = vcenter
 				elide = right
 			}
