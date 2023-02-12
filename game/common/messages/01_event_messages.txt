@@ -250,7 +250,7 @@ opium_wars_british_response_passive = {
 
 santa_anna_captured_notification = {
 	type = country
-	texture = "gfx/interface/icons/notification_icons/influence.dds"
+	texture = "gfx/interface/icons/notification_icons/military.dds"
 	notification_type = feed
 	days = 28
 }

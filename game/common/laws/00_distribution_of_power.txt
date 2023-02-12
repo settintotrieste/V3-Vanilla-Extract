@@ -27,6 +27,22 @@ law_autocracy = {
 		law_landed_voting
 		law_elder_council
 	}
+
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_ARISTOCRATS"			
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_law = law_type:law_oligarchy }
+					}
+					is_pop_type = aristocrats
+				}
+				value = 0.25
+			}
+		}
+	}
 }
 
 law_oligarchy = {
@@ -44,7 +60,8 @@ law_oligarchy = {
 	modifier = {
 		country_legitimacy_headofstate_add = 10
 		country_legitimacy_govt_total_clout_add = 120
-		country_legitimacy_ideological_incoherence_mult = -0.25
+		country_legitimacy_govt_size_add = 2
+		country_legitimacy_ideological_incoherence_mult = -0.1
 		country_aristocrats_pol_str_mult = 0.5
 		country_capitalists_pol_str_mult = 0.25
 		country_authority_add = 100
@@ -54,6 +71,34 @@ law_oligarchy = {
 		law_autocracy 
 		law_landed_voting
 		law_elder_council
+	}
+
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_ARISTOCRATS"			
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_law = law_type:law_autocracy }
+					}
+					is_pop_type = aristocrats
+				}
+				value = 0.25
+			}
+		}
+		add = {
+			desc = "POP_ARISTOCRATS"			
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_law = law_type:law_wealth_voting }
+					}
+					is_pop_type = capitalists
+				}
+				value = 0.25
+			}
+		}
 	}
 }
 
@@ -80,7 +125,8 @@ law_elder_council = {
 	modifier = {
 		country_legitimacy_base_add = 20
 		country_legitimacy_govt_total_clout_add = 100
-		country_legitimacy_ideological_incoherence_mult = -0.25
+		country_legitimacy_govt_size_add = 2
+		country_legitimacy_ideological_incoherence_mult = -0.1
 		country_aristocrats_pol_str_mult = 0.5
 		country_officers_pol_str_mult = 0.5
 		country_clergymen_pol_str_mult = 0.5
@@ -91,6 +137,10 @@ law_elder_council = {
 		law_autocracy 
 		law_oligarchy
 		law_landed_voting
+	}
+
+	pop_support = {
+		value = 0
 	}
 }
 
@@ -107,12 +157,14 @@ law_landed_voting = {
 
 	disallowing_laws = {
 		law_chiefdom
+		law_command_economy
 	}
 
 	modifier = {
-		country_legitimacy_govt_total_votes_add = 30
-		country_legitimacy_govt_total_clout_add = 90
-		country_legitimacy_ideological_incoherence_mult = 0.25
+		country_legitimacy_govt_total_votes_add = 40
+		country_legitimacy_govt_total_clout_add = 100
+		country_legitimacy_govt_size_add = 1
+		country_legitimacy_ideological_incoherence_mult = 0.2
 		country_aristocrats_voting_power_add = 50
 		country_officers_voting_power_add = 25
 		country_clergymen_voting_power_add = 25
@@ -157,7 +209,7 @@ law_landed_voting = {
 					divide = 2
 				}
 			}
-		}			
+		}
 	}
 }
 
@@ -174,11 +226,13 @@ law_wealth_voting = {
 
 	disallowing_laws = {
 		law_chiefdom
+		law_command_economy
 	}
 	
 	modifier = {
-		country_legitimacy_govt_total_votes_add = 50
-		country_legitimacy_govt_total_clout_add = 70
+		country_legitimacy_govt_total_votes_add = 65
+		country_legitimacy_govt_total_clout_add = 75
+		country_legitimacy_govt_size_add = 1
 		country_legitimacy_ideological_incoherence_mult = 0.2
 		country_voting_power_base_add = 40
 		country_voting_power_wealth_threshold_add = 25
@@ -217,7 +271,7 @@ law_wealth_voting = {
 					divide = 2
 				}
 			}
-		}			
+		}
 	}
 }
 
@@ -234,11 +288,13 @@ law_census_voting = {
 
 	disallowing_laws = {
 		law_chiefdom
+		law_command_economy
 	}
 
 	modifier = {
-		country_legitimacy_govt_total_votes_add = 70
-		country_legitimacy_govt_total_clout_add = 50
+		country_legitimacy_govt_total_votes_add = 85
+		country_legitimacy_govt_total_clout_add = 55
+		country_legitimacy_govt_size_add = 1
 		country_legitimacy_ideological_incoherence_mult = 0.1
 		country_voting_power_wealth_threshold_add = 15
 		country_voting_power_from_literacy_add = 30
@@ -276,7 +332,7 @@ law_census_voting = {
 					divide = 2
 				}
 			}
-		}			
+		}
 	}
 }
 
@@ -293,12 +349,14 @@ law_universal_suffrage = {
 
 	disallowing_laws = {
 		law_chiefdom
+		law_command_economy
 	}
 	
 	modifier = {
-		country_legitimacy_govt_total_votes_add = 100
-		country_legitimacy_govt_total_clout_add = 20
+		country_legitimacy_govt_total_votes_add = 110
+		country_legitimacy_govt_total_clout_add = 25
 		country_voting_power_base_add = 20
+		country_legitimacy_govt_size_add = 1
 	}
 	
 	possible_political_movements = {
@@ -319,34 +377,32 @@ law_universal_suffrage = {
 			
 			if = {
 				limit = { 
-					wealth < 15
 					owner = { 
 						NOT = {
 							has_law = law_type:law_anarchy
 						}	
 					}
 				}
-				add = {
-					value = literacy_rate
-					divide = 2
-				}
-			}
-			
-			if = {
-				limit = { 
-					wealth < 10
-					owner = { 
-						NOT = {
-							has_law = law_type:law_anarchy
-						}	
+				if = {
+					limit = {
+						wealth < 15
+					}
+					add = {
+						value = literacy_rate
+						divide = 2
 					}
 				}
-				add = {
-					value = literacy_rate
-					divide = 2
+				if = {
+					limit = {
+						wealth < 10
+					}
+					add = {
+						value = literacy_rate
+						divide = 2
+					}
 				}
 			}			
-		}			
+		}
 	}
 }
 
@@ -362,7 +418,7 @@ law_anarchy = {
 	}
 	
 	unlocking_laws = {
-		law_council_republic
+		law_cooperative_ownership
 	}
 	
 	modifier = {
@@ -370,6 +426,7 @@ law_anarchy = {
 		country_legitimacy_govt_total_clout_add = 100
 		state_political_strength_from_wealth_mult = -0.75
 		country_authority_mult = -0.5
+		country_legitimacy_govt_size_add = 2
 	}
 	
 	possible_political_movements = {
@@ -397,10 +454,8 @@ law_anarchy = {
 				limit = { 
 					wealth < 10
 				}
-				add = {
-					value = literacy_rate
-				}
+				add = literacy_rate
 			}
-		}			
+		}
 	}
 }
