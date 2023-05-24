@@ -1,4 +1,569 @@
-﻿building_output_services_add = {
+﻿# ██████  ██    ██ ██ ██      ██████  ██ ███    ██  ██████  
+# ██   ██ ██    ██ ██ ██      ██   ██ ██ ████   ██ ██       
+# ██████  ██    ██ ██ ██      ██   ██ ██ ██ ██  ██ ██   ███ 
+# ██   ██ ██    ██ ██ ██      ██   ██ ██ ██  ██ ██ ██    ██ 
+# ██████   ██████  ██ ███████ ██████  ██ ██   ████  ██████  
+
+building_production_mult = {
+	good = yes
+	percent = yes
+}
+
+building_group_bg_construction_laborers_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_agriculture_laborers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_agriculture_farmers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_ranching_laborers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_ranching_farmers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_plantations_laborers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_plantations_farmers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_mining_laborers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_manufacturing_laborers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_mining_laborers_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_manufacturing_laborers_standard_of_living_add  = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_mining_machinists_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_manufacturing_machinists_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_mining_machinists_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_manufacturing_machinists_standard_of_living_add  = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_mining_engineers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_manufacturing_engineers_mortality_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_mining_engineers_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_manufacturing_engineers_standard_of_living_add  = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_service_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_agriculture_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_ranching_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_plantations_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_mining_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_gold_mining_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_coal_mining_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_iron_mining_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_lead_mining_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_sulfur_mining_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_rubber_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_logging_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_fishing_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_whaling_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_oil_extraction_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_manufacturing_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_government_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_infrastructure_tax_mult = {
+	neutral = yes
+	percent = yes
+}
+
+building_group_bg_service_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_agriculture_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_ranching_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_plantations_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_mining_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_gold_mining_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_coal_mining_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_iron_mining_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_lead_mining_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_sulfur_mining_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_rubber_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_logging_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_fishing_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_whaling_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_oil_extraction_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_manufacturing_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_government_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_infrastructure_mortality_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_service_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_agriculture_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_plantations_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_mining_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_gold_mining_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_coal_mining_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_iron_mining_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_lead_mining_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_sulfur_mining_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_rubber_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_logging_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_fishing_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_whaling_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_oil_extraction_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_manufacturing_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_government_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_infrastructure_standard_of_living_add = {
+	good = yes
+	percent = no
+}
+
+building_group_bg_service_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_agriculture_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_plantations_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_mining_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_gold_mining_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_coal_mining_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_iron_mining_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_lead_mining_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_sulfur_mining_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_rubber_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_logging_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_fishing_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_whaling_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_oil_extraction_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_manufacturing_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_government_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_group_bg_infrastructure_employee_mult = {
+	good = no
+	percent = yes
+}
+
+building_input_mult = {
+	good = no
+	percent = yes
+}
+
+building_throughput_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_cash_reserves_mult = {
+	good = yes
+	percent = yes
+}
+
+building_group_bg_agriculture_throughput_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_ranching_throughput_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_mining_throughput_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_plantations_throughput_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_group_bg_manufacturing_throughput_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_subsistence_output_add = {
+	percent = no
+	neutral = yes
+}
+
+building_subsistence_output_mult = {
+	percent = yes
+	neutral = yes
+}
+
+building_mobilization_cost_mult = {
+	percent = yes
+	good = no
+	num_decimals = 0
+}
+
+building_unincorporated_subsistence_output_mult = {
+	percent = yes
+	good = yes
+	num_decimals = 0
+}
+
+building_training_rate_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+
+building_training_rate_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_working_conditions_mult = {
+	good = no
+	percent = yes
+}
+
+building_minimum_wage_mult = {
+	neutral = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_unincorporated_throughput_add = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_output_services_add = {
 	good = yes
 	percent = no
 }

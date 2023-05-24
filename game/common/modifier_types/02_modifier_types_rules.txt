@@ -13,6 +13,11 @@ country_disallow_migration = {
 	boolean = yes
 }
 
+country_disallow_agitator_invites = {
+	neutral = yes
+	boolean = yes
+}
+
 country_subsidies_all = {
 	good = yes
 	boolean = yes
