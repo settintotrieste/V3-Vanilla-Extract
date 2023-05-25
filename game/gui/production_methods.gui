@@ -552,7 +552,7 @@ types production_methods
 								visible = "[NotEqualTo_int32( GetDataModelSize( ProductionMethodGroup.AccessCountryProductionMethods( GetPlayer.Self ) ), '(int32)1' )]"
 								distribute_visual_state = no
 								inherit_visual_state = no
-								using = expand_button_bg_no_fade
+								using = expand_button_bg_dropdown
 								size = { 100% 100% }
 								onclick = "[RightClickMenuManager.ToggleSwitchProductionMethodMenuForType(ProductionMethodsPanelEntry.AccessBuildingType, ProductionMethodGroup.AccessSelf, PdxGuiWidget.AccessSelf)]"
 							}
@@ -832,7 +832,7 @@ types production_methods
 							}
 
 							icon = {
-								visible = "[And(And(And(Not(Building.IsGovernmentFunded), Not(GreaterThan_CFixedPoint(Building.GetAverageAnnualEarningsPerEmployee, '(CFixedPoint)0'))) , Not(Building.IsSubsidized)), EqualTo_CFixedPoint(Building.GetCurrentCashReserves, '(CFixedPoint)0'))]"
+								visible = "[Building.ShouldShowAsNotHiring]"
 								size = { 28 28 }
 								texture = "gfx/interface/icons/generic_icons/employment_not_full.dds"
 								parentanchor = vcenter
@@ -840,7 +840,7 @@ types production_methods
 							}
 
 							icon = {
-								visible = "[And(And(And(And(Not(Building.IsSubsistenceBuilding), Not(Building.HasFailedHires)), Building.IsActive), LessThan_int32(Building.GetNoOfEmployed, Building.GetEmployeeCap)), GreaterThan_CFixedPoint(Building.GetAverageAnnualEarningsPerEmployee, '(CFixedPoint)0'))]"
+								visible = "[Building.ShouldShowAsHiring]"
 								size = { 28 28 }
 								parentanchor = vcenter
 								texture = "gfx/interface/icons/generic_icons/employment_not_full_hiring.dds"
@@ -880,7 +880,7 @@ types production_methods
 								
 								button = {
 									visible = "[NotEqualTo_int32( GetDataModelSize( ProductionMethodGroup.AccessBuildingProductionMethods( Building.Self ) ), '(int32)1' )]"
-									using = expand_button_bg_no_fade
+									using = expand_button_bg_dropdown
 									size = { 100% 100% }
 									onclick = "[RightClickMenuManager.ToggleSwitchProductionMethodMenu(Building.AccessSelf, ProductionMethodGroup.AccessSelf, PdxGuiWidget.AccessSelf)]"
 								}
