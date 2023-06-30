@@ -121,9 +121,6 @@
 				change_variable = { name = bonapartist_progress add = var:bonapartist_progress_next } #On the monthly tick, the value calculated in the fra_weekly_pulse_bonapartist_progress effect is added to the master progress variable.
 				change_variable = { name = orleanist_progress add = var:orleanist_progress_next }
 				change_variable = { name = legitimist_progress add = var:legitimist_progress_next }
-				clamp_variable = { name = bonapartist_progress max = 360 min = 0 }  #These variables cannot exceed 360 or 0, to prevent bad and ugly displays.
-				clamp_variable = { name = legitimist_progress max = 360 min = 0 }
-				clamp_variable = { name = orleanist_progress max = 360 min = 0 }
 				fra_define_leading_dynasty = yes	#See above - this ensures that the monthly tick will not momentarily send the status loc out of sync with what the bar is representing.
 			}
 			if = {
@@ -150,7 +147,6 @@
 					else = {
 						trigger_event = { id = french_pretenders.1 popup = yes} #Coup event - fires if the leading dynasty is not the one in power.
 					}
-					fra_freeze_divided_monarchist_progress = yes #Freezes the bars so that they no longer accumulate progress on the monthly tick, and stay as they are. In the case that Cement the Rightful Dynasty fails, the bars will be set back.
 				}
 				else_if = {
 					limit = {
@@ -166,7 +162,6 @@
 					else = {
 						trigger_event = { id = french_pretenders.1 popup = yes}
 					}
-					fra_freeze_divided_monarchist_progress = yes
 				}
 				else_if = {
 					limit = {
@@ -182,8 +177,8 @@
 					else = {
 						trigger_event = { id = french_pretenders.1 popup = yes}
 					}
-					fra_freeze_divided_monarchist_progress = yes 
 				}
+				fra_freeze_divided_monarchist_progress = yes #Freezes the bars so that they no longer accumulate progress on the monthly tick, and stay as they are. In the case that Cement the Rightful Dynasty fails, the bars will be set back.
 			}
 		}
 		random_events = {
