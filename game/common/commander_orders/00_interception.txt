@@ -10,12 +10,74 @@
 		}
     }
 
-	experience = 0 # Default experience gain with this Order
-	
-	admiral_preparation_days = 14
-	
-    map_interaction = interception
+	modifier = {
+		character_interception_add = 2
+	}
+
 	clicksound = "event:/SFX/UI/Military/order_admiral_patrol"
-	
+	experience = 0 # Default experience gain with this Order
 	ai_order_type = defensive
+	naval_entity = "military_occupation_flag_entity"
+}
+
+patrol_coast_advanced = {
+    texture = "gfx/interface/icons/commander_order_icons/patrol_coast.dds"
+	
+	military_type = navy
+
+    possible = {
+        error_check = {
+			severity = invalid
+			has_role = admiral
+		}
+		error_check = {
+			severity = fail
+			OR = {
+				has_trait = basic_naval_commander
+				has_trait = experienced_naval_commander
+				has_trait = expert_naval_commander
+			}
+		}
+    }
+
+	modifier = {
+		character_interception_add = 1.5
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_patrol"
+	experience = 0 # Default experience gain with this Order
+	ai_order_type = defensive
+	naval_entity = "military_occupation_flag_entity"
+}
+
+patrol_coast_careful = {
+    texture = "gfx/interface/icons/commander_order_icons/patrol_coast.dds"
+	
+	military_type = navy
+
+    possible = {
+        error_check = {
+			severity = invalid
+			has_role = admiral
+		}
+		error_check = {
+			severity = fail
+			OR = {
+				has_trait = cautious
+				has_trait = meticulous
+				has_trait = tactful
+			}
+		}
+    }
+
+	modifier = {
+		character_interception_add = 1
+		unit_morale_loss_mult = -0.2
+		unit_morale_damage_mult = 0.2
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_patrol"
+	experience = 0 # Default experience gain with this Order
+	ai_order_type = defensive
+	naval_entity = "military_occupation_flag_entity"
 }

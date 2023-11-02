@@ -149,7 +149,7 @@ sg_change_production_method = {
 				AND = {	
 					can_activate_production_method = {
 						building_type = building_rice_farm	
-						production_method = pm_fig_orchards
+						production_method = pm_fig_orchards_building_rice_farm
 					}
 				}
 				AND = {
@@ -250,7 +250,7 @@ sg_change_production_method = {
 				scope:tutorial_state_target = {
 					can_activate_production_method = {
 						building_type = building_rice_farm	
-						production_method = pm_fig_orchards
+						production_method = pm_fig_orchards_building_rice_farm
 					}					
 				}
 			}
@@ -371,7 +371,7 @@ sg_change_production_method = {
 				any_scope_state = {
 					can_activate_production_method = {
 						building_type = building_rice_farm	
-						production_method = pm_fig_orchards 
+						production_method = pm_fig_orchards_building_rice_farm 
 					}					
 				}
 			}
@@ -380,7 +380,7 @@ sg_change_production_method = {
 				limit = {
 					can_activate_production_method = {
 						building_type = building_rice_farm	
-						production_method = pm_fig_orchards 
+						production_method = pm_fig_orchards_building_rice_farm 
 					}						
 				}
 				

@@ -226,7 +226,7 @@ RU_CL_RP = {
 			exists = c:MAD
 			this = c:MAD
 			c:MAD = {
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 				is_country_type = unrecognized
 			}
 		}
@@ -265,11 +265,7 @@ RU_CL_RP = {
 			this = c:USA
 			coa_def_republic_flag_trigger = yes
 			NOT = { coa_def_communist_flag_trigger = yes }
-			NOT = {	
-				c:USA = {
-					has_law = law_type:law_technocracy
-				}
-			}
+			c:USA = { NOT = { has_law = law_type:law_technocracy } }
 		}
 		localization_key = RU_CL_RP_dyn_c_united_states # genitive
 	}
@@ -277,7 +273,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_united_syndicates_of_america # genitive
 	}
@@ -296,7 +292,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_united_synods_of_america # genitive
 	}
@@ -304,7 +300,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:TUR
 			this = c:TUR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_ottoman_empire # genitive
 	}
@@ -312,7 +308,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:PAP
 			this = c:PAP
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_papal_states # genitive
 	}
@@ -373,7 +369,7 @@ RU_CL_RP = {
 			AND = {
 				exists = c:USA
 				this = c:USA
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_CL_RP_dyn_c_united_sovereign_archduchy # genitive
@@ -382,7 +378,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:RUS
 			this = c:RUS
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_soviet_union # genitive
 	}
@@ -390,7 +386,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:MEX
 			this = c:MEX
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_mexican_empire # genitive
 	}
@@ -398,7 +394,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:CSA
 			this = c:CSA
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_confederated_sovereigns_of_america # genitive
 	}
@@ -406,7 +402,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:CSA
 			this = c:CSA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_communist_states_of_america # genitive
 	}
@@ -414,7 +410,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_confederate_synods_of_america # genitive
 	}
@@ -423,7 +419,7 @@ RU_CL_RP = {
 			exists = c:CHI
 			this = c:CHI
 			c:CHI = { country_has_primary_culture = cu:manchu }
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_great_qing # genitive
 	}
@@ -431,7 +427,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:BAV
 			this = c:BAV
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_bavarian_raterepublic # genitive
 	}
@@ -439,7 +435,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:BRE
 			this = c:BRE
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_bremener_raterepublic # genitive
 	}
@@ -462,7 +458,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:CHI
 			this = c:CHI
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_peoples_republic_of_china # genitive
 	}
@@ -532,7 +528,7 @@ RU_CL_RP = {
 			exists = c:AZB
 			this = c:AZB
 			is_subject = no
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			owns_entire_state_region = STATE_AZERBAIJAN
 		}
 		localization_key = RU_CL_RP_dyn_c_baku_commune # genitive
@@ -561,7 +557,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:TUN
 			this = c:TUN
-			NOT = { coa_monarchy_trigger = yes }
+			NOT = { coa_def_monarchy_flag_trigger = yes }
 		}
 		localization_key = RU_CL_RP_dyn_c_tunisia # genitive
 	}
@@ -570,7 +566,7 @@ RU_CL_RP = {
 			exists = c:BEL
 			this = c:BEL
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_RP_dyn_c_united_belgian_states # genitive
 	}
@@ -578,7 +574,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:MOL
 			this = c:MOL
-			coa_monarchy_trigger = no
+			coa_def_monarchy_flag_trigger = no
 		}
 		localization_key = RU_CL_RP_dyn_c_moldova # genitive
 	}
@@ -602,7 +598,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = {
 				OR = {
 					AND = {
@@ -624,7 +620,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			OR = {
 				AND = {
 					exists = c:GBR
@@ -701,7 +697,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:GER
 			this = c:GER
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			country_rank >= rank_value:major_power
 		}
 		localization_key = RU_CL_RP_dyn_c_german_empire # genitive
@@ -777,7 +773,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:TUS
 			this = c:TUS
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:FRA
 			c:FRA = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -880,7 +876,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:LAT
 			this = c:LAT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:GER
 			c:GER = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -891,7 +887,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:PAN
 			this = c:PAN
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			has_law = law_type:law_state_religion
 		}
 		localization_key = RU_CL_RP_dyn_c_sikh_empire # genitive
@@ -900,7 +896,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:CAM
 			this = c:CAM
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = { is_country_type = unrecognized }
 		}
 		localization_key = RU_CL_RP_dyn_c_khmer_empire # genitive
@@ -909,7 +905,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:NEJ
 			this = c:NEJ
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_HEDJAZ
 		}
 		localization_key = RU_CL_RP_dyn_c_saudi_arabia # genitive
@@ -918,7 +914,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_great_mongolian_state # genitive
 	}
@@ -926,7 +922,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_mongolian_peoples_republic # genitive
 	}
@@ -934,7 +930,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:POR
 			this = c:POR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_RIO_DE_JANEIRO
 			owns_entire_state_region = STATE_SAO_PAULO
 			NOT = { exists = c:BRZ }
@@ -1118,7 +1114,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:CHC
 			this = c:CHC
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_chechnya_imamate # genitive
 	}
@@ -1154,7 +1150,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:GBR
 			this = c:GBR
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			exists = capital
 			capital = { state_region = s:STATE_LANCASHIRE } 
 		}
@@ -1302,7 +1298,7 @@ RU_CL_RP = {
 			exists = c:LOU
 			this = c:LOU
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_RP_dyn_c_louisiana # genitive
 	}
@@ -1310,7 +1306,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_new_france # genitive
 	}
@@ -1318,7 +1314,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_louisiana_commune # genitive
 	}
@@ -1326,7 +1322,7 @@ RU_CL_RP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_RP_dyn_c_archbishopric_of_st_louis # genitive
 	}
@@ -3492,7 +3488,7 @@ RU_CL_RP = {
 			exists = c:RUS
 			this = c:RUS
 		}
-		localization_key = RU_CL_RP_RUS # genitive
+		localization_key = RUS_RU_CL_RP # genitive
 	}
 #	text = {
 #		trigger = {
@@ -5344,7 +5340,7 @@ RU_CL_DP = {
 			exists = c:MAD
 			this = c:MAD
 			c:MAD = {
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 				is_country_type = unrecognized
 			}
 		}
@@ -5383,11 +5379,7 @@ RU_CL_DP = {
 			this = c:USA
 			coa_def_republic_flag_trigger = yes
 			NOT = { coa_def_communist_flag_trigger = yes }
-			NOT = {	
-				c:USA = {
-					has_law = law_type:law_technocracy
-				}
-			}
+			c:USA = { NOT = { has_law = law_type:law_technocracy } }
 		}
 		localization_key = RU_CL_DP_dyn_c_united_states # dative
 	}
@@ -5395,7 +5387,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_united_syndicates_of_america # dative
 	}
@@ -5414,7 +5406,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_united_synods_of_america # dative
 	}
@@ -5422,7 +5414,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:TUR
 			this = c:TUR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_ottoman_empire # dative
 	}
@@ -5430,7 +5422,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:PAP
 			this = c:PAP
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_papal_states # dative
 	}
@@ -5491,7 +5483,7 @@ RU_CL_DP = {
 			AND = {
 				exists = c:USA
 				this = c:USA
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_CL_DP_dyn_c_united_sovereign_archduchy # dative
@@ -5500,7 +5492,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:RUS
 			this = c:RUS
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_soviet_union # dative
 	}
@@ -5508,7 +5500,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:MEX
 			this = c:MEX
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_mexican_empire # dative
 	}
@@ -5516,7 +5508,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_confederated_sovereigns_of_america # dative
 	}
@@ -5524,7 +5516,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:CSA
 			this = c:CSA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_communist_states_of_america # dative
 	}
@@ -5532,7 +5524,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_confederate_synods_of_america # dative
 	}
@@ -5541,7 +5533,7 @@ RU_CL_DP = {
 			exists = c:CHI
 			this = c:CHI
 			c:CHI = { country_has_primary_culture = cu:manchu }
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_great_qing # dative
 	}
@@ -5549,7 +5541,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:BAV
 			this = c:BAV
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_bavarian_raterepublic # dative
 	}
@@ -5557,7 +5549,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:BRE
 			this = c:BRE
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_bremener_raterepublic # dative
 	}
@@ -5580,7 +5572,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:CHI
 			this = c:CHI
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_peoples_republic_of_china # dative
 	}
@@ -5650,7 +5642,7 @@ RU_CL_DP = {
 			exists = c:AZB
 			this = c:AZB
 			is_subject = no
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			owns_entire_state_region = STATE_AZERBAIJAN
 		}
 		localization_key = RU_CL_DP_dyn_c_baku_commune # dative
@@ -5679,7 +5671,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:TUN
 			this = c:TUN
-			NOT = { coa_monarchy_trigger = yes }
+			NOT = { coa_def_monarchy_flag_trigger = yes }
 		}
 		localization_key = RU_CL_DP_dyn_c_tunisia # dative
 	}
@@ -5688,7 +5680,7 @@ RU_CL_DP = {
 			exists = c:BEL
 			this = c:BEL
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_DP_dyn_c_united_belgian_states # dative
 	}
@@ -5696,7 +5688,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:MOL
 			this = c:MOL
-			coa_monarchy_trigger = no
+			coa_def_monarchy_flag_trigger = no
 		}
 		localization_key = RU_CL_DP_dyn_c_moldova # dative
 	}
@@ -5720,7 +5712,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = {
 				OR = {
 					AND = {
@@ -5742,7 +5734,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			OR = {
 				AND = {
 					exists = c:GBR
@@ -5819,7 +5811,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:GER
 			this = c:GER
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			country_rank >= rank_value:major_power
 		}
 		localization_key = RU_CL_DP_dyn_c_german_empire # dative
@@ -5895,7 +5887,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:TUS
 			this = c:TUS
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:FRA
 			c:FRA = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -5998,7 +5990,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:LAT
 			this = c:LAT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:GER
 			c:GER = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -6009,7 +6001,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:PAN
 			this = c:PAN
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			has_law = law_type:law_state_religion
 		}
 		localization_key = RU_CL_DP_dyn_c_sikh_empire # dative
@@ -6018,7 +6010,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:CAM
 			this = c:CAM
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = { is_country_type = unrecognized }
 		}
 		localization_key = RU_CL_DP_dyn_c_khmer_empire # dative
@@ -6027,7 +6019,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:NEJ
 			this = c:NEJ
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_HEDJAZ
 		}
 		localization_key = RU_CL_DP_dyn_c_saudi_arabia # dative
@@ -6036,7 +6028,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_great_mongolian_state # dative
 	}
@@ -6044,7 +6036,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_mongolian_peoples_republic # dative
 	}
@@ -6052,7 +6044,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:POR
 			this = c:POR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_RIO_DE_JANEIRO
 			owns_entire_state_region = STATE_SAO_PAULO
 			NOT = { exists = c:BRZ }
@@ -6236,7 +6228,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:CHC
 			this = c:CHC
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_chechnya_imamate # dative
 	}
@@ -6272,7 +6264,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:GBR
 			this = c:GBR
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			exists = capital
 			capital = { state_region = s:STATE_LANCASHIRE } 
 		}
@@ -6430,7 +6422,7 @@ RU_CL_DP = {
 			exists = c:LOU
 			this = c:LOU
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_DP_dyn_c_louisiana # dative
 	}
@@ -6438,7 +6430,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_new_france # dative
 	}
@@ -6446,7 +6438,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_louisiana_commune # dative
 	}
@@ -6454,7 +6446,7 @@ RU_CL_DP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_DP_dyn_c_archbishopric_of_st_louis # dative
 	}
@@ -10472,7 +10464,7 @@ RU_CL_VP = {
 			exists = c:MAD
 			this = c:MAD
 			c:MAD = {
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 				is_country_type = unrecognized
 			}
 		}
@@ -10511,11 +10503,7 @@ RU_CL_VP = {
 			this = c:USA
 			coa_def_republic_flag_trigger = yes
 			NOT = { coa_def_communist_flag_trigger = yes }
-			NOT = {	
-				c:USA = {
-					has_law = law_type:law_technocracy
-				}
-			}
+			c:USA = { NOT = { has_law = law_type:law_technocracy } }
 		}
 		localization_key = RU_CL_VP_dyn_c_united_states # accusative
 	}
@@ -10523,7 +10511,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_united_syndicates_of_america # accusative
 	}
@@ -10542,7 +10530,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_united_synods_of_america # accusative
 	}
@@ -10550,7 +10538,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:TUR
 			this = c:TUR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_ottoman_empire # accusative
 	}
@@ -10558,7 +10546,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:PAP
 			this = c:PAP
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_papal_states # accusative
 	}
@@ -10619,7 +10607,7 @@ RU_CL_VP = {
 			AND = {
 				exists = c:USA
 				this = c:USA
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_CL_VP_dyn_c_united_sovereign_archduchy # accusative
@@ -10628,7 +10616,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:RUS
 			this = c:RUS
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_soviet_union # accusative
 	}
@@ -10636,7 +10624,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:MEX
 			this = c:MEX
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_mexican_empire # accusative
 	}
@@ -10644,7 +10632,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_confederated_sovereigns_of_america # accusative
 	}
@@ -10652,7 +10640,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:CSA
 			this = c:CSA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_communist_states_of_america # accusative
 	}
@@ -10660,7 +10648,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_confederate_synods_of_america # accusative
 	}
@@ -10669,7 +10657,7 @@ RU_CL_VP = {
 			exists = c:CHI
 			this = c:CHI
 			c:CHI = { country_has_primary_culture = cu:manchu }
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_great_qing # accusative
 	}
@@ -10677,7 +10665,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:BAV
 			this = c:BAV
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_bavarian_raterepublic # accusative
 	}
@@ -10685,7 +10673,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:BRE
 			this = c:BRE
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_bremener_raterepublic # accusative
 	}
@@ -10708,7 +10696,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:CHI
 			this = c:CHI
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_peoples_republic_of_china # accusative
 	}
@@ -10778,7 +10766,7 @@ RU_CL_VP = {
 			exists = c:AZB
 			this = c:AZB
 			is_subject = no
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			owns_entire_state_region = STATE_AZERBAIJAN
 		}
 		localization_key = RU_CL_VP_dyn_c_baku_commune # accusative
@@ -10807,7 +10795,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:TUN
 			this = c:TUN
-			NOT = { coa_monarchy_trigger = yes }
+			NOT = { coa_def_monarchy_flag_trigger = yes }
 		}
 		localization_key = RU_CL_VP_dyn_c_tunisia # accusative
 	}
@@ -10816,7 +10804,7 @@ RU_CL_VP = {
 			exists = c:BEL
 			this = c:BEL
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_VP_dyn_c_united_belgian_states # accusative
 	}
@@ -10824,7 +10812,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:MOL
 			this = c:MOL
-			coa_monarchy_trigger = no
+			coa_def_monarchy_flag_trigger = no
 		}
 		localization_key = RU_CL_VP_dyn_c_moldova # accusative
 	}
@@ -10848,7 +10836,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = {
 				OR = {
 					AND = {
@@ -10870,7 +10858,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			OR = {
 				AND = {
 					exists = c:GBR
@@ -10947,7 +10935,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:GER
 			this = c:GER
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			country_rank >= rank_value:major_power
 		}
 		localization_key = RU_CL_VP_dyn_c_german_empire # accusative
@@ -11023,7 +11011,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:TUS
 			this = c:TUS
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:FRA
 			c:FRA = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -11126,7 +11114,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:LAT
 			this = c:LAT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:GER
 			c:GER = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -11137,7 +11125,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:PAN
 			this = c:PAN
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			has_law = law_type:law_state_religion
 		}
 		localization_key = RU_CL_VP_dyn_c_sikh_empire # accusative
@@ -11146,7 +11134,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:CAM
 			this = c:CAM
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = { is_country_type = unrecognized }
 		}
 		localization_key = RU_CL_VP_dyn_c_khmer_empire # accusative
@@ -11155,7 +11143,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:NEJ
 			this = c:NEJ
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_HEDJAZ
 		}
 		localization_key = RU_CL_VP_dyn_c_saudi_arabia # accusative
@@ -11164,7 +11152,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_great_mongolian_state # accusative
 	}
@@ -11172,7 +11160,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_mongolian_peoples_republic # accusative
 	}
@@ -11180,7 +11168,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:POR
 			this = c:POR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_RIO_DE_JANEIRO
 			owns_entire_state_region = STATE_SAO_PAULO
 			NOT = { exists = c:BRZ }
@@ -11368,7 +11356,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:CHC
 			this = c:CHC
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_chechnya_imamate # accusative
 	}
@@ -11404,7 +11392,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:GBR
 			this = c:GBR
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			exists = capital
 			capital = { state_region = s:STATE_LANCASHIRE } 
 		}
@@ -11562,7 +11550,7 @@ RU_CL_VP = {
 			exists = c:LOU
 			this = c:LOU
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_VP_dyn_c_louisiana # accusative
 	}
@@ -11570,7 +11558,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_new_france # accusative
 	}
@@ -11578,7 +11566,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_louisiana_commune # accusative
 	}
@@ -11586,7 +11574,7 @@ RU_CL_VP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_VP_dyn_c_archbishopric_of_st_louis # accusative
 	}
@@ -15604,7 +15592,7 @@ RU_CL_TP = {
 			exists = c:MAD
 			this = c:MAD
 			c:MAD = {
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 				is_country_type = unrecognized
 			}
 		}
@@ -15643,11 +15631,7 @@ RU_CL_TP = {
 			this = c:USA
 			coa_def_republic_flag_trigger = yes
 			NOT = { coa_def_communist_flag_trigger = yes }
-			NOT = {	
-				c:USA = {
-					has_law = law_type:law_technocracy
-				}
-			}
+			c:USA = { NOT = { has_law = law_type:law_technocracy } }
 		}
 		localization_key = RU_CL_TP_dyn_c_united_states # instrumental
 	}
@@ -15655,7 +15639,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_united_syndicates_of_america # instrumental
 	}
@@ -15674,7 +15658,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_united_synods_of_america # instrumental
 	}
@@ -15682,7 +15666,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:TUR
 			this = c:TUR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_ottoman_empire # instrumental
 	}
@@ -15690,7 +15674,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:PAP
 			this = c:PAP
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_papal_states # instrumental
 	}
@@ -15751,7 +15735,7 @@ RU_CL_TP = {
 			AND = {
 				exists = c:USA
 				this = c:USA
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_CL_TP_dyn_c_united_sovereign_archduchy # instrumental
@@ -15760,7 +15744,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:RUS
 			this = c:RUS
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_soviet_union # instrumental
 	}
@@ -15768,7 +15752,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:MEX
 			this = c:MEX
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_mexican_empire # instrumental
 	}
@@ -15776,7 +15760,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_confederated_sovereigns_of_america # instrumental
 	}
@@ -15784,7 +15768,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:CSA
 			this = c:CSA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_communist_states_of_america # instrumental
 	}
@@ -15792,7 +15776,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_confederate_synods_of_america # instrumental
 	}
@@ -15801,7 +15785,7 @@ RU_CL_TP = {
 			exists = c:CHI
 			this = c:CHI
 			c:CHI = { country_has_primary_culture = cu:manchu }
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_great_qing # instrumental
 	}
@@ -15809,7 +15793,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:BAV
 			this = c:BAV
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_bavarian_raterepublic # instrumental
 	}
@@ -15817,7 +15801,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:BRE
 			this = c:BRE
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_bremener_raterepublic # instrumental
 	}
@@ -15840,7 +15824,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:CHI
 			this = c:CHI
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_peoples_republic_of_china # instrumental
 	}
@@ -15910,7 +15894,7 @@ RU_CL_TP = {
 			exists = c:AZB
 			this = c:AZB
 			is_subject = no
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			owns_entire_state_region = STATE_AZERBAIJAN
 		}
 		localization_key = RU_CL_TP_dyn_c_baku_commune # instrumental
@@ -15939,7 +15923,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:TUN
 			this = c:TUN
-			NOT = { coa_monarchy_trigger = yes }
+			NOT = { coa_def_monarchy_flag_trigger = yes }
 		}
 		localization_key = RU_CL_TP_dyn_c_tunisia # instrumental
 	}
@@ -15948,7 +15932,7 @@ RU_CL_TP = {
 			exists = c:BEL
 			this = c:BEL
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_TP_dyn_c_united_belgian_states # instrumental
 	}
@@ -15956,7 +15940,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:MOL
 			this = c:MOL
-			coa_monarchy_trigger = no
+			coa_def_monarchy_flag_trigger = no
 		}
 		localization_key = RU_CL_TP_dyn_c_moldova # instrumental
 	}
@@ -15980,7 +15964,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = {
 				OR = {
 					AND = {
@@ -16002,7 +15986,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			OR = {
 				AND = {
 					exists = c:GBR
@@ -16079,7 +16063,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:GER
 			this = c:GER
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			country_rank >= rank_value:major_power
 		}
 		localization_key = RU_CL_TP_dyn_c_german_empire # instrumental
@@ -16155,7 +16139,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:TUS
 			this = c:TUS
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:FRA
 			c:FRA = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -16258,7 +16242,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:LAT
 			this = c:LAT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:GER
 			c:GER = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -16269,7 +16253,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:PAN
 			this = c:PAN
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			has_law = law_type:law_state_religion
 		}
 		localization_key = RU_CL_TP_dyn_c_sikh_empire # instrumental
@@ -16278,7 +16262,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:CAM
 			this = c:CAM
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = { is_country_type = unrecognized }
 		}
 		localization_key = RU_CL_TP_dyn_c_khmer_empire # instrumental
@@ -16287,7 +16271,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:NEJ
 			this = c:NEJ
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_HEDJAZ
 		}
 		localization_key = RU_CL_TP_dyn_c_saudi_arabia # instrumental
@@ -16296,7 +16280,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_great_mongolian_state # instrumental
 	}
@@ -16304,7 +16288,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_mongolian_peoples_republic # instrumental
 	}
@@ -16312,7 +16296,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:POR
 			this = c:POR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_RIO_DE_JANEIRO
 			owns_entire_state_region = STATE_SAO_PAULO
 			NOT = { exists = c:BRZ }
@@ -16496,7 +16480,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:CHC
 			this = c:CHC
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_chechnya_imamate # instrumental
 	}
@@ -16532,7 +16516,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:GBR
 			this = c:GBR
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			exists = capital
 			capital = { state_region = s:STATE_LANCASHIRE } 
 		}
@@ -16690,7 +16674,7 @@ RU_CL_TP = {
 			exists = c:LOU
 			this = c:LOU
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_TP_dyn_c_louisiana # instrumental
 	}
@@ -16698,7 +16682,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_new_france # instrumental
 	}
@@ -16706,7 +16690,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_louisiana_commune # instrumental
 	}
@@ -16714,7 +16698,7 @@ RU_CL_TP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_TP_dyn_c_archbishopric_of_st_louis # instrumental
 	}
@@ -20732,7 +20716,7 @@ RU_CL_PP = {
 			exists = c:MAD
 			this = c:MAD
 			c:MAD = {
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 				is_country_type = unrecognized
 			}
 		}
@@ -20771,11 +20755,7 @@ RU_CL_PP = {
 			this = c:USA
 			coa_def_republic_flag_trigger = yes
 			NOT = { coa_def_communist_flag_trigger = yes }
-			NOT = {	
-				c:USA = {
-					has_law = law_type:law_technocracy
-				}
-			}
+			c:USA = { NOT = { has_law = law_type:law_technocracy } }
 		}
 		localization_key = RU_CL_PP_dyn_c_united_states # prepositional
 	}
@@ -20783,7 +20763,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_united_syndicates_of_america # prepositional
 	}
@@ -20802,7 +20782,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_united_synods_of_america # prepositional
 	}
@@ -20810,7 +20790,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:TUR
 			this = c:TUR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_ottoman_empire # prepositional
 	}
@@ -20818,7 +20798,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:PAP
 			this = c:PAP
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_papal_states # prepositional
 	}
@@ -20879,7 +20859,7 @@ RU_CL_PP = {
 			AND = {
 				exists = c:USA
 				this = c:USA
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_CL_PP_dyn_c_united_sovereign_archduchy # prepositional
@@ -20888,7 +20868,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:RUS
 			this = c:RUS
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_soviet_union # prepositional
 	}
@@ -20896,7 +20876,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:MEX
 			this = c:MEX
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_mexican_empire # prepositional
 	}
@@ -20904,7 +20884,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_confederated_sovereigns_of_america # prepositional
 	}
@@ -20912,7 +20892,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:CSA
 			this = c:CSA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_communist_states_of_america # prepositional
 	}
@@ -20920,7 +20900,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_confederate_synods_of_america # prepositional
 	}
@@ -20929,7 +20909,7 @@ RU_CL_PP = {
 			exists = c:CHI
 			this = c:CHI
 			c:CHI = { country_has_primary_culture = cu:manchu }
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_great_qing # prepositional
 	}
@@ -20937,7 +20917,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:BAV
 			this = c:BAV
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_bavarian_raterepublic # prepositional
 	}
@@ -20945,7 +20925,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:BRE
 			this = c:BRE
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_bremener_raterepublic # prepositional
 	}
@@ -20968,7 +20948,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:CHI
 			this = c:CHI
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_peoples_republic_of_china # prepositional
 	}
@@ -21038,7 +21018,7 @@ RU_CL_PP = {
 			exists = c:AZB
 			this = c:AZB
 			is_subject = no
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			owns_entire_state_region = STATE_AZERBAIJAN
 		}
 		localization_key = RU_CL_PP_dyn_c_baku_commune # prepositional
@@ -21067,7 +21047,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:TUN
 			this = c:TUN
-			NOT = { coa_monarchy_trigger = yes }
+			NOT = { coa_def_monarchy_flag_trigger = yes }
 		}
 		localization_key = RU_CL_PP_dyn_c_tunisia # prepositional
 	}
@@ -21076,7 +21056,7 @@ RU_CL_PP = {
 			exists = c:BEL
 			this = c:BEL
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_PP_dyn_c_united_belgian_states # prepositional
 	}
@@ -21084,7 +21064,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:MOL
 			this = c:MOL
-			coa_monarchy_trigger = no
+			coa_def_monarchy_flag_trigger = no
 		}
 		localization_key = RU_CL_PP_dyn_c_moldova # prepositional
 	}
@@ -21108,7 +21088,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = {
 				OR = {
 					AND = {
@@ -21130,7 +21110,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:MKT
 			this = c:MKT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			OR = {
 				AND = {
 					exists = c:GBR
@@ -21207,7 +21187,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:GER
 			this = c:GER
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			country_rank >= rank_value:major_power
 		}
 		localization_key = RU_CL_PP_dyn_c_german_empire # prepositional
@@ -21283,7 +21263,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:TUS
 			this = c:TUS
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:FRA
 			c:FRA = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -21386,7 +21366,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:LAT
 			this = c:LAT
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			exists = c:GER
 			c:GER = { save_temporary_scope_as = custom_overlord }
 			coa_def_ensign_trigger = yes
@@ -21397,7 +21377,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:PAN
 			this = c:PAN
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			has_law = law_type:law_state_religion
 		}
 		localization_key = RU_CL_PP_dyn_c_sikh_empire # prepositional
@@ -21406,7 +21386,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:CAM
 			this = c:CAM
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = { is_country_type = unrecognized }
 		}
 		localization_key = RU_CL_PP_dyn_c_khmer_empire # prepositional
@@ -21415,7 +21395,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:NEJ
 			this = c:NEJ
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_HEDJAZ
 		}
 		localization_key = RU_CL_PP_dyn_c_saudi_arabia # prepositional
@@ -21424,7 +21404,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_great_mongolian_state # prepositional
 	}
@@ -21432,7 +21412,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:MGL
 			this = c:MGL
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_mongolian_peoples_republic # prepositional
 	}
@@ -21440,7 +21420,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:POR
 			this = c:POR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_RIO_DE_JANEIRO
 			owns_entire_state_region = STATE_SAO_PAULO
 			NOT = { exists = c:BRZ }
@@ -21624,7 +21604,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:CHC
 			this = c:CHC
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_chechnya_imamate # prepositional
 	}
@@ -21660,7 +21640,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:GBR
 			this = c:GBR
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			exists = capital
 			capital = { state_region = s:STATE_LANCASHIRE } 
 		}
@@ -21818,7 +21798,7 @@ RU_CL_PP = {
 			exists = c:LOU
 			this = c:LOU
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 		localization_key = RU_CL_PP_dyn_c_louisiana # prepositional
 	}
@@ -21826,7 +21806,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_new_france # prepositional
 	}
@@ -21834,7 +21814,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_louisiana_commune # prepositional
 	}
@@ -21842,7 +21822,7 @@ RU_CL_PP = {
 		trigger = {
 			exists = c:LOU
 			this = c:LOU
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 		}
 		localization_key = RU_CL_PP_dyn_c_archbishopric_of_st_louis # prepositional
 	}
@@ -27309,6 +27289,12 @@ RU_RL_ADJ_IE = {
 	}
 	text = {  
 		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_IE_atheist
+	}
+	text = {  
+		trigger = {
 			this = rel:hindu
 		}
 		localization_key = RU_RL_ADJ_IE_hindu
@@ -27399,6 +27385,12 @@ RU_RL_ADJ_IH = {
 			this = rel:gelugpa
 		}
 		localization_key = RU_RL_ADJ_IH_gelugpa
+	}
+	text = {  
+		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_IH_atheist
 	}
 	text = {  
 		trigger = {
@@ -27495,6 +27487,12 @@ RU_RL_ADJ_MI = {
 	}
 	text = {  
 		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_MI_atheist
+	}
+	text = {  
+		trigger = {
 			this = rel:hindu
 		}
 		localization_key = RU_RL_ADJ_MI_hindu
@@ -27585,6 +27583,12 @@ RU_RL_ADJ_YU = {
 			this = rel:gelugpa
 		}
 		localization_key = RU_RL_ADJ_YU_gelugpa
+	}
+	text = {  
+		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_YU_atheist
 	}
 	text = {  
 		trigger = {
@@ -27681,6 +27685,12 @@ RU_RL_ADJ_YA = {
 	}
 	text = {  
 		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_YA_atheist
+	}
+	text = {  
+		trigger = {
 			this = rel:hindu
 		}
 		localization_key = RU_RL_ADJ_YA_hindu
@@ -27771,6 +27781,12 @@ RU_RL_ADJ_OE = {
 			this = rel:gelugpa
 		}
 		localization_key = RU_RL_ADJ_OE_gelugpa
+	}
+	text = {  
+		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_OE_atheist
 	}
 	text = {  
 		trigger = {
@@ -27867,6 +27883,12 @@ RU_RL_ADJ_OI = {
 	}
 	text = {  
 		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_OI_atheist
+	}
+	text = {  
+		trigger = {
 			this = rel:hindu
 		}
 		localization_key = RU_RL_ADJ_OI_hindu
@@ -27960,6 +27982,12 @@ RU_RL_ADJ_GO = {
 	}
 	text = {  
 		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_GO_atheist
+	}
+	text = {  
+		trigger = {
 			this = rel:hindu
 		}
 		localization_key = RU_RL_ADJ_GO_hindu
@@ -28050,6 +28078,12 @@ RU_RL_ADJ_IM = {
 			this = rel:gelugpa
 		}
 		localization_key = RU_RL_ADJ_IM_gelugpa
+	}
+	text = {  
+		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_ADJ_IM_atheist
 	}
 	text = {  
 		trigger = {
@@ -28147,6 +28181,12 @@ RU_RL_RP = {
 	}
 	text = {  
 		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_RP_atheist
+	}
+	text = {  
+		trigger = {
 			this = rel:hindu
 		}
 		localization_key = RU_RL_RP_hindu
@@ -28237,6 +28277,12 @@ RU_RL_DP = {
 			this = rel:gelugpa
 		}
 		localization_key = RU_RL_DP_gelugpa
+	}
+	text = {  
+		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_DP_atheist
 	}
 	text = {  
 		trigger = {
@@ -28333,6 +28379,12 @@ RU_RL_VP = {
 	}
 	text = {  
 		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_VP_atheist
+	}
+	text = {  
+		trigger = {
 			this = rel:hindu
 		}
 		localization_key = RU_RL_VP_hindu
@@ -28426,6 +28478,12 @@ RU_RL_TP = {
 	}
 	text = {  
 		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_TP_atheist
+	}
+	text = {  
+		trigger = {
 			this = rel:hindu
 		}
 		localization_key = RU_RL_TP_hindu
@@ -28516,6 +28574,12 @@ RU_RL_PP = {
 			this = rel:gelugpa
 		}
 		localization_key = RU_RL_PP_gelugpa
+	}
+	text = {  
+		trigger = {
+			this = rel:atheist
+		}
+		localization_key = RU_RL_PP_atheist
 	}
 	text = {  
 		trigger = {
@@ -29776,7 +29840,7 @@ RU_CL_END = {
 							exists = c:BEL									
 							this = c:BEL									
 							coa_republic_trigger = yes							
-							NOT = { coa_communist_trigger = yes }
+							NOT = { coa_def_communist_flag_trigger = yes }
 						}
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
@@ -31425,7 +31489,7 @@ RU_CL_END = {
 						initiator = root										
 						exists = c:MGL										
 						target = c:MGL										
-						NOT = { c:MGL = { coa_monarchy_trigger = yes } }
+						NOT = { c:MGL = { coa_def_monarchy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -32015,13 +32079,13 @@ RU_CL_END = {
 					AND = {
 					exists = c:RUS
 					this = c:RUS										
-					NOT = { c:RUS = { coa_communist_trigger = yes } }
+					NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						exists = c:RUS										
 						target = c:RUS										
-						NOT = { c:RUS = { coa_communist_trigger = yes } }
+						NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -33550,8 +33614,8 @@ RU_CL_END = {
 						target = c:LOU										
 						c:LOU = {	
 							NOR = {
-								coa_monarchy_trigger = yes						
-								coa_theocracy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -33649,7 +33713,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:TUR										
 						this = c:TUR										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -33657,7 +33721,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:TUR								
 								this = c:TUR								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -33675,7 +33739,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:PAP										
 						this = c:PAP										
-						coa_theocracy_trigger = yes
+						coa_def_theocracy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -33683,7 +33747,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:PAP								
 								this = c:PAP								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -33845,7 +33909,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:MEX										
 						this = c:MEX										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -33853,7 +33917,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:MEX								
 								this = c:MEX								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -33872,7 +33936,7 @@ RU_CL_END = {
 						exists = c:CHI										
 						this = c:CHI										
 						c:CHI = { country_has_primary_culture = cu:manchu }
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -33881,7 +33945,7 @@ RU_CL_END = {
 								exists = c:CHI								
 								this = c:CHI								
 								c:CHI = { country_has_primary_culture = cu:manchu }
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -33899,7 +33963,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:BAV										
 						this = c:BAV										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -33907,7 +33971,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:BAV								
 								this = c:BAV								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -33925,7 +33989,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:BRE										
 						this = c:BRE										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -33933,7 +33997,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:BRE								
 								this = c:BRE								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -33991,7 +34055,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:CHI										
 						this = c:CHI										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -33999,7 +34063,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:CHI								
 								this = c:CHI								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -34048,7 +34112,7 @@ RU_CL_END = {
 						exists = c:AZB										
 						this = c:AZB										
 						is_subject = no										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 					}
 					any_diplomatic_play = {
@@ -34058,7 +34122,7 @@ RU_CL_END = {
 								exists = c:AZB								
 								this = c:AZB								
 								is_subject = no								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 							}
 						}
@@ -34127,7 +34191,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:MOL										
 						this = c:MOL										
-						coa_monarchy_trigger = no
+						coa_def_monarchy_flag_trigger = no
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -34135,7 +34199,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:MOL								
 								this = c:MOL								
-								coa_monarchy_trigger = no								
+								coa_def_monarchy_flag_trigger = no								
 							}
 						}
 						OR = {
@@ -34259,7 +34323,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:GER										
 						this = c:GER										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						country_rank >= rank_value:major_power
 					}
 					any_diplomatic_play = {
@@ -34268,7 +34332,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:GER								
 								this = c:GER								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								country_rank >= rank_value:major_power								
 							}
 						}
@@ -34463,7 +34527,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:TUS										
 						this = c:TUS										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:FRA = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -34473,7 +34537,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:TUS								
 								this = c:TUS								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:FRA = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -34639,7 +34703,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:LAT										
 						this = c:LAT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:GER = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -34649,7 +34713,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:LAT								
 								this = c:LAT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:GER = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -34669,7 +34733,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:PAN										
 						this = c:PAN										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						has_law = law_type:law_state_religion
 					}
 					any_diplomatic_play = {
@@ -34678,7 +34742,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:PAN								
 								this = c:PAN								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								has_law = law_type:law_state_religion								
 							}
 						}
@@ -34697,7 +34761,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:CAM										
 						this = c:CAM										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = { is_country_type = unrecognized }
 					}
 					any_diplomatic_play = {
@@ -34706,7 +34770,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:CAM								
 								this = c:CAM								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = { is_country_type = unrecognized }
 							}
 						}
@@ -34725,7 +34789,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:NEJ										
 						this = c:NEJ										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						owns_entire_state_region = STATE_HEDJAZ
 					}
 					any_diplomatic_play = {
@@ -34734,7 +34798,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:NEJ								
 								this = c:NEJ								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								owns_entire_state_region = STATE_HEDJAZ								
 							}
 						}
@@ -34753,7 +34817,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -34761,7 +34825,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -34936,7 +35000,7 @@ RU_CL_END = {
 						exists = c:CHI										
 						this = c:CHI										
 						NOT = { country_has_primary_culture = cu:manchu }
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -34945,7 +35009,7 @@ RU_CL_END = {
 								exists = c:CHI								
 								this = c:CHI								
 								NOT = { country_has_primary_culture = cu:manchu }
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -35035,7 +35099,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:GBR										
 						this = c:GBR										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						exists = capital										
 						capital = { state_region = s:STATE_LANCASHIRE }
 					}
@@ -35045,7 +35109,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:GBR								
 								this = c:GBR								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								exists = capital								
 								capital = { state_region = s:STATE_LANCASHIRE } 								
 							}
@@ -35176,7 +35240,7 @@ RU_CL_END = {
 						exists = c:LOU										
 						this = c:LOU										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -35185,7 +35249,7 @@ RU_CL_END = {
 								exists = c:LOU								
 								this = c:LOU								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -35229,7 +35293,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -35237,7 +35301,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -36052,7 +36116,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -36060,7 +36124,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -36106,7 +36170,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -36114,7 +36178,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -36132,7 +36196,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -36140,7 +36204,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -36158,7 +36222,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -36166,7 +36230,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -36184,7 +36248,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -36192,7 +36256,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -36210,7 +36274,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -36218,7 +36282,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -36269,7 +36333,7 @@ RU_CL_END = {
 						exists = c:BEL										
 						this = c:BEL										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -36278,7 +36342,7 @@ RU_CL_END = {
 								exists = c:BEL								
 								this = c:BEL								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -40064,14 +40128,14 @@ RU_CL_END = {
 		trigger = {	
 				OR = {
 					AND = {
-						coa_communist_trigger = yes	
+						coa_def_communist_flag_trigger = yes	
 						exists = c:RUS										
 						this = c:RUS
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						target = {	
-							coa_communist_trigger = yes							
+							coa_def_communist_flag_trigger = yes							
 							exists = c:RUS									
 							this = c:RUS									
 						}
@@ -40130,7 +40194,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:TUN										
 						this = c:TUN										
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -40138,7 +40202,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:TUN								
 								this = c:TUN								
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -40324,7 +40388,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:CHC										
 						this = c:CHC										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -40332,7 +40396,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:CHC								
 								this = c:CHC								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -42563,7 +42627,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = {	
 							OR = {
 								AND = {
@@ -42585,7 +42649,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = {
 									OR = {
 										AND = {	
@@ -42617,7 +42681,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						OR = {
 							AND = {
 								exists = c:GBR								
@@ -42637,7 +42701,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								OR = {	
 									AND = {
 										exists = c:GBR						
@@ -42741,7 +42805,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -42749,7 +42813,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -43113,7 +43177,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -43121,7 +43185,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -43139,7 +43203,7 @@ RU_CL_END = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_theocracy_trigger = yes	
+						coa_def_theocracy_flag_trigger = yes	
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -43147,7 +43211,7 @@ RU_CL_END = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -43833,7 +43897,7 @@ RU_CL_END_FEM = {
 						initiator = root										
 						exists = c:CHC										
 						target = c:CHC										
-						c:CHC = { NOT = { coa_theocracy_trigger = yes } }
+						c:CHC = { NOT = { coa_def_theocracy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -44118,7 +44182,7 @@ RU_CL_END_FEM = {
 							exists = c:BEL									
 							this = c:BEL									
 							coa_republic_trigger = yes							
-							NOT = { coa_communist_trigger = yes }
+							NOT = { coa_def_communist_flag_trigger = yes }
 						}
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
@@ -45727,7 +45791,7 @@ RU_CL_END_FEM = {
 						initiator = root										
 						exists = c:MGL										
 						target = c:MGL										
-						NOT = { c:MGL = { coa_monarchy_trigger = yes } }
+						NOT = { c:MGL = { coa_def_monarchy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -46317,13 +46381,13 @@ RU_CL_END_FEM = {
 					AND = {
 					exists = c:RUS
 					this = c:RUS										
-					NOT = { c:RUS = { coa_communist_trigger = yes } }
+					NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						exists = c:RUS										
 						target = c:RUS										
-						NOT = { c:RUS = { coa_communist_trigger = yes } }
+						NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -47852,8 +47916,8 @@ RU_CL_END_FEM = {
 						target = c:LOU										
 						c:LOU = {	
 							NOR = {
-								coa_monarchy_trigger = yes						
-								coa_theocracy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -47951,7 +48015,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:TUR										
 						this = c:TUR										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -47959,7 +48023,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:TUR								
 								this = c:TUR								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -47977,7 +48041,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:PAP										
 						this = c:PAP										
-						coa_theocracy_trigger = yes
+						coa_def_theocracy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -47985,7 +48049,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:PAP								
 								this = c:PAP								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -48147,7 +48211,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:MEX										
 						this = c:MEX										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -48155,7 +48219,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:MEX								
 								this = c:MEX								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -48174,7 +48238,7 @@ RU_CL_END_FEM = {
 						exists = c:CHI										
 						this = c:CHI										
 						c:CHI = { country_has_primary_culture = cu:manchu }
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -48183,7 +48247,7 @@ RU_CL_END_FEM = {
 								exists = c:CHI								
 								this = c:CHI								
 								c:CHI = { country_has_primary_culture = cu:manchu }
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -48201,7 +48265,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:BAV										
 						this = c:BAV										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -48209,7 +48273,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:BAV								
 								this = c:BAV								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -48227,7 +48291,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:BRE										
 						this = c:BRE										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -48235,7 +48299,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:BRE								
 								this = c:BRE								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -48293,7 +48357,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:CHI										
 						this = c:CHI										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -48301,7 +48365,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:CHI								
 								this = c:CHI								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -48350,7 +48414,7 @@ RU_CL_END_FEM = {
 						exists = c:AZB										
 						this = c:AZB										
 						is_subject = no										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 					}
 					any_diplomatic_play = {
@@ -48360,7 +48424,7 @@ RU_CL_END_FEM = {
 								exists = c:AZB								
 								this = c:AZB								
 								is_subject = no								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 							}
 						}
@@ -48429,7 +48493,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:MOL										
 						this = c:MOL										
-						coa_monarchy_trigger = no
+						coa_def_monarchy_flag_trigger = no
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -48437,7 +48501,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:MOL								
 								this = c:MOL								
-								coa_monarchy_trigger = no								
+								coa_def_monarchy_flag_trigger = no								
 							}
 						}
 						OR = {
@@ -48561,7 +48625,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:GER										
 						this = c:GER										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						country_rank >= rank_value:major_power
 					}
 					any_diplomatic_play = {
@@ -48570,7 +48634,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:GER								
 								this = c:GER								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								country_rank >= rank_value:major_power								
 							}
 						}
@@ -48765,7 +48829,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:TUS										
 						this = c:TUS										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:FRA = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -48775,7 +48839,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:TUS								
 								this = c:TUS								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:FRA = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -48941,7 +49005,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:LAT										
 						this = c:LAT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:GER = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -48951,7 +49015,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:LAT								
 								this = c:LAT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:GER = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -48971,7 +49035,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:PAN										
 						this = c:PAN										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						has_law = law_type:law_state_religion
 					}
 					any_diplomatic_play = {
@@ -48980,7 +49044,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:PAN								
 								this = c:PAN								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								has_law = law_type:law_state_religion								
 							}
 						}
@@ -48999,7 +49063,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:CAM										
 						this = c:CAM										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = { is_country_type = unrecognized }
 					}
 					any_diplomatic_play = {
@@ -49008,7 +49072,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:CAM								
 								this = c:CAM								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = { is_country_type = unrecognized }
 							}
 						}
@@ -49027,7 +49091,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:NEJ										
 						this = c:NEJ										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						owns_entire_state_region = STATE_HEDJAZ
 					}
 					any_diplomatic_play = {
@@ -49036,7 +49100,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:NEJ								
 								this = c:NEJ								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								owns_entire_state_region = STATE_HEDJAZ								
 							}
 						}
@@ -49055,7 +49119,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -49063,7 +49127,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -49238,7 +49302,7 @@ RU_CL_END_FEM = {
 						exists = c:CHI										
 						this = c:CHI										
 						NOT = { country_has_primary_culture = cu:manchu }
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -49247,7 +49311,7 @@ RU_CL_END_FEM = {
 								exists = c:CHI								
 								this = c:CHI								
 								NOT = { country_has_primary_culture = cu:manchu }
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -49265,7 +49329,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:GBR										
 						this = c:GBR										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						exists = capital										
 						capital = { state_region = s:STATE_LANCASHIRE }
 					}
@@ -49275,7 +49339,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:GBR								
 								this = c:GBR								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								exists = capital								
 								capital = { state_region = s:STATE_LANCASHIRE } 								
 							}
@@ -49406,7 +49470,7 @@ RU_CL_END_FEM = {
 						exists = c:LOU										
 						this = c:LOU										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -49415,7 +49479,7 @@ RU_CL_END_FEM = {
 								exists = c:LOU								
 								this = c:LOU								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -49459,7 +49523,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -49467,7 +49531,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -50310,7 +50374,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -50318,7 +50382,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -50336,7 +50400,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -50344,7 +50408,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -50362,7 +50426,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -50370,7 +50434,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -50388,7 +50452,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -50396,7 +50460,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -50414,7 +50478,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -50422,7 +50486,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -50440,7 +50504,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -50448,7 +50512,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -50499,7 +50563,7 @@ RU_CL_END_FEM = {
 						exists = c:BEL										
 						this = c:BEL										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -50508,7 +50572,7 @@ RU_CL_END_FEM = {
 								exists = c:BEL								
 								this = c:BEL								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -54294,14 +54358,14 @@ RU_CL_END_FEM = {
 		trigger = {	
 				OR = {
 					AND = {
-						coa_communist_trigger = yes	
+						coa_def_communist_flag_trigger = yes	
 						exists = c:RUS										
 						this = c:RUS
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						target = {	
-							coa_communist_trigger = yes							
+							coa_def_communist_flag_trigger = yes							
 							exists = c:RUS									
 							this = c:RUS									
 						}
@@ -54360,7 +54424,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:TUN										
 						this = c:TUN										
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -54368,7 +54432,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:TUN								
 								this = c:TUN								
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -54554,7 +54618,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:CHC										
 						this = c:CHC										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -54562,7 +54626,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:CHC								
 								this = c:CHC								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -56865,7 +56929,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = {	
 							OR = {
 								AND = {
@@ -56887,7 +56951,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = {
 									OR = {
 										AND = {	
@@ -56919,7 +56983,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						OR = {
 							AND = {
 								exists = c:GBR								
@@ -56939,7 +57003,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								OR = {	
 									AND = {
 										exists = c:GBR						
@@ -57043,7 +57107,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -57051,7 +57115,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -57415,7 +57479,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -57423,7 +57487,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -57441,7 +57505,7 @@ RU_CL_END_FEM = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_theocracy_trigger = yes	
+						coa_def_theocracy_flag_trigger = yes	
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -57449,7 +57513,7 @@ RU_CL_END_FEM = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -58455,7 +58519,7 @@ RU_CL_END_T = {
 						initiator = root										
 						exists = c:CHC										
 						target = c:CHC										
-						c:CHC = { NOT = { coa_theocracy_trigger = yes } }
+						c:CHC = { NOT = { coa_def_theocracy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -58740,7 +58804,7 @@ RU_CL_END_T = {
 							exists = c:BEL									
 							this = c:BEL									
 							coa_republic_trigger = yes							
-							NOT = { coa_communist_trigger = yes }
+							NOT = { coa_def_communist_flag_trigger = yes }
 						}
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
@@ -60349,7 +60413,7 @@ RU_CL_END_T = {
 						initiator = root										
 						exists = c:MGL										
 						target = c:MGL										
-						NOT = { c:MGL = { coa_monarchy_trigger = yes } }
+						NOT = { c:MGL = { coa_def_monarchy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -60939,13 +61003,13 @@ RU_CL_END_T = {
 					AND = {
 					exists = c:RUS
 					this = c:RUS										
-					NOT = { c:RUS = { coa_communist_trigger = yes } }
+					NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						exists = c:RUS										
 						target = c:RUS										
-						NOT = { c:RUS = { coa_communist_trigger = yes } }
+						NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -62474,8 +62538,8 @@ RU_CL_END_T = {
 						target = c:LOU										
 						c:LOU = {	
 							NOR = {
-								coa_monarchy_trigger = yes						
-								coa_theocracy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -62573,7 +62637,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:TUR										
 						this = c:TUR										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -62581,7 +62645,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:TUR								
 								this = c:TUR								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -62599,7 +62663,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:PAP										
 						this = c:PAP										
-						coa_theocracy_trigger = yes
+						coa_def_theocracy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -62607,7 +62671,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:PAP								
 								this = c:PAP								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -62769,7 +62833,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:MEX										
 						this = c:MEX										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -62777,7 +62841,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:MEX								
 								this = c:MEX								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -62796,7 +62860,7 @@ RU_CL_END_T = {
 						exists = c:CHI										
 						this = c:CHI										
 						c:CHI = { country_has_primary_culture = cu:manchu }
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -62805,7 +62869,7 @@ RU_CL_END_T = {
 								exists = c:CHI								
 								this = c:CHI								
 								c:CHI = { country_has_primary_culture = cu:manchu }
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -62823,7 +62887,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:BAV										
 						this = c:BAV										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -62831,7 +62895,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:BAV								
 								this = c:BAV								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -62849,7 +62913,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:BRE										
 						this = c:BRE										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -62857,7 +62921,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:BRE								
 								this = c:BRE								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -62915,7 +62979,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:CHI										
 						this = c:CHI										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -62923,7 +62987,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:CHI								
 								this = c:CHI								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -62972,7 +63036,7 @@ RU_CL_END_T = {
 						exists = c:AZB										
 						this = c:AZB										
 						is_subject = no										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 					}
 					any_diplomatic_play = {
@@ -62982,7 +63046,7 @@ RU_CL_END_T = {
 								exists = c:AZB								
 								this = c:AZB								
 								is_subject = no								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 							}
 						}
@@ -63051,7 +63115,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:MOL										
 						this = c:MOL										
-						coa_monarchy_trigger = no
+						coa_def_monarchy_flag_trigger = no
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -63059,7 +63123,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:MOL								
 								this = c:MOL								
-								coa_monarchy_trigger = no								
+								coa_def_monarchy_flag_trigger = no								
 							}
 						}
 						OR = {
@@ -63183,7 +63247,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:GER										
 						this = c:GER										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						country_rank >= rank_value:major_power
 					}
 					any_diplomatic_play = {
@@ -63192,7 +63256,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:GER								
 								this = c:GER								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								country_rank >= rank_value:major_power								
 							}
 						}
@@ -63387,7 +63451,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:TUS										
 						this = c:TUS										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:FRA = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -63397,7 +63461,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:TUS								
 								this = c:TUS								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:FRA = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -63563,7 +63627,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:LAT										
 						this = c:LAT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:GER = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -63573,7 +63637,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:LAT								
 								this = c:LAT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:GER = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -63593,7 +63657,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:PAN										
 						this = c:PAN										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						has_law = law_type:law_state_religion
 					}
 					any_diplomatic_play = {
@@ -63602,7 +63666,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:PAN								
 								this = c:PAN								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								has_law = law_type:law_state_religion								
 							}
 						}
@@ -63621,7 +63685,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:CAM										
 						this = c:CAM										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = { is_country_type = unrecognized }
 					}
 					any_diplomatic_play = {
@@ -63630,7 +63694,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:CAM								
 								this = c:CAM								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = { is_country_type = unrecognized }
 							}
 						}
@@ -63649,7 +63713,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:NEJ										
 						this = c:NEJ										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						owns_entire_state_region = STATE_HEDJAZ
 					}
 					any_diplomatic_play = {
@@ -63658,7 +63722,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:NEJ								
 								this = c:NEJ								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								owns_entire_state_region = STATE_HEDJAZ								
 							}
 						}
@@ -63677,7 +63741,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -63685,7 +63749,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -63860,7 +63924,7 @@ RU_CL_END_T = {
 						exists = c:CHI										
 						this = c:CHI										
 						NOT = { country_has_primary_culture = cu:manchu }
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -63869,7 +63933,7 @@ RU_CL_END_T = {
 								exists = c:CHI								
 								this = c:CHI								
 								NOT = { country_has_primary_culture = cu:manchu }
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -63887,7 +63951,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:GBR										
 						this = c:GBR										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						exists = capital										
 						capital = { state_region = s:STATE_LANCASHIRE }
 					}
@@ -63897,7 +63961,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:GBR								
 								this = c:GBR								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								exists = capital								
 								capital = { state_region = s:STATE_LANCASHIRE } 								
 							}
@@ -64028,7 +64092,7 @@ RU_CL_END_T = {
 						exists = c:LOU										
 						this = c:LOU										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -64037,7 +64101,7 @@ RU_CL_END_T = {
 								exists = c:LOU								
 								this = c:LOU								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -64081,7 +64145,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -64089,7 +64153,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -64932,7 +64996,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -64940,7 +65004,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -64958,7 +65022,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -64966,7 +65030,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -64984,7 +65048,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -64992,7 +65056,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -65010,7 +65074,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -65018,7 +65082,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -65036,7 +65100,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -65044,7 +65108,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -65062,7 +65126,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -65070,7 +65134,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -65121,7 +65185,7 @@ RU_CL_END_T = {
 						exists = c:BEL										
 						this = c:BEL										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -65130,7 +65194,7 @@ RU_CL_END_T = {
 								exists = c:BEL								
 								this = c:BEL								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -68916,14 +68980,14 @@ RU_CL_END_T = {
 		trigger = {	
 				OR = {
 					AND = {
-						coa_communist_trigger = yes	
+						coa_def_communist_flag_trigger = yes	
 						exists = c:RUS										
 						this = c:RUS
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						target = {	
-							coa_communist_trigger = yes							
+							coa_def_communist_flag_trigger = yes							
 							exists = c:RUS									
 							this = c:RUS									
 						}
@@ -68982,7 +69046,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:TUN										
 						this = c:TUN										
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -68990,7 +69054,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:TUN								
 								this = c:TUN								
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -69176,7 +69240,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:CHC										
 						this = c:CHC										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -69184,7 +69248,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:CHC								
 								this = c:CHC								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -71395,7 +71459,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = {	
 							OR = {
 								AND = {
@@ -71417,7 +71481,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = {
 									OR = {
 										AND = {	
@@ -71449,7 +71513,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						OR = {
 							AND = {
 								exists = c:GBR								
@@ -71469,7 +71533,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								OR = {	
 									AND = {
 										exists = c:GBR						
@@ -71573,7 +71637,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -71581,7 +71645,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -71945,7 +72009,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -71953,7 +72017,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -72011,7 +72075,7 @@ RU_CL_END_T = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_theocracy_trigger = yes	
+						coa_def_theocracy_flag_trigger = yes	
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -72019,7 +72083,7 @@ RU_CL_END_T = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -73025,7 +73089,7 @@ RU_CL_END_GUT = {
 						initiator = root										
 						exists = c:CHC										
 						target = c:CHC										
-						c:CHC = { NOT = { coa_theocracy_trigger = yes } }
+						c:CHC = { NOT = { coa_def_theocracy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -73310,7 +73374,7 @@ RU_CL_END_GUT = {
 							exists = c:BEL									
 							this = c:BEL									
 							coa_republic_trigger = yes							
-							NOT = { coa_communist_trigger = yes }
+							NOT = { coa_def_communist_flag_trigger = yes }
 						}
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
@@ -74919,7 +74983,7 @@ RU_CL_END_GUT = {
 						initiator = root										
 						exists = c:MGL										
 						target = c:MGL										
-						NOT = { c:MGL = { coa_monarchy_trigger = yes } }
+						NOT = { c:MGL = { coa_def_monarchy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -75509,13 +75573,13 @@ RU_CL_END_GUT = {
 					AND = {
 					exists = c:RUS
 					this = c:RUS										
-					NOT = { c:RUS = { coa_communist_trigger = yes } }
+					NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						exists = c:RUS										
 						target = c:RUS										
-						NOT = { c:RUS = { coa_communist_trigger = yes } }
+						NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -77044,8 +77108,8 @@ RU_CL_END_GUT = {
 						target = c:LOU										
 						c:LOU = {	
 							NOR = {
-								coa_monarchy_trigger = yes						
-								coa_theocracy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -77143,7 +77207,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:TUR										
 						this = c:TUR										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -77151,7 +77215,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:TUR								
 								this = c:TUR								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -77169,7 +77233,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:PAP										
 						this = c:PAP										
-						coa_theocracy_trigger = yes
+						coa_def_theocracy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -77177,7 +77241,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:PAP								
 								this = c:PAP								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -77339,7 +77403,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:MEX										
 						this = c:MEX										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -77347,7 +77411,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:MEX								
 								this = c:MEX								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -77366,7 +77430,7 @@ RU_CL_END_GUT = {
 						exists = c:CHI										
 						this = c:CHI										
 						c:CHI = { country_has_primary_culture = cu:manchu }
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -77375,7 +77439,7 @@ RU_CL_END_GUT = {
 								exists = c:CHI								
 								this = c:CHI								
 								c:CHI = { country_has_primary_culture = cu:manchu }
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -77393,7 +77457,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:BAV										
 						this = c:BAV										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -77401,7 +77465,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:BAV								
 								this = c:BAV								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -77419,7 +77483,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:BRE										
 						this = c:BRE										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -77427,7 +77491,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:BRE								
 								this = c:BRE								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -77485,7 +77549,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:CHI										
 						this = c:CHI										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -77493,7 +77557,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:CHI								
 								this = c:CHI								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -77542,7 +77606,7 @@ RU_CL_END_GUT = {
 						exists = c:AZB										
 						this = c:AZB										
 						is_subject = no										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 					}
 					any_diplomatic_play = {
@@ -77552,7 +77616,7 @@ RU_CL_END_GUT = {
 								exists = c:AZB								
 								this = c:AZB								
 								is_subject = no								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 							}
 						}
@@ -77621,7 +77685,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:MOL										
 						this = c:MOL										
-						coa_monarchy_trigger = no
+						coa_def_monarchy_flag_trigger = no
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -77629,7 +77693,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:MOL								
 								this = c:MOL								
-								coa_monarchy_trigger = no								
+								coa_def_monarchy_flag_trigger = no								
 							}
 						}
 						OR = {
@@ -77753,7 +77817,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:GER										
 						this = c:GER										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						country_rank >= rank_value:major_power
 					}
 					any_diplomatic_play = {
@@ -77762,7 +77826,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:GER								
 								this = c:GER								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								country_rank >= rank_value:major_power								
 							}
 						}
@@ -77957,7 +78021,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:TUS										
 						this = c:TUS										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:FRA = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -77967,7 +78031,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:TUS								
 								this = c:TUS								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:FRA = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -78133,7 +78197,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:LAT										
 						this = c:LAT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:GER = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -78143,7 +78207,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:LAT								
 								this = c:LAT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:GER = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -78163,7 +78227,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:PAN										
 						this = c:PAN										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						has_law = law_type:law_state_religion
 					}
 					any_diplomatic_play = {
@@ -78172,7 +78236,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:PAN								
 								this = c:PAN								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								has_law = law_type:law_state_religion								
 							}
 						}
@@ -78191,7 +78255,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:CAM										
 						this = c:CAM										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = { is_country_type = unrecognized }
 					}
 					any_diplomatic_play = {
@@ -78200,7 +78264,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:CAM								
 								this = c:CAM								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = { is_country_type = unrecognized }
 							}
 						}
@@ -78219,7 +78283,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:NEJ										
 						this = c:NEJ										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						owns_entire_state_region = STATE_HEDJAZ
 					}
 					any_diplomatic_play = {
@@ -78228,7 +78292,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:NEJ								
 								this = c:NEJ								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								owns_entire_state_region = STATE_HEDJAZ								
 							}
 						}
@@ -78247,7 +78311,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -78255,7 +78319,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -78430,7 +78494,7 @@ RU_CL_END_GUT = {
 						exists = c:CHI										
 						this = c:CHI										
 						NOT = { country_has_primary_culture = cu:manchu }
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -78439,7 +78503,7 @@ RU_CL_END_GUT = {
 								exists = c:CHI								
 								this = c:CHI								
 								NOT = { country_has_primary_culture = cu:manchu }
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -78457,7 +78521,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:GBR										
 						this = c:GBR										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						exists = capital										
 						capital = { state_region = s:STATE_LANCASHIRE }
 					}
@@ -78467,7 +78531,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:GBR								
 								this = c:GBR								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								exists = capital								
 								capital = { state_region = s:STATE_LANCASHIRE } 								
 							}
@@ -78598,7 +78662,7 @@ RU_CL_END_GUT = {
 						exists = c:LOU										
 						this = c:LOU										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -78607,7 +78671,7 @@ RU_CL_END_GUT = {
 								exists = c:LOU								
 								this = c:LOU								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -78651,7 +78715,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -78659,7 +78723,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -79502,7 +79566,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -79510,7 +79574,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -79528,7 +79592,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -79536,7 +79600,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -79554,7 +79618,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -79562,7 +79626,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -79580,7 +79644,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -79588,7 +79652,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -79606,7 +79670,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -79614,7 +79678,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -79632,7 +79696,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -79640,7 +79704,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -79691,7 +79755,7 @@ RU_CL_END_GUT = {
 						exists = c:BEL										
 						this = c:BEL										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -79700,7 +79764,7 @@ RU_CL_END_GUT = {
 								exists = c:BEL								
 								this = c:BEL								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -83486,14 +83550,14 @@ RU_CL_END_GUT = {
 		trigger = {	
 				OR = {
 					AND = {
-						coa_communist_trigger = yes	
+						coa_def_communist_flag_trigger = yes	
 						exists = c:RUS										
 						this = c:RUS
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						target = {	
-							coa_communist_trigger = yes							
+							coa_def_communist_flag_trigger = yes							
 							exists = c:RUS									
 							this = c:RUS									
 						}
@@ -83552,7 +83616,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:TUN										
 						this = c:TUN										
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -83560,7 +83624,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:TUN								
 								this = c:TUN								
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -83746,7 +83810,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:CHC										
 						this = c:CHC										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -83754,7 +83818,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:CHC								
 								this = c:CHC								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -85965,7 +86029,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = {	
 							OR = {
 								AND = {
@@ -85987,7 +86051,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = {
 									OR = {
 										AND = {	
@@ -86019,7 +86083,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						OR = {
 							AND = {
 								exists = c:GBR								
@@ -86039,7 +86103,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								OR = {	
 									AND = {
 										exists = c:GBR						
@@ -86143,7 +86207,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -86151,7 +86215,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -86515,7 +86579,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -86523,7 +86587,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -86861,7 +86925,7 @@ RU_CL_END_GUT = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_theocracy_trigger = yes	
+						coa_def_theocracy_flag_trigger = yes	
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -86869,7 +86933,7 @@ RU_CL_END_GUT = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -87595,7 +87659,7 @@ RU_CL_END_UT = {
 						initiator = root										
 						exists = c:CHC										
 						target = c:CHC										
-						c:CHC = { NOT = { coa_theocracy_trigger = yes } }
+						c:CHC = { NOT = { coa_def_theocracy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -87880,7 +87944,7 @@ RU_CL_END_UT = {
 							exists = c:BEL									
 							this = c:BEL									
 							coa_republic_trigger = yes							
-							NOT = { coa_communist_trigger = yes }
+							NOT = { coa_def_communist_flag_trigger = yes }
 						}
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
@@ -89489,7 +89553,7 @@ RU_CL_END_UT = {
 						initiator = root										
 						exists = c:MGL										
 						target = c:MGL										
-						NOT = { c:MGL = { coa_monarchy_trigger = yes } }
+						NOT = { c:MGL = { coa_def_monarchy_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -90079,13 +90143,13 @@ RU_CL_END_UT = {
 					AND = {
 					exists = c:RUS
 					this = c:RUS										
-					NOT = { c:RUS = { coa_communist_trigger = yes } }
+					NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						exists = c:RUS										
 						target = c:RUS										
-						NOT = { c:RUS = { coa_communist_trigger = yes } }
+						NOT = { c:RUS = { coa_def_communist_flag_trigger = yes } }
 						OR = {
 							is_diplomatic_play_type = dp_revolution									
 							is_diplomatic_play_type = dp_secession									
@@ -91614,8 +91678,8 @@ RU_CL_END_UT = {
 						target = c:LOU										
 						c:LOU = {	
 							NOR = {
-								coa_monarchy_trigger = yes						
-								coa_theocracy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -91713,7 +91777,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:TUR										
 						this = c:TUR										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -91721,7 +91785,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:TUR								
 								this = c:TUR								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -91739,7 +91803,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:PAP										
 						this = c:PAP										
-						coa_theocracy_trigger = yes
+						coa_def_theocracy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -91747,7 +91811,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:PAP								
 								this = c:PAP								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -91909,7 +91973,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:MEX										
 						this = c:MEX										
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -91917,7 +91981,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:MEX								
 								this = c:MEX								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -91936,7 +92000,7 @@ RU_CL_END_UT = {
 						exists = c:CHI										
 						this = c:CHI										
 						c:CHI = { country_has_primary_culture = cu:manchu }
-						coa_monarchy_trigger = yes
+						coa_def_monarchy_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -91945,7 +92009,7 @@ RU_CL_END_UT = {
 								exists = c:CHI								
 								this = c:CHI								
 								c:CHI = { country_has_primary_culture = cu:manchu }
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -91963,7 +92027,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:BAV										
 						this = c:BAV										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -91971,7 +92035,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:BAV								
 								this = c:BAV								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -91989,7 +92053,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:BRE										
 						this = c:BRE										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -91997,7 +92061,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:BRE								
 								this = c:BRE								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -92055,7 +92119,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:CHI										
 						this = c:CHI										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -92063,7 +92127,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:CHI								
 								this = c:CHI								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -92112,7 +92176,7 @@ RU_CL_END_UT = {
 						exists = c:AZB										
 						this = c:AZB										
 						is_subject = no										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 					}
 					any_diplomatic_play = {
@@ -92122,7 +92186,7 @@ RU_CL_END_UT = {
 								exists = c:AZB								
 								this = c:AZB								
 								is_subject = no								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								c:AZB = { owns_entire_state_region = STATE_AZERBAIJAN }
 							}
 						}
@@ -92191,7 +92255,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:MOL										
 						this = c:MOL										
-						coa_monarchy_trigger = no
+						coa_def_monarchy_flag_trigger = no
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -92199,7 +92263,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:MOL								
 								this = c:MOL								
-								coa_monarchy_trigger = no								
+								coa_def_monarchy_flag_trigger = no								
 							}
 						}
 						OR = {
@@ -92323,7 +92387,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:GER										
 						this = c:GER										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						country_rank >= rank_value:major_power
 					}
 					any_diplomatic_play = {
@@ -92332,7 +92396,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:GER								
 								this = c:GER								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								country_rank >= rank_value:major_power								
 							}
 						}
@@ -92527,7 +92591,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:TUS										
 						this = c:TUS										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:FRA = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -92537,7 +92601,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:TUS								
 								this = c:TUS								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:FRA = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -92703,7 +92767,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:LAT										
 						this = c:LAT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						c:GER = { save_temporary_scope_as = custom_overlord }
 						coa_def_ensign_trigger = yes
 					}
@@ -92713,7 +92777,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:LAT								
 								this = c:LAT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								c:GER = { save_temporary_scope_as = custom_overlord }
 								coa_def_ensign_trigger = yes						
 							}
@@ -92733,7 +92797,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:PAN										
 						this = c:PAN										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						has_law = law_type:law_state_religion
 					}
 					any_diplomatic_play = {
@@ -92742,7 +92806,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:PAN								
 								this = c:PAN								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								has_law = law_type:law_state_religion								
 							}
 						}
@@ -92761,7 +92825,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:CAM										
 						this = c:CAM										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = { is_country_type = unrecognized }
 					}
 					any_diplomatic_play = {
@@ -92770,7 +92834,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:CAM								
 								this = c:CAM								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = { is_country_type = unrecognized }
 							}
 						}
@@ -92789,7 +92853,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:NEJ										
 						this = c:NEJ										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						owns_entire_state_region = STATE_HEDJAZ
 					}
 					any_diplomatic_play = {
@@ -92798,7 +92862,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:NEJ								
 								this = c:NEJ								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								owns_entire_state_region = STATE_HEDJAZ								
 							}
 						}
@@ -92817,7 +92881,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -92825,7 +92889,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -93000,7 +93064,7 @@ RU_CL_END_UT = {
 						exists = c:CHI										
 						this = c:CHI										
 						NOT = { country_has_primary_culture = cu:manchu }
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -93009,7 +93073,7 @@ RU_CL_END_UT = {
 								exists = c:CHI								
 								this = c:CHI								
 								NOT = { country_has_primary_culture = cu:manchu }
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -93027,7 +93091,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:GBR										
 						this = c:GBR										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 						exists = capital										
 						capital = { state_region = s:STATE_LANCASHIRE }
 					}
@@ -93037,7 +93101,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:GBR								
 								this = c:GBR								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 								exists = capital								
 								capital = { state_region = s:STATE_LANCASHIRE } 								
 							}
@@ -93168,7 +93232,7 @@ RU_CL_END_UT = {
 						exists = c:LOU										
 						this = c:LOU										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -93177,7 +93241,7 @@ RU_CL_END_UT = {
 								exists = c:LOU								
 								this = c:LOU								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -93221,7 +93285,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_communist_trigger = yes
+						coa_def_communist_flag_trigger = yes
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -93229,7 +93293,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -94072,7 +94136,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -94080,7 +94144,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -94098,7 +94162,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -94106,7 +94170,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -94124,7 +94188,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:USA										
 						this = c:USA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -94132,7 +94196,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:USA								
 								this = c:USA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -94150,7 +94214,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -94158,7 +94222,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -94176,7 +94240,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_communist_trigger = yes								
+						coa_def_communist_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -94184,7 +94248,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_communist_trigger = yes						
+								coa_def_communist_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -94202,7 +94266,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:CSA										
 						this = c:CSA										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -94210,7 +94274,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:CSA								
 								this = c:CSA								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -94261,7 +94325,7 @@ RU_CL_END_UT = {
 						exists = c:BEL										
 						this = c:BEL										
 						coa_republic_trigger = yes								
-						NOT = { coa_communist_trigger = yes }
+						NOT = { coa_def_communist_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -94270,7 +94334,7 @@ RU_CL_END_UT = {
 								exists = c:BEL								
 								this = c:BEL								
 								coa_republic_trigger = yes						
-								NOT = { coa_communist_trigger = yes }
+								NOT = { coa_def_communist_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -98056,14 +98120,14 @@ RU_CL_END_UT = {
 		trigger = {	
 				OR = {
 					AND = {
-						coa_communist_trigger = yes	
+						coa_def_communist_flag_trigger = yes	
 						exists = c:RUS										
 						this = c:RUS
 					}
 					any_diplomatic_play = {
 						initiator = root										
 						target = {	
-							coa_communist_trigger = yes							
+							coa_def_communist_flag_trigger = yes							
 							exists = c:RUS									
 							this = c:RUS									
 						}
@@ -98122,7 +98186,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:TUN										
 						this = c:TUN										
-						NOT = { coa_monarchy_trigger = yes }
+						NOT = { coa_def_monarchy_flag_trigger = yes }
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -98130,7 +98194,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:TUN								
 								this = c:TUN								
-								NOT = { coa_monarchy_trigger = yes }
+								NOT = { coa_def_monarchy_flag_trigger = yes }
 							}
 						}
 						OR = {
@@ -98316,7 +98380,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:CHC										
 						this = c:CHC										
-						coa_theocracy_trigger = yes								
+						coa_def_theocracy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -98324,7 +98388,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:CHC								
 								this = c:CHC								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -100535,7 +100599,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						NOT = {	
 							OR = {
 								AND = {
@@ -100557,7 +100621,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								NOT = {
 									OR = {
 										AND = {	
@@ -100589,7 +100653,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:MKT										
 						this = c:MKT										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 						OR = {
 							AND = {
 								exists = c:GBR								
@@ -100609,7 +100673,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:MKT								
 								this = c:MKT								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 								OR = {	
 									AND = {
 										exists = c:GBR						
@@ -100713,7 +100777,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:MGL										
 						this = c:MGL										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -100721,7 +100785,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:MGL								
 								this = c:MGL								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -101085,7 +101149,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_monarchy_trigger = yes								
+						coa_def_monarchy_flag_trigger = yes								
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -101093,7 +101157,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_monarchy_trigger = yes						
+								coa_def_monarchy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -101151,7 +101215,7 @@ RU_CL_END_UT = {
 					AND = {
 						exists = c:LOU										
 						this = c:LOU										
-						coa_theocracy_trigger = yes	
+						coa_def_theocracy_flag_trigger = yes	
 					}
 					any_diplomatic_play = {
 						initiator = root										
@@ -101159,7 +101223,7 @@ RU_CL_END_UT = {
 							AND = {
 								exists = c:LOU								
 								this = c:LOU								
-								coa_theocracy_trigger = yes						
+								coa_def_theocracy_flag_trigger = yes						
 							}
 						}
 						OR = {
@@ -103535,6 +103599,48 @@ RU_BL_RP = {
 		localization_key = RU_BL_RP_construction_sector
 	}
 	text = {
+		trigger = {
+			is_building_type = building_martandsuntemple
+		}
+		localization_key = RU_BL_RP_building_martandsuntemple
+	}
+	text = {
+		trigger = {
+			is_building_type = building_observatorygreenwich
+		}
+		localization_key = RU_BL_RP_building_observatorygreenwich
+	}
+	text = {
+		trigger = {
+			is_building_type = building_temple_of_poseidon
+		}
+		localization_key = RU_BL_RP_building_temple_of_poseidon
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wat_arun
+		}
+		localization_key = RU_BL_RP_building_wat_arun
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_RP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_military_shipyards
+		}
+		localization_key = RU_BL_RP_building_military_shipyards
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard_plantation
+		}
+		localization_key = RU_BL_RP_building_vineyard_plantation
+	}
+	text = {
 		localization_key = RU_BL_RP_DEFAULT
 	}
 }
@@ -103974,6 +104080,48 @@ RU_BL_DP = {
 			is_building_type = building_construction_sector
 		}
 		localization_key = RU_BL_DP_construction_sector
+	}
+	text = {
+		trigger = {
+			is_building_type = building_martandsuntemple
+		}
+		localization_key = RU_BL_DP_building_martandsuntemple
+	}
+	text = {
+		trigger = {
+			is_building_type = building_observatorygreenwich
+		}
+		localization_key = RU_BL_DP_building_observatorygreenwich
+	}
+	text = {
+		trigger = {
+			is_building_type = building_temple_of_poseidon
+		}
+		localization_key = RU_BL_DP_building_temple_of_poseidon
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wat_arun
+		}
+		localization_key = RU_BL_DP_building_wat_arun
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_DP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_military_shipyards
+		}
+		localization_key = RU_BL_DP_building_military_shipyards
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard_plantation
+		}
+		localization_key = RU_BL_DP_building_vineyard_plantation
 	}
 	text = {
 		localization_key = RU_BL_DP_DEFAULT
@@ -104417,6 +104565,48 @@ RU_BL_VP = {
 		localization_key = RU_BL_VP_construction_sector
 	}
 	text = {
+		trigger = {
+			is_building_type = building_martandsuntemple
+		}
+		localization_key = RU_BL_VP_building_martandsuntemple
+	}
+	text = {
+		trigger = {
+			is_building_type = building_observatorygreenwich
+		}
+		localization_key = RU_BL_VP_building_observatorygreenwich
+	}
+	text = {
+		trigger = {
+			is_building_type = building_temple_of_poseidon
+		}
+		localization_key = RU_BL_VP_building_temple_of_poseidon
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wat_arun
+		}
+		localization_key = RU_BL_VP_building_wat_arun
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_VP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_military_shipyards
+		}
+		localization_key = RU_BL_VP_building_military_shipyards
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard_plantation
+		}
+		localization_key = RU_BL_VP_building_vineyard_plantation
+	}
+	text = {
 		localization_key = RU_BL_VP_DEFAULT
 	}
 }
@@ -104856,6 +105046,48 @@ RU_BL_TP = {
 			is_building_type = building_construction_sector
 		}
 		localization_key = RU_BL_TP_construction_sector
+	}
+	text = {
+		trigger = {
+			is_building_type = building_martandsuntemple
+		}
+		localization_key = RU_BL_TP_building_martandsuntemple
+	}
+	text = {
+		trigger = {
+			is_building_type = building_observatorygreenwich
+		}
+		localization_key = RU_BL_TP_building_observatorygreenwich
+	}
+	text = {
+		trigger = {
+			is_building_type = building_temple_of_poseidon
+		}
+		localization_key = RU_BL_TP_building_temple_of_poseidon
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wat_arun
+		}
+		localization_key = RU_BL_TP_building_wat_arun
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_TP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_military_shipyards
+		}
+		localization_key = RU_BL_TP_building_military_shipyards
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard_plantation
+		}
+		localization_key = RU_BL_TP_building_vineyard_plantation
 	}
 	text = {
 		localization_key = RU_BL_TP_DEFAULT
@@ -105299,6 +105531,48 @@ RU_BL_PP = {
 		localization_key = RU_BL_PP_construction_sector
 	}
 	text = {
+		trigger = {
+			is_building_type = building_martandsuntemple
+		}
+		localization_key = RU_BL_PP_building_martandsuntemple
+	}
+	text = {
+		trigger = {
+			is_building_type = building_observatorygreenwich
+		}
+		localization_key = RU_BL_PP_building_observatorygreenwich
+	}
+	text = {
+		trigger = {
+			is_building_type = building_temple_of_poseidon
+		}
+		localization_key = RU_BL_PP_building_temple_of_poseidon
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wat_arun
+		}
+		localization_key = RU_BL_PP_building_wat_arun
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_PP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_military_shipyards
+		}
+		localization_key = RU_BL_PP_building_military_shipyards
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard_plantation
+		}
+		localization_key = RU_BL_PP_building_vineyard_plantation
+	}
+	text = {
 		localization_key = RU_BL_PP_DEFAULT
 	}
 }
@@ -105572,7 +105846,7 @@ RU_ML_ADJ = {
 			exists = c:MAD
 			this = c:MAD
 			c:MAD = {
-				coa_monarchy_trigger = yes
+				coa_def_monarchy_flag_trigger = yes
 				is_country_type = unrecognized
 			}
 			}
@@ -105620,11 +105894,7 @@ RU_ML_ADJ = {
 			this = c:USA
 			coa_def_republic_flag_trigger = yes
 			NOT = { coa_def_communist_flag_trigger = yes }
-			NOT = {	
-				c:USA = {
-					has_law = law_type:law_technocracy
-				}
-			}
+			c:USA = { NOT = { has_law = law_type:law_technocracy } }
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_united_states # market adjective
@@ -105635,7 +105905,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:USA
 			this = c:USA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_united_syndicates_of_america # market adjective
@@ -105660,7 +105930,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_united_synods_of_america # market adjective
@@ -105671,7 +105941,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:TUR
 			this = c:TUR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_ottoman_empire # market adjective
@@ -105682,7 +105952,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:PAP
 			this = c:PAP
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_papal_states # market adjective
@@ -105721,7 +105991,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:USA
 			this = c:USA
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_united_sovereign_archduchy # market adjective
@@ -105732,7 +106002,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:RUS
 			this = c:RUS
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_soviet_union # market adjective
@@ -105743,7 +106013,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:MEX
 			this = c:MEX
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_mexican_empire # market adjective
@@ -105754,7 +106024,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:CSA
 			this = c:CSA
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_confederated_sovereigns_of_america # market adjective
@@ -105765,7 +106035,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:CSA
 			this = c:CSA
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_communist_states_of_america # market adjective
@@ -105776,7 +106046,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:USA
 			this = c:USA
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_confederate_synods_of_america # market adjective
@@ -105788,7 +106058,7 @@ RU_ML_ADJ = {
 			exists = c:CHI
 			this = c:CHI
 			c:CHI = { country_has_primary_culture = cu:manchu }
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_great_qing # market adjective
@@ -105799,7 +106069,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:BAV
 			this = c:BAV
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_bavarian_raterepublic # market adjective
@@ -105810,7 +106080,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:BRE
 			this = c:BRE
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_bremener_raterepublic # market adjective
@@ -105821,7 +106091,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:CHI
 			this = c:CHI
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_peoples_republic_of_china # market adjective
@@ -105847,7 +106117,7 @@ RU_ML_ADJ = {
 			exists = c:AZB
 			this = c:AZB
 			is_subject = no
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			owns_entire_state_region = STATE_AZERBAIJAN
 			}
 		}
@@ -105859,7 +106129,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:TUN
 			this = c:TUN
-			NOT = { coa_monarchy_trigger = yes }
+			NOT = { coa_def_monarchy_flag_trigger = yes }
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_tunisia # market adjective
@@ -105871,7 +106141,7 @@ RU_ML_ADJ = {
 			exists = c:BEL
 			this = c:BEL
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_united_belgian_states # market adjective
@@ -105882,7 +106152,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:MOL
 			this = c:MOL
-			coa_monarchy_trigger = no
+			coa_def_monarchy_flag_trigger = no
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_moldova # market adjective
@@ -105937,7 +106207,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:GER
 			this = c:GER
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			country_rank >= rank_value:major_power
 			}
 		}
@@ -106030,7 +106300,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:PAN
 			this = c:PAN
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			has_law = law_type:law_state_religion
 			}
 		}
@@ -106042,7 +106312,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:CAM
 			this = c:CAM
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			NOT = { is_country_type = unrecognized }
 			}
 		}
@@ -106054,7 +106324,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:NEJ
 			this = c:NEJ
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_HEDJAZ
 			}
 		}
@@ -106066,7 +106336,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:MGL
 			this = c:MGL
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_great_mongolian_state # market adjective
@@ -106077,7 +106347,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:MGL
 			this = c:MGL
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_mongolian_peoples_republic # market adjective
@@ -106089,7 +106359,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:POR
 			this = c:POR
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			owns_entire_state_region = STATE_RIO_DE_JANEIRO
 			owns_entire_state_region = STATE_SAO_PAULO
 			}
@@ -106352,7 +106622,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:CHC
 			this = c:CHC
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_chechnya_imamate # market adjective
@@ -106400,7 +106670,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:GBR
 			this = c:GBR
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			exists = capital
 			capital = { state_region = s:STATE_LANCASHIRE }
 			}
@@ -106555,7 +106825,7 @@ RU_ML_ADJ = {
 			exists = c:LOU
 			this = c:LOU
 			coa_republic_trigger = yes
-			NOT = { coa_communist_trigger = yes }
+			NOT = { coa_def_communist_flag_trigger = yes }
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_louisiana # market adjective
@@ -106566,7 +106836,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:LOU
 			this = c:LOU
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_new_france # market adjective
@@ -106577,7 +106847,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:LOU
 			this = c:LOU
-			coa_communist_trigger = yes
+			coa_def_communist_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_louisiana_commune # market adjective
@@ -106588,7 +106858,7 @@ RU_ML_ADJ = {
 			market.owner = {
 			exists = c:LOU
 			this = c:LOU
-			coa_theocracy_trigger = yes
+			coa_def_theocracy_flag_trigger = yes
 			}
 		}
 		localization_key = RU_ML_ADJ_dyn_c_archbishopric_of_st_louis # market adjective
@@ -111757,99 +112027,141 @@ RU_ML_ADJ = {
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:SAV
 			this = c:SAV
+			}
 		}
 		localization_key = RU_ML_ADJ_SAV # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:CON
 			this = c:CON
+			}
 		}
 		localization_key = RU_ML_ADJ_CON # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:MAS
 			this = c:MAS
+			}
 		}
 		localization_key = RU_ML_ADJ_MAS # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:PRC
 			this = c:PRC
+			}
 		}
 		localization_key = RU_ML_ADJ_PRC # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:GZA
 			this = c:GZA
+			}
 		}
 		localization_key = RU_ML_ADJ_GZA # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:MRV
 			this = c:MRV
+			}
 		}
 		localization_key = RU_ML_ADJ_MRV # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:KAU
 			this = c:KAU
+			}
 		}
 		localization_key = RU_ML_ADJ_KAU # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:PNS
 			this = c:PNS
+			}
 		}
 		localization_key = RU_ML_ADJ_PNS # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:YUZ
 			this = c:YUZ
+			}
 		}
 		localization_key = RU_ML_ADJ_YUZ # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:TUG
 			this = c:TUG
+			}
 		}
 		localization_key = RU_ML_ADJ_TUG # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:AIT
 			this = c:AIT
+			}
 		}
 		localization_key = RU_ML_ADJ_AIT # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:RHE
 			this = c:RHE
+			}
 		}
 		localization_key = RU_ML_ADJ_RHE # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:BMM
 			this = c:BMM
+			}
 		}
 		localization_key = RU_ML_ADJ_BMM # market adjective
 	}
 	text = {
 		trigger = {
+			exists = market
+			market.owner = {
 			exists = c:BRG
 			this = c:BRG
+			}
 		}
 		localization_key = RU_ML_ADJ_BRG # market adjective
 	}
@@ -115617,5 +115929,3 @@ RU_SL_END = {
 		localization_key = RU_SL_END_DEFAULT # .
 	}
 }
-
-

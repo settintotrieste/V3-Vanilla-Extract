@@ -112,3 +112,13 @@ country_disable_investment_pool = {
 	good = no
 	boolean = yes
 }
+
+country_cannot_enact_laws = {
+	good = no
+	boolean = yes
+}
+
+country_must_have_movement_to_enact_laws = {
+	good = no
+	boolean = yes
+}

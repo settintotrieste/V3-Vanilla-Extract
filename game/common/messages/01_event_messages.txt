@@ -323,3 +323,52 @@ haiti_pays_off_debt = {
 	texture = "gfx/interface/icons/notification_icons/interest.dds"
 	notification_type = feed
 }
+
+ita_italian_unification_intent = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/interest.dds"
+
+	notification_type = toast
+}
+
+nationalism_unlock_national_agitation = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/character.dds"
+
+	notification_type = feed
+}
+
+nationalism_national_agitation_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/revolution.dds"
+
+	notification_type = feed
+}
+
+nationalism_decision_agitation_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/revolution.dds"
+
+	notification_type = feed
+}
+
+sabotage_decision_agitation_occurred = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/revolution.dds"
+
+	notification_type = feed
+}
+
+swap_negotiations_success = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/interest.dds"
+
+	notification_type = toast
+}
+
+swap_negotiations_fail = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+
+	notification_type = toast
+}

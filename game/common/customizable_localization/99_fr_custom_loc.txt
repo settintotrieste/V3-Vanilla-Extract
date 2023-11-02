@@ -1296,9 +1296,9 @@ FR_culture_template = {
 	}
 	text = {  
 		trigger = {
-			this = cu:bidan
+			this = cu:alemannic
 		}
-		localization_key = bidan
+		localization_key = maures
 	}
 	text = {  
 		trigger = {
@@ -1782,7 +1782,7 @@ FR_culture_template = {
 	}
 	text = {  
 		trigger = {
-			this = cu:alemannic
+			this = cu:bidan
 		}
 		localization_key = swiss
 	}

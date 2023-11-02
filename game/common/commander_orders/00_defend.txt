@@ -4,26 +4,57 @@
 	military_type = army
 
     possible = {
-        error_check = {
-			severity = invalid
-			has_role = general
-		}
-		error_check = {
-            severity = fail
-            is_mobilized = yes
+        AND = {
+            error_check = {
+                severity = invalid
+                has_role = general
+            }
         }
     }
 
     modifier = {
         character_attrition_risk_add = 0.05
         front_enemy_advancement_speed_mult = -0.5
+		unit_defense_mult = 0.1
     }
 
-	experience = 0.1 # This much extra experience per week while executing Order
-	
-    causes_general_travel = yes
-    map_interaction = advance   # same map interaction as the Advance Order
 	clicksound = "event:/SFX/UI/Military/order_general_front_defend"
-	
+	experience = 0.1 # This much extra experience per week while executing Order
 	ai_order_type = defensive
+}
+
+defend_dig_in = {
+    texture = "gfx/interface/icons/commander_order_icons/defend.dds"
+    
+    military_type = army
+
+    possible = {
+        AND = {
+            error_check = {
+                severity = invalid
+                has_role = general
+            }
+            error_check = {
+                severity = fail
+				OR = {
+					has_trait = stalwart_defender
+					has_trait = trench_rat
+					has_trait = defense_in_depth_specialist
+				}
+            }
+        }
+    }
+
+    modifier = {
+        character_attrition_risk_add = 0.05
+        front_enemy_advancement_speed_mult = -0.5
+        unit_defense_mult = 0.1
+        unit_defense_add = 10
+        character_battle_condition_careful_maneuver_mult = 0.5
+        character_battle_condition_surprise_maneuver_mult = 0.5
+    }
+
+    clicksound = "event:/SFX/UI/Military/order_general_front_defend"
+    experience = 0.1 # This much extra experience per week while executing Order
+    ai_order_type = defensive
 }

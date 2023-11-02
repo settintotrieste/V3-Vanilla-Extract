@@ -23,9 +23,36 @@
 
 	on_enable = {
 		ig:ig_rural_folk = {
-			set_ig_trait = ig_trait:ig_trait_old_ways
-			set_ig_trait = ig_trait:ig_trait_honest_work
-			set_ig_trait = ig_trait:ig_trait_farmers_markets
+			if = {
+				limit = {
+					owner = { c:BRZ ?= this }
+				}
+				set_ig_trait = ig_trait:ig_trait_old_ways
+				set_ig_trait = ig_trait:ig_trait_plantation_work
+				set_ig_trait = ig_trait:ig_trait_nucleos_coloniais
+			}
+			else_if = {
+				limit = {
+					owner = { c:RUS ?= this }
+				}
+				set_ig_trait = ig_trait:ig_trait_old_ways
+				set_ig_trait = ig_trait:ig_trait_honest_work
+				set_ig_trait = ig_trait:ig_trait_obshchina
+			}
+			else_if = {
+				limit = {
+					owner = { c:EGY ?= this }
+				}
+				set_interest_group_name = ig_fellahin
+				set_ig_trait = ig_trait:ig_trait_old_ways
+				set_ig_trait = ig_trait:ig_trait_fellahin
+				set_ig_trait = ig_trait:ig_trait_farmers_markets
+			}
+			else = {
+				set_ig_trait = ig_trait:ig_trait_old_ways
+				set_ig_trait = ig_trait:ig_trait_honest_work
+				set_ig_trait = ig_trait:ig_trait_farmers_markets
+			}
 		}
 	
 		# Frontier Expansion Ideology
@@ -44,6 +71,7 @@
 				add_ideology = ideology_isolationist_expansionism
 			}
 		}
+
 		# Heimin
 		if = {
 			limit = {
@@ -148,6 +176,33 @@
 				value = 1
 				add = scope:interest_group.modifier:interest_group_in_government_attraction_mult
 				min = 0
+			}
+		}
+		
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = yes
+				}
+			}
+			multiply = { # Multiplied by 1.25x max
+				desc = "POP_LOYALISTS"
+				value = pop_loyalist_fraction
+				divide = 4
+				add = 1
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = no
+				}
+			}
+			multiply = { # Multiplied by 1.25x max
+				desc = "POP_RADICALS"
+				value = pop_radical_fraction
+				divide = 4
+				add = 1
 			}
 		}
 	}

@@ -12,6 +12,8 @@ set_state_type = {
 
 set_state_owner = {
 	global = SET_STATE_OWNER
+	first = SET_STATE_OWNER_FIRST
+	third = SET_STATE_OWNER_THIRD
 }
 
 create_building = {

@@ -1,0 +1,16 @@
+colors = {
+	army_color_01 = 		hsv360 	{	38	49	82	}
+	army_color_02 = 		hsv360 	{	30	45	63	}
+	army_color_03 = 		hsv360 	{	16	51	71	}
+	army_color_04 = 		hsv360 	{	18	68	84	}
+	army_color_05 = 		hsv360 	{	10	67	61	}
+	army_color_06 = 		hsv360 	{	0	45	61	}
+	army_color_07 = 		hsv360 	{	14	45	27	}
+	fleet_color_01 = 		hsv360 	{	168	55	66	}
+	fleet_color_02 = 		hsv360 	{	189	57	63	}
+	fleet_color_03 = 		hsv360 	{	205	47	65	}
+	fleet_color_04 = 		hsv360 	{	219	73	54	}
+	fleet_color_05 = 		hsv360 	{	238	58	62	}
+	fleet_color_06 = 		hsv360 	{	248	62	36	}
+	fleet_color_07 = 		hsv360 	{	285	23	20	}
+}

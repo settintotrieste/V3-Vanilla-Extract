@@ -33,6 +33,22 @@
 				expensive_tastes
 			}
 		}
+
+		create_character = {
+			# Raja Dhian Singh
+			first_name = Dhian
+			last_name = Singh
+			historical = yes
+			birth_date = 1796.8.22
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			traits = {
+				imposing
+				charismatic
+				expert_political_operator
+			}
+		}
 		
 		create_character = {
 			is_general = yes
@@ -88,12 +104,13 @@
 			is_general = yes
 			first_name = Alexander
 			last_name = Gardner
+			culture = cu:yankee
 			historical = yes
 			hq = region_persia
 			age = 51
 			traits = {
 				brave
-				experienced_artillery_commander
+				# experienced_artillery_commander
 			}
 		}
 	}

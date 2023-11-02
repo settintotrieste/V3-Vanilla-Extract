@@ -18,6 +18,7 @@ NGUI = {
 	TABS = 4			# Number of spaces for tabs in ui
 	NUM_INDENTS = 3
 	MAX_BREAKDOWN_ITEMS = 10
+	MAX_LENGTH_OF_ENTERED_TEXT = 30					# The max allowed text length when checking for validity
 	MAX_CONSTRUCTION_BREAKDOWN_ITEMS = 24
 	MAX_PAGES_IN_PAGED_LIST = 10
 	MAX_CURRENTLY_CONSTRUCTING_ELEMENTS_SHOWN = 10				# active construction queue elements widget is capped to this number of items
@@ -32,10 +33,12 @@ NGUI = {
 	LENS_TOOLBAR_ITEM_WIDTH = 100; 					# The width of each item in the Lens Toolbar
 	LENS_TOOLBAR_MARGIN_LEFT = 53;					# The width of the side panel
 	SCROLLBAR_WIDTH = 8;							# The width of the scroll bar
+	LENS_TOOLBAR_MARGIN_RIGHT = 45;					# LENS_TOOLBAR_MARGIN_LEFT - SCROLLBAR_WIDTH
 	RADICALS_LOYALISTS_BREAKDOWN_NUM_ITEMS = 3 		# How many numbers to show in the breakdown for Radicals/Loyalists before collecting the rest as "other"
 	POP_NEEDS_SUMMARY_ITEMS = 3 					# How many items from the Pop Needs tooltip to show one level above the breakdown
 	RADICALS_LOYALISTS_SUMMARY_ITEMS = 2
 	MIN_LOYALTY_CHART_FRACTION = 0.01;				# A non-zero loyalty fraction below this value will still appear as this value in the loyalty pie chart
+	STATE_OWNER_PIECHART_ALPHA = 0.5;
 }
 
 # Employment bar
@@ -66,6 +69,17 @@ NGUI = {
 	TECH_TREE_MAX_UNLOCK_DISPLAY_COUNT = 5
 	TECH_TREE_MODIFIER_UNLOCK_ICON = "gfx/interface/tech_tree/modifiers_generic_icon.dds"
 	TECH_TREE_RESEARCH_QUEUE_DISPLAY_COUNT = 5
+}
+
+NGUI = {
+	SWAY_OFFER_DEFAULT_ICON = "gfx/interface/icons/sways/obligation.dds"
+	SWAY_OFFER_OBLIGATION_ICON = "gfx/interface/icons/sways/obligation.dds"
+	SWAY_OFFER_WARGOAL_ICON = "gfx/interface/icons/sways/wargoal.dds"
+	SWAY_OFFER_ALLY_ICON = "gfx/interface/icons/sways/call_ally.dds"
+	SWAY_OFFER_BECOME_SUBJECT_ICON = "gfx/interface/icons/sways/subject.dds"
+	SWAY_OFFER_TRANSFER_SUBJECT_ICON = "gfx/interface/icons/sways/subject.dds"
+	SWAY_OFFER_TRANSFER_STATE_ICON = "gfx/interface/icons/sways/state.dds"
+	SWAY_OFFER_DIPLOMATIC_PACT_ICON = "gfx/interface/icons/sways/diplomatic_pact.dds"
 }
 
 NGUI = {

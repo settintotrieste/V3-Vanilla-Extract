@@ -5,3 +5,8 @@
 project_power = {
 	third = EFFECT_PROJECT_POWER
 }
+
+add_organization = {
+    global = EFFECT_ADD_ORGANIZATION
+	third = EFFECT_ADD_ORGANIZATION_THIRD
+}

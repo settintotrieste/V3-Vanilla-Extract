@@ -8580,7 +8580,18 @@ GER_dictatorship = {
 		instance = { scale = { 0.7 0.7 } }
 	}
 }
-GER_communist = {
+GER_spartakist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+		
+	colored_emblem = {
+		texture = "ce_spartakist_star.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.95 0.95 } position = { 0.5 0.5 } }			
+	}
+}
+GER_ddr = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	
@@ -18729,6 +18740,16 @@ ROM_fascist = {
 		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }
 	}	
 }
+ROM_united_principalities = {	
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "yellow"
+		color2 = "blue"
+	}
+}
 
 RUS = {
 	pattern = "pattern_solid.tga"
@@ -18835,6 +18856,26 @@ RUS_soviet_union = {
         instance = { scale = { 0.145 0.145 } position = { 0.222 0.125 }  }
 	}
 }
+
+RUS_soviet_technocracy = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_hammer_compass_ddr.dds"
+		color1 = color2
+		color2 = color2
+        instance = { scale = { @third @third } position = { 0.222 @third }  }
+	}
+	colored_emblem = {
+		texture = "ce_star_05_hollow.dds"
+		color1 = color2
+		color2 = color1
+        instance = { scale = { 0.145 0.145 } position = { 0.222 0.125 }  }
+	}
+}
+
 RUS_fascist = {		
 	# ROA flag
 	pattern = "pattern_solid.tga"
@@ -23595,4 +23636,28 @@ PRC = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "red"
+}
+
+RSM = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+
+	colored_emblem = {
+		texture = "ce_san_marco_canton.dds"
+		color1 = "white"
+		color2 = "green"
+		color3 = "red"
+		instance = { scale = { 0.65 0.65 } position = { 0.325 0.33 } }
+	}
+
+	textured_emblem = {
+		texture = "te_lion_san_marco.dds"
+		instance = { scale = { 0.45 0.45 } position = { 0.17 0.2 } }
+	}
 }

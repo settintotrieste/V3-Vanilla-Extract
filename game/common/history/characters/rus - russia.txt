@@ -249,7 +249,7 @@
 			ideology = ideology_reformer
 			traits = {
 				ambitious
-				experienced_artillery_commander
+				# experienced_artillery_commander
 			}
 		}
 		
@@ -269,6 +269,7 @@
 			is_general = yes
 			first_name = Friedrich
 			last_name = von_Berg
+			culture = cu:north_german
 			historical = yes
 			hq = region_baltic
 			age = 42

@@ -121,6 +121,7 @@
 		add_declared_interest = region_gran_colombia
 		add_declared_interest = region_andes
 		add_declared_interest = region_la_plata
+		add_declared_interest = region_pacific_coast
 	}		
 	c:AUS = {	
 		add_declared_interest = region_north_germany
@@ -139,6 +140,9 @@
 	c:PRU = {
 		add_declared_interest = region_baltic
 		add_declared_interest = region_france	
+		add_declared_interest = region_italy
+		add_declared_interest = region_england
+		add_declared_interest = region_danubia
 	}
 	c:POR = {
 		add_declared_interest = region_senegal
@@ -148,6 +152,9 @@
 	}
 	c:MEX = {
 		add_declared_interest = region_great_plains
+	}
+	c:GRE = {
+		add_declared_interest = region_italy
 	}
 }	
 

@@ -18,11 +18,13 @@
 # player_interest_group
 # player_invaded_state
 # player_national_market
+# player_naval_invasion
 # player_involved_market
 # player_state
 # player_building
 # player_market_goods
 # player_commander
+# player_military_formation
 # player_trade_route
 
 ### ALERTS
@@ -52,6 +54,18 @@ has_no_research_alert = {
 	}
 
 	open_panel = tech_tree
+	type = alert
+}
+
+can_establish_company = {
+	script_context = player_country
+	texture = "gfx/interface/icons/alert_icons/can_establish_company.dds"
+
+	valid = {
+		can_establish_company = yes
+	}
+
+	open_panel = companies|potential_companies
 	type = alert
 }
 
@@ -233,7 +247,7 @@ has_decreasing_interests_alert = {
 	valid = { has_decreasing_interests = yes }
 
 	open_panel = diplomatic_overview
-	type = alert
+	type = angry_important_action
 }
 
 obligation_expiring = {
@@ -250,9 +264,24 @@ obligation_expiring = {
 	alert_group = expiring_obligations
 }
 
-### ANGRY IMPORTANT ACTIONS (should not have icons, if you move an alert here then remove the texture path and move the icon to the unused folder)
+### ANGRY IMPORTANT ACTIONS
+
+low_organization = {
+	# TODO PRCAL-29550
+	texture = "gfx/interface/icons/alert_icons/idle_mobilized_general.dds"
+	script_context = player_military_formation
+
+	valid = {
+		organization <= define:NMilitary|MILITARY_FORMATION_ORGANIZATION_MIN
+	}
+
+	type = angry_important_action
+	open_panel = military_formation
+	alert_group = formation_low_organization
+}
 
 insufficient_construction_for_investment = {
+	texture = "gfx/interface/icons/alert_icons/wasted_construction.dds"
 	script_context = player_country
 
 	valid = {
@@ -292,6 +321,7 @@ insufficient_construction_for_investment = {
 
 
 diplomatic_pact_in_danger = {
+	texture = "gfx/interface/icons/lens_toolbar_icons/diplomatic_actions_break.dds"
 	script_context = player_diplomatic_pact
 
 	valid = {
@@ -317,6 +347,7 @@ diplomatic_pact_in_danger = {
 #}
 
 legitimacy_level_unacceptable_alert = {
+	texture = "gfx/interface/icons/alert_icons/low_legitimacy.dds"
 	script_context = player_country
 
 	valid = {
@@ -329,6 +360,7 @@ legitimacy_level_unacceptable_alert = {
 }
 
 training_rate_low = {
+	texture = "gfx/interface/icons/alert_icons/suboptimal_army.dds"
 	script_context = player_country
 
 	valid = {
@@ -339,9 +371,10 @@ training_rate_low = {
 	type = angry_important_action
 }
 
-### IMPORTANT ACTIONS (should not have icons, if you move an alert here then remove the texture path and move the icon to the unused folder)
+### IMPORTANT ACTIONS
 
 can_take_decisions = {
+	texture = "gfx/interface/icons/lens_toolbar_icons/ask_for_recognition.dds"
 	script_context = player_country
 
 	valid = {
@@ -350,6 +383,21 @@ can_take_decisions = {
 
 	open_panel = journal|decisions
 	type = important_action
+}
+
+low_max_organization = {
+	# TODO PRCAL-29550
+	texture = "gfx/interface/icons/alert_icons/idle_mobilized_general.dds"
+	script_context = player_military_formation
+
+	valid = {
+		organization > define:NMilitary|MILITARY_FORMATION_ORGANIZATION_MIN
+		max_organization < define:NMilitary|MILITARY_FORMATION_ORGANIZATION_MAX
+	}
+
+	type = important_action
+	open_panel = military_formation
+	alert_group = formation_low_max_organization
 }
 
 # Hidden by default
@@ -365,6 +413,7 @@ can_take_decisions = {
 #}
 
 stockpiling_gold_alert = {
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
 	script_context = player_country
 
 	valid = {
@@ -415,7 +464,22 @@ stockpiling_gold_alert = {
 #	alert_group = unproductive_trade_routes
 #}
 
-market_goods_shortage = { 
+company_losing_prosperity = {
+	texture = "gfx/interface/icons/alert_icons/company_losing_prosperity.dds"
+	script_context = player_company
+
+	valid = {
+		prosperity >= 100
+		weekly_prosperity_change < 0
+	}
+
+	open_panel = companies
+	type = angry_important_action
+	alert_group = companies_losing_prosperity
+}
+
+market_goods_shortage = {
+	texture = "gfx/interface/icons/generic_icons/goods_shortage.dds"
 	script_context = player_market_goods
 
 	valid = {
@@ -427,8 +491,21 @@ market_goods_shortage = {
 	alert_group = market_goods_shortages
 }
 
+state_goods_shortage = {
+	texture = "gfx/interface/icons/generic_icons/goods_shortage.dds"
+	script_context = player_state_goods
+
+	valid = {
+		state_goods_has_local_goods_shortage = yes
+	}
+
+	open_panel = states_panel
+	type = angry_important_action
+	alert_group = state_goods_shortages
+}
 
 low_market_access_alert = {
+	texture = "gfx/interface/icons/alert_icons/market_over_capacity.dds"
 	script_context = player_state
 
 	valid = {
@@ -456,6 +533,7 @@ low_market_access_alert = {
 #}
 
 expensive_government_goods_alert = {
+	texture = "gfx/interface/icons/generic_icons/coin_icon_13.dds"
 	script_context = player_market_goods
 
 	valid = {
@@ -470,6 +548,7 @@ expensive_government_goods_alert = {
 }
 
 expensive_military_goods_alert = {
+	texture = "gfx/interface/icons/generic_icons/coin_icon_13.dds"
 	script_context = player_market_goods
 
 	valid = {
@@ -484,6 +563,7 @@ expensive_military_goods_alert = {
 }
 
 low_expected_sol_in_state = {
+	texture = "gfx/interface/icons/sol_icons/starving.dds"
 	script_context = player_state
 
 	valid = {
@@ -495,21 +575,8 @@ low_expected_sol_in_state = {
 	alert_group = low_sol_in_state
 }
 
-general_can_be_demobilized = {
-	script_context = player_commander
-
-	valid = {
-		has_role = general
-		is_mobilized = yes
-		var:num_months_mobilized > num_months_before_permit_demobilization
-	}
-
-	open_panel = commander
-	type = important_action
-	alert_group = general_demobilization
-}
-
 admiral_with_no_flotillas = {
+	texture = "gfx/interface/icons/lens_toolbar_icons/recruit_admirals_lens_option.dds"
 	script_context = player_commander
 
 	valid = {
