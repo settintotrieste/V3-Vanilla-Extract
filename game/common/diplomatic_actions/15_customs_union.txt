@@ -200,13 +200,13 @@
 				desc = "DIPLOMATIC_ACCEPTANCE_SENIOR_PART"
 				value = 20
 			}
-
+			
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_GDP"
 				value = "scope:actor.ai_gdp_comparison(root)"
 				min = -10
 				max = 10
-			}
+			}			
 		
 			if = {
 				limit = {
@@ -378,6 +378,21 @@
 				min = -20
 				max = 20
 			}
+					
+			if = {
+				limit = {
+					gdp >= 2000000
+				}
+				
+				subtract = {
+					desc = "DIPLOMATIC_ACCEPTANCE_HIGH_GDP"
+					value = gdp
+					subtract = 1000000
+					divide = 1000000
+					min = 1
+					max = 100
+				}
+			}			
 			
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_MUTUAL_TRADE_ROUTES"
@@ -554,7 +569,23 @@
 					}
 					value = -50
 				}
-			}	 
+			}	
+			
+			if = {
+				limit = {
+					scope:target_country = {
+						c:CHI ?= THIS
+						OR = {
+							country_rank >= rank_value:unrecognized_major_power
+							country_rank >= rank_value:great_power
+						}
+					}
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_IS_CHINA"
+					value = -1000
+				}
+			}
 		}
 		
 		will_break = { 
@@ -672,7 +703,7 @@ join_customs_union = {
 			limit = {
 				has_diplomatic_pact = {
 					who = scope:target_country
-					type = trade_agreement
+		 			type = trade_agreement
 				}			
 			}
 			remove_diplomatic_pact = {

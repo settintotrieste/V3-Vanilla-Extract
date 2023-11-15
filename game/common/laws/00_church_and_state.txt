@@ -55,8 +55,8 @@ law_state_religion = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 	
 	ai_will_do = {
@@ -160,8 +160,8 @@ law_freedom_of_conscience = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -260,8 +260,8 @@ law_total_separation = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -358,8 +358,8 @@ law_state_atheism = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

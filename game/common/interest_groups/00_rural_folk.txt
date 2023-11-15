@@ -25,6 +25,7 @@
 		ig:ig_rural_folk = {
 			if = {
 				limit = {
+					has_dlc_feature = rp1_content
 					owner = { c:BRZ ?= this }
 				}
 				set_ig_trait = ig_trait:ig_trait_old_ways
@@ -55,20 +56,18 @@
 			}
 		}
 	
-		# Frontier Expansion Ideology
+		# Jeffersonian Ideology
 		if = {
 			limit = {
 				OR = {
-					c:HBC ?= this
-					c:CHL ?= this
-					c:ARG ?= this
 					country_has_primary_culture = cu:yankee
 					country_has_primary_culture = cu:dixie
 				}
 			}
 			ig:ig_rural_folk = {
-				remove_ideology = ideology_isolationist
-				add_ideology = ideology_isolationist_expansionism
+				remove_ideology = ideology_agrarian
+				add_ideology = ideology_agrarian_jeffersonian
+				set_interest_group_name = ig_yeoman_farmers
 			}
 		}
 

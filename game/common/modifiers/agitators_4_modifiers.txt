@@ -1118,3 +1118,14 @@ modifier_return_of_napoleons_body = {
 	country_legitimacy_base_add = 5
 	country_prestige_mult = 0.10
 }
+
+fra_paris_commune_drain = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	country_expenses_add = 1
+}
+
+fra_paris_commune_drain_proceeds = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+	country_tax_income_add = 1
+	country_all_buildings_protected = yes
+}

@@ -766,6 +766,11 @@ any_state_region_percent = {
 	global = TRIGGER_ANY_STATE_REGION_PERCENT
 }
 
+mass_migration_culture_equal = {
+	global = TRIGGER_MASS_MIGRATION_CULTURE_EQUAL
+	global_not = TRIGGER_MASS_MIGRATION_CULTURE_EQUAL_NOT
+}
+
 # Note that this key consists of <scope>_region_<operator>, aka. the link used here is `region`.
 state_region_equal = {
 	global = TRIGGER_STRATEGIC_REGION_EQUAL
@@ -927,11 +932,6 @@ any_potential_party_percent = {
 	third = TRIGGER_ANY_POTENTIAL_PARTY_PERCENT_THIRD
 }
 
-market_goods_delta = {
-	global = TRIGGER_MARKET_GOODS_DELTA
-	global_not = TRIGGER_MARKET_GOODS_DELTA_NOT
-}
-
 has_completed_subgoal = {
 	global = TRIGGER_HAS_COMPLETED_SUBGOAL
 	global_not = TRIGGER_HAS_COMPLETED_SUBGOAL_NOT
@@ -942,6 +942,13 @@ has_unit_type = {
 	global_not = TRIGGER_HAS_UNIT_TYPE_NOT
 	third = TRIGGER_HAS_UNIT_TYPE_THIRD
 	third_not = TRIGGER_HAS_UNIT_TYPE_THIRD_NOT
+}
+
+has_mobilization_option = {
+	global = TRIGGER_HAS_MOBILIZATION_OPTION
+	global_not = TRIGGER_HAS_MOBILIZATION_OPTION_NOT
+	third = TRIGGER_HAS_MOBILIZATION_OPTION_THIRD
+	third_not = TRIGGER_HAS_MOBILIZATION_OPTION_THIRD_NOT
 }
 
 is_in_battle = {
@@ -1021,16 +1028,16 @@ is_forced_pact = {
 	third_not = TRIGGER_IS_FORCED_PACT_THIRD_NOT
 }
 
-any_combat_units = {
+any_combat_unit = {
 	global = TRIGGER_ANY_COMBAT_UNITS
 }
-any_combat_units_all = {
+any_combat_unit_all = {
 	global = TRIGGER_ANY_COMBAT_UNITS_ALL
 }
-any_combat_units_count = {
+any_combat_unit_count = {
 	global = TRIGGER_ANY_COMBAT_UNITS_COUNT
 }
-any_combat_units_percent = {
+any_combat_unit_percent = {
 	global = TRIGGER_ANY_COMBAT_UNITS_PERCENT
 }
 
@@ -1648,11 +1655,6 @@ is_busy = {
 	global_not = TRIGGER_IS_BUSY_NOT
 }
 
-market_goods_exports = {
-	global = TRIGGER_MARKET_GOODS_EXPORTS
-	global_not = TRIGGER_MARKET_GOODS_EXPORTS_NOT
-}
-
 culture_is_discriminated_in = {
 	global = TRIGGER_CULTURE_IS_DISCRIMINATED_IN
 	global_not = TRIGGER_CULTURE_IS_DISCRIMINATED_IN_NOT
@@ -1830,11 +1832,6 @@ average_incorporated_country_infrastructure = {
 	global_not = TRIGGER_AVERAGE_INCORPORATED_COUNTRY_INFRASTRUCTURE_NOT
 }
 
-market_goods_production = {
-	global = TRIGGER_MARKET_GOODS_PRODUCTION
-	global_not = TRIGGER_MARKET_GOODS_PRODUCTION_NOT
-}
-
 is_heir = {
 	global = TRIGGER_IS_HEIR
 	global_not = TRIGGER_IS_HEIR_NOT
@@ -1870,6 +1867,97 @@ any_in_hierarchy_percent = {
 weekly_net_fixed_income = {
 	global = TRIGGER_WEEKLY_NET_FIXED_INCOME
 	global_not = TRIGGER_WEEKLY_NET_FIXED_INCOME_NOT
+}
+
+country_has_building_levels = {
+	global = TRIGGER_COUNTRY_HAS_BUILDING_LEVELS
+	global_not = TRIGGER_COUNTRY_HAS_BUILDING_LEVELS_NOT
+	first = TRIGGER_COUNTRY_HAS_BUILDING_LEVELS_FIRST
+	first_not = TRIGGER_COUNTRY_HAS_BUILDING_LEVELS_FIRST_NOT
+	third = TRIGGER_COUNTRY_HAS_BUILDING_LEVELS_THIRD
+	third_not = TRIGGER_COUNTRY_HAS_BUILDING_LEVELS_THIRD_NOT
+}
+
+country_has_building_type_levels = {
+	global = TRIGGER_COUNTRY_HAS_BUILDING_TYPE_LEVELS
+	global_not = TRIGGER_COUNTRY_HAS_BUILDING_TYPE_LEVELS_NOT
+	first = TRIGGER_COUNTRY_HAS_BUILDING_TYPE_LEVELS_FIRST
+	first_not = TRIGGER_COUNTRY_HAS_BUILDING_TYPE_LEVELS_FIRST_NOT
+	third = TRIGGER_COUNTRY_HAS_BUILDING_TYPE_LEVELS_THIRD
+	third_not = TRIGGER_COUNTRY_HAS_BUILDING_TYPE_LEVELS_THIRD_NOT
+}
+
+country_has_building_group_levels = {
+	global = TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS
+	global_not = TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_NOT
+	first = TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_FIRST
+	first_not = TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_FIRST_NOT
+	third = TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_THIRD
+	third_not = TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_THIRD_NOT
+}
+
+state_has_building_levels = {
+	global = TRIGGER_STATE_HAS_BUILDING_LEVELS
+	global_not = TRIGGER_STATE_HAS_BUILDING_LEVELS_NOT
+	third = TRIGGER_STATE_HAS_BUILDING_LEVELS
+	third_not = TRIGGER_STATE_HAS_BUILDING_LEVELS_NOT
+}
+
+state_has_building_type_levels = {
+	global = TRIGGER_STATE_HAS_BUILDING_TYPE_LEVELS
+	global_not = TRIGGER_STATE_HAS_BUILDING_TYPE_LEVELS_NOT
+	third = TRIGGER_STATE_HAS_BUILDING_TYPE_LEVELS
+	third_not = TRIGGER_STATE_HAS_BUILDING_TYPE_LEVELS_NOT
+}
+
+state_has_building_group_levels = {
+	global = TRIGGER_STATE_HAS_BUILDING_GROUP_LEVELS
+	global_not = TRIGGER_STATE_HAS_BUILDING_GROUP_LEVELS_NOT
+	third = TRIGGER_STATE_HAS_BUILDING_GROUP_LEVELS
+	third_not = TRIGGER_STATE_HAS_BUILDING_GROUP_LEVELS_NOT
+}
+
+is_mass_migration_origin_of_culture = {
+	global = TRIGGER_IS_MASS_MIGRATION_ORIGIN_OF_CULTURE
+	global_not = TRIGGER_IS_MASS_MIGRATION_ORIGIN_OF_CULTURE_NOT
+	first = TRIGGER_IS_MASS_MIGRATION_ORIGIN_OF_CULTURE_FIRST
+	first_not = TRIGGER_IS_MASS_MIGRATION_ORIGIN_OF_CULTURE_FIRST_NOT
+	third = TRIGGER_IS_MASS_MIGRATION_ORIGIN_OF_CULTURE_THIRD
+	third_not = TRIGGER_IS_MASS_MIGRATION_ORIGIN_OF_CULTURE_THIRD_NOT
+}
+
+is_mass_migration_origin = {
+	global = TRIGGER_IS_MASS_MIGRATION_ORIGIN
+	global_not = TRIGGER_IS_MASS_MIGRATION_ORIGIN_NOT
+	first = TRIGGER_IS_MASS_MIGRATION_ORIGIN_FIRST
+	first_not = TRIGGER_IS_MASS_MIGRATION_ORIGIN_FIRST_NOT
+	third = TRIGGER_IS_MASS_MIGRATION_ORIGIN_THIRD
+	third_not = TRIGGER_IS_MASS_MIGRATION_ORIGIN_THIRD_NOT
+}
+
+country_can_have_mass_migration_to = {
+	global = TRIGGER_COUNTRY_CAN_HAVE_MASS_MIGRATION_TO
+	global_not = TRIGGER_COUNTRY_CAN_HAVE_MASS_MIGRATION_TO_NOT
+	first = TRIGGER_COUNTRY_CAN_HAVE_MASS_MIGRATION_TO_FIRST
+	first_not = TRIGGER_COUNTRY_CAN_HAVE_MASS_MIGRATION_TO_FIRST_NOT
+	third = TRIGGER_COUNTRY_CAN_HAVE_MASS_MIGRATION_TO_THIRD
+	third_not = TRIGGER_COUNTRY_CAN_HAVE_MASS_MIGRATION_TO_THIRD_NOT
+}
+
+culture_can_have_mass_migration_to = {
+	global = TRIGGER_CULTURE_CAN_HAVE_MASS_MIGRATION_TO
+	global_not = TRIGGER_CULTURE_CAN_HAVE_MASS_MIGRATION_TO_NOT
+	first = TRIGGER_CULTURE_CAN_HAVE_MASS_MIGRATION_TO_FIRST
+	first_not = TRIGGER_CULTURE_CAN_HAVE_MASS_MIGRATION_TO_FIRST_NOT
+	third = TRIGGER_CULTURE_CAN_HAVE_MASS_MIGRATION_TO_THIRD
+	third_not = TRIGGER_CULTURE_CAN_HAVE_MASS_MIGRATION_TO_THIRD_NOT
+}
+
+naval_power_projection = {
+	global = TRIGGER_NAVAL_POWER_PROJECTION
+	global_not = TRIGGER_NAVAL_POWER_PROJECTION_NOT
+	third = TRIGGER_NAVAL_POWER_PROJECTION_THIRD
+	third_not = TRIGGER_NAVAL_POWER_PROJECTION_THIRD_NOT
 }
 
 pop_employment_building_group = {
@@ -1919,6 +2007,36 @@ owns_treaty_port_in = {
 	global_not = TRIGGER_OWNS_TREATY_PORT_IN_NOT
 }
 
+market_goods_delta = {
+	global = TRIGGER_MARKET_GOODS_DELTA
+	global_not = TRIGGER_MARKET_GOODS_DELTA_NOT
+}
+
+market_goods_sell_orders = {
+	global = TRIGGER_MARKET_GOODS_SELL_ORDERS
+	global_not = TRIGGER_MARKET_GOODS_SELL_ORDERS_NOT
+}
+
+market_goods_buy_orders = {
+	global = TRIGGER_MARKET_GOODS_BUY_ORDERS
+	global_not = TRIGGER_MARKET_GOODS_BUY_ORDERS_NOT
+}
+
+market_goods_production = {
+	global = TRIGGER_MARKET_GOODS_PRODUCTION
+	global_not = TRIGGER_MARKET_GOODS_PRODUCTION_NOT
+}
+
+market_goods_consumption = {
+	global = TRIGGER_MARKET_GOODS_CONSUMPTION
+	global_not = TRIGGER_MARKET_GOODS_CONSUMPTION_NOT
+}
+
+market_goods_exports = {
+	global = TRIGGER_MARKET_GOODS_EXPORTS
+	global_not = TRIGGER_MARKET_GOODS_EXPORTS_NOT
+}
+
 market_goods_imports = {
 	global = TRIGGER_MARKET_GOODS_IMPORTS
 	global_not = TRIGGER_MARKET_GOODS_IMPORTS_NOT
@@ -1941,6 +2059,42 @@ market_goods_pricier = {
 	third = TRIGGER_MARKET_GOODS_PRICIER_THIRD
 	third_not = TRIGGER_MARKET_GOODS_PRICIER_THIRD_NOT
 }
+
+state_goods_delta = {
+	global = TRIGGER_STATE_GOODS_DELTA
+	global_not = TRIGGER_STATE_GOODS_DELTA_NOT
+	third = TRIGGER_STATE_GOODS_DELTA_THIRD
+	third_not = TRIGGER_STATE_GOODS_DELTA_THIRD_NOT	
+}
+
+state_goods_production = {
+	global = TRIGGER_STATE_GOODS_PRODUCTION
+	global_not = TRIGGER_STATE_GOODS_PRODUCTION_NOT
+	third = TRIGGER_STATE_GOODS_PRODUCTION_THIRD
+	third_not = TRIGGER_STATE_GOODS_PRODUCTION_THIRD_NOT		
+}
+
+state_goods_consumption = {
+	global = TRIGGER_STATE_GOODS_CONSUMPTION
+	global_not = TRIGGER_STATE_GOODS_CONSUMPTION_NOT
+	third = TRIGGER_STATE_GOODS_CONSUMPTION_THIRD
+	third_not = TRIGGER_STATE_GOODS_CONSUMPTION_THIRD_NOT	
+}
+
+state_goods_cheaper = {
+	global = TRIGGER_STATE_GOODS_CHEAPER
+	global_not = TRIGGER_STATE_GOODS_CHEAPER_NOT
+	third = TRIGGER_STATE_GOODS_CHEAPER_THIRD
+	third_not = TRIGGER_STATE_GOODS_CHEAPER_THIRD_NOT
+}
+
+state_goods_pricier = {
+	global = TRIGGER_STATE_GOODS_PRICIER
+	global_not = TRIGGER_STATE_GOODS_PRICIER_NOT
+	third = TRIGGER_STATE_GOODS_PRICIER_THIRD
+	third_not = TRIGGER_STATE_GOODS_PRICIER_THIRD_NOT
+}
+
 
 is_tutorial_lesson_step_completed = {
 	global = TRIGGER_IS_TUTORIAL_LESSON_STEP_COMPLETED
@@ -2042,11 +2196,6 @@ has_technology_researched = {
 	third_not = TRIGGER_HAS_TECHNOLOGY_RESEARCHED_THIRD_NOT
 }
 
-market_goods_buy_orders = {
-	global = TRIGGER_MARKET_GOODS_BUY_ORDERS
-	global_not = TRIGGER_MARKET_GOODS_BUY_ORDERS_NOT
-}
-
 is_country_alive = {
 	global = TRIGGER_IS_COUNTRY_ALIVE
 	global_not = TRIGGER_IS_COUNTRY_ALIVE_NOT
@@ -2120,6 +2269,11 @@ has_war_exhaustion = {
 is_mobilized = {
 	global = TRIGGER_IS_MOBILIZED
 	global_not = TRIGGER_IS_MOBILIZED_NOT
+}
+
+is_fully_mobilized = {
+	global = TRIGGER_IS_FULLY_MOBILIZED
+	global_not = TRIGGER_IS_FULLY_MOBILIZED_NOT
 }
 
 occupancy = {
@@ -2358,6 +2512,10 @@ has_objective = {
 aggressive_diplomatic_plays_permitted = {
 	global = TRIGGER_AGGRESSIVE_DIPLOMATIC_PLAYS_PERMITTED
 	global_not = TRIGGER_AGGRESSIVE_DIPLOMATIC_PLAYS_PERMITTED_NOT
+	first = TRIGGER_AGGRESSIVE_DIPLOMATIC_PLAYS_PERMITTED_FIRST
+	first_not = TRIGGER_AGGRESSIVE_DIPLOMATIC_PLAYS_PERMITTED_FIRST_NOT
+	third = TRIGGER_AGGRESSIVE_DIPLOMATIC_PLAYS_PERMITTED_THIRD
+	third_not = TRIGGER_AGGRESSIVE_DIPLOMATIC_PLAYS_PERMITTED_THIRD_NOT
 }
 
 all_false = {
@@ -2455,6 +2613,24 @@ any_enemy_in_war = {
 	global = TRIGGER_ANY_ENEMY_IN_WAR
 	first = TRIGGER_ANY_ENEMY_IN_WAR
 	third = TRIGGER_ANY_ENEMY_IN_WAR_THIRD
+}
+
+any_military_formation = {
+	global = TRIGGER_ANY_MILITARY_FORMATION
+	first = TRIGGER_ANY_MILITARY_FORMATION
+	third = TRIGGER_ANY_MILITARY_FORMATION
+}
+
+any_military_formation_all = {
+	global = TRIGGER_ANY_MILITARY_FORMATION_ALL
+	first = TRIGGER_ANY_MILITARY_FORMATION_ALL
+	third = TRIGGER_ANY_MILITARY_FORMATION_ALL
+}
+
+any_military_formation_percent = {
+	global = TRIGGER_ANY_MILITARY_FORMATION_PERCENT
+	first = TRIGGER_ANY_MILITARY_FORMATION_PERCENT
+	third = TRIGGER_ANY_MILITARY_FORMATION_PERCENT
 }
 
 is_production_method_active = {
@@ -2852,11 +3028,6 @@ is_diplomatic_play_undecided_participant = {
 	global_not = TRIGGER_IS_DIPLOMATIC_PLAY_UNDECIDED_PARTICIPANT_NOT
 }
 
-market_goods_consumption = {
-	global = TRIGGER_MARKET_GOODS_CONSUMPTION
-	global_not = TRIGGER_MARKET_GOODS_CONSUMPTION_NOT
-}
-
 is_target_in_global_variable_list = {
 	global = TRIGGER_IS_TARGET_IN_GLOBAL_VARIABLE_LIST
 	global_not = TRIGGER_IS_TARGET_IN_GLOBAL_VARIABLE_LIST_NOT
@@ -2915,6 +3086,10 @@ is_owed_obligation_by = {
 has_overlapping_interests = {
 	global = TRIGGER_HAS_OVERLAPPING_INTERESTS
 	global_not = TRIGGER_HAS_OVERLAPPING_INTERESTS_NOT
+	first = TRIGGER_HAS_OVERLAPPING_INTERESTS_FIRST
+	first_not = TRIGGER_HAS_OVERLAPPING_INTERESTS_FIRST_NOT
+	third = TRIGGER_HAS_OVERLAPPING_INTERESTS_THIRD
+	third_not = TRIGGER_HAS_OVERLAPPING_INTERESTS_THIRD_NOT
 }
 
 is_tutorial_lesson_active = {
@@ -3071,6 +3246,16 @@ has_diplomatic_relevance = {
 is_land_theater = {
 	global = TRIGGER_IS_LAND_THEATER
 	global_not = TRIGGER_IS_LAND_THEATER_NOT
+}
+
+is_army = {
+	global = TRIGGER_IS_ARMY
+	global_not = TRIGGER_IS_ARMY_NOT
+}
+
+is_fleet = {
+	global = TRIGGER_IS_FLEET
+	global_not = TRIGGER_IS_FLEET_NOT
 }
 
 state_unemployment_rate = {
@@ -3364,6 +3549,8 @@ is_country_type = {
 	global_not = TRIGGER_IS_COUNTRY_TYPE_NOT
 	first = TRIGGER_IS_COUNTRY_TYPE_FIRST
 	first_not = TRIGGER_IS_COUNTRY_TYPE_FIRST_NOT
+	third = TRIGGER_IS_COUNTRY_TYPE_THIRD
+	third_not = TRIGGER_IS_COUNTRY_TYPE_THIRD_NOT
 }
 
 has_secret_goal = {
@@ -3382,11 +3569,6 @@ any_political_movement_count = {
 }
 any_political_movement_percent = {
 	global = TRIGGER_ANY_POLITICAL_MOVEMENT_PERCENT
-}
-
-market_goods_sell_orders = {
-	global = TRIGGER_MARKET_GOODS_SELL_ORDERS
-	global_not = TRIGGER_MARKET_GOODS_SELL_ORDERS_NOT
 }
 
 has_state_in_state_region = {
@@ -5554,4 +5736,21 @@ culture_has_community_in_state = {
 
 	third = TRIGGER_HAS_CULTURAL_COMMUNITY_THIRD
 	third_not = TRIGGER_HAS_CULTURAL_COMMUNITY_THIRD_NOT
+}
+
+any_company = {
+	global = TRIGGER_ANY_COMPANY
+	global_not = TRIGGER_ANY_COMPANY_NOT
+}
+any_company_all = {
+	global = TRIGGER_ANY_COMPANY_ALL
+	global_not = TRIGGER_ANY_COMPANY_ALL_NOT
+}
+any_company_count = {
+	global = TRIGGER_ANY_COMPANY_COUNT
+	global_not = TRIGGER_ANY_COMPANY_COUNT_NOT
+}
+any_company_percent = {
+	global = TRIGGER_ANY_COMPANY_PERCENT
+	global_not = TRIGGER_ANY_COMPANY_PERCENT_NOT
 }

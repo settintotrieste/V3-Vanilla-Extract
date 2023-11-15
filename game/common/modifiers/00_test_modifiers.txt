@@ -32,3 +32,7 @@ less_bureaucracy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	building_government_administration_throughput_add = -1
 }
+
+more_companies = {
+	country_max_companies_add = 1
+}

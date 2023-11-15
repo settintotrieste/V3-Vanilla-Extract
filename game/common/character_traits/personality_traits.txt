@@ -162,7 +162,6 @@ arrogant = {
 	}
 
 	command_modifier = {
-		character_attrition_risk_mult = 0.1
 		character_command_limit_mult = 0.25
 	}
 
@@ -398,8 +397,8 @@ imperious = {
 	}
 
 	command_modifier = {
-		unit_morale_loss_mult = -0.25
-		unit_morale_recovery_mult = -0.25
+		unit_morale_loss_mult = -0.15
+		unit_morale_recovery_mult = -0.15
 		character_battle_condition_aggressive_maneuver_mult = 1
 	}
 
@@ -900,10 +899,6 @@ honorable = {
 
 	character_modifier = {
 		character_popularity_add = 25
-	}
-
-	command_modifier = {
-		character_attrition_risk_mult = -0.1
 	}
 
 	country_modifier = {

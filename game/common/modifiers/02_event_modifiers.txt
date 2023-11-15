@@ -744,6 +744,8 @@ modifier_crop_failure_relief = {
 modifier_crop_failure_relief_effect = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	state_minimum_wealth_add = 3
+	building_group_bg_agriculture_throughput_add = -0.3
+	building_group_bg_plantations_throughput_add = -0.3
 }
 
 modifier_cyclone_relief = {
@@ -998,11 +1000,6 @@ illuminations_canceled = {
 revolution_canceled = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_authority_mult = -0.1
-}
-
-modifier_destroy_guerillas = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-	country_authority_mult = -0.15
 }
 
 modifier_denied_monarch_colony_ig = {

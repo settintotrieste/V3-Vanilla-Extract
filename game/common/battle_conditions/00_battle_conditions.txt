@@ -7,6 +7,10 @@
 	}
 	
 	instant_switch = {
+		NOR = { 
+			has_battle_condition = battle_condition_panicked_retreat
+			has_battle_condition = battle_condition_controlled_retreat
+		}	
 		current_manpower > {
 			value = opposite_battle_side.current_manpower
 			multiply = {
@@ -345,7 +349,9 @@ battle_condition_mud = {
 	icon = "gfx/interface/icons/battle_conditions/battle_condition_mud.dds"
 
 	modifier = {
-		unit_provinces_captured_mult = -0.5
+		unit_offense_mult = -0.2
+		unit_defense_mult = -0.1
+		unit_morale_loss_mult = 0.1
 	}
 
 	possible = {
@@ -533,7 +539,9 @@ battle_condition_lost = { #attacker only
 	icon = "gfx/interface/icons/battle_conditions/battle_condition_lost.dds"
 
 	modifier = {
-		unit_provinces_captured_mult = -0.5
+		unit_offense_mult = -0.1
+		unit_defense_mult = -0.25
+		unit_morale_loss_mult = 0.2
 	}
 
 	possible = {
@@ -844,47 +852,38 @@ battle_condition_strong_winds = {
 	}
 }
 
-# TO DO: Hook up again with unit type in formation instead of the PM
-# battle_condition_death_from_below = {
-#	icon = "gfx/interface/icons/battle_conditions/battle_condition_death_from_below.dds"
-#
-#	modifier = {
-#		unit_kill_rate_add = 0.2
-#	}
-#
-#	possible = {
-#		exists = scope:character
-#		scope:character = { 
-#			has_role = admiral 
-#		}
-#		battle = {
-#		 	battle_side_pm_usage = {
-#		 		target = scope:character.owner
-#		 		production_method = pm_submarine
-#		 		value > 0.5
-#		 	}
-#		}
-#		battle = {
-#			battle_side_pm_usage = {
-#				target = scope:character.opposing_commander.owner
-#				production_method = pm_submarine
-#				value < 0.5
-#			}
-#		}
-#		NOT = { has_battle_condition = battle_condition_rough_waters }
-#	}
-#		
-#	weight = {
-#		value = 2
-#		multiply = {
-#			value = 1
-#			scope:character = {
-#				add = modifier:character_battle_condition_death_from_below_mult
-#			}
-#			min = 0
-#		}
-#	}
-#}
+battle_condition_death_from_below = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_death_from_below.dds"
+
+	modifier = {
+		unit_kill_rate_add = 0.2
+	}
+
+	possible = {
+		exists = scope:character
+		scope:character = { 
+			has_role = admiral 
+			commander_military_formation = {
+				formation_navy_unit_type_fraction = {  
+					target = unit_type:combat_unit_type_submarine
+					value >= 0.2  
+				}
+			}
+		}
+		NOT = { has_battle_condition = battle_condition_rough_waters }
+	}
+		
+	weight = {
+		value = 2
+		multiply = {
+			value = 1
+			scope:character = {
+				add = modifier:character_battle_condition_death_from_below_mult
+			}
+			min = 0
+		}
+	}
+}
 
 battle_condition_ramming_maneuver = {
 	icon = "gfx/interface/icons/battle_conditions/battle_condition_ramming_maneuver.dds"

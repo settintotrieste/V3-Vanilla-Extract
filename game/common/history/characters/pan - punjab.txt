@@ -50,20 +50,6 @@
 			}
 		}
 		
-		create_character = {
-			is_general = yes
-			first_name = Zorawar
-			last_name = Singh
-			historical = yes
-			age = 50
-			hq = region_himalayas
-			commander_rank = commander_rank_2
-			traits = {
-				reserved
-				mountain_commander
-			}
-		}
-		
 	#	create_character = {
 	#		is_general = yes
 	#		first_name = Paolo
@@ -99,7 +85,6 @@
 	#		}
 	#
 	#	}
-		
 		create_character = {
 			is_general = yes
 			first_name = Alexander
@@ -110,7 +95,7 @@
 			age = 51
 			traits = {
 				brave
-				# experienced_artillery_commander
+				experienced_artillery_commander
 			}
 		}
 	}

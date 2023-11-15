@@ -1145,7 +1145,7 @@ agitator_alexis_de_tocqueville = { # Alexis de Tocqueville
 }
 
 agitator_jose_do_patrocinio = { # José do Patrocínio
-	first_name = Jose
+	first_name = JosE_
 	last_name = do_PatrocI_nio
 	historical = yes
 	culture = cu:afro_american

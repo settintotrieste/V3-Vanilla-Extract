@@ -49,5 +49,7 @@
 		ig:ig_devout = {
 			set_ig_bolstering = yes
 		}
+
+		add_company = company_type:company_krupp
 	}
 }

@@ -548,12 +548,12 @@ disappointing_compromise = {
 	interest_group_approval_add = -1
 }
 
-landswap_seller_big_money = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_add = 50000
+supporting_reform_efforts_among_brothers = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_add = -150
 }
 
-landswap_buyer_big_money = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_tax_income_add = 50000
+turtle_island_state_of_nations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_loyalists_from_sol_change_accepted_culture_mult = 0.1
 }

@@ -33,10 +33,11 @@
 			}
 			else_if = {
 				limit = {
+					has_dlc_feature = rp1_content
 					owner = { c:BRZ ?= this}
 				}
 				set_ig_trait = ig_trait:ig_trait_noble_privileges
-				set_ig_trait = ig_trait:ig_trait_family_ties
+				set_ig_trait = ig_trait:ig_trait_fazenda_ibicaba
 				set_ig_trait = ig_trait:ig_trait_latifundios
 			}
 			else_if = {
@@ -73,7 +74,7 @@
 			}
 			else_if = {
 				limit = {
-					owner = { 
+					owner = {
 						OR = {
 							country_has_primary_culture = cu:yankee
 							country_has_primary_culture = cu:dixie
@@ -218,10 +219,7 @@
 		else_if = {
 			limit = {
 				any_primary_culture = {
-					OR = {
-						has_discrimination_trait = hispanophone
-						has_discrimination_trait = lusophone
-					}
+					has_discrimination_trait = hispanophone
 					has_discrimination_trait = european_heritage
 					NOT = { has_discrimination_trait = iberian_culture_group }
 					NOT = { cu:caribeno = this }
@@ -229,7 +227,7 @@
 			}
 			ig:ig_landowners = {
 				remove_ideology = ideology_paternalistic
-				add_ideology = ideology_caudillismo
+				add_ideology = ideology_republican_paternalistic
 			}
 		}
 	}

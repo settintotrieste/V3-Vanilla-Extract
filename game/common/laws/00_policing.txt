@@ -15,8 +15,8 @@
 		value = 0
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	# AI shouldn't try to abolish institutions
@@ -73,8 +73,8 @@ law_local_police = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 	
 	# Don't return to local police if we have something more advanced
@@ -155,8 +155,8 @@ law_dedicated_police = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -222,8 +222,8 @@ law_militarized_police = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

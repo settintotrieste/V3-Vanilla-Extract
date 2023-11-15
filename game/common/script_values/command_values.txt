@@ -169,7 +169,7 @@ land_battle_size = {
 				scope:is_advancing_side = no
 			}
 			value = {
-				value = "scope:province.land_hq.num_garrison_units"	
+				value = "scope:province.land_controller_hq.num_garrison_units"
 				desc = "BATTLE_SIZE_BASE_NAVAL_INVASION_GARRISONED_BATTALIONS"
 			}
 		}
@@ -293,10 +293,10 @@ land_battle_size = {
 		else_if = {
 			limit = {
 				scope:is_advancing_side = no
-				scope:pre_max_amount_cap > "scope:province.land_hq.num_garrison_units"	
+				scope:pre_max_amount_cap > "scope:province.land_controller_hq.num_garrison_units"
 			}
 			max = {
-				add = "scope:province.land_hq.num_garrison_units"	
+				add = "scope:province.land_controller_hq.num_garrison_units"
 				desc = "BATTLE_SIZE_MAX_AMOUNT_REACHED"
 			}
 		}

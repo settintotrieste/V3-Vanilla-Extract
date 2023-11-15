@@ -14,8 +14,8 @@
 		value = 0
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 	
 	# AI shouldn't try to abolish institutions
@@ -71,22 +71,9 @@ law_national_guard = {
 		}	
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
-	
-	pop_support = {
-		value = 0
-		add = {
-			desc = "POP_OFFICERS"
-			if = {
-				limit = { 
-					is_pop_type = officers
-				}
-				value = 0.33
-			}
-		}
-	}
 
 	# Don't return to national guard we have something more advanced
 	ai_will_do = {
@@ -185,8 +172,8 @@ law_guaranteed_liberties = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

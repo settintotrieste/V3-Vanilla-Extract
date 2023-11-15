@@ -18,7 +18,7 @@
 		any_scope_state = {
 			region = sr:region_senegal
 			is_largest_state_in_region = yes
-			count >= 4
+			count >= 2
 		}
 		custom_tooltip = {
 			text = colonial_administration_cooldown
@@ -81,6 +81,8 @@
 				every_scope_state = {
 					remove_variable = state_to_cede
 				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
 			}
 		}
 		hidden_effect = {
@@ -89,7 +91,7 @@
 				type = puppet
 			}
 		}
-		trigger_event = { id = colonial_administration_events.1 popup = yes }
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
 		custom_tooltip = je_colonial_administration_button_tt_1
 		custom_tooltip = je_colonial_administration_button_tt_2
 	}
@@ -115,7 +117,7 @@ je_colonial_administration_button_niger = {
 		any_scope_state = {
 			region = sr:region_niger
 			is_largest_state_in_region = yes
-			count >= 4
+			count >= 2
 		}
 		custom_tooltip = {
 			text = colonial_administration_cooldown
@@ -178,6 +180,8 @@ je_colonial_administration_button_niger = {
 				every_scope_state = {
 					remove_variable = state_to_cede
 				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
 			}
 		}
 		hidden_effect = {
@@ -186,7 +190,7 @@ je_colonial_administration_button_niger = {
 				type = puppet
 			}
 		}
-		trigger_event = { id = colonial_administration_events.1 popup = yes }
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
 		custom_tooltip = je_colonial_administration_button_tt_1
 		custom_tooltip = je_colonial_administration_button_tt_2
 	}
@@ -212,7 +216,7 @@ je_colonial_administration_button_ethiopia = {
 		any_scope_state = {
 			region = sr:region_ethiopia
 			is_largest_state_in_region = yes
-			count >= 4
+			count >= 2
 		}
 		custom_tooltip = {
 			text = colonial_administration_cooldown
@@ -275,6 +279,8 @@ je_colonial_administration_button_ethiopia = {
 				every_scope_state = {
 					remove_variable = state_to_cede
 				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
 			}
 		}
 		hidden_effect = {
@@ -283,7 +289,7 @@ je_colonial_administration_button_ethiopia = {
 				type = puppet
 			}
 		}
-		trigger_event = { id = colonial_administration_events.1 popup = yes }
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
 		custom_tooltip = je_colonial_administration_button_tt_1
 		custom_tooltip = je_colonial_administration_button_tt_2
 	}
@@ -309,7 +315,7 @@ je_colonial_administration_button_zanj = {
 		any_scope_state = {
 			region = sr:region_zanj
 			is_largest_state_in_region = yes
-			count >= 4
+			count >= 2
 		}
 		custom_tooltip = {
 			text = colonial_administration_cooldown
@@ -372,6 +378,8 @@ je_colonial_administration_button_zanj = {
 				every_scope_state = {
 					remove_variable = state_to_cede
 				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
 			}
 		}
 		hidden_effect = {
@@ -380,7 +388,7 @@ je_colonial_administration_button_zanj = {
 				type = puppet
 			}
 		}
-		trigger_event = { id = colonial_administration_events.1 popup = yes }
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
 		custom_tooltip = je_colonial_administration_button_tt_1
 		custom_tooltip = je_colonial_administration_button_tt_2
 	}
@@ -406,7 +414,7 @@ je_colonial_administration_button_southern_africa = {
 		any_scope_state = {
 			region = sr:region_southern_africa
 			is_largest_state_in_region = yes
-			count >= 4
+			count >= 2
 		}
 		custom_tooltip = {
 			text = colonial_administration_cooldown
@@ -469,6 +477,8 @@ je_colonial_administration_button_southern_africa = {
 				every_scope_state = {
 					remove_variable = state_to_cede
 				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
 			}
 		}
 		hidden_effect = {
@@ -477,7 +487,7 @@ je_colonial_administration_button_southern_africa = {
 				type = puppet
 			}
 		}
-		trigger_event = { id = colonial_administration_events.1 popup = yes }
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
 		custom_tooltip = je_colonial_administration_button_tt_1
 		custom_tooltip = je_colonial_administration_button_tt_2
 	}
@@ -503,7 +513,7 @@ je_colonial_administration_button_congo = {
 		any_scope_state = {
 			region = sr:region_congo
 			is_largest_state_in_region = yes
-			count >= 4
+			count >= 2
 		}
 		custom_tooltip = {
 			text = colonial_administration_cooldown
@@ -566,6 +576,8 @@ je_colonial_administration_button_congo = {
 				every_scope_state = {
 					remove_variable = state_to_cede
 				}
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_presidential_republic
 			}
 		}
 		hidden_effect = {
@@ -574,7 +586,7 @@ je_colonial_administration_button_congo = {
 				type = puppet
 			}
 		}
-		trigger_event = { id = colonial_administration_events.1 popup = yes }
+		trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
 		custom_tooltip = je_colonial_administration_button_tt_1
 		custom_tooltip = je_colonial_administration_button_tt_2
 	}
@@ -595,9 +607,6 @@ je_colonial_administration_button_expand_senegal = {
 	}
 
 	possible = {
-		any_subject_or_below = {
-			has_variable = senegal_subject_var
-		}
 		OR = {
 			any_scope_state = {
 				region = sr:region_senegal
@@ -618,6 +627,9 @@ je_colonial_administration_button_expand_senegal = {
 	}
 
 	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
 		random_subject_or_below = {
 			limit = {
 				has_variable = senegal_subject_var
@@ -680,9 +692,6 @@ je_colonial_administration_button_expand_niger = {
 	}
 
 	possible = {
-		any_subject_or_below = {
-			has_variable = niger_subject_var
-		}
 		OR = {
 			any_scope_state = {
 				region = sr:region_niger
@@ -703,6 +712,9 @@ je_colonial_administration_button_expand_niger = {
 	}
 
 	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
 		random_subject_or_below = {
 			limit = {
 				has_variable = niger_subject_var
@@ -765,9 +777,6 @@ je_colonial_administration_button_expand_ethiopia = {
 	}
 
 	possible = {
-		any_subject_or_below = {
-			has_variable = ethiopia_subject_var
-		}
 		OR = {
 			any_scope_state = {
 				region = sr:region_ethiopia
@@ -788,6 +797,9 @@ je_colonial_administration_button_expand_ethiopia = {
 	}
 
 	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
 		random_subject_or_below = {
 			limit = {
 				has_variable = ethiopia_subject_var
@@ -850,9 +862,6 @@ je_colonial_administration_button_expand_zanj = {
 	}
 
 	possible = {
-		any_subject_or_below = {
-			has_variable = zanj_subject_var
-		}
 		OR = {
 			any_scope_state = {
 				region = sr:region_zanj
@@ -873,6 +882,9 @@ je_colonial_administration_button_expand_zanj = {
 	}
 
 	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
 		random_subject_or_below = {
 			limit = {
 				has_variable = zanj_subject_var
@@ -935,9 +947,6 @@ je_colonial_administration_button_expand_southern_africa = {
 	}
 
 	possible = {
-		any_subject_or_below = {
-			has_variable = southern_africa_subject_var
-		}
 		OR = {
 			any_scope_state = {
 				region = sr:region_southern_africa
@@ -958,6 +967,9 @@ je_colonial_administration_button_expand_southern_africa = {
 	}
 
 	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
 		random_subject_or_below = {
 			limit = {
 				has_variable = southern_africa_subject_var
@@ -1020,9 +1032,6 @@ je_colonial_administration_button_expand_congo = {
 	}
 
 	possible = {
-		any_subject_or_below = {
-			has_variable = congo_subject_var
-		}
 		OR = {
 			any_scope_state = {
 				region = sr:region_congo
@@ -1043,6 +1052,9 @@ je_colonial_administration_button_expand_congo = {
 	}
 
 	effect = {
+		custom_tooltip = {
+			text = transfer_stuff_to_subject_tt
+		}
 		random_subject_or_below = {
 			limit = {
 				has_variable = congo_subject_var

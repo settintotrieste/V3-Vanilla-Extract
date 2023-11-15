@@ -822,19 +822,19 @@ state_standard_of_living_add = {
 state_poor_standard_of_living_add = {
 	good = yes
 	percent = no
-	num_decimals = 0
+	num_decimals = 1
 }
 
 state_middle_standard_of_living_add = {
 	good = yes
 	percent = no
-	num_decimals = 0
+	num_decimals = 1
 }
 
 state_rich_standard_of_living_add = {
 	good = yes
 	percent = no
-	num_decimals = 0
+	num_decimals = 1
 }
 
 state_expected_sol_mult = {
@@ -967,6 +967,12 @@ building_economy_of_scale_level_cap_add = {
 	good = yes
 	percent = no
 	num_decimals = 0
+}
+
+state_slave_import_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 1
 }
 
 ###############
@@ -1299,18 +1305,6 @@ character_morale_cap_add = {
 	num_decimals = 0
 }
 
-character_attrition_risk_add = {
-	good = no
-	percent = yes
-	num_decimals = 0
-}
-
-character_attrition_risk_mult = {
-	good = no
-	percent = yes
-	num_decimals = 0
-}
-
 character_popularity_add = {
 	neutral = yes
 	percent = no
@@ -1345,7 +1339,7 @@ character_interception_add = {
 
 character_convoy_raiding_add = {
 	good = yes
-	percent = no
+	percent = no    # from 0 to 100, where 100 means 100% chance of raiding convoys in the current shipping lane
 }
 
 # ███████ ██████   ██████  ███    ██ ████████
@@ -1513,7 +1507,7 @@ unit_morale_loss_mult = { # base amount of morale damage (percentage of manpower
 	percent = yes
     num_decimals = 0
 	
-	ai_value = 5000 # -2% morale loss = same value as 100 pounds of profit (mult modifier, so 0.01 = 1%)
+	ai_value = -5000 # -2% morale loss = same value as 100 pounds of profit (mult modifier, so 0.01 = 1%)
 }
 
 unit_morale_damage_mult = { # increases the morale loss taken by the other side
@@ -1614,6 +1608,8 @@ unit_mobilization_speed_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
+	
+	ai_value = 5000 # +2% = same value as 100 pounds of profit
 }
 
 unit_mobilization_speed_from_railways_mult = {
@@ -1636,135 +1632,48 @@ unit_occupation_mult = {
 ### SPECIFIC UNIT TYPE MODIFIERS ###
 ###########################
 
-unit_combat_unit_type_hussars_offense_add = {
-	good = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_hussars_offense_mult = {
+unit_combat_unit_type_siege_artillery_offense_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
-	
 }
 
-unit_combat_unit_type_hussars_defense_add = {
-	good = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_hussars_defense_mult = {
+unit_combat_unit_type_shrapnel_artillery_offense_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
-	
-}
- 
-unit_combat_unit_type_dragoons_offense_add = {
-	good = yes
-	num_decimals = 0
-	
 }
 
-unit_combat_unit_type_dragoons_offense_mult = {
+unit_combat_unit_type_submarine_offense_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
-	
 }
 
-unit_combat_unit_type_dragoons_defense_add = {
-	good = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_dragoons_defense_mult = {
+unit_combat_unit_type_heavy_tank_offense_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
-	
-}
- 
-unit_combat_unit_type_cuirassiers_offense_add = {
-	good = yes
-	num_decimals = 0
-	
 }
 
-unit_combat_unit_type_cuirassiers_offense_mult = {
+unit_combat_unit_type_carrier_offense_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
-	
 }
 
-unit_combat_unit_type_cuirassiers_defense_add = {
-	good = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_cuirassiers_defense_mult = {
+unit_combat_unit_type_cannon_artillery_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
-	
 }
 
-unit_combat_unit_type_lancers_offense_add = {
-	good = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_lancers_offense_mult = {
+unit_combat_unit_type_mobile_artillery_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
-	
 }
 
-unit_combat_unit_type_lancers_defense_add = {
-	good = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_lancers_defense_mult = {
-	good = yes
-	percent = yes
-	num_decimals = 0
-	
-}
- 
-unit_combat_unit_type_light_tanks_offense_add = {
-	good = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_light_tanks_offense_mult = {
-	good = yes
-	percent = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_light_tanks_defense_add = {
-	good = yes
-	num_decimals = 0
-	
-}
-
-unit_combat_unit_type_light_tanks_defense_mult = {
-	good = yes
-	percent = yes
-	num_decimals = 0
-	
-}
 
 ###########################
 ### MILITARY FORMATIONS ###
@@ -1774,19 +1683,42 @@ military_formation_travel_speed_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
+	
+	ai_value = 10000 # +1% = same value as 100 pounds of profit
 }
 
 military_formation_organization_gain_add = {
 	good = yes
 	percent = no
 	num_decimals = 2
+	
+	ai_value = 5000 # +2 = same value as 1000 pounds of profit
 }
 
 military_formation_organization_gain_mult = {
 	good = yes
 	percent = yes
 	num_decimals = 0
+	
+	ai_value = 5000 # +2% = same value as 100 pounds of profit
 }
+
+military_formation_attrition_risk_add = {
+	good = no
+	percent = yes
+	num_decimals = 0
+	
+	ai_value = -5000 # -2 = same value as 1000 pounds of profit
+}
+
+military_formation_attrition_risk_mult = {
+	good = no
+	percent = yes
+	num_decimals = 0
+	
+	ai_value = -5000 # -2% = same value as 100 pounds of profit
+}
+
 
 unit_army_experience_gain_add = {
 	good = yes
@@ -1813,6 +1745,7 @@ unit_navy_experience_gain_mult = {
 unit_experience_gain_mult = {
 	good = yes
 	percent = yes
+	num_decimals = 0
 }
 
 country_production_tech_research_speed_mult = {

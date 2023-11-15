@@ -41,3 +41,13 @@ modifier_legacy_of_terakoya = {
 	country_tech_research_speed_mult = 0.15
 	country_bureaucracy_mult = -0.05
 }
+
+patagonia_campaign = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_colony_growth_speed_mult = 0.75
+}
+
+modifier_korean_empire = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_mult = 0.25
+}

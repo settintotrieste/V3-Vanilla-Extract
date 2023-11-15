@@ -25,11 +25,9 @@ building_railway = {
 			is_subsidized = yes
 		}
 		OR = {
-			owner = {
-				market = {
-					mg:transportation = { 
-						market_goods_pricier > 0.5 
-					}
+			state = {
+				sg:transportation = { 
+					state_goods_pricier > 0.5 
 				}
 			}
 			state.market_access < 1

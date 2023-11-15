@@ -68,8 +68,8 @@ law_autocracy = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -158,8 +158,8 @@ law_technocracy = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -241,8 +241,8 @@ law_oligarchy = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -307,8 +307,8 @@ law_elder_council = {
 		value = 0
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -396,8 +396,8 @@ law_landed_voting = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -478,8 +478,8 @@ law_wealth_voting = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -559,8 +559,8 @@ law_census_voting = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -648,8 +648,8 @@ law_universal_suffrage = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -726,8 +726,8 @@ law_anarchy = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -889,8 +889,8 @@ law_single_party_state = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

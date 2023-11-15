@@ -55,24 +55,8 @@ law_consumption_based_taxation = {
 		}
 	}
 
-	pop_support = {
-		value = 0
-		add = {
-			desc = "POP_PEASANTS"
-			if = {
-				limit = {
-					owner = {
-						has_law = law_type:law_land_based_taxation
-					}
-					is_pop_type = peasants
-				}
-				value = 0.75
-			}
-		}
-	}
-
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 	
 	# AI shouldn't change to consumption-based-taxation as it's likely to wreck their economy
@@ -150,22 +134,8 @@ law_land_based_taxation = {
 		}
 	}
 	
-	pop_support = {
-		value = 0
-		
-		add = {
-			desc = "POP_ARISTOCRATS"
-			if = {
-				limit = { 
-					is_pop_type = aristocrats
-				}
-				value = 0.33
-			}
-		}
-	}
-
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	# AI shouldn't change to land based taxation from more advanced taxation forms
@@ -258,8 +228,8 @@ law_per_capita_based_taxation = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -342,8 +312,8 @@ law_proportional_taxation = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -425,8 +395,8 @@ law_graduated_taxation = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

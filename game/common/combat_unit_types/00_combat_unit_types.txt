@@ -12,7 +12,7 @@ combat_unit_type_irregular_infantry = {
 
     battle_modifier = {
         unit_offense_add = 10
-        unit_defense_add = 15
+        unit_defense_add = 10
         unit_morale_loss_add = 15
     }
 	
@@ -64,7 +64,7 @@ combat_unit_type_irregular_infantry = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_irregular.dds"
     }
-	
+
 	upgrades = {
 		combat_unit_type_line_infantry
 		combat_unit_type_skirmish_infantry
@@ -82,19 +82,12 @@ combat_unit_type_line_infantry = {
     }
 
     battle_modifier = {
-        unit_offense_add = 10
+        unit_offense_add = 20
         unit_defense_add = 25
         unit_morale_loss_add = 10
     }
 
 	unlocking_technologies = { line_infantry }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -128,7 +121,7 @@ combat_unit_type_line_infantry = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_line.dds"
     }
-	
+
 	upgrades = {	
 		combat_unit_type_skirmish_infantry
         combat_unit_type_trench_infantry
@@ -140,25 +133,30 @@ combat_unit_type_line_infantry = {
 combat_unit_type_skirmish_infantry = {
     group = combat_unit_group_infantry
 
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
     upkeep_modifier = {
         goods_input_small_arms_add = 1
         goods_input_ammunition_add = 1
     }
-    
+
     battle_modifier = {
-        unit_offense_add = 15
+        unit_offense_add = 25
         unit_defense_add = 35
         unit_morale_loss_add = 10
     }
 
 	unlocking_technologies = { general_staff }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -187,21 +185,33 @@ combat_unit_type_skirmish_infantry = {
         }
         texture = "gfx/unit_illustrations/infantry_arabic_skirmish.dds"
     }
-	
+
     combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_skirmish.dds"
     }
-	
-	upgrades = {	
+
+	upgrades = {
 		combat_unit_type_trench_infantry
-        	combat_unit_type_squad_infantry
-        	combat_unit_type_mechanized_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
 	}
 }
 
 combat_unit_type_trench_infantry = {
     group = combat_unit_group_infantry
+
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
 
     upkeep_modifier = {
         goods_input_small_arms_add = 1
@@ -209,19 +219,12 @@ combat_unit_type_trench_infantry = {
     }
     
     battle_modifier = {
-        unit_offense_add = 20
+        unit_offense_add = 30
         unit_defense_add = 40
         unit_morale_loss_add = 8
     }
 
 	unlocking_technologies = { trench_works }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -250,7 +253,7 @@ combat_unit_type_trench_infantry = {
         }
         texture = "gfx/unit_illustrations/infantry_arabic_trench.dds"
     }
-	
+
     combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_trench.dds"
@@ -265,6 +268,18 @@ combat_unit_type_trench_infantry = {
 combat_unit_type_squad_infantry = {
     group = combat_unit_group_infantry
 
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
     upkeep_modifier = {
         goods_input_small_arms_add = 1
         goods_input_ammunition_add = 2
@@ -272,19 +287,12 @@ combat_unit_type_squad_infantry = {
     }
     
     battle_modifier = {
-        unit_offense_add = 25
+        unit_offense_add = 40
         unit_defense_add = 50
         unit_morale_loss_add = 6
     }
 
 	unlocking_technologies = { nco_training }
-	
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -313,7 +321,7 @@ combat_unit_type_squad_infantry = {
         }
         texture = "gfx/unit_illustrations/infantry_arabic_squad.dds"
     }
-	
+
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/infantry_eu_squad.dds"
@@ -327,6 +335,18 @@ combat_unit_type_squad_infantry = {
 combat_unit_type_mechanized_infantry = {
     group = combat_unit_group_infantry
 
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
     upkeep_modifier = {
         goods_input_small_arms_add = 1
         goods_input_ammunition_add = 3
@@ -336,21 +356,14 @@ combat_unit_type_mechanized_infantry = {
     }
     
     battle_modifier = {
-        unit_offense_add = 35
-        unit_defense_add = 70
+        unit_offense_add = 50
+        unit_defense_add = 60
         unit_morale_loss_add = 4
         unit_defense_mult = 0.1
         unit_devastation_mult = 0.1
     }
 
 	unlocking_technologies = { mobile_armor }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -407,13 +420,6 @@ combat_unit_type_cannon_artillery = {
 
     combat_unit_image = {
         trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
-
-    combat_unit_image = {
-        trigger = { 
             has_culture_graphics = east_asian
         }
         texture = "gfx/unit_illustrations/artillery_east_asian_cannon.dds"
@@ -439,7 +445,7 @@ combat_unit_type_cannon_artillery = {
         }
         texture = "gfx/unit_illustrations/artillery_arabic_cannon.dds"
     }
-	
+
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_cannon.dds"
@@ -468,14 +474,7 @@ combat_unit_type_mobile_artillery = {
     }
 
 	unlocking_technologies = { napoleonic_warfare }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
-
+	
     combat_unit_image = {
         trigger = { 
             has_culture_graphics = east_asian
@@ -503,7 +502,7 @@ combat_unit_type_mobile_artillery = {
         }
         texture = "gfx/unit_illustrations/artillery_arabic_mobile.dds"
     }
-	
+
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_mobile.dds"
@@ -517,6 +516,18 @@ combat_unit_type_mobile_artillery = {
 
 combat_unit_type_shrapnel_artillery = {
     group = combat_unit_group_artillery
+
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
     
     upkeep_modifier = {
         goods_input_artillery_add = 1
@@ -532,13 +543,6 @@ combat_unit_type_shrapnel_artillery = {
     }
 
 	unlocking_technologies = { breech_loading_artillery }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -580,6 +584,18 @@ combat_unit_type_shrapnel_artillery = {
 
 combat_unit_type_siege_artillery = {
     group = combat_unit_group_artillery
+
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
     
     upkeep_modifier = {
         goods_input_artillery_add = 1
@@ -595,13 +611,6 @@ combat_unit_type_siege_artillery = {
     }
 
 	unlocking_technologies = { wargaming }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -630,7 +639,7 @@ combat_unit_type_siege_artillery = {
         }
         texture = "gfx/unit_illustrations/artillery_arabic_siege.dds"
     }
-	
+
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_siege.dds"
@@ -639,9 +648,24 @@ combat_unit_type_siege_artillery = {
 
 combat_unit_type_heavy_tank = {
     group = combat_unit_group_artillery
+
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
     
     upkeep_modifier = {
-        goods_input_tanks_add = 1
+        goods_input_tanks_add = 3
+        goods_input_artillery_add = 2
+        goods_input_radios_add = 1
+        goods_input_oil_add = 3
         goods_input_ammunition_add = 3
     }
 
@@ -667,24 +691,16 @@ combat_unit_type_hussars = {
     group = combat_unit_group_cavalry
     
     upkeep_modifier = {
-        goods_input_grain_add = 2
-        goods_input_small_arms_add = 2
+        goods_input_grain_add = 1
     }
 
     battle_modifier = {
-        unit_offense_add = 25
-        unit_defense_add = 25
+        unit_offense_add = 15
+        unit_defense_add = 15
         unit_morale_loss_add = 10
     }
 
 	unlocking_technologies = { standing_army }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -713,7 +729,7 @@ combat_unit_type_hussars = {
         }
         texture = "gfx/unit_illustrations/cavalry_arabic_hussar.dds"
     }
-	
+
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/cavalry_eu_hussar.dds"
@@ -728,6 +744,18 @@ combat_unit_type_hussars = {
 
 combat_unit_type_dragoons = {
     group = combat_unit_group_cavalry
+
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
     
     upkeep_modifier = {
         goods_input_grain_add = 2
@@ -735,7 +763,7 @@ combat_unit_type_dragoons = {
     }
 
     battle_modifier = {
-        unit_offense_add = 25
+        unit_offense_add = 20
         unit_defense_add = 25
         unit_morale_loss_add = 10
         unit_occupation_mult = 0.3
@@ -743,13 +771,6 @@ combat_unit_type_dragoons = {
     }
 
 	unlocking_technologies = { standing_army }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -785,7 +806,7 @@ combat_unit_type_dragoons = {
     }
 
     upgrades = {
-        combat_unit_type_hussars
+
         combat_unit_type_cuirassiers
         combat_unit_type_lancers
     }
@@ -793,6 +814,18 @@ combat_unit_type_dragoons = {
 
 combat_unit_type_cuirassiers = {
     group = combat_unit_group_cavalry
+
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
     
     upkeep_modifier = {
         goods_input_grain_add = 2
@@ -802,19 +835,12 @@ combat_unit_type_cuirassiers = {
 
     battle_modifier = {
         unit_offense_add = 25
-        unit_defense_add = 25
+        unit_defense_add = 20
         unit_morale_loss_add = 6
         unit_occupation_mult = 0.3
     }
 
 	unlocking_technologies = { standing_army }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
 
     combat_unit_image = {
         trigger = { 
@@ -843,14 +869,13 @@ combat_unit_type_cuirassiers = {
         }
         texture = "gfx/unit_illustrations/cavalry_arabic_cuirassier.dds"
     }
-	
+
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/cavalry_eu_cuirassier.dds"
     }
 
     upgrades = {
-        combat_unit_type_hussars
         combat_unit_type_dragoons
         combat_unit_type_lancers
     }
@@ -858,6 +883,18 @@ combat_unit_type_cuirassiers = {
 
 combat_unit_type_lancers = {
     group = combat_unit_group_cavalry
+
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
     
     upkeep_modifier = {
         goods_input_grain_add = 2
@@ -866,7 +903,7 @@ combat_unit_type_lancers = {
 
     battle_modifier = {
         unit_offense_add = 30
-        unit_defense_add = 20
+        unit_defense_add = 15
         unit_morale_loss_add = 10
         unit_kill_rate_add = 0.05
         unit_morale_loss_mult = 0.05
@@ -874,13 +911,6 @@ combat_unit_type_lancers = {
     }
 
 	unlocking_technologies = { standing_army }
-
-    combat_unit_image = {
-        trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
     
     combat_unit_image = {
         trigger = { 
@@ -909,25 +939,38 @@ combat_unit_type_lancers = {
         }
         texture = "gfx/unit_illustrations/cavalry_arabic_lancer.dds"
     }
-	
+
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/cavalry_eu_lancer.dds"
     }
 
     upgrades = {
-        combat_unit_type_hussars
         combat_unit_type_dragoons
         combat_unit_type_cuirassiers
     }
 }
 
-combat_unit_light_tanks = {
+combat_unit_type_light_tanks = {
     group = combat_unit_group_cavalry
+
+    can_build = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
     
     upkeep_modifier = {
-        goods_input_tanks_add = 3
-        goods_input_small_arms_add = 2
+        goods_input_tanks_add = 2
+        goods_input_artillery_add = 1
+        goods_input_oil_add = 2
+        goods_input_ammunition_add = 2
         goods_input_radios_add = 1
     }
 
@@ -970,12 +1013,13 @@ combat_unit_type_frigate = {
     }
 	
 	upgrades = {
-		combat_unit_type_destroyer
+		combat_unit_type_monitor
+        combat_unit_type_destroyer
 		combat_unit_type_torpedo_boat
 	}
 }
 
-combat_unit_type_destroyer = {
+combat_unit_type_monitor = {
     group = combat_unit_group_light_ship
 
     upkeep_modifier = {
@@ -984,9 +1028,31 @@ combat_unit_type_destroyer = {
     }
 
     battle_modifier = {
-        unit_offense_add = 15
-        unit_defense_add = 25
+        unit_offense_add = 20
+        unit_defense_add = 20
+        unit_morale_loss_add = 6
+    }
+
+    unlocking_technologies = { monitor_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_monitor.dds"
+    }
+}
+
+combat_unit_type_destroyer = {
+    group = combat_unit_group_light_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 1
+        goods_input_ammunition_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 40
         unit_morale_loss_add = 8
+        unit_convoy_defense_mult = 0.2
     }
 
 	unlocking_technologies = { destroyer }
@@ -1004,15 +1070,14 @@ combat_unit_type_torpedo_boat = {
 
     upkeep_modifier = {
         goods_input_ironclads_add = 1
-        goods_input_ammunition_add = 2
-        goods_input_explosives_add = 2
+        goods_input_explosives_add = 3
     }
 
     battle_modifier = {
-        unit_offense_add = 30
-        unit_defense_add = 20
+        unit_offense_add = 40
+        unit_defense_add = 25
         unit_morale_loss_add = 8
-        # unit_convoy_raiding_mult = 0.25 Needs code support
+        unit_convoy_raiding_mult = 0.1
     }
 
 	unlocking_technologies = { self_propelled_torpedoes }
@@ -1036,9 +1101,10 @@ combat_unit_type_scout_cruiser = {
     }
 
     battle_modifier = {
-        unit_offense_add = 45
-        unit_defense_add = 45
+        unit_offense_add = 60
+        unit_defense_add = 60
         unit_morale_loss_add = 6
+        # should probably get some patrol bonus. Needs code support
     }
 
 	unlocking_technologies = { sea_lane_strategies }
@@ -1058,8 +1124,8 @@ combat_unit_type_man_o_war = {
     }
 
     battle_modifier = {
-        unit_offense_add = 15
-        unit_defense_add = 15
+        unit_offense_add = 20
+        unit_defense_add = 20
         unit_morale_loss_add = 10
     }
 
@@ -1083,8 +1149,8 @@ combat_unit_type_ironclad = {
     }
 
     battle_modifier = {
-        unit_offense_add = 35
-        unit_defense_add = 35
+        unit_offense_add = 45
+        unit_defense_add = 45
         unit_morale_loss_add = 8
     }
 
@@ -1092,31 +1158,6 @@ combat_unit_type_ironclad = {
 
     combat_unit_image = {
         texture = "gfx/unit_illustrations/capital_ships_ironclad.dds"
-    }
-	
-	upgrades = {
-		combat_unit_type_monitor
-	}
-}
-
-combat_unit_type_monitor = {
-    group = combat_unit_group_capital_ship
-
-    upkeep_modifier = {
-        goods_input_ironclads_add = 3
-        goods_input_ammunition_add = 2
-    }
-
-    battle_modifier = {
-        unit_offense_add = 50
-        unit_defense_add = 50
-        unit_morale_loss_add = 6
-    }
-
-	unlocking_technologies = { monitor_tech }
-
-    combat_unit_image = {
-        texture = "gfx/unit_illustrations/capital_ships_monitor.dds"
     }
 }
 
@@ -1180,6 +1221,7 @@ combat_unit_type_submarine = {
         unit_offense_add = 40
         unit_defense_add = 20
         unit_morale_loss_add = 8
+        unit_convoy_raiding_mult = 0.15
     }
 
 	unlocking_technologies = { submarine }

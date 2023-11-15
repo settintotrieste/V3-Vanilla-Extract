@@ -36,8 +36,8 @@ law_child_labor_allowed = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 	
 	ai_will_do = {
@@ -101,8 +101,8 @@ law_restricted_child_labor = {
 		}
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 	
 	ai_will_do = {
@@ -154,8 +154,8 @@ law_compulsory_primary_school = {
 		value = 0
 	}
 
-	can_impose = { 
-		is_subject_of = scope:initiator	
+	on_impose = { 
+			
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

@@ -13,6 +13,7 @@ state_trait_northern_canadian_terrain = {
 		building_group_bg_agriculture_throughput_add = -0.2
 		state_construction_mult = -0.2
 		state_infrastructure_mult = -0.2
+		state_migration_pull_mult = -0.5
 	}
 }
 
@@ -230,6 +231,7 @@ state_trait_mississippi_river = {
 	
 	modifier = {
 		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
 	}
 }
 

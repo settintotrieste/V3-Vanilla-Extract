@@ -115,7 +115,10 @@ coa_fascist_trigger = {
 	coa_dictatorship_trigger = yes
 	any_scope_character = {
 		is_ruler = yes
-		has_ideology = ideology:ideology_fascist
+		OR = {
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_integralist
+		}
     }
 }
 
@@ -343,7 +346,7 @@ coa_def_dominant_scotland_trigger = {
 		AND = {
 			exists = scope:actor
 			scope:actor = {
-				capital = {
+				capital ?= {
 					state_region = {
 						OR = {
 							this = s:STATE_LOWLANDS
