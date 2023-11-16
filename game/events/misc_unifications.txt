@@ -314,7 +314,7 @@ formation.6 = {
 	flavor = {
 		first_valid = {
 			triggered_desc = {
-				desc = formation.6.f
+				desc = formation.6.f1
 				trigger = {
 					c:BRZ ?= THIS
 				}
@@ -1071,9 +1071,12 @@ formation.17 = {
 			c:BHT ?= THIS
 			c:YEM ?= THIS
 			c:KAZ ?= THIS
+			c:UCA ?= THIS
 			c:HRE ?= THIS
 			c:UNL ?= THIS
 			c:RHN ?= THIS
+			c:ITA ?= THIS
+			c:GER ?= THIS
 		}
 	}
 
