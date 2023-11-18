@@ -11,6 +11,8 @@
  CHARACTER_INTERACTION_TOOLTIP: "$CHARACTER_INTERACTION_HEADER$$CHARACTER_INTERACTION_ERRORS$$CHARACTER_INTERACTION_REQUIREMENTS$$CHARACTER_INTERACTION_INFO$$CHARACTER_INTERACTION_EFFECTS$$CHARACTER_INTERACTION_DESC$"
  CHARACTER_INTERACTION_CONFIRMATION: "$CHARACTER_INTERACTION_TOOLTIP$\n\nAre you sure?"
  CHARACTER_INTERACTION_ON_COOLDOWN: "[CharacterInteraction.GetName|v] is on cooldown until [Date.GetString|v]"
+ CHARACTER_INTERACTION_NAME: "[CharacterInteraction.GetName][AddLocalizationIf(CharacterInteraction.IsOnCooldown(Character.Self), 'INTERACTION_COOLDOWN')]"
+ INTERACTION_COOLDOWN: " ([CharacterInteraction.GetCooldown(Character.Self)])"
 
  grant_command_to_ruler: "Grant Command"
  remove_command_from_ruler: "Retire from Command"

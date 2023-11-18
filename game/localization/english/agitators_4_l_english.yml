@@ -236,10 +236,10 @@
   coup_pulse_events.10.b: "This is clearly evidence of some sort of plot."
 
   coup_pulse_events.11.t: "For the Defense of [SCOPE.sState('military_exercises_state').GetName]"
-  coup_pulse_events.11.d: "The [SCOPE.gsInterestGroup('coup_ig').GetName], in light of recent unrest, have requested to carry out a series of unscheduled military exercises in [SCOPE.sState('military_exercises_state').GetStateRegion.GetName]."
-  coup_pulse_events.11.f: "The column of soldiers wound up and down the road, four shoulders wide and so long that the traveler could not see the end of it. An officer on a horse passed by, extending a baton with clear intent.\n\n"This route has been closed for passage to [SCOPE.sState('military_exercises_state').GetStateRegion.GetNameNoFormatting]!""
+  coup_pulse_events.11.d: "The [SCOPE.gsInterestGroup('coup_ig').GetName], in light of recent unrest, have requested to carry out a series of unscheduled military exercises in [SCOPE.sState('military_exercises_state').GetName]."
+  coup_pulse_events.11.f: "The column of soldiers wound up and down the road, four shoulders wide and so long that the traveler could not see the end of it. An officer on a horse passed by, extending a baton with clear intent.\n\n"This route has been closed for passage to [SCOPE.sState('military_exercises_state').GetNameNoFormatting]!""
   coup_pulse_events.11.a: "They have no legitimate reason to be doing this."
-  coup_pulse_events.11.b: "The security of [SCOPE.sState('military_exercises_state').GetStateRegion.GetName] is paramount, even if this is irregular."
+  coup_pulse_events.11.b: "The security of [SCOPE.sState('military_exercises_state').GetName] is paramount, even if this is irregular."
 
   coup_pulse_events.12.t: "State Figures Invited to Religious Service"
   coup_pulse_events.12.d: "Numerous prominent state figures have been invited to a special religious service administered by the [SCOPE.gsInterestGroup('coup_ig').GetName]. This invitation has come suddenly, and disrupted several figures' schedules."
@@ -466,7 +466,7 @@
 
   agitators_law_events.11.t: "The [SCOPE.sState('capital_scope').GetStateRegion.GetCityHubName] Citizens' Assocation"
   agitators_law_events.11.d: "A social club popular with the educated class has held a salon in [SCOPE.sState('capital_scope').GetStateRegion.GetCityHubName], with [SCOPE.sCharacter('supporting_agitator').GetFullName] speaking in favor of [SCOPE.sLaw('current_law_scope').GetName] as an honored guest."
-  agitators_law_events.11.f: ""That is, indubitably, the case. But have you considered what the reception of such a thing would be?"\n\n[SCOPE.sCharacter('supporting_agitator').GetLastNameNoFormatting] nodded towards the speaker, then back around the wood-paneled room. [SCOPE.sCharacter('supporting_agitator').GetSheHe|U] put down [SCOPE.sCharacter('supporting_agitator').GetHerHis] cup.\n\n"I have spend some time thinking of it—we must, in all things, consider the thoughts of those who behold a thing for the first time. A first viewing is carried out with the eyes of an innocent, with mind open for new possibilities...""
+  agitators_law_events.11.f: ""That is, indubitably, the case. But have you considered what the reception of such a thing would be?"\n\n[SCOPE.sCharacter('supporting_agitator').GetLastNameNoFormatting] nodded towards the speaker, then back around the wood-paneled room. [SCOPE.sCharacter('supporting_agitator').GetSheHe|U] put down [SCOPE.sCharacter('supporting_agitator').GetHerHis] cup.\n\n"I have spent some time thinking of it—we must, in all things, consider the thoughts of those who behold a thing for the first time. A first viewing is carried out with the eyes of an innocent, with mind open for new possibilities...""
   agitators_law_events.11.a: "They seem like the sort to know what is best."
   agitators_law_events.11.b: "Encourage the further development of these salons."
 
@@ -797,6 +797,7 @@
   modifier_conservative_fearmongering: "Accused of Revolutionary Sympathies"
   modifier_conservative_fearmongering_failed: "Campaign of Fear Rejected"
   modifier_agitator_out_of_touch: "Out of Touch"
+  modifier_farmers_voting_conservative: "Conservative Agrarianism"
   modifier_excessively_radical_prescription: "An Excess of Progress"
   modifier_radical_prescription_devout: "Radical Prescription"
   modifier_radical_prescriptions: "Brilliant Satirist"
@@ -1316,7 +1317,7 @@
   historical_agitators.8.t: "The Third Bonaparte"
   historical_agitators.8.d: "Chastened by his travels abroad and his failed coup, [SCOPE.sCharacter('historic_agitator_scope').GetFullName] has returned to [ROOT.GetCountry.GetAdjective] borders."
   historical_agitators.8.f: ""Papa, papa! Napoleon has returned!"\n\n"Which Napoleon would that be, Jacques? Little Corporal, the reigning king, or the Swiss man?"\n\n"The Swiss Officer, papa!""
-  historical_agitators.8.a: "Enough of his vexing coups. Send him far, far away."
+  historical_agitators.8.a:1 "He is not deserving of any special treatment."
   historical_agitators.8.b: "Perhaps he has learned his lesson."
   historical_agitators.8.c: "And so the mastermind reveals himself."
   notification_napoleon_iii_leaves_country_name: "Napoleon III Departs [ROOT.GetCountry.GetName]"
@@ -1426,8 +1427,8 @@
   paris_commune.1.f: ""The proletarians of Paris, amidst the failures and treasons of the ruling classes, have understood that the hour has struck for them to save the situation by taking into their own hands the direction of public affairs. They have understood that it is their imperious duty, and their absolute right, to render themselves masters of their own destinies, by seizing upon the governmental power."" #- Karl Marx
   paris_commune.1.a: "This madness must end!"
   paris_commune.1.b: "Paris armed is the Revolution armed!"
-  commune_progress_start_at_40: "The #bold Paris Commune#! will start with a slight disadvantage"
-  commune_progress_start_at_60: "The #bold Paris Commune#! will start with a slight advantage"
+  commune_progress_start_at_40: "We will side with the [SCOPE.sCharacter('ruler_scope').GetLastName] government\nThe #bold Paris Commune#! will start with a slight disadvantage"
+  commune_progress_start_at_60: "We will side with the #bold Paris Commune#!\nThe #bold Paris Commune#! will start with a slight advantage"
   paris_commune_on_cooldown_tt: "Has not used either #bold Paris Commune#! decision in the past #bold three months#!"
 
   paris_commune.2.t: "The Bloody Week"
@@ -1441,6 +1442,8 @@
   paris_commune.3.f: ""The communal revolution, begun by popular initiative, begins a new era of experimental, positive, scientific politics.\n\nIt is the end of the old governmental and clerical world, of militarism and functionarism, of exploitation, speculation, monopolies and privileges to which the proletariat owe their servitude and the Fatherland its misfortunes and disasters."" #- Manifesto of the Paris Commune
   paris_commune.3.a: "The Versailles government will be trialed as criminals."
   paris_commune.3.b: "We must celebrate our victory, and reconcile."
+
+  communards_seize_power_tt: "[SCOPE.sCountry('paris_commune_scope').GetAdjective] forces will seize control over #bold France#!"
 
   paris_commune.4.t: "The Communards' Revolution"
   paris_commune.4.d: "Long-running tensions between the [ROOT.GetCountry.GetAdjective] people and the [ROOT.GetCountry.GetRuler.GetLastName] government have reached a boiling point. Revolutionaries across the country have declared loyalty to the [SCOPE.sCountry('paris_commune_scope').GetName], marching against the embattled central government."
@@ -1464,12 +1467,12 @@
   je_the_paris_commune_france_spawned: "The city of #bold Paris#! has risen against our rule"
 
   je_the_paris_commune_france: "The Paris Commune"
-  je_the_paris_commune_france_reason: "A selection of socialist, anarchist, and radical republican revolutionaries have occupied the city of Paris, declaring a rival government over [SCOPE.sCountry('france_scope').GetName].\n\nAs long as the [SCOPE.sCountry('commune_scope').GetName] continues to exist, it represents a drastic threat to our government. If the progress of the Commune reaches #bold 0#!, our forces will be able to repress it, but if its progress reaches #bold 100#! the revolutionaries shall carry out a march on Versailles, ending our government entirely. If a [concept_revolution] breaks out whilst this rival government exists, it will swear fealty to the [SCOPE.sCountry('commune_scope').GetName].\n\nThe progress of the #bold Paris Commune#! is [SCOPE.GetRootScope.GetCountry.GetCustom('dynamic_paris_commune_drift')]."
-  #je_the_paris_commune_france_status: "The progress of the #bold Paris Commune#! is [ROOT.GetCustom('dynamic_paris_commune_drift')]."
+  je_the_paris_commune_france_reason: "A selection of socialist, anarchist, and radical republican revolutionaries have occupied the city of Paris, declaring a rival government over [SCOPE.sCountry('france_scope').GetName].\n\nAs long as the [SCOPE.sCountry('commune_scope').GetName] continues to exist, it represents a drastic threat to our government. If the progress of the Commune reaches #bold 0#!, our forces will be able to repress it, but if its progress reaches #bold 100#! the revolutionaries shall carry out a march on Versailles, ending our government entirely. If a [concept_revolution] breaks out whilst this rival government exists, it will swear fealty to the [SCOPE.sCountry('commune_scope').GetName].\n\nThe progress of the #bold Paris Commune#! is changing by #tooltippable;tooltip:[Country.GetTooltipTag],je_paris_commune_drift_special_tooltip [GetGlobalVariable( 'paris_commune_drift_final_var' ).GetValue]#! every month.\n\n#italic The effects of this journal entry will drain @money! #variable [Country.MakeScope.Var('PRC_money_transfer').GetValue|-D]#! from our treasury every week.#!"
 
   je_the_paris_commune_communards: "The Paris Commune"
-  je_the_paris_commune_communards_reason: "The proletariat of Paris have risen and occupied the capital, declaring a rival government over [SCOPE.sCountry('france_scope').GetName].\n\nAs long as our [SCOPE.sCountry('commune_scope').GetName] continues to exist, it represents a drastic threat to the bourgeois government in Versailles. If the progress of the Commune reaches #bold 100#!, our forces shall be able to carry out a march on Versailles, ending our rival government entirely, but if its progress reaches #bold 0#!, the Versailles government shall invade Paris, ending our government entirely.\n\nThe progress of the #bold Paris Commune#! is [SCOPE.GetRootScope.GetCountry.GetCustom('dynamic_paris_commune_drift')]."
-  #je_the_paris_commune_communards_status: "The progress of the #bold Paris Commune#! is [ROOT.GetCustom('dynamic_paris_commune_drift')]."
+  je_the_paris_commune_communards_reason: "The proletariat of Paris have risen and occupied the capital, declaring a rival government over [SCOPE.sCountry('france_scope').GetName].\n\nAs long as our [SCOPE.sCountry('commune_scope').GetName] continues to exist, it represents a drastic threat to the bourgeois government in Versailles. If the progress of the Commune reaches #bold 100#!, our forces shall be able to carry out a march on Versailles, ending our rival government entirely, but if its progress reaches #bold 0#!, the Versailles government shall invade Paris, ending our government entirely.\n\n#italic The effects of this journal entry will contribute @money! #variable [Country.MakeScope.Var('PRC_money_transfer').GetValue|+D]#! to our treasury every week.#!"
+
+  je_paris_commune_drift_special_tooltip: "This rate is determined by the following:\n#variable [Country.MakeScope.Var('PRC_recognition_level').GetValue]#! from foreign recognition of the #bold Paris Commune#!\n#variable [GetGlobalVariable('paris_commune_progress_drift').GetValue]#! from events and other effects"
 
   je_the_paris_commune_france_complete: "The progress of the #bold Paris Commune#! has been reduced to #bold 0#!, allowing for the suppression of the uprising"
   je_the_paris_commune_communard_complete: "The progress of the #bold Paris Commune#! has reached #bold 100#!, allowing for a successful [SCOPE.sCountry('commune_scope').GetAdjective] march on #bold Versailles#!"
@@ -1488,27 +1491,10 @@
   je_the_paris_commune_concessions_to_communards_desc: "Offer concessions to potential Communard sympathizers, to placate the masses."
   cooldown_three_months_tt: "The #bold Paris Commune#! decisions will become available again in #bold three months#!"
 
-  pc_tick_n1: "#bold retreating#! by #bold 1%#! each month"
-  pc_tick_n2: "#bold retreating#! by #bold 2%#! each month"
-  pc_tick_n3: "#bold retreating#! by #bold 3%#! each month"
-  pc_tick_n4: "#bold retreating#! by #bold 4%#! each month"
-  pc_tick_n5: "#bold retreating#! by #bold 5%#! each month"
-  pc_tick_n6: "#bold retreating#! by #bold 6%#! each month"
-  pc_tick_n7: "#bold retreating#! by #bold 7%#! each month"
-  pc_tick_n8: "#bold retreating#! by #bold 8%#! each month"
-  pc_tick_n9: "#bold retreating#! by #bold 9%#! each month"
-  pc_tick_n10: "#bold retreating#! by #bold 10%#! each month"
-  pc_tick_0: "#stagnant#!"
-  pc_tick_1: "#bold advancing#! by #bold 1%#! each month"
-  pc_tick_2: "#bold advancing#! by #bold 2%#! each month"
-  pc_tick_3: "#bold advancing#! by #bold 3%#! each month"
-  pc_tick_4: "#bold advancing#! by #bold 4%#! each month"
-  pc_tick_5: "#bold advancing#! by #bold 5%#! each month"
-  pc_tick_6: "#bold advancing#! by #bold 6%#! each month"
-  pc_tick_7: "#bold advancing#! by #bold 7%#! each month"
-  pc_tick_8: "#bold advancing#! by #bold 8%#! each month"
-  pc_tick_9: "#bold advancing#! by #bold 9%#! each month"
-  pc_tick_10: "#bold advancing#! by #bold 10%#! each month"
+  fra_paris_commune_drain_proceeds: "The Bank of France"
+
+  pc_tick_retreat: "#bold retreating#!"
+  pc_tick_advance: "#bold advancing#!"
 
   modifier_seizure_of_church_gold_minting: "Re-Minting Church Gold"
   modifier_seizure_of_church_gold_army: "Redistributed Church Gold"
@@ -1799,7 +1785,7 @@
   revolution_pulse_events.16.b: "These ideas are simply another modernist aberration."
 
   revolution_pulse_events.17.t: "A Monstrosity of Opportunity"
-  revolution_pulse_events.17.d: "Placing blame upon the [SCOPE.sCulture('pogrom_culture').GetName] people for the present state of revolutionary turmoil, supporters of [SCOPE.sCharacter('reactionary_agitator').GetFullName] amongst the [SCOPE.gsInterestGroup('pogrom_ig').GetName] have carried mass acts of violence against the [SCOPE.sCulture('pogrom_culture').GetName] population of [SCOPE.sState('pogrom_state').GetStateRegion.GetName] and its neighbouring regions."
+  revolution_pulse_events.17.d: "Placing blame upon the [SCOPE.sCulture('pogrom_culture').GetName] people for the present state of revolutionary turmoil, supporters of [SCOPE.sCharacter('reactionary_agitator').GetFullName] amongst the [SCOPE.gsInterestGroup('pogrom_ig').GetName] have carried mass acts of violence against the [SCOPE.sCulture('pogrom_culture').GetName] population of [SCOPE.sState('pogrom_state').GetStateRegion.GetName] and its neighboring regions."
   revolution_pulse_events.17.f: ""What kind of beast cultivates mobs out of common citizens, using fear as bait? In the real world, these weren't the traits of monsters. They were the traits of men seeking power."" #- GennaRose Nethercott
   revolution_pulse_events.17.a: "The [SCOPE.sCulture('pogrom_culture').GetName] culture is, indeed, a threat to [ROOT.GetCountry.GetName]."
   revolution_pulse_events.17.b: "These lawless activities have gone past the point of usefulness."
@@ -1871,7 +1857,7 @@
 
   revolution_pulse_events.28.t: "The Feminine Order of [SCOPE.sState('feminine_brigades_state').GetName]"
   revolution_pulse_events.28.d: "A group of women affiliated with the [SCOPE.gsInterestGroup('devout_ig').GetName] in [SCOPE.sState('feminine_brigades_state').GetName] have founded an organization with the purpose of arranging medical and material support for anti-government revolutionaries."
-  revolution_pulse_events.28.f: ""The hateful tyrant [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting], has no authority in our temples, and no place beside our god!" said the veiled woman on the stand.\n\n"We do not recognise the laws of man, for they are as fallible as the men who create them!""
+  revolution_pulse_events.28.f: ""The hateful tyrant [ROOT.GetCountry.GetRuler.GetLastNameNoFormatting], has no authority in our temples, and no place beside our god!" said the veiled woman on the stand.\n\n"We do not recognize the laws of man, for they are as fallible as the men who create them!""
   revolution_pulse_events.28.a: "We cannot afford to make martyrs of women."
   revolution_pulse_events.28.b: "Crack down on women's religious organizations."
 
@@ -1896,11 +1882,11 @@
   revolution_pulse_events.31.c: "Shoot every tenth man."
 
   revolution_pulse_events.32.t: "Vox Diaboli"
-  revolution_pulse_events.32.d: "In [SCOPE.sState('vox_diaboli_state').GetName], [SCOPE.sPop('majority_religion').GetReligion.GetName] devotees under [SCOPE.sCharacter('devout_ig_leader').GetFullName] have called for a violent revolt, with [SCOPE.sPop('minority_religion').GetReligion.GetName] people scapegoated for their current woes."
+  revolution_pulse_events.32.d: "In [SCOPE.sState('vox_diaboli_state').GetName], [SCOPE.sReligion('majority_religion').GetName] devotees under [SCOPE.sCharacter('devout_ig_leader').GetFullName] have called for a violent revolt, with [SCOPE.sReligion('minority_religion').GetName] people scapegoated for their current woes."
   revolution_pulse_events.32.f: "To be sure one cannot misinterpret the voice of the people for the voice of God, one should mind that the Arch Enemy knows scripture better than they do. Indeed, it is these sweet, silver-tongued sermons that stoke strife. The cost is, invariably, a tidal wave of blood."
   revolution_pulse_events.32.a: "Gag the ringleaders."
-  revolution_pulse_events.32.b: "Post soldiers outside of [SCOPE.sPop('minority_religion').GetReligion.GetName] congregations."
-  revolution_pulse_events.32.c: "Address some of the [SCOPE.sPop('majority_religion').GetReligion.GetNameNoFormatting]'s concerns."
+  revolution_pulse_events.32.b: "Post soldiers outside of [SCOPE.sReligion('minority_religion').GetName] congregations."
+  revolution_pulse_events.32.c: "Address some of the [SCOPE.sReligion('majority_religion').GetNameNoFormatting] concerns."
 
   revolution_pulse_events.33.t: "Greed is Good"
   revolution_pulse_events.33.d: "[SCOPE.sCharacter('industrialists_ig_leader').GetFullName], and the [SCOPE.gsInterestGroup('industrialists_ig').GetName] of [SCOPE.sState('greed_is_good_state').GetName] have delivered a declaration of intent: all industry production to cease until an amenable government is installed."
@@ -2086,13 +2072,303 @@
   government_petition_events.1.f: ""Er, one last matter for the day, sir. Members of your constituency arrived this morning. They're... asking rather loudly and insistently... if you would meet with them about new legislation."\n\n"Is that it? Goodness, you seem as if you've seen a ghost. I'm sure I can spare the last hours of light for them, can't I?"\n\n"I-I believe so, sir. They weren't taking 'no' for an answer.""
   government_petition_events.1.a: "We will see what we can do."
 
-  ### New Modifiers
-    
-  modifier_benefiting_from_corruption: "The Benefits of Corruption"
-  modifier_rewritten_law: "New and Improved"
-  modifier_shrewd_opportunist: "Shrewd Opportunist"
-  modifier_half_written_bill: "Compromised Draft"
-  modifier_short_term_benefit: "Long-Term Sacrifices"
-  modifier_training_bureaucrat_replacements: "Training New Bureaucrats"
-  modifier_corruption_is_very_good: "Corrupt Bargains"
+  ### Divided Monarchist Rework
+  modifier_reasonable_monarchist_partisan: "Respectable Partisanship"
+  modifier_monarchist_partisan_popularity: "Monarchist Agitation"
+  modifier_popular_french_monarch: "Popular Sovereign"
+  modifier_bonapartist_armed_forces_modifier: "Armed Forces Patronized"
+  modifier_orleanist_industrialist_modifier: "Industrialists Patronized"
+  modifier_legitimist_devout_modifier: "Catholic Church Patronized"
+  modifier_political_smears_monarchism: "Unscrupulous Competitor"
+
+  france_retour_des_cendres: "The Return of the Ashes"
+  france_retour_des_cendres_desc: "Claim the body of Napoleon from Saint Helena, and rebury the Emperor's body on the banks of the Seine."
+  retour_des_cendres_tt: "This action will empower and give a chance to appease the #bold Bonapartists#!"
+  modifier_return_of_napoleons_body: "The Return of the Ashes"
+  modifier_return_of_napoleons_body_ig: "The Return of the Ashes"
+
+  french_pretenders_pulse.10.t: "The Heirs of the Grande Armée"
+  french_pretenders_pulse.10.d: "The good spirits of [ROOT.GetCountry.GetAdjective] soldiers in our current conflict brings rise to memories of the triumphant armies of Napoléon I. The [SCOPE.sCharacter('bonapartist_character').GetIdeology.GetName] cause has enjoyed an increase in popularity along the frontlines"
+  french_pretenders_pulse.10.f: "Stirrings among the people and soldiery alike rumbled through the streets. From the dampest inn corners to the trodden fields, the memory of Napoleon's first decisive victories rouse all. France's grand regiments might again march through [SCOPE.sState('capital_scope').GetCityHubName] at the order of a new Bonaparte."
+  french_pretenders_pulse.10.a: "The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] will lead us to many more victories."
+  french_pretenders_pulse.10.b: "Patronize the soldiers for their good showing."
+  french_pretenders_pulse.10.c: "This bodes well for the [SCOPE.sCharacter('bonapartist_character').GetIdeology.GetName] cause."
+
+  french_pretenders_pulse.11.t: "The Fruits of Industry"
+  french_pretenders_pulse.11.d: "The prosperity of [ROOT.GetCountry.GetAdjective] trade has greatly benefited the wealthy patrons of the [SCOPE.sCharacter('orleanist_character').GetIdeology.GetName] cause. They have reinvested their funds in supporting their candidate's claims."
+  french_pretenders_pulse.11.f: "The more things change, the more they stay the same. The barons of old held forges and fields. Today, they hold machines and merchant warehouses. It makes no difference to a wise king which keys the barons keep, so long as the keys stay in the right hands."
+  french_pretenders_pulse.11.a: "The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] is the patron of [ROOT.GetCountry.GetAdjectiveNoFormatting] prosperity."
+  french_pretenders_pulse.11.b: "Our magnates deserve praise for their hard work."
+  french_pretenders_pulse.11.c: "This bodes well for the [SCOPE.sCharacter('orleanist_character').GetIdeology.GetName] cause."
+
+  french_pretenders_pulse.12.t: "The Words of the Church"
+  french_pretenders_pulse.12.d: "The burgeoning prestige and influence of the [SCOPE.gsInterestGroup('devout_ig').GetName] has led to a corresponding rise in the fortunes of the [SCOPE.sCharacter('legitimist_character').GetIdeology.GetName] cause. Nostalgic clergymen sing the praises of the kings of old."
+  french_pretenders_pulse.12.f: "The brass bells of Rheims were polished to a mirror gleam that morning. It is long since a coronation was held here. Once the bells heralded days of kings, named by God as the shining jewel in His crown. Now, only ghosts and cobwebs accompany the bells. But the Kingdom of God is eternal, and it is only a matter of time before the bells sing for a new king."
+  french_pretenders_pulse.12.a: "The [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] will remember their support."
+  french_pretenders_pulse.12.b: "The Church is the bedrock upon which we rest."
+  french_pretenders_pulse.12.c: "This bodes well for the [SCOPE.sCharacter('legitimist_character').GetIdeology.GetName] cause."
+
+  french_pretenders_pulse.13.t: "[SCOPE.sCharacter('partisan_character').GetFullName] Endorses [SCOPE.sCharacter('partisan_character').GetIdeology.GetName] Cause"
+  french_pretenders_pulse.13.d: "[SCOPE.sCharacter('partisan_character').GetFullName] has pledged the [SCOPE.sCharacter('partisan_character').GetInterestGroup.GetName] in full to the [SCOPE.sCharacter('partisan_character').GetIdeology.GetName] cause. Whilst ambitious, [SCOPE.sCharacter('partisan_character').GetHerHis] statements have aroused controversy both within the [SCOPE.sCharacter('partisan_character').GetInterestGroup.GetNameNoFormatting] and without."
+  french_pretenders_pulse.13.f: "#bold [SCOPE.sCharacter('partisan_character').GetFullNameNoFormatting]: "My Heart for [SCOPE.sCharacter('partisan_character').GetCustom('french_dynasty_name')]!"#!\n\n An auspicious day arrives for House [SCOPE.sCharacter('partisan_character').GetCustom('french_dynasty_name')]. Prolific Royalist and outspoken pundit for the [SCOPE.sCharacter('partisan_character').GetInterestGroup.GetNameNoFormatting], [SCOPE.sCharacter('partisan_character').GetFullNameNoFormatting] voices support for the house's ascent to Charlemagne's throne. The people of [SCOPE.sState('capital_scope').GetCityHubName] were quick to shout both support and slander for [SCOPE.sCharacter('partisan_character').GetLastNameNoFormatting]'s announcement this morning. (cont'd pg. 2)"
+  french_pretenders_pulse.13.a: "[SCOPE.sCharacter('partisan_character').GetSheHe|U] had best preserve decorum."
+  french_pretenders_pulse.13.b: "What good is a reputation, if it cannot be spent?"
+
+  french_pretenders_pulse.14.t: "A [SCOPE.sCharacter('partisan_character').GetIdeology.GetName] Army?"
+  french_pretenders_pulse.14.d: "[SCOPE.sCharacter('partisan_character').GetPrimaryRoleTitle] [SCOPE.sCharacter('partisan_character').GetFullName] has made numerous statements in support of the [SCOPE.sCharacter('partisan_character').GetIdeology.GetName] cause, using [SCOPE.sCharacter('partisan_character').GetHerHis] position in the military to spread [SCOPE.sCharacter('partisan_character').GetHerHis] beliefs far and wide."
+  french_pretenders_pulse.14.f: ""My family bled for Napoleon and his grand dreams of Europe under France. And now a new pretender comes to ask me to bleed for the same dream."\n\n"Not any pretender, General. Not any dream either. A throne restored, greater than any republic before or to come. And with you at its head. We will not have it any other way.""
+  french_pretenders_pulse.14.a: "Our soldiers sing the praises of the [SCOPE.sCharacter('partisan_character').GetIdeology.GetName] cause."
+  french_pretenders_pulse.14.b: "The [SCOPE.sCharacter('partisan_character').GetIdeology.GetName]s would benefit from a consistent advocate."
+  french_pretenders_pulse.14.c: "[SCOPE.sCharacter('partisan_character').GetHerHis|U] words threaten a coup. Dismiss him at once."
+
+  french_pretenders_pulse.15.t: "The People for the [SCOPE.sCharacter('partisan_character').GetIdeology.GetName]s"
+  french_pretenders_pulse.15.d: "[SCOPE.sCharacter('partisan_character').GetFullName], an experienced and fiercely populist political advocate, has embarked upon a campaign to further the claim of [SCOPE.sCharacter('partisan_character').GetHerHis] [SCOPE.sCharacter('partisan_character').GetIdeology.GetName] cause amongst the common people."
+  french_pretenders_pulse.15.f: "#bold Rheims Tolls for House [SCOPE.sCharacter('partisan_character').GetCustom('french_dynasty_name')]!#!\n\nA new king; a new Charlemagne! Long live France! Long live [SCOPE.sCharacter('partisan_character').GetCustom('french_dynasty_name')]!\n\n#italic Civil march in [SCOPE.sState('capital_scope').GetCityHubName] behind [SCOPE.sCharacter('partisan_character').GetFullNameNoFormatting]. Marchers are encouraged to wear the colors of [SCOPE.sCharacter('partisan_character').GetCustom('french_dynasty_name')].#"
+  french_pretenders_pulse.15.a: "Quite the boon for [SCOPE.sCharacter('partisan_character').GetHerHis] cause."
+  french_pretenders_pulse.15.b: "[SCOPE.sCharacter('partisan_character').GetHerHis|U] work will place the [SCOPE.sCharacter('partisan_character').GetIdeology.GetName] leaders in a new light."
+
+  french_pretenders_pulse.16.t: "A Scuffle of Houses"
+  french_pretenders_pulse.16.d: "[SCOPE.gsInterestGroup('monarchist_opposition').GetLeader.GetFullName], a devoted [SCOPE.gsInterestGroup('monarchist_opposition').GetLeader.GetIdeology.GetName], has carried out a series of verbal attacks and accusations of opportunism against the leading [SCOPE.sCharacter('monarchist_leader').GetIdeology.GetName] cause."
+  french_pretenders_pulse.16.f: ""I presume you understand your summons today, monsieur. These delays have gone on long enough."\n\n"Of course His Majesty's will be done, and with the utmost care and alacrity. But surely given the history of our glorious nation, should it not be His Majesty's interest for his decrees to be accepted by all?"\n\n"We are not amused by your games, [SCOPE.gsInterestGroup('monarchist_opposition').GetLeader.GetLastNameNoFormatting].""
+  french_pretenders_pulse.16.a: "Urge [SCOPE.gsInterestGroup('monarchist_opposition').GetLeader.GetHerHim] to be silent, lest [SCOPE.gsInterestGroup('monarchist_opposition').GetLeader.GetSheHe] escalate too far."
+  french_pretenders_pulse.16.b: "A fiery and entertaining display."
+
+  french_pretenders_pulse.17.t: "Swirling Discontent"
+  french_pretenders_pulse.17.d: "With an upsurge in radicalism afflicting [ROOT.GetCountry.GetName], blame for the uncertainty facing the nation has fallen squarely on the shoulders of [SCOPE.sCharacter('monarch_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('monarch_scope').GetFullName] and the [SCOPE.sCharacter('monarch_scope').GetIdeology.GetName] cause."
+  french_pretenders_pulse.17.d1: "Amidst the revolutionary currents of the Springtime of the Peoples, blame for the uncertainty facing [ROOT.GetCountry.GetName] has fallen squarely on the shoulders of [SCOPE.sCharacter('monarch_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('monarch_scope').GetFullName] and the [SCOPE.sCharacter('monarch_scope').GetIdeology.GetName] cause."
+  french_pretenders_pulse.17.f: "France was no stranger to kingslaying. Its revolutions carried out by fire and shot, and a tidal wave of seething fury unleashed all at once. Likewise, its rulers have come to know the warning signs well. A spiteful scowl here, and a murderous stare there; tinder waiting for the right match."
+  french_pretenders_pulse.17.a: "The will of the people is fickle at best."
+  french_pretenders_pulse.17.b: "The [SCOPE.sCharacter('monarch_scope').GetPrimaryRoleTitle]'s reign is worth some broken ribs."
+  french_pretenders_pulse.17.a1: "We must brace ourselves and weather the storm."
+  french_pretenders_pulse.17.b1: "These tides must be broken here and now."
+
+  french_pretenders_pulse.18.t: "The Death of Charles X"
+  french_pretenders_pulse.18.d: "King Charles X, the ruler of [ROOT.GetCountry.GetName] before the July Revolution, has passed away whilst in exile in [SCOPE.sCountry('slovenia_owner_scope').GetName]. Supporters of the Legitimists have petitioned for the return of his body to [ROOT.GetCountry.GetNameNoFormatting] for burial."
+  french_pretenders_pulse.18.f: "The king was dead, but few were ready to cry the old refrain. Thousands called for the exiled king's body to return to France for interment. 'Tradition,' they said. Thousands of others swore oaths to burn the corpse. 'Cholera,' they said."
+  french_pretenders_pulse.18.a: "He waived his right in 1830."
+  french_pretenders_pulse.18.b: "We can make the effort to heal the rifts of July."
+
+  french_pretenders_pulse.19.t: "Le Retour des Cendres"
+  french_pretenders_pulse.19.d: "The body of Napoleon Bonaparte has been returned from [SCOPE.sCountry('saint_helena_owner_scope').GetName], and transported from Saint Helena to [ROOT.GetCountry.GetAdjective] soil. The interment of the Emperor's body presents an opportunity to rehabilitate the Imperial past."
+  french_pretenders_pulse.19.f: ""I count myself happy that it has been reserved for me to return to the soil of France the mortal remains of him who added so much glory to our pomp and to pay the debt of our common Fatherland by surrounding his coffin with all the honors due to him.""
+  french_pretenders_pulse.19.a: "We have put the Empereur to rest at last."
+  french_pretenders_pulse.19.b: "Use this opportunity to court the Bonapartists."
+
+  french_pretenders.7.t: "The New Monarchy"
+  french_pretenders.7.d: "With the [ROOT.GetCountry.GetAdjective] monarchy restored anew, and a regent temporarily occupying the throne, the time has come to determine which dynasty will be entrusted with the restored crown of France."
+  french_pretenders.7.f: "The bells toll at Rheims, but no king sits upon the throne. The three great houses stood apart from each other, its pretenders unwilling to seize the throne. Should one move too quickly, it will face a war on two fronts. France itself seemed in no hurry for the 'right' king to take the throne, only that a king sat upon it."
+  french_pretenders.7.a: "The house of Bonaparte will lead us to glory."
+  french_pretenders.7.b: "The house of Orleans will grant France prosperity."
+  french_pretenders.7.c: "The house of Bourbon will avenge the crimes of the Revolution."
+  french_pretenders.7.d1: "The dynasties of old have proven themselves all too fallible."
+
+  pretenders_7_legitimists_tt: "The throne of [SCOPE.sCountry('reflexive_reference_france').GetName] will be entrusted to the [SCOPE.sCharacter('legitimist_character').GetIdeology.GetName] claimant"
+  pretenders_7_orleanist_tt: "The throne of [SCOPE.sCountry('reflexive_reference_france').GetName] will be entrusted to the [SCOPE.sCharacter('orleanist_character').GetIdeology.GetName] claimant"
+  pretenders_7_bonapartist_tt: "The throne of [SCOPE.sCountry('reflexive_reference_france').GetName] will be entrusted to the [SCOPE.sCharacter('bonapartist_character').GetIdeology.GetName] claimant"
+  pretenders_7_fourth_way_tt: "We will leave behind the old dynasties, and entrust the throne of [SCOPE.sCountry('reflexive_reference_france').GetName] to [SCOPE.sCharacter('prospective_monarch_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('prospective_monarch_scope').GetFullName]"
+
+  # Paris Commune rework
+  notification_paris_commune_automation_pulse_1_a_name: "Communards Close Parisisan Churches"
+  notification_paris_commune_automation_pulse_1_a_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has seized and forcibly closed numerous churches, spurring a rise in [SCOPE.sReligion('atheist_scope').GetName] sentiments throughout Paris.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_1_a_tooltip: "#header $notification_paris_commune_automation_pulse_1_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_1_a_desc$"
+
+  notification_paris_commune_automation_pulse_1_b_name: "Communards Loot Parisisan Churches"
+  notification_paris_commune_automation_pulse_1_b_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has seized and liquidated the relics of numerous Parisian churches, granting itself a short-term boost in resources.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_1_b_tooltip: "#header $notification_paris_commune_automation_pulse_1_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_1_b_desc$"
+
+  notification_paris_commune_automation_pulse_1_c_name: "Communards Turn Over Churches to [SCOPE.gsInterestGroup('seize_church_ig').GetName]"
+  notification_paris_commune_automation_pulse_1_c_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has turned numerous former Parisian churches to the [SCOPE.gsInterestGroup('seize_church_ig').GetName] to organize political meetings.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_1_c_tooltip: "#header $notification_paris_commune_automation_pulse_1_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_1_c_desc$"
+
+  notification_paris_commune_automation_pulse_2_a_name: "Communards Execute [SCOPE.sCharacter('executed_general_scope').GetRankName] [SCOPE.sCharacter('executed_general_scope').GetFullName]"
+  notification_paris_commune_automation_pulse_2_a_desc: "[SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] National Guardsmen have captured and executed [SCOPE.sCharacter('executed_general_scope').GetRankName] [SCOPE.sCharacter('executed_general_scope').GetFullName] outside of Paris by shooting.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_2_a_tooltip: "#header $notification_paris_commune_automation_pulse_2_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_2_a_desc$"
+
+  notification_paris_commune_automation_pulse_2_b_name: "Communards Imprison [SCOPE.sCharacter('executed_general_scope').GetRankName] [SCOPE.sCharacter('executed_general_scope').GetFullName]"
+  notification_paris_commune_automation_pulse_2_b_desc: "[SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] National Guardsmen have captured [SCOPE.sCharacter('executed_general_scope').GetRankName] [SCOPE.sCharacter('executed_general_scope').GetFullName] outside of Paris. He has been moved to a prison within the city.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_2_b_tooltip: "#header $notification_paris_commune_automation_pulse_2_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_2_b_desc$"
+
+  notification_paris_commune_automation_pulse_2_c_name: "Communards Execute [SCOPE.sCharacter('executed_general_scope').GetRankName] [SCOPE.sCharacter('executed_general_scope').GetFullName]"
+  notification_paris_commune_automation_pulse_2_c_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has formally commended a unit of National Guardsmen that captured and executed [SCOPE.sCharacter('executed_general_scope').GetRankName] [SCOPE.sCharacter('executed_general_scope').GetFullName] outside of Paris by shooting.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_2_c_tooltip: "#header $notification_paris_commune_automation_pulse_2_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_2_c_desc$"
+
+  notification_paris_commune_automation_pulse_3_a_name: "Communards Devolve Fortification Plans"
+  notification_paris_commune_automation_pulse_3_a_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has devolved control over Paris' defenses to the locals of each neighborhood. This populist approach has bolstered the morale of its defenders.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_3_a_tooltip: "#header $notification_paris_commune_automation_pulse_3_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_3_a_desc$"
+
+  notification_paris_commune_automation_pulse_3_b_name: "Communards Centralize Parisian Defenses"
+  notification_paris_commune_automation_pulse_3_b_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has centralized the defense of Paris under the Central Committee, establishing a [GetLawType('law_professional_army').GetName] out of the National Guard at the cost of redirected resources and alienated populists.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_3_b_tooltip: "#header $notification_paris_commune_automation_pulse_3_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_3_b_desc$"
+
+  notification_paris_commune_automation_pulse_3_c_name: "Communards Fortify Parisian Outskirts"
+  notification_paris_commune_automation_pulse_3_c_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has created a ring of defenses manned by the National Guard around the fringes of Paris, formidably strengthening their positions at the cost of locals' support.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_3_c_tooltip: "#header $notification_paris_commune_automation_pulse_3_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_3_c_desc$"
+
+  notification_paris_commune_automation_pulse_4_a_name: "Communards Carry Out Arson Attacks"
+  notification_paris_commune_automation_pulse_4_a_desc: "Supporters of the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have carried out numerous arson attacks on the fringes of Paris, burning down buildings which could be used as advantageous positions in combat.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_4_a_tooltip: "#header $notification_paris_commune_automation_pulse_4_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_4_a_desc$"
+
+  notification_paris_commune_automation_pulse_4_b_name: "Communards Carry Out Mass Arson Attacks"
+  notification_paris_commune_automation_pulse_4_b_desc: "Supporters of the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have carried out numerous arson attacks in Paris, targeting buildings associated with the Church and conservative institutions. Fires blaze wildly through the streets.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_4_b_tooltip: "#header $notification_paris_commune_automation_pulse_4_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_4_b_desc$"
+
+  notification_paris_commune_automation_pulse_4_c_name: "Communard Women Carry Out Arson Attacks"
+  notification_paris_commune_automation_pulse_4_c_desc: "Female supporters of the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have been accused of carrying out numerous arson attacks on the fringes of Paris, targeting buildings associated with the Church, military, and other conservative institutions.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_4_c_tooltip: "#header $notification_paris_commune_automation_pulse_4_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_4_c_desc$"
+
+  notification_paris_commune_automation_pulse_5_a_name: "Versailles Government Orders Lethal Force"
+  notification_paris_commune_automation_pulse_5_a_desc: "The Versailles government has authorized the trial, sentencing, and execution of captured Communards by military tribunals.  Militants and socialists within the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have been emboldened by these decrees.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_5_a_tooltip: "#header $notification_paris_commune_automation_pulse_5_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_5_a_desc$"
+
+  notification_paris_commune_automation_pulse_5_b_name: "Versailles Government Orders Execution of Prisoners"
+  notification_paris_commune_automation_pulse_5_b_desc: "The Versailles government has authorized the trial, sentencing, and execution of captured Communards by military tribunals, leading to executions en masse of supected Commune sympathizers. Militants and socialists within the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have been greatly emboldened by these atrocities.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_5_b_tooltip: "#header $notification_paris_commune_automation_pulse_5_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_5_b_desc$"
+
+  notification_paris_commune_automation_pulse_5_c_name: "Versailles Government Carries Out Arrests"
+  notification_paris_commune_automation_pulse_5_c_desc: "The Versailles government has begun the trial and sentencing of suspected Communards, promising lengthy prison sentences but ruling out the death penalty. The bloody predictions of militants and socialists within the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have, for now, not come to fruition.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_5_c_tooltip: "#header $notification_paris_commune_automation_pulse_5_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_5_c_desc$"
+
+  notification_paris_commune_automation_pulse_6_a_name: "Communards Detain Parisian Priests"
+  notification_paris_commune_automation_pulse_6_a_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has arrested priests of the Catholic Church within the city limits of Paris, holding them as hostages. Anti-clerical sentiments continue to spread across the city.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_6_a_tooltip: "#header $notification_paris_commune_automation_pulse_6_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_6_a_desc$"
+
+  notification_paris_commune_automation_pulse_6_b_name: "Communards Deport Parisian Priests"
+  notification_paris_commune_automation_pulse_6_b_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has detained priests of the Catholic Church within Paris, and permitted them to leave the city with one bag. Church-affiliated refugees have flooded roads on the periphery of the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_6_b_tooltip: "#header $notification_paris_commune_automation_pulse_6_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_6_b_desc$"
+
+  notification_paris_commune_automation_pulse_6_c_name: "Communards Execute Parisian Priests"
+  notification_paris_commune_automation_pulse_6_c_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has carried out numerous executions of Catholic priests within the city limits of Paris. These radically anti-clerical policies have led to the emboldening of radical Communard factions in favor of [GetLawType('law_state_atheism').GetName].\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_6_c_tooltip: "#header $notification_paris_commune_automation_pulse_6_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_6_c_desc$"
+
+  notification_paris_commune_automation_pulse_7_a_name: "Versailles Government Captures National Guards"
+  notification_paris_commune_automation_pulse_7_a_desc: "The Versailles government has captured a contingent of National Guard loyal to the [SCOPE.sCountry('paris_commune_nation_scope').GetName] on the outskirts of Paris. The captives have been placed on trial and imprisoned, pending a military tribunal.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_7_a_tooltip: "#header $notification_paris_commune_automation_pulse_7_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_7_a_desc$"
+
+  notification_paris_commune_automation_pulse_7_b_name: "Versailles Government Executes Captured National Guard"
+  notification_paris_commune_automation_pulse_7_b_desc: "The Versailles government has captured and executed a contingent of National Guard loyal to the [SCOPE.sCountry('paris_commune_nation_scope').GetName] The massacre of prisoners has sparked outrage and spurred support for the most militant elements of the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_7_b_tooltip: "#header $notification_paris_commune_automation_pulse_7_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_7_b_desc$"
+
+  notification_paris_commune_automation_pulse_8_a1_name: "Versailles Government Seizes Cannon Stocks"
+  notification_paris_commune_automation_pulse_8_a1_desc: "Whilst withdrawing from Paris, soldiers loyal to the Versailles government have seized or destroyed a significant percentage of the [SCOPE.sCountry('paris_commune_nation_scope').GetName]'s cannon stockpile.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_8_a1_tooltip: "#header $notification_paris_commune_automation_pulse_8_a1_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_8_a1_desc$"
+
+  notification_paris_commune_automation_pulse_8_a2_name: "Versailles Government Fails to Seize Cannon Stocks"
+  notification_paris_commune_automation_pulse_8_a2_desc: "Whilst withdrawing from Paris, soldiers loyal to the Versailles government have made an attempt to seize the [SCOPE.sCountry('paris_commune_nation_scope').GetName]'s artillery stockpile. The raid was repelled by the National Guard, prompting defections to the Commune's forces.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_8_a2_tooltip: "#header $notification_paris_commune_automation_pulse_8_a2_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_8_a2_desc$"
+
+  notification_paris_commune_automation_pulse_8_b_name: "Versailles Government Withdraws Forces from Paris"
+  notification_paris_commune_automation_pulse_8_b_desc: "Sensing an untenable position, the Versailles government has withdrawn all forces from the borders of the [SCOPE.sCountry('paris_commune_nation_scope').GetName]. The retreat of the government forces for the time being has been hailed as a great victory for the National Guard.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_8_b_tooltip: "#header $notification_paris_commune_automation_pulse_8_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_8_b_desc$"
+
+  notification_paris_commune_automation_pulse_8_c_name: "Versailles Government Mobilizes Modern Artillery"
+  notification_paris_commune_automation_pulse_8_c_desc: "The Versailles government has withdrawn soldiers from the borders of the [SCOPE.sCountry('paris_commune_nation_scope').GetName], and moved modern, breech-loaded artillery into position around the city limits of Paris.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_8_c_tooltip: "#header $notification_paris_commune_automation_pulse_8_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_8_c_desc$"
+
+  notification_paris_commune_automation_pulse_9_a1_name: "Communard Women's Union Bans Brothels"
+  notification_paris_commune_automation_pulse_9_a1_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] Women's Union has successfully advocated for a ban on brothels within Paris, citing the frequent abuses of women in the institutions. The successes of the Women's Union have inspired an uptick in feminist agitation even outside the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_9_a1_tooltip: "#header $notification_paris_commune_automation_pulse_9_a1_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_9_a1_desc$"
   
+  notification_paris_commune_automation_pulse_9_a2_name: "Communard Women's Union Bans Brothels"
+  notification_paris_commune_automation_pulse_9_a2_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] Women's Union has successfully advocated for a ban on brothels within Paris, citing the frequent abuses of women in the institutions.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_9_a2_tooltip: "#header $notification_paris_commune_automation_pulse_9_a2_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_9_a2_desc$"
+
+  notification_paris_commune_automation_pulse_9_b_name: "Communards Rebuke Women's Union's Requests"
+  notification_paris_commune_automation_pulse_9_b_desc: "The Central Committee of the [SCOPE.sCountry('paris_commune_nation_scope').GetName] has rebuked the petition of the Women's Union to shutter the Parisian brothels. Supporters of greater women's rights within Paris have been greatly discouraged by the decision.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_9_b_tooltip: "#header $notification_paris_commune_automation_pulse_9_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_9_b_desc$"
+
+  notification_paris_commune_automation_pulse_9_c_name: "Communards Prosecute Parisian Prostitutes"
+  notification_paris_commune_automation_pulse_9_c_desc: "The Central Committee of the [SCOPE.sCountry('paris_commune_nation_scope').GetName] has ordered the shuttering of Parisian brothels, and the prosecution of their staffs.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_9_c_tooltip: "#header $notification_paris_commune_automation_pulse_9_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_9_c_desc$"
+
+  notification_paris_commune_automation_pulse_10_a1_name: "Fortress Recaptured from Versailles Government"
+  notification_paris_commune_automation_pulse_10_a1_desc: "Following the withdrawal of a National Guard unit from a fortified position and its seizure by the Versailles government, [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] reinforcements have managed to retake the position. This triumph has emboldened hawkish elements within the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_10_a1_tooltip: "#header $notification_paris_commune_automation_pulse_10_a1_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_10_a1_desc$"
+
+  notification_paris_commune_automation_pulse_10_a2_name: "Versailles Government Permits Retreat from Fortress"
+  notification_paris_commune_automation_pulse_10_a2_desc: "Clashes surrounding a fortified position held by [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] forces have led to the National Guard withdrawing to fight another day. This has been interpreted as an olive branch from Versailles by reformist elements within the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_10_a2_tooltip: "#header $notification_paris_commune_automation_pulse_10_a2_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_10_a2_desc$"
+
+  notification_paris_commune_automation_pulse_10_b_name: "Versailles Government Seizes Garrison"
+  notification_paris_commune_automation_pulse_10_b_desc: "A fortified position held by [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] National Guardsmen has been encircled and stormed by the forces of the Versailles government. Reports of mass executions of the surrounded National Guard have already begun to enter Paris.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_10_b_tooltip: "#header $notification_paris_commune_automation_pulse_10_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_10_b_desc$"
+
+  notification_paris_commune_automation_pulse_11_a_name: "Communards Encourage Worker Ownership"
+  notification_paris_commune_automation_pulse_11_a_desc: "The Central Committee of the [SCOPE.sCountry('paris_commune_nation_scope').GetName] has issued a decree granting employees to jointly assume ownership of their workplaces in the case of the owner's absence.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_11_a_tooltip: "#header $notification_paris_commune_automation_pulse_11_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_11_a_desc$"
+
+  notification_paris_commune_automation_pulse_11_b_name: "Communards Seize Parisian Businesses"
+  notification_paris_commune_automation_pulse_11_b_desc: "The Central Committee of the [SCOPE.sCountry('paris_commune_nation_scope').GetName] has issued a decree granting employees to jointly assume ownership of their workplaces, spurring middle-class fears over property rights and emboldening socialist elements within the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_11_b_tooltip: "#header $notification_paris_commune_automation_pulse_11_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_11_b_desc$"
+
+  notification_paris_commune_automation_pulse_12_a_name: "Communards Ban Child Labor"
+  notification_paris_commune_automation_pulse_12_a_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has universally outlawed child labor in Paris, encouraging school for all children and empowering reformist elements in the Commune."
+  notification_paris_commune_automation_pulse_12_a_tooltip: "#header $notification_paris_commune_automation_pulse_12_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_12_a_desc$"
+
+  notification_paris_commune_automation_pulse_12_b_name: "Communards Mobilize Child Soldiery"
+  notification_paris_commune_automation_pulse_12_b_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has universally outlawed child labor in Paris, and expanded the range of enlistment for the National Guard. This use of children in the military has emboldened elements of the [SCOPE.sCountry('france_scope').GetAdjective] military favoring immediately crushing the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_12_b_tooltip: "#header $notification_paris_commune_automation_pulse_12_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_12_b_desc$"
+
+  notification_paris_commune_automation_pulse_12_c1_name: "Communard Schooling Policies Stir Agitation"
+  notification_paris_commune_automation_pulse_12_c1_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has issued a decree banning child labor and instituting [GetLawType('law_compulsory_primary_school').GetName] for all children in Paris. This policy has spurred agitation for social reform across [SCOPE.sCountry('france_scope').GetName], even as the Commune situation remains unresolved."
+  notification_paris_commune_automation_pulse_12_c1_tooltip: "#header $notification_paris_commune_automation_pulse_12_c1_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_12_c1_desc$"
+
+  notification_paris_commune_automation_pulse_12_c2_name: "Communards Mandate Public Schooling"
+  notification_paris_commune_automation_pulse_12_c2_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has issued a decree banning child labor and instituting [GetLawType('law_compulsory_primary_school').GetName] for all children in Paris. This policy has served as an inspiration for the Commune's radical social reformers."
+  notification_paris_commune_automation_pulse_12_c2_tooltip: "#header $notification_paris_commune_automation_pulse_12_c2_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_12_c2_desc$"
+
+  notification_paris_commune_automation_pulse_13_a_name: "Communards Take Priests as Hostages"
+  notification_paris_commune_automation_pulse_13_a_desc: "The most militant and tyrannical forces of the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have stormed churches along a large arrondissement, claiming hundreds of prisoners."
+  notification_paris_commune_automation_pulse_13_a_tooltip: "#header $notification_paris_commune_automation_pulse_13_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_13_a_desc$"
+
+  notification_paris_commune_automation_pulse_13_b_name: "Communards Extend Leniency to Priests"
+  notification_paris_commune_automation_pulse_13_b_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has ordered Parisian clergy under house arrest, to the great fortune of the less radical elements in the Commune."
+  notification_paris_commune_automation_pulse_13_b_tooltip: "#header $notification_paris_commune_automation_pulse_13_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_13_b_desc$"
+
+  notification_paris_commune_automation_pulse_13_c_name: "Communards Execute Clerical Hostages"
+  notification_paris_commune_automation_pulse_13_c_desc: "Shots ring out across Paris as dozens of [GetPopType('clergymen').GetName] are ordered executed in the [SCOPE.sCountry('paris_commune_nation_scope').GetName]. The elements of the Commune most radically opposed to the Church have begun their own armed hunts."
+  notification_paris_commune_automation_pulse_13_c_tooltip: "#header $notification_paris_commune_automation_pulse_13_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_13_c_desc$"
+
+  notification_paris_commune_automation_pulse_14_a_name: "Communards Reform National Guard"
+  notification_paris_commune_automation_pulse_14_a_desc: "The [SCOPE.sCountry('paris_commune_nation_scope').GetName] has instituted a stricter command structure for the National Guard, with [GetPopType('officers').GetName] of military experience at the helm."
+  notification_paris_commune_automation_pulse_14_a_tooltip: "#header $notification_paris_commune_automation_pulse_14_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_14_a_desc$"
+
+  notification_paris_commune_automation_pulse_14_b_name: "Communards Mobilize Workers' Militias"
+  notification_paris_commune_automation_pulse_14_b_desc: "Sweeping reforms across the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have introduced workers' militias around the Parisian arrondissements."
+  notification_paris_commune_automation_pulse_14_b_tooltip: "#header $notification_paris_commune_automation_pulse_14_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_14_b_desc$"
+
+  notification_paris_commune_automation_pulse_14_c_name: "Communards Expand National Guard"
+  notification_paris_commune_automation_pulse_14_c_desc: "A fresh recruitment drive in the [SCOPE.sCountry('paris_commune_nation_scope').GetName] has emboldened the moderate elements in the Central Committee."
+  notification_paris_commune_automation_pulse_14_c_tooltip: "#header $notification_paris_commune_automation_pulse_14_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_14_c_desc$"
+
+  notification_paris_commune_automation_pulse_15_a_name: "Communards Recuse National Assembly Members"
+  notification_paris_commune_automation_pulse_15_a_desc: "Amidst claims of conflicting interests, members of the National Assembly have been formally recused from seats on the [SCOPE.sCountry('paris_commune_nation_scope').GetName]'s Central Committee. It is now a true proletarian dictatorship.\n\nThe progress of the #bold Paris Commune#! has #bold decreased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_15_a_tooltip: "#header $notification_paris_commune_automation_pulse_15_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_15_a_desc$"
+
+  notification_paris_commune_automation_pulse_15_b_name: "Communards Seat National Assembly Members"
+  notification_paris_commune_automation_pulse_15_b_desc: "Despite claims of conflicting interest, members of the National Assembly have been admitted to the [SCOPE.sCountry('paris_commune_nation_scope').GetName]'s Central Committee. \n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_15_b_tooltip: "#header $notification_paris_commune_automation_pulse_15_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_15_b_desc$"
+
+  notification_paris_commune_automation_pulse_16_a_name: "Communards Establish Women's Military Auxiliary"
+  notification_paris_commune_automation_pulse_16_a_desc: "Women in the [SCOPE.sCountry('paris_commune_nation_scope').GetName] have been authorized to take non-combat duties with the National Guard.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
+  notification_paris_commune_automation_pulse_16_a_tooltip: "#header $notification_paris_commune_automation_pulse_16_a_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_16_a_desc$"
+
+  notification_paris_commune_automation_pulse_16_b_name: "Communards Bar Women from Service"
+  notification_paris_commune_automation_pulse_16_b_desc: "Reports from the [SCOPE.sCountry('paris_commune_nation_scope').GetName] state that the National Guard have forbidden women from any kind of military service, spurring discontent among Parisian feminists."
+  notification_paris_commune_automation_pulse_16_b_tooltip: "#header $notification_paris_commune_automation_pulse_16_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_16_b_desc$"
+
+  notification_paris_commune_automation_pulse_16_c_name: "Communards Allow Women Soldiers"
+  notification_paris_commune_automation_pulse_16_c_desc: "A new decree in the [SCOPE.sCountry('paris_commune_nation_scope').GetName] has allowed women to take combat duties with the military. Entire companies have reportedly formed overnight.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
+  notification_paris_commune_automation_pulse_16_c_tooltip: "#header $notification_paris_commune_automation_pulse_16_c_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_16_c_desc$"
+
+  fra_paris_commune_drain: "Stabbed in the Heart"
+
+  paris_commune.5.t: "Crisis in Paris"
+  paris_commune.5.d: "Discontent in [SCOPE.sCountry('france_scope').GetName] has led to the seizure of the city of Paris by revolutionaries. France is now split between two rival governments - that of Paris, and that of Versailles."
+  paris_commune.5.f: "It was now midday, and the whole affair wore a most strange and incomprehensible aspect to one not brought up to making barricades. Instead of a government blocking every street as was the case in the morning, a hostile cannon was now looking down every street." #- Times of London correspondent in Paris
+  paris_commune.5.a: "The Paris "government" has no leg to stand upon."
+  paris_commune.5.b: "[SCOPE.sCountry('france_scope').GetNameNoFormatting] could use a change in government."
+  paris_commune.5.c: "We have no interest in this."
+
+  notification_foreign_country_supports_commune_name: "[SCOPE.sCountry('recogniser_scope').GetName] Recognizes Paris Commune"
+  notification_foreign_country_supports_commune_desc: "The government of [SCOPE.sCountry('recogniser_scope').GetName] has recognized the government of the [SCOPE.sCountry('paris_commune_scope').GetName] as the legitimate government of all of France, citing alleged failures of the Versailles Government to properly serve its people."
+  notification_foreign_country_supports_commune_tooltip: "#header $notification_foreign_country_supports_commune_name$#!\n$TOOLTIP_DELIMITER$\n$notification_foreign_country_supports_commune_desc$"
