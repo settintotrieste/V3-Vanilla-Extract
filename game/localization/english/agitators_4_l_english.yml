@@ -65,7 +65,7 @@
 
   nihilism.5.t: "Black Coats and Feuerbach"
   nihilism.5.d: "Students embracing the aesthetic and attitude of nihilism have become more and more common at [SCOPE.sState('university_nihilist_affected_state').GetStateRegion.GetName] [SCOPE.sBuilding('university_nihilist_affected_building').GetName], and numerous parties have raised concerns about radicalism in academia."
-  nihilism.5.f: ""The tiny space I occupy is so infinitely small in comparison with the rest of space, in which I am not, and which has nothing to do with me; and the period of time in which it is my lot to live is so petty beside the eternity in which I have not been, and shall not be.... And in this atom, this mathematical point, the blood is circulating, the brain is working and wanting something.... Isn't it loathsome? Isn't it petty?"" #Turgenev, Fathers and Sons
+  nihilism.5.f: ""The tiny space I occupy is so infinitely small in comparison with the rest of space, in which I am not, and which has nothing to do with me; and the period of time in which it is my lot to live is so petty beside the eternity in which I have not been, and shall not be... And in this atom, this mathematical point, the blood is circulating, the brain is working and wanting something... Isn't it loathsome? Isn't it petty?"" #Turgenev, Fathers and Sons
   nihilism.5.a: "The only education these people deserve is from the school of hard knocks!"
   nihilism.5.b: "This is a matter for university authorities."
 
@@ -1120,8 +1120,6 @@
   agitators_election_events.44.a: "Simple and true. Remarkable!"
   agitators_election_events.44.b: "There's more to lawmaking than this."
   agitators_election_events.44.c: "And what about the women?"
-  # The below is a fake tooltip
-  agitators_election_events.44.c.tt: "[SCOPE.sCountry('self_referential_reference').GetName] gets #tooltippable A Hand to Women#!\n#P +10.00%#! #tooltippable_name Women's Suffrage#! #tooltippable_concept Pop#! #tooltippable_name Support#!"
 
   agitators_election_events.45.t: "To Decapitate a Serpent"
   agitators_election_events.45.d: "[SCOPE.sCharacter('agitator_scope').GetFullName] has ambushed a royal appearance in [SCOPE.sState('capital_scope').GetCityHubName] for a simple announcement: the [SCOPE.sParty('agitator_party_scope').GetName] are wholly committed to the establishment of a republic."
@@ -1288,7 +1286,7 @@
 
   historical_agitators.4.t: "Women Beyond Spinsters"
   historical_agitators.4.d: "The rising feminist factions in [ROOT.GetCountry.GetName] have suffered a schism. [SCOPE.sCharacter('historic_agitator_scope').GetFullName] has founded a new, militant organization in its wake."
-  historical_agitators.4.f: "Affiliations with the Independent Labour Party, three separate bills, twenty years of work, and all the support of a dedicated community were not enough — not nearly enough — to affect even the slightest forward step on women's suffrage. New measures would be needed. A woman's right to vote would belong not only to the spinsters and the widows.\n\nBy fire, fist, and famine, all women will have the power to vote."
+  historical_agitators.4.f: "Affiliations with the Independent Labour Party, three separate bills, twenty years of work, and all the support of a dedicated community were not enough — not nearly enough — to affect even the slightest forward step on women’s suffrage. New measures would be needed. A woman’s right to vote would belong not only to the spinsters and the widows.\n\nBy fire, fist, and famine, all women will have the power to vote."
   historical_agitators.4.a: "A few days in the country ought to soothe their woes."
   historical_agitators.4.b: "Meet with her followers early."
   historical_agitators.4.c: "Her charity in the workhouses does her credit."
@@ -1429,7 +1427,7 @@
   paris_commune.1.b: "Paris armed is the Revolution armed!"
   commune_progress_start_at_40: "We will side with the [SCOPE.sCharacter('ruler_scope').GetLastName] government\nThe #bold Paris Commune#! will start with a slight disadvantage"
   commune_progress_start_at_60: "We will side with the #bold Paris Commune#!\nThe #bold Paris Commune#! will start with a slight advantage"
-  paris_commune_on_cooldown_tt: "Has not used either #bold Paris Commune#! decision in the past #bold three months#!"
+  paris_commune_on_cooldown_tt: "Has not used this decision in the past #bold three months#!"
 
   paris_commune.2.t: "The Bloody Week"
   paris_commune.2.d: "Forces loyal to the [ROOT.GetCountry.GetRuler.GetLastName] government have marched upon Paris, conclusively defeating the [SCOPE.sCountry('paris_commune_scope').GetName]'s forces over the span of a week-long battle within the city limits. Mass executions of captured National Guardsmen loyal to the Commune have already been reported."
@@ -2066,11 +2064,21 @@
   notification_government_petition_start_desc: "The [SCOPE.gsInterestGroup('government_petition_ig').GetName] have petitioned the government to pass [SCOPE.sLaw('government_petition_law').GetName]."
   notification_government_petition_start_tooltip: "#header $notification_government_petition_start_name$#!\n$TOOLTIP_DELIMITER$\n$notification_government_petition_start_desc$"
   government_petition_tt: "The [SCOPE.gsInterestGroup('government_petition_ig').GetName] will expect the government to pass [SCOPE.sLaw('government_petition_law').GetName] within the next five years."
+  government_petition_2_tt: "The [SCOPE.gsInterestGroup('government_petition_ig').GetName] will expect the government to pass [SCOPE.sLaw('government_petition_law_2').GetName] within the next five years."
 
   government_petition_events.1.t: "[SCOPE.gsInterestGroup('government_petition_ig').GetName] Petition Government"
   government_petition_events.1.d: "Representing his constituents in the [SCOPE.gsInterestGroup('government_petition_ig').GetName], [SCOPE.gsInterestGroup('government_petition_ig').GetLeader.GetFullName] has issued a formal petition to the [ROOT.GetCountry.GetAdjective] government to pass [SCOPE.sLaw('government_petition_law').GetName]."
   government_petition_events.1.f: ""Er, one last matter for the day, sir. Members of your constituency arrived this morning. They're... asking rather loudly and insistently... if you would meet with them about new legislation."\n\n"Is that it? Goodness, you seem as if you've seen a ghost. I'm sure I can spare the last hours of light for them, can't I?"\n\n"I-I believe so, sir. They weren't taking 'no' for an answer.""
   government_petition_events.1.a: "We will see what we can do."
+  government_petition_events.1.b: "Offer them [SCOPE.sLaw('government_petition_law_2').GetName] as a compromise."
+  government_petition_events.1.c1: "They must understand the present situation does not allow for this."
+  government_petition_events.1.c2: "They must understand the present situation does not allow for this."
+
+  government_petition_blown_off_tt: "The petition will be #bold rejected#!. Doing this multiple times for the same [concept_interest_group] will have worse consequences."
+  government_petition_blown_off_2_tt: "The petition will be #bold rejected#!, at significant political cost. Doing this multiple times for the same [concept_interest_group] will have worse consequences."
+
+  modifier_petition_rejected_legitimacy: "Unresponsive Governance"
+  modifier_petition_rejected_ig_opinion: "Rejected Petition"
 
   ### Divided Monarchist Rework
   modifier_reasonable_monarchist_partisan: "Respectable Partisanship"
@@ -2256,6 +2264,14 @@
   notification_paris_commune_automation_pulse_8_a2_desc: "Whilst withdrawing from Paris, soldiers loyal to the Versailles government have made an attempt to seize the [SCOPE.sCountry('paris_commune_nation_scope').GetName]'s artillery stockpile. The raid was repelled by the National Guard, prompting defections to the Commune's forces.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
   notification_paris_commune_automation_pulse_8_a2_tooltip: "#header $notification_paris_commune_automation_pulse_8_a2_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_8_a2_desc$"
 
+	notification_paris_commune_event_8_a1_name: "Successful Seizure of Cannon Stocks"
+	notification_paris_commune_event_8_a1_desc: ""Whilst withdrawing from Paris, soldiers loyal to our government have seized or destroyed a significant percentage of the [SCOPE.sCountry('paris_commune_nation_scope').GetName]'s cannon stockpile."
+	notification_paris_commune_event_8_a1_tooltip: "#header $notification_paris_commune_event_8_a1_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_event_8_a1_desc$"
+
+	notification_paris_commune_event_8_a2_name: "Raid on Cannon Stocks Fails"
+	notification_paris_commune_event_8_a2_desc: "Whilst withdrawing from Paris, soldiers loyal to our government have made an attempt to seize the [SCOPE.sCountry('paris_commune_nation_scope').GetName]'s artillery stockpile. The raid was repelled by the National Guard, prompting defections to the enemy forces."
+	notification_paris_commune_event_8_a2_tooltip: "#header $notification_paris_commune_event_8_a2_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_event_8_a2_desc$"
+
   notification_paris_commune_automation_pulse_8_b_name: "Versailles Government Withdraws Forces from Paris"
   notification_paris_commune_automation_pulse_8_b_desc: "Sensing an untenable position, the Versailles government has withdrawn all forces from the borders of the [SCOPE.sCountry('paris_commune_nation_scope').GetName]. The retreat of the government forces for the time being has been hailed as a great victory for the National Guard.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
   notification_paris_commune_automation_pulse_8_b_tooltip: "#header $notification_paris_commune_automation_pulse_8_b_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_8_b_desc$"
@@ -2283,6 +2299,14 @@
   notification_paris_commune_automation_pulse_10_a1_name: "Fortress Recaptured from Versailles Government"
   notification_paris_commune_automation_pulse_10_a1_desc: "Following the withdrawal of a National Guard unit from a fortified position and its seizure by the Versailles government, [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] reinforcements have managed to retake the position. This triumph has emboldened hawkish elements within the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 10#!."
   notification_paris_commune_automation_pulse_10_a1_tooltip: "#header $notification_paris_commune_automation_pulse_10_a1_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_automation_pulse_10_a1_desc$"
+
+	notification_paris_commune_event_10_a1_name: "Communard Reinforcements Retake Fortress"
+	notification_paris_commune_event_10_a1_desc: "Following the withdrawal of besieged [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] forces from a fortified position, [SCOPE.sCountry('paris_commune_nation_scope').GetAdjectiveNoFormatting] reinforcements were able to retake the position from our troops."
+	notification_paris_commune_event_10_a1_tooltip: "#header $notification_paris_commune_event_10_a1_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_event_10_a1_desc$"
+
+	notification_paris_commune_event_10_a2_name: "Loyalist Forces Capture Fortress"
+	notification_paris_commune_event_10_a2_desc: "Following the withdrawal of besieged [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] forces from a fortified position, our forces have been able to secure another area on the border of Paris."
+	notification_paris_commune_event_10_a2_tooltip: "#header $notification_paris_commune_event_10_a2_name$#!\n$TOOLTIP_DELIMITER$\n$notification_paris_commune_event_10_a2_desc$"
 
   notification_paris_commune_automation_pulse_10_a2_name: "Versailles Government Permits Retreat from Fortress"
   notification_paris_commune_automation_pulse_10_a2_desc: "Clashes surrounding a fortified position held by [SCOPE.sCountry('paris_commune_nation_scope').GetAdjective] forces have led to the National Guard withdrawing to fight another day. This has been interpreted as an olive branch from Versailles by reformist elements within the Commune.\n\nThe progress of the #bold Paris Commune#! has #bold increased#! by #variable 5#!."
@@ -2368,6 +2392,8 @@
   paris_commune.5.a: "The Paris "government" has no leg to stand upon."
   paris_commune.5.b: "[SCOPE.sCountry('france_scope').GetNameNoFormatting] could use a change in government."
   paris_commune.5.c: "We have no interest in this."
+
+  will_improve_commune_progress_tt: "The #bold Paris Commune#! will be advantaged in its struggle against [SCOPE.sCountry('france_scope').GetName]"
 
   notification_foreign_country_supports_commune_name: "[SCOPE.sCountry('recogniser_scope').GetName] Recognizes Paris Commune"
   notification_foreign_country_supports_commune_desc: "The government of [SCOPE.sCountry('recogniser_scope').GetName] has recognized the government of the [SCOPE.sCountry('paris_commune_scope').GetName] as the legitimate government of all of France, citing alleged failures of the Versailles Government to properly serve its people."

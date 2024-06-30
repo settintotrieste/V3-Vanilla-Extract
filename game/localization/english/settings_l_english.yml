@@ -29,6 +29,7 @@
  SETTINGS_CATEGORY_LANGUAGE:0 "Language"
  SETTINGS_CATEGORY_SAVE_GAMES:0 "Save Games"
  SETTINGS_CATEGORY_TOOLTIPS:0 "Tooltip Settings"
+ SETTINGS_CATEGORY_OUTLINER:0 "Outliner"
  SETTINGS_CATEGORY_MAP_CONTROLS:0 "Map Controls"
  SETTINGS_CATEGORY_MAPMODES:0 "Map Modes"
  SETTING_SHADER_QUALITY:0 "Shader Quality"
@@ -58,6 +59,9 @@
  SETTING_BUILDINGS_CUTOFF:1 "Cull Distant Buildings"
  SETTING_BUILDINGS_CUTOFF_TOOLTIP:1 "#T $SETTING_BUILDINGS_CUTOFF$#!\nShow fewer buildings on the map, the further away they are from the camera.\n\nTurning it on may increase performance."
 
+ SETTING_SHOW_NOTIFICATION_FEED_NEXT_TO_OUTLINER: "Notifications to the left of Outliner"
+ SETTING_SHOW_NOTIFICATION_FEED_NEXT_TO_OUTLINER_TOOLTIP: "#t $SETTING_SHOW_NOTIFICATION_FEED_NEXT_TO_OUTLINER$#!\nPlace the Notifications Feed to the left of the Outliner"
+
  SETTINGS_CATEGORY_GAME_PORTRAITS:0 "Portraits"
  SETTING_SOUNDTRACK:0 "Background Music"
  SETTING_SOUNDTRACK_TOOLTIP:0 "General background music"
@@ -83,7 +87,7 @@
  SETTING_OCCUPATION_STRIPES_TOOLTIP: "#T $SETTING_OCCUPATION_STRIPES$#!\nEnable colored stripes as occupation visuals on the map instead of country flag textures"
 
  SETTING_PORTRAIT_RENDER_SCALE: "Portrait Render Scaling"
- SETTING_PORTRAIT_RENDER_SCALE_TOOLTIP: "#T SETTING_PORTRAIT_RENDER_SCALE#!\nImprove character portrait detail level by upscaling render results, at the cost of some more rendering performance."
+ SETTING_PORTRAIT_RENDER_SCALE_TOOLTIP: "#T $SETTING_PORTRAIT_RENDER_SCALE$#!\nImprove character portrait detail level by upscaling render results, at the cost of some more rendering performance."
 
  OPTION_PORTRAIT_RENDER_SCALE_NONE: "×1.0 - None"
  OPTION_PORTRAIT_RENDER_SCALE_MEDIUM: "×1.5 - Medium"

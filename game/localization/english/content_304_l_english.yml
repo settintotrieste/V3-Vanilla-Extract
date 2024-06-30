@@ -160,6 +160,8 @@
  modifier_risorgimento_opponents: "Opposition to Risorgimento"
  modifier_risorgimento_opposition: "Opposition to Risorgimento"
 
+ risorgimento_support: "support for Risorgimento"
+
  unlock_national_agitation_tt: "Unlocks the 'Stir National Agitation' Character Interaction for [Concept('concept_agitator','$concept_agitators$')]"
  risorgimento_unifying_stance_tt: "Has chosen to #bold support#! Risorgimento"
  risorgimento_unifying_stance_set_tt: "We will be able to take extra actions to #bold support#! Risorgimento"
@@ -234,3 +236,151 @@
   KOR_korean_empire_tooltip: "This country will be known as the #bold Empire of Korea#!"
 
   modifier_korean_empire: "Heralds of the Gwangmu Era"
+
+  modifier_egalitarian_workers_movement: "Egalitarian Trade Unions"
+
+  je_chinese_missions: "The Chinese Missions"
+  je_chinese_missions_reason: "The opening of certain [ROOT.GetCountry.GetAdjective] cities to Westerners has permitted [GetReligion('protestant').GetName] missionaries to penetrate further into our country. Elements throughout [ROOT.GetCountry.GetAdjectiveNoFormatting] society have come to regard these missionaries as the vanguard of Western interference in the established order."
+  missionary_ban_tt: "Has expelled missionaries from China"
+  CHI_deport_missionaries_button: "Expel Christian Missionaries"
+  CHI_deport_missionaries_button_desc: "With our treaty responsibilities to the Western powers abrogated, we may now deport the foreign missionaries in our country without fear of intervention."
+  modifier_chi_deporting_missionaries: "Expelling Christian Missionaries"
+  modifier_china_state_evangelisation: "Christian Evangelization Efforts"
+  open_to_missionaries_tt: "[SCOPE.sState('forbidden_state').GetName] will be opened to missionary efforts"
+  missionaries_forbidden_10_years_tt: "Foreign missionaries will not attempt to access [SCOPE.sState('forbidden_state').GetName] for the next #variable 10#! years"
+  modifier_chi_missionary_hospitals: "Missionary Hospitals"
+  modifier_chi_missionary_schools: "Missionary Schools"
+  modifier_chi_rebuked_christian_missionaries: "Rebuked Foreign Missionaries"
+  missionaries_enough_time_tt: "[GetReligion('protestant').GetName] missionaries have been active in our country for at least #bold several years#!"
+
+  modifier_taiping_hiring_bonus: "Rebelling Armies"
+
+  CHI_missionaries.1.t: "Missionary Activity in [SCOPE.sState('evangelisation_state').GetName]"
+  CHI_missionaries.1.d: "[GetReligion('protestant').GetName] missionary activity in [SCOPE.sState('evangelisation_state').GetName] has begun to find new ears, as foreigners exercise their rights to access the region."
+  CHI_missionaries.1.f: "A deacon by any measure, given how ill-carved his rosary sat around his neck. Still, it was one made by his own hand and his pride and joy on many adventures. He gripped it tightly as he stepped onto the paths of [SCOPE.sState('evangelisation_state').GetNameNoFormatting]. God willing, he thought, even one receptive ear would be a welcome addition to Jesus' flock."
+  CHI_missionaries.1.a: "Voices from a distant world."
+  CHI_missionaries.1.b: "They should leave their preaching with their opium."
+
+  CHI_missionaries.2.t: "Border Violation in [SCOPE.sState('forbidden_state').GetName]"
+  CHI_missionaries.2.d: "A group of [GetReligion('protestant').GetName] missionaries hailing from [SCOPE.sCountry('missionary_country').GetName] have been caught several miles past the border of [SCOPE.sState('forbidden_state').GetName] province, which foreigners are forbidden to access."
+  CHI_missionaries.2.f: ""That's the thirteenth one we've caught in as many weeks. This one is the first [SCOPE.sCountry('missionary_country').GetAdjectiveNoFormatting] that's come for a while."\n\n"Wait… look at these papers. This one's protected. What can we do?"\n\n"Does it matter? Just a lost Christian who cannot read. Our law applies; his does not.""
+  CHI_missionaries.2.a: "Bring them to the border, and have them executed."
+  CHI_missionaries.2.b: "Enforce the Sixth Clause of our law against superstition."
+  CHI_missionaries.2.c: "Open the province to limited travel."
+
+  deport_to_central_asia_tt: "The missionaries will deported to [SCOPE.sState('deportation_state').GetName] to serve as slaves"
+
+  CHI_missionaries.3.t: "The [SCOPE.sState('missionary_schools_state').GetName] Missionary School"
+  CHI_missionaries.3.d: "[GetReligion('protestant').GetName] missionaries have opened several charity schools in [SCOPE.sState('missionary_schools_state').GetName], offering education in Western religious and scientific practice."
+  CHI_missionaries.3.f: ""St. Jude's, I'll call it. If no other shall answer prayers in the Orient, then let it reach the one who will search this far for prayers."\n\n"And this Saint Jude? Who is he? I thought he was the one who betrayed your Jesus."\n\n"No, the other Jude. But he is known to aid desperate causes. And this school, against all odds, stands all the same.""
+  CHI_missionaries.3.a: "They are welcome to operate in the region."
+  CHI_missionaries.3.b: "Forbid our citizens from attending."
+
+  CHI_missionaries.4.t: "Missionary Hospital Opens in [SCOPE.sState('missionary_hospitals_state').GetCityHubName]"
+  CHI_missionaries.4.d: "[GetReligion('protestant').GetName] missionaries have opened a charity hospital in [SCOPE.sState('missionary_hospitals_state').GetCityHubName], spreading their gospel whilst offering free treatment to the sick and wounded."
+  CHI_missionaries.4.f: "#bold God Welcomes All to His House of Healing! #!\n\nNew hospital in [SCOPE.sState('missionary_hospitals_state').GetNameNoFormatting] for those most in need. Jesus welcomes all.\n\n#italic And he called to him his twelve disciples and gave them authority over unclean spirits, to cast them out, and to heal every disease and every affliction. (Matthew 10:1) #!"
+  CHI_missionaries.4.a: "They are welcome to operate in the region."
+  CHI_missionaries.4.b: "Halt this unauthorized construction."
+
+  CHI_missionaries.5.t: "Missionaries Arrested in [SCOPE.sState('missionary_strife_state').GetName]"
+  CHI_missionaries.5.d: "Local authorities in [SCOPE.sState('missionary_strife_state').GetName] have arrested several [SCOPE.sCountry('missionary_country').GetAdjective] [GetReligion('protestant').GetName] missionaries for inducing conflicts with the locals. They have requested guidance on how the foreigners are to be treated."
+  CHI_missionaries.5.f: "The green-clad constables brought forth a perfumed trunk and placed it in front of the manacled missionaries. One prised the lid open, and waved his hand around the documents inside. All except one of the missionaries furrowed their brows and shook their heads. The one in the middle winced: the neat, Latin handwriting was unmistakably his. Among the letters requesting cardinals for aid were reports detailing the habits of the local magistrate."
+  CHI_missionaries.5.a: "Return them to the nearest concession area."
+  CHI_missionaries.5.b: "They will be treated like any other criminals."
+
+  warlord_china_events.200.t: "A Century of Triumph"
+  warlord_china_events.200.d: "A period of diligent modernization and centralization efforts has finally put an end to the risk of petty warlordism shattering the state. Despite the efforts of enemies internal and external, [ROOT.GetCountry.GetName] stands unbowed and unified."
+  warlord_china_events.200.f: "There at the edge of the horizon, lit by a setting sun, were the last of the foreign ships. Their colors flew at half-mast, a sure sign that they fled with their tails between their legs. Against them at sea was a Chinese flag flying high on Chinese soil. The message for the world was clear: China's mandate remains in its own hands. Its people alone will drive its future."
+  warlord_china_events.200.a: "A state to endure until the end of time."
+  warlord_china_events.200.b: "The ingenuity of our people will lead us ever further."
+  modifier_century_of_triumph_politics: "A Century of Triumph"
+  modifier_century_of_triumph_technology: "A Century of Triumph"
+
+  modifier_government_accident_attempt: "Failed Assassination Attempt"
+
+  arrange_accident: "Arrange Accident"
+  arrange_accident_desc: "#lore Task our loyal [GetLawType('law_secret_police').GetName] with the assassination of [Character.GetFullName].#!"
+
+  notification_arranged_accident_failed_name: "Failed Assassination Attempt on [SCOPE.sCharacter('assassinated_scope').GetFullName]"
+  notification_arranged_accident_failed_desc: "Our [GetLawType('law_secret_police').GetName]'s assassination attempt on [SCOPE.sCharacter('assassinated_scope').GetFullName] has failed. The target is unaware of [SCOPE.sCharacter('assassinated_scope').GetHerHis] close brush with death."
+  notification_arranged_accident_failed_tooltip: "#header $notification_arranged_accident_failed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_arranged_accident_failed_desc$"
+
+  notification_arranged_accident_failed_incrimination_name: "Publicized Assassination Attempt on [SCOPE.sCharacter('assassinated_scope').GetFullName]"
+  notification_arranged_accident_failed_incrimination_desc: "Our [GetLawType('law_secret_police').GetName]'s assassination attempt on [SCOPE.sCharacter('assassinated_scope').GetFullName] has failed. The failed attempt has been noticed and condemned by the now-enraged [SCOPE.gsInterestGroup('relevant_ig').GetName]."
+  notification_arranged_accident_failed_incrimination_tooltip: "#header $notification_arranged_accident_failed_incrimination_name$#!\n$TOOLTIP_DELIMITER$\n$notification_arranged_accident_failed_incrimination_desc$"
+
+  assassination_attempt_failed_tt: "Our #bold assassination attempt#! will fail, but remain undetected"
+  assassination_attempt_failed_loud_tt: "Our #bold assassination attempt#! will fail, and cause a major scandal"
+
+  would_be_accepted_under_national_supremacy_tt: "This [concept_pop]'s culture shares both [Concept('concept_cultural_heritage_trait', '$concept_cultural_heritage_traits$')] and all other [Concept('concept_cultural_trait', '$concept_cultural_traits$')] with any of this country's [concept_primary_cultures]"
+
+  resign_from_office: "Resign from Office"
+  resign_from_office_desc: "This character will resign from [Character.GetHerHis] position as [Character.GetPrimaryRoleTitle] of [Character.GetCountry.GetName]"
+
+  resignation.1.t: "Letters of Resignation"
+  resignation.1.d1: "With the total collapse of [SCOPE.sCharacter('resigning_politician').GetHerHis] support amongst the [SCOPE.sCharacter('resigning_politician').GetInterestGroup.GetName], [SCOPE.sCharacter('resigning_politician').GetFullName] has announced [SCOPE.sCharacter('resigning_politician').GetHerHis] resignation from the office of [SCOPE.sCharacter('resigning_politician').GetPrimaryRoleTitle]."
+  resignation.1.d2: "Following a series of devastating scandals and dismal public approval, [SCOPE.sCharacter('resigning_politician').GetFullName] has announced [SCOPE.sCharacter('resigning_politician').GetHerHis] resignation from the office of [SCOPE.sCharacter('resigning_politician').GetPrimaryRoleTitle]."
+  resignation.1.d3: "Citing ill health, [SCOPE.sCharacter('resigning_politician').GetFullName] has announced [SCOPE.sCharacter('resigning_politician').GetHerHis] resignation from the office of [SCOPE.sCharacter('resigning_politician').GetPrimaryRoleTitle]."
+  resignation.1.d4: "Citing a desire to spend more time with [SCOPE.sCharacter('resigning_politician').GetHerHis] family, [SCOPE.sCharacter('resigning_politician').GetFullName] has announced [SCOPE.sCharacter('resigning_politician').GetHerHis] resignation from the office of [SCOPE.sCharacter('resigning_politician').GetPrimaryRoleTitle]."
+  resignation.1.f: "The reactions to the announcement were myriad. The [SCOPE.sCharacter('resigning_politician').GetPrimaryRoleTitle]'s supporters, struggling to hold back their defeat and apprehension. The opposition, split between displays of sympathy and excitement over the prospect of claiming [SCOPE.sCharacter('resigning_politician').GetHerHis] seat. For the house staff, however, all that it meant was another long week of dodging reporters and shuffling furniture."
+  resignation.1.a: "Wish [SCOPE.sCharacter('resigning_politician').GetHerHis] successor good health and good fortune."
+  resignation.1.b: "A long series of disasters has come to an end."
+  resignation.1.c: "Call an immediate election to assemble a new cabinet."
+
+  leader_resigns_from_office_tt: "[SCOPE.sCharacter('resigning_politician').GetFullName] will resign from office and retire from political activity"
+
+  modifier_disastrous_administration: "Disastrous Administration"
+  modifier_best_of_luck: "Warm Send-Off"
+
+  unlock_arrange_accident_tt: "Unlocks the 'Arrange Accident' Character Interaction"
+
+  caudillo.6.t: "Leadership Challenge"
+  caudillo.6.d: "[SCOPE.sCharacter('leadership_challenge_commander').GetPrimaryRoleTitle] [SCOPE.sCharacter('leadership_challenge_commander').GetFullName], a popular military commander, has begun to challenge the civilian leadership of the [SCOPE.gsInterestGroup('leadership_challenge_ig').GetName] under [SCOPE.sCharacter('leadership_challenge_politician').GetFullName]. The [SCOPE.sCharacter('leadership_challenge_commander').GetPrimaryRoleTitle]'s ambitions threaten to expand caudillo rule to yet another sector of society."
+  caudillo.6.f: "#bold New Martial Offensive: Civil Offices Under Fire! #!\n\nA peculiar clarion sounded this morning as [SCOPE.sCharacter('leadership_challenge_commander').GetPrimaryRoleTitle] [SCOPE.sCharacter('leadership_challenge_commander').GetFullNameNoFormatting] announced [SCOPE.sCharacter('leadership_challenge_commander').GetHerHis] intentions to introduce sweeping reforms amongst the current polity under [SCOPE.sCharacter('leadership_challenge_politician').GetFullNameNoFormatting]. Whispers from [ROOT.GetCountry.GetCapital.GetCityHubName]'s streets about [SCOPE.sCharacter('leadership_challenge_politician').GetFullNameNoFormatting]'s leadership have become cries to step down, rising in chorus with denouncements against [SCOPE.sCharacter('leadership_challenge_commander').GetPrimaryRoleTitle] [SCOPE.sCharacter('leadership_challenge_commander').GetLastNameNoFormatting]. (Cont. Pg. 3)"
+  caudillo.6.a: "Trust in the heroism of [SCOPE.sCharacter('leadership_challenge_commander').GetPrimaryRoleTitle] [SCOPE.sCharacter('leadership_challenge_commander').GetLastName]."
+  caudillo.6.b: "The [SCOPE.gsInterestGroup('leadership_challenge_ig').GetName] must remain under civilian control."
+  politician_gets_pushed_out_tt: "[SCOPE.sCharacter('leadership_challenge_politician').GetFullName] will be forced out of politics"
+
+
+  resignation.2.t: "Hands Thrown Up"
+  resignation.2.d: "With the collapse of civil order in [ROOT.GetCountry.GetName], [SCOPE.sCharacter('resigning_politician').GetFullName] has announced [SCOPE.sCharacter('resigning_politician').GetHerHis] resignation from the office of [SCOPE.sCharacter('resigning_politician').GetPrimaryRoleTitle]. A power vacuum has emerged in [ROOT.GetCountry.GetCapital.GetCityHubName], and both revolutionaries and loyalists scramble to fill it."
+  resignation.2.f: ""The mob have passed through the central district an hour ago. They have lanterns now, but it is a prelude to rifles and bludgeons."\n\n"So that's that. Our rule is lost. Very well then, we shall go to them with our formal surrender. But stay with me for a final drink, old friend. We'll need the courage for what's to come.""
+  resignation.2.a: "[SCOPE.sCharacter('resigning_politician').GetSheHe|U] has surrendered, but [ROOT.GetCountry.GetName] has not."
+  resignation.2.b: "We are helpless before the coming storm."
+  resignation.2.c: "There is no time for half measures. Issue emergency powers."
+
+  resignation.3.t: "The Abdication of [ROOT.GetCountry.GetRuler.GetFullName]"
+  resignation.3.d: "With the collapse of civil order in [ROOT.GetCountry.GetName], [SCOPE.sCharacter('abdicating_monarch').GetPrimaryRoleTitle] [SCOPE.sCharacter('abdicating_monarch').GetFullName] has announced [SCOPE.sCharacter('abdicating_monarch').GetHerHis] abdication from the throne of [ROOT.GetCountry.GetName]. A power vacuum has emerged in [ROOT.GetCountry.GetCapital.GetCityHubName], and both revolutionaries and loyalists scramble to fill it."
+  resignation.3.f: "It was plain to see from the third-storey balcony of the palace that the mandate of heaven had passed to the mob. [SCOPE.sCharacter('abdicating_monarch').GetFullNameNoFormatting] was [SCOPE.sCharacter('abdicating_monarch').GetPrimaryRoleTitle] no longer. Better, [SCOPE.sCharacter('abdicating_monarch').GetSheHe] thought, to have stepped down now when the crowds would accept surrender than to be dragged to a noose."
+  resignation.3.a: "Our hopes must rest with [SCOPE.sCharacter('heir_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('heir_scope').GetFirstName]."
+  resignation.3.b: "Flee across the border whilst there is still time."
+  resignation.3.c: "[SCOPE.sCharacter('abdicating_monarch').GetHerHis|U] successor must reign with the strength [SCOPE.sCharacter('abdicating_monarch').GetSheHe] lacked."
+
+  leader_abdicates_the_throne_tt: "[SCOPE.sCharacter('abdicating_monarch').GetPrimaryRoleTitle] [SCOPE.sCharacter('abdicating_monarch').GetFullName] will abdicate the throne of [SCOPE.sCountry('country_scope').GetName]"
+  leader_abdicates_the_throne_display_tt: "Our [concept_ruler] will abdicate the throne and retire from politics"
+
+  ideology_not_too_close_tt: "This character's ideology is not too similar to that of our [concept_ruler]"
+
+  modifier_exiled_leader: "Exiled Leader"
+
+  modifier_revolution_defeated_light: "Bloodless Revolution"
+
+  modifier_revolution_victorious_light: "Revolutionary Victors"
+
+  chi_add_1_fragile_unity_tt: "The progress bar of the #Bold Fragile Unity#! [concept_journal_entry] is depleted by #Bold 1#!"
+  chi_remove_1_fragile_unity_tt: "The progress bar of the #Bold Fragile Unity#! [concept_journal_entry] is increased by #Bold 1#!"
+
+  missionary_activities_begin_tt: "[GetReligion('protestant').GetName] #bold missionary activities#! will begin in states neighbouring foreign [Concept('concept_treaty_port','$concept_treaty_ports$')] in our nation"
+
+  owner_is_christian_tt: "Owner has a [concept_religion] with the #variable Christian#! trait"
+
+  modifier_last_minute_compromise: "Last-Minute Compromise"
+
+  government_collapse.1.t: "The Party Wavers"
+  government_collapse.1.d: "Following the [SCOPE.gsInterestGroup('relevant_ig').GetName] entering open insurrection, the power the [SCOPE.sParty('relevant_party').GetName] held over the [ROOT.GetCountry.GetAdjective] nation has been utterly broken. Loyal government officials have proposed the abolition of the party to preserve the state."
+  government_collapse.1.f: ""We have tied ourselves at the hip to them, and now find ourselves hobbled by their departure. We must act! We will salvage these scant few things, or we will salvage nothing."\n\nThe [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] regarded the reports of despair and defection coating [ROOT.GetCountry.GetRuler.GetHerHis] desk, and made [ROOT.GetCountry.GetRuler.GetHerHis] decision."
+  government_collapse.1.a: "We must install an emergency government."
+  government_collapse.1.b: "Offer an olive branch before it is too late."
+
+  is_in_other_market_tt: "Is a [concept_junior_partner] in another country's [concept_customs_union]"
+  is_not_in_other_market_tt: "Is not a [concept_junior_partner] in another country's [concept_customs_union]"
