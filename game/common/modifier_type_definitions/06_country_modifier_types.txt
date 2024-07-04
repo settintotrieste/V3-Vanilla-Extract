@@ -52,15 +52,6 @@ country_leverage_resistance_mult={
 	}
 }
 
-country_leverage_resistance_per_population_add={
-	decimals=0
-	color=neutral
-	percent=no
-	game_data={
-		ai_value=0
-	}
-}
-
 country_leverage_generation_mult={
 	decimals=0
 	color = good
@@ -133,6 +124,15 @@ country_institution_size_change_speed_institution_police_mult={
 	}
 }
 
+country_institution_size_change_speed_institution_schools_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 country_institution_cost_institution_colonial_affairs_mult={
 	decimals=0
 	color=bad
@@ -143,6 +143,15 @@ country_institution_cost_institution_colonial_affairs_mult={
 }
 
 country_institution_cost_institution_police_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_institution_cost_institution_schools_mult={
 	decimals=0
 	color=bad
 	percent=yes
