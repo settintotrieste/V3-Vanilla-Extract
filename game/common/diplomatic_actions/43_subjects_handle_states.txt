@@ -178,12 +178,14 @@
 					}		
 				}
 				scope:first_state = { 
-					has_port = no 
+					has_port = no
 					NOT = {
 						any_neighbouring_state = {
 							owner = root
-							has_port = yes
 						}					
+					}
+					any_neighbouring_state = {
+						owner = scope:target_country
 					}					
 				}			
 			}
@@ -420,6 +422,7 @@ demand_state = {
 				}
 			}
 		}
+		NOT = { is_homeland_of_country_cultures = owner }
 		is_capital = no
 		is_under_colonization = no
 	}
@@ -499,14 +502,22 @@ demand_state = {
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
 				value = -100
-			}		
+			}
 			
 			if = {
 				limit = { exists = scope:second_state }
 				subtract = {
-					value = scope:second_state.ai_state_value:root	
+					value = "scope:second_state.ai_state_value(scope:second_state.owner)"
 					desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_SECOND_STATE"
-					min = 10
+					
+					if = {
+						limit = {
+							scope:second_state = { owner = root }					
+						}
+						multiply = 2
+					}						
+					
+					min = 10				
 				}
 			}
 			
