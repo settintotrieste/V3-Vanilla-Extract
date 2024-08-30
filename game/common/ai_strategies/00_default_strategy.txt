@@ -3312,10 +3312,10 @@ ai_strategy_default = {
 			divide = 2000000 
 		}
 
-		# 1 level of naval base per 2 million population in direct overseas subjects	
+		# 1 level of naval base per 5 million population in direct overseas subjects	
 		add = {
 			value = cached_ai_overseas_subject_population
-			divide = 2000000 
+			divide = 5000000 
 		}	
 
 		max = 100 # No more than 100 from population		
