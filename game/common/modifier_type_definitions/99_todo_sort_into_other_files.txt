@@ -2527,6 +2527,14 @@ country_academics_pol_str_mult={
 	}
 }
 
+state_szekely_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
 state_academics_mortality_mult={
 	decimals=1
 	color=bad

@@ -345,6 +345,21 @@
 			girl = female
 		}
 
+		glasses_02_dracula = {
+			index = 31
+			male = {
+				1 = "props_glasses_02_dracula"
+			
+				
+			}
+			female = {
+					1 = "female_glasses"
+
+			}
+			boy = male
+			girl = female
+		}
+
 		
 
 

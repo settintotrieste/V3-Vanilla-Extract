@@ -116,7 +116,7 @@
 				girl = female
 			}
 
-	arabic_middle_tier = {
+			arabic_middle_tier = {
 				index = 7
 				male = {
 					

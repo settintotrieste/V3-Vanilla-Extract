@@ -697,7 +697,9 @@ building_wat_arun = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
 
-### BP1 ###
+#####################################################################################################
+############################################# BP1 ###################################################
+#####################################################################################################
 
 building_cristo_redentor = {
 	building_group = bg_monuments
@@ -811,6 +813,38 @@ building_power_bloc_statue = {
 				multiply = 0.5
 			}			
 		}
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+#####################################################################################################
+########################################## HALLOWEEN ################################################
+#####################################################################################################
+
+building_halloween_castledracula = {
+	building_group = bg_monuments_hidden
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "halloween_castledracula_locator"
+	
+	entity_not_constructed = {}
+	entity_under_construction = {}
+	entity_constructed = {"halloween_castledracula_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_dummy
+	}
+
+	possible = {
+		always = yes
 	}
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"

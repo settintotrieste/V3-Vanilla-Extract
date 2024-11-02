@@ -889,9 +889,9 @@ TRS = {
 	
 	country_type = recognized
 
-	tier = principality
+	tier = principality 
 	
-	cultures = { hungarian romanian }
+	cultures = { szekely romanian }
 	capital = STATE_SOUTHERN_TRANSYLVANIA
 }
 
