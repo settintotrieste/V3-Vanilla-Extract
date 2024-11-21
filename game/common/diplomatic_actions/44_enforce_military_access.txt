@@ -33,6 +33,8 @@
 			limit = {
 				scope:target_country = { 
 					OR = {
+						is_subject_type = subject_type_chartered_company
+						is_subject_type = subject_type_colony
 						is_subject_type = subject_type_puppet
 						is_subject_type = subject_type_vassal
 						is_subject_type = subject_type_dominion
