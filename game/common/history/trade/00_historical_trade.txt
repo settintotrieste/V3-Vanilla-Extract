@@ -49,6 +49,20 @@
 			}
 		}
 	}
+	s:STATE_FRANCHE_COMTE={
+		region_state:FRA={
+			sg:luxury_furniture = {
+				add_exports = 5
+			}
+		}
+	}
+	s:STATE_RHONE={
+		region_state:FRA={
+			sg:luxury_clothes = {
+				add_exports = 15
+			}
+		}
+	}		
 	s:STATE_GUANGDONG={
 		region_state:POR={
 			sg:tea = {
