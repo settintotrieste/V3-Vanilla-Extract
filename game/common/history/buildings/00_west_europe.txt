@@ -928,7 +928,7 @@
 					building={
 						type="building_financial_district"
 						country="c:GBR"
-						levels=15
+						levels=22
 						region="STATE_HOME_COUNTIES"
 					}
 				}

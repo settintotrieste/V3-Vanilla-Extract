@@ -787,7 +787,7 @@
 	PRODUCTION_BUILDING_VERY_LONG_CONSTRUCTION_TIME_THRESHOLD = 60
 	PRODUCTION_BUILDING_VERY_LONG_CONSTRUCTION_TIME_MULT = 0.25 # Multiply score by this if construction time would take more than PRODUCTION_BUILDING_VERY_LONG_CONSTRUCTION_TIME_THRESHOLD weeks at full construction industry usage (ignores MAX_WEEKLY_CONSTRUCTION_PROGRESS)
 	PRODUCTION_BUILDING_FOREIGN_INVESTMENT_HAS_RECENT_NATIONALIZATION_MULT = 0.1 # Multiply score by this if the construction is a foreign investment into a country that has recently nationalized buildings held by investor country
-	PRODUCTION_BUILDING_FOREIGN_INVESTMENT_COMPANY_MULT = 10 # Multiply score by this if the construction is a foreign investment by the country that has at least one established company for the building type
+	PRODUCTION_BUILDING_FOREIGN_INVESTMENT_COMPANY_MULT = 1.5 # Multiply score by this if the construction is a foreign investment by the country that has at least one established company for the building type
 
 	# Government construction applies this multiplier to domestic states when determining where to construct
 	GOVERNMENT_CONSTRUCTION_DOMESTIC_INVESTMENT_BIAS = 2.0
@@ -797,10 +797,10 @@
 	# For example, when trying to form company_lkab it is much more likely to select Norrland as the
 	# Values below determine the exact weight for this for government vs private investment
 	# There are two sets of weights: One applied for the building type as a whole (when compared to other building types), and a second applied only when selecting the state for the building type
-	GOVERNMENT_COMPANY_TARGET_BUILDING_TYPE_CONSTRUCTION_FACTOR = 3
+	GOVERNMENT_COMPANY_TARGET_BUILDING_TYPE_CONSTRUCTION_FACTOR = 5
 	GOVERNMENT_COMPANY_TARGET_STATE_NO_BUILDING_CONSTRUCTION_FACTOR = 20 	# Applied when the state does not already have the target building type
 	GOVERNMENT_COMPANY_TARGET_STATE_WITH_BUILDING_CONSTRUCTION_FACTOR = 50	# Applied when the state *does* already have the target building type
-	AUTONOMOUS_INVESTMENT_COMPANY_TARGET_BUILDING_TYPE_CONSTRUCTION_FACTOR = 3
+	AUTONOMOUS_INVESTMENT_COMPANY_TARGET_BUILDING_TYPE_CONSTRUCTION_FACTOR = 5
 	AUTONOMOUS_INVESTMENT_COMPANY_TARGET_STATE_NO_BUILDING_CONSTRUCTION_FACTOR = 20 # Applied when the state does not already have the target building type
 	AUTONOMOUS_INVESTMENT_COMPANY_TARGET_STATE_WITH_BUILDING_CONSTRUCTION_FACTOR = 50 # Applied when the state *does* already have the target building type
 

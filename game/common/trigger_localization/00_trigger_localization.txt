@@ -1625,6 +1625,14 @@ is_treaty_port = {
 	third_not = TRIGGER_IS_TREATY_PORT_THIRD_NOT
 }
 
+# Intentional reuse of loc keys here
+controls_treaty_port_province = {
+	global = TRIGGER_IS_TREATY_PORT
+	global_not = TRIGGER_IS_TREATY_PORT_NOT
+	third = TRIGGER_IS_TREATY_PORT_THIRD
+	third_not = TRIGGER_IS_TREATY_PORT_THIRD_NOT
+}
+
 available_jobs = {
 	global = TRIGGER_AVAILABLE_JOBS
 	global_not = TRIGGER_AVAILABLE_JOBS_NOT

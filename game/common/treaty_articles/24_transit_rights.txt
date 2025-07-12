@@ -41,6 +41,7 @@
             NOT = {
                 scope:source_country = {
                     any_scope_treaty = {
+						binds = scope:target_country
                         hidden_trigger = {
 							OR = {
 								scope:treaty = {
@@ -160,6 +161,7 @@
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_TRANSIT_RIGHTS_VALUE"
 					value = "ai_transit_rights_value(scope:source_country)"
+					max = 50
 				}
 			}
             else_if = {

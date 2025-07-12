@@ -64,6 +64,14 @@
 		}
 	}		
 	s:STATE_GUANGDONG={
+		region_state:CHI={
+			sg:silk	= {
+				add_exports = 100
+			}
+			sg:tea = {
+				add_exports = 60
+			}			
+		}
 		region_state:POR={
 			sg:tea = {
 				add_exports = 40
@@ -90,6 +98,9 @@
 			sg:fabric = {
 				add_imports = 50
 			}
+			sg:tea = {
+				add_imports = 50
+			}			
 		}
 	}	
 	s:STATE_GUANGDONG={
