@@ -298,6 +298,7 @@ je_eastern_crisis_tracker = {
 	scripted_progress_bar = control_eastern_crisis_bar
 
 	is_shown_when_inactive = {
+		has_dlc_feature = ip3_content
 		exists = c:TUR
 		NOT = { c:TUR ?= this }
 		OR = {
@@ -322,10 +323,14 @@ je_eastern_crisis_tracker = {
 		ROOT = {
 			save_scope_as = root_scope
 		}
-	}
-
-	modifiers_while_active = {
-		eastern_crisis_balkan_nations
+		if = {
+			limit = {
+				has_subject_relation_with = c:TUR
+			}
+			scope:journal_entry = { # Croatia should not get this
+				add_modifier = eastern_crisis_balkan_nations
+			}
+		}
 	}
 
 	complete = {

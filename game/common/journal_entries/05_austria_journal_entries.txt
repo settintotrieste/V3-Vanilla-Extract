@@ -29,9 +29,9 @@
 				has_variable = established_austria_hungary_var
 			}
 			custom_tooltip = {
-				text = hungarian_above_80_acceptance_for_a_while_tt
+				text = hungarian_above_80_acceptance_for_a_while_tt # Really 70
 				has_variable = hungarian_acceptance_var
-				var:hungarian_acceptance_var >= 60
+				var:hungarian_acceptance_var >= 60 # This 60 has nothing to do with the acceptance value itself
 			}
 			AND = {
 				NOT = {
@@ -63,7 +63,7 @@
 				limit = {
 					country_average_cultural_acceptance = {
 						target = cu:hungarian
-						value >= acceptance_status_5
+						value >= 70
 					}
 				}
 				change_variable = { name = hungarian_acceptance_var add = 1 }
@@ -75,7 +75,9 @@
 	}
 
 	on_complete = {
-		remove_modifier = modifier_young_hungary_movement
+		scope:journal_entry = {
+			remove_modifier = modifier_young_hungary_movement
+		}
 	}
 
 	fail = {
@@ -101,10 +103,21 @@
 				}
 			}
 		}
+		c:HUN ?= {
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_SLOVAKIA
+					state_region = s:STATE_TRANSDANUBIA
+					state_region = s:STATE_CENTRAL_HUNGARY
+				}
+			}
+		}
 		custom_tooltip = {
 			text = je_matter_of_hungary_fail_not_at_war_with_hungary
-			NOT = {
-				c:HUN ?= {
+			c:HUN ?= {
+				NOR = {
+					is_secessionist = yes
+					is_revolutionary = yes
 					is_diplomatic_play_enemy_of = root
 				}
 			}

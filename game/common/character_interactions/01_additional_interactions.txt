@@ -35,13 +35,13 @@ arrange_accident = {
 		owner ?= {
 			has_law_or_variant = law_type:law_secret_police
 		}
-		interest_group = {
+		interest_group ?= {
 			is_marginal = no
 		}
 	}
 
 	effect = {
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = relevant_ig
 		}
 		this = {
@@ -147,7 +147,7 @@ arrange_accident = {
 					else_if = {
 						limit = {
 							has_role = politician
-							THIS.interest_group = {
+							THIS.interest_group ?= {
 								interest_group_supports_political_movement = yes
 							}
 						}
@@ -201,7 +201,7 @@ arrange_accident = {
 					else_if = {
 						limit = {
 							has_role = politician
-							THIS.interest_group = {
+							THIS.interest_group ?= {
 								interest_group_supports_political_movement = yes
 							}
 						}
@@ -231,7 +231,7 @@ arrange_accident = {
 		value = -50
 		if = {
 			limit = {
-				interest_group = {
+				interest_group ?= {
 					ig_approval <= -5
 				}
 			}
@@ -239,7 +239,7 @@ arrange_accident = {
 		}
 		if = {
 			limit = {
-				interest_group = {
+				interest_group ?= {
 					ig_approval <= -10
 				}
 			}
@@ -344,10 +344,10 @@ resign_from_office = {
 
 	possible = {
 		OR = {
-			interest_group = {
+			interest_group ?= {
 				ig_approval <= angry
 			}
-			interest_group = {
+			interest_group ?= {
 				is_marginal = yes
 			}
 			popularity <= -50

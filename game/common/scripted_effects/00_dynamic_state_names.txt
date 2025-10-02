@@ -93,6 +93,12 @@ assign_state_hub_dynamic_names = {
         }
         assign_state_name_region_italy = yes
     }
+    if = { # Occitania Region
+        limit = {
+        	region = sr:region_occitania
+        }
+        assign_state_name_region_occitania = yes
+    }
 	if = { # North Sea Coast region
         limit = {
         	region = sr:region_north_sea_coast

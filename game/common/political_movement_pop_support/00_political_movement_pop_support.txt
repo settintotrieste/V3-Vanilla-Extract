@@ -269,6 +269,14 @@ movement_support_je_matter_of_hungary = {
 	}
 }
 
+movement_support_je_hungarian_revolution = {
+	name = je_hungarian_revolution
+
+	visible = {
+		owner ?= { has_journal_entry = je_hungarian_revolution }
+	}
+}
+
 ## COUNTRY FACTORS ##
 
 movement_support_number_of_claims = {

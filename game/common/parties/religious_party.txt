@@ -346,7 +346,7 @@ religious_party = {
 						is_powerful = yes
 					}
 				}
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_traditionalist
 						has_ideology = ideology:ideology_theocrat
@@ -363,7 +363,7 @@ religious_party = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_anti_clerical
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_nihilist
 					}
 				}
@@ -377,7 +377,7 @@ religious_party = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_corporatist
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_corporatist_leader
 					}
 				}
@@ -455,7 +455,7 @@ religious_party = {
 		}
 		if = { # anti-orleanist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_bonapartist
 						has_ideology = ideology:ideology_legitimist
@@ -468,7 +468,7 @@ religious_party = {
 							is_party_type = religious_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_orleanist
 						}
 					}
@@ -481,7 +481,7 @@ religious_party = {
 		}
 		if = { # anti-legitimist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_bonapartist
 						has_ideology = ideology:ideology_orleanist
@@ -494,7 +494,7 @@ religious_party = {
 							is_party_type = religious_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_legitimist
 						}
 					}
@@ -507,7 +507,7 @@ religious_party = {
 		}
 		if = { # anti-bonapartist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_legitimist
 						has_ideology = ideology:ideology_orleanist
@@ -520,7 +520,7 @@ religious_party = {
 							is_party_type = religious_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_bonapartist
 						}
 					}

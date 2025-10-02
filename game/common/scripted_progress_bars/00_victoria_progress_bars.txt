@@ -1622,13 +1622,13 @@ serbian_dethrone_bar = {
 			}
 		}
 
-			# Overlord positive relations
+		# Overlord positive relations
 		if = {
 			limit = {
 				is_subject = yes
 				top_overlord.relations:root > 0
 			}
-			add = {
+			subtract = {
 				desc = "serbian_dethrone_overlord_relations_tt"
 				value = "top_overlord.relations(root)"
 				divide = 50

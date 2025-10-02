@@ -451,7 +451,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 					}
 					if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								is_interest_group_type = ig_trade_unions
 							}
 						}
@@ -507,7 +507,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 					}
 					if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								is_interest_group_type = ig_trade_unions
 							}
 						}
@@ -560,7 +560,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 					}
 					if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								OR = {
 									is_interest_group_type = ig_trade_unions
 									is_interest_group_type = ig_rural_folk
@@ -1158,7 +1158,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 					}
 					if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								is_interest_group_type = ig_landowners
 							}
 						}
@@ -1216,7 +1216,7 @@ adopt_random_antigovernment_ideology = { # I'm so sorry for this.
 					}
 					if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								is_interest_group_type = ig_landowners
 							}
 						}
@@ -1461,7 +1461,7 @@ save_agitator_election_scopes = {
 			has_variable = preset_ideology
 		}
 		scope:agitator_scope = {
-			this.interest_group = {
+			this.interest_group ?= {
 				save_scope_as = agitator_ig_scope
 			}
 		}
@@ -1475,7 +1475,7 @@ save_agitator_election_scopes = {
 				}
 			}
 			save_scope_as = agitator_scope
-			this.interest_group = {
+			this.interest_group ?= {
 				save_scope_as = agitator_ig_scope
 			}
 		}
@@ -1654,7 +1654,7 @@ communist_agitator_election_scope_effect = {
 				has_ideology = ideology:ideology_vanguardist
 				has_ideology = ideology:ideology_anarchist
 				AND = {
-					this.interest_group = {
+					this.interest_group ?= {
 						is_member_of_party = owner.py:communist_party
 					}
 					NOT = {
@@ -1671,7 +1671,7 @@ communist_agitator_election_scope_effect = {
 			}
 		}
 		save_scope_as = agitator_scope
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = agitator_ig_scope
 		}
 		this.political_movement ?= {
@@ -1695,7 +1695,7 @@ fascist_agitator_election_scope_effect = {
 				has_ideology = ideology:ideology_integralist
 				has_ideology = ideology:ideology_ethno_nationalist
 				AND = {
-					this.interest_group = {
+					this.interest_group ?= {
 						is_member_of_party = owner.py:fascist_party
 					}
 					NOT = {
@@ -1709,7 +1709,7 @@ fascist_agitator_election_scope_effect = {
 			has_role = agitator
 		}
 		save_scope_as = agitator_scope
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = agitator_ig_scope
 		}
 		this.political_movement ?= {
@@ -1729,7 +1729,7 @@ agrarian_agitator_election_scope_effect = {
 		limit = {
 			OR = {
 				has_ideology = ideology:ideology_agrarian
-				this.interest_group = {
+				this.interest_group ?= {
 					is_member_of_party = owner.py:agrarian_party
 				}
 			}
@@ -1739,7 +1739,7 @@ agrarian_agitator_election_scope_effect = {
 			}
 		}
 		save_scope_as = agitator_scope
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = agitator_ig_scope
 		}
 		this.political_movement ?= {
@@ -1759,7 +1759,7 @@ socdem_agitator_election_scope_effect = {
 		limit = {
 			OR = {
 				has_ideology = ideology:ideology_social_democrat
-				this.interest_group = {
+				this.interest_group ?= {
 					is_member_of_party = owner.py:social_democrat_party
 				}
 			}
@@ -1769,7 +1769,7 @@ socdem_agitator_election_scope_effect = {
 			}
 		}
 		save_scope_as = agitator_scope
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = agitator_ig_scope
 		}
 		this.political_movement ?= {
@@ -1792,7 +1792,7 @@ liberal_agitator_election_scope_effect = {
 				has_ideology = ideology:ideology_humanitarian
 				has_ideology = ideology:ideology_humanitarian_royalist
 				has_ideology = ideology:ideology_market_liberal
-				this.interest_group = {
+				this.interest_group ?= {
 					is_member_of_party = owner.py:liberal_party
 				}
 			}
@@ -1802,7 +1802,7 @@ liberal_agitator_election_scope_effect = {
 			}
 		}
 		save_scope_as = agitator_scope
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = agitator_ig_scope
 		}
 		this.political_movement ?= {
@@ -1826,7 +1826,7 @@ conservative_agitator_election_scope_effect = {
 			OR = {
 				has_ideology = ideology:ideology_traditionalist
 				has_ideology = ideology:ideology_slaver
-				this.interest_group = {
+				this.interest_group ?= {
 					is_member_of_party = owner.py:conservative_party
 				}
 			}
@@ -1836,7 +1836,7 @@ conservative_agitator_election_scope_effect = {
 			}
 		}
 		save_scope_as = agitator_scope
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = agitator_ig_scope
 		}
 		this.political_movement ?= {
@@ -1856,7 +1856,7 @@ radical_agitator_election_scope_effect = {
 		limit = {
 			OR = {
 				has_ideology = ideology:ideology_radical
-				this.interest_group = {
+				this.interest_group ?= {
 					is_member_of_party = owner.py:radical_party
 				}
 			}
@@ -1866,7 +1866,7 @@ radical_agitator_election_scope_effect = {
 			}
 		}
 		save_scope_as = agitator_scope
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = agitator_ig_scope
 		}
 		this.political_movement ?= {
@@ -1886,7 +1886,7 @@ free_trade_agitator_election_scope_effect = {
 		limit = {
 			OR = {
 				has_ideology = ideology:ideology_market_liberal
-				this.interest_group = {
+				this.interest_group ?= {
 					is_member_of_party = owner.py:free_trade_party
 				}
 			}
@@ -1897,7 +1897,7 @@ free_trade_agitator_election_scope_effect = {
 		}
 		save_scope_as = agitator_scope
 		save_scope_as = exile_scope
-		this.interest_group = {
+		this.interest_group ?= {
 			save_scope_as = agitator_ig_scope
 		}
 		this.political_movement ?= {

@@ -35,10 +35,10 @@ AST_robert_gouger = {
 	}
 }
 
-AST_george_strickland_kensington = {
-	# George Strickland Kensington
+AST_george_strickland_kingston = {
+	# George Strickland Kingston
 	first_name = George
-	last_name = Kensington
+	last_name = Kingston
 	historical = yes
 	ig_leader = yes
 	culture = cu:irish # Irish

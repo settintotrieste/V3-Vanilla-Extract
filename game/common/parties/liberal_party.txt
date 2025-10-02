@@ -325,7 +325,7 @@ liberal_party = {
 				is_marginal = no
 			}
 		}
-		leader = { # far right and far left won't join liberal parties
+		leader ?= { # far right and far left won't join liberal parties
 			NOR = {
 				has_ideology = ideology:ideology_fascist
 				has_ideology = ideology:ideology_integralist
@@ -367,7 +367,7 @@ liberal_party = {
 		}
 		if = { # liberals love liberalism
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_republican_leader
 						has_ideology = ideology:ideology_radical
@@ -382,7 +382,7 @@ liberal_party = {
 				desc = "from_liberal_leader"
 				if = {
 					limit = {
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_reformer
 						}
 					}
@@ -390,7 +390,7 @@ liberal_party = {
 				}
 				if = {
 					limit = {
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_market_liberal
 						}
 					}
@@ -398,7 +398,7 @@ liberal_party = {
 				}
 				if = {
 					limit = {
-						leader = {
+						leader ?= {
 							OR = {
 								has_ideology = ideology:ideology_republican_leader
 								has_ideology = ideology:ideology_radical
@@ -411,7 +411,7 @@ liberal_party = {
 		}
 		if = { # liberals love liberalism
 			limit = {
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_radical
 				}
 			}
@@ -435,7 +435,7 @@ liberal_party = {
 		}
 		if = { # various progressives are inclined towards liberalism
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_feminist
 						has_ideology = ideology:ideology_abolitionist
@@ -453,7 +453,7 @@ liberal_party = {
 		}
 		if = { # various conservatives dislike liberalism
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_traditionalist
 						has_ideology = ideology:ideology_royalist
@@ -494,7 +494,7 @@ liberal_party = {
 					any_interest_group = {
 						is_member_of_party = owner.py:liberal_party
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_jingoist_leader
 						}
 					}
@@ -510,7 +510,7 @@ liberal_party = {
 			limit = {
 				is_powerful = no
 				OR = {
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_market_liberal
 					}
 					has_ideology = ideology:ideology_laissez_faire
@@ -539,7 +539,7 @@ liberal_party = {
 					}
 				}
 				OR = {
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_market_liberal
 					}
 					has_ideology = ideology:ideology_laissez_faire
@@ -590,7 +590,7 @@ liberal_party = {
 		if = { # lack of women's rights
 			limit = {
 				OR = {
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_feminist
 					}
 					has_ideology = ideology:ideology_liberal
@@ -610,7 +610,7 @@ liberal_party = {
 		if = { # anti-racism
 			limit = {
 				OR = {
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_reformer
 							has_ideology = ideology:ideology_humanitarian
@@ -640,7 +640,7 @@ liberal_party = {
 					has_ideology = ideology:ideology_liberal_modern
 					has_ideology = ideology:ideology_egalitarian
 					has_ideology = ideology:ideology_egalitarian_modern
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_humanitarian
 						has_ideology = ideology:ideology_humanitarian_royalist
 					}
@@ -677,7 +677,7 @@ liberal_party = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_anti_clerical
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_nihilist
 					}
 				}
@@ -695,7 +695,7 @@ liberal_party = {
 				OR = {
 					has_ideology = ideology:ideology_republican
 					has_ideology = ideology:ideology_populist
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_nihilist
 							has_ideology = ideology:ideology_republican_leader
@@ -722,7 +722,7 @@ liberal_party = {
 				}
 				OR = {
 					has_ideology = ideology:ideology_particularist
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_abolitionist
 					}
 				}
@@ -743,7 +743,7 @@ liberal_party = {
 				}
 				OR = {
 					has_ideology = ideology:ideology_anti_slavery
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_abolitionist
 					}
 				}
@@ -764,10 +764,13 @@ liberal_party = {
 					has_ideology = ideology:ideology_anti_slavery
 					has_ideology = ideology:ideology_laissez_faire
 					has_ideology = ideology:ideology_particularist
-					leader = {
-						has_ideology = ideology:ideology_abolitionist
-						has_ideology = ideology:ideology_social_democrat
-						has_ideology = ideology:ideology_communist
+					leader ?= {
+						OR = {
+								has_ideology = ideology:ideology_abolitionist
+								has_ideology = ideology:ideology_social_democrat
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+						}
 					}
 				}
 			}
@@ -837,14 +840,14 @@ liberal_party = {
 				}
 			}
 			if = {
-				limit = { leader = { has_ideology = ideology:ideology_slaver } }
+				limit = { leader ?= { has_ideology = ideology:ideology_slaver } }
 				add = {
 					value = -100
 					desc = "from_slaver_leader"
 				}
 			}
 			else_if = {
-				limit = { leader = { has_ideology = ideology:ideology_abolitionist } }
+				limit = { leader ?= { has_ideology = ideology:ideology_abolitionist } }
 				add = {
 					value = 100
 					desc = "from_abolitionist_leader"
@@ -853,7 +856,7 @@ liberal_party = {
 		}
 		if = { # anti-orleanist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_bonapartist
 						has_ideology = ideology:ideology_legitimist
@@ -866,7 +869,7 @@ liberal_party = {
 							is_party_type = liberal_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_orleanist
 						}
 					}
@@ -879,7 +882,7 @@ liberal_party = {
 		}
 		if = { # anti-legitimist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_bonapartist
 						has_ideology = ideology:ideology_orleanist
@@ -892,7 +895,7 @@ liberal_party = {
 							is_party_type = liberal_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_legitimist
 						}
 					}
@@ -905,7 +908,7 @@ liberal_party = {
 		}
 		if = { # anti-bonapartist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_legitimist
 						has_ideology = ideology:ideology_orleanist
@@ -918,7 +921,7 @@ liberal_party = {
 							is_party_type = liberal_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_bonapartist
 						}
 					}
@@ -938,7 +941,7 @@ liberal_party = {
 				OR = {
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_populist
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_republican_leader
 							has_ideology = ideology:ideology_radical
@@ -962,7 +965,7 @@ liberal_party = {
 						has_trait = trait_child
 					}
 	         	}
-				leader = {
+				leader ?= {
 					has_template = BRZ_diogo_antonio_feijo
 				}
 			}
@@ -999,7 +1002,7 @@ liberal_party = {
 					}
 					has_law_or_variant = law_type:law_presidential_republic
 				}
-				leader = {
+				leader ?= {
 					NOR = {
 						has_reactionary_ideology = yes
 						has_conservative_ideology = yes
@@ -1029,13 +1032,13 @@ liberal_party = {
 						has_modifier = missouri_compromise
 					}
 				}
-				leader = {
+				leader ?= {
 					culture = cu:yankee
 				}
 			}
 			if = {
 				limit = {
-					leader = {
+					leader ?= {
 						has_template = usa_robert_rantoul_character_template # Northern Democrat
 					}
 				}
@@ -1066,7 +1069,7 @@ liberal_party = {
 						has_modifier = missouri_compromise
 					}
 				}
-				leader = {
+				leader ?= {
 					culture = cu:dixie
 				}
 			}
@@ -1077,7 +1080,7 @@ liberal_party = {
 		}
 		if = {
 			limit = {
-				leader = {
+				leader ?= {
 					has_variable = caudillo_liberal
 				}
 			}

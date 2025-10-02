@@ -919,7 +919,8 @@
 	PRODUCTION_METHOD_FAVORED_MILITARY_GOODS_FACTOR = 0.5 # Per base cost * units of goods produced that the AI favors (for military goods)
 	PRODUCTION_METHOD_DISFAVORED_GOODS_FACTOR = -0.25 # Per base cost * units of goods produced that the AI disfavors
 	PRODUCTION_METHOD_UNDESIRABLE_GOODS_PRICE_THRESHOLD = 1.5 # If a PM using the 'most productive' logic makes use of a good whose price is above ( base * this ), reduce the score
-	PRODUCTION_METHOD_UNDESIRABLE_GOODS_PRICE_FACTOR = -0.25 # Per base cost * units of goods whose price is above undesirable price threshold
+	PRODUCTION_METHOD_UNDESIRABLE_GOODS_PRICE_FACTOR_TRADEABLE = -0.05 # Per base cost * units of goods whose price is above undesirable price threshold (when the goods can be imported from the world market)
+	PRODUCTION_METHOD_UNDESIRABLE_GOODS_PRICE_FACTOR_UNTRADEABLE = -0.25 # Per base cost * units of goods whose price is above undesirable price threshold (when the goods cannot be imported from the world market)
 	PRODUCTION_METHOD_STICKINESS_UPGRADE = 0.95 # Score of non-current method is multiplied by this when it produces more goods base value in total
 	PRODUCTION_METHOD_STICKINESS_DOWNGRADE = 0.75 # Score of non-current method is multiplied by this when it produces less (or equal) goods base value in total
 	PRODUCTION_METHOD_CHANCE_TO_CHANGE = 0.1 # Chance that the AI will consider changing a production method when evaluating methods

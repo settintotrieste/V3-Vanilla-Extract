@@ -1520,7 +1520,7 @@ BRE = { # Bremen
 BRI = { # Brittany
 	flag_definition = {
 		coa = BRI
-		subject_canton = BRI_subject
+		subject_canton = BRI
 		allow_overlord_canton = yes
 		priority = 1
 	}
@@ -1546,7 +1546,7 @@ BRI = { # Brittany
 BRU = { # Brunei
 	flag_definition = {
 		coa = BRU
-		subject_canton = BRU_subject
+		subject_canton = BRU
 		allow_overlord_canton = yes
 		priority = 1
 	}
@@ -5169,7 +5169,7 @@ JAM = { # Jamaica
 		priority = 10
 		allow_overlord_canton = yes
 		trigger = {
-			coa_def_independent_trigger = no
+			coa_def_subject_trigger = yes
 		}
 	}
 	flag_definition = {
@@ -6013,8 +6013,6 @@ LOU = { # Louisiana
 	flag_definition = {
 		coa = LOU
 		subject_canton = LOU
-		allow_overlord_canton = yes
-		coa_with_overlord_canton = LOU_subject
 		priority = 1
 	}
 	flag_definition = {
@@ -6566,22 +6564,66 @@ MOL = { # Moldavia
 
 MON = { # Montenegro
 	flag_definition = {
-		coa = MON
-		subject_canton = MON
+		coa = MON_theocracy
+		subject_canton = MON_theocracy
 		priority = 1
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
 	}
 	flag_definition = {
-		coa = MON_absolute_monarchy
+		coa = MON_principality_constitutional
 		priority = 10
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MON_principality_absolute
+		priority = 20
 		trigger = {
 			coa_def_absolute_monarchy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
+		coa = MON_kingdom_constitutional
+		priority = 30
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = king_sounds_better
+			}
+		}
+	}
+	flag_definition = {
+		coa = MON_kingdom_absolute
+		priority = 40
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = king_sounds_better
+			}
+		}
+	}
+	flag_definition = {
+		coa = MON_republic
+		priority = 50
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
 		coa = MON_dictatorship
-		priority = 20
+		priority = 60
 		trigger = {
 			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MON_communist
+		priority = 1000
+		trigger = {
+			coa_def_communist_flag_trigger = yes
 		}
 	}
 }
@@ -9318,7 +9360,7 @@ TIB = { # Tibet
 		allow_overlord_canton = no
 		priority = 2
 		trigger = {
-			coa_def_independent_trigger = no
+			coa_def_subject_trigger = yes
 			coa_def_chinese_ensign_trigger = yes
 		}
 	}
@@ -9764,7 +9806,7 @@ UNT = { # United Tribes of New Zealand
 		priority = 5
 		subject_canton = sub_UNT_canton_white
 		trigger = {
-			coa_def_independent_trigger = no
+			coa_def_subject_trigger = yes
 		}
 	}
 }

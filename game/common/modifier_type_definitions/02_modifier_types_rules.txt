@@ -236,7 +236,7 @@ country_forbid_monopoly_bool={
 	}
 }
 
-country_disable_privatization_bool={
+country_disable_non_company_privatization_bool={
 	decimals=1
 	color=bad
 	boolean=yes

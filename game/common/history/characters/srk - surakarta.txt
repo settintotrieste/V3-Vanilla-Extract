@@ -17,7 +17,7 @@
 		create_character = {
 			# Pakubuwana IX	
 			first_name = "Mustojo"
-			last_name = "Hamengkubuwono"
+			last_name = "Pakubuwana"
 			historical = yes
 			culture = primary_culture
 			heir = yes

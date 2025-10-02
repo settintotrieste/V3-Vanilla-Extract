@@ -232,7 +232,7 @@ social_democrat_party = {
 			OR = {
 				any_interest_group = {
 					is_marginal = no
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_social_democrat
 					}
 				}
@@ -245,7 +245,7 @@ social_democrat_party = {
 			is_interest_group_type = ig_landowners
 			is_interest_group_type = ig_industrialists
 		}
-		leader = { # fascists and conservatives hate social democracy
+		leader ?= { # fascists and conservatives hate social democracy
 			NOT = {
 				has_ideology = ideology:ideology_fascist
 				has_ideology = ideology:ideology_integralist
@@ -290,7 +290,7 @@ social_democrat_party = {
 		}
 		if = { # social democrats love social democracy
 			limit = {
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_social_democrat
 				}
 			}
@@ -302,7 +302,7 @@ social_democrat_party = {
 		if = { # powerful social democrats love social democracy
 			limit = {
 				is_powerful = yes
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_social_democrat
 				}
 			}
@@ -313,14 +313,14 @@ social_democrat_party = {
 		}
 		if = { # social democrats will fall in line behind stronger leftists
 			limit = {
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_social_democrat
 				}
 				is_powerful = no
 				owner = {
 					any_interest_group = {
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							OR = {
 								has_ideology = ideology:ideology_communist
 								has_ideology = ideology:ideology_vanguardist
@@ -338,7 +338,7 @@ social_democrat_party = {
 		if = { # weak leftists will fall in line behind social democrats pre-revolution
 			limit = {
 				is_powerful = no
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_communist
 						has_ideology = ideology:ideology_vanguardist
@@ -349,7 +349,7 @@ social_democrat_party = {
 					NOT = { has_law_or_variant = law_type:law_council_republic }
 					any_interest_group = {
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_social_democrat
 						}
 					}
@@ -369,7 +369,7 @@ social_democrat_party = {
 				owner = {
 					any_interest_group = {
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_social_democrat
 						}
 					}
@@ -382,7 +382,7 @@ social_democrat_party = {
 		}
 		if = { # various progressives are inclined towards social democracy
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_feminist
 						has_ideology = ideology:ideology_abolitionist
@@ -404,7 +404,7 @@ social_democrat_party = {
 		# market liberals not very inclined to join social democrats
 		if = {
 			limit = {
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_market_liberal
 				}
 			}
@@ -417,7 +417,7 @@ social_democrat_party = {
 			limit = {
 				is_interest_group_type = ig_trade_unions
 				is_powerful = yes
-				leader = {
+				leader ?= {
 					NOR = {
 						has_ideology = ideology:ideology_communist
 						has_ideology = ideology:ideology_vanguardist
@@ -437,7 +437,7 @@ social_democrat_party = {
 					has_ideology = ideology:ideology_liberal_modern
 					has_ideology = ideology:ideology_egalitarian
 					has_ideology = ideology:ideology_egalitarian_modern
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_humanitarian
 							has_ideology = ideology:ideology_humanitarian_royalist
@@ -458,7 +458,7 @@ social_democrat_party = {
 				OR = {
 					has_ideology = ideology:ideology_meritocratic
 					has_ideology = ideology:ideology_agrarian
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_social_democrat
 					}
 				}
@@ -488,7 +488,7 @@ social_democrat_party = {
 				OR = {
 					has_ideology = ideology:ideology_republican
 					has_ideology = ideology:ideology_populist
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_nihilist
 							has_ideology = ideology:ideology_republican_leader
@@ -538,7 +538,7 @@ social_democrat_party = {
 					has_law_or_variant = law_type:law_free_trade
 				}
 				NOT = {
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_market_liberal
 					}
 				}
@@ -553,7 +553,7 @@ social_democrat_party = {
 				OR = {
 					has_ideology = ideology:ideology_proletarian
 					has_ideology = ideology:ideology_agrarian
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_protectionist
 					}
 				}
@@ -561,7 +561,7 @@ social_democrat_party = {
 					has_law_or_variant = law_type:law_laissez_faire
 				}
 				NOT = {
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_market_liberal
 					}
 				}
@@ -575,7 +575,7 @@ social_democrat_party = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_proletarian
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_social_democrat
 					}
 					AND = {
@@ -610,10 +610,13 @@ social_democrat_party = {
 					has_ideology = ideology:ideology_anti_slavery
 					has_ideology = ideology:ideology_laissez_faire
 					has_ideology = ideology:ideology_particularist
-					leader = {
-						has_ideology = ideology:ideology_abolitionist
-						has_ideology = ideology:ideology_social_democrat
-						has_ideology = ideology:ideology_communist
+					leader ?= {
+						OR = {
+								has_ideology = ideology:ideology_abolitionist
+								has_ideology = ideology:ideology_social_democrat
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+						}
 					}
 				}
 			}
@@ -633,7 +636,7 @@ social_democrat_party = {
 				}
 				OR = {
 					has_ideology = ideology:ideology_anti_slavery
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_abolitionist
 					}
 				}
@@ -679,7 +682,7 @@ social_democrat_party = {
 				OR = {
 					has_ideology = ideology:ideology_agrarian
 					has_ideology = ideology:ideology_socialist
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_vanguardist
 							has_ideology = ideology:ideology_protectionist

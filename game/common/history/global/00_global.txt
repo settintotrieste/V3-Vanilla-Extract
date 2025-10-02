@@ -94,7 +94,7 @@ GLOBAL = {
 	c:TUR ?= { # Historically had no foreign debt prior to 1854
 		add_treasury = {
 			value = gold_reserves_limit
-			multiply = -0.5
+			multiply = -0.4
 		}
 	}
 
@@ -658,7 +658,7 @@ GLOBAL = {
 				}
 			}
 			add_radicals_in_state = {
-                value = large_radicals
+                value = 0.15
                 culture = cu:north_italian
             }
 		}

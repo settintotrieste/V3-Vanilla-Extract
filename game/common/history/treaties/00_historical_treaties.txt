@@ -1029,4 +1029,26 @@
 			}
 		}
 	}
+	
+	# Yemen coffee trade
+	create_treaty = {
+		first_country = c:LAH
+		second_country = c:ZAI
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 10 }
+
+		articles_to_create = {
+			{
+				article = goods_transfer
+				source_country = c:ZAI
+				target_country = c:LAH
+				inputs = {
+					{ goods = g:coffee }
+					{ quantity = 20 }
+				}
+			}
+		}
+	}
 }

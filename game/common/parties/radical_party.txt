@@ -265,7 +265,7 @@ radical_party = {
 			any_interest_group = {
 				is_marginal = no
 				OR = {
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_radical
 					}
 					AND = {
@@ -281,7 +281,7 @@ radical_party = {
 			is_interest_group_type = ig_landowners
 			is_interest_group_type = ig_devout
 		}
-		leader = { # fascists and conservatives hate radicals
+		leader ?= { # fascists and conservatives hate radicals
 			NOT = {
 				has_ideology = ideology:ideology_fascist
 				has_ideology = ideology:ideology_integralist
@@ -357,7 +357,7 @@ radical_party = {
 		}
 		if = { # radicals love radicalism
 			limit = {
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_radical
 				}
 			}
@@ -369,7 +369,7 @@ radical_party = {
 		if = {
 			limit = {
 				is_powerful = yes
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_radical
 				}
 			}
@@ -380,7 +380,7 @@ radical_party = {
 		}
 		if = { # radicals will fall in line behind stronger liberals
 			limit = {
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_radical
 				}
 				is_powerful = no
@@ -409,7 +409,7 @@ radical_party = {
 				owner = {
 					any_interest_group = {
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_radical
 						}
 					}
@@ -423,7 +423,7 @@ radical_party = {
 		if = { # weak leftists will fall in line behind radicals pre-revolution
 			limit = {
 				is_powerful = no
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_communist
 						has_ideology = ideology:ideology_vanguardist
@@ -434,7 +434,7 @@ radical_party = {
 					NOT = { has_law_or_variant = law_type:law_council_republic }
 					any_interest_group = {
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_radical
 						}
 					}
@@ -447,7 +447,7 @@ radical_party = {
 		}
 		if = { # various progressives are inclined towards radicalism
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_feminist
 						has_ideology = ideology:ideology_abolitionist
@@ -467,7 +467,7 @@ radical_party = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_populist
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_nihilist
 							has_ideology = ideology:ideology_republican_leader
@@ -504,7 +504,7 @@ radical_party = {
 		}
 		if = { # moderates are scared of radical politics
 			limit = {
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_moderate
 				}
 			}
@@ -520,7 +520,7 @@ radical_party = {
 				}
 				OR = {
 					has_ideology = ideology:ideology_populist
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_radical
 							has_ideology = ideology:ideology_social_democrat
@@ -536,7 +536,7 @@ radical_party = {
 		}
 		if = { # radical anti-censorship
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_radical
 						has_ideology = ideology:ideology_anarchist
@@ -561,7 +561,7 @@ radical_party = {
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_egalitarian
 					has_ideology = ideology:ideology_egalitarian_modern
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_humanitarian
 					}
 				}
@@ -579,7 +579,7 @@ radical_party = {
 				OR = {
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_liberal_modern
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_humanitarian
 							has_ideology = ideology:ideology_radical
@@ -606,7 +606,7 @@ radical_party = {
 				}
 				OR = {
 					has_ideology = ideology:ideology_anti_slavery
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_abolitionist
 					}
 				}
@@ -627,10 +627,13 @@ radical_party = {
 					has_ideology = ideology:ideology_anti_slavery
 					has_ideology = ideology:ideology_laissez_faire
 					has_ideology = ideology:ideology_particularist
-					leader = {
-						has_ideology = ideology:ideology_abolitionist
-						has_ideology = ideology:ideology_social_democrat
-						has_ideology = ideology:ideology_communist
+					leader ?= {
+						OR = {
+								has_ideology = ideology:ideology_abolitionist
+								has_ideology = ideology:ideology_social_democrat
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+						}
 					}
 				}
 			}

@@ -405,9 +405,14 @@
 
 			if = {
 				limit = {
-					owner ?= { has_journal_entry = je_acw_countdown }
+					OR = {
+						owner ?= {
+							has_journal_entry = je_acw_countdown
+						}
+						scope:clout <= 0
+					}
 				}
-				add = 50
+				add = 1000
 			}
 		}
 
@@ -1120,7 +1125,7 @@ movement_royalist_absolutist = {
 					}
 				}
 				AND = {
-				scope:interest_group ?= {
+					scope:interest_group ?= {
 						law_stance = {
 							law = law_type:law_monarchy
 							value > neutral
@@ -1258,8 +1263,17 @@ movement_royalist_absolutist = {
 				is_pop_type = officers
 			}
 			add = {
-				value = 20
+				value = 25
 				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = soldiers
+			}
+			add = {
+				value = 10
+				desc = "POP_SOLDIERS"
 			}
 		}
 
@@ -1634,8 +1648,17 @@ movement_royalist_constitutional = {
 				is_pop_type = officers
 			}
 			add = {
-				value = 20
+				value = 25
 				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = soldiers
+			}
+			add = {
+				value = 10
+				desc = "POP_SOLDIERS"
 			}
 		}
 		else_if = {
@@ -1938,7 +1961,6 @@ movement_labor = { # Explicitly non-socialist labour movement
 		movement_support_laborers
 		movement_support_machinists
 		movement_support_clerks
-		movement_support_peasants
 	}
 	pop_support_weight = {
 		if = {
@@ -2048,15 +2070,6 @@ movement_labor = { # Explicitly non-socialist labour movement
 				add = {
 					value = 10
 					desc = "POP_CLERKS"
-				}
-			}
-			else_if = {
-				limit = {
-					is_pop_type = peasants
-				}
-				add = {
-					value = 10
-					desc = "POP_PEASANTS"
 				}
 			}
 			else = {
@@ -3071,7 +3084,6 @@ movement_communist = {
 		movement_support_academics
 		movement_support_laborers
 		movement_support_machinists
-		movement_support_peasants
 		movement_support_soldiers_conscripts
 	}
 
@@ -4194,6 +4206,7 @@ movement_liberal = {
 				has_ideology = ideology:ideology_reformer
 				has_ideology = ideology:ideology_utopian
 				has_ideology = ideology:ideology_modernizer_leader
+				has_ideology = ideology:ideology_positivist
 				scope:interest_group ?= {
 					OR = {
 						has_ideology = ideology:ideology_liberal
@@ -4272,6 +4285,7 @@ movement_liberal = {
 	}
 
 	pop_support_factors = {
+		movement_support_je_hungarian_revolution
 		movement_support_high_urbanization
 		movement_support_high_literacy
 		movement_support_capitalists
@@ -4348,9 +4362,23 @@ movement_liberal = {
 				limit = {
 					is_pop_type = aristocrats
 				}
-				add = {
-					value = 6
-					desc = "POP_ARISTOCRATS"
+				if = {
+					limit = {
+						culture = cu:hungarian
+						owner ?= {
+							has_journal_entry = je_hungarian_revolution
+						}
+					}
+					add = {
+						value = 25
+						desc = "je_hungarian_revolution"
+					}
+				}
+				else = {
+					add = {
+						value = 6
+						desc = "POP_ARISTOCRATS"
+					}
 				}
 			}
 			else = {
@@ -5231,7 +5259,7 @@ movement_positivist = {
 
 	creation_trigger = {
 		has_global_variable = positivism_invented
-		has_technology_researched = empiricism
+		has_technology_researched = psychiatry
 	}
 	creation_weight = {
 		value = 10
@@ -5292,8 +5320,8 @@ movement_positivist = {
 				has_ideology = ideology:ideology_positivist
 				has_ideology = ideology:ideology_nihilist
 				has_ideology = ideology:ideology_republican_leader
-			scope:interest_group ?= {
-			OR = {
+				scope:interest_group ?= {
+				OR = {
 						is_interest_group_type = ig_armed_forces
 						has_ideology = ideology:ideology_oligarchic
 					}
@@ -6691,8 +6719,9 @@ movement_modernizer = {
 				has_ideology = ideology:ideology_market_liberal
 				has_ideology = ideology:ideology_sovereignist
 				has_ideology = ideology:ideology_utopian
-			scope:interest_group ?= {
-			OR = {
+				has_ideology = ideology:ideology_modernizer_leader
+				scope:interest_group ?= {
+					OR = {
 						has_ideology = ideology:ideology_modernizer
 						has_ideology = ideology:ideology_liberal
 						has_ideology = ideology:ideology_liberal_modern
@@ -6755,6 +6784,7 @@ movement_modernizer = {
 	}
 
 	pop_support_factors = {
+		movement_support_je_hungarian_revolution
 		movement_support_high_urbanization
 		movement_support_high_literacy
 		movement_support_capitalists
@@ -6837,6 +6867,18 @@ movement_modernizer = {
 					add = {
 						value = 25
 						desc = "POP_ARISTOCRATS"
+					}
+				}
+				else_if = {
+					limit = {
+						culture = cu:hungarian
+						owner ?= {
+							has_journal_entry = je_hungarian_revolution
+						}
+					}
+					add = {
+						value = 25
+						desc = "je_hungarian_revolution"
 					}
 				}
 				else = {

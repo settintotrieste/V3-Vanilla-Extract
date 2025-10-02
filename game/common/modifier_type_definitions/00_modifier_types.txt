@@ -686,7 +686,7 @@ country_government_dividends_waste_add={
 	}
 }
 
-country_company_worker_dividends_add={
+building_company_worker_dividends_add={
 	decimals=0
 	color=neutral
 	percent=yes
@@ -695,7 +695,7 @@ country_company_worker_dividends_add={
 	}
 }
 
-country_company_government_dividends_add={
+building_company_government_dividends_add={
 	decimals=0
 	color=neutral
 	percent=yes
@@ -932,6 +932,15 @@ country_voting_power_wealth_threshold_add={
 	}
 }
 
+country_voting_power_mult={
+	decimals=0
+	percent=yes
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
 country_legitimacy_base_add={
 	decimals=0
 	color=good
@@ -989,7 +998,7 @@ country_legitimacy_ideological_incoherence_mult={
 	}
 }
 
-country_party_whip_impact_mult={
+country_party_whip_impact_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -1938,7 +1947,7 @@ state_infrastructure_add={
 }
 
 state_infrastructure_from_population_add={
-	decimals=0
+	decimals=1
 	color=good
 	game_data={
 		ai_value=0

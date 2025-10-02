@@ -7,15 +7,15 @@
 		}
 	}
 	upkeep_modifier = {
-		goods_input_grain_add = 0.5
+		goods_input_grain_add = 0.75
 	}
 	upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.25
-        goods_input_artillery_mult = 0.25
-		goods_input_ammunition_mult = 0.25
-        goods_input_oil_mult = 0.25
-        goods_input_radios_mult = 0.25
-        goods_input_tanks_mult = 0.25
+        goods_input_small_arms_mult = 0.5
+        goods_input_artillery_mult = 0.5
+		goods_input_ammunition_mult = 0.5
+        goods_input_oil_mult = 0.5
+        goods_input_radios_mult = 0.5
+        goods_input_tanks_mult = 0.5
 	}
 
 	unit_modifier = {
@@ -56,7 +56,7 @@ mobilization_option_extra_supplies = {
 	}
 
 	upkeep_modifier = {
-		goods_input_groceries_add = 1
+		goods_input_groceries_add = 1.5
 	}
 	upkeep_modifier_unscaled = {
         goods_input_small_arms_mult = 0.25
@@ -111,8 +111,8 @@ mobilization_option_luxurious_supplies = {
 	}
 
 	upkeep_modifier = {
-		goods_input_meat_add = 1
-		goods_input_wine_add = 1
+		goods_input_meat_add = 1.5
+		goods_input_wine_add = 1.5
 	}
 	upkeep_modifier_unscaled = {
         goods_input_small_arms_mult = 0.25

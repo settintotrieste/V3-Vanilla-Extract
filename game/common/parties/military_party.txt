@@ -218,7 +218,7 @@ military_party = {
 		}
 		if = { # jingoists like the military party
 			limit = {
-				leader = { has_ideology = ideology:ideology_jingoist_leader }
+				leader ?= { has_ideology = ideology:ideology_jingoist_leader }
 			}
 			add = {
 				value = 10
@@ -248,7 +248,7 @@ military_party = {
 					has_ideology = ideology:ideology_jingoist
 					has_ideology = ideology:ideology_particularist
 					has_ideology = ideology:ideology_sikh_moralist
-					leader = {
+					leader ?= {
 						OR = {
 							has_ideology = ideology:ideology_fascist
 							has_ideology = ideology:ideology_anarchist
@@ -270,7 +270,7 @@ military_party = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_proletarian
-					leader = {
+					leader ?= {
 						has_ideology = ideology:ideology_social_democrat
 					}
 					has_ideology = ideology:ideology_loyalist
@@ -317,7 +317,7 @@ military_party = {
 				OR = {
 					has_ideology = ideology:ideology_patriotic
 					has_ideology = ideology:ideology_military_absolutist
-					leader = { has_ideology = ideology:ideology_authoritarian }
+					leader ?= { has_ideology = ideology:ideology_authoritarian }
 				}
 				owner = {
 					NOR = {
@@ -344,7 +344,7 @@ military_party = {
 					has_ideology = ideology:ideology_patriarchal
 					has_ideology = ideology:ideology_patriotic
 					has_ideology = ideology:ideology_military_absolutist
-					leader = { has_ideology = ideology:ideology_authoritarian }
+					leader ?= { has_ideology = ideology:ideology_authoritarian }
 				}
 			}
 			add = {
@@ -354,7 +354,7 @@ military_party = {
 		}
 		if = { # authoritarians like militarism
 			limit = {
-				leader = {
+				leader ?= {
 					has_ideology = ideology:ideology_authoritarian
 				}
 			}
@@ -413,7 +413,7 @@ military_party = {
 		}
 		if = { # anti-orleanist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_bonapartist
 						has_ideology = ideology:ideology_legitimist
@@ -426,7 +426,7 @@ military_party = {
 							is_party_type = military_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_orleanist
 						}
 					}
@@ -439,7 +439,7 @@ military_party = {
 		}
 		if = { # anti-legitimist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_bonapartist
 						has_ideology = ideology:ideology_orleanist
@@ -452,7 +452,7 @@ military_party = {
 							is_party_type = military_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_legitimist
 						}
 					}
@@ -465,7 +465,7 @@ military_party = {
 		}
 		if = { # anti-bonapartist
 			limit = {
-				leader = {
+				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_legitimist
 						has_ideology = ideology:ideology_orleanist
@@ -478,7 +478,7 @@ military_party = {
 							is_party_type = military_party
 						}
 						is_powerful = yes
-						leader = {
+						leader ?= {
 							has_ideology = ideology:ideology_bonapartist
 						}
 					}
@@ -491,7 +491,7 @@ military_party = {
 		}
 		if = {
 			limit = {
-				leader = {
+				leader ?= {
 					NOR = {
 						has_ideology = ideology:ideology_liberal_leader
 						has_ideology = ideology:ideology_republican_leader

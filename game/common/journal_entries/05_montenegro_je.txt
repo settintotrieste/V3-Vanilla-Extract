@@ -264,20 +264,22 @@
 	invalid = { #This is normally ended by deal with Russia, but there is also an odd edgecase where c:TUR no longer borders c:MON
 		OR = {
 			has_variable = mon_stop_raiding_deal #normal way to end JE
-			NOR = { #if any of these assumptions false, JE is invalid. 
+			NOR = {
 				exists = c:TUR
 				exists = c:MON
 				c:MON = this #can't become Yugoslavia or Serbia
+			}
+			NOT = {
 				any_neighbouring_state = { # Turkey must be neighbor, unless it's fighting a civil war. 
-	               OR = {
-	                  c:TUR ?= owner
-	                  AND = {
-	                     exists = owner.civil_war_origin_country
-	                     c:TUR ?= owner.civil_war_origin_country
-	                  }
-	               }
-	            }
-	        }
+					OR = {
+						c:TUR ?= owner
+						AND = {
+							exists = owner.civil_war_origin_country
+							c:TUR ?= owner.civil_war_origin_country
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -781,6 +783,24 @@ je_tur_raided = {
 		trigger_event = {
 			ID = mon_state_formation.14
 			popup = yes
+		}
+		hidden_effect = { # Clear Montenegrin raiding if that hasn't happened already
+			if = {
+				limit = {
+					NOT = {
+						has_global_variable = montenegro_defeat_var
+					}
+				}
+				sr:region_balkans = {
+					every_scope_state = {
+						limit = {
+							has_modifier = raid_target
+						}
+						remove_modifier = raid_target
+					}
+				}
+				set_global_variable = montenegro_defeat_var
+			}
 		}
 	}
 

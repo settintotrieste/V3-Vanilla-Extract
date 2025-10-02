@@ -1518,7 +1518,7 @@ gov_vilayet = {
 		has_law_or_variant = law_type:law_monarchy
 		exists = c:TRI
 		exists = c:TUR
-		c:TRI = ROOT
+		c:TRI ?= ROOT
 		is_subject_of = c:TUR
 		NOT = {
 			is_subject_type = subject_type_crown_land
@@ -1545,7 +1545,7 @@ gov_shah = {
 	possible = {
 		has_law_or_variant = law_type:law_monarchy
 		exists = c:PER
-		c:PER = ROOT
+		c:PER ?= ROOT
 		NOT = {
 			is_subject_type = subject_type_crown_land
 		}
@@ -1571,12 +1571,12 @@ gov_prince = {
 	possible = {
 		has_law_or_variant = law_type:law_monarchy
 		OR = {
-			AND = { exists = c:SER c:SER = ROOT }
-			AND = { exists = c:WAL c:WAL = ROOT }
-			AND = { exists = c:MOL c:MOL = ROOT }
+			AND = { exists = c:SER c:SER ?= ROOT }
+			AND = { exists = c:WAL c:WAL ?= ROOT }
+			AND = { exists = c:MOL c:MOL ?= ROOT }
 			AND = {
 				exists = c:BUL
-				c:BUL = ROOT
+				c:BUL ?= ROOT
 				NOT = {
 					Ruler ?= {
 						has_template = BUL_ferdinand_i

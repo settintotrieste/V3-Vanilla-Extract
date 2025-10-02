@@ -303,12 +303,10 @@ je_the_balkan_league_muster_button = {
      		add_modifier = {
      			name = balkan_wars_muster_conscripts_low_mod
      			days = 1825
-     			multiplier = balkan_league_conscript_multiplier
      		}
      		add_modifier = {
      			name = balkan_wars_muster_conscripts_high_mod
      			days = 1825
-     			multiplier = balkan_league_conscript_multiplier
      		}
      	}
 	}

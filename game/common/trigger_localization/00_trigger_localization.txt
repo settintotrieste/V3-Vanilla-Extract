@@ -498,6 +498,8 @@ is_banning_goods = {
 is_in_revolt = {
 	global = TRIGGER_IS_IN_REVOLT
 	global_not = TRIGGER_IS_IN_REVOLT_NOT
+	third = TRIGGER_IS_IN_REVOLT_THIRD
+	third_not = TRIGGER_IS_IN_REVOLT_THIRD_NOT
 }
 
 is_powerful = {

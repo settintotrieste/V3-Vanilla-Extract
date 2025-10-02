@@ -576,7 +576,7 @@ corn_law_leverage = {
 
 temporary_minimum_wages = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	building_minimum_wage_mult = 0.1
+	building_minimum_wage_mult = 0.2
 }
 
 railway_our_way = {

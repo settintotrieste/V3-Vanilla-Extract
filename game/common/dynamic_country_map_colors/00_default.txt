@@ -237,6 +237,7 @@ republican_china = { # Beiyang Government stays yellow
 		OR = {
 			has_law_or_variant = law_type:law_parliamentary_republic
 			has_law_or_variant = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_corporate_state
 		}
 	}
 }
@@ -279,6 +280,7 @@ republican_portugal = {
 		OR = {
 			has_law_or_variant = law_type:law_parliamentary_republic
 			has_law_or_variant = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_corporate_state
 		}
 	}
 }
@@ -581,6 +583,7 @@ hre_technate = {
 		OR = {
 			has_law_or_variant = law_type:law_parliamentary_republic
 			has_law_or_variant = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_corporate_state
 		}
 		has_law_or_variant = law_type:law_technocracy
 	}
