@@ -769,7 +769,7 @@ peoples_springtime.9 = {
 			is_insurrectionary = yes
 		}
 		capital = {
-			turmoil >= 0.10
+			is_in_revolt = yes
 		}
 	}
 

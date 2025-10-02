@@ -177,7 +177,7 @@ agitators_election_events.2 = {
 		any_scope_character = {
 			has_role = agitator
 			NOT = {
-				this.interest_group = {
+				this.interest_group ?= {
 					is_same_interest_group_type = scope:first_agitator.interest_group
 				}
 			}
@@ -293,7 +293,7 @@ agitators_election_events.2 = {
 			limit = {
 				has_role = agitator
 				NOT = {
-					this.interest_group = {
+					this.interest_group ?= {
 						is_same_interest_group_type = scope:agitator_scope.interest_group
 					}
 				}
@@ -896,7 +896,7 @@ agitators_election_events.6 = {
 					}
 				}
 			}
-			this.interest_group = {
+			this.interest_group ?= {
 				has_party = yes
 			}
 		}
@@ -1083,7 +1083,7 @@ agitators_election_events.8 = {
 			NOT = {
 				has_variable = agitator_election_participation
 			}
-			this.interest_group = {
+			this.interest_group ?= {
 				has_party = yes
 				this.party = {
 					any_member = {
@@ -1094,7 +1094,7 @@ agitators_election_events.8 = {
 			OR = {
 				AND = {
 					has_socialist_ideology = yes
-					this.interest_group = {
+					this.interest_group ?= {
 						leader = {
 							has_socialist_ideology = yes
 						}
@@ -1102,7 +1102,7 @@ agitators_election_events.8 = {
 				}
 				AND = {
 					has_progressive_ideology = yes
-					this.interest_group = {
+					this.interest_group ?= {
 						leader = {
 							has_progressive_ideology = yes
 						}
@@ -1110,7 +1110,7 @@ agitators_election_events.8 = {
 				}
 				AND = {
 					has_liberal_ideology = yes
-					this.interest_group = {
+					this.interest_group ?= {
 						leader = {
 							has_liberal_ideology = yes
 						}
@@ -1118,7 +1118,7 @@ agitators_election_events.8 = {
 				}
 				AND = {
 					has_reactionary_ideology = yes
-					this.interest_group = {
+					this.interest_group ?= {
 						leader = {
 							has_reactionary_ideology = yes
 						}
@@ -1126,7 +1126,7 @@ agitators_election_events.8 = {
 				}
 				AND = {
 					has_conservative_ideology = yes
-					this.interest_group = {
+					this.interest_group ?= {
 						leader = {
 							has_conservative_ideology = yes
 						}
@@ -1186,7 +1186,7 @@ agitators_election_events.8 = {
 						}
 					}
 				}
-				this.interest_group = {
+				this.interest_group ?= {
 					has_party = yes
 					this.party = {
 						any_member = {
@@ -1196,7 +1196,7 @@ agitators_election_events.8 = {
 				}
 			}
 			save_scope_as = agitator_scope
-			this.interest_group = {
+			this.interest_group ?= {
 				save_scope_as = agitator_ig_scope
 				party = {
 					save_scope_as = agitator_party_scope
@@ -1520,7 +1520,7 @@ agitators_election_events.11 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -1688,7 +1688,7 @@ agitators_election_events.12 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -1835,7 +1835,7 @@ agitators_election_events.13 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -1978,7 +1978,7 @@ agitators_election_events.14 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -2174,7 +2174,7 @@ agitators_election_events.15 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -2313,7 +2313,7 @@ agitators_election_events.16 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -2518,7 +2518,7 @@ agitators_election_events.17 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -2653,7 +2653,7 @@ agitators_election_events.18 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -2792,7 +2792,7 @@ agitators_election_events.19 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -2946,7 +2946,7 @@ agitators_election_events.20 = {
 				AND = {
 					trigger_if = {
 						limit = {
-							this.interest_group = {
+							this.interest_group ?= {
 								has_party = yes
 							}
 						}
@@ -3132,7 +3132,7 @@ agitators_election_events.21 = {
 				has_ideology = ideology:ideology_agrarian
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -3218,7 +3218,7 @@ agitators_election_events.22 = {
 				has_ideology = ideology:ideology_agrarian
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -3314,7 +3314,7 @@ agitators_election_events.23 = {
 				has_ideology = ideology:ideology_agrarian
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -3435,7 +3435,7 @@ agitators_election_events.24 = {
 				has_ideology = ideology:ideology_agrarian
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -3524,7 +3524,7 @@ agitators_election_events.25 = {
 				has_ideology = ideology:ideology_agrarian
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -3647,7 +3647,7 @@ agitators_election_events.26 = {
 				has_ideology = ideology:ideology_social_democrat
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -3745,7 +3745,7 @@ agitators_election_events.27 = {
 				has_ideology = ideology:ideology_social_democrat
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -3859,7 +3859,7 @@ agitators_election_events.28 = {
 				has_ideology = ideology:ideology_social_democrat
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -3957,7 +3957,7 @@ agitators_election_events.29 = {
 				has_ideology = ideology:ideology_social_democrat
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -4043,7 +4043,7 @@ agitators_election_events.30 = {
 				has_ideology = ideology:ideology_social_democrat
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -4137,7 +4137,7 @@ agitators_election_events.31 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -4251,7 +4251,7 @@ agitators_election_events.32 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -4410,7 +4410,7 @@ agitators_election_events.33 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -4549,7 +4549,7 @@ agitators_election_events.34 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -4662,7 +4662,7 @@ agitators_election_events.35 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -4853,7 +4853,7 @@ agitators_election_events.36 = {
 				has_ideology = ideology:ideology_slaver
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -4976,7 +4976,7 @@ agitators_election_events.37 = {
 				has_ideology = ideology:ideology_slaver
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -5220,7 +5220,7 @@ agitators_election_events.38 = {
 				has_ideology = ideology:ideology_slaver
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -5381,7 +5381,7 @@ agitators_election_events.39 = {
 				has_ideology = ideology:ideology_slaver
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -5501,7 +5501,7 @@ agitators_election_events.40 = {
 				has_ideology = ideology:ideology_slaver
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -5639,7 +5639,7 @@ agitators_election_events.41 = {
 				has_ideology = ideology:ideology_radical
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -5770,7 +5770,7 @@ agitators_election_events.42 = {
 				has_ideology = ideology:ideology_radical
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -5890,7 +5890,7 @@ agitators_election_events.43 = {
 				has_ideology = ideology:ideology_radical
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -6042,7 +6042,7 @@ agitators_election_events.44 = {
 				has_ideology = ideology:ideology_radical
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -6244,7 +6244,7 @@ agitators_election_events.45 = {
 				has_ideology = ideology:ideology_radical
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -6369,7 +6369,7 @@ agitators_election_events.46 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -6480,7 +6480,7 @@ agitators_election_events.47 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -6617,7 +6617,7 @@ agitators_election_events.48 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -6758,7 +6758,7 @@ agitators_election_events.49 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}
@@ -6872,7 +6872,7 @@ agitators_election_events.50 = {
 				has_ideology = ideology:ideology_market_liberal
 				trigger_if = {
 					limit = {
-						this.interest_group = {
+						this.interest_group ?= {
 							has_party = yes
 						}
 					}

@@ -488,6 +488,7 @@ acw_events.5 = {
 					limit = {
 						is_pop_type = slaves
 					}
+					save_temporary_scope_as = relevant_pop
 					order_by = total_size
 					move_partial_pop = {
 						state = scope:bleeding_kansas
@@ -495,7 +496,15 @@ acw_events.5 = {
 							# move in at most 5% of the target state's population, max 5000, or the max size of the pop, whichever is smaller
 							add = scope:bleeding_kansas.state_population
 							multiply = 0.05
-							max = 5000
+							if = {
+								limit = {
+									scope:relevant_pop.total_size >= 5000
+								}
+								max = 5000
+							}
+							else = {
+								max = scope:relevant_pop.total_size
+							}
 						}
 					}
 				}

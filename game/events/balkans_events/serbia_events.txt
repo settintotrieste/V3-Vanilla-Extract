@@ -70,7 +70,9 @@ serbia.2 = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	trigger = {
-
+		NOT = {
+			has_variable = hide_ruler_change_notification
+		}
 	}
 
 	cancellation_trigger = {

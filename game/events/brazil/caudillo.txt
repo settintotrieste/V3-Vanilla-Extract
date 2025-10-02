@@ -594,7 +594,7 @@ caudillo.6 = {
 				is_ruler = yes
 				is_heir = yes
 			}
-			this.interest_group = {
+			this.interest_group ?= {
 				leader = {
 					NOR = {
 						has_role = general
@@ -622,7 +622,7 @@ caudillo.6 = {
 					is_ruler = yes
 					is_heir = yes
 				}
-				this.interest_group = {
+				this.interest_group ?= {
 					leader = {
 						NOR = {
 							has_role = general
@@ -632,7 +632,7 @@ caudillo.6 = {
 				}
 			}
 			save_scope_as = leadership_challenge_commander
-			this.interest_group = {
+			this.interest_group ?= {
 				save_scope_as = leadership_challenge_ig
 				leader = {
 					save_scope_as = leadership_challenge_politician

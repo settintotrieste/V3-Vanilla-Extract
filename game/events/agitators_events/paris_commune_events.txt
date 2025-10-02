@@ -489,7 +489,7 @@ paris_commune.3 = {
 			text = communards_seize_power_tt
 			every_scope_character = {
 				limit = {
-					this.interest_group = {
+					this.interest_group ?= {
 						is_in_government = yes
 					}
 				}
@@ -543,7 +543,7 @@ paris_commune.3 = {
 			text = communards_seize_power_tt
 			every_scope_character = {
 				limit = {
-					this.interest_group = {
+					this.interest_group ?= {
 						is_in_government = yes
 					}
 				}

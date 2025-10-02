@@ -380,7 +380,6 @@ balkan_wars.7 = {
 		add_modifier = {
 			name = balkan_wars_muster_conscripts_low_mod
 			days = 1825
-			multiplier = money_amount_multiplier_small
 		}
 	}
 
@@ -389,7 +388,6 @@ balkan_wars.7 = {
 		add_modifier = {
 			name = balkan_wars_muster_conscripts_high_mod
 			days = 1825
-			multiplier = money_amount_multiplier_small
 		}
 	}
 }
@@ -490,7 +488,6 @@ balkan_wars.9 = {
 		video = "ip3_angry_mob_raiding_minorities"
 	}
 
-	dlc = dlc014
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 

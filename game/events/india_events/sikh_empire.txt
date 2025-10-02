@@ -332,7 +332,7 @@ sikh_empire.4 = {
 		trigger = {
 			scope:relevant_general = {
 				NOT = {
-					this.interest_group = {
+					this.interest_group ?= {
 						is_interest_group_type = ig_devout
 					}
 				}
