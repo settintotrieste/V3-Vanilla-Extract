@@ -474,7 +474,7 @@
 	TECH_COST_PENALTY_FACTOR = 5.0 # AI tendency to research a tech is divided by ( 1 + this * ahead of time penalty / era base cost )
 
 	# Below data is used to determine which states the AI should incorporate
-	INCORPORATE_STATE_MAX_YEARS = 10 # Max years that incorporation is allowed to take for the AI to incorporate a state
+	INCORPORATE_STATE_MAX_YEARS = 8.5 # Max years that incorporation is allowed to take for the AI to incorporate a state
 	INCORPORATE_STATE_MIN_POPULATION = 100000 # Min population in a state for the AI to incorporate it
 
 	# Below data is used to determine which states are most important to defend
@@ -679,6 +679,7 @@
 
 	MONEY_SPENDING_MILITARY_CRITICAL_THRESHOLD = 0.5 # If actual-to-wanted number of barracks/naval bases is below this, AI will not consider downsizing them further
 	MONEY_SPENDING_MILITARY_EXCESSIVE_THRESHOLD = 2.0 # If actual-to-wanted number of barracks/naval bases is above this, AI considers it a target for cutting spending when needed
+	MONEY_SPENDING_CONSTRUCTION_TOO_LARGE_INVESTMENT_POOL_FACTOR = 0.75 # The higher this is, the more the AI will invest into construction when their investment pool has grown too large for their construction capacity (capped at 1)
 	MONEY_SPENDING_CONSTRUCTION_CRITICAL_THRESHOLD = 0.75 # If actual-to-wanted construction production is below this, AI considers it very important to get more
 	MONEY_SPENDING_CONSTRUCTION_EXCESSIVE_THRESHOLD = 1.05 # If actual-to-wanted construction production is at least this, AI considers it nice to have
 	MONEY_SPENDING_INNOVATION_CRITICAL_THRESHOLD = 0.75 # If innovation production compared to cap is worse than this, AI considers it very important to improve

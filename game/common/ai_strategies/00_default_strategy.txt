@@ -4115,6 +4115,11 @@ ai_strategy_default = {
 			limit = { has_law_or_variant = law_type:law_national_militia }
 			multiply = 0.33
 		}
+		
+		if = {
+			limit = { has_law_or_variant = law_type:law_peasant_levies }
+			multiply = 0.66
+		}		
 
 		if = {
 			limit = {

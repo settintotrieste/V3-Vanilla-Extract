@@ -56,6 +56,10 @@
                     any_country = {
                         NOT = { this = ROOT }
                         country_has_primary_culture = cu:romanian
+                        NOR = {
+                            c:AUS ?= this
+                            c:KUK ?= this
+                        }
                     }
                 }
             }

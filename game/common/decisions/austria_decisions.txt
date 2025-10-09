@@ -146,6 +146,16 @@ aus_revisit_federation_proposal = {
 		}
 		if = {
 			limit = {
+				ruler ?= {
+					NOT = {
+						culture = cu:south_german
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
 				any_subject_or_below = {
 					OR = {
 						is_subject_type = subject_type_crown_land
@@ -155,6 +165,14 @@ aus_revisit_federation_proposal = {
 				}
 			}
 			add = 15
+		}
+		if = {
+			limit = {
+				ruler = {
+					has_template = aus_franz_josef_I_habsburg_template
+				}
+			}
+			add = -10
 		}
 	}
 }

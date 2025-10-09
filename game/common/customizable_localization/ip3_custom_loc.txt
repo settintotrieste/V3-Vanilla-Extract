@@ -4326,16 +4326,16 @@ metternich_institution_checkbox = {
 	text = {
 		trigger = {
 			OR = {
-				institution:institution_police.investment < 3
-				institution:institution_home_affairs.investment < 3
+				institution:institution_police.investment < 2
+				institution:institution_home_affairs.investment < 2
 			}
 		}
 		localization_key = metternich_unticked
 	}
 	text = {
 		trigger = {
-			institution:institution_police.investment >= 3
-			institution:institution_home_affairs.investment >= 3
+			institution:institution_police.investment >= 2
+			institution:institution_home_affairs.investment >= 2
 		}
 		localization_key = metternich_ticked
 	}

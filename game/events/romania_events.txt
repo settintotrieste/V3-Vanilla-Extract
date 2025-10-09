@@ -123,6 +123,10 @@ romania.2 = {
 					}
 					is_subject = no
 	            }
+				NOR = {
+					c:AUS ?= this
+					c:KUK ?= this
+				}
         	}
         	save_scope_as = romania_lesser_partner
         	set_variable = {

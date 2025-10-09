@@ -270,7 +270,7 @@ AFG = { # Afghanistan
 		priority = 30
 		trigger = {
 			coa_def_monarchy_flag_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
 				was_formed_from = HER
 			}
 		}
@@ -850,7 +850,7 @@ AZB = { # Azerbaijan
 		coa = AZB_shirvan
 		priority = 40
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				is_country_type = unrecognized
 				NOT = {
 					has_technology_researched = nationalism
@@ -1124,7 +1124,7 @@ BHT = {
 		overlord_canton_scale = { 0.5 0.5 }
 		priority = 10
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				OR = {
 					is_subject_type = subject_type_chartered_company
 					is_subject_type = subject_type_colony
@@ -1141,7 +1141,7 @@ BHT = {
 		overlord_canton_scale = { 0.33 0.33 }
 		priority = 10
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				OR = {
 					is_subject_type = subject_type_chartered_company
 					is_subject_type = subject_type_dominion
@@ -1432,7 +1432,7 @@ BOS = { # Bosnia
 		priority = 20
 		trigger = {
 			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
 				overlord ?= {
 					c:AUS ?= this
 				}
@@ -2318,7 +2318,7 @@ CIR = { # Circassia
 		priority = 100
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_at_war = yes
 			}
 		}
@@ -2550,7 +2550,7 @@ CRO = { # Croatia
 		trigger = {
 			coa_def_monarchy_flag_trigger = yes
 			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
 				overlord ?= {
 					has_variable = cisleithania_var
 				}
@@ -2574,7 +2574,7 @@ CRO = { # Croatia
 			OR = {
 				AND = {
 					exists = c:AUS
-					scope:actor = {
+					scope:actor ?= {
 						is_subject_of = c:AUS
 					}
 					coa_def_monarchy_flag_trigger = yes
@@ -3591,7 +3591,7 @@ GAL = { # Galicia (Halych)
 		allow_overlord_canton = no
 		priority = 1
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				NOT = {
 					has_technology_researched = nationalism
 				}
@@ -3604,7 +3604,7 @@ GAL = { # Galicia (Halych)
 		allow_overlord_canton = no
 		priority = 15
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				has_technology_researched = nationalism
 				country_has_voting_franchise = no
 			}
@@ -3616,7 +3616,7 @@ GAL = { # Galicia (Halych)
 		allow_overlord_canton = no
 		priority = 30
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				has_technology_researched = nationalism
 				country_has_voting_franchise = yes
 			}
@@ -3889,7 +3889,7 @@ GEO = { # Georgia
 			OR = {
 				coa_def_theocracy_flag_trigger = yes
 				AND = {
-					scope:actor = {
+					scope:actor ?= {
 						is_country_type = unrecognized
 						NOT = {
 							has_technology_researched = nationalism
@@ -11090,7 +11090,7 @@ BEI = { # Beiyang Government
 		allow_overlord_canton = yes
 		priority = 20
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				country_has_primary_culture = cu:manchu
 			}
 			coa_def_monarchy_flag_trigger = yes
@@ -11153,7 +11153,7 @@ KAF = { # Kafiristan
 		subject_canton = KAF_muslim
 		priority = 5
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				OR = {
 					country_has_state_religion = rel:sunni
 					country_has_state_religion = rel:shiite
@@ -11174,7 +11174,7 @@ ALK = { # Alaska
 		priority = 50
 		trigger = {
 			coa_def_russian_ensign_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
 				is_subject_type = subject_type_chartered_company
 			}
 		}
@@ -11184,7 +11184,7 @@ ALK = { # Alaska
 		priority = 75
 		trigger = {
 			coa_def_russian_ensign_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
 				OR = {
 					is_subject_type = subject_type_colony
 					is_subject_type = subject_type_puppet
@@ -11196,7 +11196,7 @@ ALK = { # Alaska
 		coa = ALK_alyaska_republic
 		priority = 75
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				is_subject = no
 				capital ?= {
 					state_region = {
@@ -11406,7 +11406,7 @@ NYM = {
 		subject_canton = NYM_centralized
 		priority = 100
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				NOT = { is_country_type = decentralized }
 			}
 		}
