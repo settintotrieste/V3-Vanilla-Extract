@@ -116,8 +116,8 @@ law_professional_army = {
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}	
-		
+		}
+
 		if = {
 			limit = {
 				has_journal_entry = je_sick_man_army
@@ -141,8 +141,8 @@ law_professional_army = {
 					has_technology_researched = general_staff
 				}
 				has_law_or_variant = law_type:law_peasant_levies
-			}	
-			
+			}
+
 			add = 1000
 		}
 	}
@@ -280,8 +280,8 @@ law_mass_conscription = {
 					has_technology_researched = general_staff
 				}
 				has_law_or_variant = law_type:law_peasant_levies
-			}	
-			
+			}
+
 			add = 1000
 		}
 	}

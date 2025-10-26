@@ -699,7 +699,7 @@
 	GOVERNMENT_BUILDING_BASE_VALUE = 1000 # If no ai_value is scripted in the building
 	GOVERNMENT_BUILDING_FAVORED_GOODS_FACTOR = 0.25 # Total weight is multiplied by ( 1 + this ) for each building output that the AI favors for either import or export
 	GOVERNMENT_BUILDING_DISFAVORED_GOODS_FACTOR = -0.10 # Total weight is multiplied by ( 1 + this ) for each building output good that the AI disfavors
-	GOVERNMENT_BUILDING_NO_AVAILABLE_WORKFORCE_FACTOR = 0.05 # Total weight is multiplied by this if the state lacks enough workforce to staff the building
+	GOVERNMENT_BUILDING_NO_AVAILABLE_WORKFORCE_FACTOR = 0.01 # Total weight is multiplied by this if the state lacks enough workforce to staff the building
 
 	# Below data is used to calculate where the AI will locate new government buildings
 	GOVERNMENT_BUILDING_STATE_CAPITAL_FACTOR = 250 # Add this score for certain types of government buildings in the capital
@@ -751,6 +751,7 @@
 	# Below data is used to calculate how much weight the AI places on a production building
 	PRODUCTION_BUILDING_RANDOM_FACTOR = 10.0 # The higher this is, the more random AI construction will be
 	PRODUCTION_BUILDING_STATE_RANDOM_FACTOR = 0.5 # The higher this is, the more random AI state selection for building types will be
+	PRODUCTION_BUILDING_STATE_NO_AVAILABLE_WORKFORCE_FACTOR = 0.05 # Score for states with no available workforce is multiplied by this when selecting a state to build in
 	PRODUCTION_BUILDING_BASE_VALUE = 1000 # If no ai_value is scripted in the building
 	PRODUCTION_BUILDING_NO_AVAILABLE_WORKFORCE_FACTOR = 0.25 # Total weight is multiplied by this if the state lacks enough workforce to staff the building
 	PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR = 5000 # Per pound of predicted building profit (divided by employee count per level)

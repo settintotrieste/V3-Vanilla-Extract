@@ -152,14 +152,14 @@ colonization_charter = {
 								is_homeland_of_country_cultures = root.owner
 								AND = {
 									owner = root.owner
-									is_incorporated = yes				
+									is_incorporated = yes
 								}
 							}
 						}
 					}
 				}
 			}
-		}		
+		}
 	}
 
 	ai_weight = {
