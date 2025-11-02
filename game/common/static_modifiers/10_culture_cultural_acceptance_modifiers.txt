@@ -3037,3 +3037,14 @@ east_german_cultural_acceptance_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	country_east_german_cultural_acceptance_add = 1
 }
+
+promethean_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_promethean_cultural_acceptance_add = 1
+}
+
+promethean_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_promethean_cultural_acceptance_add = 1
+}
+

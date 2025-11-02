@@ -5076,3 +5076,17 @@ BNT = {
 	cultures = { south_german serb }
 	capital = STATE_DELVIDEK
 }
+
+# Eden
+EDE = {
+	color = { 226 194 106 }
+
+	country_type = unrecognized
+
+	religion = atheist
+
+	tier = principality
+
+	cultures = { promethean }
+	capital = STATE_BAVARIA
+}

@@ -3039,3 +3039,13 @@ east_german_standard_of_living_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	state_east_german_standard_of_living_add = 1
 }
+
+promethean_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_promethean_standard_of_living_add = 1
+}
+
+promethean_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_promethean_standard_of_living_add = 1
+}

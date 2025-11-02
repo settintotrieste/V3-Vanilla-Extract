@@ -2429,3 +2429,11 @@ country_east_german_cultural_acceptance_add={
 		ai_value=0
 	}
 }
+
+country_promethean_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

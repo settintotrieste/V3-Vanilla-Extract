@@ -1470,6 +1470,58 @@ on_monthly_pulse_country = {
 			}
 			set_variable = its_a_blockade_happened
 		}
+		if = { # Nothing to see here, move along, sir.
+			limit = {
+				has_global_variable = frankenstein_happened_global_var
+				any_company = {
+					is_company_type = company_ingolstadt_electrical_company
+					company_is_prosperous = yes
+				}
+			}
+			random_scope_state = {
+				create_pop = {
+					culture = promethean
+					size = {
+						value = owner.total_population
+						divide = 5000
+						min = 500
+						max = 100000
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_variable = frankenstein_happened_global_var
+				any_scope_state = {
+					culture_percent_state = {
+						target = cu:promethean
+						value >= 0.1
+					}
+					NOT = {
+						state_region = { 
+							is_homeland = cu:promethean 
+						}
+					}
+				}
+			}
+			every_scope_state = {
+				limit = {
+					culture_percent_state = {
+						target = cu:promethean
+						value >= 0.1
+					}
+					NOT = {
+						state_region = { 
+							is_homeland = cu:promethean 
+						}
+					}
+				}
+				state_region = { 
+					add_homeland = cu:promethean 
+				}
+			}
+		}
 	}
 	on_actions = { # delay ensures events won't fire simultaneously
 		coup_monthly_events

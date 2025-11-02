@@ -191,6 +191,7 @@ NPolitics = {
 	DEFAULT_LAW_ACTIVATION_DATE = "1836.1.1"
 
 	CIVIL_WAR_COOLDOWN_MONTHS = 9									# After a civil war concludes, it takes this long before another one can start
+	FAILED_CIVIL_WAR_START_COOLDOWN_MONTHS = 3						# If a movement fails to get any supporting states or (for revolutions) supporting army units when trying to start a civil war, wait this long before trying again
 
 	# If there are multiple civil wars that could start, and the current active one has lower activism, it can potentially be replaced by a more viable civil war
 	# This is the minimum delta required for another civil war to replace the active one

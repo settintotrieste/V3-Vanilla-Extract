@@ -2429,3 +2429,11 @@ country_fervor_target_east_german_add={
 		ai_value=0
 	}
 }
+
+country_fervor_target_promethean_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

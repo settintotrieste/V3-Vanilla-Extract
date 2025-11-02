@@ -2649,6 +2649,14 @@ state_east_german_standard_of_living_add={
 	}
 }
 
+state_promethean_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
 state_academics_mortality_mult={
 	decimals=0
 	color=bad

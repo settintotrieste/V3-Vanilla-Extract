@@ -195,3 +195,12 @@ interest_group_in_government_attraction_mult={
 		ai_value=0
 	}
 }
+
+country_frankenstein_company_bool={
+	decimals=0
+	color=neutral
+	boolean=yes
+	game_data={
+		ai_value=0
+	}
+}

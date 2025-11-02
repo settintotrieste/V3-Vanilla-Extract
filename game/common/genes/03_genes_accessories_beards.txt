@@ -365,11 +365,19 @@
 				}
 
 
-				
 
-
-
-	}
+			frankenstein_scars = {
+				index = 19
+				male = {
+					1 = male_beard_frankenstein_scars
+				}
+				female = {
+					1 = male_beard_frankenstein_scars
+				}
+				boy = female
+				girl = female
+			}
+		}
 
 
 

@@ -434,3 +434,42 @@ modifier_bavarocracy_autocratic = {
 	country_authority_mult = 0.05
 	country_suppression_attraction_factor = -0.10
 }
+
+modifier_ungodly_experiments = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -3
+}
+
+modifier_experiment_expenses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 1
+}
+
+modifier_frankenstein_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	character_health_add = 1
+	unit_army_offense_mult = 0.25
+	unit_army_defense_mult = 0.1
+}
+
+modifier_frankenstein_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	character_popularity_add = -100
+}
+
+modifier_frankenstein_3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	unit_army_offense_mult = -0.25
+	unit_army_defense_mult = -0.1
+}
+
+modifier_widespread_pogroms = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_authority_mult = -0.1
+	country_bureaucracy_mult = -0.05
+}
+
+modifier_frankestein_blame = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	character_popularity_add = -20
+}
