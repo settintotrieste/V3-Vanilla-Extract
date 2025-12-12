@@ -12,7 +12,7 @@ company_ingolstadt_electrical_company = {
 	}
 
 	extension_building_types = {
-		building_textile_mills
+		building_textile_mill
 		building_livestock_ranch
 	}
 

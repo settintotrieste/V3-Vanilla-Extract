@@ -2649,7 +2649,95 @@ state_east_german_standard_of_living_add={
 	}
 }
 
+state_griqua_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
 state_promethean_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_asturleonese_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_aragonese_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_scottish_gaelic_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_filipino_mestizo_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_filipino_hispanophone_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_iberian_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_tagalog_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_ilocano_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_visayan_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_lumad_standard_of_living_add={
 	decimals=1
 	color=good
 	game_data={
@@ -3027,6 +3115,14 @@ building_employment_laborers_add={
 	}
 }
 
+building_employment_slaves_add={
+	decimals=0
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
 state_laborers_investment_pool_contribution_add={
 	decimals=0
 	color=good
@@ -3054,6 +3150,15 @@ building_laborers_shares_add={
 }
 
 building_laborers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_slaves_mortality_mult={
 	decimals=0
 	color=bad
 	percent=yes
@@ -3428,52 +3533,52 @@ building_group_bg_heavy_industry_machinists_mortality_mult={
 	}
 }
 
+building_group_bg_military_industry_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_military_industry_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_military_industry_engineers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_military_industry_laborers_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_military_industry_machinists_mortality_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 building_group_bg_plantations_unincorporated_throughput_add={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-building_group_bg_coffee_plantations_throughput_add={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-building_group_bg_tea_plantations_throughput_add={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-building_group_bg_silk_plantations_throughput_add={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-building_group_bg_tobacco_plantations_throughput_add={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-building_group_bg_sugar_plantations_throughput_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -3680,7 +3785,7 @@ country_society_tech_research_speed_mult={
 	}
 }
 
-building_barracks_throughput_add={
+building_barrack_throughput_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -3716,7 +3821,7 @@ building_trade_center_throughput_add={
 	}
 }
 
-building_subsistence_farms_throughput_add={
+building_subsistence_farm_throughput_add={
 	decimals=0
 	color=good
 	percent=yes

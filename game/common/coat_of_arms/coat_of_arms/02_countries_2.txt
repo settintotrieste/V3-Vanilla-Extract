@@ -437,6 +437,16 @@ HRE = {
 	}
 }
 
+HRE_atheist = {
+	pattern = "pattern_solid.tga"
+	color1 = "azure"
+
+	textured_emblem = {
+		texture = "te_eagle_hre_inverted.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
 HRE_republic = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"

@@ -216,7 +216,7 @@ GRE_general_kolokotronis = { # Ioannis Kolokotronis
     commander_usage = {
         country_trigger = {
             exists = c:GRE
-            this = c:GRE
+            c:GRE ?= THIS
         }
         role = general
         earliest_usage_date = 1836.1.1
@@ -241,7 +241,7 @@ GRE_general_kallergis = { # Dimitrios Kallergis
     commander_usage = {
         country_trigger = {
             exists = c:GRE
-            this = c:GRE
+            c:GRE ?= THIS
         }
         role = general
         earliest_usage_date = 1836.1.1
@@ -276,7 +276,7 @@ agitator_ion_dragoumis = { # Ion Dragoumis
             c:GRE ?= this
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_petty_bourgeoisie
@@ -504,7 +504,7 @@ GRE_anastasios_londos = { # Greek politician, mayor of Aigio and senator of the 
 }
 
 # TRADE UNION
-GRE_stavros_kallergis = { # Greek revolutionary and socialist. He is known for organizing the first celebration of the First of May in Greece, in 1893, and being active in various socialist groups in fin de siècle Greece. 
+GRE_stavros_kallergis = { # Greek revolutionary and socialist. He is known for organizing the first celebration of the First of May in Greece, in 1893, and being active in various socialist groups in fin de siècle Greece.
     first_name = Stavros
     last_name = Kallergis
     historical = yes

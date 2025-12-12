@@ -1,6 +1,6 @@
 ﻿je_the_balkan_league = {
 
-	icon = "gfx/interface/icons/event_icons/event_military.dds"	
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
 	scripted_progress_bar = balkan_league_timeout_bar
 
 	scripted_button = je_the_balkan_league_research_mil_tech_start_button
@@ -62,7 +62,7 @@
 					text = ottoman_in_crisis_tt
 					c:TUR ?= {
 						OR = {
-							has_variable = eastern_crisis_happened
+							has_global_variable = eastern_crisis_happened
 							has_variable = failed_sick_man_main
 							has_variable = failed_sick_man_separatism
 							has_variable = grand_collapse_started
@@ -264,7 +264,7 @@
 			any_subject_or_below = {
 				exists = this
 				count = 0
-			}  
+			}
 		}
 	}
 

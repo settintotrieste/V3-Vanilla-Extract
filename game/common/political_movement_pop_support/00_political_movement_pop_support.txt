@@ -307,6 +307,32 @@ movement_support_country_is_autocratic = {
 	}
 }
 
+movement_support_tenant_farmers_law = {
+	name = POP_PEASANTS_TENANT_FARMERS
+
+	visible = {
+		owner ?= {
+			has_law_or_variant = law_type:law_tenant_farmers
+		}
+	}
+}
+
+movement_support_lost_wars = {
+	name = MOVEMENT_SUPPORT_LOST_WARS
+
+	visible = {
+		always = yes
+	}
+}
+
+movement_support_backwardsness = {
+	name = MOVEMENT_SUPPORT_BACKWARDSNESS
+
+	visible = {
+		always = yes
+	}
+}
+
 ## DIPLOMACY FACTORS ##
 
 movement_support_support_separatism_action = {

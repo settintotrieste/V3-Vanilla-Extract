@@ -270,7 +270,7 @@
 	DIPLO_PLAY_SWAY_NON_PRIMARY_DEMAND_IMPACT_MULT = 0.5 # Secondary demands have their impact multiplied by this factor for the purpose of measuring the low impact factor above
 	DIPLO_PLAY_SWAY_SUBJECT_IMPACT_VALUE_DIVISOR = 500 # Wargoals on subjects have their impact multiplied by (the subject's value for overlord divided by this) for the purpose of measuring the low impact factor above (clamped to 0-1)
 	DIPLO_PLAY_SWAY_INCOME_TRANSFER_PACTS_OF_SAME_TYPE_FACTOR = -30 # Added to acceptance score for each income transfer pact the target country has of the same type (where they are the receiver of the money)
-	
+
 	DIPLO_PLAY_SWAY_TOO_LOW_SUPPORT_DESIRE_THRESHOLD = -100 # If a country has this or less support desire, don't bother evaluating sways against them
 	DIPLO_PLAY_UNWANTED_SWAY_OFFER_MEMORY_DURATION_DAYS = 10 # The AI will remember another country not being interested in a particular sway offer for this many days
 	DIPLO_PLAY_CALL_ALLY_PREFERENCE_SCORE = 1000 # When determining which sway the AI wants to offer, score Call Ally this highly
@@ -813,6 +813,10 @@
 	AUTONOMOUS_INVESTMENT_COMPANY_TARGET_STATE_NO_BUILDING_CONSTRUCTION_FACTOR = 20 # Applied when the state does not already have the target building type
 	AUTONOMOUS_INVESTMENT_COMPANY_TARGET_STATE_WITH_BUILDING_CONSTRUCTION_FACTOR = 50 # Applied when the state *does* already have the target building type
 
+	# This much of collectivization fraction translates into self-investment chance for a building
+	# Under total collectivization self investment chance is always 100%
+	AUTONOMOUS_INVESTMENT_SELF_INVESTMENT_CHANCE_FROM_COLLECTIVIZATION = 0.5
+
 	PRODUCTION_BUILDING_TREATY_PORT_TRADE_CENTER_FACTOR = 5.0 		# Score for Trade Center buildings in Treaty Ports is multiplied by this when selecting state for a construction
 	PRODUCTION_BUILDING_TREATY_PORT_NON_TRADE_CENTER_FACTOR = 0.10 	# Score for non Trade Center buildings in Treaty Ports is multiplied by this when selecting state for a construction
 
@@ -908,6 +912,8 @@
 	CHANGE_LAW_CIVIL_WAR_AVERSION_MOVEMENT_SUPPORT_FACTOR = 0.005 # Chance that the AI will stop enacting a law to avoid a civil war is multiplied by ( 1 + highest revolutionary movement support * this )
 	CHANGE_LAW_CIVIL_WAR_AVERSION_SUBJECT_MULTIPLIER = 5 # Chance that AI stops enacting a law to avoid a civil war is multiplied by this for subjects
 	CHANGE_LAW_CIVIL_WAR_AVERSION_LAW_DIRECTION_FLEXIBILITY = 2 # Revolution aversion is multiplied by this and added to the max progressiveness/regressiveness the AI is willing to stomach to avoid a revolution
+
+	DID_NOT_NEGOTIATE_WITH_IG_COOLDOWN_MONTHS = 24					# If the AI decided not to negotiate with an IG for a law enactment, remember that decision for this many months
 
 	# Below data is used to calculate how much weight the AI places on a production method
 	PRODUCTION_METHOD_BASE_VALUE = 1000
@@ -1079,7 +1085,7 @@
 	COMPANY_TYPE_RANDOM_FACTOR = 1						# The higher this is, the more random AI selection of companies will be
 	COMPANY_TYPE_STICKYNESS = 3							# The weight for the company the AI is already planning to create is multiplied by this
 	COMPANY_TYPE_STICKYNESS_DURATION_MONTHS = 60		# After this many months, the stickyness for the company the AI is planning to form is removed
-	COMPANY_TYPE_FORMABLE_FACTOR = 1.25					# Increase weight for a company by this if it's instantly formable 
+	COMPANY_TYPE_FORMABLE_FACTOR = 1.25					# Increase weight for a company by this if it's instantly formable
 	COMPANY_TYPE_FORMABLE_MULTIPLE_FREE_SLOTS_FACTOR = 5.0	# Replaces COMPANY_TYPE_FORMABLE_FACTOR if the country has more than one free company slot
 	COMPANY_TYPE_PRODUCTIVITY_FACTOR = 0.25				# Multiplier for AI weight of companies is increased by ( this * predicted building productivity )
 	COMPANY_TYPE_PRODUCTIVITY_MAX = 4.0					# Effects of COMPANY_TYPE_PRODUCTIVITY_FACTOR  cannot be higher than this

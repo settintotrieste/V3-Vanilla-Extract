@@ -4,11 +4,15 @@
 			template = SIC_ferdinando_di_borbone_delle_due_sicilie
 			on_created = {
 				set_variable = is_married
+				set_variable = house_bourbon
 			}
 		}	
 
 		create_character = {
 			template = SIC_francesco_di_borbone_delle_due_sicilie
+			on_created = {
+				set_variable = house_bourbon
+			}
 		}
 
 		create_character = {
@@ -17,6 +21,9 @@
 
 		create_character = {
 			template = SIC_prince_leopoldo_di_borbone_delle_due_sicilie
+			on_created = {
+				set_variable = house_bourbon
+			}
 		}
 
 		create_character = { # SIC, admiral

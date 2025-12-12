@@ -33,6 +33,7 @@ movement_cultural_majority = {
 			}
 		}
 	}
+
 	creation_weight = {
 		value = 100
 	}
@@ -46,6 +47,9 @@ movement_cultural_majority = {
 			has_ideology = ideology:ideology_fascist
 			has_ideology = ideology:ideology_jingoist_leader
 			has_ideology = ideology:ideology_ethno_nationalist
+		}
+		NOT = {
+			has_variable = anti_nationalist_var
 		}
 	}
 	character_support_weight = {
@@ -137,7 +141,7 @@ movement_cultural_majority = {
 				}
 			}
 		}
-		
+
 		if = {
 			limit = {
 				strata = upper
@@ -258,7 +262,7 @@ movement_cultural_majority = {
 				desc = "NATIONALISM_TECH"
 			}
 		}
-		
+
 		multiply = { # Range from x0.775 to 2.275
 			desc = "POP_CULTURE_FERVOR"
 			value = culture.culture_current_fervor
@@ -375,7 +379,7 @@ movement_cultural_majority = {
 					add = {
 						value = this.obstinance
 						multiply = 5
-					}
+				}
 					multiply = 100
 				}
 			}
@@ -634,6 +638,9 @@ movement_cultural_minority = {
 			has_ideology = ideology:ideology_sovereignist_leader
 			has_ideology = ideology:ideology_reformer
 		}
+		NOT = {
+			has_variable = anti_nationalist_var # Please stop becoming a Polish nationalist, Rosa.
+		}
 	}
 	character_support_weight = {
 		value = 50
@@ -655,6 +662,14 @@ movement_cultural_minority = {
 			}
 			multiply = {
 				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_socialist_ideology = yes
+			}
+			multiply = {
+				value = 0.5
 			}
 		}
 	}
@@ -928,7 +943,7 @@ movement_cultural_minority = {
 				desc = "NATIONALISM_TECH"
 			}
 		}
-		
+
 		multiply = { # Range from x0.775 to 2.275
 			desc = "POP_CULTURE_FERVOR"
 			value = culture.culture_current_fervor
@@ -1050,7 +1065,7 @@ movement_cultural_minority = {
 					add = {
 						value = this.turmoil
 						multiply = 0.5
-					}
+						}
 					add = {
 						value = this.obstinance
 						multiply = 5
@@ -1070,7 +1085,7 @@ movement_cultural_minority = {
 			trigger_else_if = {
 				limit = {
 					owner = {
-						is_country_type = colonial
+						country_is_colonial_or_company = yes
 					}
 				}
 				NOT = {
@@ -1118,34 +1133,34 @@ movement_cultural_minority = {
 		else = {
 			if = {
 				limit = {
-					owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_1 } }
-				}
-
-				add = {
-					value = 0.3
-					desc = "DISCRIMINATION_LEVEL_violent_hostility"
-				}
+				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_1 } }
 			}
-			else_if = {
-				limit = {
-					owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 } }
-				}
 
-				add = {
-					value = 0.2
-					desc = "DISCRIMINATION_LEVEL_cultural_erasure"
-				}
+			add = {
+				value = 0.3
+				desc = "DISCRIMINATION_LEVEL_violent_hostility"
 			}
-			else_if = {
-				limit = {
-					owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_3 } }
-				}
+		}
+		else_if = {
+			limit = {
+				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 } }
+			}
 
-				add = {
-					value = 0.1
-					desc = "DISCRIMINATION_LEVEL_open_prejudice"
-				}
+			add = {
+				value = 0.2
+				desc = "DISCRIMINATION_LEVEL_cultural_erasure"
 			}
+		}
+		else_if = {
+			limit = {
+				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_3 } }
+			}
+
+			add = {
+				value = 0.1
+				desc = "DISCRIMINATION_LEVEL_open_prejudice"
+			}
+		}
 		}
 
 		if = {

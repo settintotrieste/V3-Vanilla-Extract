@@ -25,7 +25,7 @@
 pm_company_headquarter_privately_owned_aristocrats = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
-	
+
 	unlocking_company_categories = {
 		aristocrat_owned
 	}
@@ -52,11 +52,11 @@ pm_company_headquarter_privately_owned_aristocrats = {
 pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
-	
+
 	unlocking_company_categories = {
 		aristocrat_owned
 	}
-	
+
 	unlocking_laws = {
 		law_commercialized_agriculture
 	}
@@ -83,7 +83,7 @@ pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
 pm_company_headquarter_privately_owned_shopkeepers = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
-	
+
 	unlocking_company_categories = {
 		shopkeeper_owned
 	}
@@ -110,7 +110,7 @@ pm_company_headquarter_privately_owned_shopkeepers = {
 pm_company_headquarter_privately_owned_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
-	
+
 	unlocking_company_categories = {
 		bureaucrat_owned
 	}
@@ -137,7 +137,7 @@ pm_company_headquarter_privately_owned_bureaucrats = {
 pm_company_headquarter_privately_owned_academics = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
-	
+
 	unlocking_company_categories = {
 		academic_owned
 	}
@@ -164,7 +164,7 @@ pm_company_headquarter_privately_owned_academics = {
 pm_company_headquarter_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
-	
+
 	unlocking_company_categories = {
 		capitalist_owned
 	}
@@ -230,12 +230,12 @@ pm_company_headquarter_principle_divine_economics_2_aristocrats_commercial_agric
 
 	unlocking_company_categories = {
 		aristocrat_owned
-	}	
-	
+	}
+
 	unlocking_laws = {
 		law_commercialized_agriculture
 	}
-	
+
 	disallowing_laws = {
 		law_command_economy
 		law_cooperative_ownership
@@ -266,8 +266,8 @@ pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
 
 	unlocking_company_categories = {
 		shopkeeper_owned
-	}	
-	
+	}
+
 	disallowing_laws = {
 		law_command_economy
 		law_cooperative_ownership
@@ -299,8 +299,8 @@ pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
 
 	unlocking_company_categories = {
 		bureaucrat_owned
-	}	
-	
+	}
+
 	disallowing_laws = {
 		law_command_economy
 		law_cooperative_ownership
@@ -332,8 +332,8 @@ pm_company_headquarter_principle_divine_economics_2_academics = {
 
 	unlocking_company_categories = {
 		academic_owned
-	}	
-	
+	}
+
 	disallowing_laws = {
 		law_command_economy
 		law_cooperative_ownership

@@ -246,6 +246,15 @@ land_battle_size = {
 
 	save_temporary_value_as = pre_max_amount_cap
 
+	# Multiply by any total combat width modifiers
+	multiply = {
+		value = {
+			add = 1
+			add = modifier:battle_total_combat_width_mult
+		}
+		desc = "battle_total_combat_width_mult"
+	}
+
     # Cap to *actually available* troops
 	if = {
 		limit = {
@@ -280,8 +289,10 @@ land_battle_size = {
             scope:is_advancing_side = yes
 			scope:pre_min_amount_cap < 1
         }
-        min = 1
-		desc = "BATTLE_SIZE_MIN_AMOUNT_REACHED"
+        min = {
+			value = 1
+			desc = "BATTLE_SIZE_MIN_AMOUNT_REACHED"
+		}
     }
 }
 

@@ -116,7 +116,7 @@ je_montenegrin_raiding_decrease_button = {
 		if = {
 			limit = {
 				ROOT.scaled_debt = 0
-				weekly_net_fixed_income >= 0
+				net_fixed_income >= 0
 			}
 			add = 15
 		}
@@ -163,7 +163,7 @@ je_montenegrin_raiding_decrease_button = {
 	cooldown = { months = 6 }
 
 	possible = {
-		hidden_trigger = { 
+		hidden_trigger = {
 			var:raiding_intensity >= 25
 		}
 		NOT = {
@@ -192,13 +192,13 @@ je_montenegrin_raiding_decrease_button = {
 				multiplier = var:raiding_intensity
 			}
 		}
-		c:RUS = {
+		c:RUS ?= {
 			change_relations = {
 				country = root
 				value = 5
 			}
 		}
-		c:TUR = {
+		c:TUR ?= {
 			change_relations = {
 				country = root
 				value = 15
@@ -271,7 +271,7 @@ je_montenegrin_visit_moscow = {
 			months = 25
 		}
 		ROOT.Ruler = {
-			set_variable = is_away #stops certain events, but character can still die in Moscow. 
+			set_variable = is_away #stops certain events, but character can still die in Moscow.
 			set_variable = {
 				name = mon_visited_moscow
 				months = 120
@@ -371,7 +371,7 @@ je_montenegrin_tur_raid_back = {
 				has_variable = counterraided_recently
 			}
 			is_at_war = yes
-			is_diplomatic_play_committed_participant = yes  
+			is_diplomatic_play_committed_participant = yes
 		}
 		c:MON ?= {
 			NOR = {
@@ -383,7 +383,7 @@ je_montenegrin_tur_raid_back = {
 		}
 		custom_tooltip = {
 			text = je_montenegrin_tur_raid_back_condition_tt
-			c:MON ?= { 
+			c:MON ?= {
 				is_country_alive = yes
 				raiding_income > 0
 			}
@@ -416,6 +416,7 @@ je_montenegrin_tur_raid_back = {
 				has_modifier = raid_target
 			}
 			remove_modifier = raid_target
+			remove_global_variable = mon_raid_state
 		}
 		hidden_effect = {
 			set_variable = {

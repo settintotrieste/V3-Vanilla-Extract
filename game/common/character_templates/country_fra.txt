@@ -21,7 +21,7 @@ FRA_louis_philippe = {
 			name = is_married
 		}
 		set_variable = {
-			name = orleanist_leader
+			name = house_orleans
 		}
 	}
 	trait_generation = {
@@ -45,7 +45,7 @@ FRA_ferdinand_philippe = {
 	}
 	on_created = {
 		set_variable = {
-			name = orleanist_leader
+			name = house_orleans
 		}
 	}
 	trait_generation = { }
@@ -303,7 +303,7 @@ FRA_philippe_de_orleans_of_paris = {
 	}
 	on_created = {
 		set_variable = {
-			name = orleanist_leader
+			name = house_orleans
 		}
 	}
 }
@@ -324,7 +324,7 @@ FRA_philippe_de_orleans_of_orleans = {
 	}
 	on_created = {
 		set_variable = {
-			name = orleanist_leader
+			name = house_orleans
 		}
 	}
 }
@@ -343,7 +343,7 @@ FRA_jean_de_orleans = {
 	}
 	on_created = {
 		set_variable = {
-			name = orleanist_leader
+			name = house_orleans
 		}
 	}
 }
@@ -364,7 +364,7 @@ FRA_henri_de_orleans = {
 	}
 	on_created = {
 		set_variable = {
-			name = orleanist_leader
+			name = house_orleans
 		}
 	}
 }
@@ -390,6 +390,7 @@ FRA_louis_antoine_de_bourbon = {
 		set_variable = {
 			name = legitimist_leader
 		}
+		set_variable = house_bourbon
 	}
 }
 
@@ -412,6 +413,7 @@ FRA_henri_de_bourbon = {
 		set_variable = {
 			name = legitimist_leader
 		}
+		set_variable = house_bourbon
 	}
 }
 
@@ -434,6 +436,7 @@ FRA_jean_de_bourbon = {
 		set_variable = {
 			name = legitimist_leader
 		}
+		set_variable = house_bourbon
 	}
 }
 
@@ -457,6 +460,7 @@ FRA_carlos_de_bourbon = {
 		set_variable = {
 			name = legitimist_leader
 		}
+		set_variable = house_bourbon
 	}
 }
 
@@ -479,6 +483,7 @@ FRA_jacques_de_bourbon = {
 		set_variable = {
 			name = legitimist_leader
 		}
+		set_variable = house_bourbon
 	}
 }
 
@@ -501,6 +506,7 @@ FRA_alfonso_carlos_de_bourbon = {
 		set_variable = {
 			name = legitimist_leader
 		}
+		set_variable = house_bourbon
 	}
 }
 
@@ -523,6 +529,7 @@ FRA_alfonso_de_bourbon = {
 		set_variable = {
 			name = legitimist_leader
 		}
+		set_variable = house_bourbon
 	}
 }
 
@@ -543,9 +550,7 @@ FRA_napoleon_eugene_louis_bonaparte = {
 		surveyor
 	}
 	on_created = {
-		set_variable = {
-			name = bonapartist_leader
-		}
+		set_variable = house_bonaparte
 	}
 }
 
@@ -565,7 +570,7 @@ FRA_victor_bonaparte = {
 	}
 	on_created = {
 		set_variable = {
-			name = bonapartist_leader
+			name = house_bonaparte
 		}
 	}
 }
@@ -587,7 +592,7 @@ FRA_louis_bonaparte = {
 	}
 	on_created = {
 		set_variable = {
-			name = bonapartist_leader
+			name = house_bonaparte
 		}
 	}
 }

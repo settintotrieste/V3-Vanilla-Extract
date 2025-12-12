@@ -18,7 +18,7 @@
 				desc = party_british_socialist_party
 				trigger = {
 					exists = c:GBR
-					THIS = c:GBR
+					c:GBR ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -31,7 +31,7 @@
 				desc = party_pcf
 				trigger = {
 					exists = c:FRA
-					THIS = c:FRA
+					c:FRA ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -44,7 +44,7 @@
 				desc = party_kps
 				trigger = {
 					exists = c:SWI
-					THIS = c:SWI
+					c:SWI ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -57,7 +57,7 @@
 				desc = party_nkp
 				trigger = {
 					exists = c:NOR
-					THIS = c:NOR
+					c:NOR ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -70,7 +70,7 @@
 				desc = party_dkp
 				trigger = {
 					exists = c:DEN
-					THIS = c:DEN
+					c:DEN ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -83,7 +83,7 @@
 				desc = party_skp
 				trigger = {
 					exists = c:SWE
-					THIS = c:SWE
+					c:SWE ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -96,7 +96,7 @@
 				desc = party_skp
 				trigger = {
 					exists = c:FIN
-					THIS = c:FIN
+					c:FIN ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -109,7 +109,7 @@
 				desc = party_kpl
 				trigger = {
 					exists = c:LUX
-					THIS = c:LUX
+					c:LUX ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -122,7 +122,7 @@
 				desc = party_bkp
 				trigger = {
 					exists = c:BUL
-					THIS = c:BUL
+					c:BUL ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -135,7 +135,7 @@
 				desc = party_mkp
 				trigger = {
 					exists = c:HUN
-					THIS = c:HUN
+					c:HUN ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -148,7 +148,7 @@
 				desc = party_kpo
 				trigger = {
 					exists = c:AUS
-					THIS = c:AUS
+					c:AUS ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -161,7 +161,7 @@
 				desc = party_jcp
 				trigger = {
 					exists = c:JAP
-					THIS = c:JAP
+					c:JAP ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -174,7 +174,7 @@
 				desc = party_justice_party
 				trigger = {
 					exists = c:PER
-					THIS = c:PER
+					c:PER ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -187,7 +187,7 @@
 				desc = party_socialist_workers_party
 				trigger = {
 					exists = c:MEX
-					THIS = c:MEX
+					c:MEX ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -200,7 +200,7 @@
 				desc = party_kke
 				trigger = {
 					exists = c:GRE
-					THIS = c:GRE
+					c:GRE ?= THIS
 					any_interest_group = {
 						is_powerful = yes
 						leader ?= {
@@ -251,6 +251,30 @@
 							leader ?= {
 								has_ideology = ideology:ideology_vanguardist
 							}
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = party_maximalist_federation
+				trigger = {
+					c:POR ?= this
+					NOT = {
+						any_interest_group = {
+							leader = {
+								has_ideology = ideology:ideology_vanguardist
+							}
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = party_portuguese_communist_party
+				trigger = {
+					c:POR ?= this
+					any_interest_group = {
+						leader = {
+							has_ideology = ideology:ideology_vanguardist
 						}
 					}
 				}
@@ -319,6 +343,7 @@
 				has_ideology = ideology:ideology_ethno_nationalist
 				has_ideology = ideology:ideology_market_liberal
 				has_ideology = ideology:ideology_traditionalist
+				has_ideology = ideology:ideology_carlist
 				has_ideology = ideology:ideology_royalist
 				has_ideology = ideology:ideology_orleanist
 				has_ideology = ideology:ideology_bonapartist
@@ -465,6 +490,7 @@
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_meritocratic
+					has_ideology = ideology:ideology_cartist
 					has_ideology = ideology:ideology_agrarian
 					leader ?= {
 						has_ideology = ideology:ideology_social_democrat
@@ -580,9 +606,9 @@
 					has_ideology = ideology:ideology_particularist
 					leader ?= {
 						OR = {
-								has_ideology = ideology:ideology_abolitionist
-								has_ideology = ideology:ideology_social_democrat
-								has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_abolitionist
+						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_communist
 								has_ideology = ideology:ideology_vanguardist
 						}
 					}
@@ -618,7 +644,7 @@
 			limit = {
 				scope:number = 1
 				is_powerful = no
-				is_marginal = no
+				ig_counts_as_marginal = no
 			}
 			multiply = {
 				value = 2

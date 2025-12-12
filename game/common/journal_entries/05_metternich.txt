@@ -77,7 +77,7 @@
 		}
 		trigger_event = { id = metternich.1 }
 	}
-	
+
 	event_outcome_completed_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -126,7 +126,7 @@
 			trigger_event = { id = metternich.2 }
 		}
 	}
-	
+
 	event_outcome_failed_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -137,7 +137,7 @@
 
 	invalid = {
 		NOT = {
-			has_law_or_variant = law_type:law_monarchy
+			has_law = law_type:law_monarchy
 		}
 	}
 

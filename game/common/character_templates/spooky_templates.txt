@@ -121,7 +121,7 @@ adam_2 = { # Adam without bride
 	age = 25 # Rough visual age
 	religion = rel:atheist
 	traits = {
-		persistent	
+		persistent
 		meticulous
 	#	imposing # Added in event
 	#	cruel

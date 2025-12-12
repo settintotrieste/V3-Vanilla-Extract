@@ -3,6 +3,6 @@
 		py:liberal_party ?= {
 			set_ruling_party = yes
 			add_momentum = -0.15 # Adjusted for historical election results
-		}					
+		}
 	}
 }

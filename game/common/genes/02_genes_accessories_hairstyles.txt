@@ -579,7 +579,7 @@
 			index = 28
 			male = {
 			    1 = male_hair_alexander_karadordevic
-			}
+			    }
 			female = {
 				1 = female_hair_indian_03
 			}
@@ -592,7 +592,7 @@
 			index = 29
 			male = {
 			    1 = male_hair_historical_milos_obrenovic
-			}
+			    }
 			female = {
 				1 = female_hair_indian_03
 			}
@@ -616,9 +616,22 @@
 				1 = male_hair_european_16
 				4 = male_hair_african_01
 				4 = male_hair_african_02
-			}
+			    }
 			female = {
 				1 = female_hair_indian_03
+			}
+			boy = male
+			girl = female
+		}
+
+		hair_portuguese_01 = {
+			index = 31
+			male = {
+			    1 = male_hair_historical_robert_grant
+			}
+
+			female = {
+				1 = female_hair_portuguese_01
 			}
 			boy = male
 			girl = female

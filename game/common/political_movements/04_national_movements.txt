@@ -402,7 +402,7 @@ movement_muslim_nationalist = {
 	}
 
 	can_cause_obstinance = yes
-	
+
 	on_created = {}
 
 	religion_selection_trigger = {
