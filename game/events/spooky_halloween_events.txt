@@ -106,7 +106,7 @@ spooky_halloween_events.1 = {
 		}
 		every_interest_group = {
 			limit = {
-				is_marginal = no
+				ig_counts_as_marginal = no
 			}
 			add_modifier = {
 				name = umbral_coup_modifier
@@ -528,7 +528,7 @@ spooky_halloween_events.4 = {
 						}
 					}
 					exile_character = yes
-				}				
+				}
 			}
 		}
 		ai_chance = {
@@ -610,8 +610,9 @@ spooky_halloween_events.5 = {
 		}
 		custom_tooltip = {
 			text = spooky_halloween_events.5.tt_1
+			set_variable = frankenstein_factory_operational_var
 		}
-		set_variable = frankenstein_factory_operational_var
+		
 		hidden_effect = { # Kills off the dummy Frankenstein
 			random_character_in_void = {
 				limit = {
@@ -656,6 +657,7 @@ spooky_halloween_events.5 = {
 		}
 		custom_tooltip = {
 			text = spooky_halloween_events.5.tt_1
+			set_variable = frankenstein_factory_operational_var
 		}
 		hidden_effect = { # Kills off the dummy Frankenstein
 			random_character_in_void = {
@@ -725,7 +727,7 @@ spooky_halloween_events.5 = {
 					add_trait = scarred
 				}
 			}
-		}	
+		}
 		if = {
 			limit = {
 				any_scope_character = {
@@ -787,7 +789,7 @@ spooky_halloween_events.6 = {
 			limit = {
 				any_scope_pop = {
 					culture = cu:promethean
-				}				
+				}
 			}
 			save_scope_as = relevant_state_scope
 		}
@@ -843,7 +845,7 @@ spooky_halloween_events.6 = {
 			add_modifier = {
 				name = modifier_frankestein_blame
 				days = normal_modifier_time
-			}				
+			}
 		}
 		scope:relevant_state_scope = {
 			add_radicals = {
