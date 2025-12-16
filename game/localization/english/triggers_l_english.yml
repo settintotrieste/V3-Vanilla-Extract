@@ -1,5 +1,5 @@
 ﻿l_english:
- ANY_TRIGGER_FILTER_TEXT:2 "#tooltippable #tooltip:[GetRawTextTooltipTag('$FILTER$')] eligible#!#! "
+ ANY_TRIGGER_FILTER_TEXT: "#tooltippable #tooltip:[GetRawTextTooltipTag('$FILTER$')] eligible#!#! "
  TRIGGER_PASSED:1 "@green_checkmark_box! $TEXT$"
  TRIGGER_POTENTIAL:0 "@simple_box! $TEXT$"
  TRIGGER_FAILED:1 "@red_cross! $TEXT$"
@@ -23,6 +23,8 @@
  TRIGGER_IS_HOMELAND_NOT:2 "[concept_state] is #bold not #!a [TARGET_CULTURE.GetName] [concept_homeland]"
  TRIGGER_IS_HOMELAND_THIRD:0 "[STATE_REGION.GetName] is a [TARGET_CULTURE.GetName] [concept_homeland]"
  TRIGGER_IS_HOMELAND_THIRD_NOT:0 "[STATE_REGION.GetName] is #bold not #!a [TARGET_CULTURE.GetName] [concept_homeland]"
+ TRIGGER_IS_HOMELAND_NONE: "$TRIGGER_IS_HOMELAND$"
+ TRIGGER_IS_HOMELAND_NONE_NOT: "$TRIGGER_IS_HOMELAND_NOT$"
 
  TRIGGER_HAS_HOMELAND:0 "[CULTURE.GetName] considers [TARGET_STATE_REGION.GetName] a homeland"
  TRIGGER_HAS_HOMELAND_NOT:1 "[CULTURE.GetName] does #bold not #!consider [TARGET_STATE_REGION.GetName] a homeland"
@@ -220,6 +222,13 @@
  TRIGGER_HAS_INACTIVE_JOURNAL_ENTRY_THIRD: "[COUNTRY.GetName] has an inactive [JOURNAL_ENTRY_TYPE.GetName] [concept_journal_entry]"
  TRIGGER_HAS_INACTIVE_JOURNAL_ENTRY_THIRD_NOT: "[COUNTRY.GetName] does #bold not #!have an inactive [JOURNAL_ENTRY_TYPE.GetName] [concept_journal_entry]"
 
+ TRIGGER_IS_INVOLVED_IN_JOURNAL_ENTRY: "Is involved in the [JOURNAL_ENTRY_TYPE.GetName] [concept_journal_entry]"
+ TRIGGER_IS_INVOLVED_IN_JOURNAL_ENTRY_NOT: "Is #b not#! involved in the [JOURNAL_ENTRY_TYPE.GetName] [concept_journal_entry]"
+ TRIGGER_IS_INVOLVED_IN_JOURNAL_ENTRY_FIRST: "[COUNTRY.GetNameNoFlag] is involved in the [JOURNAL_ENTRY_TYPE.GetName] [concept_journal_entry]"
+ TRIGGER_IS_INVOLVED_IN_JOURNAL_ENTRY_FIRST_NOT: "[COUNTRY.GetNameNoFlag] is #b not#! involved in the [JOURNAL_ENTRY_TYPE.GetName] [concept_journal_entry]"
+ TRIGGER_IS_INVOLVED_IN_JOURNAL_ENTRY_THIRD: "[COUNTRY.GetName] is involved in the [JOURNAL_ENTRY_TYPE.GetName] [concept_journal_entry]"
+ TRIGGER_IS_INVOLVED_IN_JOURNAL_ENTRY_THIRD_NOT: "[COUNTRY.GetName] is #b not#! involved in the [JOURNAL_ENTRY_TYPE.GetName] [concept_journal_entry]"
+
  TRIGGER_HAS_VARIABLE:1 "#variable The Country#! has #variable the variable in question#!"
  TRIGGER_HAS_VARIABLE_NOT:2 "#variable The Country#! does #bold not #!have #variable the variable in question#!"
  TRIGGER_HAS_VARIABLE_FIRST:1 "#variable The Country#! has #variable the variable in question#!"
@@ -262,9 +271,17 @@
 
  TRIGGER_IS_DIPLOMATIC_PLAY_COMMITTED_PARTICIPANT:0 "Is a committed participant in any [concept_diplomatic_play]"
  TRIGGER_IS_DIPLOMATIC_PLAY_COMMITTED_PARTICIPANT_NOT:1 "Is #bold not #!a committed participant in any [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_COMMITTED_PARTICIPANT_THIRD: "[COUNTRY.GetNameNoFlag] is a committed participant in any [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_COMMITTED_PARTICIPANT_THIRD_NOT: "[COUNTRY.GetNameNoFlag] is #bold not #!a committed participant in any [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_COMMITTED_PARTICIPANT_FIRST: "[COUNTRY.GetNameNoFlag] is a committed participant in any [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_COMMITTED_PARTICIPANT_FIRST_NOT: "[COUNTRY.GetNameNoFlag] is #bold not #!a committed participant in any [concept_diplomatic_play]"
 
  TRIGGER_IS_DIPLOMATIC_PLAY_UNDECIDED_PARTICIPANT:0 "Is an undecided participant in any [concept_diplomatic_play]"
  TRIGGER_IS_DIPLOMATIC_PLAY_UNDECIDED_PARTICIPANT_NOT:1 "Is #bold not #!an undecided participant in any [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_UNDECIDED_PARTICIPANT_FIRST: "[COUNTRY.GetNameNoFlag] is an undecided participant in any [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_UNDECIDED_PARTICIPANT_FIRST_NOT: "[COUNTRY.GetNameNoFlag] is #bold not #!an undecided participant in any [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_UNDECIDED_PARTICIPANT_THIRD: "[COUNTRY.GetNameNoFlag] is an undecided participant in any [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_UNDECIDED_PARTICIPANT_THIRD_NOT: "[COUNTRY.GetNameNoFlag] is #bold not #!an undecided participant in any [concept_diplomatic_play]"
 
  TRIGGER_IS_DIPLOMATIC_PLAY_TARGET:0 "Is a target in any diplomatic play"
  TRIGGER_IS_DIPLOMATIC_PLAY_TARGET_NOT:1 "Is #bold not #!a target in any diplomatic play"
@@ -381,6 +398,15 @@
  TRIGGER_HAS_RELIGION:0 "Belongs to the [TARGET_RELIGION.GetName] [concept_religion]"
  TRIGGER_HAS_RELIGION_NOT:1 "Does #bold not#! belong to the [TARGET_RELIGION.GetName] [concept_religion]"
 
+ TRIGGER_IS_IN_GEOGRAPHIC_REGION: "is in [GeographicRegion.GetName]"
+ TRIGGER_IS_IN_GEOGRAPHIC_REGION_NOT: "is #bold not#! in [GeographicRegion.GetName]"
+
+ TRIGGER_IS_IN_GEOGRAPHIC_REGION_THIRD: "$SCOPE_NAME$ is in [GeographicRegion.GetName]"
+ TRIGGER_IS_IN_GEOGRAPHIC_REGION_THIRD_NOT: "$SCOPE_NAME$ is #bold not#! in [GeographicRegion.GetName]"
+
+ TRIGGER_IS_IN_GEOGRAPHIC_REGION_NONE: "is in this [concept_georegion]"
+ TRIGGER_IS_IN_GEOGRAPHIC_REGION_NONE_NOT: "is #b not#! in this [concept_georegion]"
+
  TRIGGER_IS_EMPLOYED:0 "Is employed"
  TRIGGER_IS_EMPLOYED_NOT:1 "Is #bold not #!employed"
 
@@ -416,15 +442,19 @@
 
  TRIGGER_IS_BUSY:0 "Is [concept_busy]"
  TRIGGER_IS_BUSY_NOT:1 "Is #bold not#! [concept_busy]"
+ TRIGGER_IS_BUSY_THIRD: "[Character.GetFullName] is [concept_busy]"
+ TRIGGER_IS_BUSY_THIRD_NOT: "[Character.GetFullName] is not [concept_busy]"
 
  TRIGGER_IS_IN_VOID:0 "Has vanished"
  TRIGGER_IS_IN_VOID_NOT:1 "Has #bold not #!vanished"
 
  TRIGGER_IS_BUILDING_TYPE:0 "Building is [BUILDING_TYPE.GetName]"
  TRIGGER_IS_BUILDING_TYPE_NOT:1 "Building is #bold not #![BUILDING_TYPE.GetName]"
+ TRIGGER_IS_BUILDING_TYPE_NONE: "$TRIGGER_IS_BUILDING_TYPE$"
+ TRIGGER_IS_BUILDING_TYPE_NONE_NOT: "$TRIGGER_IS_BUILDING_TYPE_NOT$"
 
- TRIGGER_IS_BUILDING_GROUP:0 "Building is in $BUILDING_GROUP|v$ group"
- TRIGGER_IS_BUILDING_GROUP_NOT:0 "Building is #bold not#! in $BUILDING_GROUP|v$ group"
+ TRIGGER_IS_BUILDING_GROUP:0 "Building is in [BUILDING_GROUP.GetName] group"
+ TRIGGER_IS_BUILDING_GROUP_NOT:0 "Building is #bold not#! in [BUILDING_GROUP.GetName] group"
 
  TRIGGER_EXPECTED_QUALITY_OF_LIFE:0 "Expected Standard of Living $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_EXPECTED_QUALITY_OF_LIFE_NOT:1 "Expected Standard of Living #bold not #!$COMPARATOR$ #variable $NUM$#!"
@@ -485,6 +515,10 @@
 
  TRIGGER_HAS_WAR_WITH:0 "Is at war with [TARGET_COUNTRY.GetName]"
  TRIGGER_HAS_WAR_WITH_NOT:1 "Is #bold not #!at war with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_WAR_WITH_FIRST: "[COUNTRY.GetNameNoFlag] is at war with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_WAR_WITH_FIRST_NOT:1 "[COUNTRY.GetNameNoFlag] is #bold not#! at war with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_WAR_WITH_THIRD:0 "[COUNTRY.GetName] is at war with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_WAR_WITH_THIRD_NOT:1 "[COUNTRY.GetName] is #bold not#! at war with [TARGET_COUNTRY.GetName]"
 
  TRIGGER_IS_DIPLOMATIC_PLAY_ENEMY_OF:0 "Is opposing [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
  TRIGGER_IS_DIPLOMATIC_PLAY_ENEMY_OF_NOT:0 "Is #bold not #!opposing [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
@@ -495,27 +529,29 @@
 
  TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF: "Is on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
  TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_NOT: "Is #bold not #!on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_FIRST: "[Country.GetNameNoFlag] is on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_FIRST_NOT: "[Country.GetNameNoFlag] is #bold not #!on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_THIRD: "[Country.GetName] is on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_THIRD_NOT: "[Country.GetName] is #bold not #!on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_FIRST: "[COUNTRY.GetNameNoFlag] is on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_FIRST_NOT: "[COUNTRY.GetNameNoFlag] is #bold not #!on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_THIRD: "[COUNTRY.GetName] is on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_ALLY_OF_THIRD_NOT: "[COUNTRY.GetName] is #bold not #!on the same side as [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
 
  TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH: "Is a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
  TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_NOT: "Is #bold not #!a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_FIRST: "[Country.GetNameNoFlag] is a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_FIRST_NOT: "[Country.GetNameNoFlag] is #bold not #!a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_THIRD: "[Country.GetName] is a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_THIRD_NOT: "[Country.GetName] is #bold not #!a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_FIRST: "[COUNTRY.GetNameNoFlag] is a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_FIRST_NOT: "[COUNTRY.GetNameNoFlag] is #bold not #!a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_THIRD: "[COUNTRY.GetName] is a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_PARTICIPANT_WITH_THIRD_NOT: "[COUNTRY.GetName] is #bold not #!a committed participant alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
 
  TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH: "Is an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
  TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_NOT: "Is #bold not #!an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_FIRST: "[Country.GetNameNoFlag] is an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_FIRST_NOT: "[Country.GetNameNoFlag] is #bold not #!an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_THIRD: "[Country.GetName] is an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
- TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_THIRD_NOT: "[Country.GetName] is #bold not #!an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_FIRST: "[COUNTRY.GetNameNoFlag] is an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_FIRST_NOT: "[COUNTRY.GetNameNoFlag] is #bold not #!an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_THIRD: "[COUNTRY.GetName] is an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
+ TRIGGER_IS_DIPLOMATIC_PLAY_INVOLVED_WITH_THIRD_NOT: "[COUNTRY.GetName] is #bold not #!an involved country alongside [TARGET_COUNTRY.GetName] in a [concept_diplomatic_play]"
 
  TRIGGER_HAS_DIPLOMATS_EXPELLED:0 "Has recently expelled diplomats of [TARGET_COUNTRY.GetName]"
- TRIGGER_HAS_DIPLOMATS_EXPELLED_NOT:1 "Have #bold not #!recently expelled diplomats of [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_DIPLOMATS_EXPELLED_NOT:2 "Has #bold not#! recently expelled diplomats of [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_DIPLOMATS_EXPELLED_THIRD: "[COUNTRY.GetName] has recently expelled diplomats of [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_DIPLOMATS_EXPELLED_THIRD_NOT: "[COUNTRY.GetName] has #bold not#! recently expelled diplomats of [TARGET_COUNTRY.GetName]"
 
  TRIGGER_HAS_STRATEGIC_ADJACENCY:0 "Has a strategic adjacency to $TARGET$"
  TRIGGER_HAS_STRATEGIC_ADJACENCY_NOT:1 "Does #bold not #!have a strategic adjacency to $TARGET$"
@@ -523,6 +559,11 @@
  TRIGGER_HAS_STRATEGIC_ADJACENCY_FIRST_NOT:0 "[COUNTRY.GetNameNoFlag] does #bold not#! have a strategic adjacency to $TARGET$"
  TRIGGER_HAS_STRATEGIC_ADJACENCY_THIRD:0 "[COUNTRY.GetName] has a strategic adjacency to $TARGET$"
  TRIGGER_HAS_STRATEGIC_ADJACENCY_THIRD_NOT:0 "[COUNTRY.GetName] does #bold not#! have a strategic adjacency to $TARGET$"
+
+ TRIGGER_IS_ADJACENT_TO_MARKET: "Is adjacent to [TARGET_MARKET.GetName]"
+ TRIGGER_IS_ADJACENT_TO_MARKET_NOT: "Is #bold not#! adjacent to  [TARGET_MARKET.GetName]"
+ TRIGGER_IS_ADJACENT_TO_MARKET_THIRD: "[MARKET.GetName] is adjacent to [TARGET_MARKET.GetName]"
+ TRIGGER_IS_ADJACENT_TO_MARKET_THIRD_NOT: "[MARKET.GetName] is #bold not#! adjacent to [TARGET_MARKET.GetName]"
 
  TRIGGER_IS_ADJACENT_TO_COUNTRY:1 "Is adjacent to [TARGET_COUNTRY.GetName]"
  TRIGGER_IS_ADJACENT_TO_COUNTRY_NOT:1 "Is #bold not#! adjacent to [TARGET_COUNTRY.GetName]"
@@ -537,6 +578,16 @@
  TRIGGER_IS_ADJACENT_TO_STATE_FIRST_NOT: "[COUNTRY.GetNameNoFlag] is #bold not#! adjacent to [TARGET_STATE.GetName]"
  TRIGGER_IS_ADJACENT_TO_STATE_THIRD: "[COUNTRY.GetName] is adjacent to [TARGET_STATE.GetName]"
  TRIGGER_IS_ADJACENT_TO_STATE_THIRD_NOT: "[COUNTRY.GetName] is #bold not#! adjacent to [TARGET_STATE.GetName]"
+
+ TRIGGER_IS_EXPORTED_TO: "Is exported from [MARKET_GOODS.GetMarket.GetName] to [TARGET_MARKET.GetName]"
+ TRIGGER_IS_EXPORTED_TO_NOT: "Is #bold not#! exported from [MARKET_GOODS.GetMarket.GetName] to [TARGET_MARKET.GetName]"
+ TRIGGER_IS_EXPORTED_TO_THIRD: "[MARKET_GOODS.GetGoods.GetName] is exported from [MARKET_GOODS.GetMarket.GetName] to [TARGET_MARKET.GetName]"
+ TRIGGER_IS_EXPORTED_TO_THIRD_NOT: "[MARKET_GOODS.GetGoods.GetName] is #bold not#! exported from [MARKET_GOODS.GetMarket.GetName] to [TARGET_MARKET.GetName]"
+
+ TRIGGER_IS_IMPORTED_FROM: "Is imported from [TARGET_MARKET.GetName] to [MARKET_GOODS.GetMarket.GetName]"
+ TRIGGER_IS_IMPORTED_FROM_NOT: "Is #bold not#! imported from [TARGET_MARKET.GetName] to [MARKET_GOODS.GetMarket.GetName]"
+ TRIGGER_IS_IMPORTED_FROM_THIRD: "[MARKET_GOODS.GetGoods.GetName] is imported from [TARGET_MARKET.GetName] to [MARKET_GOODS.GetMarket.GetName]"
+ TRIGGER_IS_IMPORTED_FROM_THIRD_NOT: "[MARKET_GOODS.GetGoods.GetName] is #bold not#! imported from [TARGET_MARKET.GetName] to [MARKET_GOODS.GetMarket.GetName]"
 
  TRIGGER_HAS_OVERLAPPING_INTERESTS:2 "Has [Concept('concept_interest', '$concept_interests$')] in the same [Concept('concept_strategic_region','$concept_strategic_regions$')] as [TARGET_COUNTRY.GetName]"
  TRIGGER_HAS_OVERLAPPING_INTERESTS_NOT:2 "Does #bold not#! have have any [Concept('concept_interest', '$concept_interests$')] in the same [Concept('concept_strategic_region','$concept_strategic_regions$')] as [TARGET_COUNTRY.GetName]"
@@ -839,14 +890,42 @@
  TRIGGER_LOYALTY:0 "Loyalists are $COMPARATOR$ #variable $NUM|%$#!"
  TRIGGER_LOYALTY_NOT:1 "Loyalists are #bold not #!$COMPARATOR$ #variable $NUM|%$#!"
 
+ TRIGGER_MOVEMENT_CAN_CAUSE_OBSTINANCE: "Can cause obstinance"
+ TRIGGER_MOVEMENT_CAN_CAUSE_OBSTINANCE_NOT: "Can #bold not#! cause obstinance"
+ TRIGGER_MOVEMENT_CAN_CAUSE_OBSTINANCE_FIRST: "[POLITICAL_MOVEMENT.GetName] can cause obstinance"
+ TRIGGER_MOVEMENT_CAN_CAUSE_OBSTINANCE_FIRST_NOT: "[POLITICAL_MOVEMENT.GetName] can #bold not#! cause obstinance"
+ TRIGGER_MOVEMENT_CAN_CAUSE_OBSTINANCE_THIRD: "[POLITICAL_MOVEMENT.GetName] can cause obstinance"
+ TRIGGER_MOVEMENT_CAN_CAUSE_OBSTINANCE_THIRD_NOT: "[POLITICAL_MOVEMENT.GetName] can #bold not#! cause obstinance"
+
+ TRIGGER_MOVEMENT_IS_CAUSING_OBSTINANCE: "Is causing obstinance"
+ TRIGGER_MOVEMENT_IS_CAUSING_OBSTINANCE_NOT: "Is #bold not#! causing obstinance"
+ TRIGGER_MOVEMENT_IS_CAUSING_OBSTINANCE_FIRST: "[POLITICAL_MOVEMENT.GetName] is causing obstinance"
+ TRIGGER_MOVEMENT_IS_CAUSING_OBSTINANCE_FIRST_NOT: "[POLITICAL_MOVEMENT.GetName] is #bold not#! causing obstinance"
+ TRIGGER_MOVEMENT_IS_CAUSING_OBSTINANCE_THIRD: "[POLITICAL_MOVEMENT.GetName] is causing obstinance"
+ TRIGGER_MOVEMENT_IS_CAUSING_OBSTINANCE_THIRD_NOT: "[POLITICAL_MOVEMENT.GetName] is #bold not#! causing obstinance"
+
+ TRIGGER_OBSTINANCE: "Obstinance is $COMPARATOR$ #variable $NUM|%$#!"
+ TRIGGER_OBSTINANCE_NOT: "Obstinance is #bold not #!$COMPARATOR$ #variable $NUM|%$#!"
+ TRIGGER_OBSTINANCE_FIRST: "Obstinance in [STATE.GetName] is $COMPARATOR$ #variable $NUM|%$#!"
+ TRIGGER_OBSTINANCE_FIRST_NOT: "Obstinance in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM|%$#!"
+ TRIGGER_OBSTINANCE_THIRD: "Obstinance in [STATE.GetName] is $COMPARATOR$ #variable $NUM|%$#!"
+ TRIGGER_OBSTINANCE_THIRD_NOT: "Obstinance in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM|%$#!"
+
  TRIGGER_POLLUTION_GENERATION:0 "Total pollution generation is $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_POLLUTION_GENERATION_NOT:1 "Total pollution generation is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+
+ TRIGGER_YEARS_TO_INCORPORATE:0 "Will take $COMPARATOR$ #variable $NUM|0$#! years to incorporate"
+ TRIGGER_YEARS_TO_INCORPORATE_NOT:1 "Will #bold not #! take $COMPARATOR$ #variable $NUM|0$#! years to incorporate"
+ TRIGGER_YEARS_TO_INCORPORATE_THIRD:0 "[STATE.GetName] will take $COMPARATOR$ #variable $NUM|0$#! years to incorporate"
+ TRIGGER_YEARS_TO_INCORPORATE_THIRD_NOT:1 "[STATE.GetName] will #bold not #! take $COMPARATOR$ #variable $NUM|0$#! years to incorporate"
 
  TRIGGER_INCORPORATION_PROGRESS:0 "Total Incorporation progress is $COMPARATOR$ #variable $NUM|%$#!"
  TRIGGER_INCORPORATION_PROGRESS_NOT:1 "Total Incorporation progress is #bold not #!$COMPARATOR$ #variable $NUM|%$#!"
 
- TRIGGER_IS_IN_REVOLT:0 "Loyalists $COMPARATOR$ #variable $NUM|%$#!"
- TRIGGER_IS_IN_REVOLT_NOT:1 "Loyalists #bold not #!$COMPARATOR$ #variable $NUM|%$#!"
+ TRIGGER_IS_IN_REVOLT:0 "[concept_state] is in [Concept('concept_insurrection', '$concept_revolt$')]"
+ TRIGGER_IS_IN_REVOLT_NOT:1 "[concept_state] is #b not#! in [Concept('concept_insurrection', '$concept_revolt$')]"
+ TRIGGER_IS_IN_REVOLT_THIRD:0 "[STATE.GetName] is in [Concept('concept_insurrection', '$concept_revolt$')]"
+ TRIGGER_IS_IN_REVOLT_THIRD_NOT:1 "[STATE.GetName] is #b not#! in [Concept('concept_insurrection', '$concept_revolt$')]"
 
  TRIGGER_INFRASTRUCTURE:0 "Infrastructure $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_INFRASTRUCTURE_NOT:1 "Infrastructure #bold not #!$COMPARATOR$ #variable $NUM$#!"
@@ -922,12 +1001,12 @@
  TRIGGER_INVESTMENT_POOL_NET_INCOME_THIRD: "Weekly balance of [Country.GetAdjective] [concept_investment_pool] after expenses $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_INVESTMENT_POOL_NET_INCOME_THIRD_NOT: "Weekly balance of [Country.GetAdjective] [concept_investment_pool] after expenses #bold not #!$COMPARATOR$ #variable $NUM$#!"
 
- TRIGGER_HIGHEST_SECESSION_PROGRESS:1 "Highest Secession Movement Progress $COMPARATOR$ #variable $NUM|%1$#!"
- TRIGGER_HIGHEST_SECESSION_PROGRESS_NOT:2 "Highest Secession Movement Progress #bold not #!$COMPARATOR$ #variable $NUM|%1$#!"
- TRIGGER_HIGHEST_SECESSION_PROGRESS_FIRST:1 "Highest [Country.GetAdjectiveNoFlag] [concept_secession] Movement Progress $COMPARATOR$ #variable $NUM|%1$#!"
- TRIGGER_HIGHEST_SECESSION_PROGRESS_FIRST_NOT:2 "Highest [Country.GetAdjectiveNoFlag] [concept_secession] Movement Progress #bold not #!$COMPARATOR$ #variable $NUM|%1$#!"
- TRIGGER_HIGHEST_SECESSION_PROGRESS_THIRD:1 "Highest [concept_secession] Movement in [Country.GetName] Progress $COMPARATOR$ #variable $NUM|%1$#!"
- TRIGGER_HIGHEST_SECESSION_PROGRESS_THIRD_NOT:2 "Highest [concept_secession] Movement in [Country.GetName] Progress #bold not #!$COMPARATOR$ #variable $NUM|%1$#!"
+ TRIGGER_HIGHEST_SECESSION_PROGRESS:1 "Highest Secession Progress $COMPARATOR$ #variable $NUM|%1$#!"
+ TRIGGER_HIGHEST_SECESSION_PROGRESS_NOT:2 "Highest Secession Progress #bold not #!$COMPARATOR$ #variable $NUM|%1$#!"
+ TRIGGER_HIGHEST_SECESSION_PROGRESS_FIRST:1 "Highest [Country.GetAdjectiveNoFlag] [concept_secession] Progress $COMPARATOR$ #variable $NUM|%1$#!"
+ TRIGGER_HIGHEST_SECESSION_PROGRESS_FIRST_NOT:2 "Highest [Country.GetAdjectiveNoFlag] [concept_secession] Progress #bold not #!$COMPARATOR$ #variable $NUM|%1$#!"
+ TRIGGER_HIGHEST_SECESSION_PROGRESS_THIRD:1 "Highest [concept_secession] in [Country.GetName] Progress $COMPARATOR$ #variable $NUM|%1$#!"
+ TRIGGER_HIGHEST_SECESSION_PROGRESS_THIRD_NOT:2 "Highest [concept_secession] in [Country.GetName] Progress #bold not #!$COMPARATOR$ #variable $NUM|%1$#!"
 
  TRIGGER_REVOLUTION_PROGRESS:0 "Revolution Progress $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_REVOLUTION_PROGRESS_NOT:1 "Revolution Progress #bold not #!$COMPARATOR$ #variable $NUM$#!"
@@ -981,7 +1060,8 @@
 
  TRIGGER_GLOBAL_COUNTRY_RANKING:1 "Power rank is $COMPARATOR$ $NUM|v$"
  TRIGGER_GLOBAL_COUNTRY_RANKING_NOT:2 "Power rank is #bold not #!$COMPARATOR$ $NUM|v$"
-
+ TRIGGER_GLOBAL_COUNTRY_RANKING_FIRST: "[COUNTRY.GetNameNoFlag] power rank is $COMPARATOR$ $NUM|v$"
+ TRIGGER_GLOBAL_COUNTRY_RANKING_FIRST_NOT:1 "[COUNTRY.GetNameNoFlag] power rank is #bold not #!$COMPARATOR$ $NUM|v$"
  TRIGGER_GLOBAL_COUNTRY_RANKING_THIRD:0 "[COUNTRY.GetName] power rank is $COMPARATOR$ $NUM|v$"
  TRIGGER_GLOBAL_COUNTRY_RANKING_THIRD_NOT:1 "[COUNTRY.GetName] power rank is #bold not #!$COMPARATOR$ $NUM|v$"
 
@@ -1006,8 +1086,8 @@
  TRIGGER_GOVERNMENT_LEGITIMACY_THIRD: "[COUNTRY.GetName] [concept_legitimacy] is $COMPARATOR$ #variable $NUM$#! (currently: $CURRENT_VALUE|v$)"
  TRIGGER_GOVERNMENT_LEGITIMACY_THIRD_NOT: "[COUNTRY.GetName] [concept_legitimacy] is #bold not #!$COMPARATOR$ #variable $NUM$#! (currently: $CURRENT_VALUE|v$)"
 
- TRIGGER_COUNTRY_TIER:0 "#variable [concept_country_tier] of [COUNTRY.GetName] is $TIER|v$"
- TRIGGER_COUNTRY_TIER_NOT:1 "#variable [concept_country_tier] of [COUNTRY.GetName] is #bold not #!$TIER|v$"
+ TRIGGER_COUNTRY_TIER:0 "#variable [concept_country_tier]#! of [COUNTRY.GetName] is $TIER|v$"
+ TRIGGER_COUNTRY_TIER_NOT:1 "#variable [concept_country_tier]#! of [COUNTRY.GetName] is #bold not #!$TIER|v$"
 
  CONTEXT_TRIGGER_SCOPE_NAME:0 "$NAME|V$:"
 
@@ -1052,6 +1132,14 @@
  TRIGGER_HAS_POP_CULTURE:0 "Has [CULTURE.GetName] culture"
  TRIGGER_HAS_POP_CULTURE_NOT:1 "Does #bold not #!have [CULTURE.GetName] culture"
 
+ TRIGGER_CULTURE_TARGET_FERVOR:0 "Target cultural fervor is $COMPARATOR$ #variable $NUM|$#!"
+ TRIGGER_CULTURE_TARGET_FERVOR_NOT:1 "Target cultural fervor is #bold not #!$COMPARATOR$ #variable $NUM|$#!"
+ TRIGGER_CULTURE_TARGET_FERVOR_THIRD:1 "Target cultural fervor of [Culture.GetName] is $COMPARATOR$ #variable $NUM|$#! (currently: $CURRENT_VALUE|v$)"
+
+ TRIGGER_CULTURE_CURRENT_FERVOR:0 "Cultural fervor is $COMPARATOR$ #variable $NUM|$#!"
+ TRIGGER_CULTURE_CURRENT_FERVOR_NOT:1 "Cultural fervor is #bold not #!$COMPARATOR$ #variable $NUM|$#!"
+ TRIGGER_CULTURE_CURRENT_FERVOR_THIRD:1 "Cultural fervor of [Culture.GetName] is $COMPARATOR$ #variable $NUM|$#! (currently: $CURRENT_VALUE|v$)"
+
  TRIGGER_HAS_POP_RELIGION: "Has [RELIGION.GetName] [concept_religion]"
  TRIGGER_HAS_POP_RELIGION_NOT: "Does #bold not #!have [RELIGION.GetName] [concept_religion]"
  TRIGGER_HAS_POP_RELIGION_NONE: "$TRIGGER_HAS_POP_RELIGION$"
@@ -1072,29 +1160,13 @@
  TRIGGER_IS_PRIMARY_CULTURE_OF:0 "Has [Culture.GetName] as a primary culture"
  TRIGGER_IS_PRIMARY_CULTURE_OF_NOT:1 "Does #bold not #!have [Culture.GetName] as a primary culture"
 
- TRIGGER_SHARES_TRAIT_WITH_ANY_PRIMARY_CULTURE:0 "Shares a trait with any primary culture in [TARGET_COUNTRY.GetName]"
- TRIGGER_SHARES_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOT:1 "Does #bold not #!share a trait with any primary culture in [TARGET_COUNTRY.GetName]"
-
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE:0 "Shares a heritage trait with any primary culture in [TARGET_COUNTRY.GetName]"
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOT:1 "Does #bold not #!share a heritage trait with any primary culture in [TARGET_COUNTRY.GetName]"
-
- TRIGGER_SHARES_NON_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE:0 "Shares a non-heritage trait with any primary culture in [TARGET_COUNTRY.GetName]"
- TRIGGER_SHARES_NON_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOT:1 "Does #bold not #!share a non-heritage trait with any primary culture in [TARGET_COUNTRY.GetName]"
-
- TRIGGER_SHARES_HERITAGE_AND_OTHER_TRAIT_WITH_ANY_PRIMARY_CULTURE:0 "[CULTURE.GetName] shares a heritage and a non-heritage trait with any primary culture in [TARGET_COUNTRY.GetName]"
- TRIGGER_SHARES_HERITAGE_AND_OTHER_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOT:1 "[CULTURE.GetName] does #bold not #!share a heritage and a non-heritage trait with any primary culture in [TARGET_COUNTRY.GetName]"
-
- TRIGGER_SHARES_TRAIT_WITH_STATE_RELIGION:0 "[RELIGION.GetName] shares a trait with the [concept_state_religion] in [TARGET_COUNTRY.GetName]"
- TRIGGER_SHARES_TRAIT_WITH_STATE_RELIGION_NOT:1 "[RELIGION.GetName] does #bold not #!share a trait with the [concept_state_religion] in [TARGET_COUNTRY.GetName]"
-
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION:0 "[RELIGION.GetName] shares a trait with the [concept_state_religion] in [TARGET_COUNTRY.GetName]"
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_NOT:1 "[RELIGION.GetName] does #bold not #!share a trait with the [concept_state_religion] in [TARGET_COUNTRY.GetName]"
-
  TRIGGER_MOST_POWERFUL_STRATA:0 "The #variable $TYPE$#! have the most political power"
  TRIGGER_MOST_POWERFUL_STRATA_NOT:1 "The #variable $TYPE$#! do #bold not #!have the most political power"
 
  TRIGGER_IS_INCORPORATED:2 "Is an [concept_incorporated_state]"
  TRIGGER_IS_INCORPORATED_NOT:3 "Is #bold not #!an [concept_incorporated_state]"
+ TRIGGER_IS_INCORPORATED_NONE: "$TRIGGER_IS_INCORPORATED$"
+ TRIGGER_IS_INCORPORATED_NONE_NOT: "$TRIGGER_IS_INCORPORATED_NOT$"
 
  TRIGGER_IS_MASS_MIGRATION_TARGET:3 "[concept_state] [STATE.GetName] is a [concept_migration_target]"
  TRIGGER_IS_MASS_MIGRATION_TARGET_NOT:3 "[concept_state] [STATE.GetName] is #bold not #!a [concept_migration_target]"
@@ -1226,6 +1298,13 @@
  TRIGGER_ENACTMENT_CHANCE_THIRD: "The [concept_enactment_success] chance in [Country.GetName] is $COMPARATOR$ #variable $NUM|0%$#!"
  TRIGGER_ENACTMENT_CHANCE_THIRD_NOT: "[concept_enactment_success] chance in [Country.GetName] is #b not#! $COMPARATOR$ #variable $NUM|0%$#!"
 
+ TRIGGER_STALL_CHANCE: "[concept_enactment_stall] chance is $COMPARATOR$ #variable $NUM|0%$#!"
+ TRIGGER_STALL_CHANCE_NOT: "[concept_enactment_stall] chance is #b not#! $COMPARATOR$ #variable $NUM|0%$#!"
+ TRIGGER_STALL_CHANCE_FIRST: "Your [concept_enactment_stall] chance is $COMPARATOR$ #variable $NUM|0%$#!"
+ TRIGGER_STALL_CHANCE_FIRST_NOT: "Your [concept_enactment_stall] chance is #b not#! $COMPARATOR$ #variable $NUM|0%$#!"
+ TRIGGER_STALL_CHANCE_THIRD: "The [concept_enactment_stall] chance in [Country.GetName] is $COMPARATOR$ #variable $NUM|0%$#!"
+ TRIGGER_STALL_CHANCE_THIRD_NOT: "[concept_enactment_stall] chance in [Country.GetName] is #b not#! $COMPARATOR$ #variable $NUM|0%$#!"
+
  TRIGGER_MAX_LAW_ENACTMENT_SETBACKS: "maximum [Concept('concept_enactment_setback','$concept_enactment_setbacks$')] is $COMPARATOR$ #variable $NUM|0%$#!"
  TRIGGER_MAX_LAW_ENACTMENT_SETBACKS_NOT: "maximum [Concept('concept_enactment_setback','$concept_enactment_setbacks$')] is #b not#! $COMPARATOR$ #variable $NUM|0%$#!"
  TRIGGER_MAX_LAW_ENACTMENT_SETBACKS_FIRST: "Your maximum [Concept('concept_enactment_setback','$concept_enactment_setbacks$')] is $COMPARATOR$ #variable $NUM|0%$#!"
@@ -1239,6 +1318,13 @@
  TRIGGER_HAS_LAW_FIRST_NOT:1 "[COUNTRY.GetNameNoFlag] does #bold not #!have [TARGET_LAW_TYPE.GetName] enacted"
  TRIGGER_HAS_LAW_THIRD:1 "[TARGET_LAW_TYPE.GetName] has been enacted by [COUNTRY.GetName]"
  TRIGGER_HAS_LAW_THIRD_NOT:2 "[TARGET_LAW_TYPE.GetName] has #bold not #!been enacted by [COUNTRY.GetName]"
+
+ TRIGGER_HAS_LAW_OR_VARIANT: "Has enacted any variant of [TARGET_LAW_TYPE.GetName]"
+ TRIGGER_HAS_LAW_OR_VARIANT_NOT: "Has #bold not #!enacted any variant of [TARGET_LAW_TYPE.GetName]"
+ TRIGGER_HAS_LAW_OR_VARIANT_FIRST: "[COUNTRY.GetNameNoFlag] has enacted any variant of [TARGET_LAW_TYPE.GetName]"
+ TRIGGER_HAS_LAW_OR_VARIANT_FIRST_NOT: "[COUNTRY.GetNameNoFlag] does #bold not #!have any variant of [TARGET_LAW_TYPE.GetName] enacted"
+ TRIGGER_HAS_LAW_OR_VARIANT_THIRD: "Any variant of [TARGET_LAW_TYPE.GetName] has been enacted by [COUNTRY.GetName]"
+ TRIGGER_HAS_LAW_OR_VARIANT_THIRD_NOT: "Any variant of [TARGET_LAW_TYPE.GetName] has #bold not #!been enacted by [COUNTRY.GetName]"
 
  TRIGGER_HAS_LAW_COMMITMENT: "Has a [concept_treaty] commitment to enact [TARGET_LAW_TYPE.GetName]"
  TRIGGER_HAS_LAW_COMMITMENT_NOT: "Does #bold not#! have a [concept_treaty] commitment to enact [TARGET_LAW_TYPE.GetName]"
@@ -1258,8 +1344,8 @@
 
  TRIGGER_HAS_IDEOLOGY:0 "Has [concept_ideology] [IDEOLOGY.GetName]"
  TRIGGER_HAS_IDEOLOGY_NOT:1 "Does #bold not #!have [concept_ideology] [IDEOLOGY.GetName]"
- TRIGGER_HAS_IDEOLOGY_THIRD: "[CHARACTER.GetFullName] has the  [IDEOLOGY.GetName] [concept_ideology]"
- TRIGGER_HAS_IDEOLOGY_THIRD_NOT: "[CHARACTER.GetFullName] does #bold not#! have the [IDEOLOGY.GetName] [concept_ideology]"
+ TRIGGER_HAS_IDEOLOGY_THIRD: "Has the [IDEOLOGY.GetName] [concept_ideology]"
+ TRIGGER_HAS_IDEOLOGY_THIRD_NOT: "Does #bold not#! have the [IDEOLOGY.GetName] [concept_ideology]"
 
  TRIGGER_HAS_CHARACTER_IDEOLOGY: "Has the [IDEOLOGY.GetName] [concept_character] [concept_ideology]"
  TRIGGER_HAS_CHARACTER_IDEOLOGY_NOT: "Does #bold not #!have the [IDEOLOGY.GetName] [concept_character] [concept_ideology]"
@@ -1298,6 +1384,8 @@
  TRIGGER_COUNTRY_HAS_PRIMARY_CULTURE_NOT:2 "[TARGET_CULTURE.GetName] is #bold not #!a [Concept( 'concept_primary_cultures', '$concept_primary_culture$' )] in the country"
  TRIGGER_COUNTRY_HAS_PRIMARY_CULTURE_FIRST:0 "[TARGET_CULTURE.GetName] is a [Concept( 'concept_primary_cultures', '$concept_primary_culture$' )] in the country"
  TRIGGER_COUNTRY_HAS_PRIMARY_CULTURE_FIRST_NOT:0 "[TARGET_CULTURE.GetName] is #bold not #!a [Concept( 'concept_primary_cultures', '$concept_primary_culture$' )] in the country"
+ TRIGGER_COUNTRY_HAS_PRIMARY_CULTURE_NONE: "$TRIGGER_COUNTRY_HAS_PRIMARY_CULTURE$"
+ TRIGGER_COUNTRY_HAS_PRIMARY_CULTURE_NONE_NOT: "$TRIGGER_COUNTRY_HAS_PRIMARY_CULTURE_NOT$"
 
  TRIGGER_COUNTRY_HAS_STATE_RELIGION:0 "Has the [TARGET_RELIGION.GetName] religion as [concept_state_religion]"
  TRIGGER_COUNTRY_HAS_STATE_RELIGION_NOT:1 "Does #bold not #!have the [TARGET_RELIGION.GetName] religion as [concept_state_religion]"
@@ -1399,11 +1487,15 @@
  TRIGGER_HAS_ANY_SECESSIONISTS_POSSIBLE:1 "Has possible secessionist movements"
  TRIGGER_HAS_ANY_SECESSIONISTS_POSSIBLE_NOT:2 "Does #bold not #!have possible secessionist movements"
 
- TRIGGER_HAS_ANY_SECESSIONISTS_GROWING:1 "Has growing secessionist movements"
- TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_NOT:2 "Does #bold not #!have growing secessionist movements"
+ TRIGGER_HAS_ANY_SECESSIONISTS_GROWING:2 "Has growing [Concept('concept_secession','$concept_secessionist$')] [Concept('concept_political_movement','$concept_political_movements_short$')]"
+ TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_NOT:3 "Does #bold not #!have growing [Concept('concept_secession','$concept_secessionist$')] [Concept('concept_political_movement','$concept_political_movements_short$')]"
+ TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_FIRST: "[Country.GetNameNoFlag] has growing [Concept('concept_secession','$concept_secessionist$')] [Concept('concept_political_movement','$concept_political_movements_short$')]"
+ TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_FIRST_NOT: "[Country.GetNameNoFlag] does #bold not #!have growing [Concept('concept_secession','$concept_secessionist$')] [Concept('concept_political_movement','$concept_political_movements_short$')]"
 
- TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT:1 "Has seceding countries broken away"
- TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_NOT:2 "Does #bold not #!have seceding countries broken away"
+ TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT:2 "Has [Concept('concept_secession','$concept_seceding$')] [Concept('concept_country', '$concept_countries$')] broken away"
+ TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_NOT:3 "Does #bold not #!have [Concept('concept_secession','$concept_seceding$')] [Concept('concept_country', '$concept_countries$')] broken away"
+ TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_FIRST: "[Country.GetNameNoFlag] has [Concept('concept_secession','$concept_seceding$')] [Concept('concept_country', '$concept_countries$')] broken away"
+ TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_FIRST_NOT: "[Country.GetNameNoFlag] does #bold not #!have [Concept('concept_secession','$concept_seceding$')] [Concept('concept_country', '$concept_countries$')] broken away"
 
  TRIGGER_ACTIVE_LENS:0 "$LENS$ is active"
  TRIGGER_ACTIVE_LENS_NOT:1 "$LENS$ is #bold not #!active"
@@ -1491,10 +1583,15 @@
  TRIGGER_HAS_SUFFICIENT_CONSTRUCTION_CAPACITY_FOR_INVESTMENT:0 "Has enough [concept_construction] production to fully utilize the [concept_investment_pool]"
  TRIGGER_HAS_SUFFICIENT_CONSTRUCTION_CAPACITY_FOR_INVESTMENT_NOT:0 "Does #b not#! have enough [concept_construction] production to fully utilize the [concept_investment_pool]"
 
- TRIGGER_HAS_DISCRIMINATION_TRAIT: "$SUBJECT$ has trait $TRAIT|v$"
- TRIGGER_HAS_DISCRIMINATION_TRAIT_NOT: "$SUBJECT$ does #bold not #!have trait $TRAIT|v$"
- TRIGGER_HAS_DISCRIMINATION_TRAIT_NONE: "Has trait $TRAIT|v$"
- TRIGGER_HAS_DISCRIMINATION_TRAIT_NONE_NOT: "Does #bold not #!have trait $TRAIT|v$"
+ TRIGGER_HAS_DISCRIMINATION_TRAIT: "$SUBJECT$ has trait [DISCRIMINATION_TRAIT.GetName]"
+ TRIGGER_HAS_DISCRIMINATION_TRAIT_NOT: "$SUBJECT$ does #bold not #!have trait [DISCRIMINATION_TRAIT.GetName]"
+ TRIGGER_HAS_DISCRIMINATION_TRAIT_NONE: "Has trait [DISCRIMINATION_TRAIT.GetName]"
+ TRIGGER_HAS_DISCRIMINATION_TRAIT_NONE_NOT: "Does #bold not #!have trait [DISCRIMINATION_TRAIT.GetName]"
+
+ TRIGGER_HAS_DISCRIMINATION_TRAIT_GROUP: "$SUBJECT$ has trait group [DISCRIMINATION_TRAIT_GROUP.GetName]"
+ TRIGGER_HAS_DISCRIMINATION_TRAIT_GROUP_NOT: "$SUBJECT$ does #bold not #!have trait group [DISCRIMINATION_TRAIT_GROUP.GetName]"
+ TRIGGER_HAS_DISCRIMINATION_TRAIT_GROUP_NONE: "Has trait group [DISCRIMINATION_TRAIT_GROUP.GetName]"
+ TRIGGER_HAS_DISCRIMINATION_TRAIT_GROUP_NONE_NOT: "Does #bold not #!have trait group [DISCRIMINATION_TRAIT_GROUP.GetName]"
 
  TRIGGER_IS_BEING_SUPPRESSED:2 "Movement is being suppressed"
  TRIGGER_IS_BEING_SUPPRESSED_NOT:2 "Movement is #bold not #!being suppressed"
@@ -1511,28 +1608,91 @@
  TRIGGER_IS_REASONABLE_LAW_FOR_PETITION_THIRD: "[LAW.GetName] is a reasonable [concept_law] for a $je_government_petition$"
  TRIGGER_IS_REASONABLE_LAW_FOR_PETITION_THIRD_NOT: "[LAW.GetName] is #bold not#! a reasonable [concept_law] for a $je_government_petition$"
 
- TRIGGER_SHARES_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT:2 "Shares a [concept_cultural_trait] with any [concept_primary_cultures] in their [concept_country]"
- TRIGGER_SHARES_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT_NOT:1 "Does not share a [concept_cultural_trait] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE: "Shares a [concept_heritage_trait] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOT: "Does #bold not #!share a [concept_heritage_trait] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT: "Shares a [concept_heritage_trait] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT_NOT: "Does not share a [concept_heritage_trait] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD: "Shares a [concept_heritage_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD_NOT: "Does not share a [concept_heritage_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
 
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT:1 "Shares a [concept_cultural_heritage_trait] with any [concept_primary_cultures] in their [concept_country]"
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT_NOT:1 "Does not share a [concept_cultural_heritage_trait] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_NOT: "Does not share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT_NOT: "Does not share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_THIRD: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_THIRD_NOT: "Does not share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
 
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD:0 "Shares a [concept_cultural_heritage_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD_NOT:0 "Does not share a [concept_cultural_heritage_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE: "Shares a [concept_language_trait] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOT: "Does #bold not #!share a [concept_language_trait] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT: "Shares a [concept_language_trait] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT_NOT: "Does not share a [concept_language_trait] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD: "Shares a [concept_language_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD_NOT: "Does not share a [concept_language_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
 
- TRIGGER_SHARES_NON_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT:0 "Shares a [concept_cultural_trait] which is not a [concept_cultural_heritage_trait] with any [concept_primary_cultures] ([GetPlayer.GetPrimaryCulturesDesc] in [GetPlayer.GetName])"
- TRIGGER_SHARES_NON_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT_NOT:0 "Does not share a [concept_cultural_trait] which is not a [concept_cultural_heritage_trait] with any [concept_primary_cultures] ([GetPlayer.GetPrimaryCulturesDesc] in [GetPlayer.GetName])"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE: "Shares a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_NOT: "Does not share a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT: "Shares a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT_NOT: "Does not share a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_THIRD: "Shares a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_ANY_PRIMARY_CULTURE_THIRD_NOT: "Does not share a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
 
- TRIGGER_SHARES_NON_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD:0 "Shares a [concept_cultural_trait] which is not a [concept_cultural_heritage_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
- TRIGGER_SHARES_NON_HERITAGE_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD_NOT:0 "Does not share a [concept_cultural_trait] which is not a [concept_cultural_heritage_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_ANY_PRIMARY_CULTURE: "Shares a [concept_tradition_trait] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOT: "Does #bold not #!share a [concept_tradition_trait] with any [concept_primary_cultures] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT: "Shares a [concept_tradition_trait] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_ANY_PRIMARY_CULTURE_NOCONTEXT_NOT: "Does not share a [concept_tradition_trait] with any [concept_primary_cultures] in their [concept_country]"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD: "Shares a [concept_tradition_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_ANY_PRIMARY_CULTURE_THIRD_NOT: "Does not share a [concept_tradition_trait] with any [concept_primary_cultures] ([Pop.GetCountry.GetPrimaryCulturesDesc] in [Pop.GetCountry.GetName])"
+
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION: "[RELIGION.GetName] shares a [concept_heritage_trait] with the [concept_state_religion] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_NOT: "[RELIGION.GetName] does #bold not #!share a [concept_heritage_trait] with the [concept_state_religion] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_NOCONTEXT: "Shares a [concept_heritage_trait] with the [concept_state_religion] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_NOCONTEXT_NOT: "Does not share a [concept_heritage_trait] with the [concept_state_religion] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_THIRD: "Shares a [concept_heritage_trait] with the [concept_state_religion] ([Pop.GetCountry.GetStateReligion.GetName] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_THIRD_NOT: "Does not share a [concept_heritage_trait] with the [concept_state_religion] ([Pop.GetCountry.GetStateReligion.GetName] in [Pop.GetCountry.GetName])"
+
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_STATE_RELIGION: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [concept_state_religion] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_STATE_RELIGION_NOT: "Does not share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [concept_state_religion] in [TARGET_COUNTRY.GetName]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_STATE_RELIGION_NOCONTEXT: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [concept_state_religion] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_STATE_RELIGION_NOCONTEXT_NOT: "Does not share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [concept_state_religion] in their [concept_country]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_STATE_RELIGION_THIRD: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [concept_state_religion] ([Pop.GetCountry.GetStateReligion.GetName] in [Pop.GetCountry.GetName])"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_STATE_RELIGION_THIRD_NOT: "Does not share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [concept_state_religion] ([Pop.GetCountry.GetStateReligion.GetName] in [Pop.GetCountry.GetName])"
+
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_CULTURE: "Shares a [concept_heritage_trait] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_CULTURE_NOT: "Does #bold not #!share a [concept_heritage_trait] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_CULTURE_NOCONTEXT: "Shares a [concept_heritage_trait] with [concept_culture]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_CULTURE_NOCONTEXT_NOT: "Does not share a [concept_heritage_trait] with [concept_culture]"
+
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_CULTURE: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_CULTURE_NOT: "Does #bold not #!share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_CULTURE_NOCONTEXT: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with [concept_culture]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_CULTURE_NOCONTEXT_NOT: "Does not share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with [concept_culture]"
+
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_CULTURE: "Shares a [concept_language_trait] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_CULTURE_NOT: "Does #bold not #!share a [concept_language_trait] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_CULTURE_NOCONTEXT: "Shares a [concept_language_trait] with [concept_culture]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_WITH_CULTURE_NOCONTEXT_NOT: "Does not share a [concept_language_trait] with [concept_culture]"
+
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_CULTURE: "Shares a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_CULTURE_NOT: "Does #bold not #!share a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_CULTURE_NOCONTEXT: "Shares a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with [concept_culture]"
+ TRIGGER_SHARES_LANGUAGE_TRAIT_GROUP_WITH_CULTURE_NOCONTEXT_NOT: "Does not share a [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with [concept_culture]"
+
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_CULTURE: "Shares a [concept_tradition_trait] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_CULTURE_NOT: "Does #bold not #!share a [concept_tradition_trait] with the [TARGET_CULTURE.GetName] [concept_culture]"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_CULTURE_NOCONTEXT: "Shares a [concept_tradition_trait] with [concept_culture]"
+ TRIGGER_SHARES_TRADITION_TRAIT_WITH_CULTURE_NOCONTEXT_NOT: "Does not share a [concept_tradition_trait] with [concept_culture]"
+
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_RELIGION: "Shares a [concept_heritage_trait] with the [TARGET_RELIGION.GetName] [concept_religion]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_RELIGION_NOT: "Does #bold not #!share a [concept_heritage_trait] with the [TARGET_RELIGION.GetName] [concept_religion]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_RELIGION_NOCONTEXT: "Shares a [concept_heritage_trait] with [concept_religion]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_WITH_RELIGION_NOCONTEXT_NOT: "Does not share a [concept_heritage_trait] with [concept_religion]"
+
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_RELIGION: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [TARGET_RELIGION.GetName] [concept_religion]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_RELIGION_NOT: "Does #bold not #!share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with the [TARGET_RELIGION.GetName] [concept_religion]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_RELIGION_NOCONTEXT: "Shares a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with [concept_religion]"
+ TRIGGER_SHARES_HERITAGE_TRAIT_GROUP_WITH_RELIGION_NOCONTEXT_NOT: "Does not share a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] [Concept('concept_discrimination_trait_group','$concept_discrimination_trait_group_short$')] with [concept_religion]"
 
  TRIGGER_SCOPE_COUNTRY_NOCONTEXT:0 "Country"
-
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_NOCONTEXT:1 "Shares a trait with the [concept_state_religion] in their [concept_country]"
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_NOCONTEXT_NOT:1 "Does not share a trait with the [concept_state_religion] in their [concept_country]"
-
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_THIRD:0 "Shares a trait with the [concept_state_religion] ([Pop.GetCountry.GetStateReligion.GetName] in [Pop.GetCountry.GetName])"
- TRIGGER_SHARES_HERITAGE_TRAIT_WITH_STATE_RELIGION_THIRD_NOT:0 "Does not share a trait with the [concept_state_religion] ([Pop.GetCountry.GetStateReligion.GetName] in [Pop.GetCountry.GetName])"
 
  TRIGGER_IS_STATE_RELIGION_NOCONTEXT:1 "Is the [concept_state_religion]"
  TRIGGER_IS_STATE_RELIGION_NOCONTEXT_NOT:0 "Is not the [concept_state_religion]"
@@ -1555,8 +1715,8 @@
  TRIGGER_CONTAINS_CAPITAL_OF:0 "[STATE_REGION.GetName] contains the capital of [TARGET_COUNTRY.GetName]"
  TRIGGER_CONTAINS_CAPITAL_OF_NOT:1 "[STATE_REGION.GetName] does #bold not #!contain the capital of [TARGET_COUNTRY.GetName]"
 
- TRIGGER_REMAINING_UNDEPLETED:0 "[STATE_REGION.GetName] has $COMPARATOR$ #variable $NUM$#! resources remaining in #variable $BUILDING_GROUP$#!"
- TRIGGER_REMAINING_UNDEPLETED_NOT:1 "[STATE_REGION.GetName] does #bold not #!have $COMPARATOR$ #variable $NUM$#! resources remaining in #variable $BUILDING_GROUP$#!"
+ TRIGGER_REMAINING_UNDEPLETED:0 "[STATE_REGION.GetName] has $COMPARATOR$ #variable $NUM$#! resources remaining in #variable $BUILDING_TYPE$#!"
+ TRIGGER_REMAINING_UNDEPLETED_NOT:1 "[STATE_REGION.GetName] does #bold not #!have $COMPARATOR$ #variable $NUM$#! resources remaining in #variable $BUILDING_TYPE$#!"
 
  TRIGGER_IS_MARKET_GOODS_EXPENSIVE:0 "[GOODS.GetName] is expensive in [MARKET.GetName]"
  TRIGGER_IS_MARKET_GOODS_EXPENSIVE_NOT:1 "[GOODS.GetName] is #bold not #!expensive in [MARKET.GetName]"
@@ -1576,8 +1736,8 @@
 
  TRIGGER_HAS_POTENTIAL_SUPPLY: "Has a local [concept_supply] or can be [Concept('concept_trade', '$concept_imported$')] in $NAME$"
  TRIGGER_HAS_POTENTIAL_SUPPLY_NOT: "Does #b not#! have a local [concept_supply] and cannot be [Concept('concept_trade', '$concept_imported$')] in $NAME$"
- TRIGGER_HAS_POTENTIAL_SUPPLY_THIRD: "[GOODS.GetTextIcon][Nbsp][GOODS.GetName] has a local [concept_supply] or can be [Concept('concept_trade', '$concept_imported$')] in $NAME$"
- TRIGGER_HAS_POTENTIAL_SUPPLY_THIRD_NOT: "[GOODS.GetTextIcon][Nbsp][GOODS.GetName] does #b not#! have a local [concept_supply] and cannot be [Concept('concept_trade', '$concept_imported$')] in $NAME$"
+ TRIGGER_HAS_POTENTIAL_SUPPLY_THIRD: "[Goods.GetName] has a local [concept_supply] or can be [Concept('concept_trade', '$concept_imported$')] in $NAME$"
+ TRIGGER_HAS_POTENTIAL_SUPPLY_THIRD_NOT: "[Goods.GetName] does #b not#! have a local [concept_supply] and cannot be [Concept('concept_trade', '$concept_imported$')] in $NAME$"
 
  TRIGGER_WORLD_MARKET_EXPORTS: "[concept_world_market] $CONCEPT_EXPORTS$ is $COMPARATOR$ #variable $NUM|v0$#! (currently: $CURRENT_VALUE|0v$)"
  TRIGGER_WORLD_MARKET_EXPORTS_NOT: "[concept_world_market] $CONCEPT_EXPORTS$ is #bold not #!$COMPARATOR$ #variable $NUM|0v$#! (currently: $CURRENT_VALUE|0v$)"
@@ -1599,7 +1759,7 @@
 
  TRIGGER_MARKET_GOODS_SELL_ORDERS:0 "[concept_sell_orders] for [GOODS.GetName] in [MARKET.GetName] $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_MARKET_GOODS_SELL_ORDERS_NOT:1 "[concept_sell_orders] for [GOODS.GetName] in [MARKET.GetName] #bold not #!$COMPARATOR$ #variable $NUM$#!"
- TRIGGER_MARKET_GOODS_SELL_ORDERS_FIRST:0 "[concept_sell_orders] for [GOODS.GetName] in [MARKET.GetName] $COMPARATOR$ #variable $NUM$#!"
+  TRIGGER_MARKET_GOODS_SELL_ORDERS_FIRST:0 "[concept_sell_orders] for [GOODS.GetName] in [MARKET.GetName] $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_MARKET_GOODS_SELL_ORDERS_FIRST_NOT:0 "[concept_sell_orders] for [GOODS.GetName] in [MARKET.GetName] #bold not #!$COMPARATOR$ #variable $NUM$#!"
  TRIGGER_MARKET_GOODS_SELL_ORDERS_THIRD:0 "[concept_sell_orders] for [GOODS.GetName] in [MARKET.GetName] $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_MARKET_GOODS_SELL_ORDERS_THIRD_NOT:0 "[concept_sell_orders] for [GOODS.GetName] in [MARKET.GetName] #bold not #!$COMPARATOR$ #variable $NUM$#!"
@@ -1612,6 +1772,8 @@
 
  TRIGGER_LEADING_PRODUCER_OF:0 "[COUNTRY.GetName] is the lead producer of [TARGET_GOODS.GetName]"
  TRIGGER_LEADING_PRODUCER_OF_NOT:1 "[COUNTRY.GetName] is #bold not #!the lead producer of [TARGET_GOODS.GetName]"
+ TRIGGER_LEADING_PRODUCER_OF_FIRST:0 "[COUNTRY.GetNameNoFlag] is the lead producer of [TARGET_GOODS.GetName]"
+ TRIGGER_LEADING_PRODUCER_OF_FIRST_NOT:1 "[COUNTRY.GetNameNoFlag] is #bold not #!the lead producer of [TARGET_GOODS.GetName]"
 
  TRIGGER_MARKET_GOODS_IMPORTS:0 "Imports for [GOODS.GetName] in [MARKET.GetName] $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_MARKET_GOODS_IMPORTS_NOT:1 "Imports for [GOODS.GetName] in [MARKET.GetName] #bold not #!$COMPARATOR$ #variable $NUM$#!"
@@ -1716,8 +1878,47 @@
  TRIGGER_MARKET_PRESTIGE_GOODS_DELTA_THIRD: "$NAME$ in the [MARKET.GetName] has a delta of $COMPARATOR$ #variable $NUM|v$#!"
  TRIGGER_MARKET_PRESTIGE_GOODS_DELTA_THIRD_NOT: "$NAME$ in the [MARKET.GetName] does #b not#! have a delta of $COMPARATOR$ #variable $NUM|v$#!"
 
- TRIGGER_WEEKLY_NET_FIXED_INCOME:0 "Weekly fixed income for [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
- TRIGGER_WEEKLY_NET_FIXED_INCOME_NOT:1 "Weekly fixed income for [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_TOTAL_EXPENSES: "Weekly total expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_EXPENSES_NOT: "Weekly total expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_EXPENSES_FIRST: "[COUNTRY.GetAdjectiveNoFlag] weekly total expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_EXPENSES_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] weekly total expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_EXPENSES_THIRD: "[COUNTRY.GetAdjective] weekly total expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_EXPENSES_THIRD_NOT: "[COUNTRY.GetAdjective] weekly total expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+
+ TRIGGER_FIXED_EXPENSES: "Weekly fixed expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_EXPENSES_NOT: "Weekly fixed expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_EXPENSES_FIRST: "[COUNTRY.GetAdjectiveNoFlag] weekly fixed expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_EXPENSES_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] weekly fixed expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_EXPENSES_THIRD: "[COUNTRY.GetAdjective] weekly fixed expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_EXPENSES_THIRD_NOT: "[COUNTRY.GetAdjective] weekly fixed expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+
+ TRIGGER_TOTAL_INCOME: "Weekly total income is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_INCOME_NOT: "Weekly total income is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_INCOME_FIRST: "[COUNTRY.GetAdjectiveNoFlag] weekly total income is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_INCOME_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] weekly total income is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_INCOME_THIRD: "[COUNTRY.GetAdjective] weekly total income is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_TOTAL_INCOME_THIRD_NOT: "[COUNTRY.GetAdjective] weekly total income is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+
+ TRIGGER_FIXED_INCOME: "Weekly fixed income is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_INCOME_NOT: "Weekly fixed income is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_INCOME_FIRST: "[COUNTRY.GetAdjectiveNoFlag] weekly fixed income is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_INCOME_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] weekly fixed income is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_INCOME_THIRD: "[COUNTRY.GetAdjective] weekly fixed income is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_FIXED_INCOME_THIRD_NOT: "[COUNTRY.GetAdjective] weekly fixed income is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+
+ TRIGGER_NET_FIXED_INCOME: "Weekly fixed income after expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_FIXED_INCOME_NOT: "Weekly fixed income after expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_FIXED_INCOME_FIRST: "[COUNTRY.GetAdjectiveNoFlag] weekly fixed income after expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_FIXED_INCOME_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] weekly fixed income after expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_FIXED_INCOME_THIRD: "[COUNTRY.GetAdjective] weekly fixed income after expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_FIXED_INCOME_THIRD_NOT: "[COUNTRY.GetAdjective] weekly fixed income after expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+
+ TRIGGER_NET_TOTAL_INCOME: "Weekly total income after expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_TOTAL_INCOME_NOT: "Weekly total income after expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_TOTAL_INCOME_FIRST: "[COUNTRY.GetAdjectiveNoFlag] weekly total income after expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_TOTAL_INCOME_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] weekly total income after expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_TOTAL_INCOME_THIRD: "[COUNTRY.GetAdjective] weekly total income after expenses is $COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
+ TRIGGER_NET_TOTAL_INCOME_THIRD_NOT: "[COUNTRY.GetAdjective] weekly total income after expenses is #bold not #!$COMPARATOR$ @money!$NUM|vK$ (Currently @money!$CURRENT_VALUE|vK$)"
 
  TRIGGER_TRANSFER_MONEY_GROSS_INCOME: "Weekly income from money transfer through treaties before expenses $COMPARATOR$ #variable $NUM$#!"
  TRIGGER_TRANSFER_MONEY_GROSS_INCOME_NOT: "Weekly income from money transfer through treaties before expenses #bold not #!$COMPARATOR$ #variable $NUM$#!"
@@ -1747,12 +1948,12 @@
  TRIGGER_COUNTRY_HAS_BUILDING_TYPE_LEVELS_THIRD: "[COUNTRY.GetName] has $COMPARATOR$ #variable $NUM|0$#! levels of [TARGET_BUILDING_TYPE.GetName] buildings"
  TRIGGER_COUNTRY_HAS_BUILDING_TYPE_LEVELS_THIRD_NOT: "[COUNTRY.GetName] does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of [TARGET_BUILDING_TYPE.GetName] buildings"
 
- TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS: "Has $COMPARATOR$ #variable $NUM|0$#! levels of $BUILDING_GROUP$ buildings"
- TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_NOT: "Does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of $BUILDING_GROUP$ buildings"
- TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_FIRST: "[COUNTRY.GetNameNoFlag] has $COMPARATOR$ #variable $NUM|0$#! levels of $BUILDING_GROUP$ buildings"
- TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_FIRST_NOT: "[COUNTRY.GetNameNoFlag] does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of $BUILDING_GROUP$ buildings"
- TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_THIRD: "[COUNTRY.GetName] has $COMPARATOR$ #variable $NUM|0$#! levels of $BUILDING_GROUP$ buildings"
- TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_THIRD_NOT: "[COUNTRY.GetName] does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of $BUILDING_GROUP$ buildings"
+ TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS: "Has $COMPARATOR$ #variable $NUM|0$#! levels of [BUILDING_GROUP.GetName] buildings"
+ TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_NOT: "Does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of [BUILDING_GROUP.GetName] buildings"
+ TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_FIRST: "[COUNTRY.GetNameNoFlag] has $COMPARATOR$ #variable $NUM|0$#! levels of [BUILDING_GROUP.GetName] buildings"
+ TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_FIRST_NOT: "[COUNTRY.GetNameNoFlag] does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of [BUILDING_GROUP.GetName] buildings"
+ TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_THIRD: "[COUNTRY.GetName] has $COMPARATOR$ #variable $NUM|0$#! levels of [BUILDING_GROUP.GetName] buildings"
+ TRIGGER_COUNTRY_HAS_BUILDING_GROUP_LEVELS_THIRD_NOT: "[COUNTRY.GetName] does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of [BUILDING_GROUP.GetName] buildings"
 
  TRIGGER_NUM_INVESTMENTS_OF_TYPE: "Has $COMPARATOR$ #variable $NUM|0$#! levels of $BUILDING_TYPE$ buildings abroad"
  TRIGGER_NUM_INVESTMENTS_OF_TYPE_NOT: "Does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! levels of $BUILDING_TYPE$ abroad"
@@ -1767,8 +1968,8 @@
  TRIGGER_STATE_HAS_BUILDING_TYPE_LEVELS: "[STATE.GetName] has $COMPARATOR$ #variable $NUM|0$#! levels of [TARGET_BUILDING_TYPE.GetName] buildings"
  TRIGGER_STATE_HAS_BUILDING_TYPE_LEVELS_NOT: "[STATE.GetName] does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of [TARGET_BUILDING_TYPE.GetName] buildings"
 
- TRIGGER_STATE_HAS_BUILDING_GROUP_LEVELS: "[STATE.GetName] has $COMPARATOR$ #variable $NUM|0$#! levels of $BUILDING_GROUP$ buildings"
- TRIGGER_STATE_HAS_BUILDING_GROUP_LEVELS_NOT: "[STATE.GetName] does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of $BUILDING_GROUP$ buildings"
+ TRIGGER_STATE_HAS_BUILDING_GROUP_LEVELS: "[STATE.GetName] has $COMPARATOR$ #variable $NUM|0$#! levels of [BUILDING_GROUP.GetName] buildings"
+ TRIGGER_STATE_HAS_BUILDING_GROUP_LEVELS_NOT: "[STATE.GetName] does #bold not#! have $COMPARATOR$ #variable $NUM|0$#! $NUM$#! levels of [BUILDING_GROUP.GetName] buildings"
 
  TRIGGER_IS_MASS_MIGRATION_ORIGIN_OF_CULTURE: "Is the origin of migration of [TARGET_CULTURE.GetName] Pops"
  TRIGGER_IS_MASS_MIGRATION_ORIGIN_OF_CULTURE_NOT: "Is #bold not#! the origin of migration of [TARGET_CULTURE.GetName] Pops"
@@ -1804,11 +2005,14 @@
  TRIGGER_STATE_IS_ELIGIBLE_AS_MASS_MIGRATION_TARGET_THIRD_NOT: "[STATE.GetName] is #b not#! eligible as a [Concept('concept_migration_target', '$concept_mass_migration_target$')]."
 
  TRIGGER_NAVAL_POWER_PROJECTION: "Has a naval [concept_power_projection] $COMPARATOR$ $NUM|v$"
- TRIGGER_NAVAL_POWER_PROJECTION_NOT: "Does #bold not #!have a naval [concept_power_projection] $COMPARATOR$ $NUM|v$"
+ TRIGGER_NAVAL_POWER_PROJECTION_NOT: "Does #bold not#! have a naval [concept_power_projection] $COMPARATOR$ $NUM|v$"
  TRIGGER_NAVAL_POWER_PROJECTION_FIRST: "[COUNTRY.GetAdjectiveNoFlag] naval [concept_power_projection] is $COMPARATOR$ $NUM|v$"
- TRIGGER_NAVAL_POWER_PROJECTION_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] naval [concept_power_projection] is #bold not #!$COMPARATOR$ $NUM|v$"
+ TRIGGER_NAVAL_POWER_PROJECTION_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] naval [concept_power_projection] is #bold not#! $COMPARATOR$ $NUM|v$"
  TRIGGER_NAVAL_POWER_PROJECTION_THIRD: "[COUNTRY.GetAdjective] naval [concept_power_projection] is $COMPARATOR$ $NUM|v$"
- TRIGGER_NAVAL_POWER_PROJECTION_THIRD_NOT: "[COUNTRY.GetAdjective] naval [concept_power_projection] is #bold not #!$COMPARATOR$ $NUM|v$"
+ TRIGGER_NAVAL_POWER_PROJECTION_THIRD_NOT: "[COUNTRY.GetAdjective] naval [concept_power_projection] is #bold not#! $COMPARATOR$ $NUM|v$"
+ TRIGGER_NAVAL_POWER_PROJECTION_GREATER_THAN: "Naval [concept_power_projection] is $COMPARATOR$ $NUM|v$"
+ TRIGGER_NAVAL_POWER_PROJECTION_GREATER_THAN_FIRST: "[COUNTRY.GetAdjectiveNoFlag] naval [concept_power_projection] is $COMPARATOR$ $NUM|v$"
+ TRIGGER_NAVAL_POWER_PROJECTION_GREATER_THAN_THIRD: "[COUNTRY.GetAdjective] naval [concept_power_projection] is $COMPARATOR$ $NUM|v$"
 
  TRIGGER_ARMY_POWER_PROJECTION: "Army [concept_power_projection] $COMPARATOR$ $NUM|v$"
  TRIGGER_ARMY_POWER_PROJECTION_NOT: "Army [concept_power_projection] #bold not #!$COMPARATOR$ $NUM|v$"
@@ -1816,6 +2020,9 @@
  TRIGGER_ARMY_POWER_PROJECTION_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] army [concept_power_projection] is #bold not #!$COMPARATOR$ $NUM|v$"
  TRIGGER_ARMY_POWER_PROJECTION_THIRD: "[COUNTRY.GetAdjective] army [concept_power_projection] is $COMPARATOR$ $NUM|v$"
  TRIGGER_ARMY_POWER_PROJECTION_THIRD_NOT: "[COUNTRY.GetAdjective] army [concept_power_projection] is #bold not #!$COMPARATOR$ $NUM|v$"
+ TRIGGER_ARMY_POWER_PROJECTION_GREATER_THAN: "Army [concept_power_projection] is $COMPARATOR$ $NUM|v$"
+ TRIGGER_ARMY_POWER_PROJECTION_GREATER_THAN_FIRST: "[COUNTRY.GetAdjectiveNoFlag] army [concept_power_projection] is $COMPARATOR$ $NUM|v$"
+ TRIGGER_ARMY_POWER_PROJECTION_GREATER_THAN_THIRD: "[COUNTRY.GetAdjective] army [concept_power_projection] is $COMPARATOR$ $NUM|v$"
 
  TRIGGER_SUPPLY_NETWORK_STRENGTH:0 "Supply Network strength is $COMPARATOR$ $NUM|v%0$"
  TRIGGER_SUPPLY_NETWORK_STRENGTH_NOT:0 "Supply Network strength is #bold not #!$COMPARATOR$ $NUM|v%0$"
@@ -1981,12 +2188,12 @@
  TRIGGER_LOYALIST_FRACTION_THIRD:1 "$COMPARATOR|U$ $NUM|%0$ of [SelectLocalization( StringIsEmpty( '$FILTER$' ), Concept('concept_pop', '$concept_pops$'), '$FILTER$')] in $NAME$ are [Concept('concept_loyalist', '$concept_loyalists$')]"
  TRIGGER_LOYALIST_FRACTION_THIRD_NOT:1 "$COMPARATOR|U$ $NUM|%0$ of [SelectLocalization( StringIsEmpty( '$FILTER$' ), Concept('concept_pop', '$concept_pops$'), '$FILTER$')] in $NAME$ are #bold not#! [Concept('concept_loyalist', '$concept_loyalists$')]"
 
- TRIGGER_HAS_COMMANDER_ORDER:0 "Commander Order is $defend$"
- TRIGGER_HAS_COMMANDER_ORDER_NOT:1 "Commander Order is #bold not #!$defend$"
- TRIGGER_HAS_COMMANDER_ORDER_FIRST:0 "[Character.GetFullName] has a $defend$ Commander Order"
- TRIGGER_HAS_COMMANDER_ORDER_FIRST_NOT:0 "[Character.GetFullName] does #bold not #!have a $defend$ Commander Order"
- TRIGGER_HAS_COMMANDER_ORDER_THIRD:0 "[Character.GetFullName] has a $defend$ Commander Order"
- TRIGGER_HAS_COMMANDER_ORDER_THIRD_NOT:0 "[Character.GetFullName] does #bold not #!have a $defend$ Commander Order"
+ TRIGGER_HAS_COMMANDER_ORDER:0 "Commander Order is [COMMANDER_ORDER_TYPE.GetName]"
+ TRIGGER_HAS_COMMANDER_ORDER_NOT:1 "Commander Order is #bold not #! [COMMANDER_ORDER_TYPE.GetName]"
+ TRIGGER_HAS_COMMANDER_ORDER_FIRST:0 "[Character.GetFullName] has a [COMMANDER_ORDER_TYPE.GetName] Commander Order"
+ TRIGGER_HAS_COMMANDER_ORDER_FIRST_NOT:0 "[Character.GetFullName] does #bold not #!have a [COMMANDER_ORDER_TYPE.GetName] Commander Order"
+ TRIGGER_HAS_COMMANDER_ORDER_THIRD:0 "[Character.GetFullName] has a [COMMANDER_ORDER_TYPE.GetName] Commander Order"
+ TRIGGER_HAS_COMMANDER_ORDER_THIRD_NOT:0 "[Character.GetFullName] does #bold not #!have a [COMMANDER_ORDER_TYPE.GetName] Commander Order"
 
  TRIGGER_COMMANDER_IS_AVAILABLE: "$TRIGGER_IS_BUSY_NOT$[ConcatIfNeitherEmpty('\n$TAB$','$ERRORS$')]"
 
@@ -2028,8 +2235,12 @@
  TRIGGER_CULTURE_SECESSION_PROGRESS:0 "[CULTURE.GetName] in [TARGET_COUNTRY.GetName]: [concept_secession] progress ($CURRENT_VALUE$) is $COMPARATOR$ $NUM|v$"
  TRIGGER_CULTURE_SECESSION_PROGRESS_NOT:0 "[CULTURE.GetName] in [TARGET_COUNTRY.GetName]: [concept_secession] progress ($CURRENT_VALUE$) is $COMPARATOR$ $NUM|v$"
 
- TRIGGER_CULTURE_PERCENT_STATE: "Population in [STATE.GetName] is $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
- TRIGGER_CULTURE_PERCENT_STATE_NOT: "Population in [STATE.GetName] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_CULTURE_PERCENT_STATE:1 "Population in this [concept_state] is $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName]"
+ TRIGGER_CULTURE_PERCENT_STATE_NOT:1 "Population in this [concept_state] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName]"
+ TRIGGER_CULTURE_PERCENT_STATE_FIRST: "Population in [STATE.GetName] is $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_CULTURE_PERCENT_STATE_FIRST_NOT: "Population in [STATE.GetName] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_CULTURE_PERCENT_STATE_THIRD: "Population in [STATE.GetName] is $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_CULTURE_PERCENT_STATE_THIRD_NOT: "Population in [STATE.GetName] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
  TRIGGER_CULTURE_PERCENT_COUNTRY: "Population in [COUNTRY.GetName] is $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
  TRIGGER_CULTURE_PERCENT_COUNTRY_NOT: "Population in [COUNTRY.GetName] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
  TRIGGER_CULTURE_PERCENT_COUNTRY_FIRST: "Population in [COUNTRY.GetNameNoFlag] is $COMPARATOR$ $NUM|%0v$ [TARGET_CULTURE.GetName] (Currently $CURRENT_VALUE|%0v$)"
@@ -2046,8 +2257,13 @@
  TRIGGER_PRIMARY_CULTURES_PERCENT_COUNTRY_THIRD: "[COUNTRY.GetAdjective] [concept_primary_cultures] are $COMPARATOR$ $NUM|%0v$ of the Population in [COUNTRY.GetName] (Currently $CURRENT_VALUE|%0v$)"
  TRIGGER_PRIMARY_CULTURES_PERCENT_COUNTRY_THIRD_NOT: "[COUNTRY.GetAdjective] [concept_primary_cultures] are #bold not#! $COMPARATOR$ $NUM|%0v$ of the Population in [COUNTRY.GetName] (Currently $CURRENT_VALUE|%0v$)"
 
- TRIGGER_RELIGION_PERCENT_STATE: "Population in [STATE.GetName] is $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
- TRIGGER_RELIGION_PERCENT_STATE_NOT: "Population in [STATE.GetName] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_RELIGION_PERCENT_STATE: "Population in this state is $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_RELIGION_PERCENT_STATE_NOT: "Population in this state is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_RELIGION_PERCENT_STATE_FIRST: "Population in [STATE.GetName] is $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_RELIGION_PERCENT_STATE_FIRST_NOT: "Population in [STATE.GetName] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_RELIGION_PERCENT_STATE_THIRD: "Population in [STATE.GetName] is $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_RELIGION_PERCENT_STATE_THIRD_NOT: "Population in [STATE.GetName] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
+
  TRIGGER_RELIGION_PERCENT_COUNTRY: "Population in [COUNTRY.GetName] is $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
  TRIGGER_RELIGION_PERCENT_COUNTRY_NOT: "Population in [COUNTRY.GetName] is #bold not#! $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
  TRIGGER_RELIGION_PERCENT_COUNTRY_FIRST: "Population in [COUNTRY.GetNameNoFlag] is $COMPARATOR$ $NUM|%0v$ [TARGET_RELIGION.GetName] (Currently $CURRENT_VALUE|%0v$)"
@@ -2177,6 +2393,48 @@
  TRIGGER_POP_ACCEPTANCE_THIRD: "The [concept_acceptance] of [POP.GetName] is $COMPARATOR$ $NUM|v$"
  TRIGGER_POP_ACCEPTANCE_THIRD_NOT: "The [concept_acceptance] of [POP.GetName] is #b not#! $COMPARATOR$ $NUM|v$"
 
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_POP_ACCEPTANCE: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_POP_ACCEPTANCE_NOT: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_POP_ACCEPTANCE_FIRST: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_POP_ACCEPTANCE_FIRST_NOT: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_POP_ACCEPTANCE_THIRD: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_POP_ACCEPTANCE_THIRD_NOT: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+
+ TRIGGER_COUNTRY_AVERAGE_RELIGION_POP_ACCEPTANCE: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_RELIGION_POP_ACCEPTANCE_NOT: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_RELIGION_POP_ACCEPTANCE_FIRST: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_RELIGION_POP_ACCEPTANCE_FIRST_NOT: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_RELIGION_POP_ACCEPTANCE_THIRD: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_RELIGION_POP_ACCEPTANCE_THIRD_NOT: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_NOT: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_FIRST: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_FIRST_NOT: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_THIRD: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_COUNTRY_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_THIRD_NOT: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+
+ TRIGGER_STATE_AVERAGE_CULTURE_POP_ACCEPTANCE: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_POP_ACCEPTANCE_NOT: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_POP_ACCEPTANCE_FIRST: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_POP_ACCEPTANCE_FIRST_NOT: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_POP_ACCEPTANCE_THIRD: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_POP_ACCEPTANCE_THIRD_NOT: "Average acceptance of [CULTURE.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+
+ TRIGGER_STATE_AVERAGE_RELIGION_POP_ACCEPTANCE: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_RELIGION_POP_ACCEPTANCE_NOT: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_RELIGION_POP_ACCEPTANCE_FIRST: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_RELIGION_POP_ACCEPTANCE_FIRST_NOT: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_RELIGION_POP_ACCEPTANCE_THIRD: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_RELIGION_POP_ACCEPTANCE_THIRD_NOT: "Average acceptance of [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+
+ TRIGGER_STATE_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_NOT: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_FIRST: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_FIRST_NOT: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_THIRD: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_STATE_AVERAGE_CULTURE_AND_RELIGION_POP_ACCEPTANCE_THIRD_NOT: "Average acceptance of [CULTURE.GetName] [RELIGION.GetName] [Concept('concept_pop', '$concept_pops$')] in [STATE.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#!"
+
  TRIGGER_CHARACTER_ACCEPTANCE: "The [concept_acceptance] of [CHARACTER.GetFullName] in [TARGET_COUNTRY.GetName] is $COMPARATOR$ $NUM|v$"
  TRIGGER_CHARACTER_ACCEPTANCE_NOT: "The [concept_acceptance] of [CHARACTER.GetFullName] in [TARGET_COUNTRY.GetName] is #b not#! $COMPARATOR$ $NUM|v$"
  TRIGGER_CHARACTER_ACCEPTANCE_THIRD: "The [concept_acceptance] of [CHARACTER.GetFullName] in [TARGET_COUNTRY.GetName] is $COMPARATOR$ $NUM|v$"
@@ -2189,7 +2447,7 @@
  TRIGGER_NATIONALIZATION_COST_THIRD: "Total cost to [concept_nationalize] all [Concept('concept_building', '$concept_buildings$')] in [COUNTRY.GetName] owned by [concept_government] or [Concept('concept_pop', '$concept_pops$')] of [TARGET_COUNTRY.GetName] is $COMPARATOR$ $NUM|%2v$ (currently: $CURRENT_VALUE|%2v$)"
  TRIGGER_NATIONALIZATION_COST_THIRD_NOT: "Total cost to [concept_nationalize] all [Concept('concept_building', '$concept_buildings$')] in [COUNTRY.GetName] owned by [concept_government] or [Concept('concept_pop', '$concept_pops$')] of [TARGET_COUNTRY.GetName] is #bold not#! $COMPARATOR$ $NUM|%2v$ (currently: $CURRENT_VALUE|%2v$)"
 
- GOODS_PRODUCTION_RANK_PRODUCER: "#v ##$NUM|0$#! producer of [Goods.GetTextIcon][Nbsp][Goods.GetName] (currently: [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$CURRENT_VALUE$','(CFixedPoint)0'),'#v ##$CURRENT_VALUE|0$#!','none')])"
+ GOODS_PRODUCTION_RANK_PRODUCER: "#v ##$NUM|0$#! producer of [Goods.GetName] (currently: [SelectLocalization(BetweenInclusiveOfMax_CFixedPoint('(CFixedPoint)$CURRENT_VALUE$','(CFixedPoint)0', '(CFixedPoint)10'),'#v ##$CURRENT_VALUE|0$#!','none')])"
  TRIGGER_GOODS_PRODUCTION_RANK_EQUAL: "Is $GOODS_PRODUCTION_RANK_PRODUCER$"
  TRIGGER_GOODS_PRODUCTION_RANK_EQUAL_FIRST: "We are $GOODS_PRODUCTION_RANK_PRODUCER$"
  TRIGGER_GOODS_PRODUCTION_RANK_EQUAL_THIRD: "[COUNTRY.GetName] is $GOODS_PRODUCTION_RANK_PRODUCER$"
@@ -2197,7 +2455,7 @@
  TRIGGER_GOODS_PRODUCTION_RANK_NOT_EQUAL_FIRST: "We are #b not#! $GOODS_PRODUCTION_RANK_PRODUCER$"
  TRIGGER_GOODS_PRODUCTION_RANK_NOT_EQUAL_THIRD: "[COUNTRY.GetName] is #b not#! $GOODS_PRODUCTION_RANK_PRODUCER$"
 
- GOODS_PRODUCTION_RANK_ONE_OF_THE_TOP_PRODUCERS: "one of the #v top $NUM|0$#! producers of [Goods.GetTextIcon][Nbsp][Goods.GetName] (currently: [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$CURRENT_VALUE$','(CFixedPoint)0'),'#v ##$CURRENT_VALUE|0$#!','none')])"
+ GOODS_PRODUCTION_RANK_ONE_OF_THE_TOP_PRODUCERS: "one of the #v top $NUM|0$#! producers of [Goods.GetName] (currently: [SelectLocalization(BetweenInclusiveOfMax_CFixedPoint('(CFixedPoint)$CURRENT_VALUE$','(CFixedPoint)0', '(CFixedPoint)10'),'#v ##$CURRENT_VALUE|0$#!','none')])"
  TRIGGER_GOODS_PRODUCTION_RANK_GREATER_THAN: "Is #b not#! $GOODS_PRODUCTION_RANK_ONE_OF_THE_TOP_PRODUCERS$"
  TRIGGER_GOODS_PRODUCTION_RANK_GREATER_THAN_FIRST: "We are #b not#! $GOODS_PRODUCTION_RANK_ONE_OF_THE_TOP_PRODUCERS$"
  TRIGGER_GOODS_PRODUCTION_RANK_GREATER_THAN_THIRD: "[COUNTRY.GetName] is #b not#! $GOODS_PRODUCTION_RANK_ONE_OF_THE_TOP_PRODUCERS$"
@@ -2233,10 +2491,29 @@
  TRIGGER_GDP_OWNERSHIP_RATIO_THIRD: "Ratio of [COUNTRY.GetAdjective] [concept_gdp] owned (directly or indirectly) by [TARGET_COUNTRY.GetName] is $COMPARATOR$ $NUM|%2v$ (currently: $CURRENT_VALUE|%2v$)"
  TRIGGER_GDP_OWNERSHIP_RATIO_THIRD_NOT: "Ratio of [COUNTRY.GetAdjective] [concept_gdp] owned (directly or indirectly) by [TARGET_COUNTRY.GetName] is #bold not#! $COMPARATOR$ $NUM|%2v$ (currently: $CURRENT_VALUE|%2v$)"
 
- TRIGGER_IS_SAME_LAW_GROUP_AS:0 "Is in the same category as [TARGET.GetName]"
- TRIGGER_IS_SAME_LAW_GROUP_AS_NOT:0 "Is #b not#! in the same category as [TARGET.GetName]"
- TRIGGER_IS_SAME_LAW_GROUP_AS_THIRD:0 "[LAW_TYPE.GetName] is in the same category as [TARGET.GetName]"
- TRIGGER_IS_SAME_LAW_GROUP_AS_THIRD_NOT:0 "[LAW_TYPE.GetName] is #b not#! in the same category as [TARGET.GetName]"
+ TRIGGER_NUM_POTENTIAL_RESOURCES: "Number of potential $BUILDING_GROUP|v$ is $COMPARATOR$ $NUM|v$"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_NOT: "Number of potential $BUILDING_GROUP|v$ is #bold not#! $COMPARATOR$ $NUM|v$"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_THIRD: "Number of potential $BUILDING_GROUP|v$ in [STATE.GetName] is $COMPARATOR$ $NUM|%2v$ (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_THIRD_NOT: "Number of potential $BUILDING_GROUP|v$ in [STATE.GetName] is #bold not#! $COMPARATOR$ $NUM|v$ (currently: $CURRENT_VALUE|$)"
+
+ TRIGGER_NUM_POTENTIAL_RESOURCES_GREATER_THAN: "Number of potential $BUILDING_GROUP|v$ is greater than $NUM|v$"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_LESS_THAN: "Number of potential $BUILDING_GROUP|v$ is less than $NUM|v$"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_GREATER_OR_EQUAL: "Number of potential $BUILDING_GROUP|v$ is is greater than, or equal to $NUM|v$"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_LESS_OR_EQUAL: "Number of potential $BUILDING_GROUP|v$ is less than, or equal to $NUM|v$"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_EQUAL: "Number of potential $BUILDING_GROUP|v$ is $NUM|v$"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_NOT_EQUAL: "Number of potential $BUILDING_GROUP|v$ is #bold not #!$NUM|v$"
+
+ TRIGGER_NUM_POTENTIAL_RESOURCES_GREATER_THAN_THIRD: "Number of potential $BUILDING_GROUP|v$ in [State.GetName] is greater than $NUM|v$ (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_LESS_THAN_THIRD: "Number of potential $BUILDING_GROUP|v$ in [State.GetName] is less than $NUM|v$ (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_GREATER_OR_EQUAL_THIRD: "Number of potential $BUILDING_GROUP|v$ in [State.GetName] is greater than, or equal to than $NUM|v$ (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_LESS_OR_EQUAL_THIRD: "Number of potential $BUILDING_GROUP|v$ in [State.GetName] is less than, or equal to $NUM|v$ (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_EQUAL_THIRD: "Number of potential $BUILDING_GROUP|v$ in [State.GetName] is $NUM|v$ (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_NUM_POTENTIAL_RESOURCES_NOT_EQUAL_THIRD: "Number of potential $BUILDING_GROUP|v$ in [State.GetName] is #bold not #!$NUM|v$ (currently: $CURRENT_VALUE|v$)"
+
+ TRIGGER_IS_SAME_LAW_GROUP_AS:0 "Is in the same category as [TARGET_LAW_TYPE.GetName]"
+ TRIGGER_IS_SAME_LAW_GROUP_AS_NOT:0 "Is #b not#! in the same category as [TARGET_LAW_TYPE.GetName]"
+ TRIGGER_IS_SAME_LAW_GROUP_AS_THIRD:0 "[LAW_TYPE.GetName] is in the same category as [TARGET_LAW_TYPE.GetName]"
+ TRIGGER_IS_SAME_LAW_GROUP_AS_THIRD_NOT:0 "[LAW_TYPE.GetName] is #b not#! in the same category as [TARGET_LAW_TYPE.GetName]"
 
  TRIGGER_POLITICAL_MOVEMENT_SUPPORT:0 "Support is $COMPARATOR$ #variable $NUM|%0$#!"
  TRIGGER_POLITICAL_MOVEMENT_SUPPORT_NOT:1 "Support is #bold not #!$COMPARATOR$ #variable $NUM|%0$#!"
@@ -2268,7 +2545,7 @@
  TRIGGER_POLITICAL_MOVEMENT_RADICALISM_NOT:2 "Activism is #bold not #!$COMPARATOR$ #variable $NUM|%0$#!"
 
  TRIGGER_IS_POLITICAL_MOVEMENT_TYPE:0 "Type is #v [POLITICAL_MOVEMENT_TYPE.GetName]#!"
- TRIGGER_IS_POLITICAL_MOVEMENT_TYPE_NOT:1 "Type is #bold not #v [POLITICAL_MOVEMENT_TYPE.GetName]#!"
+ TRIGGER_IS_POLITICAL_MOVEMENT_TYPE_NOT:1 "Type is #bold not#! #v [POLITICAL_MOVEMENT_TYPE.GetName]#!"
 
  TRIGGER_IS_COUNTRY_ALIVE:2 "Exists"
  TRIGGER_IS_COUNTRY_ALIVE_NOT:2 "Does #bold not#! exist"
@@ -2300,11 +2577,11 @@
  TRIGGER_HAS_TREATY_PORT_IN_MARKET_THIRD:0 "[COUNTRY.GetName] has a [concept_treaty_port] in [MARKET.GetName]"
  TRIGGER_HAS_TREATY_PORT_IN_MARKET_THIRD_NOT:0 "[COUNTRY.GetName] does not have a [concept_treaty_port] in [MARKET.GetName]"
 
- TRIGGER_STATE_UNEMPLOYMENT_RATE:0 "Unemployment in [State.GetName] is $COMPARATOR$ #v $NUM|0%$#!"
- TRIGGER_STATE_UNEMPLOYMENT_RATE_NOT:1 "Unemployment in [State.GetName] is #bold not #!$COMPARATOR$ #v $NUM|0%$#!"
+ TRIGGER_STATE_UNEMPLOYMENT_RATE:0 "Unemployment in [STATE.GetName] is $COMPARATOR$ #v $NUM|0%$#!"
+ TRIGGER_STATE_UNEMPLOYMENT_RATE_NOT:1 "Unemployment in [STATE.GetName] is #bold not #!$COMPARATOR$ #v $NUM|0%$#!"
 
- TRIGGER_STATE_POPULATION:0 "Total population in [State.GetName] is $COMPARATOR$ #v $NUM|K$#!"
- TRIGGER_STATE_POPULATION_NOT:1 "Total population in [State.GetName] is #bold not #!$COMPARATOR$ #v $NUM|K$#!"
+ TRIGGER_STATE_POPULATION:0 "Total population in [STATE.GetName] is $COMPARATOR$ #v $NUM|K$#!"
+ TRIGGER_STATE_POPULATION_NOT:1 "Total population in [STATE.GetName] is #bold not #!$COMPARATOR$ #v $NUM|K$#!"
 
  TRIGGER_IS_HEIR:0 "Is an [concept_heir]"
  TRIGGER_IS_HEIR_NOT:1 "Is #bold not #!an [concept_heir]"
@@ -2316,10 +2593,10 @@
  TRIGGER_IS_ON_FRONT_THIRD:0 "[MILITARY_FORMATION.GetName] is currently on a [concept_front]"
  TRIGGER_IS_ON_FRONT_THIRD_NOT:1 "[CHARACTER.GetFullName] is currently #bold not #!on a [concept_front]"
 
- TRIGGER_HAS_POTENTIAL_RESOURCE:2 "Could potentially have #v $BUILDING_GROUP$#!"
- TRIGGER_HAS_POTENTIAL_RESOURCE_NOT:3 "Could #bold not#! potentially have #v $BUILDING_GROUP$#!"
- TRIGGER_HAS_POTENTIAL_RESOURCE_THIRD:1 "[STATE.GetName] could potentially have #v $BUILDING_GROUP$#!"
- TRIGGER_HAS_POTENTIAL_RESOURCE_THIRD_NOT:1 "[STATE.GetName] could #bold not#! potentially have #v $BUILDING_GROUP$#!"
+ TRIGGER_HAS_POTENTIAL_RESOURCE:2 "Could potentially have #v $BUILDING_TYPE$#!"
+ TRIGGER_HAS_POTENTIAL_RESOURCE_NOT:3 "Could #bold not#! potentially have #v $BUILDING_TYPE$#!"
+ TRIGGER_HAS_POTENTIAL_RESOURCE_THIRD:1 "[STATE.GetName] could potentially have #v $BUILDING_TYPE$#!"
+ TRIGGER_HAS_POTENTIAL_RESOURCE_THIRD_NOT:1 "[STATE.GetName] could #bold not#! potentially have #v $BUILDING_TYPE$#!"
 
  TRIGGER_IS_ENCOURAGING_CONSUMPTION:0 "[COUNTRY.GetName] is encouraging the consumption of [TARGET_GOODS.GetName]"
  TRIGGER_IS_ENCOURAGING_CONSUMPTION_NOT:1 "[COUNTRY.GetName] is #bold not #!encouraging the consumption of [TARGET_GOODS.GetName]"
@@ -2492,9 +2769,9 @@
  TRIGGER_ANY_SCOPE_BUILDING_ALL_FIRST:1 "All [Country.GetAdjectiveNoFlag] [Concept('concept_building', '$concept_buildings$')]:"
  TRIGGER_ANY_SCOPE_BUILDING_ALL_THIRD:1 "All [Concept('concept_building', '$concept_buildings$')]:"
 
- TRIGGER_ANY_SCOPE_BUILDING_IN_STATE_THIRD:1 "Any [concept_building] in [State.GetName]:"
- TRIGGER_ANY_SCOPE_BUILDING_IN_STATE_THIRD_NOT:1 "No [concept_building] in [State.GetName]:"
- TRIGGER_ANY_SCOPE_BUILDING_IN_STATE_ALL_THIRD:1 "All [Concept('concept_building', '$concept_buildings$')] in [State.GetName]:"
+ TRIGGER_ANY_SCOPE_BUILDING_IN_STATE_THIRD:1 "Any [concept_building] in [STATE.GetName]:"
+ TRIGGER_ANY_SCOPE_BUILDING_IN_STATE_THIRD_NOT:1 "No [concept_building] in [STATE.GetName]:"
+ TRIGGER_ANY_SCOPE_BUILDING_IN_STATE_ALL_THIRD:1 "All [Concept('concept_building', '$concept_buildings$')] in [STATE.GetName]:"
 
  TRIGGER_ANY_SCOPE_INTEREST_MARKER:1 "Any [concept_interest]:"
  TRIGGER_ANY_SCOPE_INTEREST_MARKER_ALL:1 "All [Concept('concept_interest','$concept_interests$')]:"
@@ -2561,11 +2838,18 @@
  TRIGGER_ANY_POTENTIAL_PARTY_COUNT:2 "$PARAMETERS$ $FILTER$potential [Concept('concept_party', '$concept_parties$')]:"
  TRIGGER_ANY_POTENTIAL_PARTY_COUNT_THIRD:2 "$PARAMETERS$ $FILTER$potential [Concept('concept_party', '$concept_parties$')] in [Country.GetName]:"
 
- NOT_TRIGGER_ANY_POLITICAL_MOVEMENT: "No [concept_political_movement]:"
  TRIGGER_ANY_POLITICAL_MOVEMENT:1 "Any [concept_political_movement]:"
+ TRIGGER_ANY_POLITICAL_MOVEMENT_NOT: "No [concept_political_movement]:"
+ TRIGGER_ANY_POLITICAL_MOVEMENT_FIRST: "Any [Country.GetAdjectiveNoFlag] [concept_political_movement]:"
+ TRIGGER_ANY_POLITICAL_MOVEMENT_FIRST_NOT: "No [Country.GetAdjectiveNoFlag] [concept_political_movement]:"
  TRIGGER_ANY_POLITICAL_MOVEMENT_ALL:2 "All [Concept('concept_political_movement', '$concept_political_movements$')]:"
+ TRIGGER_ANY_POLITICAL_MOVEMENT_ALL_NOT:2 "No [Concept('concept_political_movement', '$concept_political_movements$')]:"
+ TRIGGER_ANY_POLITICAL_MOVEMENT_ALL_FIRST: "All [Country.GetAdjectiveNoFlag] [Concept('concept_political_movement', '$concept_political_movements$')]:"
+ TRIGGER_ANY_POLITICAL_MOVEMENT_ALL_FIRST_NOT: "No [Country.GetAdjectiveNoFlag] [Concept('concept_political_movement', '$concept_political_movements$')]:"
  TRIGGER_ANY_POLITICAL_MOVEMENT_PERCENT:3 "$PARAMETERS$ of $FILTER$[Concept('concept_political_movement', '$concept_political_movements$')]:"
  TRIGGER_ANY_POLITICAL_MOVEMENT_COUNT:3 "$PARAMETERS$ $FILTER$[Concept('concept_political_movement', '$concept_political_movements$')]:"
+
+ TRIGGER_ANY_POLITICAL_MOVEMENT_CULTURE_EQUAL: "[concept_culture] is [TARGET_CULTURE.GetName]"
 
  TRIGGER_ANY_DIPLOMATIC_PLAY:1 "Any [concept_diplomatic_play]:"
  TRIGGER_ANY_DIPLOMATIC_PLAY_ALL:1 "All [Concept('concept_diplomatic_play', '$concept_diplomatic_plays$')]:"
@@ -2678,6 +2962,7 @@
  TRIGGER_ANY_COUNTRY_FIRST:1 "Any [concept_country]:"
  TRIGGER_ANY_COUNTRY_ALL:2 "All [Concept('concept_country', '$concept_countries$')]:"
  TRIGGER_ANY_COUNTRY_PERCENT:3 "$PARAMETERS$ of $FILTER$[Concept('concept_country', '$concept_countries$')]:"
+ TRIGGER_ANY_COUNTRY_PERCENT_FIRST: "$PARAMETERS$ of all $FILTER$[Concept('concept_country', '$concept_countries$')]"
  TRIGGER_ANY_COUNTRY_COUNT:3 "$PARAMETERS$ $FILTER$[Concept('concept_country', '$concept_countries$')]:"
  TRIGGER_ANY_COUNTRY_COUNT_FIRST:2 "$PARAMETERS$ $FILTER$[Concept('concept_country', '$concept_countries$')]:"
  TRIGGER_ANY_COUNTRY_COUNT_THIRD:2 "$PARAMETERS$ $FILTER$[Concept('concept_country', '$concept_countries$')]:"
@@ -2829,12 +3114,12 @@
  TRIGGER_ANY_PRIMARY_CULTURE_THIRD:1 "Any [COUNTRY.GetAdjective] [concept_primary_cultures]:"
  TRIGGER_ANY_PRIMARY_CULTURE_THIRD_NOT:1 "Any [COUNTRY.GetAdjective] [concept_primary_cultures] NOT:"
 
- TRIGGER_ANY_PRIMARY_CULTURE_ALL:2 "All [Concept('concept_primary_cultures', '$concept_primary_culture$')]:"
- TRIGGER_ANY_PRIMARY_CULTURE_ALL_NOT:1 "All [Concept('concept_primary_cultures', '$concept_primary_culture$')] NOT:"
- TRIGGER_ANY_PRIMARY_CULTURE_ALL_FIRST:1 "All [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [COUNTRY.GetNameNoFlag]:"
- TRIGGER_ANY_PRIMARY_CULTURE_ALL_FIRST_NOT:1 "All [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [COUNTRY.GetNameNoFlag] NOT:"
- TRIGGER_ANY_PRIMARY_CULTURE_ALL_THIRD:1 "All [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [COUNTRY.GetName]:"
- TRIGGER_ANY_PRIMARY_CULTURE_ALL_THIRD_NOT:1 "All [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [COUNTRY.GetName] NOT:"
+ TRIGGER_ANY_PRIMARY_CULTURE_ALL:2 "All [concept_primary_cultures]:"
+ TRIGGER_ANY_PRIMARY_CULTURE_ALL_NOT:1 "All [concept_primary_cultures] NOT:"
+ TRIGGER_ANY_PRIMARY_CULTURE_ALL_FIRST:1 "All [concept_primary_cultures] in [COUNTRY.GetNameNoFlag]:"
+ TRIGGER_ANY_PRIMARY_CULTURE_ALL_FIRST_NOT:1 "All [concept_primary_cultures] in [COUNTRY.GetNameNoFlag] NOT:"
+ TRIGGER_ANY_PRIMARY_CULTURE_ALL_THIRD:1 "All [concept_primary_cultures] in [COUNTRY.GetName]:"
+ TRIGGER_ANY_PRIMARY_CULTURE_ALL_THIRD_NOT:1 "All [concept_primary_cultures] in [COUNTRY.GetName] NOT:"
 
  TRIGGER_ANY_PRIMARY_CULTURE_PERCENT:3 "$PARAMETERS$ of $FILTER$[Concept('concept_primary_cultures', '$concept_primary_culture$')]:"
 
@@ -2950,17 +3235,31 @@
 
  TRIGGER_MARKET_ACCESS_GREATER_THAN:0 "[concept_market_access] is greater than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_MARKET_ACCESS_LESS_THAN:1 "[concept_market_access] is less than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
- TRIGGER_MARKET_ACCESS_GREATER_OR_EQUAL:0 "[concept_market_access] is less than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ TRIGGER_MARKET_ACCESS_GREATER_OR_EQUAL:0 "[concept_market_access] is greater, or equal to $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_MARKET_ACCESS_LESS_OR_EQUAL:0 "[concept_market_access] is less than, or equal to $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_MARKET_ACCESS_EQUAL:0 "[concept_market_access] is $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_MARKET_ACCESS_NOT_EQUAL:1 "[concept_market_access] is #bold not #!$NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
 
  TRIGGER_MARKET_ACCESS_GREATER_THAN_THIRD: "[concept_market_access] in [State.GetName] is greater than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_MARKET_ACCESS_LESS_THAN_THIRD: "[concept_market_access] in [State.GetName] is less than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
- TRIGGER_MARKET_ACCESS_GREATER_OR_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is less than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ TRIGGER_MARKET_ACCESS_GREATER_OR_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is greater, or equal to $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_MARKET_ACCESS_LESS_OR_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is less than, or equal to $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_MARKET_ACCESS_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_MARKET_ACCESS_NOT_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is #bold not #!$NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+
+ NOT_TRIGGER_MARKET_ACCESS_GREATER_THAN:0 "[concept_market_access] is #b not#! greater than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_LESS_THAN:1 "[concept_market_access] is #b not#! less than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_GREATER_OR_EQUAL:0 "[concept_market_access] is #b not#! greater, or equal to $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_LESS_OR_EQUAL:0 "[concept_market_access] is #b not#! less than, or equal to $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_EQUAL:0 "[concept_market_access] is #b not#! $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_NOT_EQUAL:1 "[concept_market_access] is #bold not #!$NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+
+ NOT_TRIGGER_MARKET_ACCESS_GREATER_THAN_THIRD: "[concept_market_access] in [State.GetName] is #b not#! greater than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_LESS_THAN_THIRD: "[concept_market_access] in [State.GetName] is #b not#! less than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_GREATER_OR_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is #b not#! greater, or equal to $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_LESS_OR_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is #b not#! less than, or equal to $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is #b not#! $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
+ NOT_TRIGGER_MARKET_ACCESS_NOT_EQUAL_THIRD: "[concept_market_access] in [State.GetName] is #bold not #!$NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
 
  TRIGGER_WORLD_MARKET_ACCESS_GREATER_THAN: "[concept_world_market_access] is greater than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
  TRIGGER_WORLD_MARKET_ACCESS_LESS_THAN: "[concept_world_market_access] is less than $NUM|%0v$ (currently: $CURRENT_VALUE|%0v$)"
@@ -3287,12 +3586,12 @@
  TRIGGER_NUM_QUEUED_CONSTRUCTIONS_EQUAL:0 "Number of projects in the [concept_construction_queue] is $TARGET_VALUE|0v$"
  TRIGGER_NUM_QUEUED_CONSTRUCTIONS_NOT_EQUAL:0 "Number of projects in the [concept_construction_queue] is #bold not #!$TARGET_VALUE|0v$"
 
- TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_GREATER_THAN:0 "Number of [Concept('concept_private_construction', '$concept_gprivate_constructions$')] in the [concept_construction_queue] is greater than $TARGET_VALUE|0v$"
- TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_GREATER_OR_EQUAL:0 "Number of [Concept('concept_private_construction', '$concept_gprivate_constructions$')]  in the [concept_construction_queue] is greater than, or equal to $TARGET_VALUE|0v$"
+ TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_GREATER_THAN:0 "Number of [Concept('concept_private_construction', '$concept_private_constructions$')] in the [concept_construction_queue] is greater than $TARGET_VALUE|0v$"
+ TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_GREATER_OR_EQUAL:0 "Number of [Concept('concept_private_construction', '$concept_private_constructions$')]  in the [concept_construction_queue] is greater than, or equal to $TARGET_VALUE|0v$"
  TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_LESS_THAN:0 "Number of [Concept('concept_private_construction', '$concept_gprivate_constructions$')]  in the [concept_construction_queue] is less than $TARGET_VALUE|0v$"
- TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_LESS_OR_EQUAL:0 "Number of [Concept('concept_private_construction', '$concept_gprivate_constructions$')]  in the [concept_construction_queue] is less than, or equal to $TARGET_VALUE|0v$"
+ TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_LESS_OR_EQUAL:0 "Number of [Concept('concept_private_construction', '$concept_private_constructions$')]  in the [concept_construction_queue] is less than, or equal to $TARGET_VALUE|0v$"
  TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_EQUAL:0 "Number of [Concept('concept_private_construction', '$concept_gprivate_constructions$')]  in the [concept_construction_queue] is $TARGET_VALUE|0v$"
- TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_NOT_EQUAL:0 "Number of [Concept('concept_private_construction', '$concept_gprivate_constructions$')]  in the [concept_construction_queue] is #bold not #!$TARGET_VALUE|0v$"
+ TRIGGER_NUM_QUEUED_PRIVATE_CONSTRUCTIONS_NOT_EQUAL:0 "Number of [Concept('concept_private_construction', '$concept_private_constructions$')]  in the [concept_construction_queue] is #bold not #!$TARGET_VALUE|0v$"
 
  TRIGGER_NUM_QUEUED_GOVERNMENT_CONSTRUCTIONS_GREATER_THAN:0 "Number of [Concept('concept_government_construction', '$concept_government_constructions$')] in the [concept_construction_queue] is greater than $TARGET_VALUE|0v$"
  TRIGGER_NUM_QUEUED_GOVERNMENT_CONSTRUCTIONS_GREATER_OR_EQUAL:0 "Number of [Concept('concept_government_construction', '$concept_government_constructions$')] in the [concept_construction_queue] is greater than, or equal to $TARGET_VALUE|0v$"
@@ -3495,6 +3794,13 @@
  TRIGGER_HAS_REACHED_END_DATE:0 "Current date has reached the game end ($DATE$)"
  TRIGGER_HAS_REACHED_END_DATE_NOT:0 "Current date has #b not#! reached the game end ($DATE$)"
 
+ TRIGGER_STATE_GDP_GREATER_THAN: "The $GDP_SHORT$ of [STATE.GetName] is greater than @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
+ TRIGGER_STATE_GDP_GREATER_OR_EQUAL: "The $GDP_SHORT$ of [STATE.GetName] is greater than, or equal to @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
+ TRIGGER_STATE_GDP_LESS_THAN:1 "The $GDP_SHORT$ of [STATE.GetName] is less than @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
+ TRIGGER_STATE_GDP_LESS_OR_EQUAL: "The $GDP_SHORT$ of [STATE.GetName] is less than, or equal to @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
+ TRIGGER_STATE_GDP_EQUAL: "The $GDP_SHORT$ of [STATE.GetName] is @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
+ TRIGGER_STATE_GDP_NOT_EQUAL: "The $GDP_SHORT$ of [STATE.GetName] is #bold not #!@money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
+
  TRIGGER_COUNTRY_GDP_GREATER_THAN:1 "The $GDP_SHORT$ of [COUNTRY.GetName] is greater than @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
  TRIGGER_COUNTRY_GDP_GREATER_OR_EQUAL:1 "The $GDP_SHORT$ of [COUNTRY.GetName] is greater than, or equal to @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
  TRIGGER_COUNTRY_GDP_LESS_THAN:1 "The $GDP_SHORT$ of [COUNTRY.GetName] is less than @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
@@ -3509,8 +3815,10 @@
  TRIGGER_GLOBAL_GDP_EQUAL:0 "Global $GDP_SHORT$ is @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
  TRIGGER_GLOBAL_GDP_NOT_EQUAL:0 "Global $GDP_SHORT$ is #bold not#! @money!$TARGET_VALUE|Dv$ (currently: @money!$CURRENT_VALUE|Dv$)"
 
- TRIGGER_PRESTIGE: "The Prestige of [COUNTRY.GetName] is $COMPARATOR$ #variable $NUM$#! (currently: $CURRENT_VALUE|v$)"
- TRIGGER_PRESTIGE_NOT: "The Prestige of [COUNTRY.GetName] is #bold not #!$COMPARATOR$ #variable $NUM$#! (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_PRESTIGE: "The Prestige of [COUNTRY.GetName] is $COMPARATOR$ #v $NUM$#! (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_PRESTIGE_NOT: "The Prestige of [COUNTRY.GetName] is #bold not#! $COMPARATOR$ #v $NUM$#! (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_PRESTIGE_GREATER_OR_EQUAL: "The Prestige of [COUNTRY.GetName] is $COMPARATOR$ #v $NUM$#! (currently: $CURRENT_VALUE|v$)"
+ TRIGGER_PRESTIGE_GREATER_OR_EQUAL_NOT: "The Prestige of [COUNTRY.GetName] is #bold not#! $COMPARATOR$ #v $NUM$#! (currently: $CURRENT_VALUE|v$)"
 
  TRIGGER_COUNTRY_RELIGION: "The Religion of [COUNTRY.GetName] is the same as in [GetPlayer.GetName]"
  TRIGGER_COUNTRY_RELIGION_NOT: "The Religion of [COUNTRY.GetName] is #bold not #!the same as in [GetPlayer.GetName]"
@@ -3523,7 +3831,12 @@
  TRIGGER_CREDIT_NOT_EQUAL:1 "The Credit of [COUNTRY.GetName] is #bold not #!$TARGET_VALUE|0v$"
 
  TRIGGER_LEGITIMACY_GREATER_THAN:0 "The Legitimacy of the Government of [COUNTRY.GetName] is greater than $TARGET_VALUE|0v$"
- TRIGGER_LEGITIMACY_GREATER_OR_EQUAL:0 "The Legitimacy of the Government of [COUNTRY.GetName] is greater than, or equal to $TARGET_VALUE|0v$"
+ TRIGGER_LEGITIMACY_GREATER_OR_EQUAL: "The Legitimacy of the Government of [COUNTRY.GetName] is greater than, or equal to $TARGET_VALUE|0v$"
+ TRIGGER_LEGITIMACY_GREATER_OR_EQUAL_NOT: "The Legitimacy of the Government of [COUNTRY.GetName] is #bold not #!greater than, or equal to $TARGET_VALUE|0v$"
+ TRIGGER_LEGITIMACY_GREATER_OR_EQUAL_FIRST: "The Legitimacy of the Government of [COUNTRY.GetNameNoFlag] is greater than, or equal to $TARGET_VALUE|0v$"
+ TRIGGER_LEGITIMACY_GREATER_OR_EQUAL_FIRST_NOT: "The Legitimacy of the Government of [COUNTRY.GetNameNoFlag] is #bold not #!greater than, or equal to $TARGET_VALUE|0v$"
+ TRIGGER_LEGITIMACY_GREATER_OR_EQUAL_THIRD: "The Legitimacy of the Government of [COUNTRY.GetName] is greater than, or equal to $TARGET_VALUE|0v$"
+ TRIGGER_LEGITIMACY_GREATER_OR_EQUAL_THIRD_NOT: "The Legitimacy of the Government of [COUNTRY.GetName] is #bold not #!greater than, or equal to $TARGET_VALUE|0v$"
  TRIGGER_LEGITIMACY_LESS_THAN:0 "The Legitimacy of the Government of [COUNTRY.GetName] is less than $TARGET_VALUE|0v$"
  TRIGGER_LEGITIMACY_LESS_OR_EQUAL:0 "The Legitimacy of the Government of [COUNTRY.GetName] is less than, or equal to $TARGET_VALUE|0v$"
  TRIGGER_LEGITIMACY_EQUAL:0 "The Legitimacy of the Government of [COUNTRY.GetName] is $TARGET_VALUE|0v$"
@@ -3556,6 +3869,20 @@
  TRIGGER_AVERAGE_DEFENSE_LESS_OR_EQUAL:0 "[FRONT.GetName] Average Defense is less than, or equal to $TARGET_VALUE|0v$"
  TRIGGER_AVERAGE_DEFENSE_EQUAL:0 "[FRONT.GetName] Average Defense is $TARGET_VALUE|0v$"
  TRIGGER_AVERAGE_DEFENSE_NOT_EQUAL:1 "[FRONT.GetName] Average Defense is #bold not #!$TARGET_VALUE|0v$"
+
+ TRIGGER_TOTAL_TRADE_VALUE_GREATER_THAN:0 "Total [concept_trade] value is greater than $TARGET_VALUE|0v$"
+ TRIGGER_TOTAL_TRADE_VALUE_GREATER_THAN_FIRST:0 "$TRIGGER_TOTAL_TRADE_VALUE_GREATER_THAN$"
+ TRIGGER_TOTAL_TRADE_VALUE_GREATER_OR_EQUAL:0 "Total [concept_trade] value is greater than or equal to $TARGET_VALUE|0v$"
+ TRIGGER_TOTAL_TRADE_VALUE_GREATER_OR_EQUAL_FIRST:0 "$TRIGGER_TOTAL_TRADE_VALUE_GREATER_OR_EQUAL$"
+ TRIGGER_TOTAL_TRADE_VALUE_LESS_THAN:0 "Total [concept_trade] value is less than $TARGET_VALUE|0v$"
+ TRIGGER_TOTAL_TRADE_VALUE_LESS_THAN_FIRST:0 "$TTRIGGER_TOTAL_TRADE_VALUE_LESS_THAN$"
+ TRIGGER_TOTAL_TRADE_VALUE_LESS_OR_EQUAL:0 "Total [concept_trade] value is less than or equal to $TARGET_VALUE|0v$"
+ TRIGGER_TOTAL_TRADE_VALUE_LESS_OR_EQUAL_FIRST:0 "$TRIGGER_TOTAL_TRADE_VALUE_LESS_OR_EQUAL$"
+ TRIGGER_TOTAL_TRADE_VALUE_EQUAL:0 "Total [concept_trade] value is equal to $TARGET_VALUE|0v$"
+ TRIGGER_TOTAL_TRADE_VALUE_EQUAL_FIRST:0 "$TRIGGER_TOTAL_TRADE_VALUE_EQUAL$"
+ TRIGGER_TOTAL_TRADE_VALUE_NOT_EQUAL:1 "Total [concept_trade] value is #v not#! equal to $TARGET_VALUE|0v$"
+ TRIGGER_TOTAL_TRADE_VALUE_NOT_EQUAL_FIRST:1 "$TRIGGER_TOTAL_TRADE_VALUE_NOT_EQUAL$"
+
 
  TRIGGER_AVERAGE_OFFENSE_GREATER_THAN:0 "[FRONT.GetName] Average Offense is greater than $TARGET_VALUE|0v$"
  TRIGGER_AVERAGE_OFFENSE_GREATER_OR_EQUAL:0 "[FRONT.GetName] Average Offense is greater than, or equal to $TARGET_VALUE|0v$"
@@ -3635,6 +3962,8 @@
 
  TRIGGER_POP_TYPE_PERCENT_COUNTRY:0 "[POP_TYPE.GetName] is $COMPARATOR$ $NUM|0%$ of total population"
  TRIGGER_POP_TYPE_PERCENT_COUNTRY_NOT:1 "[POP_TYPE.GetName] is #bold not#! $COMPARATOR$ $NUM|0%$ of total population"
+ TRIGGER_POP_TYPE_PERCENT_COUNTRY_FIRST: "Population in [COUNTRY.GetNameNoFlag] is $COMPARATOR$ $NUM|%0v$ [POP_TYPE.GetName] (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_POP_TYPE_PERCENT_COUNTRY_FIRST_NOT: "Population in [COUNTRY.GetNameNoFlag] is #bold not#! $COMPARATOR$ $NUM|%0v$ [POP_TYPE.GetName] (Currently $CURRENT_VALUE|%0v$)"
 
  TRIGGER_POP_TYPE_PERCENT_STATE: "[concept_profession] is $COMPARATOR$ $NUM|0%$ of total population"
  TRIGGER_POP_TYPE_PERCENT_STATE_NOT: "[concept_profession] is #bold not#! $COMPARATOR$ $NUM|0%$ of total population"
@@ -3721,6 +4050,20 @@
  TRIGGER_THIS_COUNTRY_DIRECT_LINK_EQUAL_FIRST_NOT:0 "Your country is #b not#! [TARGET_COUNTRY.GetName]"
  TRIGGER_THIS_COUNTRY_DIRECT_LINK_THIRD_EQUAL:0 "They are [TARGET_COUNTRY.GetName]"
  TRIGGER_THIS_COUNTRY_DIRECT_LINK_EQUAL_THIRD_NOT:0 "They are #b not#! [TARGET_COUNTRY.GetName]"
+
+ TRIGGER_COUNTRY_DEFINITION_DIRECT_LINK_EQUAL: "Is #v [COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_COUNTRY_DEFINITION_DIRECT_LINK_EQUAL_NOT: "Is #b not#! #v [COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_COUNTRY_DEFINITION_DIRECT_LINK_FIRST_EQUAL: "Your country is #v [COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_COUNTRY_DEFINITION_DIRECT_LINK_EQUAL_FIRST_NOT: "Your country is #b not#! #v [COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_COUNTRY_DEFINITION_DIRECT_LINK_THIRD_EQUAL: "They are #v [COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_COUNTRY_DEFINITION_DIRECT_LINK_EQUAL_THIRD_NOT: "They are #b not#! #v [COUNTRY_DEFINITION.GetName]#!"
+
+ TRIGGER_THIS_COUNTRY_DEFINITION_DIRECT_LINK_EQUAL: "Is #v [TARGET_COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_THIS_COUNTRY_DEFINITION_DIRECT_LINK_EQUAL_NOT: "Is #b not#! #v [TARGET_COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_THIS_COUNTRY_DEFINITION_DIRECT_LINK_FIRST_EQUAL: "Your country is #v [TARGET_COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_THIS_COUNTRY_DEFINITION_DIRECT_LINK_EQUAL_FIRST_NOT: "Your country is #b not#! #v [TARGET_COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_THIS_COUNTRY_DEFINITION_DIRECT_LINK_THIRD_EQUAL: "They are #v [TARGET_COUNTRY_DEFINITION.GetName]#!"
+ TRIGGER_THIS_COUNTRY_DEFINITION_DIRECT_LINK_EQUAL_THIRD_NOT: "They are #b not#! #v [TARGET_COUNTRY_DEFINITION.GetName]#!"
 
  TRIGGER_TAX_CAPACITY_GREATER_THAN:0 "The amount of [concept_tax_capacity] is greater than $TARGET_VALUE|0v$"
  TRIGGER_TAX_CAPACITY_GREATER_THAN_NOT:0 "The amount of [concept_tax_capacity] is #bold not #!greater than $TARGET_VALUE|0v$"
@@ -3828,6 +4171,8 @@
  TRIGGER_IS_ARMY_NOT: "[MilitaryFormation.GetName] is #bold not#! an army"
  TRIGGER_IS_FLEET: "[MilitaryFormation.GetName] is a fleet"
  TRIGGER_IS_FLEET_NOT: "[MilitaryFormation.GetName] is #bold not#! a fleet"
+ TRIGGER_IS_FLEET_NONE: "$TRIGGER_IS_FLEET$"
+ TRIGGER_IS_FLEET_NONE_NOT: "$TRIGGER_IS_FLEET_NONE_NOT$"
 
  TRIGGER_IS_EXILE: "Is an [concept_exile]"
  TRIGGER_IS_EXILE_NOT: "Is #bold not#! an [concept_exile]"
@@ -3896,8 +4241,8 @@
  TRIGGER_IS_IN_SAME_POWER_BLOC_NOT: "Country is #bold not#! in the same [concept_power_bloc] as [TARGET_COUNTRY.GetName]"
  TRIGGER_IS_IN_SAME_POWER_BLOC_FIRST: "We are in the same [concept_power_bloc] as [TARGET_COUNTRY.GetName]"
  TRIGGER_IS_IN_SAME_POWER_BLOC_FIRST_NOT: "We are #bold not#! in the same [concept_power_bloc] as [TARGET_COUNTRY.GetName]"
- TRIGGER_IS_IN_SAME_POWER_BLOC_THIRD: "[Country.GetName] is in the same [concept_power_bloc] as [TARGET_COUNTRY.GetName]"
- TRIGGER_IS_IN_SAME_POWER_BLOC_THIRD_NOT: "[Country.GetName] is #bold not#! in the same [concept_power_bloc] as [TARGET_COUNTRY.GetName]"
+ TRIGGER_IS_IN_SAME_POWER_BLOC_THIRD: "[COUNTRY.GetName] is in the same [concept_power_bloc] as [TARGET_COUNTRY.GetName]"
+ TRIGGER_IS_IN_SAME_POWER_BLOC_THIRD_NOT: "[COUNTRY.GetName] is #bold not#! in the same [concept_power_bloc] as [TARGET_COUNTRY.GetName]"
 
  TRIGGER_IS_POWER_BLOC_LEADER: "Country is a leader of a [concept_power_bloc]"
  TRIGGER_IS_POWER_BLOC_LEADER_NOT: "Country is #bold not#! a leader of a [concept_power_bloc]"
@@ -4067,7 +4412,7 @@
  TRIGGER_STATE_TRADE: "Traded $GOODS_NAME$ with $STATE_NAME$ is $COMPARATOR$ $NUM|0v$\n($CURRENT_VALUE|0$ currently)"
  TRIGGER_STATE_TRADE_NOT: "Traded $GOODS_NAME$ with $STATE_NAME$ is #b not#! $COMPARATOR$ $NUM|0v$\n($CURRENT_VALUE|0$ currently)"
  TRIGGER_STATE_TRADE_THIRD: "Traded $GOODS_NAME$ between [STATE.GetName] and $STATE_NAME$ is $COMPARATOR$ $NUM|0v$\n($CURRENT_VALUE|0$ currently)"
- TRIGGER_STATE_TRADE_THIRD_NOT: "Traded  $GOODS_NAME$ between [STATE.GetName] and $STATE_NAME$ is #b not#! $COMPARATOR$ $NUM|0v$\n($CURRENT_VALUE|0$ currently)"
+ TRIGGER_STATE_TRADE_THIRD_NOT: "Traded $GOODS_NAME$ between [STATE.GetName] and $STATE_NAME$ is #b not#! $COMPARATOR$ $NUM|0v$\n($CURRENT_VALUE|0$ currently)"
 
  TRIGGER_STATE_EXPORTS: "Exported $GOODS_NAME$ to $STATE_NAME$ is $COMPARATOR$ $NUM|0v$\n($CURRENT_VALUE|0$ currently)"
  TRIGGER_STATE_EXPORTS_NOT: "Exported $GOODS_NAME$ to $STATE_NAME$ is #b not#! $COMPARATOR$ $NUM|0v$\n($CURRENT_VALUE|0$ currently)"
@@ -4211,6 +4556,8 @@
  TRIGGER_ANY_COMPANY_ALL_NOT: "No [Concept('concept_company','$concept_companies$')]:"
  TRIGGER_ANY_COMPANY_PERCENT_NOT: "$PARAMETERS$ of $FILTER$[Concept('concept_company','$concept_companies$')] not:"
  TRIGGER_ANY_COMPANY_COUNT_NOT: "$PARAMETERS$ $FILTER$[Concept('concept_company','$concept_companies$')] not:"
+ TRIGGER_ANY_COMPANY_FIRST: "Any [concept_company]:"
+ TRIGGER_ANY_COMPANY_FIRST_NOT: "No [concept_company]:"
 
  TRIGGER_ANY_SCOPE_REGIONAL_HQS: "Any [concept_regional_company_hq]:"
  TRIGGER_ANY_SCOPE_REGIONAL_HQS_ALL: "All [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')]:"
@@ -4337,11 +4684,6 @@
  TRIGGER_ANY_PRINCELY_STATE_COUNT: "$PARAMETERS$ $FILTER$[Concept('concept_princely_state','$concept_princely_states$')]:"
  TRIGGER_ANY_PRINCELY_STATE_COUNT_FIRST: "$PARAMETERS$ $FILTER$[Concept('concept_princely_state','$concept_princely_states$')]:"
  TRIGGER_ANY_PRINCELY_STATE_COUNT_THIRD: "$PARAMETERS$ $FILTER$[Concept('concept_princely_state','$concept_princely_states$')]:"
-
- princely_state_all: "All [Concept('concept_princely_state','$concept_princely_states$')]:"
-
- princely_state: "Any [concept_princely_state]:"
-
 
  TRIGGER_COUNTRY_AVERAGE_CULTURAL_ACCEPTANCE: "The average [concept_acceptance] is $COMPARATOR$ $NUM|v$"
  TRIGGER_COUNTRY_AVERAGE_CULTURAL_ACCEPTANCE_NOT: "The average [concept_acceptance] is #b not#! $COMPARATOR$ $NUM|v$"
@@ -4478,6 +4820,22 @@
 
  TRIGGER_ANY_SCOPE_TREATY: "Any [Country.GetAdjectiveNoFlag] [concept_treaty]:"
  TRIGGER_ANY_SCOPE_TREATY_ALL: "All [Country.GetAdjectiveNoFlag] [Concept('concept_treaty','$concept_treaties$')]:"
+ TRIGGER_ANY_SCOPE_TREATY_THIRD: "Any [concept_treaty]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_GOVERNMENT: "Any [concept_interest_group] [concept_in_government]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_GOVERNMENT_ALL: "All [Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_government]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_GOVERNMENT_PERCENT: "$PARAMETERS$ of $FILTER$[Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_government]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_GOVERNMENT_COUNT: "$PARAMETERS$ $FILTER$[Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_government]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_GOVERNMENT_COUNT_FIRST: "$PARAMETERS$ $FILTER$[Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_government]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_GOVERNMENT_COUNT_THIRD: "$PARAMETERS$ $FILTER$[Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_government]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_GOVERNMENT_FIRST: "Any [concept_interest_group] [concept_in_government]:"
+
+ TRIGGER_ANY_INTEREST_GROUP_IN_OPPOSITION: "Any [concept_interest_group] [concept_in_opposition]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_OPPOSITION_ALL: "All [Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_opposition]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_OPPOSITION_PERCENT: "$PARAMETERS$ of $FILTER$[Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_opposition]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_OPPOSITION_COUNT: "$PARAMETERS$ $FILTER$[Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_opposition]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_OPPOSITION_COUNT_FIRST: "$PARAMETERS$ $FILTER$[Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_opposition]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_OPPOSITION_COUNT_THIRD: "$PARAMETERS$ $FILTER$[Concept('concept_interest_group', '$concept_interest_groups$')] [concept_in_opposition]:"
+ TRIGGER_ANY_INTEREST_GROUP_IN_OPPOSITION_FIRST: "Any [concept_interest_group] [concept_in_opposition]:"
  TRIGGER_ANY_SCOPE_TREATY_PERCENT: "$PARAMETERS$ of $FILTER$[Concept('concept_treaty','$concept_treaties$')]:"
  TRIGGER_ANY_SCOPE_TREATY_COUNT: "$PARAMETERS$ $FILTER$[Concept('concept_treaty','$concept_treaties$')]:"
 
@@ -4499,6 +4857,19 @@
 
  TRIGGER_ARTICLE_TARGET_COUNTRY_EQUAL: "[Country.GetName] is the target of the [concept_article]"
  TRIGGER_ARTICLE_TARGET_COUNTRY_EQUAL_NOT: "[Country.GetName] is #bold not #! the target of the [concept_article]"
+
+ TRIGGER_NUM_UNITS_SHARE: "Total share of [Concept('concept_unit','$concept_units$')] controlled by this character is $COMPARATOR$ $TARGET_VALUE|0v$"
+ TRIGGER_NUM_UNITS_SHARE_NOT: "Total share of [Concept('concept_unit','$concept_units$')] controlled by this character is #bold not #! $COMPARATOR$ $TARGET_VALUE|0v$"
+
+ TRIGGER_NUM_UNITS_SHARE_LESS_THAN:0 "Total share of [Concept('concept_unit','$concept_units$')] controlled by this character is less than $TARGET_VALUE|0v$"
+ TRIGGER_NUM_UNITS_SHARE_LESS_THAN_NOT: "Total share of [Concept('concept_unit','$concept_units$')] controlled by this character is #bold not #! less than $TARGET_VALUE|0v$"
+ TRIGGER_NUM_UNITS_SHARE_LESS_THAN_THIRD:0 "Total share of [Concept('concept_unit','$concept_units$')] controlled by [Character.GetFullName] is less than $TARGET_VALUE|0v$"
+ TRIGGER_NUM_UNITS_SHARE_LESS_THAN_THIRD_NOT: "Total share of [Concept('concept_unit','$concept_units$')] controlled by [Character.GetFullName] is #bold not #! less than $TARGET_VALUE|0v$"
+
+ TRIGGER_NUM_UNITS_SHARE_LESS_OR_EQUAL:0 "Total share of [Concept('concept_unit','$concept_units$')] controlled by this character is less than or equal to $TARGET_VALUE|0v$"
+ TRIGGER_NUM_UNITS_SHARE_LESS_OR_EQUAL_NOT: "Total share of [Concept('concept_unit','$concept_units$')] controlled by this character is #bold not #! less than or equal to $TARGET_VALUE|0v$"
+ TRIGGER_NUM_UNITS_SHARE_LESS_OR_EQUAL_THIRD:0 "Total share of [Concept('concept_unit','$concept_units$')] controlled by [Character.GetFullName] is less than or equal to $TARGET_VALUE|0v$"
+ TRIGGER_NUM_UNITS_SHARE_LESS_OR_EQUAL_THIRD_NOT: "Total share of [Concept('concept_unit','$concept_units$')] controlled by [Character.GetFullName] is #bold not #! less than or equal to $TARGET_VALUE|0v$"
 
  TRIGGER_NUM_CONTRAVENTIONS: "Number of contraventions is $COMPARATOR$ $NUM|v$"
  TRIGGER_NUM_CONTRAVENTIONS_NOT: "Number of contraventions is #b not#! $COMPARATOR$ $NUM|v$"
@@ -4527,7 +4898,79 @@
  TRIGGER_HAS_ANY_SUBVENTIONS_ON_THIRD: "[COUNTRY.GetName] has any level of [concept_subventions] on [TARGET_GOODS.GetName]"
  TRIGGER_HAS_ANY_SUBVENTIONS_ON_THIRD_NOT: "[COUNTRY.GetName] does #b not#! have any level of [concept_subventions] on [TARGET_GOODS.GetName]"
 
- TRIGGER_HAS_TREATY_ALLIANCE_WITH: "[COUNTRY.GetName] has an $alliance$ with [TARGET_COUNTRY.GetName]"
- TRIGGER_HAS_TREATY_ALLIANCE_WITH_NOT: "[COUNTRY.GetName] does #b not#! have an $alliance$ with [TARGET_COUNTRY.GetName]"
- TRIGGER_HAS_TREATY_DEFENSIVE_PACT_WITH: "[COUNTRY.GetName] has a $defensive_pact$ with [TARGET_COUNTRY.GetName]"
- TRIGGER_HAS_TREATY_DEFENSIVE_PACT_WITH_NOT: "[COUNTRY.GetName] does #b not#! have a $defensive_pact$ with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_TREATY_ALLIANCE_WITH: "[COUNTRY.GetName] has an [GetArticleType('alliance').GetNameNoIcon] with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_TREATY_ALLIANCE_WITH_NOT: "[COUNTRY.GetName] does #b not#! have an [GetArticleType('alliance').GetNameNoIcon] with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_TREATY_DEFENSIVE_PACT_WITH: "[COUNTRY.GetName] has a [GetArticleType('defensive_pact').GetNameNoIcon] with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_TREATY_DEFENSIVE_PACT_WITH_NOT: "[COUNTRY.GetName] does #b not#! have a [GetArticleType('defensive_pact').GetNameNoIcon] with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_TREATY_FOREIGN_INVESTMENT_RIGHTS_WITH: "[COUNTRY.GetName] does have [GetArticleType('foreign_investment_rights').GetNameNoIcon] with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_TREATY_FOREIGN_INVESTMENT_RIGHTS_WITH_NOT: "[COUNTRY.GetName] does #b not#! have [GetArticleType('foreign_investment_rights').GetNameNoIcon] with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_TREATY_TRADE_PRIVILEGE_WITH: "[COUNTRY.GetName] does have [GetArticleType('trade_privilege').GetNameNoIcon] with [TARGET_COUNTRY.GetName]"
+ TRIGGER_HAS_TREATY_TRADE_PRIVILEGE_WITH_NOT: "[COUNTRY.GetName] does #b not#! have [GetArticleType('trade_privilege').GetNameNoIcon] with [TARGET_COUNTRY.GetName]"
+
+ TRIGGER_IS_NEGOTIATING: "[Concept('concept_negotiation', '$concept_negotiations$')] are underway"
+ TRIGGER_IS_NEGOTIATING_NOT: "[Concept('concept_negotiation', '$concept_negotiations$')] are #b not#! underway"
+
+ TRIGGER_HAS_NEGOTIATED: "The [concept_interest_group] has finished [Concept('concept_negotiation', '$concept_negotiations$')]"
+ TRIGGER_HAS_NEGOTIATED_NOT: "The [concept_interest_group] has #b not#! finished [Concept('concept_negotiation', '$concept_negotiations$')]"
+ TRIGGER_HAS_NEGOTIATED_THIRD: "[INTEREST_GROUP.GetName] has finished [Concept('concept_negotiation', '$concept_negotiations$')]"
+ TRIGGER_HAS_NEGOTIATED_THIRD_NOT: "[INTEREST_GROUP.GetName] has #b not#! finished [Concept('concept_negotiation', '$concept_negotiations$')]"
+
+ TRIGGER_CULTURE_HAS_NATIONAL_AWAKENING: "[CULTURE.GetName] has an active [concept_national_awakening]"
+ TRIGGER_CULTURE_HAS_NATIONAL_AWAKENING_NOT: "[CULTURE.GetName] does #b not#! have an active [concept_national_awakening]"
+ TRIGGER_CULTURE_HAS_NATIONAL_AWAKENING_OCCURRED: "[CULTURE.GetName] has had a [concept_national_awakening]"
+ TRIGGER_CULTURE_HAS_NATIONAL_AWAKENING_OCCURRED_NOT: "[CULTURE.GetName] has #b not#! had a [concept_national_awakening]"
+ TRIGGER_STATE_HAS_NATIONAL_AWAKENING: "[STATE.GetName] has an active [concept_national_awakening]"
+ TRIGGER_STATE_HAS_NATIONAL_AWAKENING_NOT: "[STATE.GetName] does #b not#! have an active [concept_national_awakening]"
+
+ TRIGGER_HAS_AMENDMENT: "Has an [concept_amendment] of type [AMENDMENT_TYPE.GetName]"
+ TRIGGER_HAS_AMENDMENT_NOT: "Does #b not#! have an [concept_amendment] of type [AMENDMENT_TYPE.GetName]"
+ TRIGGER_HAS_AMENDMENT_THIRD: "[LAW.GetName] has an [concept_amendment] of type [AMENDMENT_TYPE.GetName]"
+ TRIGGER_HAS_AMENDMENT_THIRD_NOT: "[LAW.GetName] does #b not#! have an [concept_amendment] of type [AMENDMENT_TYPE.GetName]"
+ TRIGGER_WOULD_SPONSOR_AMENDMENT: "Would sponsor an [concept_amendment] of type [AMENDMENT_TYPE.GetName]"
+ TRIGGER_WOULD_SPONSOR_AMENDMENT_NOT: "Would #b not#! sponsor an [concept_amendment] of type [AMENDMENT_TYPE.GetName]"
+ TRIGGER_WOULD_SPONSOR_AMENDMENT_THIRD: "[INTEREST_GROUP.GetName] would sponsor an [concept_amendment] of type [AMENDMENT_TYPE.GetName]"
+ TRIGGER_WOULD_SPONSOR_AMENDMENT_THIRD_NOT: "[INTEREST_GROUP.GetName] would #b not#! sponsor an [concept_amendment] of type [AMENDMENT_TYPE.GetName]"
+ TRIGGER_AMENDMENT_STANCE: "Stance on [AMENDMENT.GetName] $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_AMENDMENT_STANCE_NOT: "Stance on [AMENDMENT.GetName] #b not#! $COMPARATOR$ #variable $NUM$#!"
+ TRIGGER_AMENDMENT_CAN_BE_REPEALED: "[AMENDMENT.GetName] can be repealed"
+ TRIGGER_AMENDMENT_CAN_BE_REPEALED_NOT: "[AMENDMENT.GetName] can #b not#! be repealed"
+ TRIGGER_AMENDMENT_COUNT: "[LAW.GetName] has $COMPARATOR$ $NUM|v$ [Concept('concept_amendment', '$concept_amendments$')]"
+ TRIGGER_AMENDMENT_COUNT_NOT: "[LAW.GetName] does #b not#! have $COMPARATOR$ $NUM|v$ [Concept('concept_amendment', '$concept_amendments$')]"
+ TRIGGER_HAS_PARENT_LAW: "The [concept_amendment] has a parent [concept_law]"
+ TRIGGER_HAS_PARENT_LAW_NOT: "The [concept_amendment] does #b not#! have a parent [concept_law]"
+
+ TRIGGER_LIBERTY_DESIRE_WEEKLY_PROGRESS: "[concept_liberty_desire] weekly change is $COMPARATOR$ $NUM|v$"
+ TRIGGER_LIBERTY_DESIRE_WEEKLY_PROGRESS_NOT: "[concept_liberty_desire] weekly change is #b not#! $COMPARATOR$ $NUM|v$"
+ TRIGGER_LIBERTY_DESIRE_WEEKLY_PROGRESS_FIRST: "[COUNTRY.GetName] [concept_liberty_desire] weekly change is $COMPARATOR$ $NUM|v$"
+ TRIGGER_LIBERTY_DESIRE_WEEKLY_PROGRESS_FIRST_NOT: "[COUNTRY.GetName] [concept_liberty_desire] weekly change is #b not#! $COMPARATOR$ $NUM|v$"
+ TRIGGER_LIBERTY_DESIRE_WEEKLY_PROGRESS_THIRD: "$TRIGGER_LIBERTY_DESIRE_WEEKLY_PROGRESS_FIRST$"
+ TRIGGER_LIBERTY_DESIRE_WEEKLY_PROGRESS_THIRD_NOT: "$TRIGGER_LIBERTY_DESIRE_WEEKLY_PROGRESS_FIRST_NOT$"
+
+ TRIGGER_GDP_RANKING: "[Concept('concept_gdp', '$concept_gdp_short$')] rank is $COMPARATOR$ $NUM|v$"
+ TRIGGER_GDP_RANKING_NOT: "[Concept('concept_gdp', '$concept_gdp_short$')] rank is #b not#! $COMPARATOR$ $NUM|v$"
+ TRIGGER_GDP_RANKING_FIRST: "[COUNTRY.GetAdjectiveNoFlag] [Concept('concept_gdp', '$concept_gdp_short$')] rank is $COMPARATOR$ $NUM|v$ (currently [COUNTRY.GetGDPRanking])"
+ TRIGGER_GDP_RANKING_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] [Concept('concept_gdp', '$concept_gdp_short$')] rank is #b not#! $COMPARATOR$ $NUM|v$ (currently [COUNTRY.GetGDPRanking])"
+ TRIGGER_GDP_RANKING_THIRD: "[COUNTRY.GetAdjective] [Concept('concept_gdp', '$concept_gdp_short$')] rank is $COMPARATOR$ $NUM|v$ (currently [COUNTRY.GetGDPRanking])"
+ TRIGGER_GDP_RANKING_THIRD_NOT: "[COUNTRY.GetAdjective] [Concept('concept_gdp', '$concept_gdp_short$')] rank is #b not#! $COMPARATOR$ $NUM|v$ (currently [COUNTRY.GetGDPRanking])"
+
+ TRIGGER_COUNTRY_SCOPE_EQUAL: "Is [COUNTRY.GetName]"
+ TRIGGER_COUNTRY_SCOPE_EQUAL_NOT: "Is #b not#! [COUNTRY.GetName]"
+
+ TRIGGER_ELECTORAL_CONFIDENCE: "[concept_electoral_confidence] is $COMPARATOR$ $NUM|%0v$ (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_ELECTORAL_CONFIDENCE_NOT: "[concept_electoral_confidence] is #bold not #!$COMPARATOR$ $NUM|%0v$ (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_ELECTORAL_CONFIDENCE_FIRST: "[COUNTRY.GetAdjectiveNoFlag] [concept_electoral_confidence] is $COMPARATOR$ $NUM|%0v$ (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_ELECTORAL_CONFIDENCE_FIRST_NOT: "[COUNTRY.GetAdjectiveNoFlag] [concept_electoral_confidence] is #bold not #!$COMPARATOR$ $NUM|%0v$ (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_ELECTORAL_CONFIDENCE_THIRD: "[COUNTRY.GetAdjective] [concept_electoral_confidence] is $COMPARATOR$ $NUM|%0v$ (Currently $CURRENT_VALUE|%0v$)"
+ TRIGGER_ELECTORAL_CONFIDENCE_THIRD_NOT: "[COUNTRY.GetAdjective] [concept_electoral_confidence] is #bold not #!$COMPARATOR$ $NUM|%0v$ (Currently $CURRENT_VALUE|%0v$)"
+
+ TRIGGER_CAN_TRANSFER_SUBJECT: "[TARGET_COUNTRY.GetName] can be transferred as a [concept_subject] to [COUNTRY.GetName]"
+ TRIGGER_CAN_TRANSFER_SUBJECT_NOT: "[TARGET_COUNTRY.GetName] #b cannot#! be transferred as a [concept_subject] to [COUNTRY.GetName]"
+ TRIGGER_CAN_TRANSFER_SUBJECT_FIRST: "[TARGET_COUNTRY.GetName] can be transferred as a [concept_subject] to [COUNTRY.GetNameNoFlag]"
+ TRIGGER_CAN_TRANSFER_SUBJECT_FIRST_NOT: "[TARGET_COUNTRY.GetName] #b cannot#! be transferred as a [concept_subject] to [COUNTRY.GetNameNoFlag]"
+ 
+ TRIGGER_IS_IN_SAME_MARKET_AREA: "Is in the same [concept_market_area] as [TARGET_STATE.GetName]"
+ TRIGGER_IS_IN_SAME_MARKET_AREA_NOT: "Is #bold not#! in the same [concept_market_area] as [TARGET_STATE.GetName]"
+ TRIGGER_IS_IN_SAME_MARKET_AREA_FIRST: "[STATE.GetNameNoFlag] is in the same [concept_market_area] as [TARGET_STATE.GetName]"
+ TRIGGER_IS_IN_SAME_MARKET_AREA_FIRST_NOT: "[STATE.GetNameNoFlag] is #bold not#! in the same [concept_market_area] as [TARGET_STATE.GetName]"
+ TRIGGER_IS_IN_SAME_MARKET_AREA_THIRD: "[STATE.GetName] is in the same [concept_market_area] as [TARGET_STATE.GetName]"
+ TRIGGER_IS_IN_SAME_MARKET_AREA_THIRD_NOT: "[STATE.GetName] is #bold not#! in the same [concept_market_area] as [TARGET_STATE.GetName]"

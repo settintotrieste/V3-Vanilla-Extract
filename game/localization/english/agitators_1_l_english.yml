@@ -1,10 +1,4 @@
 ﻿l_english:
-  ideology_orleanist: "Orléanist"
-  ideology_orleanist_desc: "This leader sees the merits of a restrained monarch, and champions a French constitution fit for such purpose."
-  ideology_legitimist: "Legitimist"
-  ideology_legitimist_desc: "This leader yearns for the French kings of old, before the Reign of Terror sullied everything."
-  ideology_bonapartist: "Bonapartist"
-  ideology_bonapartist_desc: "This leader would see a new Bonaparte lead France into a new era of unquestioned might."
   sway_to_bonapartism_correct_ig_in_government_tt: "[Character.GetFullNamePossessive] [concept_interest_group] [Character.GetInterestGroup.GetName] is [concept_in_government] and #tooltippable #tooltip:[Character.GetTooltipTag],sway_to_bonapartism_correct_ig_in_government_tt_compatibility_list ideologically compatible with [GetIdeology('ideology_bonapartist').GetName]#!#!"
   sway_to_bonapartism_correct_ig_in_government_tt_compatibility_list: "[Concept('concept_interest_group','$concept_interest_groups$')] compatible with [GetIdeology('ideology_bonapartist').GetName] includes:\n[GetInterestGroupVariant('ig_armed_forces',Character.GetCountry).GetName]\n[GetInterestGroupVariant('ig_petty_bourgeoisie',Character.GetCountry).GetName]\n[GetInterestGroupVariant('ig_industrialists',Character.GetCountry).GetName]\n[GetInterestGroupVariant('ig_rural_folk',Character.GetCountry).GetName]"
   sway_to_bonapartism_compatible_ideology_tt: "[Character.GetFullNamePossessive] current [concept_ideology] ([Character.GetIdeology.GetName]) is #b not#! #tooltippable #tooltip:[Character.GetTooltipTag],sway_to_bonapartism_compatible_ideology_tt_compatibility_list opposed to [GetIdeology('ideology_bonapartist').GetName]#!#!"
@@ -68,11 +62,11 @@
   legitimist_progress_increase_tick_1_tt: "The #bold Progress#! of the #bold Legitimists#! will #bold increase#! by #variable 1#! every month"
 
   divided_monarchists_bonapartist_progress_bar: "Divided Monarchists - Bonapartists"
-  divided_monarchists_bonapartist_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/[GetPlayer.MakeScope.ScriptValue('divided_monarchists_upper_bound')])"
+  divided_monarchists_bonapartist_progress_bar_desc: "Bonapartists: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/[GetPlayer.MakeScope.ScriptValue('divided_monarchists_upper_bound')])"
   divided_monarchists_orleanist_progress_bar: "Divided Monarchists - Orleanists"
-  divided_monarchists_orleanist_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/[GetPlayer.MakeScope.ScriptValue('divided_monarchists_upper_bound')])"
+  divided_monarchists_orleanist_progress_bar_desc: "Orleanists: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/[GetPlayer.MakeScope.ScriptValue('divided_monarchists_upper_bound')])"
   divided_monarchists_legitimist_progress_bar: "Divided Monarchists - Legitimists"
-  divided_monarchists_legitimist_progress_bar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/[GetPlayer.MakeScope.ScriptValue('divided_monarchists_upper_bound')])"
+  divided_monarchists_legitimist_progress_bar_desc: "Legitimists: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/[GetPlayer.MakeScope.ScriptValue('divided_monarchists_upper_bound')])"
 
   bonapartist_progress_from_characters: "combined [concept_popularity] of #bold Bonapartist#! characters"
   bonapartist_progress_from_igs: "[concept_clout] of #bold Bonapartist#! [Concept('concept_interest_group', '$concept_interest_groups$')]"
@@ -102,10 +96,13 @@
   NON_BONAPARTIST_MONARCH: "Non-[GetIdeology('ideology_bonapartist').GetName] Monarch"
   NON_LEGITIMIST_MONARCH: "Non-[GetIdeology('ideology_legitimist').GetName] Monarch"
 
+  NON_CARLIST_MONARCH: "Non-[GetIdeology('ideology_carlist').GetName] Monarch"
+  NON_MIGUELIST_MONARCH: "Non-[GetIdeology('ideology_miguelist').GetName] Monarch"
+
   exile_old_ruler_tt: "[SCOPE.sCharacter('old_ruler_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('old_ruler_scope').GetFullName] has fled into [concept_exile]"
   french_pretenders.6.t: "The Provisional Government"
   french_pretenders.6.d: "The crisis throughout [ROOT.GetCountry.GetName] has proven too much for [SCOPE.sCharacter('old_ruler_scope').GetFullName] to handle. [SCOPE.sCharacter('monarch_scope').GetSheHe|U] has been forced to abdicate and flee the country, and a provisional republican government has been declared."
-  french_pretenders.6.f: ""From that day, a thousand strange systems issued impetuously from the minds of the innovators, and spread through the troubled minds of the crowd. Everything was still standing except royalty and parliament, and it seemed that from the shock of the revolution, society itself had been reduced to dust, and that the new form that should be given to society had been put to competition."" #- Alexis de Tocqueville
+  french_pretenders.6.f: ""From that day, a thousand strange systems issued impetuously from the minds of the innovators, and spread through the troubled minds of the crowd. Everything was still standing except royalty and parliament, and it seemed that from the shock of the revolution, society itself had been reduced to dust, and that the new form that should be given to society had been put to competition."\n\n— Alexis de Tocqueville"
   french_pretenders.6.a: "Long live the Republic!"
 
   je_cement_the_rightful_dynasty_fake: "Adds #bold Cement the House of The Rightful Claimant#! to the journal of [SCOPE.sCountry('reflexive_reference_france').GetName]"
@@ -191,7 +188,6 @@
   alone_with_principles: "Alone With Principles"
   cryptomonarchists_in_our_ranks: "Crypto-Monarchists In Our Ranks"
   collaboration_collapsed: "Collaboration Collapsed"
-  restitutor_orbis: "Restitutor Orbis"
   stalwarts_of_the_restoration: "Stalwarts of the Restoration"
   too_gentle_on_missionaries: "Too Gentle on Missionaries"
   inaction_in_indochina: "Inaction in Indochina"
@@ -406,8 +402,6 @@
   muzzled_activists: "Muzzled Activists"
   poorly_worded_pamphlets: "Poorly-Worded Pamphlets"
   withdrawn_from_the_public: "Withdrawn From The Public"
-  well_known_tragedy: "Well Known Tragedy"
-  scandalous_lover: "Scandalous Lover"
   on_the_run: "On The Run"
   cleared_of_charges: "Cleared of Charges"
   farming_incentives: "Farming Incentives"

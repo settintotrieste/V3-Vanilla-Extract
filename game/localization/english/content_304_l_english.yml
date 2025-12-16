@@ -1,6 +1,6 @@
 ﻿l_english:
   je_risorgimento: "Risorgimento"
-  je_risorgimento_reason:1 "The winds of nationalism sweeping Europe have begun to pass through [ROOT.GetCountry.GetName], inspiring figures both within our government and without to look towards the restoration of a single, unified Italy.\n\nWhilst this journal entry is active, having any active [concept_revolution] caused by a #tooltippable;tooltip:[GetPlayer.GetTooltipTag],italian_nationalist_movements_list_tt compatible#! [concept_political_movement] will lead to the seizure of the [ROOT.GetCountry.GetAdjective] government by pan-Italian revolutionaries[ROOT.GetCountry.GetCustom('italy_fate_loc')]."
+  je_risorgimento_reason:2 "The winds of nationalism sweeping Europe have begun to pass through [ROOT.GetCountry.GetName], inspiring figures both within our government and without to look towards the restoration of a single, unified Italy.\n\nWhilst this journal entry is active, having any active [concept_revolution] caused by an [SelectLocalization(SCOPE.sPoliticalMovement('italian_national_movement').IsValid, SCOPE.sPoliticalMovement('italian_national_movement').GetName, 'movement_italian_national')] will lead to the seizure of the [ROOT.GetCountry.GetAdjective] government by pan-Italian revolutionaries[ROOT.GetCountry.GetCustom('italy_fate_loc')]."
   austrian_radicals_cooldown_tt: "Has not used the #bold Encourage Italian Nationalism#! decision in the past #v [GetPlayer.MakeScope.ScriptValue('risorgimento_action_cooldown_years')]#!"
   italian_radicals_cooldown_tt: "Has not used the #bold Sponsor Pro-Unification Sentiment#! decision in the past #v [GetPlayer.MakeScope.ScriptValue('risorgimento_action_cooldown_years')]#!"
   is_italy_tt: "Has formed the nation of #bold Italy#!"
@@ -107,6 +107,21 @@
  sweden_monarchy.3.f: "The Archbishop anointed the king on his forehead, chest, temples, and wrists, saying:\n\n"The Almighty God pour out his Holy Spirit into your soul and mind, plans and undertakings, by whose gift may you so rule land and kingdom as to redound to the honour and glory of God, maintain justice and equity and be for the good of the land and people." \n\n The king then rose and resumed his seat on his throne. \n\n" Now [SCOPE.sCharacter('oscar_relevant_ruler').GetFullNameNoFormatting] has been crowned king of the Swedes, Geats, and Wends. He and no other."" #- Swedish coronation manifesto
  sweden_monarchy.3.a: "Long live the King!"
 
+ sweden_migration.1.t: "Swedish Migration"
+ sweden_migration.1.d: "The poor conditions in [SCOPE.sCountry('migration_country').GetName] have made migration to [SCOPE.sState('migration_target_state').GetName] a very attractive alternative. Thousands of [SCOPE.sCulture('migration_culture').GetName] people have set off across the sea for America."
+ sweden_migration.1.f: "[SCOPE.sCulture('migration_culture').GetNameNoFormatting] peasants gather off the latest ship. Tens of thousands had already come before them, with tens of thousands more on the way. \nTo the Swedes, Minnesota appeared as an earthly paradise, its dark and bountiful soil yielding harvests enough to banish want and gladden the heart."
+ sweden_migration.1.a: "A better life is what we need right now."
+ sweden_migration.1.b: "New York will do quite nicely."
+ sweden_migration: "Swedish Migration"
+
+ sweden_law.1.t: "Racial Biology"
+ sweden_law.1.d: "The [SCOPE.sCountry('sweden_law_country').GetAdjective] State Institute for Racial Biology has been tasked with finding the cause of crime, alcoholism, and mental issues. The Institute's claims have led the Riksdag to pass through policies controlling the births of [SCOPE.sCulture('sweden_law_culture').GetName] people."
+ sweden_law.1.f: "In the lecture halls of Uppsala, professors hold up calipers as if they are oracles. They unfold charts of physiognomies, and point to each in turn. \nThis one is a pure-bred Swede, long of limb and sound of mind. This one is tainted by interbreeding, doomed to a fate of alcoholism. The former is the future of the nation. The latter is fated to quietly disappear. \nIt would be the humane thing to do, continues the professor.  Look at the graphs, at the well-arranged figures. The nation demands more of us than he is able to provide."
+ sweden_law.1.a: "Three generations of imbeciles are enough."
+ sweden_law.1.b: "We need to control this situation."
+ sweden_law_birth: "A Nation’s Pride"
+ sweden_law_birth_two: "The Ledger of Shame"
+
  king_of_sweden_and_norway_key: "of Sweden and Norway"
  king_of_sweden_key: "of Sweden"
  king_of_sweden_denmark_and_norway_key: "of Sweden, Denmark, and Norway"
@@ -137,7 +152,7 @@
  je_buy_alaska_button_desc: "Alaska is currently held as a colonial territory by a friendly nation. We may be able to leverage our relations to purchase the territory."
 
  foster_national_agitation: "Stir National Agitation"
- foster_national_agitation_desc: "#lore Task [Character.GetFullName] with agitating amongst the [Character.GetCulture.GetName] population of a foreign power"
+ foster_national_agitation_desc: "#lore Task [Character.GetFullName] with agitating amongst the [Character.GetCulture.GetName] population of a foreign power#!"
  not_homeland_of_states_tt: "The owner of this state does not have [SCOPE.sCulture('agitator_culture').GetName] as a [Concept('concept_primary_cultures','$concept_primary_culture$')]"
  is_rival_of_owner_tt: "The owner of this state has a [concept_rivalry] with us"
  
@@ -200,10 +215,6 @@
  notification_ita_italian_unification_intent_name: "[SCOPE.sCountry('italian_unifier_candidate').GetName] Supports Italian Unification"
  notification_ita_italian_unification_intent_desc: "The government of [SCOPE.sCountry('italian_unifier_candidate').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('italian_unifier_candidate').GetRuler.GetFullName] has signaled support for the unification of the Italian peninsula into a single nation."
  notification_ita_italian_unification_intent_tooltip: "#header $notification_ita_italian_unification_intent_name$#!\n$TOOLTIP_DELIMITER$\n$notification_ita_italian_unification_intent_desc$"
-
- notification_nationalism_unlock_national_agitation_name: "National Agitation Available"
- notification_nationalism_unlock_national_agitation_desc: "With our nation's development of Nationalism, the 'Stir National Agitation' Character Interaction for [Concept('concept_agitator','$concept_agitators$')] has become available."
- notification_nationalism_unlock_national_agitation_tooltip: "#header $notification_nationalism_unlock_national_agitation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nationalism_unlock_national_agitation_desc$"
 
   notification_nationalism_national_agitation_occurred_name: "[SCOPE.sCulture('agitation_culture').GetName] Unrest in [SCOPE.sState('agitation_state').GetName]"
   notification_nationalism_national_agitation_occurred_desc: "[SCOPE.sCulture('agitation_culture').GetName] nationalist unrest has sharply increased in [SCOPE.sState('agitation_state').GetName]. Agents of [SCOPE.sCountry('agitation_sponsor').GetName] have been suspected of fostering the seditious behavior."
@@ -347,7 +358,7 @@
   assassination_attempt_failed_tt: "Our #bold assassination attempt#! will fail, but remain undetected"
   assassination_attempt_failed_loud_tt: "Our #bold assassination attempt#! will fail, and cause a major scandal"
 
-  would_be_accepted_under_national_supremacy_tt: "This [concept_pop]'s culture shares both [Concept('concept_cultural_heritage_trait', '$concept_cultural_heritage_traits$')] and all other [Concept('concept_cultural_trait', '$concept_cultural_traits$')] with any of this country's [concept_primary_cultures]"
+  would_be_accepted_under_national_supremacy_tt: "This [concept_pop]'s culture shares both a [Concept('concept_heritage_trait','$concept_heritage_trait_short$')] and [Concept('concept_language_trait','$concept_language_trait_short$')] [Concept('concept_discrimination_trait','$concept_discrimination_trait_short$')] with any of this country's [concept_primary_cultures]"
 
   resign_from_office: "Resign from Office"
   resign_from_office_desc: "This character will resign from [Character.GetHerHis] position as [Character.GetPrimaryRoleTitle] of [Character.GetCountry.GetName]"
@@ -427,18 +438,6 @@
   modifier_india_company_rule: "Company Rule"
   modifier_india_crown_rule: "Crown Rule"
 
-  ideology_colonialist: "Colonialist"
-  ideology_colonialist_desc: "This group represents a colonial interest reliant upon the continuous extraction of wealth from their territory, and favors the maintenance of this system over independent economic development."
-
-  ideology_sovereignist: "Sovereignist"
-  ideology_sovereignist_desc: "This group opposes oppressive measures imposed upon it by colonial authorities, preferring policies that serve the ends of national self-governance."
-
-  ideology_sovereignist_leader: "Sovereignist"
-  ideology_sovereignist_leader_desc: "This leader opposes oppressive measures imposed upon their nation by colonial authorities, preferring policies that serve the ends of national self-governance."
-
-  ideology_utopian: "Utopian"
-  ideology_utopian_desc: "This leader seeks the establishment of a socialist society founded upon the principles of egalitarianism, rationalism, and communal ownership."
-
   ### Corporate State ###
 
   modifier_corporate_state_national_unions: "Corporatist Unionism"
@@ -464,6 +463,7 @@
 
   corporate_state.1.t: "The National Unions"
   corporate_state.1.d: "Segments of the [SCOPE.gsInterestGroup('trade_unions_ig').GetName] have voiced their support for the official recognition of labor within the proposed [SCOPE.sLaw('current_law_scope').GetName]. They serve as a valuable counterbalance against the communist opposition."
+  corporate_state.1.d1: "Segments of the [SCOPE.gsInterestGroup('trade_unions_ig').GetName] have voiced their support for the official recognition of the role of labor within our state. They serve as a valuable counterbalance against the communist opposition."
   corporate_state.1.f: ""Today the bourgeoisie itself shows a sympathy and an inclination, which are by no means illogical, towards the unionisation of the working class. Indeed, the more intelligent sections of the bourgeoisie would readily accept a reform of the state and representative apparatus in order to give a larger place to the 'apolitical' unions and even to their claims to exercise control over the system of production. The bourgeoisie feels that, as long as the proletariat's action can be limited to the immediate economic demands that are raised trade by trade, it helps to safeguard the status-quo and to avoid the formation of the perilous 'political' consciousness..."" # - Amadeo Bordiga, Party and Class [1921]
   corporate_state.1.a: "Their support is welcomed."
   corporate_state.1.b: "Use them to recruit for our national labor organization."
@@ -567,7 +567,6 @@
   great_reformer.1.a: "The Tsar must be honored for his work."
   great_reformer.1.b: "After reform, revolution."
 
-  modifier_great_reformer: "Tsar-Liberator"
   modifier_great_reforms_complete: "Great Reforms Completed"
 
   most_european_pops_abandon_alaska_tt: "A large number of #bold European#! [Concept('concept_pop','$concept_pops$')] will evacuate [SCOPE.sState('capital_scope').GetName]"
