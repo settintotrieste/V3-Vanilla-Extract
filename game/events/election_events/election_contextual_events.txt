@@ -866,10 +866,18 @@ election_contextual_events.8 = {
 		any_interest_group = {
 			has_party = yes
 			is_in_government = no
+			party = {
+				save_temporary_scope_as = anti_temperance_party
+			}
 		}
 		any_interest_group = {
 			has_party = yes
 			is_in_government = yes
+			party = {
+				NOT = {
+					scope:anti_temperance_party ?= this
+				}
+			}
 		}
 	}
 
@@ -892,6 +900,11 @@ election_contextual_events.8 = {
 			limit = {
 				has_party = yes
 				is_in_government = yes
+				party = {
+					NOT = {
+						scope:anti_temperance_party ?= this
+					}
+				}
 			}
 			save_scope_as = liquor_gov_ig
 			party = {

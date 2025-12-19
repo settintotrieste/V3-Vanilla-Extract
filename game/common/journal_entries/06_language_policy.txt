@@ -18,9 +18,11 @@
 	is_shown_when_inactive = {
         has_dlc_feature = ip4_content
 		OR = {
-			OR = {
-				c:SPA ?= this
-				was_formed_from = SPA
+			AND = {
+				OR = {
+					c:SPA ?= this
+					was_formed_from = SPA
+				}
 				any_scope_state = {
 					state_region = {
 						is_homeland = cu:spanish
@@ -35,9 +37,11 @@
 					has_building = building_railway
 				}
 			}
-			OR = {
-				c:FRA ?= this
-				was_formed_from = FRA
+			AND = {
+				OR = {
+					c:FRA ?= this
+					was_formed_from = FRA
+				}
 				any_scope_state = {
 					state_region = {
 						is_homeland = cu:french

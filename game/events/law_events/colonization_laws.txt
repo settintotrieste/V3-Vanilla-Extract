@@ -121,7 +121,7 @@ colonization.2 = {
 		}
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_restricted_colonial_outsourcing
+				has_amendment = amendment_type:amendment_restricted_colonial_outsourcing
 			}
 		}
 	}

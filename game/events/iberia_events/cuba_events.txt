@@ -162,6 +162,9 @@ cuba_events.2 = {
 		default_option = yes
 		trigger = {
 			c:SPA ?= root.overlord
+			c:SPA ?= {
+				is_player = no
+			}
 		}
 		cuba_annex_effects = yes
     }
@@ -176,18 +179,16 @@ cuba_events.2 = {
 				}
 				c:SPA != root.overlord
 			}
+			root.overlord ?= {
+				is_player = no
+			}
 		}
 		cuba_annex_effects = yes
     }
 
-    option = { # become protectorate, only available if overlord is a player. Afterall this JE is all about reducing not increasing liberty desire.
+    option = { # become dominion
 		name = cuba_events.2.c
-		trigger = {
-			overlord = {
-				is_player = yes
-			}
-		}
-		change_subject_type = subject_type_protectorate
+		change_subject_type = subject_type_dominion
 	}
 
 

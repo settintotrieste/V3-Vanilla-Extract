@@ -49,7 +49,13 @@ je_cuba_promise_freedom = {
 			exists = c:USA
 			exists = c:CSA
 		}
-		exists = c:CUB
+		OR = {
+			exists = c:CUB
+			AND = {
+				exists = c:ATL
+				c:ATL = { was_formed_from = CUB }
+			}
+		}
 	}
 
 	possible = {
@@ -83,8 +89,14 @@ je_cuba_promise_freedom = {
 				c:USA ?= {
 					has_slavery = yes
 				}
-				c:CUB ?= {
-					has_slavery = yes
+				OR = {
+					c:CUB ?= {
+						has_slavery = yes
+					}
+					c:ATL ?= {
+						was_formed_from = CUB
+						has_slavery = yes
+					}
 				}
 			}
 			custom_tooltip = afro_caribeno_fervor_factor_increase_tt
@@ -117,7 +129,13 @@ je_cuba_ask_usa_to_buy = {
 			exists = c:USA
 			exists = c:CSA
 		}
-		exists = c:CUB
+		OR = {
+			exists = c:CUB
+			AND = {
+				exists = c:ATL
+				c:ATL = { was_formed_from = CUB }
+			}
+		}
 	}
 
 	cooldown = { days = 1095 }
@@ -175,7 +193,7 @@ je_cuba_ask_usa_to_buy = {
 						is_decaying = yes
 						multiplier = je_cuba_join_usa_price
 					}
-					annex = c:CUB
+					annex = ROOT
 				}
 				if = {
 					limit = {
@@ -195,7 +213,7 @@ je_cuba_ask_usa_to_buy = {
 						is_decaying = yes
 						multiplier = je_cuba_join_usa_price
 					}
-					annex = c:CUB
+					annex = ROOT
 				}
 				if = {
 					limit = {
@@ -216,7 +234,13 @@ je_cuba_independence_war = {
 
 	visible = {
 		exists = c:USA
-		exists = c:CUB
+		OR = {
+			exists = c:CUB
+			AND = {
+				exists = c:ATL
+				c:ATL = { was_formed_from = CUB }
+			}
+		}
 	}
 
 	cooldown = { days = normal_modifier_time }

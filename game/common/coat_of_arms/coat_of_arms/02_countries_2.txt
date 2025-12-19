@@ -773,23 +773,6 @@ CHT = {
 	}
 }
 
-BHW = {
-	pattern = "pattern_solid.tga"
-	color1 = "red"
-
-	colored_emblem = {
-		texture = "ce_tricolor_vertical.dds"
-		color1 = "algeria_yellow"
-		color2 = "green"
-	}
-
-	colored_emblem = {
-		texture = "ce_crescent_star_06_pale.dds"
-		color1 = "black"
-		instance = { scale = { 0.5 0.5 } }
-	}
-}
-
 LUR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"

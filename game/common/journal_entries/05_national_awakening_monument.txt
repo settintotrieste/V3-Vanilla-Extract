@@ -220,15 +220,22 @@ je_kaiserforum = {
 
     invalid = {
         OR = {
-            custom_tooltip = {
-                text = rejected_kaiserforum_project_tt
-                has_variable = rejected_kaiserforum_project
-            }
-            custom_tooltip = {
-                text = does_not_have_state_austria_tt
+            has_variable = rejected_kaiserforum_project
+            AND = {
                 NOT = {
-                    any_scope_state = {
-                        state_region = s:STATE_AUSTRIA
+                    s:STATE_AUSTRIA = {
+                        any_scope_state = {
+                            owner = root
+                        }
+                    }
+                }
+                NOT = {
+                    s:STATE_AUSTRIA = {
+                        any_scope_state = {
+                            owner = {
+                               is_diplomatic_play_enemy_of = root
+                            }
+                        }
                     }
                 }
             }

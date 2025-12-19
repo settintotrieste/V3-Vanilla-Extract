@@ -2269,7 +2269,7 @@ red_summer_counter_revolution_progress_bar = {
 		}
 		else = {
 			add = {
-				desc = "technocracy_active_insurrection_tt"
+				desc = "technocracy_insurrection_tt"
 				value = -1
 			}
 		}

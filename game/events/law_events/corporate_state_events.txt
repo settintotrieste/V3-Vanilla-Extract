@@ -182,9 +182,9 @@ corporate_state.2 = {
 		NOT = {
 			currently_enacting_law = {
 				OR = {
-					has_amendment = amendment_industrial_socialization
-					has_amendment = amendment_shop_councils
-					has_amendment = amendment_foreign_investment_seizures
+					has_amendment = amendment_type:amendment_industrial_socialization
+					has_amendment = amendment_type:amendment_shop_councils
+					has_amendment = amendment_type:amendment_foreign_investment_seizures
 				}
 			}
 		}
@@ -523,9 +523,9 @@ corporate_state.5 = {
 		NOT = {
 			currently_enacting_law = {
 				OR = {
-					has_amendment = amendment_corporate_state_nominating_body_tu
-					has_amendment = amendment_corporate_state_nominating_body_id
-					has_amendment = amendment_corporate_state_nominating_body_it
+					has_amendment = amendment_type:amendment_corporate_state_nominating_body_tu
+					has_amendment = amendment_type:amendment_corporate_state_nominating_body_id
+					has_amendment = amendment_type:amendment_corporate_state_nominating_body_it
 				}
 			}
 		}

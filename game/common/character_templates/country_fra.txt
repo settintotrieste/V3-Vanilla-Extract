@@ -20,9 +20,7 @@ FRA_louis_philippe = {
 		set_variable = {
 			name = is_married
 		}
-		set_variable = {
-			name = house_orleans
-		}
+		set_variable = house_orleans
 	}
 	trait_generation = {
 		# nothing!
@@ -44,9 +42,7 @@ FRA_ferdinand_philippe = {
 		expensive_tastes
 	}
 	on_created = {
-		set_variable = {
-			name = house_orleans
-		}
+		set_variable = house_orleans
 	}
 	trait_generation = { }
 }
@@ -302,9 +298,7 @@ FRA_philippe_de_orleans_of_paris = {
 		basic_offensive_planner # served "with distinction" as a staff officer in the Peninsula Campaign
 	}
 	on_created = {
-		set_variable = {
-			name = house_orleans
-		}
+		set_variable = house_orleans
 	}
 }
 
@@ -323,9 +317,7 @@ FRA_philippe_de_orleans_of_orleans = {
 		explorer
 	}
 	on_created = {
-		set_variable = {
-			name = house_orleans
-		}
+		set_variable = house_orleans
 	}
 }
 
@@ -342,9 +334,7 @@ FRA_jean_de_orleans = {
 		erudite
 	}
 	on_created = {
-		set_variable = {
-			name = house_orleans
-		}
+		set_variable = house_orleans
 	}
 }
 
@@ -363,9 +353,7 @@ FRA_henri_de_orleans = {
 		arrogant
 	}
 	on_created = {
-		set_variable = {
-			name = house_orleans
-		}
+		set_variable = house_orleans
 	}
 }
 
@@ -387,9 +375,7 @@ FRA_louis_antoine_de_bourbon = {
 		bigoted
 	}
 	on_created = {
-		set_variable = {
-			name = legitimist_leader
-		}
+		set_variable = legitimist_leader
 		set_variable = house_bourbon
 	}
 }
@@ -410,9 +396,7 @@ FRA_henri_de_bourbon = {
 		basic_political_operator
 	}
 	on_created = {
-		set_variable = {
-			name = legitimist_leader
-		}
+		set_variable = legitimist_leader
 		set_variable = house_bourbon
 	}
 }
@@ -433,9 +417,7 @@ FRA_jean_de_bourbon = {
 		reserved
 	}
 	on_created = {
-		set_variable = {
-			name = legitimist_leader
-		}
+		set_variable = legitimist_leader
 		set_variable = house_bourbon
 	}
 }
@@ -457,9 +439,7 @@ FRA_carlos_de_bourbon = {
 		pious
 	}
 	on_created = {
-		set_variable = {
-			name = legitimist_leader
-		}
+		set_variable = legitimist_leader
 		set_variable = house_bourbon
 	}
 }
@@ -480,9 +460,7 @@ FRA_jacques_de_bourbon = {
 		pious
 	}
 	on_created = {
-		set_variable = {
-			name = legitimist_leader
-		}
+		set_variable = legitimist_leader
 		set_variable = house_bourbon
 	}
 }
@@ -503,9 +481,7 @@ FRA_alfonso_carlos_de_bourbon = {
 		meticulous
 	}
 	on_created = {
-		set_variable = {
-			name = legitimist_leader
-		}
+		set_variable = legitimist_leader
 		set_variable = house_bourbon
 	}
 }
@@ -526,9 +502,7 @@ FRA_alfonso_de_bourbon = {
 		basic_political_operator
 	}
 	on_created = {
-		set_variable = {
-			name = legitimist_leader
-		}
+		set_variable = legitimist_leader
 		set_variable = house_bourbon
 	}
 }
@@ -569,9 +543,7 @@ FRA_victor_bonaparte = {
 		basic_political_operator
 	}
 	on_created = {
-		set_variable = {
-			name = house_bonaparte
-		}
+		set_variable = house_bonaparte
 	}
 }
 
@@ -591,9 +563,7 @@ FRA_louis_bonaparte = {
 		mountain_commander
 	}
 	on_created = {
-		set_variable = {
-			name = house_bonaparte
-		}
+		set_variable = house_bonaparte
 	}
 }
 

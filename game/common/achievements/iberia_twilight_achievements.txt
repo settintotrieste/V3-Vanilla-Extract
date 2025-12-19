@@ -57,6 +57,7 @@ achievement_regeneration = {
 		OR = {
 			c:SPA ?= this
 			c:SPC ?= this
+			was_formed_from = SPA
 		}
 	}
 	happened = {
@@ -104,6 +105,8 @@ achievement_the_most_united_kingdom = {
 			any_subject_or_below = {
 				c:BRZ ?= this
 				is_subject_type = subject_type_personal_union
+				NOT = { has_journal_entry = je_pedro_brazil }
+				has_law = law_type:law_monarchy
 			}
 		}
 		custom_tooltip = {
@@ -111,6 +114,7 @@ achievement_the_most_united_kingdom = {
 			any_subject_or_below = {
 				c:SPA ?= this
 				is_subject_type = subject_type_personal_union
+				has_law = law_type:law_monarchy
 			}
 		}
 	}

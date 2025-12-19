@@ -44,7 +44,7 @@ tax.1 = {
 		NOT = { has_modifier = taxation_is_theft }
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_short_term_tax_cuts
+				has_amendment = amendment_type:amendment_short_term_tax_cuts
 			}
 		}
 	}
@@ -596,7 +596,7 @@ tax.6 = {
 		}
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_short_term_tax_cuts
+				has_amendment = amendment_type:amendment_short_term_tax_cuts
 			}
 		}
 	}

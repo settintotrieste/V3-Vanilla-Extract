@@ -1,6 +1,5 @@
 ﻿# Brazil - BRZ
 brz_admiral_inacio = {
-	historical = yes
 	first_name = Joaquim_Jose
 	last_name = Inacio
 	historical = yes
@@ -29,7 +28,6 @@ brz_admiral_inacio = {
 	}
 }
 brz_admiral_tamandare = {
-	historical = yes
 	first_name = Joaquim_Marques
 	last_name = Lisboa # Marquis of Tamandaré
 	historical = yes

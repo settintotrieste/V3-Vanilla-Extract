@@ -109,7 +109,7 @@ welfare_laws.1 = {
 		}
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_religious_workhouses
+				has_amendment = amendment_type:amendment_religious_workhouses
 			}
 		}
 	}
@@ -196,7 +196,7 @@ welfare_laws.2 = {
 		NOT = { has_modifier = anti_malthusian_arguments }
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_malthusian_foundations
+				has_amendment = amendment_type:amendment_malthusian_foundations
 			}
 		}
 	}
@@ -287,7 +287,7 @@ welfare_laws.3 = {
 		NOT = { has_modifier = workhouse_plan_reevaluation }
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_workhouse_regulations
+				has_amendment = amendment_type:amendment_workhouse_regulations
 			}
 		}
 	}
@@ -581,7 +581,7 @@ welfare_laws.8 = {
 		NOT = { has_modifier = general_support }
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_veterans_pensions
+				has_amendment = amendment_type:amendment_veterans_pensions
 			}
 		}
 	}
@@ -672,7 +672,7 @@ welfare_laws.9 = {
 		NOT = { has_modifier = anti_union_argument }
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_welfare_pro_employer_bias
+				has_amendment = amendment_type:amendment_welfare_pro_employer_bias
 			}
 		}
 	}

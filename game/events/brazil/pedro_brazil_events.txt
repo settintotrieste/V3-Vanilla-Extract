@@ -886,9 +886,6 @@ pedro.12 = {
 		create_character = {
 			template = brz_isabel_template
 			heir = yes
-			on_created = {
-				set_variable = house_braganca
-			}
 		}
 		# appease the landowners slightly
 		ig:ig_landowners ?= {
@@ -910,7 +907,6 @@ pedro.12 = {
 			on_created = {
 				save_scope_as = isabel_scope
 				set_variable = isabel_var
-				set_variable = house_braganca
 				add_modifier = {
 					name = isabel_heir_popularity
 				}

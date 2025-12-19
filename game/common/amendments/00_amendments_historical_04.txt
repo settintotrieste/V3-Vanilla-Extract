@@ -7,10 +7,10 @@
 	}
 
 	modifier = {
-		country_yankee_and_dixie_cultures_obsessed_with_guns = yes
 		state_colony_growth_speed_mult = 0.05
 		building_training_rate_mult = 0.10
-		state_mortality_mult = 0.01
+		state_non_homeland_mortality_mult = 0.01
+		state_mortality_turmoil_mult = 0.005
 	}
 
 	possible = {
@@ -33,6 +33,14 @@
 		}
 	}
 
+	on_activate = {
+		second_amendment_add_obsessions_effect = yes
+	}
+
+	on_deactivate = {
+		second_amendment_remove_obsessions_effect = yes
+	}
+
 	ai_will_revoke = {
 		country_has_voting_franchise = no
 	}
@@ -40,6 +48,8 @@
 	can_repeal = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
+
+	amendment_activism_multiplier = 0.25
 }
 
 amendment_american_fugitive_slaves_act = {
@@ -91,6 +101,8 @@ amendment_american_fugitive_slaves_act = {
 	can_repeal = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
+
+	amendment_activism_multiplier = 0.75
 }
 
 amendment_200_franc_suffrage = {
@@ -103,7 +115,7 @@ amendment_200_franc_suffrage = {
 	}
 
 	modifier = {
-		country_capitalists_pol_str_mult = 0.1
+		country_capitalists_pol_str_mult = 0.15
 		country_voting_power_wealth_threshold_add = 10
 		country_voting_power_base_add = -5
 		country_authority_add = 50
@@ -135,6 +147,8 @@ amendment_200_franc_suffrage = {
 	can_repeal = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
+
+	amendment_activism_multiplier = 0.75
 }
 
 amendment_chamber_of_procurators = {
@@ -180,6 +194,8 @@ amendment_chamber_of_procurators = {
 	can_repeal = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
+
+	amendment_activism_multiplier = 0.5
 }
 
 amendment_chamber_of_gentleman_deputies = {
@@ -200,6 +216,10 @@ amendment_chamber_of_gentleman_deputies = {
 		country_electoral_confidence_impact_mult = -0.4
 	}
 
+	possible = {
+		country_has_primary_culture = cu:portuguese
+	}
+
 	would_sponsor = {
 		OR = {
 			is_interest_group_type = ig_landowners
@@ -215,6 +235,8 @@ amendment_chamber_of_gentleman_deputies = {
 	can_repeal = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
+
+	amendment_activism_multiplier = 0.5
 }
 
 amendment_haiti_polish_naturalization = {
@@ -253,6 +275,8 @@ amendment_haiti_polish_naturalization = {
 	can_repeal = {
 		legitimacy >= legitimacy_to_repeal_amendment
 	}
+
+	amendment_activism_multiplier = 0.25
 }
 
 amendment_racialized_subjecthood = {
@@ -293,6 +317,8 @@ amendment_racialized_subjecthood = {
 			has_law = law_type:law_colonial_administration
 		}
 	}
+
+	amendment_activism_multiplier = 0.5
 }
 
 amendment_geheime_staatskonferenz = {
@@ -304,7 +330,7 @@ amendment_geheime_staatskonferenz = {
 	}
 
 	modifier = {
-		country_legitimacy_base_add = 35
+		country_legitimacy_base_add = 50
 		country_legitimacy_govt_size_add = 1
 		country_authority_mult = -0.25
 		country_law_enactment_time_mult = 0.20
@@ -338,6 +364,8 @@ amendment_geheime_staatskonferenz = {
 			}
 		}
 	}
+
+	amendment_activism_multiplier = 1
 }
 
 amendment_electoral_clientelism = {
@@ -391,6 +419,8 @@ amendment_electoral_clientelism = {
 			}
 		}
 	}
+
+	amendment_activism_multiplier = 0.5
 }
 
 amendment_tradition_of_free_elections = {
@@ -477,4 +507,6 @@ amendment_tradition_of_free_elections = {
 			scope:approval > 0
 		}
 	}
+
+	amendment_activism_multiplier = 0.25
 }

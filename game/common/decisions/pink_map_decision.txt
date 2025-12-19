@@ -1,7 +1,10 @@
 ﻿pink_map = {
 	is_shown = {
 		has_dlc_feature = ip4_content
-		c:POR ?= ROOT
+		OR = {
+			c:POR ?= this
+			c:IBE ?= this
+		}
 		is_subject = no
 		NOT = {
 			has_variable = pink_map_sent
@@ -21,6 +24,7 @@
 	}
 
 	when_taken = {
+		set_variable = pink_map_seeking
 		if = {
 			limit = {
 				exists = c:GBR

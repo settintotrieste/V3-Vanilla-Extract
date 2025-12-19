@@ -19,6 +19,7 @@
 
 	is_shown_when_inactive = {
         has_dlc_feature = ip4_content
+		country_has_primary_culture = cu:portuguese
 		NOT = {
 			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
@@ -183,7 +184,10 @@ je_the_pink_map = {
 	weight = 10000
 
     is_shown_in_lobby = {
-        c:POR ?= this
+		OR = {
+			c:POR ?= this
+			c:IBE ?= this
+		}
         has_dlc_feature = ip4_content
     }
 

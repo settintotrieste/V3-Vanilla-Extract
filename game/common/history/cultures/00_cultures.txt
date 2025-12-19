@@ -205,13 +205,15 @@
 	cu:north_caucasian = {
 		set_fervor = 10
 	}
-
 	cu:caribeno = { 
 		set_fervor = 15
 	}
+	cu:afro_caribeno = {
+		set_fervor = 7
+	}
 	cu:afro_caribbean = {
 		set_fervor = 7
-
+	}
 	cu:chechen = { # Dominant ethnic faction in the Caucasian Imamate
 		set_fervor = 15
 	}
@@ -221,7 +223,6 @@
 	cu:bengali = { # Bengali renaissance
 		set_fervor = 15
 	}
-
 	cu:boer = {
 		set_fervor = 25
 	}

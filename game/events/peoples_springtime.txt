@@ -687,33 +687,44 @@ peoples_springtime.8 = {
 	duration = 3
 
 	trigger = {
-		var:springtime_timer_var >= 12
-		any_political_movement = {
-			OR = {
-				is_political_movement_type = movement_german_national
-				is_political_movement_type = movement_italian_national
-				is_political_movement_type = movement_radical
-			}
-			political_movement_support <= 0.10
-			is_being_suppressed = yes
-		}
-		NOT = {
-			any_scope_character = {
-				OR = {
-					has_role = politician
-					has_role = agitator
+		OR = {
+			has_variable = red_summer_the_revolution_vanquished
+			AND = {
+				var:springtime_timer_var >= 12
+				any_political_movement = {
+					OR = {
+						is_political_movement_type = movement_german_national
+						is_political_movement_type = movement_italian_national
+						is_political_movement_type = movement_radical
+					}
+					political_movement_support <= 0.10
+					is_being_suppressed = yes
 				}
-				has_ideology = ideology:ideology_radical
+				NOT = {
+					any_scope_character = {
+						OR = {
+							has_role = politician
+							has_role = agitator
+						}
+						has_ideology = ideology:ideology_radical
+					}
+				}
+				NOT = {
+					has_variable = completed_peoples_springtime
+				}
 			}
-		}
-		NOT = {
-			has_variable = completed_peoples_springtime
 		}
 	}
 
 	immediate = {
 		set_variable = {
 			name = completed_peoples_springtime
+		}
+		if = {
+			limit = {
+				has_variable = red_summer_the_revolution_vanquished
+			}
+			remove_variable = red_summer_the_revolution_vanquished
 		}
 	}
 
@@ -805,6 +816,12 @@ peoples_springtime.9 = {
 		capital = {
 			is_in_revolt = yes
 		}
+		NOT = {
+			has_variable = had_springtime_revolution
+		}
+		NOT = {
+			has_journal_entry = je_divided_monarchists # french_pretenders.6 happens instead
+		}
 	}
 
 	immediate = {
@@ -815,6 +832,10 @@ peoples_springtime.9 = {
 		ruler = {
 			save_scope_as = ruler_scope
 		}
+	}
+
+	cancellation_trigger = {
+		has_variable = had_springtime_revolution # Cannot fire twice
 	}
 
 	option = {

@@ -22,6 +22,9 @@ ruler_karl_marx = { # Ruler Marx
 	interest_group_leader_usage = {
         country_trigger = {
         	NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
         }
         interest_group_trigger = {
         	is_marginal = no
@@ -60,6 +63,9 @@ ruler_abraham_lincoln = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
         }
         interest_group_trigger = {
             is_marginal = no
@@ -105,6 +111,9 @@ ruler_ada_lovelace = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
         }
         interest_group_trigger = {
             is_marginal = no
@@ -139,6 +148,9 @@ ruler_norindo = { # I wonder who could this be
     interest_group_leader_usage = {
         country_trigger = {
             NOT = { is_country_type = decentralized }
+            NOT = {
+                has_global_variable = ruler_selector_pool_invalidation_global_var
+            }
         }
         interest_group_trigger = {
             is_marginal = no

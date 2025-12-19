@@ -137,7 +137,23 @@ two_spains.2 = {
 			value = large_radicals
 			strata = lower
 		}
-		add_modifier = { name = modifier_libertad_igualdad_fraternidad days = stupidly_long_modifier_time is_decaying = yes }
+		if = {
+			limit = {
+				country_has_voting_franchise = yes
+			}
+			add_modifier = {
+				name = modifier_libertad_igualdad_fraternidad
+				days = stupidly_long_modifier_time
+				is_decaying = yes
+			}
+		}
+		else = {
+			add_modifier = {
+				name = modifier_libertad_igualdad_fraternidad_no_voting
+				days = stupidly_long_modifier_time
+				is_decaying = yes
+			}
+		}
 		ig:ig_armed_forces = {
 			if = {
 				limit = {

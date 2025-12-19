@@ -735,7 +735,7 @@ austria_federation.2 = { # Reward Event
 	duration = 3
 	dlc = dlc014
 	event_image = {
-		video = "ip3_agitator_reading_manifesto"
+		video = "ip3_official_reading_dictate"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"

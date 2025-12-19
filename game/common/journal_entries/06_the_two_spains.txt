@@ -98,7 +98,7 @@
         custom_tooltip = {
             text = spain_liberal_victory_values_tt
             scope:journal_entry = {
-                "scripted_bar_progress(je_two_spains_progress_bar)" >= 90
+                "scripted_bar_progress(je_two_spains_progress_bar)" >= 80
             }
         }
         ig:ig_devout ?= {
@@ -129,7 +129,7 @@
         custom_tooltip = {
             text = spain_conservative_victory_values_tt
             scope:journal_entry = {
-                "scripted_bar_progress(je_two_spains_progress_bar)" <= 10
+                "scripted_bar_progress(je_two_spains_progress_bar)" <= 20
             }
         }
         ig:ig_trade_unions ?= {

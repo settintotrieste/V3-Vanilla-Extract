@@ -67,21 +67,20 @@
 							value = state_population
 							divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
 							multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
-
-							if = {
-								limit = {
-									is_homeland_of_country_cultures = root
-								}
-								multiply = {
+							multiply = {
+								if = {
+									limit = {
+										is_homeland_of_country_cultures = root
+									}
 									value = 1
 									add = define:NDiplomacy|WAR_GOAL_INFAMY_HOMELAND_FACTOR
 								}
 							}
-							if = {
-								limit = {
-									is_incorporated = no
-								}
-								multiply = {
+							multiply = {
+								if = {
+									limit = {
+										is_incorporated = no
+									}
 									value = 1
 									add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
 								}
@@ -90,6 +89,7 @@
 						}
 					}
 				}
+				add = 1
 				max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
 			}
 		}
@@ -107,7 +107,43 @@
 			}
 		}
 
-		min = 2
+		multiply = {
+			desc = "INFAMY_FROM_LOYAL_SUBJECT"
+			value = 1
+
+			if = {
+				limit = {
+					scope:target_country = {
+						is_subject_of = root
+						liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+					}
+				}
+				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_SUBJECT_MULT
+			}
+		}
+
+		multiply = {
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
+			value = 1
+
+			if = {
+				limit = {
+					scope:target_country = {
+						is_subject_of = root
+						is_diplomatic_play_enemy_of = root
+						scope:diplomatic_play ?= {
+							initiator_is = scope:target_country
+						}
+					}
+				}
+				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_REBELLING_SUBJECT_MULT
+			}
+		}
+
+		min = {
+			desc = "INFAMY_MINIMUM_VALUE"
+			value = 2
+		}
 	}
 
 	on_enforced = {

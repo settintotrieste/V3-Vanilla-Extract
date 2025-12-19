@@ -7,7 +7,7 @@ cuba_libre_chill = {
 
 cuban_purchase = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_tax_income_add = -1
+	country_expenses_add = 1
 }
 
 cuban_sale = {
@@ -23,7 +23,7 @@ cuba_libre_total = {
 
 cuba_libre_from_trade = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_liberty_desire_add = 20
+	country_liberty_desire_add = 0.20
 	country_influence_mult = 0.25
 }
 

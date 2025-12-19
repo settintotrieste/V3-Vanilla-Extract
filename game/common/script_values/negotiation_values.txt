@@ -430,6 +430,37 @@ amenability = { #runs in IG scope. owner is the county.
 			}
 		}
 
+		if = { # If there is more than two "steps" between the IG's stance on the currently enacting law and the currently active law, they will not negotiate
+			limit = {
+				OR = {
+					AND = {
+						law_stance = {
+							law = owner.currently_enacting_law.type
+							value = strongly_disapprove
+						}
+						law_stance = {
+							law = owner.currently_enacting_law.currently_active_law_in_group.type
+							value >= approve
+						}
+					}
+					AND = {
+						law_stance = {
+							law = owner.currently_enacting_law.type
+							value <= disapprove
+						}
+						law_stance = {
+							law = owner.currently_enacting_law.currently_active_law_in_group.type
+							value = strongly_approve
+						}
+					}
+				}
+			}
+			add = {
+				value = -500
+				desc = "amenability_too_large_gap"
+			}
+		}
+
 		round = 1
 		min = define:NPolitics|MIN_AMENABILITY
 		max = define:NPolitics|MAX_AMENABILITY

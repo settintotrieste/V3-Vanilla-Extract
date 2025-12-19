@@ -1,9 +1,9 @@
 ﻿goa_decision = {
 	is_shown = {
 		has_dlc_feature = ip4_content
-		c:POR ?= ROOT
-		any_primary_culture = {
-			cu:portuguese = this
+		OR = {
+			c:POR ?= ROOT
+			c:IBE ?= ROOT
 		}
 		country_has_state_religion = rel:catholic
 		any_scope_state = {
@@ -29,10 +29,8 @@
 	}
 
 	when_taken = {
-		c:POR ?= {
-			trigger_event = {
-				id = portuguese_colonialism.15
-			}
+		trigger_event = {
+			id = portuguese_colonialism.15
 		}
 		set_variable = goa_decision_initiated
 	}
@@ -45,7 +43,10 @@
 macao_decision = {
 	is_shown = {
 		has_dlc_feature = ip4_content
-		c:POR ?= ROOT
+		OR = {
+			c:POR ?= ROOT
+			c:IBE ?= ROOT
+		}
 		any_scope_state = {
 			this = p:xB031E0.state
 			is_treaty_port = yes
@@ -64,10 +65,8 @@ macao_decision = {
 	}
 
 	when_taken = {
-		c:POR ?= {
-			trigger_event = {
-				id = portuguese_colonialism.16
-			}
+		trigger_event = {
+			id = portuguese_colonialism.16
 		}
 		custom_tooltip = macao_decision_tt
 		set_variable = macao_decision_initiated

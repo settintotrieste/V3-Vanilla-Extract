@@ -219,7 +219,7 @@ portuguese_colonialism.2 = { # Complete
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	immediate = {
-		c:POR ?= {
+		ROOT = {
 			save_scope_as = por_scope
 		}
 	}
@@ -234,7 +234,10 @@ portuguese_colonialism.2 = { # Complete
 		if = {
 			limit = {
 				exists = c:GBR
-				c:POR ?= ROOT
+				OR = {
+					c:POR ?= ROOT
+					c:IBE ?= ROOT
+				}
 				is_subject = no
 				NOT = {
 					has_variable = pink_map_sent
@@ -362,7 +365,10 @@ portuguese_colonialism.4 = { # Pink Map GBR: A stance has to be made
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
 	immediate = {
-		c:POR ?= {
+		random_country = {
+			limit = {
+				has_variable = pink_map_seeking
+			}
 			save_scope_as = por_scope
 		}
 		if = {
@@ -556,7 +562,7 @@ portuguese_colonialism.6 = { # Pink Map POR: GBR Rejected, what is our response?
 				save_scope_as = gbr_scope
 			}
 		}
-		c:POR ?= {
+		ROOT = {
 			save_scope_as = por_scope
 		}
 	}
@@ -699,7 +705,7 @@ portuguese_colonialism.8 = { # Pink Map JE Complete
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	immediate = {
-		c:POR ?= {
+		ROOT = {
 			save_scope_as = por_scope
 		}
 	}
@@ -768,7 +774,7 @@ portuguese_colonialism.9 = { # Pink Map JE Failed
 		ig:ig_armed_forces = {
 			save_scope_as = armed_forces_scope
 		}
-		c:POR ?= {
+		ROOT = {
 			save_scope_as = por_scope
 		}
 	}
@@ -834,7 +840,7 @@ portuguese_colonialism.10 = { # Pink Map POR: GBR Accepted, but wants a favor
 				save_scope_as = gbr_scope
 			}
 		}
-		c:POR ?= {
+		ROOT ?= {
 			save_scope_as = por_scope
 		}
 	}
@@ -1024,7 +1030,7 @@ portuguese_colonialism.15 = { # Goa decision
 		p:x51F0A0.state = {
 			save_scope_as = goa_scope
 		}
-		c:POR ?= {
+		ROOT = {
 			save_scope_as = por_scope
 		}
 	}

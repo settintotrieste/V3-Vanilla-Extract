@@ -108,9 +108,6 @@ portuguese_monarchs.2 = { # Carlos gets assassinated if there are more radicals 
 		custom_tooltip = {
 			create_character = {
 				template = POR_manuel_ii_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 			if = {
 				limit = {

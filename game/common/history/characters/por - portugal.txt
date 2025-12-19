@@ -4,15 +4,11 @@
 			template = POR_miguel_i_de_braganca_template
 			on_created = {
 				place_character_in_void = 480
-				set_variable = house_braganca
 			}
 		}
 
 		create_character = {
 			template = POR_maria_ii_de_braganca
-			on_created = {
-				set_variable = house_braganca
-			}
 		}
 
 		# No heir, Pedro V wasn't born until 1837

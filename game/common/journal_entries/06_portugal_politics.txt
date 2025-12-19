@@ -319,7 +319,10 @@ je_portugal_regeneration = {
 	group = je_group_historical_content
 
 	is_shown_when_inactive = {
-		c:POR ?= this
+		OR = {
+			c:POR ?= this
+			was_formed_from = POR
+		}
 		has_dlc_feature = ip4_content
 	}
 

@@ -161,7 +161,7 @@ citizenship_laws.2 = {
 		NOT = { has_modifier = embraced_cultural_contributions }
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_degenerate_art
+				has_amendment = amendment_type:amendment_degenerate_art
 			}
 		}
 	}
@@ -525,11 +525,15 @@ citizenship_laws.5 = {
 				}
 			}
 			will_be_accepted_culture = yes
+			save_temporary_scope_as = will_be_accepted_pop_temp
 		}
 		any_political_movement = {
 			law_stance = {
 				law = owner.currently_enacting_law.type
 				value < neutral
+			}
+			NOT = {
+				culture ?= scope:will_be_accepted_pop_temp.culture
 			}
 		}
 		NOT = { has_modifier = unity_campaign }
@@ -557,6 +561,9 @@ citizenship_laws.5 = {
 				law_stance = {
 					law = owner.currently_enacting_law.type
 					value < neutral
+				}
+				NOT = {
+					culture ?= scope:future_accepted_pop
 				}
 			}
 			save_scope_as = discrimination_movement

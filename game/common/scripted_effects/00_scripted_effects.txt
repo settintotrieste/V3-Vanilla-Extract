@@ -499,7 +499,6 @@ generate_french_monarch = {
 				on_created = {
 					set_character_as_ruler = yes
 					add_character_role = politician
-					set_variable = house_bourbon
 				}
 			}
 			create_character = {
@@ -516,7 +515,6 @@ generate_french_monarch = {
 				on_created = {
 					set_character_as_ruler = yes
 					add_character_role = politician
-					set_variable = house_bourbon
 				}
 			}
 		}
@@ -660,12 +658,12 @@ generate_french_monarch = {
 			if = {
 				limit = {
 					any_scope_character = {
-						has_variable = napoleon_iii_var
+						has_template = fra_napoleon_iii_character_template
 					}
 				}
 				random_scope_character =  {
 					limit = {
-						has_variable = napoleon_iii_var
+						has_template = fra_napoleon_iii_character_template
 					}
 					set_character_as_ruler = yes
 					add_character_role = politician
@@ -680,12 +678,12 @@ generate_french_monarch = {
 			else_if = {
 				limit = {
 					any_character_in_exile_pool = {
-						has_variable = napoleon_iii_var
+						has_template = fra_napoleon_iii_character_template
 					}
 				}
 				random_character_in_exile_pool =  {
 					limit = {
-						has_variable = napoleon_iii_var
+						has_template = fra_napoleon_iii_character_template
 					}
 					transfer_character = root
 					hidden_effect = {
@@ -708,7 +706,7 @@ generate_french_monarch = {
 							this = root
 						}
 						any_scope_character = {
-							has_variable = napoleon_iii_var
+							has_template = fra_napoleon_iii_character_template
 						}
 					}
 				}
@@ -718,12 +716,12 @@ generate_french_monarch = {
 							this = root
 						}
 						any_scope_character = {
-							has_variable = napoleon_iii_var
+							has_template = fra_napoleon_iii_character_template
 						}
 					}
 					random_scope_character = {
 						limit = {
-							has_variable = napoleon_iii_var
+							has_template = fra_napoleon_iii_character_template
 						}
 						kill_character = {
 							hidden = yes
@@ -734,10 +732,6 @@ generate_french_monarch = {
 				create_character = {
 					template = fra_napoleon_iii_character_template
 					on_created = {
-						set_variable = {
-							name = house_bonaparte
-						}
-						set_variable = napoleon_iii_var
 						set_global_variable = napoleon_iii_spawn
 						set_character_as_ruler = yes
 						add_character_role = politician
@@ -749,10 +743,6 @@ generate_french_monarch = {
 				create_character = {
 					template = fra_napoleon_iii_character_template
 					on_created = {
-						set_variable = {
-							name = house_bonaparte
-						}
-						set_variable = napoleon_iii_var
 						set_global_variable = napoleon_iii_spawn
 						set_character_as_ruler = yes
 						add_character_role = politician
@@ -780,7 +770,6 @@ generate_french_monarch = {
 				on_created = {
 					set_character_as_ruler = yes
 					add_character_role = politician
-					set_variable = house_bonaparte
 				}
 			}
 			create_character = {
@@ -827,6 +816,12 @@ generate_french_monarch = {
 			is_ruler = yes
 		}
 		save_scope_as = french_monarch_scope
+	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
 	}
 }
 

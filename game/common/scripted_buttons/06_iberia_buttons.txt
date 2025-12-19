@@ -111,6 +111,31 @@
 					}
 					add_primary_culture = cu:portuguese
 				}
+				if = {
+					limit = {
+						any_country_in_iberia = {
+							has_variable_list = spain_accepted_cultures
+						}
+					}
+					random_country_in_iberia = {
+						limit = {
+							has_variable_list = spain_accepted_cultures
+						}
+						every_in_list = {
+							variable = spain_accepted_cultures
+							if = {
+								limit = {
+									NOT = {
+										is_primary_culture_of = prev # Refers to random_country_in_iberia
+									}
+								}
+								c:IBE ?= {
+									add_primary_culture = prev
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		custom_tooltip = {

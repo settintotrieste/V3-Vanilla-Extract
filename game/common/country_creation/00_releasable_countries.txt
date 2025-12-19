@@ -1979,6 +1979,7 @@ PEU = {
 		STATE_ICA
 		STATE_AREQUIPA
 		STATE_TARAPACA
+		STATE_PASTAZA
 	}
 	ai_will_do = { always = no }
 }

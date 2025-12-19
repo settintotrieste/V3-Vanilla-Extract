@@ -266,9 +266,6 @@ dixie_loyalist_fraction = { # for loc
 	add = "loyalist_fraction(cu:dixie)"
 }
 
-# for Carlist War
-carlist_war_royal_expedition_min_score = 10
-
 balkan_league_conscript_multiplier = {
 	value = root.cached_ai_incorporated_population
 	divide = 50000
@@ -282,6 +279,10 @@ official_culture_fraction = { # for loc
 	value = 0
 	add = "primary_cultures_percent_state"
 }
+
+# for Carlist War
+carlist_war_royal_expedition_min_score = 10
+carlist_war_carlist_terror_devastation = 10
 
 # carlist war two spains tie in
 two_spains_fueros_conservative_drift = 10

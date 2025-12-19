@@ -166,7 +166,6 @@ TRN_andries_pretorius = {
 	culture = cu:boer
 	religion = rel:protestant
 	ruler = yes
-	ruler = yes
 	ig_leader = yes
 	birth_date = 1798.11.27
 	dna = dna_andries_pretorius

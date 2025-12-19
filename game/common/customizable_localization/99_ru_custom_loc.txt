@@ -91566,7 +91566,7 @@ RU_BL_RP = {
 		trigger = {
 			is_building_type = building_automotive_industry
 		}
-		localization_key = RU_BL_RP_automotive_industry
+		localization_key = RU_BL_RP_building_automotive_industry
 	}
 	text = {
 		trigger = {
@@ -92085,7 +92085,7 @@ RU_BL_DP = {
 		trigger = {
 			is_building_type = building_automotive_industry
 		}
-		localization_key = RU_BL_DP_automotive_industry
+		localization_key = RU_BL_DP_building_automotive_industry
 	}
 	text = {
 		trigger = {
@@ -92604,7 +92604,7 @@ RU_BL_VP = {
 		trigger = {
 			is_building_type = building_automotive_industry
 		}
-		localization_key = RU_BL_VP_automotive_industry
+		localization_key = RU_BL_VP_building_automotive_industry
 	}
 	text = {
 		trigger = {
@@ -93123,7 +93123,7 @@ RU_BL_TP = {
 		trigger = {
 			is_building_type = building_automotive_industry
 		}
-		localization_key = RU_BL_TP_automotive_industry
+		localization_key = RU_BL_TP_building_automotive_industry
 	}
 	text = {
 		trigger = {
@@ -93642,7 +93642,7 @@ RU_BL_PP = {
 		trigger = {
 			is_building_type = building_automotive_industry
 		}
-		localization_key = RU_BL_PP_automotive_industry
+		localization_key = RU_BL_PP_building_automotive_industry
 	}
 	text = {
 		trigger = {
@@ -95471,22 +95471,6 @@ RU_ML_ADJ = {
 		trigger = {
 			exists = market
 			market.owner = {
-			exists = c:AZB
-			this = c:AZB
-			c:AZB = {
-				is_country_type = unrecognized
-				NOT = {
-					has_technology_researched = nationalism
-				}
-			}
-			}
-		}
-		localization_key = dyn_c_shirvan_RU_ML_ADJ # market adjective
-	}
-	text = {
-		trigger = {
-			exists = market
-			market.owner = {
 			exists = c:KAZ
 			this = c:KAZ
 			AND = {
@@ -96001,18 +95985,6 @@ RU_ML_ADJ = {
 			}
 		}
 		localization_key = dyn_c_scandinavia_fennoscandia_RU_ML_ADJ # market adjective
-	}
-	text = {
-		trigger = {
-			exists = market
-			market.owner = {
-			exists = c:SWE
-			this = c:SWE
-			is_revolutionary = yes
-			capital = { state_region = s:STATE_GOTLAND }
-			}
-		}
-		localization_key = dyn_c_gotland_revolt_RU_ML_ADJ # market adjective
 	}
 	text = {
 		trigger = {
@@ -110590,6 +110562,102 @@ RU_SL_CM_RP = {
 		localization_key = RU_SL_RP_STATE_MAINE_ANJOU
 	}
 	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_RP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_RP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_RP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_RP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_RP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_RP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_RP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_RP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_RP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_RP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_RP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_RP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_RP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_RP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_RP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_RP_STATE_SLOVAKIA
+	}
+	text = {
 		localization_key = RU_SL_DEFAULT_RP #
 	}
 }
@@ -114588,6 +114656,102 @@ RU_SL_CM_DP = {
 		localization_key = RU_SL_DP_STATE_MAINE_ANJOU
 	}
 	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_DP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_DP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_DP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_DP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_DP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_DP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_DP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_DP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_DP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_DP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_DP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_DP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_DP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_DP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_DP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_DP_STATE_SLOVAKIA
+	}
+	text = {
 		localization_key = RU_SL_DEFAULT_DP #
 	}
 }
@@ -118547,6 +118711,102 @@ RU_SL_CM_VP = {
 			any_scope_state = { state_region = s:STATE_MAINE_ANJOU }
 		}
 		localization_key = RU_SL_VP_STATE_MAINE_ANJOU
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_VP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_VP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_VP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_VP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_VP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_VP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_VP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_VP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_VP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_VP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_VP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_VP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_VP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_VP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_VP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_VP_STATE_SLOVAKIA
 	}
 	text = {
 		localization_key = RU_SL_DEFAULT_VP #
@@ -122510,6 +122770,102 @@ RU_SL_CM_TP = {
 		localization_key = RU_SL_TP_STATE_MAINE_ANJOU
 	}
 	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_TP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_TP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_TP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_TP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_TP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_TP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_TP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_TP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_TP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_TP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_TP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_TP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_TP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_TP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_TP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_TP_STATE_SLOVAKIA
+	}
+	text = {
 		localization_key = RU_SL_DEFAULT_TP #
 	}
 }
@@ -126469,6 +126825,102 @@ RU_SL_CM_PP = {
 			any_scope_state = { state_region = s:STATE_MAINE_ANJOU }
 		}
 		localization_key = RU_SL_PP_STATE_MAINE_ANJOU
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_PP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_PP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_PP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_PP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_PP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_PP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_PP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_PP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_PP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_PP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_PP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_PP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_PP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_PP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_PP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_PP_STATE_SLOVAKIA
 	}
 	text = {
 		localization_key = RU_SL_DEFAULT_PP #
@@ -130433,6 +130885,102 @@ RU_SL_CM_ADJ = {
 		localization_key = RU_SL_ADJ_STATE_MAINE_ANJOU
 	}
 	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_ADJ_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_ADJ_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_ADJ_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_ADJ_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_ADJ_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_ADJ_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_ADJ_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_ADJ_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_ADJ_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_ADJ_STATE_LEON
+	}
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			any_scope_state = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_SLOVAKIA
+	}
+	text = {
 		localization_key = RU_SL_DEFAULT_ADJ #
 	}
 }
@@ -134393,6 +134941,102 @@ RU_SL_RP = {
 			this = { state_region = s:STATE_MAINE_ANJOU }
 		}
 		localization_key = RU_SL_RP_STATE_MAINE_ANJOU
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_RP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_RP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_RP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_RP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_RP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_RP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_RP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_RP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_RP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_RP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_RP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_RP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_RP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_RP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_RP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_RP_STATE_SLOVAKIA
 	}
 	text = {
 		localization_key = RU_SL_DEFAULT_RP #
@@ -138361,6 +139005,102 @@ RU_SL_DP = {
 			this = { state_region = s:STATE_MAINE_ANJOU }
 		}
 		localization_key = RU_SL_DP_STATE_MAINE_ANJOU
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_DP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_DP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_DP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_DP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_DP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_DP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_DP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_DP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_DP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_DP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_DP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_DP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_DP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_DP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_DP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_DP_STATE_SLOVAKIA
 	}
 	text = {
 		localization_key = RU_SL_DEFAULT_DP #
@@ -142360,6 +143100,102 @@ RU_SL_VP = {
 		localization_key = RU_SL_VP_STATE_MAINE_ANJOU
 	}
 	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_VP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_VP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_VP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_VP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_VP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_VP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_VP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_VP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_VP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_VP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_VP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_VP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_VP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_VP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_VP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_VP_STATE_SLOVAKIA
+	}
+	text = {
 		localization_key = RU_SL_DEFAULT_VP #
 	}
 }
@@ -146355,6 +147191,102 @@ RU_SL_TP = {
 			this = { state_region = s:STATE_MAINE_ANJOU }
 		}
 		localization_key = RU_SL_TP_STATE_MAINE_ANJOU
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_TP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_TP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_TP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_TP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_TP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_TP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_TP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_TP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_TP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_TP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_TP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_TP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_TP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_TP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_TP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_TP_STATE_SLOVAKIA
 	}
 	text = {
 		localization_key = RU_SL_DEFAULT_TP #
@@ -150354,6 +151286,102 @@ RU_SL_PP = {
 		localization_key = RU_SL_PP_STATE_MAINE_ANJOU
 	}
 	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_PP_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_PP_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_PP_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_PP_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_PP_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_PP_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_PP_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_PP_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_PP_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_PP_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_PP_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_PP_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_PP_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_PP_STATE_LEON
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_PP_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_PP_STATE_SLOVAKIA
+	}
+	text = {
 		localization_key = RU_SL_DEFAULT_PP #
 	}
 }
@@ -154350,6 +155378,102 @@ RU_SL_ADJ = {
 			this = { state_region = s:STATE_MAINE_ANJOU }
 		}
 		localization_key = RU_SL_ADJ_STATE_MAINE_ANJOU
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_CUBA }
+		}
+		localization_key = RU_SL_ADJ_STATE_WESTERN_CUBA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BASQUE_COUNTRY }
+		}
+		localization_key = RU_SL_ADJ_STATE_BASQUE_COUNTRY
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_OLD_CASTILE }
+		}
+		localization_key = RU_SL_ADJ_STATE_OLD_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_BALEARIC_ISLANDS }
+		}
+		localization_key = RU_SL_ADJ_STATE_BALEARIC_ISLANDS
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_GOLD_COAST }
+		}
+		localization_key = RU_SL_ADJ_STATE_GOLD_COAST
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_UPPER_ANDALUSIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_UPPER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LOWER_ANDALUSIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_LOWER_ANDALUSIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EXTREMADURA }
+		}
+		localization_key = RU_SL_ADJ_STATE_EXTREMADURA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_NEW_CASTILE }
+		}
+		localization_key = RU_SL_ADJ_STATE_NEW_CASTILE
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_DAVIS_STRAIT }
+		}
+		localization_key = RU_SL_ADJ_STATE_DAVIS_STRAIT
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_ISFAHAN }
+		}
+		localization_key = RU_SL_ADJ_STATE_ISFAHAN
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_WESTERN_SERBIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_WESTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_EASTERN_SERBIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_EASTERN_SERBIA
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_LEON }
+		}
+		localization_key = RU_SL_ADJ_STATE_LEON
+	}
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_MURCIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_MURCIA
+	}	
+	text = {
+		trigger = {
+			this = { state_region = s:STATE_SLOVAKIA }
+		}
+		localization_key = RU_SL_ADJ_STATE_SLOVAKIA
 	}
 	text = {
 		localization_key = RU_SL_DEFAULT_ADJ #

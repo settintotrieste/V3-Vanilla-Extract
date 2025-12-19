@@ -1318,7 +1318,6 @@ spain_provisional_government.41 = { # Amadeo - Spain
 					template = spa_amadeo_i_de_savoy_template
 					on_created = {
 						set_character_as_ruler = yes
-						set_variable = house_savoy
 					}
 				}
 			}

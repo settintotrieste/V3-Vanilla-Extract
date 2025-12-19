@@ -31,8 +31,8 @@ je_vernacular_policy_accept_catalan_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:catalan
+		country_average_culture_pop_acceptance = {
+			culture = cu:catalan
 			value >= acceptance_status_5
 		}
 		OR = {
@@ -78,6 +78,7 @@ je_vernacular_policy_accept_catalan_button = {
 
 	effect = {
 		add_primary_culture = cu:catalan
+		add_to_variable_list = { name = spain_accepted_cultures target = cu:catalan }
 	}
 
 	ai_chance = {
@@ -110,8 +111,8 @@ je_vernacular_policy_accept_aragonese_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:aragonese
+		country_average_culture_pop_acceptance = {
+			culture = cu:aragonese
 			value >= acceptance_status_5
 		}
 		OR = {
@@ -146,6 +147,7 @@ je_vernacular_policy_accept_aragonese_button = {
 
 	effect = {
 		add_primary_culture = cu:aragonese
+		add_to_variable_list = { name = spain_accepted_cultures target = cu:aragonese }
 	}
 
 	ai_chance = {
@@ -178,8 +180,8 @@ je_vernacular_policy_accept_asturleonese_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:asturleonese
+		country_average_culture_pop_acceptance = {
+			culture = cu:asturleonese
 			value >= acceptance_status_5
 		}
 		OR = {
@@ -219,6 +221,7 @@ je_vernacular_policy_accept_asturleonese_button = {
 
 	effect = {
 		add_primary_culture = cu:asturleonese
+		add_to_variable_list = { name = spain_accepted_cultures target = cu:asturleonese }
 	}
 
 	ai_chance = {
@@ -251,8 +254,8 @@ je_vernacular_policy_accept_galician_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:galician
+		country_average_culture_pop_acceptance = {
+			culture = cu:galician
 			value >= acceptance_status_5
 		}
 		OR = {
@@ -301,6 +304,7 @@ je_vernacular_policy_accept_galician_button = {
 
 	effect = {
 		add_primary_culture = cu:galician
+		add_to_variable_list = { name = spain_accepted_cultures target = cu:galician }
 	}
 
 	ai_chance = {
@@ -333,8 +337,8 @@ je_vernacular_policy_accept_basque_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:basque
+		country_average_culture_pop_acceptance = {
+			culture = cu:basque
 			value >= acceptance_status_5
 		}
 		OR = {
@@ -393,6 +397,7 @@ je_vernacular_policy_accept_basque_button = {
 
 	effect = {
 		add_primary_culture = cu:basque
+		add_to_variable_list = { name = spain_accepted_cultures target = cu:basque }
 	}
 
 	ai_chance = {
@@ -427,8 +432,8 @@ je_vernacular_policy_accept_francoprovencal_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:francoprovencal
+		country_average_culture_pop_acceptance = {
+			culture = cu:francoprovencal
 			value >= acceptance_status_5
 		}
 		OR = {
@@ -514,8 +519,8 @@ je_vernacular_policy_accept_breton_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:breton
+		country_average_culture_pop_acceptance = {
+			culture = cu:breton
 			value >= acceptance_status_5
 		}
 		OR = {
@@ -596,8 +601,8 @@ je_vernacular_policy_accept_occitan_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:occitan
+		country_average_culture_pop_acceptance = {
+			culture = cu:occitan
 			value >= acceptance_status_5
 		}
 		OR = {
@@ -672,8 +677,8 @@ je_vernacular_policy_accept_wallonian_button = {
 	}
 
 	possible = {
-		country_average_cultural_acceptance = {
-			target = cu:wallonian
+		country_average_culture_pop_acceptance = {
+			culture = cu:wallonian
 			value >= acceptance_status_5
 		}
 		OR = {

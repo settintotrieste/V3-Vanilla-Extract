@@ -658,6 +658,10 @@ je_negotiate_taxes = {
 
     on_complete = {
         promise_quest_completed = yes
+        hidden_effect = { # JE specific cleanup
+            remove_variable = promise_quest_degree_country
+            remove_variable = neg_taxes_remaining_months
+        }
     }
 
     fail = {

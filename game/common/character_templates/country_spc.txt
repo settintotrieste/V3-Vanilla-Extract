@@ -20,6 +20,9 @@ SPC_carlos_v_de_borbon_template = { # Carlos María Isidro Benito de Borbón y B
         persistent
         arrogant
     }
+    on_created = {
+        set_variable = house_bourbon
+    }
 }
 
 SPC_carlos_vi_de_borbon_template = { # Carlos Luis María de Borbón, Count of Montemolín
@@ -35,6 +38,10 @@ SPC_carlos_vi_de_borbon_template = { # Carlos Luis María de Borbón, Count of M
     traits = {
         imperious
         brave
+    }
+    on_created = {
+        set_variable = house_bourbon
+		set_variable = legitimist_leader
     }
 }
 
@@ -52,6 +59,10 @@ SPC_juan_iii_de_borbon_template = { # Juan Carlos María Isidro de Borbón
         compliant
         honorable
     }
+    on_created = {
+        set_variable = house_bourbon
+		set_variable = legitimist_leader
+    }
 }
 
 SPC_carlos_vii_de_borbon_template = { # Carlos de Borbón y Austria-Este
@@ -67,6 +78,10 @@ SPC_carlos_vii_de_borbon_template = { # Carlos de Borbón y Austria-Este
     traits = {
         charismatic
         brave
+    }
+    on_created = {
+        set_variable = house_bourbon
+		set_variable = legitimist_leader
     }
 }
 
@@ -84,6 +99,10 @@ SPC_jaime_iii_de_borbon_template = { # Jaime de Borbón y de Borbón-Parma, Duke
         reserved
         pious
     }
+    on_created = {
+        set_variable = house_bourbon
+		set_variable = legitimist_leader
+    }
 }
 
 SPC_alfonso_i_de_borbon_template = { # Alfonso Carlos de Borbón
@@ -100,6 +119,10 @@ SPC_alfonso_i_de_borbon_template = { # Alfonso Carlos de Borbón
         imposing
         pious
         persistent
+    }
+    on_created = {
+        set_variable = house_bourbon
+		set_variable = legitimist_leader
     }
 }
 

@@ -451,15 +451,25 @@ spanish_colony_clothes_pop_trigger = {
 spanish_empire_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		exists = c:SPA
 		exists = home_country
 		home_country = {
 			OR = {
 				AND = {
-					c:SPA ?= this
-					is_subject = no # preventing uniform conflicts if AUS becomes a subject of another country with puppet uniforms
+					OR = {
+						c:SPA ?= this
+						was_formed_from = SPA
+					}
+					is_subject = no
 				}
-				is_subject_of = c:SPA
+				AND = {
+					exists = top_overlord
+					top_overlord ?= {
+						OR = {
+							c:SPA ?= this
+							was_formed_from = SPA
+						}
+					}
+				}
 			}
 		}
 	}
@@ -472,10 +482,21 @@ spanish_empire_clothes_pop_trigger = {
 		home_country = {
 			OR = {
 				AND = {
-					c:SPA ?= this
-					is_subject = no # preventing uniform conflicts if AUS becomes a subject of another country with puppet uniforms
+					OR = {
+						c:SPA ?= this
+						was_formed_from = SPA
+					}
+					is_subject = no
 				}
-				is_subject_of = c:SPA
+				AND = {
+					exists = top_overlord
+					top_overlord ?= {
+						OR = {
+							c:SPA ?= this
+							was_formed_from = SPA
+						}
+					}
+				}
 			}
 		}
 	}
@@ -540,15 +561,25 @@ portuguese_clothes_pop_trigger = {
 portuguese_empire_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
-		exists = c:POR
 		exists = home_country
 		home_country = {
 			OR = {
 				AND = {
-					c:POR ?= this
-					is_subject = no # preventing uniform conflicts if POR becomes a subject of another country with puppet uniforms
+					OR = {
+						c:POR ?= this
+						was_formed_from = POR
+					}
+					is_subject = no
 				}
-				is_subject_of = c:POR
+				AND = {
+					exists = top_overlord
+					top_overlord ?= {
+						OR = {
+							c:POR ?= this
+							was_formed_from = POR
+						}
+					}
+				}
 			}
 		}
 	}
@@ -557,15 +588,25 @@ portuguese_empire_clothes_trigger = {
 portuguese_empire_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
-		exists = c:POR
 		exists = home_country
 		home_country = {
 			OR = {
 				AND = {
-					c:POR ?= this
-					is_subject = no # preventing uniform conflicts if AUS becomes a subject of another country with puppet uniforms
+					OR = {
+						c:POR ?= this
+						was_formed_from = POR
+					}
+					is_subject = no
 				}
-				is_subject_of = c:POR
+				AND = {
+					exists = top_overlord
+					top_overlord ?= {
+						OR = {
+							c:POR ?= this
+							was_formed_from = POR
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1488,8 +1529,14 @@ generic_civilian_clothes_trigger = {
 
 communist_clothes_trigger = {
 	scope:character ?= {
-		owner = {
-			has_law_or_variant = law_type:law_council_republic
+		OR = {
+			owner ?= {
+				has_law_or_variant = law_type:law_council_republic
+			}
+			AND = {
+				is_in_exile_pool = yes
+				has_socialist_ideology = yes
+			}
 		}
 	}
 }

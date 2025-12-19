@@ -346,7 +346,7 @@ anarchy.3 = {
 		}
 		NOT = {
 			currently_enacting_law = {
-				has_amendment = amendment_agricultural_communes
+				has_amendment = amendment_type:amendment_agricultural_communes
 			}
 		}
 	}

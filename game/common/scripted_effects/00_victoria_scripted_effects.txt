@@ -2147,6 +2147,17 @@ exile_character_with_martyrdom = {
 		}
 		add_modifier = modifier_political_martyr
 	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = exile_pool_culling_immunity
+			}
+		}
+		set_variable = {
+			name = exile_pool_culling_immunity
+			days = very_short_modifier_time
+		}
+	}
 	hidden_effect = { # If Metternich is the victim, un-immortal him.
 		if = {
 			limit = {
@@ -3181,6 +3192,16 @@ add_pedropoint_effect = {
 		change_variable = {
 			name = pedropoints
 			add = 1
+		}
+	}
+}
+
+add_pedropoint_effect_2 = {
+	custom_tooltip = {
+		text = add_2_pedropoint
+		change_variable = {
+			name = pedropoints
+			add = 2
 		}
 	}
 }

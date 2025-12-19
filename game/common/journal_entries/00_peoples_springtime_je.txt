@@ -455,6 +455,7 @@ je_red_summer = {
 	custom_on_failure_header = je_springtime_of_the_peoples_on_fail_header
 
 	on_fail = {
+		set_variable = red_summer_the_revolution_vanquished
 		trigger_event = { id = peoples_springtime.8 popup = yes }
 	}
 

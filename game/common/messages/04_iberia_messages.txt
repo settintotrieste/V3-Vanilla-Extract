@@ -137,3 +137,12 @@ spain_would_rather_not_appoint_a_braganca_king = {
 
 	notification_type = toast
 }
+
+carlist_war_carlist_terror = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/military.dds"
+
+	notification_type = toast
+	color = bad
+}
+

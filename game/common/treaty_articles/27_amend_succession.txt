@@ -63,10 +63,10 @@
 								scope:treaty.amended_treaty != this
 							}
 						}
-							any_scope_article = {
-								has_type = amend_succession
-								source_country = scope:source_country
-							}
+						any_scope_article = {
+							has_type = amend_succession
+							source_country = scope:source_country
+						}
 					}
 				}
 			}
@@ -75,9 +75,32 @@
 
     on_entry_into_force = {
 		c:POR ?= {
-            trigger_event = {
-                id = lusofonia.1
-            }
+			if = { # Only fire the event once
+				limit = {
+					NOT = {
+						has_variable = lusofonia_1_fired
+					}
+				}
+				trigger_event = {
+					id = lusofonia.1
+				}
+			}
+			else = {
+				c:BRZ ?= {
+					if = {
+						limit = {
+							exists = heir
+						}
+						hidden_effect = {
+							heir ?= {
+								set_variable = brazil_spurned_heir
+								place_character_in_void = 10000
+							}
+						}
+					}
+					set_heir = c:POR.ruler
+				}
+			}
         }
 	}
 

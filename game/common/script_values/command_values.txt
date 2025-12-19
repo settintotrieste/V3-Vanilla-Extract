@@ -103,6 +103,20 @@ front_battle_state_weight = {
 		divide = scope:distance_to_closest_war_goal
 	}
 
+	if = { # Strategic objective for the Carlist Royal Expedition
+		limit = {
+			exists = scope:own_commander
+			scope:own_commander.owner = {
+				c:SPC ?= this
+				is_ai = yes
+				is_involved_in_journal_entry = je_the_first_carlist_war
+				has_modifier = the_last_stand
+
+			}
+		}
+		add = 100000
+	}
+
     else = {
         subtract = 100
     }

@@ -697,9 +697,22 @@ second_liberalism.1 = { # Second Liberalism - Victory
 	option = {
 		name = second_liberalism.1.a
 		default_option = yes
-		add_modifier = {
-			name = modifier_portugal_liberal_hegemony
-			days = very_long_modifier_time
+		if = {
+			limit = {
+				country_has_voting_franchise = yes
+			}
+			add_modifier = {
+				name = modifier_portugal_liberal_hegemony
+				days = stupidly_long_modifier_time
+				is_decaying = yes
+			}
+		}
+		else = {
+			add_modifier = {
+				name = modifier_portugal_liberal_hegemony_no_voting
+				days = stupidly_long_modifier_time
+				is_decaying = yes
+			}
 		}
 	}
 

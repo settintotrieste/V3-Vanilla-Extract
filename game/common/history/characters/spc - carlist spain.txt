@@ -3,15 +3,9 @@
 		# Ruler / Heir
 		create_character = {
 			template = SPC_carlos_v_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 		create_character = {
 			template = SPC_carlos_vi_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 
 		### IG leaders

@@ -1988,7 +1988,7 @@ state_non_contiguous_incorporation_speed_mult={
 }
 
 state_infrastructure_add={
-	decimals=0
+	decimals=1
 	color=good
 	game_data={
 		ai_value=50

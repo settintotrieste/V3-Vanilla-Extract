@@ -48,7 +48,7 @@
 		show_as_tooltip = {
 			custom_tooltip = if_they_accept_tt
 			c:BRZ ?= {
-				add_pedropoint_effect = yes
+				add_pedropoint_effect_2 = yes
 				random_scope_character = {
 					limit = {
 						has_template = BRZ_emperor_pedro_02

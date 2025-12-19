@@ -11,6 +11,14 @@
 
 	immediate = {
 		save_scope_as = caudillo_country_scope
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = age_of_caudillos_modifier
+				}
+			}
+			add_modifier = age_of_caudillos_modifier
+		}
 	}
 
 	complete = {
@@ -19,7 +27,7 @@
 		}
 		custom_tooltip = {
 			text = caudillo_complete
-			"scope:journal_entry.scripted_bar_progress(je_caudillo_progress_bar)" < 0
+			"scope:journal_entry.scripted_bar_progress(je_caudillo_progress_bar)" <= 0
 		}
 	}
 

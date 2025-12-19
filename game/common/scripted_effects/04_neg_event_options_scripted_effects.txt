@@ -185,7 +185,7 @@ set_neg_options = { ## Sets three options out of a random list of possible negot
 			}
 			neg_option_7_effects = yes
 		}
-		80 = {#option 8 option, law_amendment. Friendly negotiation only
+		80 = {#option 8 option, law_amendment
 			trigger = {
 				neg_option_8_trigger = yes
 			}
@@ -308,7 +308,7 @@ set_neg_options = { ## Sets three options out of a random list of possible negot
 			}
 			neg_option_7_effects = yes
 		}
-		80 = {#option 8 option, law_amendment. Friendly negotiation only
+		80 = {#option 8 option, law_amendment
 			trigger = {
 				NOT = {
 					var:negotiation_option_a = 8
@@ -444,7 +444,7 @@ set_neg_options = { ## Sets three options out of a random list of possible negot
 			}
 			neg_option_7_effects = yes
 		}
-		80 = {#option 8 option, law_amendment. Friendly negotiation only
+		80 = {#option 8 option, law_amendment
 			trigger = {
 				NOT = {
 					var:negotiation_option_a = 8

@@ -364,24 +364,19 @@ character_generate_legitimist_france_heir = {
 		owner ?= {
 			create_character = {
 				template = FRA_henri_de_bourbon
-				on_created = {
-					set_variable = house_bourbon
-				}
 			}
 		}
 	}
 	else_if = {
 		limit = {
 			has_template = FRA_henri_de_bourbon
-			game_date > 1887.1.1
+			game_date < 1887.1.1
 		}
 		owner ?= {
 			create_character = {
 				template = SPC_juan_iii_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -397,8 +392,6 @@ character_generate_legitimist_france_heir = {
 				template = SPC_carlos_vii_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -414,8 +407,6 @@ character_generate_legitimist_france_heir = {
 				template = SPC_jaime_iii_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -431,8 +422,6 @@ character_generate_legitimist_france_heir = {
 				template = SPC_alfonso_i_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -448,9 +437,6 @@ character_generate_bonapartist_france_heir = {
 		owner ?= {
 			create_character = {
 				template = FRA_napoleon_eugene_louis_bonaparte
-				on_created = {
-					set_variable = house_bonaparte
-				}
 			}
 		}
 	}
@@ -462,9 +448,6 @@ character_generate_bonapartist_france_heir = {
 		owner ?= {
 			create_character = {
 				template = FRA_victor_bonaparte
-				on_created = {
-					set_variable = house_bonaparte
-				}
 			}
 		}
 	}
@@ -476,9 +459,6 @@ character_generate_bonapartist_france_heir = {
 		owner ?= {
 			create_character = {
 				template = FRA_louis_bonaparte
-				on_created = {
-					set_variable = house_bonaparte
-				}
 			}
 		}
 	}
@@ -517,8 +497,6 @@ character_generate_carlist_spain_heir = {
 				template = SPC_carlos_vi_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -534,8 +512,6 @@ character_generate_carlist_spain_heir = {
 				template = SPC_juan_iii_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -553,8 +529,6 @@ character_generate_carlist_spain_heir = {
 				template = SPC_carlos_vii_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -572,8 +546,6 @@ character_generate_carlist_spain_heir = {
 				template = SPC_jaime_iii_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -589,8 +561,6 @@ character_generate_carlist_spain_heir = {
 				template = SPC_alfonso_i_de_borbon_template
 				on_created = {
 					character_carlist_or_legitimist_switch_effect = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -607,9 +577,6 @@ character_generate_constitutional_spain_heir = {
 		owner = {
 			create_character = {
 				template = spa_isabel_francisca_de_borbon_template
-				on_created = {
-					set_variable = house_bourbon
-				}
 			}
 		}
 	}
@@ -622,9 +589,6 @@ character_generate_constitutional_spain_heir = {
 		owner = {
 			create_character = {
 				template = spa_alfonso_xii_de_borbon_template
-				on_created = {
-					set_variable = house_bourbon
-				}
 			}
 		}
 	}
@@ -636,9 +600,6 @@ character_generate_constitutional_spain_heir = {
 		owner = {
 			create_character = {
 				template = spa_alfonso_xiii_de_borbon_template
-				on_created = {
-					set_variable = house_bourbon
-				}
 			}
 		}
 	}
@@ -677,9 +638,6 @@ character_generate_miguelist_portugal_heir = {
 		owner = {
 			create_character = {
 				template = POR_miguel_i_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 		}
 	}
@@ -692,9 +650,6 @@ character_generate_miguelist_portugal_heir = {
 		owner = {
 			create_character = {
 				template = POR_maria_das_neves_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 		}
 	}
@@ -710,9 +665,6 @@ character_generate_miguelist_portugal_heir = {
 		owner = {
 			create_character = {
 				template = POR_miguel_januario_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 		}
 	}
@@ -724,9 +676,6 @@ character_generate_miguelist_portugal_heir = {
 		owner = {
 			create_character = {
 				template = POR_duarte_nuno_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 		}
 	}
@@ -743,9 +692,6 @@ character_generate_constitutional_portugal_heir = {
 		owner = {
 			create_character = {
 				template = POR_pedro_v_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 		}
 	}
@@ -758,9 +704,6 @@ character_generate_constitutional_portugal_heir = {
 		owner = {
 			create_character = {
 				template = POR_luis_i_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 		}
 	}
@@ -773,9 +716,6 @@ character_generate_constitutional_portugal_heir = {
 		owner = {
 			create_character = {
 				template = POR_carlos_i_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 		}
 	}
@@ -787,9 +727,6 @@ character_generate_constitutional_portugal_heir = {
 		owner = {
 			create_character = {
 				template = POR_manuel_ii_de_braganca_template
-				on_created = {
-					set_variable = house_braganca
-				}
 			}
 		}
 	}

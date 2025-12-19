@@ -605,7 +605,7 @@ GRE_general_anastasios_papoulas = { # Greek general, most notable as the Greek c
     is_general = yes
     traits = {
         ambitious
-        diplomat
+        basic_diplomat
         experienced_artillery_commander
     }
     commander_usage = {

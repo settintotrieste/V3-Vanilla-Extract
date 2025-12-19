@@ -45,6 +45,9 @@ brz_isabel_template = {
 		reserved
 		tactful
 	}
+	on_created = {
+		set_variable = house_braganca
+	}
 	trait_generation = { }
 }
 

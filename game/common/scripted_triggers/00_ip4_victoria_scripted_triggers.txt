@@ -317,7 +317,6 @@ country_has_laws_in_need_of_modernization = {
         }
         has_law_or_variant = law_type:law_guild_system
         has_law_or_variant = law_type:law_no_schools
-        has_law_or_variant = law_type:law_child_labor_allowed
     }
 }
 
@@ -706,6 +705,14 @@ country_has_interest_marker_in_europe = {
 		has_interest_marker_in_region = region_finland
 		has_interest_marker_in_region = region_baltic_states
 		has_interest_marker_in_region = region_north_sea_coast
+    }
+}
+
+country_has_interest_marker_in_great_eastern_crisis_region = {
+    OR = {
+        has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = region_danubia
+		has_interest_marker_in_region = region_anatolia
     }
 }
 

@@ -141,9 +141,9 @@
  	option = { #Do it
  		default_option = yes
  		name = nursing_events.2.a
- 		ROOT = {
+ 		scope:ongoing_war_state = {
  			add_modifier = {
- 				name = medical_hygiene
+ 				name = medical_hygiene_local
  				days = very_long_modifier_time
  			}
  		}
@@ -152,7 +152,7 @@
  	option = { #This should be taught everywhere
  		name = nursing_events.2.b
  		add_modifier = {
- 			name = medical_hygiene_local
+ 			name = medical_hygiene
  			days = very_long_modifier_time
  		}
  	}

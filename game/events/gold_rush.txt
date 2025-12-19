@@ -317,7 +317,10 @@ goldrush.4 = { #miners get organized
 
 	trigger = {
 		any_scope_state = {
-			has_variable = gold_rush_state
+			OR = {
+				has_modifier = state_gold_rush
+				has_modifier = state_limited_gold_rush
+			}
 		}
 		NOR = {
 			ig:ig_trade_unions ?= {

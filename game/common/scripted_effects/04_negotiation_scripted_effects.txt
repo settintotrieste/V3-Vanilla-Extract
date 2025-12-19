@@ -35,30 +35,6 @@
 			improve_stance = 1
 		}
 	}
-	##There are rare cases where this is not enough because support was below strongly_disapprove, so we run again to check.
-	##Also note that improve stance is not cumulative. Improve stance = 3 goes off its original state.
-	if = {
-		limit = {
-			law_enactment_stance = {
-				law = owner.currently_enacting_law.type
-				value = strongly_disapprove
-			}
-		}
-		hidden_effect = {
-			improve_stance = 4
-		}
-	}
-	else_if = {
-		limit = {
-			law_enactment_stance = {
-				law = owner.currently_enacting_law.type
-				value = disapprove
-			}
-		}
-		hidden_effect = {
-			improve_stance = 3
-		}
-	}
 }
 
 negotiation_end = {
@@ -173,90 +149,53 @@ neg_option_8_effects = {
 			limit = {
 				any_possible_amendment_type = {
 					save_temporary_scope_as = possible_amendment
+					amendment_banned_from_enactment = no
+					amendment_is_valid_for_promise_quest_degree = yes
 					NOR = {
-						this = amendment_type:amendment_generic_sponsor_polstr_increase
-						this = amendment_type:amendment_generic_sponsor_polstr_approval_increase
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_1
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_2
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_3
+						amendment_is_generic = yes
 						PREV = { # Refers to scope:law
 							any_scope_amendment = {
 								type ?= scope:possible_amendment # Refers to any_possible_amendment_type
 							}
 						}
 					}
-					scope:ig = { would_sponsor_amendment = prev }
+					scope:ig = { would_sponsor_amendment = scope:possible_amendment }
 				}
 			}
 			random_possible_amendment_type = {
 				limit = {
 					save_temporary_scope_as = possible_amendment
 					amendment_banned_from_enactment = no
+					amendment_is_valid_for_promise_quest_degree = yes
 					NOR = {
-						this = amendment_type:amendment_generic_sponsor_polstr_increase
-						this = amendment_type:amendment_generic_sponsor_polstr_approval_increase
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_1
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_2
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_3
+						amendment_is_generic = yes
 						PREV = { # Refers to scope:law
 							any_scope_amendment = {
 								type ?= scope:possible_amendment # Refers to random_possible_amendment_type
 							}
 						}
 					}
-					scope:ig = { would_sponsor_amendment = prev }
+					scope:ig = { would_sponsor_amendment = scope:possible_amendment }
 				}
 				save_temporary_scope_as = amendment_type_to_test
 			}
 		}
 		else = {
-			if = {
+			random_possible_amendment_type = { # Will always be one of the generic amendments valid for this negotiation level
 				limit = {
-					scope:ig.var:promise_quest_degree = 1
-					any_possible_amendment_type = {
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_1
-						scope:ig = { would_sponsor_amendment = prev }
+					save_temporary_scope_as = possible_amendment
+					amendment_banned_from_enactment = no
+					amendment_is_valid_for_promise_quest_degree = yes
+					NOT = {
+						PREV = { # Refers to scope:law
+							any_scope_amendment = {
+								type ?= scope:possible_amendment # Refers to random_possible_amendment_type
+							}
+						}
 					}
+					scope:ig = { would_sponsor_amendment = scope:possible_amendment }
 				}
-				random_possible_amendment_type = {
-					limit = {
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_1
-						scope:ig = { would_sponsor_amendment = prev }
-					}
-					save_temporary_scope_as = amendment_type_to_test
-				}
-			}
-			else_if = {
-				limit = {
-					scope:ig.var:promise_quest_degree = 2
-					any_possible_amendment_type = {
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_2
-						scope:ig = { would_sponsor_amendment = prev }
-					}
-				}
-				random_possible_amendment_type = {
-					limit = {
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_2
-						scope:ig = { would_sponsor_amendment = prev }
-					}
-					save_temporary_scope_as = amendment_type_to_test
-				}
-			}
-			else_if = {
-				limit = {
-					scope:ig.var:promise_quest_degree >= 3
-					any_possible_amendment_type = {
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_3
-						scope:ig = { would_sponsor_amendment = prev }
-					}
-				}
-				random_possible_amendment_type = {
-					limit = {
-						this = amendment_type:amendment_generic_sponsor_polstr_increase_negotiation_3
-						scope:ig = { would_sponsor_amendment = prev }
-					}
-					save_temporary_scope_as = amendment_type_to_test
-				}
+				save_temporary_scope_as = amendment_type_to_test
 			}
 		}
 	}
@@ -825,7 +764,6 @@ quest_cleanup = { #requires scope:ig
 	    	remove_variable = desired_law_var
 	    	remove_variable = promised_building_type
 	    	remove_variable = promised_building_group
-	    	remove_variable = neg_taxes_remaining_months
 	    	remove_variable = current_building_amount
 	    	remove_variable = starting_building_amount
 	    	remove_variable = law_attempt_months
@@ -842,8 +780,6 @@ quest_cleanup = { #requires scope:ig
 		    }
 	    }
 	    root = { #modifier tooltip doesn't scale by multiplier when this is displayed, so leaving it in a hidden effect is better than wrong info
-	    	remove_variable = promise_quest_degree_country
-	    	remove_variable = neg_taxes_remaining_months
 		    if = {
 		        limit = {
 		            has_modifier = active_ig_promise_country

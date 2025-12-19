@@ -562,7 +562,7 @@ ip4_coup_victory_special_effects = {
 				}
 			}
 			active_law:lawgroup_distribution_of_power ?= {
-				has_amendment = amendment_chamber_of_procurators
+				has_amendment = amendment_type:amendment_chamber_of_procurators
 			}
 		}
 		active_law:lawgroup_distribution_of_power ?= {
@@ -631,6 +631,12 @@ ip4_coup_victory_dynastic_effects = {
 			carlist_coup_trigger = yes
 		}
 		country_generate_carlist_spain_ruler = yes
+		if = {
+			limit = {
+				country_has_voting_franchise = yes
+			}
+			activate_law = law_type:law_autocracy
+		}
 	}
 	else_if = {
 		limit = {
@@ -643,6 +649,12 @@ ip4_coup_victory_dynastic_effects = {
 			miguelist_coup_trigger = yes
 		}
 		country_generate_miguelist_portugal_ruler = yes
+		if = {
+			limit = {
+				country_has_voting_franchise = yes
+			}
+			activate_law = law_type:law_autocracy
+		}
 	}
 	else_if = {
 		limit = {
@@ -667,6 +679,12 @@ ip4_coup_victory_dynastic_effects = {
 			legitimist_coup_trigger = yes
 		}
 		country_generate_legitimist_france_ruler = yes
+		if = {
+			limit = {
+				country_has_voting_franchise = yes
+			}
+			activate_law = law_type:law_autocracy
+		}
 	}
 	if = {
 		limit = {
@@ -824,8 +842,6 @@ country_generate_carlist_spain_ruler = {
 				template = SPC_carlos_vi_de_borbon_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -871,6 +887,12 @@ country_generate_carlist_spain_ruler = {
 			TEMPLATE = SPC_alfonso_i_de_borbon_template
 			ON_CREATED_EFFECT = summon_legitimist_carlist_effect
 		}
+	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
 	}
 }
 
@@ -946,6 +968,12 @@ country_generate_constitutional_spain_ruler = {
 				ideology = ideology_moderate
 			}
 		}
+	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
 	}
 }
 
@@ -1077,7 +1105,6 @@ country_generate_peripheral_braganza_ruler = {
 				template = POR_ana_de_jesus_maria_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
@@ -1093,7 +1120,6 @@ country_generate_peripheral_braganza_ruler = {
 				template = POR_fernando_de_saxe_coburg_gotha_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca # by marriage
 				}
 			}
 		}
@@ -1109,10 +1135,15 @@ country_generate_peripheral_braganza_ruler = {
 				template = POR_afonso_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
+	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
 	}
 }
 
@@ -1177,6 +1208,12 @@ country_generate_orleanist_france_ruler = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
+	}
 }
 
 country_generate_bonapartist_france_ruler = {
@@ -1196,7 +1233,6 @@ country_generate_bonapartist_france_ruler = {
 				template = FRA_napoleon_eugene_louis_bonaparte
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_bonaparte
 				}
 			}
 		}
@@ -1211,7 +1247,6 @@ country_generate_bonapartist_france_ruler = {
 				template = FRA_victor_bonaparte
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_bonaparte
 				}
 			}
 		}
@@ -1226,10 +1261,15 @@ country_generate_bonapartist_france_ruler = {
 				template = FRA_louis_bonaparte
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_bonaparte
 				}
 			}
 		}
+	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
 	}
 }
 
@@ -1244,8 +1284,6 @@ country_generate_legitimist_france_ruler = {
 				template = FRA_henri_de_bourbon
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_bourbon
-					set_variable = legitimist_leader
 				}
 			}
 		}
@@ -1292,6 +1330,12 @@ country_generate_legitimist_france_ruler = {
 			ON_CREATED_EFFECT = summon_legitimist_carlist_effect
 		}
 	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
+	}
 }
 
 country_generate_miguelist_portugal_ruler = {
@@ -1317,7 +1361,6 @@ country_generate_miguelist_portugal_ruler = {
 				template = POR_maria_das_neves_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
@@ -1333,7 +1376,6 @@ country_generate_miguelist_portugal_ruler = {
 				template = POR_miguel_januario_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
@@ -1348,10 +1390,15 @@ country_generate_miguelist_portugal_ruler = {
 				template = POR_duarte_nuno_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
+	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
 	}
 }
 
@@ -1367,7 +1414,6 @@ country_generate_constitutional_portugal_ruler = {
 				template = POR_ana_de_jesus_maria_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
@@ -1383,7 +1429,6 @@ country_generate_constitutional_portugal_ruler = {
 				template = POR_pedro_v_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
@@ -1399,7 +1444,6 @@ country_generate_constitutional_portugal_ruler = {
 				template = POR_luis_i_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
@@ -1415,7 +1459,6 @@ country_generate_constitutional_portugal_ruler = {
 				template = POR_carlos_i_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
@@ -1430,10 +1473,15 @@ country_generate_constitutional_portugal_ruler = {
 				template = POR_manuel_ii_de_braganca_template
 				on_created = {
 					set_character_as_ruler = yes
-					set_variable = house_braganca
 				}
 			}
 		}
+	}
+	if = {
+		limit = {
+			has_gov_regency = yes
+		}
+		remove_regency_modifier = yes
 	}
 }
 
@@ -1453,9 +1501,6 @@ second_amendment_add_obsessions_effect = {
 				cu:dixie = {
 					has_cultural_obsession = small_arms
 				}
-			}
-			owner.active_law:lawgroup_governance_principles ?= {
-				has_amendment = amendment_american_second_amendment
 			}
 		}
 		cu:yankee = {
@@ -1480,11 +1525,6 @@ second_amendment_remove_obsessions_effect = {
 				}
 				cu:dixie = {
 					has_cultural_obsession = small_arms
-				}
-			}
-			active_law:lawgroup_governance_principles ?= {
-				NOT = {
-					has_amendment = amendment_american_second_amendment
 				}
 			}
 		}
@@ -1562,8 +1602,8 @@ initialise_caciquismo_effect = {
 			OR = {
 				active_law:lawgroup_distribution_of_power ?= {
 					OR = {
-						has_amendment = amendment_chamber_of_procurators
-						has_amendment = amendment_chamber_of_gentleman_deputies
+						has_amendment = amendment_type:amendment_chamber_of_procurators
+						has_amendment = amendment_type:amendment_chamber_of_gentleman_deputies
 					}
 				}
 				has_law_or_variant = law_type:law_landed_voting
@@ -1656,7 +1696,7 @@ handle_possible_absent_caciquismo_variables = {
 	if = {
 		limit = {
 			active_law:lawgroup_distribution_of_power ?= {
-				has_amendment = amendment_electoral_clientelism
+				has_amendment = amendment_type:amendment_electoral_clientelism
 			}
 			NOT = {
 				has_variable = caciquismo_var
@@ -1669,7 +1709,7 @@ handle_possible_absent_caciquismo_variables = {
 			modifier:country_forbid_electoral_fraud_bool = no
 			NOT = {
 				active_law:lawgroup_distribution_of_power ?= {
-					has_amendment = amendment_electoral_clientelism
+					has_amendment = amendment_type:amendment_electoral_clientelism
 				}
 			}
 			NOT = {
@@ -1686,7 +1726,7 @@ remove_electoral_fraud_effect = {
 	if = {
 		limit ={
 			active_law:lawgroup_distribution_of_power ?= {
-				has_amendment = amendment_electoral_clientelism
+				has_amendment = amendment_type:amendment_electoral_clientelism
 			}
 		}
 		active_law:lawgroup_distribution_of_power ?= {
@@ -1741,8 +1781,6 @@ summon_napoleon_the_woat = { # Special case
 		create_character = {
 			template = fra_napoleon_iii_character_template
 			on_created = {
-				set_variable = house_bonaparte
-				set_variable = napoleon_iii_var
 				set_global_variable = napoleon_iii_spawn
 				cleanup_ruler_character_roles = yes
 				set_character_as_ruler = yes
@@ -1962,19 +2000,27 @@ transfer_character_of_unknown_status_to_country_and_make_ruler_effects = { # Req
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner ?= scope:summoning_country
+		}
+		scope:summoned_character_scope ?= {
+			hidden_effect = {
+				cleanup_ruler_character_roles = yes
+			}
+			set_character_as_ruler = yes
+		}
+	}
 }
 
 summon_miguel_effect = {
 	set_character_as_ruler = yes
 	add_character_role = politician
-	set_variable = house_braganca
 }
 
 summon_legitimist_carlist_effect = {
 	set_character_as_ruler = yes
 	add_character_role = politician
-	set_variable = house_bourbon
-	set_variable = legitimist_leader
 	character_carlist_or_legitimist_switch_effect = yes
 }
 
@@ -2004,25 +2050,32 @@ run_colonial_governor_cycle = { # Run in character scope
 	owner = { # Saving scopes for the sake of the templates
 		save_colonial_governor_generation_scopes = yes
 	}
-	random_list = { # Average term length of 4 years
-		4 = {
-			# Nothing ever happens
+	if = {
+		limit = {
+			has_variable = colonial_governor_term
 		}
-		0 = {
-			modifier = {
-				add = {
-					value = var:colonial_governor_term
-				}
-				min = 0
+		random_list = { # Average term length of 4 years
+			4 = {
+				change_variable = { name = colonial_governor_term add = 1 }
 			}
-			owner = {
-				set_variable = { name = hide_ruler_change_notification days = 7 }
-				post_notification = colonial_governor_cycle
-				generate_governor_of_same_type = yes
+			0 = {
+				modifier = {
+					add = {
+						value = var:colonial_governor_term
+					}
+					min = 0
+				}
+				owner = {
+					set_variable = { name = hide_ruler_change_notification days = 7 }
+					post_notification = colonial_governor_cycle
+					generate_governor_of_same_type = yes
+				}
 			}
 		}
 	}
-	change_variable = { name = colonial_governor_term add = 1 }
+	else = {
+		set_variable = { name = colonial_governor_term value = 1 } # Just in case something strange has happened
+	}
 }
 
 save_colonial_governor_generation_scopes = { # Run in an owner scope
@@ -2151,6 +2204,18 @@ generate_governor_of_same_type = { # Run in country scope
 			}
 		}
 	}
+	else = { # Fallback for edge cases
+		scope:current_governor ?= {
+			remove_variable = colonial_governor_term
+		}
+		create_character = {
+			template = character_template_colonial_governor_military
+			on_created = {
+				set_character_as_ruler = yes
+				set_variable = { name = colonial_governor_term value = 0 }
+			}
+		}
+	}
 }
 
 evaluate_portuguese_pink_map_connection = {
@@ -2209,6 +2274,7 @@ initialize_electoral_confidence = {
 	if = {
 		limit = {
 			game_date > 1836.1.1
+			country_has_voting_franchise = yes
 			eagle_burger_freedom_index < 0.8
 		}
 		add_modifier = {
@@ -2220,5 +2286,61 @@ initialize_electoral_confidence = {
 			days = very_long_modifier_time
 			is_decaying = yes
 		}
+	}
+	set_variable = electoral_confidence_initialized
+}
+
+cleanup_voting_strength_modifiers = {
+	if = {
+		limit = {
+			has_modifier = missouri_compromise
+		}
+		remove_modifier = missouri_compromise
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_portugal_liberal_hegemony
+		}
+		remove_modifier = modifier_portugal_liberal_hegemony
+		add_modifier = {
+			name = modifier_portugal_liberal_hegemony_no_voting
+			days = long_modifier_time
+			is_decaying = yes
+		}
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_libertad_igualdad_fraternidad
+		}
+		remove_modifier = modifier_libertad_igualdad_fraternidad
+		add_modifier = {
+			name = modifier_libertad_igualdad_fraternidad_no_voting
+			days = long_modifier_time
+			is_decaying = yes
+		}
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_governors_policy
+		}
+		remove_modifier = modifier_governors_policy
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_anti_electorialism
+		}
+		remove_modifier = modifier_anti_electorialism
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_farmers_voting_conservative
+		}
+		remove_modifier = modifier_farmers_voting_conservative
+	}
+	if = {
+		limit = {
+			has_modifier = modifier_political_involvement_welcomed
+		}
+		remove_modifier = modifier_political_involvement_welcomed
 	}
 }

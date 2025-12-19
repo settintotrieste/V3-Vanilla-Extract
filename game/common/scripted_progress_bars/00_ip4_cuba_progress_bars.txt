@@ -42,7 +42,13 @@
 						}
 					}
 				}
-				exists = c:CUB
+				OR = {
+					exists = c:CUB
+					AND = {
+						exists = c:ATL
+						c:ATL = { was_formed_from = CUB }
+					}
+				}
 				owner = {
 					has_journal_entry = je_cuba_independencia
 					has_variable = independencia_target

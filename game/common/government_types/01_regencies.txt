@@ -739,7 +739,7 @@ gov_regency_sultanate = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_SULTAN"
-	female_ruler = "" # Empty on purpose
+	female_heir = "" # Empty on purpose
 
 	possible = {
 		has_law = law_type:law_monarchy

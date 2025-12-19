@@ -55,9 +55,6 @@ portugal_generate_scripted_heirs = {
 		set_variable = pedro_v_var
 		create_character = {
 			template = POR_pedro_v_de_braganca_template
-			on_created = {
-				set_variable = house_braganca
-			}
 		}
 	}
 }
@@ -118,9 +115,6 @@ france_generate_scripted_heirs = {
 		set_variable = napoleon_iv_heir_var
 		create_character = {
 			template = FRA_napoleon_eugene_louis_bonaparte
-			on_created = {
-				set_variable = house_bonaparte
-			}
 		}
 	}
 }
@@ -139,9 +133,6 @@ spain_generate_scripted_heirs = {
 		set_variable = isabel_francisca_heir_var
 		create_character = {
 			template = spa_isabel_francisca_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 	}
 	else_if = {
@@ -156,9 +147,6 @@ spain_generate_scripted_heirs = {
 		set_variable = alfonso_xii_heir_var
 		create_character = {
 			template = spa_alfonso_xii_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 	}
 	else_if = {
@@ -172,9 +160,6 @@ spain_generate_scripted_heirs = {
 		set_variable = alfonso_xiii_heir_var
 		create_character = {
 			template = spa_alfonso_xiii_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 	}
 
@@ -190,9 +175,6 @@ spain_generate_scripted_heirs = {
 		set_variable = carlos_vi_heir_var
 		create_character = {
 			template = SPC_carlos_vi_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 	}
 	else_if = {
@@ -206,9 +188,6 @@ spain_generate_scripted_heirs = {
 		set_variable = juan_iii_heir_var
 		create_character = {
 			template = SPC_juan_iii_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 	}
 	else_if = {
@@ -223,9 +202,6 @@ spain_generate_scripted_heirs = {
 		set_variable = carlos_vii_heir_var
 		create_character = {
 			template = SPC_carlos_vii_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 	}
 	else_if = {
@@ -240,9 +216,6 @@ spain_generate_scripted_heirs = {
 		set_variable = jaime_iii_heir_var
 		create_character = {
 			template = SPC_jaime_iii_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 	}
 	else_if = {
@@ -256,9 +229,6 @@ spain_generate_scripted_heirs = {
 		set_variable = alfonso_i_heir_var
 		create_character = {
 			template = SPC_alfonso_i_de_borbon_template
-			on_created = {
-				set_variable = house_bourbon
-			}
 		}
 	}
 }

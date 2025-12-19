@@ -87,7 +87,10 @@ je_spain_glorious_revolution_dummy = {
 
 	is_shown_when_inactive = {
 		has_dlc_feature = ip4_content
-		c:SPA ?= this
+		OR = {
+			c:SPA ?= this
+			was_formed_from = SPA
+		}
 		has_journal_entry = je_the_two_spains
 		NOT = {
 			has_variable = glorious_revolution_var

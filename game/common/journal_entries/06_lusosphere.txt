@@ -161,6 +161,14 @@ je_portugal_united_kingdom = {
 				type = personal_union
 				is_initiator = no
 			}
+			trigger_if = {
+				limit = {
+					has_dlc_feature = rp1_content
+				}
+				NOT = {
+					has_journal_entry = je_pedro_brazil
+				}
+			}
 		}
 	}
 

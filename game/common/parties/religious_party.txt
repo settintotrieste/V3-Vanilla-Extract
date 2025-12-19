@@ -93,10 +93,33 @@ religious_party = {
 				}
 			}
 			triggered_desc = {
+				desc = party_legitimist_party
+				trigger = {
+					c:FRA ?= this
+					any_interest_group = {
+						party ?= {
+							is_party_type = religious_party
+						}
+						leader ?= {
+							has_ideology = ideology:ideology_legitimist
+						}
+					}
+				}
+			}
+			triggered_desc = {
 				desc = party_clerical_party
 				trigger = {
-					exists = c:FRA
-					THIS = c:FRA
+					c:FRA ?= this
+					NOT = {
+						any_interest_group = {
+							party ?= {
+								is_party_type = religious_party
+							}
+							leader ?= {
+								has_ideology = ideology:ideology_legitimist
+							}
+						}
+					}
 				}
 			}
 			triggered_desc = {
@@ -319,6 +342,20 @@ religious_party = {
 			add = {
 				value = 5
 				desc = "from_theocracy"
+			}
+		}
+		if = {
+			limit = {
+				leader = {
+					has_ideology = ideology:ideology_legitimist
+				}
+				owner = {
+					country_has_primary_culture = cu:french
+				}
+			}
+			add = {
+				value = 20
+				desc = "ideology_legitimist"
 			}
 		}
 		if = { # nobody will join if the devout don't join

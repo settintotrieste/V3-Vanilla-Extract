@@ -5,12 +5,12 @@
 
     is_shown_when_inactive = {
         has_dlc_feature = ip4_content
-        c:SPA ?= this
+		country_has_primary_culture = cu:spanish
         has_technology_researched = egalitarianism
 	}
 
 	possible = {
-        c:SPA ?= this
+		country_has_primary_culture = cu:spanish
         has_technology_researched = anarchism
         any_political_movement = {
             is_political_movement_type = movement_anarchist

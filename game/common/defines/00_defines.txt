@@ -180,7 +180,7 @@ NPolitics = {
 	IG_TRAIT_STICKINESS = 2				# If an IG trait is already active, this is the amount of Approval difference required to deactivate it
 	MARGINAL_IG_THRESHOLD = 0.05		# Interest Groups with Clout above this value are considered relevant while those below are marginal (if not also In Government)
 	MARGINAL_IG_CUTOFF = 0.04			# Interest Groups who are already relevant will only become marginal again if they drop below this value.
-	
+
 	MARGINAL_IG_JOIN_PARTY_POPULATION_THRESHOLD = 0.025 # Marginal IGs that are supported by at least this % of the population are able to join parties and become non-marginal
 
 	MIN_AMENABILITY = 0
@@ -234,7 +234,7 @@ NPolitics = {
 	CIVIL_WAR_UPRISING_ARMY_FRACTION_CLOUT_FACTOR = 0.25 # Target fraction of the army that should rebel, multiplied by insurrectionary IG clout in the area
 	CIVIL_WAR_UPRISING_NAVY_FRACTION_MILITARY_SUPPORT_FACTOR = 0.75 # Target fraction of the navy that should rebel, multiplied by insurrectionary movement military support
 	CIVIL_WAR_UPRISING_NAVY_FRACTION_CLOUT_FACTOR = 0.25 # Target fraction of the navy that should rebel, multiplied by insurrectionary IG clout in the area
-	
+
 	# Insurrectionary countries receive an injection of military goods in their capital, below values control which goods and in which quantities
 	# Multiplies are based on the states assigned to the civil war and the pre-civil war market sell & buy orders
 	CIVIL_WAR_STOCKPILE_SMALL_ARMS_GOODS_TYPE = "small_arms"
@@ -243,7 +243,7 @@ NPolitics = {
 	CIVIL_WAR_STOCKPILE_AMMUNITION_MULTIPLIER = 0.80
 	CIVIL_WAR_STOCKPILE_ARTILLERY_GOODS_TYPE = "artillery"
 	CIVIL_WAR_STOCKPILE_ARTILLERY_MULTIPLIER = 0.65
-	
+
 	CIVIL_WAR_MAX_PROGRESS_AT_CHECKPOINT = 0.25	# A civil war can advance at most this amount per checkpoint, regardless of radicalism
 	MIN_RADICALISM_FOR_CIVIL_WAR_PROGRESSION = 0.75	# A political movement must have this much radicalism for a civil war to start organizing
 	MIN_RADICALISM_FOR_CIVIL_WAR_START = 1.0		# Allow a civil war to start at this amount of radicalism or more
@@ -290,7 +290,7 @@ NPolitics = {
 	MIN_AFFILIATION_TO_JOIN_PARTY = 1					# An IG must have this much affiliation with a party to want to join it
 	MAX_ELECTORAL_CONFIDENCE = 1.0						# Electoral confidence can never be higher than this
 	INITIAL_ELECTORAL_CONFIDENCE = 1.0					# Starting electoral confidence at start of game or when elections are first introduced
-	
+
 	REFORM_GOVERNMENT_PERIOD = 6 						# How many months after election you can reform government for free
 	REFORM_GOVERNMENT_RADICALIZATION_RATE = 0.25 		# How many percent of a IG's supporters that will get radicalized when removed from government.
 
@@ -623,7 +623,7 @@ NEconomy = {
 	SUBVENTION_LEVEL_EFFECT_LOW = 0.25					# The fraction of subvention rate applied at low level
 	SUBVENTION_LEVEL_EFFECT_HIGH = 0.5					# The fraction of subvention rate applied at high level
 	SUBVENTION_LEVEL_EFFECT_MAXIMUM = 1.0				# The fraction of subvention rate applied at maximum level
-	
+
 	REINVESTMENT_SUBSISTENCE_FRACTION_REDUCTION = 0.5	# Reinvestment from pops in ownership buildings is multiplied by ( 1 - this * the share of levels owned that are subsistence buildings )
 
 	COMPANY_OVER_LIMIT_BONUS_PENALTY_MIN = 0.33			# If the number of companies in the country exceeds the limit, all company bonuses get penalty. The penalty is scaled proportionally to the limit (exceeding the limit by 100% reduces bonuses by 100%) and the minimum value is this
@@ -786,7 +786,7 @@ NMilitary = {
 
 	MANPOWER_RATIO_REQUIRED_TO_CLEAR_DEFEATED_ADMIRALS = 0.75	# A Defeated fleet without at least this ratio of current/max manpower will remain Defeated
 
-	MILITARY_FORMATION_AUTO_DEPLOY_DISTANCE_LIMIT = 150			# Armies are not auto-deployed to fronts that are located further than this pixel-distance from the army's current position
+	MILITARY_FORMATION_AUTO_DEPLOY_DISTANCE_LIMIT = 250			# Armies are not auto-deployed to fronts that are located further than this pixel-distance from the army's current position
 
 	BASECAMP_WANTED_FORMATIONS_SCORE = 1.0			# The more formations we need to add to the basecamp the higher the score
 	BASECAMP_DISTANCE_SCORE_THRESHOLD = 100			# Is multiplied with penalties below and then is subtracted from the basecamp score
@@ -798,7 +798,8 @@ NMilitary = {
 
 	# Defines below control how much blockade strength is required to fully blockade a state
 	# The base target strength is equal to the state_blockade_resistance_add modifier
-	BLOCKADE_TARGET_STRENGTH_PER_TRADED_UNIT = 0.15			# Each base value of imports/exports in the market area increases required blockade strength by this (only for world market hubs)
+	BLOCKADE_TARGET_STRENGTH_MAXIMUM = 100000				# Required blockade strength cannot be higher than this
+	BLOCKADE_TARGET_STRENGTH_PER_TRADED_UNIT = 0.1			# Each base value of imports/exports in the market area increases required blockade strength by this (only for world market hubs)
 	BLOCKADE_TARGET_STRENGTH_PER_PRODUCED_UNIT = 0.15		# Each base value of goods produced in buildings affected by blockades (such as fisheries and shipyards) increases required blockade strength by this
 	BLOCKADE_TARGET_STRENGTH_PER_CONVOY = 3					# Each convoy passing through the state's port increases required blockade strength by this
 
@@ -1120,9 +1121,9 @@ NDiplomacy = {
 	ECONOMIC_DEPENDENCE_GDP_RATIO_BY_OTHER_FACTOR = 5				# Ex. if you own 15% of the other country's GDP, that works out to +0.75
 	ECONOMIC_DEPENDENCE_GDP_RATIO_BY_OTHER_MIN = 0
 	ECONOMIC_DEPENDENCE_GDP_RATIO_BY_OTHER_MAX = 5
-	ECONOMIC_DEPENDENCE_OTHER_GDP_RATIO_OWNED_FACTOR = 20 #More embarrassing if your subjects own your stuff than the other way round. 
+	ECONOMIC_DEPENDENCE_OTHER_GDP_RATIO_OWNED_FACTOR = 20 #More embarrassing if your subjects own your stuff than the other way round.
 	ECONOMIC_DEPENDENCE_OTHER_GDP_RATIO_OWNED_MIN = -5 #This value is negative
-	ECONOMIC_DEPENDENCE_OTHER_GDP_RATIO_OWNED_MAX = 0 
+	ECONOMIC_DEPENDENCE_OTHER_GDP_RATIO_OWNED_MAX = 0
 	ECONOMIC_DEPENDENCE_GDP_PERCENTAGE_FACTOR = 1
 	ECONOMIC_DEPENDENCE_GDP_PERCENTAGE_MIN = 0
 	ECONOMIC_DEPENDENCE_GDP_PERCENTAGE_MAX = 1

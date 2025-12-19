@@ -966,7 +966,9 @@ colored_emblem_texture_lists = {
 			trigger = {
 				coa_def_italian_trigger = yes
 			}
-			1000 = "ce_hammer_sickle_italy.dds"
+			1000 = "ce_hammer_sickle_pcdi.dds"
+			500 = "ce_hammer_sickle_italy.dds"
+			250 = "ce_hammer_sickle_wreath_pcdi.dds"
 		}
 		special_selection = {
 			trigger = {
