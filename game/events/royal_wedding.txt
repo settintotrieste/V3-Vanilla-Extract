@@ -344,6 +344,9 @@ wedding.3 = {
 			value = 0.1
 			pop_type = aristocrats
 		}
+		heir ?= {
+			set_character_as_ruler = yes
+		}
 		ruler = {
 			remove_character_role = ruler
 		}
@@ -353,6 +356,9 @@ wedding.3 = {
 		name = wedding.3.b
 		add_loyalists = {
 			value = 0.01
+		}
+		heir ?= {
+			set_character_as_ruler = yes
 		}
 		ruler = {
 			remove_character_role = ruler

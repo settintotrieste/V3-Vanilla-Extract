@@ -325,6 +325,9 @@ resignation.3 = {
 		trigger = {
 			exists = heir
 		}
+		heir ?= {
+			set_character_as_ruler = yes
+		}
 		custom_tooltip = {
 			text = leader_abdicates_the_throne_tt
 			scope:abdicating_monarch = {
@@ -365,9 +368,6 @@ resignation.3 = {
 		default_option = yes
 		custom_tooltip = {
 			text = leader_abdicates_the_throne_tt
-			scope:abdicating_monarch = {
-				exile_character_with_martyrdom = yes
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -398,6 +398,14 @@ resignation.3 = {
 						ruler = yes
 					}
 				}
+			}
+			else = {
+				heir ?= {
+					set_character_as_ruler = yes
+				}
+			}
+			scope:abdicating_monarch = {
+				exile_character_with_martyrdom = yes
 			}
 		}
 		scope:ongoing_revolution = {
@@ -420,9 +428,6 @@ resignation.3 = {
 		}
 		custom_tooltip = {
 			text = leader_abdicates_the_throne_tt
-			scope:abdicating_monarch = {
-				exile_character_with_martyrdom = yes
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -453,6 +458,14 @@ resignation.3 = {
 						ruler = yes
 					}
 				}
+			}
+			else = {
+				heir ?= {
+					set_character_as_ruler = yes
+				}
+			}
+			scope:abdicating_monarch = {
+				exile_character_with_martyrdom = yes
 			}
 		}
 		if = {

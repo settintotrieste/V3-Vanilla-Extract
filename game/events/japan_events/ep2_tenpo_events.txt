@@ -721,8 +721,7 @@ tenpo_events.6 = {
 	cooldown = { days = never_fire_again_modifier_time }
 
 	trigger = {
-		exists = c:CHI
-		exists = c:GBR
+		has_dlc_feature = ep2_content
 		NOT = {
 			has_variable = opium_war_has_happened_jap_var
 		}
