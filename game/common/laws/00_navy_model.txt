@@ -110,13 +110,13 @@ law_professional_navy = {
 			add = 750
 		}
 
-		# Once the AI gets to a certain army tech level they should try to ditch merchant navy
+		# Once the AI gets to a certain naval tech level they should try to ditch merchant navy
 		if = {
 			limit = {
 				OR = {
-					#has_technology_researched = logistics
-					#has_technology_researched = general_staff
-					# Naval Techs need adding
+					has_technology_researched = monitor_tech
+					has_technology_researched = pre_dreadnought_tech
+					has_technology_researched = sea_lane_strategies
 				}
 				has_law_or_variant = law_type:law_merchant_navy
 			}
@@ -157,13 +157,13 @@ law_diplomatic_navy = {
 			add = 750
 		}
 
-		# Once the AI gets to a certain army tech level they should try to ditch merchant navy
+		# Once the AI gets to a certain naval tech level they should try to ditch merchant navy
 		if = {
 			limit = {
 				OR = {
-					#has_technology_researched = logistics
-					#has_technology_researched = general_staff
-					# Naval Techs need adding
+					has_technology_researched = monitor_tech
+					has_technology_researched = pre_dreadnought_tech
+					has_technology_researched = sea_lane_strategies
 				}
 				has_law_or_variant = law_type:law_merchant_navy
 			}

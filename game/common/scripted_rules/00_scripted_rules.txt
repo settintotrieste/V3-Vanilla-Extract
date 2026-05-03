@@ -27,6 +27,9 @@ is_weak_power_bloc = {
 # Checks if any diplomatic play is possible against the target country
 # Root = Country
 # scope:target_country = target of a diplomatic play
+# scope:region = strategic region of the initial war goal
+# scope:stakeholder = the stakeholder of the initial war goal, in case it's not the target country
+# scope:state = if the war goal is targeting a state, that. otherwise, empty
 can_start_diplomatic_plays_against = {
 	# Not allowed to attack subjects of play participants
 	NOT = {
@@ -59,10 +62,13 @@ can_start_diplomatic_plays_against = {
 	}
 
 	OR = {
-		highest_overlapping_interest_tier = { target = scope:target_country value >= interest_tier_effect_can_start_diplomatic_plays_min_tier }
+		has_strategic_region_interest_tier = {
+			strategic_region = scope:region
+			value >= interest_tier_effect_can_start_diplomatic_plays_min_tier
+		}
 		is_direct_subject_of = scope:target_country
 		scope:target_country = { is_direct_subject_of = root }
-	}	
+	}
 
 	NOT = {
 		scope:target_country = {
@@ -75,6 +81,7 @@ can_start_diplomatic_plays_against = {
 # Root = Country
 # scope:target_country = country of the side to join to
 # scope:enemy_country = enemy country of target_country to which we could fight against
+# scope:region = strategic region of the initial war goal
 can_join_side_in_diplomatic_play = {
 	# Might be disallowed by power bloc
 	NOT = {
@@ -100,7 +107,10 @@ can_join_side_in_diplomatic_play = {
 	}
 
 	OR = {
-		highest_overlapping_interest_tier = { target = scope:target_country value >= interest_tier_effect_can_join_diplomatic_plays_min_tier }
+		has_strategic_region_interest_tier = {
+			strategic_region = scope:region
+			value >= interest_tier_effect_can_join_diplomatic_plays_min_tier
+		}
 		is_direct_subject_of = scope:enemy_country
 		scope:enemy_country = { is_direct_subject_of = root }
 		is_direct_subject_of = scope:target_country
@@ -186,8 +196,6 @@ can_sign_treaty_with = {
 		NOT = { is_diplomatic_play_enemy_of = scope:other_country }
 	}
 
-	# TODO PRCAL-41248: Add a new and properly localized trigger
-	#has_diplomatic_relevance = scope:other_country
 	OR = {
 		has_strategic_adjacency = scope:other_country
 		AND = {
@@ -217,9 +225,9 @@ can_threaten_naval_hostilities = {
 			}
 		}
 	}
-	
+
 	"relations(scope:other_country)" < relations_threshold:cordial
-	NOR = { 
+	NOR = {
 		is_diplomatic_play_ally_of = scope:other_country
 		any_scope_treaty = {
 			binds = scope:other_country

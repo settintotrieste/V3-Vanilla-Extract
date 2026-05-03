@@ -4,6 +4,7 @@
 
     project_power = yes
     ai_will_cancel_for_transportation = yes
+    ai_distance_penalty_multiplier = 0.25
 }
 
 naval_mission_type_intercept = {
@@ -82,6 +83,14 @@ naval_mission_type_piracy = {
         has_dlc_feature = ep2_content
         owner ?= {
             is_country_type = unrecognized
+            NOT = {
+                any_scope_treaty = {
+                    any_scope_article = {
+                        source_country = root.owner
+                        has_type = abandon_piracy
+                    }
+                }
+            }
         }
         trigger_if = {
             limit = {

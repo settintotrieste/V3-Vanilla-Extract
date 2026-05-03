@@ -7,7 +7,9 @@
 	}
 
 	possible = {
-		has_variable = je_sakoku_maybe_we_should_open_up
+		hidden_trigger = {
+			has_variable = je_sakoku_maybe_we_should_open_up
+		}
 	}
 
 	effect = {

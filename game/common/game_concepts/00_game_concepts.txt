@@ -1859,7 +1859,7 @@ concept_negotiation = {
 concept_amenability = {
 	texture = "gfx/interface/icons/generic_icons/amenability.dds"
 }
-concept_obstinance = { #TODO PRCAL-38778
+concept_obstinance = {
 	texture = "gfx/interface/icons/state_status_icons/state_obstinance.dds"
 }
 

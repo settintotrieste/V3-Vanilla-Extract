@@ -1,4 +1,4 @@
-# rank_value = higher value rank effects take priority over lower ones in being assigned, also determines icon index
+﻿# rank_value = higher value rank effects take priority over lower ones in being assigned, also determines icon index
 # enforce_subject_rank_check = if yes, this rank is invalid for subjects with a subject type where overlord needs to have higher rank if overlord has that rank or higher
 # prestige_average_threshold = multiple of average country prestige
 # prestige_relative_threshold = relative to highest prestige country

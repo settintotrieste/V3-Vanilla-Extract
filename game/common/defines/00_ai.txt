@@ -83,9 +83,10 @@
 
 	MIN_AVAILABLE_LABOR_FOR_NEW_BUILDING = 5000		# If state has less than this in available labor, we should be much less likely to build something (multiplied by 1 + number of ongoing constructions)
 
-	# Formations with fewer units than whichever is smaller of these two values should not have a commander recruited for them
-	MIN_COMBAT_UNITS_FOR_COMMANDER_ABSOLUTE = 5		# Absolute number of combat units
-	MIN_COMBAT_UNITS_FOR_COMMANDER_RELATIVE = 0.2	# Number of combat units relative to total army size
+	# Formations with fewer units than whichever is smaller of these three values should not have a commander recruited for them
+	MIN_COMBAT_UNITS_FOR_COMMANDER_ABSOLUTE = 5				# Absolute number of combat units
+	MIN_COMBAT_UNITS_FOR_COMMANDER_ABSOLUTE_MARINES = 3		# Absolute number of combat units in a marine-tagged formation, less than or equal to the above
+	MIN_COMBAT_UNITS_FOR_COMMANDER_RELATIVE = 0.2			# Number of combat units relative to total army size
 
 	# Formations with at least the number of units than whichever is smaller of these two values should always have at least two commanders, so they can be dynamically split to cover multiple fronts
 	MIN_COMBAT_UNITS_FOR_MULTIPLE_COMMANDERS_ABSOLUTE = 10  # Absolute number of combat units
@@ -541,6 +542,14 @@
 	MARINE_FORMATION_TAG_MIN_FRACTION = 0.5							# Min fraction of marine units to tag a formation as Marine
 
 	# Shipbuilding defines
+	SHIP_TEMPLATE_CREATION_MIN_SCORE_FACTOR = 1.5					# AI will only create a new ship template if its modification score is at least this many times better than the best existing template of the same type
+	SHIP_RETROFIT_MIN_SCORE_FACTOR = 2.0							# AI will only retrofit ships if the target template's total score is at least this many times the current template's score
+	FLEET_RECALL_HULL_RATIO_WAR = 0.75								# At war or in a diplomatic play, recall fleets with average hull at or below this ratio
+	FLEET_RECALL_HULL_RATIO_PEACE = 1.0								# At peace, recall fleets with average hull below this ratio (1.0 = recall any damaged fleet)
+	FLEET_RECALL_CREW_RATIO_WAR = 0.75								# At war or in a diplomatic play, recall fleets with average crew at or below this ratio
+	FLEET_RECALL_CREW_RATIO_PEACE = 1.0								# At peace, recall fleets with average crew below this ratio (1.0 = recall any undermanned fleet)
+	FLEET_RECALL_MIN_MISSION_SCORE = 0.5							# Recall fleets whose best mission score is below this threshold
+	SHIP_DESIGN_MODIFICATION_RANDOM_FACTOR = 0.25					# Random factor applied to AI modification weights when designing ships, creating per-country variance
 	SHIP_CONSTRUCTION_WANTED_SHIPS_TO_BUILD_COST_FACTOR = 1.0		# This is multiplied by the cost of the ships the AI wants to build to determine how much the AI wants to build them. The higher this is, the more the AI is willing to spend on wanted ships
 	SHIP_CONSTRUCTION_WANTED_BUILT_SHIPS_COST_FACTOR = 0.3			# This is multiplied by the cost of the existing ships, so that it allocates extra construction points for repairs/retrofitting
 	SHIP_CONSTRUCTION_DEBT_RESUME = 0.1 							# If ship constructions are paused, resume once debt is this low relative to ceiling
@@ -548,14 +557,17 @@
 
 	MIN_SHIPS_TO_TRANSFER = 5										# AI will not transfer ships between fleets unless at least this many are being transferred
 	SHIP_TRANSFER_BASE_VALUE_PER_CONSTRUCTION_POINT = 150			# Base £ per construction point used for AI ship valuation (e.g. ship_transfer treaty acceptance). Above the empirical ~£40/CP replacement cost so that target-side acceptance scores clear int32 truncation for mid-tier capital ships at multi-year bindings.
-	DISBAND_OBSOLETE_SHIP_DAYS = 1825								# If a ship has been marked obsolete by the AI for at least this many days (~5 years) and hasn't been sold/transferred away, the AI decommissions it outright. Paired with ship_transfer: ships will ideally be sold before this threshold fires.
+	DISBAND_OBSOLETE_SHIP_DAYS = 3650								# If a ship has been marked obsolete by the AI for at least this many days (~10 years) and hasn't been sold/transferred away, the AI decommissions it outright. Paired with ship_transfer: ships will ideally be sold before this threshold fires.
+	DISBAND_OBSOLETE_SHIP_CREW_RATIO = 0.8							# If the ratio of crew needed to max available sailors exceeds this value, the AI will immediately decommission obsolete ships regardless of how long they've been obsolete
+	SHIP_CONSTRUCTION_BLOCK_CREW_RATIO = 1.0						# If the ratio of crew needed to max available sailors is at or above this value, the AI will not queue new ship constructions
 
     # Below data is used for General Orders:
 	HQ_DEFENSE_MIN_THEATER_SCORE = 100								# Theater of local HQ must have at least this importance score to have a minimum garrison
 
 	NUM_DAYS_TO_REMEMBER_FAILED_FRONT_OR_HQ_ASSIGNMENT = 10 				# For how many days should the AI remember failing to assign a general to a front or HQ (and thus not try with that front again)
 	NUM_DAYS_TO_REMEMBER_FAILED_SUPPLY_ROUTE = 30 							# For how many days should the AI remember that a formation failed to find a supply route to a target
-
+	NUM_DAYS_TO_REMEMBER_FAILED_NAVAL_INVASION = 100 						# For how many days should the AI remember that a regular formation failed to launch a naval invasion
+	
 	# If a front is worth less than this, the AI will not assign any generals to it
 	FRONT_OR_HQ_IMPORTANCE_MIN_SCORE = 50
 
@@ -1030,7 +1042,7 @@
 	AI_CAPITULATE_BASE_VALUE = -25
 	AI_CAPITULATE_WAR_LEADER_FACTOR = -25 # If warleader
 	AI_CAPITULATE_WAR_SUPPORT_FACTOR = -1
-	AI_CAPITULATE_SELF_WARGOAL_FACTOR = -10 # For each wargoal we hold in the war
+	AI_CAPITULATE_SELF_WARGOAL_FACTOR = -5 # For each wargoal we hold in the war
 	AI_CAPITULATE_ENEMY_WARGOAL_FACTOR = -20 # For each wargoal targeting us in the war
 	AI_CAPITULATE_PEACE_DESIRE_FACTOR = 0.5 # Peace desire is multiplied by this when added to capitulation score
 
@@ -1229,6 +1241,15 @@
 	HUNT_PIRATES_SCORING_FLEET_DETECTION_RATIO_MULT = 2.0 			# Favor fleets with high detection for hunting pirates
 	HUNT_PIRATES_SCORING_FLEET_SCREENING_RATIO_MULT = 1.0 			# Favor fleets with high screening ratio for pirate hunting patrols
 	HUNT_PIRATES_MIN_HOSTILITY_MULT = 0.25							# Minimum multiplier for hunt pirates scoring during hostilities. Prevents AI from completely abandoning pirate hunting during war.
+	HUNT_PIRATES_AT_WAR_MULT = 0.25									# Additional multiplier applied to hunt pirates scoring when at war
+
+	PIRACY_SCORING_FLEET_SPEED_VISIBILITY_RATIO_ADJUSTER = 1.0 	# If the score seems to end up being too high for piracy, lower this oen
+	PIRACY_SCORING_FLEET_SPEED_VISIBILITY_RATIO_MULT = 2.0 		# Favor fleets with as much goods per visibility for pirates
+	PIRACY_NO_HOSTILITIES_MULT = 1.0 							# Multiplied with shipping lane score when we have no hostilities currently
+	PIRACY_HOSTILITIES_MULT = 0.5 								# Multiplied with shipping lane score when we have hostilities currently
+
+	PRIVATEER_SCORING_FLEET_SPEED_VISIBILITY_RATIO_ADJUSTER = 1.0 	# If the score seems to end up being too high for privateer, lower this oen
+	PRIVATEER_SCORING_FLEET_SPEED_VISIBILITY_RATIO_MULT = 2.0 		# Favor fleets with as much goods per visibility for privateers
 
 	PORT_BOMBARDMENT_NAVAL_HOSTILITIES_MULT = 2.0 					# Multiplied with coast score when we are in naval hostilities with coast owner
 	PORT_BOMBARDMENT_FULL_HOSTILITIES_MULT = 0.5 					# Multiplied with coast score when we are in full hostilities with coast owner
@@ -1238,7 +1259,8 @@
 	# So if this below is negative it means it will avoid doing those missions, positive it will prioritize those.
 	INTERCEPT_OUTCLASSED_MULT = -4.0
 	POWER_PROJECTION_OUTCLASSED_MULT = -1.0
-	POWER_PROJECTION_HOSTILE_NAVAL_RATIO_MAX = 1.0				# Hostile-to-friendly naval strength ratio at which power projection score is fully suppressed. At 0 ratio there is no penalty, linearly scales to 0x score at this ratio.
+	POWER_PROJECTION_HOSTILE_NAVAL_RATIO_MAX = 0.25				# Hostile-to-friendly naval strength ratio at which power projection score is fully suppressed. At 0 ratio there is no penalty, linearly scales to 0x score at this ratio.
+	INTERCEPT_HOSTILE_NAVAL_RATIO_FOR_FULL_SCORE = 0.25			# Hostile-to-friendly naval strength ratio at which intercept and defend coast reach full score. Below this ratio the scores are scaled down linearly.
 	INTERCEPT_ACCEPTABLE_DISTANCE = 1000						# Effective supply distance below which there is no distance penalty. Above this, score is divided by (distance / acceptable_distance).
 	POWER_PROJECTION_ACCEPTABLE_DISTANCE = 2500
 	BLOCKADE_ACCEPTABLE_DISTANCE = 1000

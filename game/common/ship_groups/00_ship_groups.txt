@@ -17,16 +17,16 @@ ship_group_cruisers = {
 ship_group_torpedo_craft = {
     icon = "gfx/unit_illustrations/unused/unit_flotilla_ship_of_the_line.dds"
     color = { 20 210 180 }
-    
+
     category = torpedo_group
     ai_weight = 1
 }
 
 ship_group_supply_ships = {
-    icon = "gfx/interface/debug_square.png"
+    icon = "gfx/unit_illustrations/unused/light_ships_frigate.dds"
     color = { 255 255 255 }
     category = supply
-    
+
     # Disabled for construction via templates
     ai_weight = 0
 }
