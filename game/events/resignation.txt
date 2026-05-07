@@ -101,6 +101,7 @@ resignation.1 = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
 				remove_character_role = ruler
+				on_remove_ruler_effects = yes
 			}
 		}
 	}
@@ -132,6 +133,7 @@ resignation.1 = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
 				remove_character_role = ruler
+				on_remove_ruler_effects = yes
 			}
 		}
 	}
@@ -145,6 +147,7 @@ resignation.1 = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
 				remove_character_role = ruler
+				on_remove_ruler_effects = yes
 			}
 		}
 		call_election = {
@@ -200,6 +203,7 @@ resignation.2 = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
 				remove_character_role = ruler
+				on_remove_ruler_effects = yes
 			}
 		}
 		if = {
@@ -232,6 +236,7 @@ resignation.2 = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
 				remove_character_role = ruler
+				on_remove_ruler_effects = yes
 			}
 		}
 		capitulate_to_revolution = yes
@@ -253,6 +258,7 @@ resignation.2 = {
 			text = leader_resigns_from_office_tt
 			scope:resigning_politician = {
 				remove_character_role = ruler
+				on_remove_ruler_effects = yes
 			}
 		}
 		if = {
