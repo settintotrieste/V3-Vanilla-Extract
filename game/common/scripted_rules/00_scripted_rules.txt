@@ -81,6 +81,7 @@ can_start_diplomatic_plays_against = {
 # Root = Country
 # scope:target_country = country of the side to join to
 # scope:enemy_country = enemy country of target_country to which we could fight against
+# scope:initiator = country that started the play (i.e the attacker)
 # scope:region = strategic region of the initial war goal
 can_join_side_in_diplomatic_play = {
 	# Might be disallowed by power bloc
@@ -110,6 +111,42 @@ can_join_side_in_diplomatic_play = {
 		has_strategic_region_interest_tier = {
 			strategic_region = scope:region
 			value >= interest_tier_effect_can_join_diplomatic_plays_min_tier
+		}
+		has_treaty_alliance_with = { TARGET = scope:target_country }
+		AND = {
+			has_treaty_defensive_pact_with = { TARGET = scope:target_country }
+			hidden_trigger = {
+				scope:target_country = {
+					scope:initiator != this
+				}
+			}
+		}
+		AND = {
+			any_scope_treaty = {
+				binds = scope:target_country
+				any_scope_article = {
+					has_type = guarantee_independence
+					hidden_trigger = {
+						source_country = root
+					}
+				}
+			}
+			hidden_trigger = {
+				scope:target_country = {
+					scope:initiator != this
+				}
+			}
+		}
+		AND = {
+			any_scope_treaty = {
+				binds = scope:target_country
+				any_scope_article = {
+					has_type = support_independence
+					hidden_trigger = {
+						source_country = root
+					}
+				}
+			}
 		}
 		is_direct_subject_of = scope:enemy_country
 		scope:enemy_country = { is_direct_subject_of = root }

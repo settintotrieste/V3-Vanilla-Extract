@@ -294,3 +294,22 @@ law_is_governance_principles_law = { # law scope
         type ?= law_type:law_council_republic
     }
 }
+
+country_has_springtime_revolution = {
+    any_civil_war = {
+        is_civil_war_type = revolution
+        civil_war_progress >= $THRESHOLD$
+        custom_tooltip = {
+            text = caused_by_liberal_or_socialist_movement_tt
+            political_movement ?= {
+                OR = {
+                    movement_is_liberal = yes
+                    movement_is_socialist = yes
+                }
+            }
+        }
+    }
+    capital = {
+        is_in_revolt = yes
+    }
+}

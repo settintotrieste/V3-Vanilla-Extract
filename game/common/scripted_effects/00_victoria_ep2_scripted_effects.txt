@@ -2472,3 +2472,13 @@ character_handle_possible_emperor_ig_leader = { # TODO PRCAL-44673 replace with 
 		remove_character_role = character_role_politician
 	}
 }
+
+
+on_remove_ruler_effects = {
+	if = {
+		limit = {
+			has_trait = special_character_japanese_emperor
+		}
+		remove_trait = special_character_japanese_emperor
+	}
+}

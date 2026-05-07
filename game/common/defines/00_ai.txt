@@ -1253,6 +1253,8 @@
 
 	PORT_BOMBARDMENT_NAVAL_HOSTILITIES_MULT = 2.0 					# Multiplied with coast score when we are in naval hostilities with coast owner
 	PORT_BOMBARDMENT_FULL_HOSTILITIES_MULT = 0.5 					# Multiplied with coast score when we are in full hostilities with coast owner
+	BLOCKADE_WORLD_MARKET_HUB_MULT = 2.0 							# Multiplied with coast score for world market hub
+	BLOCKADE_NOT_WORLD_MARKET_HUB_MULT = 0.25 						# Multiplied with coast score for non-world market hub
 
 	# The AI calculates an "Outclassed ratio" to determien how screwed it is on the naval engagement.
 	# The outclassed ratio will be multiplied with this and added to the mult when scoring what naval mission to pick
@@ -1274,6 +1276,10 @@
 	DEFEND_COAST_OUTCLASSED_MULT = -4.0
 	BLOCKADE_OUTCLASSED_MULT = -4.0
 	PORT_BOMBARDMENT_OUTCLASSED_MULT = -4.0
+	PROTECT_SUPPLY_DOMINANCE_PENALTY = 0.75							# How much to reduce protect supply scoring when dominating the enemy navy. At full dominance, score is reduced by this amount (e.g. 0.9 means score goes to 10% at full dominance).
+	PROTECT_SUPPLY_MIN_DOMINANCE_MULT = 0.1						# Minimum multiplier for protect supply during naval dominance. Prevents AI from completely ignoring supply protection.
+	BLOCKADE_DOMINANCE_BOOST = 3.0								# How much to boost blockade scoring when dominating the enemy navy. Added as a multiplier (e.g. 3.0 means score can reach 4.0x at full dominance).
+	PORT_BOMBARDMENT_DOMINANCE_BOOST = 3.0						# How much to boost port bombardment scoring when dominating the enemy navy.
 
 	COMFORTABLE_HQ_NAVY_SIZE = 10  									# What the AI will want to at least station in an HQ to consider the HQ vital
 	NAVAL_HQ_IMPORTANCE_MIN_SCORE = 2                              	# Any naval HQ with score less than this gets ignored
