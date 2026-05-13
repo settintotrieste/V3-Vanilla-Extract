@@ -5,6 +5,7 @@
     project_power = yes
     ai_will_cancel_for_transportation = yes
     ai_distance_penalty_multiplier = 0.25
+    experience = 2
 }
 
 naval_mission_type_intercept = {
@@ -14,6 +15,7 @@ naval_mission_type_intercept = {
     intercept = yes
     intercept_targets = { hostile }
     ai_will_cancel_for_transportation = yes
+    experience = 2
 }
 
 naval_mission_type_protect_supply = {
@@ -22,6 +24,7 @@ naval_mission_type_protect_supply = {
 
     protect_supply = yes
     ai_will_cancel_for_transportation = yes
+    experience = 2
 }
 
 naval_mission_type_raid_supply = {
@@ -34,6 +37,7 @@ naval_mission_type_raid_supply = {
 
     raid_supply = yes
     ai_will_cancel_for_transportation = yes
+    experience = 2
 }
 
 naval_mission_type_blockade = {
@@ -42,6 +46,7 @@ naval_mission_type_blockade = {
 
     blockade = yes
     ai_will_cancel_for_transportation = no
+    experience = 2
 }
 
 naval_mission_type_port_bombardment = {
@@ -50,6 +55,7 @@ naval_mission_type_port_bombardment = {
 
     port_bombardment = yes
     ai_will_cancel_for_transportation = yes
+    experience = 2
 }
 
 naval_mission_type_hunt_pirates = {
@@ -59,6 +65,7 @@ naval_mission_type_hunt_pirates = {
     intercept = yes
     intercept_targets = { piracy }
     ai_will_cancel_for_transportation = yes
+    experience = 2
 
     potential = {
         has_dlc_feature = ep2_content
@@ -72,6 +79,7 @@ naval_mission_type_piracy = {
     piracy = yes
     piracy_targets = { non_allies }
     ai_will_cancel_for_transportation = yes
+    experience = 2
 
     command_modifier = {
         character_piracy_goods_capacity_mult = 1.5
@@ -110,6 +118,7 @@ naval_mission_type_privateer = {
     piracy = yes
     piracy_targets = { hostile }
     ai_will_cancel_for_transportation = yes
+    experience = 2
 
     command_modifier = {
         character_piracy_goods_capacity_mult = 1.0

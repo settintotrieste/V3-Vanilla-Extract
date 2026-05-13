@@ -561,6 +561,10 @@
 	DISBAND_OBSOLETE_SHIP_CREW_RATIO = 0.8							# If the ratio of crew needed to max available sailors exceeds this value, the AI will immediately decommission obsolete ships regardless of how long they've been obsolete
 	SHIP_CONSTRUCTION_BLOCK_CREW_RATIO = 1.0						# If the ratio of crew needed to max available sailors is at or above this value, the AI will not queue new ship constructions
 
+	SUPPLY_SHIP_ALLOCATION_HIGH_RATIO = 0.5							# If current supply ships are below this ratio of wanted, AI uses High supply construction allocation
+	SUPPLY_SHIP_ALLOCATION_LOW_RATIO = 1.0							# If current supply ships are above this ratio of wanted, AI uses Low supply construction allocation
+	SUPPLY_SHIP_ALLOCATION_VERY_LOW_RATIO = 1.5						# If current supply ships are above this ratio of wanted, AI uses Very Low supply construction allocation
+
     # Below data is used for General Orders:
 	HQ_DEFENSE_MIN_THEATER_SCORE = 100								# Theater of local HQ must have at least this importance score to have a minimum garrison
 
@@ -586,6 +590,9 @@
 
 	# If splitting a force to cover undefended HQs/fronts, don't send splinter armies to already defended fronts if the split of the source formation ends up smaller than this
 	HQ_OR_FRONT_SPLIT_FORCE_DEFENDED_LOCATION_MIN_FRACTION_TO_SEND = 0.33
+
+	# If no fleet can carry an entire army for naval transport, the AI will split the army if the best fleet can carry at least this fraction of the army
+	TRANSPORT_SPLIT_MIN_FLEET_CAPACITY_FRACTION = 0.2
 
 	# A percentage [0.0, 1.0] representing how many AI units are on a front out of the total (AI's + Enemy's) units, used to
 	# determine when to start applying FRONT_IMPORTANCE_WEIGHT_WHEN_IN_DISADVANTAGE.
@@ -658,34 +665,12 @@
 	SEA_NODE_OFFENSIVE_FLEET_SHIPPING_LANES_WEIGHT = 0.5		# Score weight for sea node based on the total score for AI to raid convoys. The higher this is the higher AI will prioritize sea nodes with enemy convoys to raid
 	SEA_NODE_OFFENSIVE_FLEET_STATE_BLOCKADE_WEIGHT = 0.5		# Score weight for sea node based on the total score for AI to blockade states. The higher this is the higher AI will prioritize sea nodes with potential states to blockade
 
-	ADMIRAL_ORDERS_RANDOM_FACTOR = 0.5									# The higher this is, the more random AI will be in selection of admiral orders
-	ADMIRAL_ORDERS_MIN_OFFENSIVE_FRACTION = 0.25 						# Min fraction the AI will use for offensive operations
-	ADMIRAL_ORDERS_MAX_OFFENSIVE_FRACTION = 0.50 						# Max fraction the AI will use for offensive operations
-	ADMIRAL_ORDERS_BASE_OFFENSIVE_FRACTION = 0.375 						# How much of its naval forces will the AI use for offensive operations at 100% relative navy strength
-	ADMIRAL_ORDERS_OFFENSIVE_FRACTION_SCALING = 0.25					# Fraction the AI will use for offensive operations will be multiplied or divided by (1 + ((stronger side strength ratio - 1) * this)) based on who in the war has the stronger navy
-	ADMIRAL_ORDERS_BASE_INTEREST_FRACTION = 0.5							# How much of its naval forces will the AI use for getting interest in the strategic region at 100
-	ADMIRAL_ORDERS_PROJECT_INTEREST_FACTOR = 1							# Factor for AI of the region score
+	RAID_CONVOYS_LANE_SIZE_FACTOR = 0.5					# Multiplied by the number of convoys that the target shipping lane uses
 
-	ADMIRAL_ORDERS_STANCE_CHANGE_CHANCE = 0.33							# The chance that an admiral will change their stance from offensive to defensive or vice versa each AI update (1 = 100%)
-
-	ADMIRAL_ORDERS_RAID_CONVOYS_LANE_SIZE_FACTOR = 0.5					# Multiplied by the number of convoys that the target shipping lane uses
-	ADMIRAL_ORDERS_RAID_CONVOYS_ARMY_SUPPLY_ROUTE_MULT = 1.5			# Score for shipping lanes supporting overseas armies is multiplied by this
-	ADMIRAL_ORDERS_RAID_CONVOYS_ARMY_OWN_TERRITORY_SUPPLY_ROUTE_MULT = 5.0	# Score for shipping lanes supporting overseas armies on our fronts is multiplied by this
-
-	ADMIRAL_ORDERS_ESCORT_CONVOYS_ABSOLUTE_LANE_SIZE_FACTOR = 0.1		# Apply this score per actual convoy used by the route
-	ADMIRAL_ORDERS_ESCORT_CONVOYS_LANE_SIZE_FACTOR_MAX = 200			# Total lane size factor cannot be above this
-	ADMIRAL_ORDERS_ESCORT_CONVOYS_PORT_CONNECTION_WAR_MULT = 0.1		# Score for shipping lanes supporting overseas ports multiplied by this while at war
-	ADMIRAL_ORDERS_ESCORT_CONVOYS_PORT_CONNECTION_PEACE_MULT = 1.0		# Score for shipping lanes supporting overseas ports multiplied by this while not at war
-	ADMIRAL_ORDERS_ESCORT_CONVOYS_ARMY_SUPPLY_ROUTE_MULT = 2.0			# Score for shipping lanes supporting our overseas armies is multiplied by this
-	ADMIRAL_ORDERS_ESCORT_CONVOYS_ACTIVE_RAIDERS_MULT = 2.0				# Score for shipping lanes that are being actively raided by the enemy is multiplied by this
-	ADMIRAL_ORDERS_ESCORT_CONVOYS_PROTECTED_CONVOYS_MULT = 0.01			# Score for shipping lanes multiplied by (1 + ( this * number of convoys that the fleet protects or would potentially protect in the sea node))
-
-	ADMIRAL_ORDERS_INTERCEPTION_PEACE_NEGOTIATOR_CAPITAL_FACTOR = 300	# Score for defending allied peace negotiator capital region with interception order
-	ADMIRAL_ORDERS_INTERCEPTION_OWN_CAPITAL_FACTOR = 1000				# Score for defending our capital region with interception order
-	ADMIRAL_ORDERS_INTERCEPTION_WARGOAL_FACTOR = 100					# Score for defending wargoal targeting ally with interception order
-	ADMIRAL_ORDERS_INTERCEPTION_WARGOAL_OWN_TERRITORY_FACTOR = 500	    # Score for defending wargoal targeting us with interception order
-	ADMIRAL_ORDERS_INTERCEPTION_HOSTILE_NAVAL_INVASION_MULT = 10.0		# Score for defending nodes that are under active hostile naval invasion is multiplied by this
-	ADMIRAL_ORDERS_INTERCEPTION_HOSTILE_BLOCKADE_MULT = 10.0			# Score for defending nodes with hostile blockades is multiplied by (1 + this * blockade level)
+	ESCORT_CONVOYS_ABSOLUTE_LANE_SIZE_FACTOR = 0.1		# Apply this score per actual convoy used by the route
+	ESCORT_CONVOYS_LANE_SIZE_FACTOR_MAX = 200			# Total lane size factor cannot be above this
+	ESCORT_CONVOYS_PORT_CONNECTION_WAR_MULT = 0.1		# Score for shipping lanes supporting overseas ports multiplied by this while at war
+	ESCORT_CONVOYS_PORT_CONNECTION_PEACE_MULT = 1.0		# Score for shipping lanes supporting overseas ports multiplied by this while not at war
 
 	# Below data is used to determine which states should be colonized first
 	NUM_GROWING_COLONIES_BASE = 1 # How many colonies will the AI keep growing at once (base amount)

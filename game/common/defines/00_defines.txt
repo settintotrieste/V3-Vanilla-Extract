@@ -796,8 +796,7 @@ NMilitary = {
 	BATTLE_CONDITION_MIN_TICKS_BETWEEN_UPDATE_DEFAULT = 40	# Unless otherwise specified on the battle condition type, battle conditions will not update until at least this many ticks has passed
 	BATTLE_CONDITION_CHANCE_TO_UPDATE_PER_EXTRA_TICK = 0.01 # For each tick that has passed since the minimum number of ticks, this chance to refresh battle conditions (i.e. 13 ticks after min, there's 13% chance of switching)
 
-	DEFAULT_ORDER_GENERAL = "advance"						# Default order for generals
-	DEFAULT_ORDER_ADMIRAL = "interception_coast"			# Default order for admirals
+	DEFAULT_ORDER = "advance"						# Default order for generals
 
 	MILITARY_FORMATION_COMMAND_LIMIT_NO_COMMANDER = 20		# Default command limit if formation has no commander
 	LOW_COMMAND_LIMIT_GRACE_PERIOD_DAYS = 30				# How many days will it take for a formation whose units exceeds its command limit to start suffering penalties
@@ -895,6 +894,14 @@ NMilitary = {
 	SHIP_POWER_PROJECTION_CREW_DAMAGE_MULTIPLIER = 0.33			# The multiplier applied to a ship's crew damage in calculating its power projection
 	SHIP_POWER_PROJECTION_ARMOR_MULTIPLIER = 0.33				# The multiplier applied to a ship's armor in calculating its power projection
 	SHIP_POWER_PROJECTION_HIT_POINTS_MULTIPLIER = 0.1			# The multiplier applied to a ship's max hit points in calculating its power projection
+
+	SHIP_CREW_STARTING_VETERANCY_EXPERIENCE = 0						# The amount of experience crew for a ship starts with when recruited
+	SHIP_MAX_VETERANCY_EXPERIENCE = 1000 							# Experience cap for a ship. Should be higher than the highest veterancy level experience threshold.
+	SHIP_VETERANCY_EXPERIENCE_DECAY_RATE = 0.01						# Percentage of experience lost per week when not on a mission.
+	SHIP_VETERANCY_EXPERIENCE_MIN_DECAY = 1							# Minimum amount of experience lost per week due to decay (if decay applies), regardless of current experience
+	SHIP_VETERANCY_BASE_EXPERIENCE_GAIN_BATTLE_VICTORY = 5 		# Base experience gain for a ship that was in a battle that was won by its side.
+	SHIP_VETERANCY_BASE_EXPERIENCE_GAIN_BATTLE_DEFEAT = 2			# Base experience gain for a ship that was in a battle that was lost by its side.
+	SHIP_VETERANCY_BASE_EXPERIENCE_GAIN_BATTLE_SUNK_ENEMY_SHIP = 1	# Base experience gain for a ship for each ship it has sunk in battle.
 
 	SHIP_COMBAT_POWER_HULL_DAMAGE_MULTIPLIER = 0.75				# The multiplier applied to a ship's hull damage in calculating its combat power
 	SHIP_COMBAT_POWER_CREW_DAMAGE_MULTIPLIER = 0.25				# The multiplier applied to a ship's crew damage in calculating its combat power

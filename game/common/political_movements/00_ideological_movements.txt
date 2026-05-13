@@ -3054,9 +3054,11 @@ movement_anarchist = {
 			OR = {
 				scope:clout <= 0
 				trigger_if = {
-					NOT = {
-						owner = {
-							has_journal_entry = je_spanish_anarchism # So the Spanish anarchists will always launch a revolution if possible
+					limit = {
+						NOT = {
+							owner = {
+								has_journal_entry = je_spanish_anarchism # So the Spanish anarchists will always launch a revolution if possible
+							}
 						}
 					}
 					AND = {

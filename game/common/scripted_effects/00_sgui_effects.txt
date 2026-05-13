@@ -76,7 +76,7 @@ je_meiji_restoration_update_japanese_emperor = {
     }
 }
 
-je_meiji_restoration_update_daimyos = {
+je_meiji_restoration_update_daimyos = { # Country scope
     if = {
         limit = {
             has_variable_list = daimyos_list
@@ -87,16 +87,18 @@ je_meiji_restoration_update_daimyos = {
         limit = {
             any_scope_character = {
                 has_variable = daimyo_var
+                is_character_alive = yes
             }
         }
         every_scope_character = {
             limit = {
                 has_variable = daimyo_var
+                is_character_alive = yes
             }
-            root = {
+            owner = {
                 add_to_variable_list = {
                     name = daimyos_list
-                    target = prev
+                    target = prev # every_scope_character
                 }
             }
         }

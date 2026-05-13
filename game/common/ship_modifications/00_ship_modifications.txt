@@ -50,8 +50,9 @@ ship_mod_frigate_armor_high = {
 		ship_hit_points_max_add = 350
 	}
 
-	construction_goods = { # 520
-		goods_input_hardwood_add = 15
+	construction_goods = { # 600
+		goods_input_hardwood_add = 10
+		goods_input_iron_add = 5
 	}
 
 	ai_weight = {
@@ -319,8 +320,9 @@ ship_mod_ship_of_the_line_armor_high = {
 		ship_hit_points_max_add = 800
 	}
 
-	construction_goods = { # 680
-		goods_input_hardwood_add = 20
+	construction_goods = { # 800
+		goods_input_hardwood_add = 15
+		goods_input_iron_add = 5
 	}
 
 	ai_weight = {

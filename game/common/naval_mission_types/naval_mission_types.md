@@ -12,6 +12,8 @@
     piracy = <yes/no>
     port_bombardment = <yes/no>
 
+    experience = <fixed point> # How much passive experience ships' crew gain from being on this mission every week
+
     # What targets intercept behavior will target
     intercept_targets = <none/hostile/piracy/all>
 
@@ -27,5 +29,5 @@
     # Used after AI has decided what type of mission behavior it wants what mission to pick
     # This means it is weighted between missions with same mission behavior profile and not against
     # all mission types that has been scripted
-    ai_weight = {} 
+    ai_weight = {}
 }

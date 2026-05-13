@@ -122,14 +122,8 @@ can_join_side_in_diplomatic_play = {
 			}
 		}
 		AND = {
-			any_scope_treaty = {
-				binds = scope:target_country
-				any_scope_article = {
-					has_type = guarantee_independence
-					hidden_trigger = {
-						source_country = root
-					}
-				}
+			scope:target_country = {
+				has_treaty_guarantee_independence_with = { TARGET = root }
 			}
 			hidden_trigger = {
 				scope:target_country = {
@@ -137,16 +131,8 @@ can_join_side_in_diplomatic_play = {
 				}
 			}
 		}
-		AND = {
-			any_scope_treaty = {
-				binds = scope:target_country
-				any_scope_article = {
-					has_type = support_independence
-					hidden_trigger = {
-						source_country = root
-					}
-				}
-			}
+		scope:target_country = {
+			has_treaty_support_independence_with = { TARGET = root }
 		}
 		is_direct_subject_of = scope:enemy_country
 		scope:enemy_country = { is_direct_subject_of = root }
