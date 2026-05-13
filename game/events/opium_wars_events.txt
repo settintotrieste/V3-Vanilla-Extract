@@ -519,8 +519,11 @@ opium_wars.4 = {
 		}
 		if = {
 			limit = {
-				scope:opium_wars_treaty_port_winner ?= c:GBR
 				scope:opium_wars_defeated_country ?= c:CHI
+				OR = {
+					scope:opium_wars_treaty_port_winner ?= c:GBR
+					c:CHI ?= { has_law_or_variant = law_type:law_free_trade }
+				}
 			}
 			c:JAP ?= {
 				trigger_event = {
