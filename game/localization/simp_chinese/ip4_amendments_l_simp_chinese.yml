@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ amendment_test: "测试$concept_amendment$"
+ amendment_test_desc: "测试描述"
+ REPEAL_AMENDMENT_PENDING: "该[concept_amendment]不属于现行[concept_law]"
+ REPEAL_AMENDMENT_NO_GOVERNMENT_OPPOSITION: "[concept_government]没有[Concept('concept_interest_group', '$concept_interest_groups$')]反对该[concept_amendment]"
+ REPEAL_AMENDMENT_WEAK_GOVERNMENT_OPPOSITION: "[concept_government]中反对该[concept_amendment]的[Concept('concept_interest_group', '$concept_interest_groups$')][concept_clout]小于支持者"
+ REPEAL_AMENDMENT_ON_COOLDOWN: "$DATE|v$前无法废除"
+ REPEAL_AMENDEMENT_CONFIRMATION: "你想要[Concept('concept_amendment_repeal', '$concept_repeal$')][Amendment.GetName]吗？[ConcatIfNeitherEmpty('\n\n$DATA_AMENDMENTS_REPEAL_HEADER$\n', Amendment.GetOnRepealEffectsDesc)]  "
+ SPONSOR_MODIFIER_HEADER: "#title 倡议[concept_interest_group]：#!"

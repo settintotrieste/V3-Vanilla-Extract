@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+ # Stances
+ stance_none: "无"
+ stance_conquer_region: "征服区域"
+ stance_protect_region: "保护区域"
+ stance_colonize_region: "殖民区域"
+ # AI Values
+ AI_REGION_STANCE_BASE_VALUE: "#b 基础值#!"
+ AI_REGION_STANCE_NUMBER_OF_CLAIMS: "[Concept('concept_claim', '$concept_claims$')]数量"
+ AI_REGION_STANCE_CAPITAL_REGION: "[Concept('concept_capital_state', '$concept_capital_state_short$')][Concept('concept_strategic_region', '$concept_strategic_region_short$')]"
+ AI_REGION_STANCE_WANTS_TO_OPEN_UP_JAPAN: "希望打开#b $JAP$#!国门"
+ AI_REGION_STANCE_IS_LOYAL_SUBJECT: "是#b 忠诚#!的[concept_subject]"
+ AI_REGION_STANCE_FREE_REAL_ESTATE: "由[Concept('concept_decentralized_nation', '$concept_decentralized_nations$')]和[Concept('concept_unrecognized_power', '$concept_unrecognized_powers$')]持有的[Concept('concept_state', '$concept_states$')]"
+ AI_REGION_STANCE_CIVILIZING_MISSION_RESEARCHED: "已研究[GetTechnology('civilizing_mission').GetName]"
+ AI_REGION_STANCE_QUININE_RESEARCHED: "已研究[GetTechnology('quinine').GetName]"
+ AI_REGION_STANCE_EXISTING_REGION_STANCES: "现有$concept_strategic_region_stances_short$"
+ AI_REGION_STANCE_SMALL_COUNTRY: "#v [Country.GetNameNoFormatting]#!是小[concept_country]"
+ AI_REGION_STANCE_COLONIAL_COUNTRY: "#v [Country.GetNameNoFormatting]#!是[concept_colony]"

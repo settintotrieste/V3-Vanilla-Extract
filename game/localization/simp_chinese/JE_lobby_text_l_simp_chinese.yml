@@ -1,0 +1,133 @@
+﻿l_simp_chinese:
+ #Afghanistan all
+ je_unify_afghanistan_lobby: "#v 由该DLC解锁：Sphere of Influence#!\n1793年帖木儿沙·杜兰尼去世引发的继承危机，让曾经的杜兰尼帝国陷入了无休止的内乱。面对欧洲列强四面八方的威胁，我们必须承担起结束军阀混战时代并重建统一阿富汗的责任。"
+ #Austria:
+ je_matter_of_hungary_lobby: "奥地利对匈牙利的控制必须维持下去，无论是凭借铁腕还是妥协让步。"
+ je_metternich_lobby: "#v 由该DLC解锁：National Awakening#!\n继续坚守克莱门斯·冯·梅特涅首相的理念，或是任由他精心构建的保守秩序崩塌。"
+ je_austrian_neo_absolutism_lobby: "#v 由该DLC解锁：National Awakening#!\n来自底层革命的威胁迫使维也纳必须自上而下进行改革。通过建立一个由忠诚且能干的官僚组成的集中、理性且高效的政府机构，国家将实现现代化，以应对当今时代的挑战。"
+ #Argentina, and Chile
+ je_patagonia_lobby: "大洲的南沿仍然不受任何国家控制。尽管当地居民肯定会是一块难啃的骨头，但我们必须赶在其落入敌手之前抢先占领。"
+ #BEL (and NET)
+ je_conference_of_london_lobby: "各大列强已派遣代表团前往伦敦，以解决荷兰与比利时之间悬而未决的边界问题。"
+ #BIC
+ je_consolidate_colonial_rule_lobby: "为确保我们核心领地的安全，那些仍在逃避我们统治的土著君主必须被驯服，任何民众抵抗的苗条都必须在失控之前予以镇压。"
+ je_dravidian_movement_lobby: "#v 由该DLC解锁：Pivot of Empire#!\n印度的普通民众对婆罗门在政治权力和代表权上的不成比例分配做出了回应。在一系列反婆罗门会议之后，达罗毗荼运动应运而生，提出了反对婆罗门统治的新议程。他们致力于从法律和政府管理体系中消除种姓区别，推动社会平等。"
+ je_india_non_cooperation_movement_lobby: "#v 由该DLC解锁：Pivot of Empire#!\n印度独立运动的声浪愈演愈烈，其领袖们发起了一项目标明确的新运动：在经济和政治上采取不合作态度，拒绝与英国当局协作。他们希望通过瘫痪英国贸易来展示其运动的力量。"
+ #Bolivia. They also get Exploiting the Amazon and Colombian content.
+ je_acre_dispute_lobby: "#v 由该DLC解锁：Colossus of the South#!\n阿克里区域引发了极大的争议。投机的定居者们试图自行占据这片土地，并要求采取行动。我们必须乘热打铁——否则便将永远失去该地区。"
+ #Brazil
+ je_agricultural_development_lobby: "#v 由该DLC解锁：Colossus of the South#!\n巴西拥有大量肥沃的农田，气候适合种植高利润的经济作物。这提供了一个很好的机会来让国家富起来，并推动巴西产品在世界范围内的知名度。"
+ je_pedro_brazil_lobby: "#v 由该DLC解锁：Colossus of the South#!\n佩德罗二世决心维护民主统治，保护宪法赋予的公民自由，并最终废除玷污巴西形象的奴隶制度——尽管保守势力已集结起来反对他的自由主义事业。"
+ je_brazilian_nation_building_lobby: "#v 由该DLC解锁：Colossus of the South#!\n巴西是没有祖国的殖民地，没有国族的国家。要想让居住在这片广袤土地上的所有人民形成一个单一的身份，需要小心审议，完成艰巨的任务，并采取稳健的行动。一个统一的巴西真的有可能吗？"
+ #Brazil minors
+ ragamuffin_war_minors_lobby: "巴西帝国政府对其人民疾苦的漠视已令人无法容忍。我们已选举出自己的政府，并宣布成立独立的共和国！"
+ #Canada
+ je_canada_can_lobby: "通过在经济上对其他殖民地取得主导地位，同时与中央政府保持良好关系，我国可以提议兼并某个邻国。"
+ #Central America
+ central_america_falls_apart_lobby: "中美洲各邦正闹着要独立，我们要允许他们吗？他们很快就会给我们发来最后通牒。"
+ je_reunify_central_america_lobby: "如果中美洲分裂成各自为政的势力，终将有一个国家试图再次统一该地区，并带领其人民走向现代化。"
+ #Colombia:
+ je_gran_colombia_lobby: "#v 由该DLC解锁：Colossus of the South#!\n19世纪30年代被分离主义分裂的大哥伦比亚国家的解体是一个悲剧。寻求回归可能会激起那些对统一不那么热心的人的愤怒——但大哥伦比亚的成功恢复将对所有建国国家都有巨大的好处。"
+ #China
+ je_boxer_rebellion_lobby: "中国的土地被洋鬼子抢走，中国的尊严被洋鬼子扔在地上践踏，这导致了众多习武的民间秘密结社形成发展，其目的在于肃清一切外国势力对中国的影响。"
+ je_opium_obsession_lobby: "我们的人民有许多人成了抽大烟的瘾君子。这是国家的耻辱，必须立刻解决。但我们也必须警惕那些从鸦片贸易中获利丰厚的外国势力。"
+ je_warlord_china_lobby: "如果中央政府权威被严重削弱，地方军事势力就会将国家撕裂成诸多割据政权。但是，或许也并非全无希望——其中某个政权可能成功从废墟中重建中华。"
+ #Cuba
+ #Ethiopia
+ je_age_of_princes_lobby: "埃塞俄比亚分裂成了十几个交战的诸侯国。让帝国重新一统，让人民和平繁荣，这是我们的责任。"
+ #Great Briton
+ je_consolidate_afghanistan_lobby: "#v 由该DLC解锁：Sphere of Influence#!\n阿富汗诸邦松散模糊的边界一直是帕米尔地区冲突的导火索。与我们的对手谈判，划定国际公认的阿富汗边界，将极大地有助于降低战争风险。"
+ je_india_nationalism_britain_lobby: "#v 由该DLC解锁：Pivot of Empire#!\n在整个印度，本土民众的民族意识正在觉醒。那些在英国学校接受教育、受雇于殖民政府的印度人，开始要求在帝国体制内获得平等地位、更多经济机会以及自治权利。"
+ je_canada_gbr_lobby: "我们希望所有的加拿大殖民地合邦为一，成立一个统一的加拿大国家。为了实现这个，我们必须说服当地殖民机构，认定统一符合他们的最佳利益。"
+ #France:
+ je_conquest_of_algeria_lobby: "#v 由该DLC解锁：Voice of the People#!\n我们对阿尔及利亚的征服尚未完成。在三色旗插遍每个阿尔及利亚村庄、每个反抗者都倒在沙地上之前，我们绝不会停息。法兰西万岁！"
+ je_divided_monarchists_lobby: "#v 由该DLC解锁：Voice of the People#!\n三个王朝世系都拥有对法兰西王位的宣称：#bold 奥尔良派#!支持1830年建立的立宪制七月王朝，#bold 正统派#!支持被废黜的波旁王朝查理十世和他的后代，#bold 波拿巴派#!试图让拿破仑·波拿巴的家族重新掌权。这三个王朝的君主主义者都与当权者以及彼此竞争，希望让己方的宣称者登上法兰西的王位。"
+ je_the_paris_commune_france_lobby: "#v 由该DLC解锁：Voice of the People#!\n一些社会主义、无政府主义和激进共和主义的革命者占领了巴黎，宣布建立法兰西的敌对政府。"
+ #Greece:
+ je_greek_nationalism_lobby: "#italic “希腊人不仅包括居住在希腊王国的人们，也包括居住在约阿尼纳、塞萨洛尼基、塞雷斯、哈德良堡、君士坦丁堡、特拉布宗、克里特、萨摩斯的人们，以及共享希腊历史或人种的任何其他国家的人们……”\n——约安尼斯·科莱蒂斯#!\n\n必须采取协调一致的行动来解放并整合其他希腊国家。"
+ je_bavarocracy_lobby: "#v 由该DLC解锁：National Awakening#!\n巩固奥托国王及其巴伐利亚派的权力，或为新生的希腊王国带来政治变革。"
+ #Hawaii.
+ je_hawaii_lobby: "夏威夷在太平洋的位置对于跨太平洋贸易价值非凡。我们必须在任何列强企图利用我们的群岛之前发展起经济。"
+ #Haiti
+ je_haitian_debt_lobby: "1825年，在外交孤立和害怕再次遭到入侵的情况下，海地政府同意向法国支付独立赔偿金。如果要让海地重获“安的列斯明珠”的美誉，我们必须设法解决这些财政负担。"
+ je_la_trinitaria_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n伊斯帕尼奥拉岛东西两部分不幸的婚姻在圣多明各的革命力量的冲击下摇摇欲坠。太子港能扫除革命势力吗，抑或统一的海地注定只会作为历史的注脚存在？"
+ #Hungary:
+ je_hungarian_revolution_lobby: "#v 由该DLC解锁：National Awakening#!\n尽管对匈牙利未来与哈布斯堡王朝关系的具体性质存在分歧，但一批自由派领袖正团结在对政治经济改革的共同诉求之下，他们希望将相对落后的匈牙利建设为一个现代化且充满活力的民族国家。"
+ #India, See BIC or Princely States
+ #Italy
+ je_risorgimento_lobby: "当民族主义浪潮席卷欧洲之际，我国政府内外都期待着重建一个统一完整的意大利。"
+ #Japan
+ je_meiji_restoration_lobby: "孤立而停滞的日本数个世纪以来都被幕府统治。如果我们想在这个迅速现代化的世界占有一席之地，就必须将权力奉还合法的天皇。"
+ je_meiji_economy_lobby: "如果我们继续固守传统道路，那么外国势力击败并征服我们便只是时间问题。我们必须推动国家工业化，采用新的治理方式，掌握新的战争艺术。如此，我们才能崛起成为一个强国。"
+ je_ryukyu_rivalry_lobby: "数百年来，琉球王国始终处于两大强国之间的夹缝中。虽在名义上是中国的朝贡国，但在被萨摩藩征服后，它亦开始向日本效忠，从而维持着一种微妙的影响力平衡。"
+ #Korea
+ je_donghak_movement_lobby: "#v 由该DLC解锁：Sphere of Influence#!\n东学，即东方之学，已开始在朝鲜的农民中传播。他们乘着民众对国家对外开放的愤怒浪潮，主张所有人的平等和权利，并抗拒外国影响。这场运动公开爆发叛乱可能只是时间问题。"
+ #Montenegro
+ je_mon_serb_unity_lobby: "#v 由该DLC解锁：National Awakening#!\n黑山人自视为被残暴的奥斯曼帝国从同胞中分离开的塞尔维亚人。如果两地疆域得以接壤，他们或许能如兄弟般重聚。"
+ je_mon_state_formation_lobby: "#v 由该DLC解锁：National Awakening#!\n黑山能否从好战的部落联盟发展为现代国家，从而赢得列强的尊重？"
+ je_montenegrin_raiding_lobby: "#v 由该DLC解锁：National Awakening#!\n由于可耕种的土地稀少，黑山部落依靠劫掠奥斯曼帝国的领土为生。"
+ #Mughals
+ je_mughal_hindustan_lobby: "#v 由该DLC解锁：Pivot of Empire#!\n曾经，我们的领主们统治着从喀布尔到卡纳提克海岸的广袤土地。但年复一年，那些所谓的“列强”剥夺我们的宫廷昔日所享有的权威、声望与传统。如今，伟大的帖木儿后裔在德里红堡的城墙之外几乎毫无权力！\n\n#N #bold 我们必须采取行动拯救我们的帝国，否则它将滑向遗忘的深渊。#!#!"
+ #The Netherlands
+ je_land_reclamation_lobby: "尼德兰人口稠密，可耕土地日益稀缺。通过伟大的工程，我们可以从大海开垦新土地。"
+ #Oman
+ je_splitting_oman_lobby: "苏丹赛义德·布萨伊迪死后，他的儿子们注定会为争夺最高权力，将国家在阿拉伯半岛和非洲的领地瓜分。"
+ #Poland:
+ je_christ_of_nations_lobby: "正如基督被罗马人殉难，波兰也遭敌人毒手；而正如基督注定要在荣耀中重新降临，波兰也必将再度复兴。"
+ je_poland_lithuania_lobby: "旧联邦的边界曾经远远超出了波兰人和立陶宛人的土地，一直延伸到广袤的鲁塞尼亚。曾经的繁荣如今将要重演。"
+ #Peru
+ je_amazonas_lobby: "必须采取措施，将亚马逊从一片不宜居住的雨林转变为集约开发的土地，以满足商业需求。"
+ je_andean_federation_lobby: "#v 由该DLC解锁：Colossus of the South#!\n西蒙·玻利瓦尔最大的野心是他提出的安第斯联邦，一个全拉丁美洲的大联盟。尽管最初在巴拿马大会上失败了，但风向已经改变，欧洲和美国入侵的威胁为这个想法的复兴创造了可能的环境。"
+ #Philippines
+ je_philippines_development_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n尽管政治动荡不断，国际贸易的繁荣为新兴中产阶级的崛起奠定了基础。作为该区域最重要的港口之一，这片群岛为寻求机会的人带来了大量机会。"
+ je_philippines_main_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n菲律宾国内的紧张局势正在加剧。西班牙教士主导着世俗和宗教生活，而当地牧师领导起义反抗他们的权威。许多人相信总督能够维持对这片群岛的铁腕统治。西班牙会延续其统治，还是菲律宾人民会赢得更大的自由？"
+ je_filipino_ethnogenesis_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n一直以来，菲律宾群岛上生活着众多不同的民族。若要建立强大、现代的国家，我们必须建立一种新的泛菲律宾身份认同。"
+ #Romania
+ je_unite_the_principalities_lobby: "多瑙河诸公国已从长久的昏沉中觉醒。祖国的权利与利益呼唤着解放；罗马尼亚民族的利益与幸福亟待实现！"
+ #Russia
+ je_great_reformer_lobby: "亚历山大二世登上了俄国皇位，许多改革者视此为彻底改造我们强大国家陈旧体制的契机。"
+ je_pacify_the_steppes_lobby: "#v 由该DLC解锁：Sphere of Influence#!\n尽管从18世纪开始俄罗斯就在名义上控制了哈萨克草原，但这一地区仍然被盗匪和不忠困扰。哈萨克叛军一次又一次地对我们在该地区的补给车队和堡垒发动攻击。我们只有找出他们并最终平定草原。"
+ je_conquest_of_central_asia_lobby: "#v 由该DLC解锁：Sphere of Influence#!\n为了确保我们的南部边界、对抗英国在印度的势力，并开辟可以让我们将俄国影响力扩展到中东的路线，沙皇政府已授权在中亚建立保护国，并将我们的帝国扩展到突厥斯坦本土。"
+ #Paraguay:
+ je_francocracia_lobby: "#v 由该DLC解锁：Colossus of the South#!\n在恐怖的秘密警察组织皮亚盖斯的支持下，弗朗西亚博士以强硬手段统治着这个国家，必要时他会毫不犹豫地取下温文尔雅的面具，换上铁腕。然而，他正日渐衰老，博士所构想的孤立主义卢梭式乌托邦能否在他身后延续，尚属未知。"
+ je_modernizing_paraguay_lobby: "#v 由该DLC解锁：Colossus of the South#!\n卡洛斯·安东尼奥·洛佩斯已启动一项雄心勃勃的计划，旨在实现我国武装力量的现代化并扩充其规模。毕竟，只有军队才能真正捍卫国家利益，无论这些利益位于何处。"
+ je_expanding_paraguay_lobby: "#v 由该DLC解锁：Colossus of the South#!\n在我们周围，邻国正在暗中谋划，企图从我们手中夺走神圣的土地。难道我们要逆来顺受，等着敌人率先动手吗？不，我们要像先辈们那样，主动掌握自己的命运。"
+ #Persia
+ je_eastern_frontier_lobby: "#v 由该DLC解锁：Sphere of Influence#!\n必须采取果断措施收复东方那些桀骜不驯的土地。夺取这些地区后，如果我们愿意，便可解放并重新安置那些受奴役的波斯社区。"
+ #Portugal
+ je_portugal_regeneration_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n为了补救长达几个世纪的衰退并建立新的自由秩序，政府公布了全面的体制改革计划。"
+ je_the_pink_map_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n殖民地官员一直以来希望通过陆地将葡萄牙的西非和东非连接起来。是时候实现这一愿景了。"
+ je_second_liberalism_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n自由战争的结束为葡萄牙带来了宪政。改革者能否稳固自己的地位，实现自己的愿景，还是说葡萄牙会转向反动或激进？"
+ #Prussia and German States:
+ je_schleswig_holstein_question_lobby: "石勒苏益格‑荷尔斯泰因问题目前正占据着德意志民族主义者的思想和精力。为了使德意志朝着国家统一的方向前进，必须首先将荷尔斯泰因的德意志人民从他们的丹麦领主手中解放出来。"
+ #German States except Prussia:
+ je_german_unification_idea_lobby: "民族主义思想正在德意志人民中迅速蔓延。一旦这些思想在德意志邦联各州达到了临界数量的追随者，就必然会推动国家统一。"
+ #Prussia Only:
+ je_german_unification_lobby: "为德意志统一做出决定性推动的时刻到了。作为最重要的德意志国家之一，我们有责任实现这一目标。"
+ #Princely States:
+ je_princely_states_lobby: "#v 由该DLC解锁：Pivot of Empire#!\n当前形势有利于我们争取更大自治权并寻求独立之路，否则英国将完全掌控我们。"
+ #Serbia
+ je_serbian_throne_lobby: "#v 由该DLC解锁：National Awakening#!\n据线人透露，卡拉乔尔杰维奇家族正密谋推翻奥布雷诺维奇家族的统治，其家族的创始人卡拉乔尔杰曾是塞尔维亚人民的英雄。"
+ je_the_balkan_league_lobby: "#v 由该DLC解锁：National Awakening#!\n如果巴尔干各国能从奥斯曼帝国的掌控中挣脱、获得自由，各方已达成共识将组建联盟，彻底将奥斯曼势力逐出该地区。即使遭受了数百年的奴役，巴尔干始终属于这片土地真正的主人。"
+ #Sikh (fully sick!) Empire
+ je_sikh_sovereignty_lobby: "#v 由该DLC解锁：Pivot of Empire#!\n自旁遮普雄狮攻占莫卧儿帝国曾经的都城以来，我们新兴的王国已取得巨大成功。此刻我们必须保护领土免受外敌侵犯，并恪守锡克教义。愿这个王朝的遗产永世长存！"
+ #Spain
+ je_the_two_spains_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n“这里躺着半个西班牙，死于另一半之手。”\n——马里亚诺·何塞\n\n西班牙自由派与保守派的分歧愈发明显，双方都为了意识形态的主导权进行无情的斗争。"
+ je_the_first_carlist_war_lobby: "费尔南多七世的死亡使战争再次在西班牙上演。先王的弟弟卡洛斯质疑1830年《国事诏书》的有效性，集结保守派势力对抗年幼的女王伊莎贝尔的自由派政府。西班牙的命运如今悬而未决。"
+ je_spa_economic_regeneration_master_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n西班牙的经济体系过于陈旧，亟需改革。通过启动一项全面的、雄心勃勃的改革计划，国家可以上升到新的高度。"
+ #Turkey
+ je_sick_man_main_lobby: "奥斯曼帝国几个世纪以来一直在衰落。我们必须迅速行动，推进现代化，并在列强之中重振声威。还有许多工作要做：实现军队现代化、镇压分离主义、推行教育和官僚体系改革，以及收复叙利亚。"
+ je_tur_raided_lobby: "#v 由该DLC解锁：National Awakening#!\n我们必须镇压那些袭扰边境的黑山部落，但对手是暴力的基督徒，这一点能否在不激怒一众列强的情况下实现？"
+ je_great_eastern_crisis_lobby: "#v 由该DLC解锁：National Awakening#!\n巴尔干地区的危机正在酝酿，我们必须在分裂主义者危及我们的统治前维持住对领土的控制。当前的动荡必须在蔓延至整个地区前被镇压。"
+ #Turtle Island
+ je_unite_the_nations_lobby: "为了我们自己和我们同胞的生存，我们必须团结起来。只有团结起来，我们才能抵制殖民势力在外交上和武力上对我们的侵略。"
+ #USA
+ je_acw_war_lobby: "如果奴隶制问题无法和平解决，我们神圣的国度恐将陷入惨烈内战。"
+ je_indian_removal_lobby: "总统无视最高法院的裁决，已下令将切罗基族迁往印第安领地。"
+ je_acw_equality_lobby: "随着我国疆域的扩张，许多人梦想着生活在一个北方与南方、黑人与白人都获得平等地位的真正平等的制度下。"
+ #Cuba
+ je_cuba_espanol_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n古巴仍然忠于西班牙。他们是如此忠诚，地主中的改革派甚至希望取消殖民地状态，成为西班牙的正式省份。"
+ je_cuba_la_vida_dulce_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n古巴已经主导了食糖贸易，而这很大程度上依赖持续的奴隶走私。国家的长期繁荣将依赖于扩大已建立的贸易路线。如果奴隶制能被废除，也许有一天所有古巴人都能过上更甜蜜的生活。"
+ je_cuba_independencia_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n古巴的独立诉求存在分歧。部分人士在墨西哥湾对岸寻求盟友，企图通过美国的金元而非古巴人的鲜血来购买岛国的自由。而在雪茄工厂的车间内，卷烟工们悄声议论着一个不受任何势力束缚、只遵从人民的激情与意志的国度——自由古巴。"
+ #Morocco
+ je_lands_of_anarchy_lobby: "#v 由该DLC解锁：Iberian Twilight#!\n长期以来，摩洛哥被划分为秩序之地和法外之地，前者深切感受到苏丹的权威，而后者只在名义上臣服于中央政府。摩洛哥若想抵御日益好战的邻国，就必须在法外之地建立秩序。"

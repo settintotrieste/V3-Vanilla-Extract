@@ -1,0 +1,36 @@
+﻿l_french:
+ ##### PORTUGAL MONARCHY #####
+ #1 Maria dies while giving birth to 13th child, Carlos becomes the ruler
+ portuguese_monarchs.1.t: "La bonne mère"
+ portuguese_monarchs.1.d: "Malgré les avertissements des médecins du royaume, [ROOT.GetCountry.GetRuler.GetCustom('FR_LeLa')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] [ROOT.GetCountry.GetRuler.GetFirstName] est morte à l’âge de [ROOT.GetCountry.GetRuler.GetAge] en donnant naissance à son treizième enfant."
+ portuguese_monarchs.1.f: "« Sa Majesté la [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] a commencé à ressentir les premières contractions hier soir, vers neuf heures trente. Des complications sont survenues au cours de l’accouchement, obligeant les médecins à recourir à une opération qui a permis l’extraction d’un infant, baptisé avant sa naissance.\n\nL’opération a duré jusqu’à dix heures du matin. Malheureusement, après une heure et demie, Sa Majesté, à bout de forces, a rendu l’âme à Dieu, après avoir reçu tous les sacrements. »\n\n— Francisco Elias Rodrigues da Silveira, Dr Kessler, Ignacio António da Fonseca Benevides, António Joaquim Farto\n\n#italic Le Journal du Gouvernement#!"
+ portuguese_monarchs.1.a: "Ses enfants perpétueront son héritage."
+ portuguese_monarchs.1_tt: "Un héritier digne de ce nom a déjà été désigné pour porter la couronne."
+ #2 Carlos I gets assassinated by radicals and Manuel II becomes the new king
+ portuguese_monarchs.2.t: "Au dépourvu"
+ portuguese_monarchs.2.d: "Alors que la famille royale voyageait tranquillement en calèche, des fanatiques ont réussi à prendre la vie [ROOT.GetCountry.GetRuler.GetCustom('FR_DuDela')|l] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] [ROOT.GetCountry.GetRuler.GetFirstName] et de son héritier présomptif."
+ portuguese_monarchs.2.f: "Alors qu’il voyageait en calèche, [ROOT.GetCountry.GetRuler.GetCustom('FR_LeLa')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] a été victime d’une embuscade tendue par Alfredo Luís da Costa et Manuel Buíça. Lui et son héritier ont été mortellement blessés par des coups de feu, tandis que son fils cadet, qui allait bientôt être couronné, est également blessé.\n\nCertains voient ce régicide comme une prise de position assumée contre une monarchie répressive, tandis que d’autres le considèrent comme une tentative désespérée d’opérer une transformation politique.\n\nAprès enquête, il s’est avéré que les assassins appartenaient à un groupe révolutionnaire baptisé « Carbonária », dont le but était d’établir une république [ROOT.GetCountry.GetAltNameNoFormatting('En')][ROOT.GetCountry.GetNameNoFormatting]."
+ portuguese_monarchs.2.a: "La couronne est lourde à porter pour [ROOT.GetCountry.GetRuler.GetCustom('FR_LeLa')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] nouvellement nommé[ROOT.GetCountry.GetRuler.GetCustom('FR_E')]."
+ portuguese_monarchs.2_tt: "Souffrant de blessures superficielles, le deuxième fils [ROOT.GetCountry.GetRuler.GetCustom('FR_DuDela')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] [ROOT.GetCountry.GetRuler.GetFirstName] est le seul candidat légitime au pouvoir."
+ #3 Manuel II leaves the country after Monarchy gets abolished.
+ portuguese_monarchs.3.t: "Le vol des wyvernes"
+ portuguese_monarchs.3.d: "Le règne séculaire de la sérénissime maison de Bragance a pris fin [ROOT.GetCountry.GetAltNameNoFormatting('En')][ROOT.GetCountry.GetName]. Les habitants ont montré que la véritable noblesse résidait dans leurs cœurs et leurs mains."
+ portuguese_monarchs.3.f: "Il était une fois un homme qui commença sa vie comme futur fondateur d’une maison qui donna naissance à de nombreux rois et reines, sur la terre même où fut creusée sa tombe.\n\nSon père, le monarque du Portugal, lui donna le nom d’Alphonse en l’an grégorien 1337.\n\nAujourd’hui, cette dynastie a connu son terme.\n\nDemain marquera le triomphe du peuple contre ceux qui se prétendaient élus."
+ portuguese_monarchs.3.a: "Nous prendrons notre envol, une dernière fois."
+ portuguese_monarchs.3_tt: "Afin d’éviter tout conflit et toute atteinte aux membres de la famille, le roi [SCOPE.sCharacter('manuel_scope').GetFullName] est contraint de quitter le pays, peut-être même définitivement."
+ #4 Cholera outbreak of 1953 - 1956 during Pedro V, where he decides on what to do
+ portuguese_monarchs.4.t: "Épidémie en [SCOPE.sState('outbreak_state').GetName]"
+ portuguese_monarchs.4.d: "Une épidémie de choléra sévit actuellement en [SCOPE.sState('outbreak_state').GetName]. Les gens réclament l’aide des autorités."
+ portuguese_monarchs.4.f: "« ... oui, m[ROOT.GetCountry.GetRuler.GetCustom('FR_OnA')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l], les journaux ont joué un rôle déterminant dans la diffusion d’informations scientifiques à nos sujets dans la région. Les personnes qui ne savent pas lire sont invitées à se renseigner auprès de leurs amis et de leur famille au sujet des dernières avancées en matière de protection. Des crieurs publics ont également été déployés dans la plupart des rues.\n\nComme dans toutes les catastrophes, des profiteurs ont émergé des quatre coins de l’État pour se remplir les poches en jouant sur la peur, mais c’était prévisible. »"
+ portuguese_monarchs.4.a: "Envoyez-leur de l’aide."
+ portuguese_monarchs.4.b: "Nous devons nous rendre sur place pour leur remonter le moral."
+ portuguese_monarchs.4.c: "Qu’ils se débrouillent."
+ # Modifiers
+ distant_outbreak_aid_mod: "Aide à distance pour l’épidémie"
+ aided_for_outbreak_mod: "Aide pour l’épidémie"
+ outbreak_site_visit_mod: "Visite lors de l’épidémie"
+ visited_hospitals_mod: "Visite dans les hôpitaux"
+ aided_directly_by_the_ruler_mod: "Aide directe du dirigeant"
+ refused_outbreak_aid_mod: "Aide refusée pour l’épidémie"
+ outbreak_without_aid_mod: "Intensification de l’épidémie"
+ disease_outbreak_mod: "Épidémie"

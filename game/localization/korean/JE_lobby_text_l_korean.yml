@@ -1,0 +1,133 @@
+﻿l_korean:
+ #Afghanistan all
+ je_unify_afghanistan_lobby: "#v 필요 DLC: Sphere of Influence#!\n1793년 티무르 샤 두라니가 사망하면서 시작된 계승 대란은 옛 두라니 제국을 끝없는 내전으로 몰아넣었다. 유럽 열강의 위협이 사방에서 다가오는 가운데, 이제 우리는 여러 세력이 뒤얽힌 이 전쟁의 시대를 끝내고 통일 아프가니스탄을 재건해야 한다."
+ #Austria:
+ je_matter_of_hungary_lobby: "철권통치로든 타협으로든, 헝가리에 대한 오스트리아의 지배는 어떤 방식으로든 유지되어야 한다."
+ je_metternich_lobby: "#v 필요 DLC: National Awakening#!\n클레멘스 폰 메테르니히 재상의 이상을 이어받을 것인가? 아니면 그가 세심히 설계한 보수적 질서를 역사의 뒷길로 흘려보내겠는가?"
+ je_austrian_neo_absolutism_lobby: "#v 필요 DLC: National Awakening#!\n아래로부터의 혁명 위협에 맞서, 이제 빈은 위로부터의 혁명을 감행해야 할 때다. 충성스럽고 유능한 관료로 구성된, 중앙집권적이고 합리적이며 효과적인 국가 체계를 수립함으로써 이 시대의 도전에 부응하는 현대적 국가로 거듭날 것이다."
+ #Argentina, and Chile
+ je_patagonia_lobby: "이 대륙의 남부는 여전히 주인 없이 무주공산으로 남아 있다. 아무래도 원주민 인구 때문이 호락호락하진 않겠지만, 경쟁국의 수중에 떨어지기 전에 반드시 우리 영토로 편입시켜야 한다."
+ #BEL (and NET)
+ je_conference_of_london_lobby: "열강이 네덜란드와 벨기에 사이의 풀리지 않은 국경 문제를 해결하고자 런던으로 대표단을 보냈다."
+ #BIC
+ je_consolidate_colonial_rule_lobby: "핵심 영토의 안보를 보장하려면 우리의 통치를 회피하고 있는 토착 군주들을 복속시키고, 애초에 통제를 벗어날 일이 없도록 민중 저항의 기미가 보이는 순간 철저하게 짓밟아야 한다."
+ je_dravidian_movement_lobby: "#v 필요 DLC: Pivot of Empire#!\n인도의 평민들은 브라만의 과도한 대표성과 정치적 권력에 반응하고 있다. 여러 차례 이어진 반-브라만 회의 끝에 드라비다 운동이 결성되어 브라만의 우위에 반대하는 새로운 의제를 제시했다. 이들은 법률과 정부 행정에서 카스트 구분을 아예 제거하려 한다."
+ je_india_non_cooperation_movement_lobby: "#v 필요 DLC: Pivot of Empire#!\n인도의 독립운동이 점점 탄력을 받고 있다. 지도자들은 경제 및 정치적 비협조라는 명확한 목표 아래, 영국 당국과의 협력을 거부하는 새로운 운동을 전개한다. 이들은 영국 무역에 타격을 가함으로써 자신들이 전개하는 운동의 힘을 보여주려는 것이다."
+ #Bolivia. They also get Exploiting the Amazon and Colombian content.
+ je_acre_dispute_lobby: "#v 필요 DLC: Colossus of the South#!\n최근 에이커 지역을 두고 분쟁이 격화되는 중이다. 기회주의적인 정착민들이 땅을 차지하려 들고 있다. 당장 행동에 나서지 않으면 이 지역을 영원히 잃을지도 모른다."
+ #Brazil
+ je_agricultural_development_lobby: "#v 필요 DLC: Colossus of the South#!\n브라질은 엄청난 크기의 비옥한 농지, 그리고 농업에 적합한 기후를 갖추고 있다. 이는 국가를 부유하게 만들고 브라질 농산물을 세계적으로 부각시킬 훌륭한 기회를 선사한다."
+ je_pedro_brazil_lobby: "#v 필요 DLC: Colossus of the South#!\n페드로 2세는 헌법이 보장하는 민주주의적 통치를 유지하고 시민의 자유를 보호하려 한다. 그뿐만 아니라 자신의 자유주의적 대의에 반발하는 강대한 보수 세력에 맞서 브라질에 만연한 노예제를 철폐하려고 애쓰고 있다."
+ je_brazilian_nation_building_lobby: "#v 필요 DLC: Colossus of the South#!\n브라질은 모국이 없는 식민지이자 국가가 없는 주라고 할 수 있다. 이 광활한 땅에 살고 있는 모든 민족이 하나의 정체성을 형성하려면 신중한 숙고와 막대한 밑 작업, 꾸준한 관리가 필요하다. 과연 하나의 통합된 브라질을 이룩할 수 있을까?"
+ #Brazil minors
+ ragamuffin_war_minors_lobby: "국민의 고난에 무관심으로 일관하는 브라질 제국 정부의 태도를 더 이상 용납할 수 없다. 우리는 독자적인 정부를 수립했고, 스스로 독립 공화국임을 선언했다!"
+ #Canada
+ je_canada_can_lobby: "중앙 정부와 좋은 관계를 유지하면서 여타 식민지들에 대해 경제적 우위를 확보하면 이웃 식민지 중 하나에 합병을 제안할 수 있을 것이다."
+ #Central America
+ central_america_falls_apart_lobby: "중앙아메리카 주들이 독립을 부르짖고 있다. 요구를 들어줘야 할까? 조만간 최후통첩이 날아들 텐데."
+ je_reunify_central_america_lobby: "중앙아메리카가 갈가리 찢겨 붕괴한다 해도, 결국 언젠가는 어떤 한 국가가 다시 이 지역을 봉합하고 민중을 현대 시대로 이끌려 할 것이다."
+ #Colombia:
+ je_gran_colombia_lobby: "#v 필요 DLC: Colossus of the South#!\n1830년대 분리주의로 인해 그란 콜롬비아 국가가 해체된 것은 비극이었다. 그란 콜롬비아의 재건을 추구하는 행위는 통일에 시큰둥한 사람들에겐 분노를 일으킬 수 있다. 하지만 그란 콜롬비아를 성공적으로 재건하면 건국에 관여한 모든 국가에 막대한 이익을 보장할 것이다."
+ #China
+ je_boxer_rebellion_lobby: "중국이 치욕스럽게도 외국 \"야만인들\"에게 영토를 잃자, 이를 계기로 외세 척결의 기치 아래 무술을 바탕으로 한 민병대가 우후죽순으로 생겨나고 있다."
+ je_opium_obsession_lobby: "엄청난 수의 국민이 아편 중독자로 전락하고 말았다. 이 국가적 수치를 어떻게든 수습해야 한다. 하지만 동시에, 아편 무역으로 막대한 이익을 챙기고 있는 외세의 개입도 경계해야 한다."
+ je_warlord_china_lobby: "중앙 정부의 권위가 충분히 약화된다면, 지방 군벌 세력들이 나라를 잘게 쪼개어 갈라질 것이다. 다만 그렇다고 해서 모든 것이 끝난 것은 아니다. 이러한 세력 중 하나가 폐허 속에서 다시 중국을 일으켜 세울지도 모른다."
+ #Cuba
+ #Ethiopia
+ je_age_of_princes_lobby: "에티오피아는 십수 개의 소국으로 분열되어 전쟁의 역사를 거듭해 왔다. 제국을 재통일하고 민중에 평화와 번영을 돌려주는 것은 우리 손에 달렸다."
+ #Great Briton
+ je_consolidate_afghanistan_lobby: "#v 필요 DLC: Sphere of Influence#! \n아프간 국가들의 불분명하고 엉성한 국경은 파미르 지역에서 벌어지는 갈등의 빌미가 되고 있다. 경쟁국들과 협상하여 아프가니스탄 국경을 국제적으로 인정만 받게 된다면 전쟁 위기가 급격히 감소할 것이다."
+ je_india_nationalism_britain_lobby: "#v 필요 DLC: Pivot of Empire#! \n인도 곳곳에서 토착 인구층의 민족의식이 높아지고 있다. 영국 학교에서 교육받고 식민지 정부에 고용된 토착 인도인들이 제국 기관 내에서의 동등한 지위, 더 많은 경제적 기회, 그리고 자치권을 요구하기 시작했다."
+ je_canada_gbr_lobby: "우리의 염원은 캐나다 식민지 전체가 하나가 되어 캐나다 단일 국가를 형성하는 것이다. 이 목적을 달성하려면 지역 식민지 행정부들을 설득해 통일이 최선의 선택임을 깨닫게 해야 한다."
+ #France:
+ je_conquest_of_algeria_lobby: "#v 필요 DLC: Voice of the People#! \n우리의 알제리 정복은 아직 끝나지 않았다. 알제리의 모든 마을에서 프랑스 국기가 휘날리고 모든 반군이 모래밭에 쓰러질 때까지 우리는 쉬지 않을 것이다. 프랑스 만세!"
+ je_divided_monarchists_lobby: "#v 필요 DLC: Voice of the People#! \n세 가문 세력이 프랑스 왕위에 대한 명분을 지니고 있다. #bold 오를레앙파#!는 1830년 세워진 입헌군주제의 7월 왕정을 지지하고, #bold 정통주의자#!는 폐위된 부르봉 왕가의 샤를 10세와 그 후손들을 지지하며, #bold 보나파르트파#!는 나폴레옹 보나파르트 가문의 복권을 추구한다. 군주제를 지지하는 세 가문 모두 각자의 주장자를 프랑스 왕위에 올리기 위해 치열하게 경쟁한다."
+ je_the_paris_commune_france_lobby: "#v 필요 DLC: Voice of the People#! \n사회주의자, 무정부주의자, 급진파 공화주의 혁명가들이 프랑스에 대한 대항 정부를 선언하며 파리를 점령했다."
+ #Greece:
+ je_greek_nationalism_lobby: "#italic \"그리스 인은 왕국에 거주하는 자만을 이르는 것이 아니다. 이오나니나, 테살로키니, 세레스, 아드리아노폴리스, 콘스탄티노폴리스, 트라브존, 크레타, 사모스, 또는 그리스 역사나 인종에 밀접하게 연관된 다른 국가에 거주하는 사람도 포함될 수 있다...\"\n—이오아니스 콜레티스#! \n\n다른 그리스 국가들을 해방하고 병합하기 위한 통합된 노력이 필요하다."
+ je_bavarocracy_lobby: "#v 필요 DLC: National Awakening#!\n오토 왕과 바이에른 파벌의 권력을 굳히거나, 또는 갓 탄생한 그리스 왕국에 정치적 변화를 일으켜야 한다."
+ #Hawaii.
+ je_hawaii_lobby: "태평양 무역에서 하와이의 입지는 극도로 높은 가치를 지닌다. 열강이 우리의 섬들을 노리기 전에 우리 경제를 성장시켜야 한다."
+ #Haiti
+ je_haitian_debt_lobby: "1825년, 외교적으로 고립되어 또 다시 침략당할 것을 우려한 아이티 정부는 독립의 대가로 프랑스에 배상금을 지불하기로 동의했다. 아이티가 다시 앤틸러스의 진주로 불리려면 이 막대한 금융 부담을 어떤 방식으로든 해결해야 한다."
+ je_la_trinitaria_lobby: "#v 필요 DLC: Iberian Twilight#!\n히스파니올라의 서부와 동부를 잇는 불행한 결혼은 산토 도밍고의 혁명 단체들이 보내는 압력으로 흔들리고 있습니다. 포르토프랭스가 그들을 몰아낼 수 있겠습니까? 아니면 통일 아이티는 역사적 각주로만 남게 되겠습니까?"
+ #Hungary:
+ je_hungarian_revolution_lobby: "#v 필요 DLC: National Awakening#!\n헝가리와 합스부르크 군주정 사이의 관계가 앞으로 정확히 어떻게 될지에 대해서는 의견이 갈리지만, 정치 및 경제 개혁이라는 공동의 열망 아래 자유주의 지도자들이 결집하고 있다. 이들은 상대적으로 벽지였던 헝가리를 자율성을 지닌 현대적이고 역동적인 민족국가로 바꾸고자 한다."
+ #India, See BIC or Princely States
+ #Italy
+ je_risorgimento_lobby: "민족주의 광풍이 유럽 전역을 휩쓸고 있다. 그 결과 정부 여야를 떠나 하나의 통일된 이탈리아를 꿈꾸는 이들이 속속들이 나타나기 시작했다."
+ #Japan
+ je_meiji_restoration_lobby: "막부는 지난 수 세기 동안 고립되어 침체의 늪에 빠져 있던 일본을 지배했다. 빠르게 현대화되어 가는 세계에서 살아 남으려면 정당한 덴노에게 권력을 돌려주어야 한다."
+ je_meiji_economy_lobby: "전통의 길을 고수한다면, 외세가 우리를 쓰러뜨리고 지배하는 것은 시간문제다. 우리는 국가를 산업화하고 새로운 통치 방식을 받아들이며 새로운 전쟁 기술을 익혀야 한다. 그래야만 우리는 열강으로 우뚝 설 수 있다."
+ je_ryukyu_rivalry_lobby: "류큐 왕국은 수 세기 동안 두 열강 사이에 끼어 있었다. 명목상으로는 중국의 조공국이지만, 사쓰마 정복으로 인해 일본에도 충성을 바치게 되면서 섬세한 영향력의 균형이 만들어지고 있다."
+ #Korea
+ je_donghak_movement_lobby: "#v 필요 DLC: Sphere of Influence#!\n동양의 학문, 즉 동학사상이 조선의 농민들 사이에서 확산되고 있다. 이는 국가 개방에 대한 분노를 바탕으로 퍼져나가고 있으며, 이들은 평등과 인권, 외세의 배격을 주장한다. 이 운동이 무장봉기로 이어지는 것은 시간문제일지도 모른다."
+ #Montenegro
+ je_mon_serb_unity_lobby: "#v 필요 DLC: National Awakening#!\n몬테네그로인들은 자신들을 오스만의 폭정에 의해 흩어진 세르비아 형제로 인식하고 있다. 만약 그들의 영토가 맞닿게 된다면, 형제로서 다시 하나가 될 수 있을지도 모른다."
+ je_mon_state_formation_lobby: "#v 필요 DLC: National Awakening#!\n몬테네그로가 호전적인 부족들의 집합에서 현대 국가로 발전한다면, 열강으로부터 마땅한 존중을 받을 수 있을 것이다."
+ je_montenegrin_raiding_lobby: "#v 필요 DLC: National Awakening#!\n경작할 땅이 거의 없는 몬테네그로 부족들은 오스만 영토를 약탈함으로써 생계를 유지하고 있다."
+ #Mughals
+ je_mughal_hindustan_lobby: "#v 필요 DLC: Pivot of Empire#!\n한때 우리 군주들은 카불에서 카르나티크 해안까지 통치했다. 그러나 이른바 \"열강\"들은 우리 궁정이 한때 누리던 권위와 위신, 전통을 매년 부정하기에 바쁘다. 이제 티무르의 위대한 후손들은 델리의 붉은 요새 바깥으로는 거의 아무런 영향력도 행사하지 못할 지경이다!\n\n#N #bold 우리가 직접 나서서 우리의 제국이 망각 속으로 잊히지 않도록 구해내야만 한다.#!#!"
+ #The Netherlands
+ je_land_reclamation_lobby: "네덜란드는 인구 밀도가 대단히 높은 나라이며, 경작지는 가면 갈수록 부족해지고 있다. 하지만 공학의 위대한 힘을 빌리면 바다에서 새로운 땅을 얻어낼 수 있을 것이다."
+ #Oman
+ je_splitting_oman_lobby: "술탄 사이드 알-부사이디가 사망하면, 아들들은 패권을 다투며 아라비아와 아프리카에 걸친 영토를 분할할 것이 분명하다."
+ #Poland:
+ je_christ_of_nations_lobby: "그리스도가 로마인의 손에 순교한 것처럼 폴란드 역시 적국의 손에 순교했다. 그리스도가 영광을 되찾을 예정이듯, 폴란드 또한 그렇게 될 운명이라고 할 수 있다."
+ je_poland_lithuania_lobby: "옛 연방의 국경은 폴란드와 리투아니아 국경을 훌쩍 넘어서 루테니아의 방대한 영토까지 닿아 있었다. 그리고 또다시 그렇게 될 것이다."
+ #Peru
+ je_amazonas_lobby: "아마존을 살기 척박한 밀림에서 상업의 수요를 충족할 수 있는 집중 개발 지역으로 탈바꿈시키기 위한 조처를 내려야 한다."
+ je_andean_federation_lobby: "#v 필요 DLC: Colossus of the South#!\n시몬 볼리바르는 라틴 아메리카의 모든 국가를 아우르는 대규모 연합인 안데스 연방을 꿈꿨다. 파나마 회의가 실패로 돌아가면서 분위기가 바뀌었음에도 불구하고, 유럽과 미국의 침략이라는 위협으로 인해 이 발상을 되살릴 수 있는 환경이 조성되었다."
+ #Philippines
+ je_philippines_development_lobby: "#v 필요 DLC: Iberian Twilight#!\n국제 무역이 꾸준히 증가합니다. 따라서 정치적 혼란이 계속되는 가운데서도 성장 중인 중산층이 더 큰 영향력을 얻게 될 무대가 마련되었습니다. 지역에서 붐비기로 손꼽히는 항만을 가진 이 제도는 기회를 찾는 자들에게 엄청난 가능성으로 가득한 장소입니다."
+ je_philippines_main_lobby: "#v 필요 DLC: Iberian Twilight#!\n필리핀 내부에서 긴장감이 고조되고 있습니다. 스페인 성직자들이 세속 사회와 종교 생활을 지배하고 있으며, 현지 사제들은 그러한 권위에 맞서 반란을 주도합니다. 그리고 총독은 제도 전체에 철권통치를 유지하리라는 열렬한 기대를 받습니다. 스페인의 지배가 계속될까요? 아니면 필리핀의 민중이 더 큰 자유를 쟁취하는 데 성공하게 될까요?"
+ je_filipino_ethnogenesis_lobby: "#v 필요 DLC: Iberian Twilight#!\n필리핀은 오랫동안 여러 민족들의 터전이었습니다. 강하고 현대적인 국가를 건설하려면 새로운 범필리핀적 정체성이 형성되어야 합니다."
+ #Romania
+ je_unite_the_principalities_lobby: "오랜 세월 무기력하게 잠들어 있던 도나우 공국들이 기지개를 켜고 있다. 조국의 권리와 이해가 해방을 외치고 있다. 루마니아 국민의 행복과 안녕을 위해서라도 행동해야 한다!"
+ #Russia
+ je_great_reformer_lobby: "러시아에서 즉위한 알렉산드르 2세는 수많은 개혁론자에게 강대한 조국의 구시대적인 구조를 근본적으로 개조할 기회로 받아들여지고 있다."
+ je_pacify_the_steppes_lobby: "#v 필요 DLC: Sphere of Influence#!\n18세기 이후 러시아가 명목상으로나마 카자흐 대초원을 지배해 왔다. 그러나 만연한 도적질과 지배층의 나태함이 이 지역을 좀먹고 있었다. 카자흐 반란군은 아군 보급 수송대와 요새들을 연이어 공격하기 시작했다. 이들을 끝까지 추적해 진압해야 한다."
+ je_conquest_of_central_asia_lobby: "#v 필요 DLC: Sphere of Influence#!\n남쪽 국경을 보호하고 영국의 인도 개입을 막으며 러시아의 영향력을 중동으로 확장할 경로를 개척하기 위해, 차르는 중앙아시아 전역에 피보호국을 수립하고 투르키스탄으로 제국을 확장할 수 있는 특권을 선포했다."
+ #Paraguay:
+ je_francocracia_lobby: "#v 필요 DLC: Colossus of the South#!\n프란시아 박사는 공포스러운 비밀 경찰 피라게스를 등에 업고 엄중하게 나라를 이끌었다. 필요에 따라 비단 장갑을 철권으로 바꾸기를 서슴지 않았다. 하지만 노쇠는 그에게도 찾아왔으며, 루소의 고립주의적 낙원을 지향하는 프란시아의 야망이 박사 이후에도 유지될 수 있을지는 불확실하다."
+ je_modernizing_paraguay_lobby: "#v 필요 DLC: Colossus of the South#!\n카를로스 안토니오 로페스는 군부를 현대화하고 확장하려는 야심 찬 기획을 시작했다. 결국 국민의 이익을 수호할 수 있는 집단은 군부뿐이기 때문이다."
+ je_expanding_paraguay_lobby: "#v 필요 DLC: Colossus of the South#!\n주변국들은 권모술수를 동원해 이 거룩한 영토를 빼앗을 궁리만 하고 있다. 적이 먼저 움직일 때까지 소심하게 기다리기만 해야 하는가? 아니다. 선조들이 그러했듯 우리의 운명은 스스로 개척해야 한다."
+ #Persia
+ je_eastern_frontier_lobby: "#v 필요 DLC: Sphere of Influence#!\n동쪽의 이탈 지역을 다시 하나로 묶으려면 단호한 조치를 취해야 한다. 이 지역을 점령하면 노예로 끌려간 페르시아인 공동체를 해방시키고 다시 정착시킬 수 있다."
+ #Portugal
+ je_portugal_regeneration_lobby: "#v 필요 DLC: Iberian Twilight#!\n수 세기 동안 이어진 쇠퇴를 바로잡고 새로운 자유주의 질서를 확립하기 위해, 정부는 포괄적인 제도 개혁 계획을 공개했습니다."
+ je_the_pink_map_lobby: "#v 필요 DLC: Iberian Twilight#!\n식민 행정가들은 오랫동안 포르투갈령 서아프리카와 동아프리카를 육로로 연결하는 구상을 품어 왔습니다. 드디어 이러한 비전을 실현할 때가 되었습니다."
+ je_second_liberalism_lobby: "#v 필요 DLC: Iberian Twilight#!\n자유주의 전쟁의 종식은 포르투갈에 입헌 통치를 가져왔습니다. 개혁파가 입지를 다지고 그들의 비전을 끝까지 밀어붙일 수 있을까요? 아니면 포르투갈이 반동이나 급진주의로 방향을 틀게 될까요?"
+ #Prussia and German States:
+ je_schleswig_holstein_question_lobby: "현재 독일 민족주의자들은 슐레스비히홀슈타인 문제에만 온 생각과 기력을 쏟아붓고 있다. 독일이 통일 국가로 나아가려면 우선 홀슈타인의 독일인들이 덴마크의 지배로부터 벗어나야 한다."
+ #German States except Prussia:
+ je_german_unification_idea_lobby: "독일인 사이에 민족주의 사상이 들불처럼 퍼지고 있다. 독일 연맹 내 서로 다른 주에서 추종자들의 수가 특이점에 도달하면 통일 국가를 향한 움직임이 시작될 수밖에 없을 것이다."
+ #Prussia Only:
+ je_german_unification_lobby: "비로소 독일 통일을 전격적으로 추진할 때가 무르익었다. 독일계 국가들의 맹주로서 우리 손으로 목적을 이루어야 한다."
+ #Princely States:
+ je_princely_states_lobby: "#v 필요 DLC: Pivot of Empire#!\n상황이 우리한테 유리하게 흐르고 있으니, 지금이야말로 자치권을 확대하고 독립을 향한 길을 모색할 기회다. 이대로 머뭇거리면 영국이 우리의 운명을 마음대로 좌우하게 될지도 모른다."
+ #Serbia
+ je_serbian_throne_lobby: "#v 필요 DLC: National Awakening#!\n정보원에 따르면, 세르비아 민중의 영웅으로 추앙받았던 창시자를 둔 카라조르제비치 가문이 현 집권 가문인 오브레노비치 왕조를 폐위시키려는 음모를 꾸미고 있다고 한다."
+ je_the_balkan_league_lobby: "#v 필요 DLC: National Awakening#!\n발칸의 민족들이 오스만 제국으로부터 자유를 쟁취한다면, 그들을 완전히 몰아내기 위한 동맹을 결성하자는 방향으로 의견이 모이고 있다. 수 세기에 걸친 지배에도 불구하고, 발칸의 진정한 주인은 여전히 따로 있다."
+ #Sikh (fully sick!) Empire
+ je_sikh_sovereignty_lobby: "#v 필요 DLC: Pivot of Empire#!\n셰르 에 펀자브가 전 무굴 왕국의 수도를 정복한 후로 우리 왕국은 급격히 성장하며 큰 성공의 기쁨을 맛보고 있다. 이런 시기일수록 외세의 위협에서 우리 영토를 지키고, 시크 신앙의 교리를 명예롭게 지켜야 한다. 이 왕조의 유산이 오래도록 이어지기를!"
+ #Spain
+ je_the_two_spains_lobby: "#v 필요 DLC: Iberian Twilight#!\n\"여기 스페인의 절반이 누워 있다. 다른 절반 때문에 죽었다.\"\n— 마리아노 호세\n\n자유주의와 보수주의 간의 분열은 스페인에서 특히 날카롭게 느껴지며, 양측은 이념적 우위를 두고 끊임없는 싸움에 얽매여 있습니다."
+ je_the_first_carlist_war_lobby: "페르디난드 7세의 사망은 스페인에서 또다시 전쟁이 추악한 모습을 드러내게 만들었습니다. 1830년 국사조칙의 정당성을 문제 삼으며, 고인의 동생 카를로스는 어린 이사벨 여왕의 자유주의 정부에 맞서 보수 세력을 결집했습니다. 스페인의 운명은 이제 기로에 놓여 있습니다."
+ je_spa_economic_regeneration_master_lobby: "#v 필요 DLC: Iberian Twilight#!\n시대에 뒤처지고 경쟁에서도 밀려난 스페인의 경제에는 절박한 개혁이 필요합니다. 포괄적이고 야심 찬 개혁 프로그램을 시행함으로써, 국가는 새로운 수준으로 도약할 수 있습니다."
+ #Turkey
+ je_sick_man_main_lobby: "오스만 제국은 수 세기 동안 쇠퇴해 왔다. 우리는 신속히 행동해 군대를 현대화하고 분리주의를 억누르며, 교육과 관료제 개혁을 추진하고 시리아를 되찾아 열강 사이에서 우리의 지위를 회복해야 한다."
+ je_tur_raided_lobby: "#v 필요 DLC: National Awakening#!\n국경을 약탈하는 몬테네그로 부족들을 반드시 제압해야 한다. 하지만 이 폭력적인 기독교도들을 진압하고도 열강의 분노를 피할 수 있을지 확신할 수 없다."
+ je_great_eastern_crisis_lobby: "#v 필요 DLC: National Awakening#!\n발칸 지역에 위기가 고조되고 있다. 분리 독립파들이 우리의 지배를 위협하는 상황에서 영토에 대한 통제를 유지해야 한다. 현재의 이러한 소요는 지역 전체로 확산되기 전에 반드시 진압되어야 한다."
+ #Turtle Island
+ je_unite_the_nations_lobby: "우리 자신과 형제들이 살아남으려면 힘을 모아야 한다. 하나가 되어야만 코앞까지 다가온 식민 권력의 외교적, 무력적 압박에 저항할 수 있을 것이다."
+ #USA
+ je_acw_war_lobby: "노예제 문제를 평화롭게 해결하지 못한다면, 이 축복받은 나라에 거대한 내전이 닥칠 수도 있다."
+ je_indian_removal_lobby: "대통령은 대법원의 판결을 거스르고 체로키 부족을 인디언 준주로 이주시킬 것을 명했다."
+ je_acw_equality_lobby: "국가의 영토가 팽창해 감에 따라, 북부와 남부, 흑인과 백인 모두를 진정 평등한 시민으로 아우르는 체제 아래 살고자 하는 많은 이들의 꿈이 커지고 있다."
+ #Cuba
+ je_cuba_espanol_lobby: "#v 필요 DLC: Iberian Twilight#!\n쿠바는 여전히 스페인에 충성을 다하고 있습니다. 그 충성심이 워낙 깊은 나머지, 지주층의 일부 개혁파들은 이 섬을 식민지가 아니라 스페인의 정식 지방으로 받아주길 요구할 정도입니다."
+ je_cuba_la_vida_dulce_lobby: "#v 필요 DLC: Iberian Twilight#!\n쿠바는 지속적인 노예 밀무역을 통해 설탕 무역을 장악하게 되었습니다. 국가의 장기적인 번영은 이렇게 확립된 무역로를 확장하는 데 달려 있습니다. 만약 노예제가 폐지된다면, 언젠가 모든 쿠바인이 더 달콤한 삶을 누릴 수 있을지도 모릅니다."
+ je_cuba_independencia_lobby: "#v 필요 DLC: Iberian Twilight#!\n자유에 대한 쿠바의 열망은 분열되어 있습니다. 일부는 멕시코만 건너편에서 동맹을 찾아 쿠바인의 피가 아니라 미국의 금화로 섬의 자유를 사려 합니다. 한편 시가 공장 바닥에서는 어떤 권력에도 속하지 않은 쿠바, 오직 국민의 열정과 의지에 의한 자유 쿠바를 속삭입니다."
+ #Morocco
+ je_lands_of_anarchy_lobby: "#v 필요 DLC: Iberian Twilight#!\n모로코는 오랫동안 술탄의 권위가 강하게 미치는 이른바 '정부의 땅'과 기껏해야 명목상으로만 다르 알마크젠과 연결된 '무정부의 땅'으로 나뉘어져 있습니다. 점점 더 호전적으로 변하는 이웃들에 맞서려면, 모로코는 무정부를 질서로 어떻게든 대체해야 합니다."

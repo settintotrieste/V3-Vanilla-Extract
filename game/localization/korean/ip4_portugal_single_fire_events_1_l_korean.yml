@@ -1,0 +1,76 @@
+﻿l_korean:
+ ##### PORTUGAL SINGLE FIRE EVENTS 1 #####
+ # Events
+ #1 Construction of Gremio Literario
+ portugal_single_fire_events.1.t: "그레미우 리테라리우 설립"
+ portugal_single_fire_events.1.d: "[SCOPE.gsInterestGroup('intelligentsia_scope').GetName] 소속 구성원들이 \"그레미우 리테라리우\"라는 이름의 민간 문학 조합 설립을 추진하고 있다. 이들은 이 구상을 실현하기 위해 재정적, 정치적 지원을 요청했다."
+ portugal_single_fire_events.1.f: "\"신의 은총으로 [ROOT.GetCountry.GetRuler.GetFirstNameNoFormatting](와)과 [ROOT.GetCountry.GetNameNoFormatting]의 [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], 그리고 그분의 모든 자치령에 고하노니,\n\n본 칙령을 받는 모든 이들에게 알리노라. 그레미우 리테라리우라 불리는 단체를 관장할 규약을 기초하는 임무를 부여받은 위원회의 위원장 자격으로, 국무장관이자 명예 장관인 호드리구 다 폰세카 마갈량에스를 통해 국무회의가 나에게 상신한 바를 고려하여...\""
+ portugal_single_fire_events.1.a: "너그럽게 승인을 내리노라."
+ portugal_single_fire_events.1.b: "지식을 구하는 데 애걸은 어울리지 않는다."
+ #2 Asylums of [state]
+ portugal_single_fire_events.2.t: "[SCOPE.sState('azores_state_scope').GetName] 보호 시설"
+ portugal_single_fire_events.2.d: "세속주의 성향의 [SCOPE.gsInterestGroup('intelligentsia_scope').GetName](은)는, 오르타의 빈곤 아동 보호 시설에서 미성년자에게 종교적 열의를 주입하고 있다는 소식에 강한 불편함을 느끼고 있다. 그들은 젊은 세대를 종교적 교리로부터 보호할 조치를 요구하고 있다."
+ portugal_single_fire_events.2.f: "\"우리는 자유주의자다. 우리는 입을 닫으라는 말을 듣는다. 이는 자선이라 하고, 굶주린 이를 먹인다 하고, #italic 도덕적 향상#!은 성 안토니오의 복음과 분리할 수 없다고 말한다. 우리는 답한다. 해방하는 자선이 있고, 얽매는 자선이 있다. 이것은 후자다.\""
+ portugal_single_fire_events.2.a: "[SCOPE.gsInterestGroup('devout_scope').GetName]에게는 [SCOPE.GetRootScope.GetCountry.GetAdjective]의 다음 세대 애국자를 양성할 권리가 있다."
+ portugal_single_fire_events.2.b: "맞다, 이번 일은 선을 넘었다."
+ portugal_single_fire_events.2.c: "당사자끼리 해결하라."
+ #3 The Aqueduct Murderer
+ portugal_single_fire_events.3.t: "수로교 살인마"
+ portugal_single_fire_events.3.d: "\"수로교 살인마\"로 알려진 연쇄살인범에 대한 신고가 여럿 접수되었다. 전해지는 바에 따르면 범인은 수십 명을 살해하고 시신을 아구아스 리브르스 수로교에 떨어뜨렸다. 대중은 즉각적인 조치를 요구하고 있다."
+ portugal_single_fire_events.3.f: "습한 새벽녘, 등불의 빛이 미끄러운 석면에 일렁였다. 장화는 수로교 아치 아래를 울리며 공허하게 메아리쳤고, 강에서 불어오는 바람은 아래쪽의 정적을 뒤흔들었다. 그때 어둠과 낙차가 맞닿는 가장자리에 창백한 형체 하나가 미동도 없이 나타났다."
+ portugal_single_fire_events.3.a: "경험 많은 집행관을 즉시 파견하라."
+ portugal_single_fire_events.3.b: "바로 이런 사건을 위해 훈련된 전문가가 있다."
+ portugal_single_fire_events.3.c: "용감한 자를 희생양 삼아 대중 앞에 내세울 선전극을 꾸려라."
+ portugal_single_fire_events.3.e: "살인이라고?! 수로교는 허무의 부름을 따르러 가는 곳임을 누구나 아는데."
+ #4 The Wine Blight
+ portugal_single_fire_events.4.t: "포도나무 역병"
+ portugal_single_fire_events.4.d: "흰곰팡이 역병이 [SCOPE.sState('madeira_state_scope').GetName] 지역의 포도밭을 강타하여, 세계적으로 유명한 마데이라 포도주 생산이 마비되었다. 타국 상인들은 공포에 휩싸여 섬에서 빠르게 철수하고 있다."
+ portugal_single_fire_events.4.f: "\"지난 500년간 만들어진 모든 포도주 가운데, 마데이라 포도주는 시대와 장소를 가장 잘 드러내는 독보적인 음료로 꼽힌다. 불과 열기를 통해 탄생한 이 포도주의 포도덩굴은 오백 년 전 타버린 고대 숲의 재를 영양분 삼아, 약 1,400만 년 전 화산 폭발로 형성된 암석 토양에 뿌리 내리고 있다.\""
+ portugal_single_fire_events.4.a: "과학자들을 파견해 급히 해결책을 마련하라."
+ portugal_single_fire_events.4.b: "상인들이 떠나기 전에 보상하라."
+ portugal_single_fire_events.4.c: "손을 들어 하늘을 바라보자."
+ #5 Zoological Garden
+ portugal_single_fire_events.5.t: "동물원"
+ portugal_single_fire_events.5.d: "열정적인 의사들로 구성된 한 집단이 [SCOPE.sState('capital_scope').GetName] 최초의 동물원에 대한 상세한 설계안을 마련했다. 그들은 이 계획 실현을 위해 정부의 승인과 지원을 바라고 있다."
+ portugal_single_fire_events.5.f: "소년은 어머니의 장갑 낀 손을 꼭 붙잡은 채, 코끼리 코의 흔들림과 위에서 반짝이는 녹빛과 금빛 깃털 사이를 눈으로 좇았다. 우리 하나하나가 다른 세계로 통하는 문처럼 보였다. 불꽃처럼 튀어 오르는 원숭이들, 가슴을 울리는 사자의 하품.\n\n그 순간, [SCOPE.sState('capital_scope').GetNameNoFormatting](은)는 교과서 지도 속 세계만큼이나 광활하게 느껴졌다.\""
+ portugal_single_fire_events.5.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle](이)가 승인했다."
+ portugal_single_fire_events.5.b: "다음엔 앵무새 의회라도 만들 작정인가?"
+ #6 Women of the Worms
+ portugal_single_fire_events.6.t: "벌레의 여인들"
+ portugal_single_fire_events.6.d: "[SCOPE.sState('shanghai_state_scope').GetName] 출신의 민간요법 치료사 두 명이 [SCOPE.sState('capital_scope').GetName]의 한 호텔에서 시력 문제를 대체 치료법으로 고친다고 주장하며 활동 중이다. 행정관 또한 의사 출신으로서 이들을 제지하려 했으나, 주민들의 반발이 거세지며 공공질서의 문제가 되었다."
+ portugal_single_fire_events.6.f: "\"그건 뭐랄까... 동양식 주문 같은 거라던데요. 악마 임프니 흑마법이니 그런 걸 부른다나요. 그 뒤로 매일 악마를 보느니 그럴 바엔 차라리 눈먼 채로 살겠어요. 에이... 됐어요, 사양할게요.\"\n\n글로리아가 맞받아쳤다. \"마라, 넌 아침마다 옆에 있는 악마를 보면서도 아무 말 안 하잖아. 그게 뭐가 다르다는 거야? 그러지 말고.\""
+ portugal_single_fire_events.6.a: "이들을 마녀로 규정하고 필요한 조치를 모두 취하라."
+ portugal_single_fire_events.6.b: "행정관에게 두 여인을 풀어주게 하여 긴장을 누그러뜨려라"
+ portugal_single_fire_events.6.c: "[SCOPE.sCountry('shanghai_owner_scope').GetName] 측에 맡기고, 두 사람을 추방하라."
+ # Modifiers
+ # portugal_single_fire_events.1
+ portugal_single_fire_events_gremio_expense_mod: "그레미우 리테라리우 자금 지원"
+ portugal_single_fire_events_gremio_ig_approval_mod: "그레미우 리테라리우 승인"
+ portugal_single_fire_events_gremio_state_mod: "민간 문학 클럽"
+ portugal_single_fire_events_gremio_ig_disapproval_mod: "그레미우 리테라리우 자금 지원 거부"
+ # portugal_single_fire_events.2
+ portugal_single_fire_events_azores_support_mod: "종교 주입 허용"
+ portugal_single_fire_events_azores_not_support_mod: "종교 주입 금지"
+ portugal_single_fire_events_azores_ignore_mod: "아동 교리 교육"
+ portugal_single_fire_events_azores_state_devout_mod: "종교 주입 장려"
+ portugal_single_fire_events_azores_state_intelligentsia_mod: "종교 주입 중단"
+ # portugal_single_fire_events.3
+ portugal_single_fire_events_law_officers_authority_mod: "수사 중인 집행관"
+ portugal_single_fire_events_secret_police_expense_mod: "비밀 경찰 자금 지원"
+ portugal_single_fire_events_ignored_mod: "연쇄살인 사건 무시"
+ portugal_single_fire_events_dishonorable_stunt_mod: "불명예스러운 선전극"
+ # portugal_single_fire_events.4
+ portugal_single_fire_events_mildew_epidemic_mod: "흰곰팡이 역병"
+ portugal_single_fire_events_sent_physicians_mod: "의사가 연구 중"
+ portugal_single_fire_events_sent_physicians_expense_mod: "농작물 역병 연구 자금 지원"
+ portugal_single_fire_events_merchants_compensated_mod: "피해 상인 보상"
+ portugal_single_fire_events_praying_mod: "성직자 주도 역병 구호"
+ # portugal_single_fire_events.5
+ portugal_single_fire_events_zoo_supported_mod: "동물원 건설"
+ portugal_single_fire_events_zoo_supported_expense_mod: "동물원 건설 자금 지원"
+ portugal_single_fire_events_zoo_rejected_mod: "동물원 건설 거부"
+ portugal_single_fire_events_zoo_sol_mod: "도심 내 동물원"
+ # portugal_single_fire_events.6
+ portugal_single_fire_events_worm_women_witches_mod: "공개적 마녀사냥"
+ portugal_single_fire_events_zoo_worm_women_free_mod: "당국의 개입 중단"
+ portugal_single_fire_events_zoo_worm_women_free_state_mod: "비위생적 치료 행위"

@@ -1,0 +1,18 @@
+﻿l_turkish:
+ # Stances
+ stance_none: "Yok"
+ stance_conquer_region: "Bölgeyi Fethet"
+ stance_protect_region: "Bölgeyi Koru"
+ stance_colonize_region: "Bölgeyi Kolonileştir"
+ # AI Values
+ AI_REGION_STANCE_BASE_VALUE: "#b Temel Değer#!"
+ AI_REGION_STANCE_NUMBER_OF_CLAIMS: "[Concept('concept_claim', '$concept_claims$')] Sayısı"
+ AI_REGION_STANCE_CAPITAL_REGION: "[Concept('concept_strategic_region', '$concept_strategic_region_short$')]: [Concept('concept_capital_state', '$concept_capital_state_short$')]"
+ AI_REGION_STANCE_WANTS_TO_OPEN_UP_JAPAN: "#b $JAP$#! ülkesini dışa açmak istiyor"
+ AI_REGION_STANCE_IS_LOYAL_SUBJECT: "#b Sadık#! bir [concept_subject]"
+ AI_REGION_STANCE_FREE_REAL_ESTATE: "[Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] ve [Concept('concept_unrecognized_power', '$concept_unrecognized_powers$in')] kontrolündeki [Concept('concept_state', '$concept_states$')]"
+ AI_REGION_STANCE_CIVILIZING_MISSION_RESEARCHED: "[GetTechnology('civilizing_mission').GetName] araştırıldı"
+ AI_REGION_STANCE_QUININE_RESEARCHED: "[GetTechnology('quinine').GetName] araştırıldı"
+ AI_REGION_STANCE_EXISTING_REGION_STANCES: "Mevcut $concept_strategic_region_stances_short$"
+ AI_REGION_STANCE_SMALL_COUNTRY: "#v [Country.GetNameNoFormatting]#! küçük bir [concept_country]"
+ AI_REGION_STANCE_COLONIAL_COUNTRY: "#v [Country.GetNameNoFormatting]#! bir [concept_colony]"

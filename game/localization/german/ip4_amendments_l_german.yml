@@ -1,0 +1,9 @@
+﻿l_german:
+ amendment_test: "$concept_amendment$ testen"
+ amendment_test_desc: "Dies ist eine Beschreibung für einen Test-Nachtrag"
+ REPEAL_AMENDMENT_PENDING: "Der [concept_amendment] ist nicht Teil eines aktiven [Concept('concept_law', 'Gesetzes')]"
+ REPEAL_AMENDMENT_NO_GOVERNMENT_OPPOSITION: "Keine [Concept('concept_interest_group', '$concept_interest_groups$')] in der [concept_government] missbilligt den [concept_amendment]"
+ REPEAL_AMENDMENT_WEAK_GOVERNMENT_OPPOSITION: "[Concept('concept_interest_group', '$concept_interest_groups$')] in [concept_government], die den [concept_amendment] missbilligen, haben weniger [Concept('concept_clout', 'Politischen Druck')] als jene, die ihn unterstützen"
+ REPEAL_AMENDMENT_ON_COOLDOWN: "Kann bis $DATE|v$ nicht widerrufen werden"
+ REPEAL_AMENDEMENT_CONFIRMATION: "Wollen wir „[Amendment.GetName]“ [Concept('concept_amendment_repeal', 'widerrufen')]?[ConcatIfNeitherEmpty('\n\n$DATA_AMENDMENTS_REPEAL_HEADER$\n', Amendment.GetOnRepealEffectsDesc)]  "
+ SPONSOR_MODIFIER_HEADER: "#title Förderer-[concept_interest_group]:#!"

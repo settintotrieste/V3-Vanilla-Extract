@@ -1,0 +1,13 @@
+﻿l_french:
+ amendment_frugal_ordinance: "Décret sur la frugalité"
+ amendment_frugal_ordinance_desc: "L’accès des roturiers aux produits de luxe, au divertissement, et à la littérature est restreint et réglementé par le gouvernement."
+ amendment_zaibatsu_oligopoly: "Oligopole des zaibatsu"
+ amendment_zaibatsu_oligopoly_desc: "L’économie est désormais dominée par un cercle fermé de zaibatsu militaro-industriels prospères qui entretiennent une relation symbiotique avec l’État."
+ amendment_zaibatsu_oligopoly_1: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_1_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_zaibatsu_oligopoly_2: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_2_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_taikunate: "Taïkounat"
+ amendment_taikunate_desc: "Le clan Tokugawa conserve certains privilèges au sein de ce système parlementaire, le chef du clan occupant un poste permanent à la tête du gouvernement."
+ amendment_reformed_shinsengumi: "Lignée du Shinsen gumi"
+ amendment_reformed_shinsengumi_desc: "La police secrète de l’État doit sa capacité d’action au Shinsen gumi, une unité d’élite composée d’épéistes et chargée par le bakufu de maintenir l’ordre à Kyoto."

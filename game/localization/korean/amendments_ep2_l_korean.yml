@@ -1,0 +1,13 @@
+﻿l_korean:
+ amendment_frugal_ordinance: "검약령"
+ amendment_frugal_ordinance_desc: "사치품, 오락, 문학에 대한 평민의 접근이 정부에 의해 엄격히 제한 및 규제됩니다."
+ amendment_zaibatsu_oligopoly: "자이바츠 과점"
+ amendment_zaibatsu_oligopoly_desc: "번영하는 군산복합 자이바츠라는 폐쇄적 집단이 국가와 공생 관계를 맺으며 경제를 지배하게 되었습니다."
+ amendment_zaibatsu_oligopoly_1: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_1_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_zaibatsu_oligopoly_2: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_2_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_taikunate: "대군정"
+ amendment_taikunate_desc: "이 의회 체제에서 도쿠가와 막부는 특별한 특권을 유지하며, 막부의 수장은 정부 수반으로서 영구적인 지위를 갖습니다."
+ amendment_reformed_shinsengumi: "신선조 계보"
+ amendment_reformed_shinsengumi_desc: "국가의 비밀 경찰 기관은 막부가 교토의 질서를 유지하기 위해 조직한 정예 검객 부대인 신선조에 그 뿌리를 두고 있습니다."

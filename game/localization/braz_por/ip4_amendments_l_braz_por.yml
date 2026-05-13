@@ -1,0 +1,9 @@
+﻿l_braz_por:
+ amendment_test: "Testar $concept_amendment$"
+ amendment_test_desc: "Esta é uma descrição para um teste de emenda"
+ REPEAL_AMENDMENT_PENDING: "A [concept_amendment] não faz parte de uma [concept_law] ativa"
+ REPEAL_AMENDMENT_NO_GOVERNMENT_OPPOSITION: "Nenhum [concept_interest_group] no [concept_government] contraria a [concept_amendment]"
+ REPEAL_AMENDMENT_WEAK_GOVERNMENT_OPPOSITION: "[Concept('concept_interest_group', '$concept_interest_groups$')] no [concept_government] que contrariam a [concept_amendment] têm menos [concept_clout] do que aqueles que a apoiam"
+ REPEAL_AMENDMENT_ON_COOLDOWN: "Não é possível revogar até $DATE|v$"
+ REPEAL_AMENDEMENT_CONFIRMATION: "Deseja [Concept('concept_amendment_repeal', '$concept_repeal$')] [Amendment.GetName]?[ConcatIfNeitherEmpty('\n\n$DATA_AMENDMENTS_REPEAL_HEADER$\n', Amendment.GetOnRepealEffectsDesc)]  "
+ SPONSOR_MODIFIER_HEADER: "#title [concept_interest_group] Patrocinador:#!"

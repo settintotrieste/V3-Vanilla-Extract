@@ -1,0 +1,76 @@
+﻿l_braz_por:
+ ##### PORTUGAL SINGLE FIRE EVENTS 1 #####
+ # Events
+ #1 Construction of Gremio Literario
+ portugal_single_fire_events.1.t: "Obra do Grémio Literário"
+ portugal_single_fire_events.1.d: "Membros do grupo [SCOPE.gsInterestGroup('intelligentsia_scope').GetName] estão promovendo a ideia de fundar um clube literário privado chamado \"Grémio Literário\". Eles pediram apoio financeiro e político para tornar essa visão realidade."
+ portugal_single_fire_events.1.f: "\"[ROOT.GetCountry.GetRuler.GetFirstNameNoFormatting], pela Graça de Deus, [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] do país [ROOT.GetCountry.GetNameNoFormatting] e de todos os Seus Domínios.\n\nQue todos os que receberem a minha Carta saibam que, considerando o que me foi representado pelo Conselho de Estado por meio do Ministro Honorário e Secretário de Estado, Rodrigo da Fonseca Magalhães, na qualidade de Presidente da Comissão encarregada de redigir os estatutos que regem a sociedade denominada Grémio Literário...\""
+ portugal_single_fire_events.1.a: "Vocês têm a nossa generosa aprovação."
+ portugal_single_fire_events.1.b: "Suplicar não é o caminho para buscar conhecimento."
+ #2 Asylums of [state]
+ portugal_single_fire_events.2.t: "Asilos de [SCOPE.sState('azores_state_scope').GetName]"
+ portugal_single_fire_events.2.d: "O grupo secular [SCOPE.gsInterestGroup('intelligentsia_scope').GetName] ficou incomodado com a notícia de que o Asilo da Infância Desvalida da Horta estaria doutrinando menores com fervor religioso. Eles exigem ação para proteger a juventude do dogma religioso."
+ portugal_single_fire_events.2.f: "\"Dizem a nós, liberais, para nos calarmos. Que isso é caridade, que alimenta os famintos, que a #italic melhoria moral#! é inseparável do Evangelho segundo Santo Antônio. Nós respondemos: existe a caridade que liberta e a caridade que aprisiona. Esta é a segunda.\""
+ portugal_single_fire_events.2.a: "O grupo [SCOPE.gsInterestGroup('devout_scope').GetName] tem todo o direito de moldar a próxima geração de patriotas do povo [SCOPE.GetRootScope.GetCountry.GetAdjective]."
+ portugal_single_fire_events.2.b: "É verdade, isso foi longe demais."
+ portugal_single_fire_events.2.c: "Resolvam entre vocês."
+ #3 The Aqueduct Murderer
+ portugal_single_fire_events.3.t: "O Assassino do Aqueduto"
+ portugal_single_fire_events.3.d: "Há vários relatos a respeito de um assassino em série, conhecido como \"O Assassino do Aqueduto\". Supostamente, ele matou dezenas de pessoas e as atirou do Aqueduto das Águas Livres. O povo exige ação imediata."
+ portugal_single_fire_events.3.f: "A luz do lampião tremeluzia na madrugada úmida e refletia na pedra molhada. Botas ecoavam no arco do aqueduto enquanto o vento do rio agitava a quietude abaixo. Então, uma figura pálida e imóvel surgiu entre a escuridão e o abismo."
+ portugal_single_fire_events.3.a: "Enviar imediatamente oficiais experientes da lei."
+ portugal_single_fire_events.3.b: "Temos especialistas treinados justamente para esse tipo de caso."
+ portugal_single_fire_events.3.c: "Monte uma encenação pública para sacrificar uma alma corajosa."
+ portugal_single_fire_events.3.e: "Assassinato?! Todos sabem que o aqueduto é onde se atende ao chamado do vazio."
+ #4 The Wine Blight
+ portugal_single_fire_events.4.t: "A Praga do Vinho"
+ portugal_single_fire_events.4.d: "Uma epidemia de mofo atingiu os vinhedos de [SCOPE.sState('madeira_state_scope').GetName], paralisando a produção do famoso vinho Madeira. Comerciantes estrangeiros começaram a sair desesperadamente da ilha."
+ portugal_single_fire_events.4.f: "\"Dentre todos os vinhos produzidos nos últimos quinhentos anos, o Madeira se destaca como o mais característico de sua época e localização. É uma bebida extraordinária, criada por meio de fogo e calor. As vinhas, alimentadas pelas cinzas de uma floresta antiga que foi queimada há cinco séculos, estão enraizadas em um solo rochoso, formado por erupções vulcânicas que ocorreram há aproximadamente 14 milhões de anos.\""
+ portugal_single_fire_events.4.a: "Enviar cientistas para pesquisar e elaborar uma solução rápida."
+ portugal_single_fire_events.4.b: "Compensar os comerciantes antes que saiam."
+ portugal_single_fire_events.4.c: "Vamos erguer as mãos e contemplar o céu."
+ #5 Zoological Garden
+ portugal_single_fire_events.5.t: "Jardim Zoológico"
+ portugal_single_fire_events.5.d: "Um grupo de médicos entusiasmados preparou planos detalhados para o primeiro zoológico de [SCOPE.sState('capital_scope').GetName]. Eles querem a aprovação e o apoio do governo para realizar o projeto."
+ portugal_single_fire_events.5.f: "O menino segurava firmemente a mão enluvada da mãe e seus olhos iam do balanço da tromba de um elefante ao brilho das penas verdes e douradas no alto. Cada jaula parecia uma porta para outro mundo: macacos pulavam como fogos de artifício vivos e o bocejo de um leão ecoava pelo peito dele.\n\nNaquele momento, [SCOPE.sState('capital_scope').GetNameNoFormatting] parecia tão grande quanto os mapas em seu livro escolar."
+ portugal_single_fire_events.5.a: "[ROOT.GetCountry.GetRuler.GetCustom('BR_OA')|U] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] aprova."
+ portugal_single_fire_events.5.b: "E o que vem depois? Um parlamento para papagaios?"
+ #6 Women of the Worms
+ portugal_single_fire_events.6.t: "Mulheres dos Vermes"
+ portugal_single_fire_events.6.d: "Duas curandeiras populares de [SCOPE.sState('shanghai_state_scope').GetName] estão trabalhando em um hotel de [SCOPE.sState('capital_scope').GetName], alegando curar problemas de visão com métodos alternativos. O governador, que também é médico, tentou impedi-las, mas as objeções dos moradores se tornaram uma questão de ordem pública."
+ portugal_single_fire_events.6.f: "\"Dizem que é um daqueles encantamentos orientais que usa diabretes demoníacos, magia sombria e coisas do tipo. Prefiro ficar cega a ver o diabo todos os dias depois disso. Hum... Não, obrigada\".\n\nGlória retrucou: \"Você já não vê o diabo ao seu lado todas as manhãs, Mara? Qual é a diferença, pelo amor de Deus?\"."
+ portugal_single_fire_events.6.a: "Rotulá-las como bruxas e tomar as medidas necessárias em relação a elas."
+ portugal_single_fire_events.6.b: "Forçar o governador a libertar as mulheres para aliviar a tensão."
+ portugal_single_fire_events.6.c: "Deixar que o país [SCOPE.sCountry('shanghai_owner_scope').GetName] lide com elas, deportando as duas."
+ # Modifiers
+ # portugal_single_fire_events.1
+ portugal_single_fire_events_gremio_expense_mod: "Grémio Literário Financiado"
+ portugal_single_fire_events_gremio_ig_approval_mod: "Grémio Literário Aprovado"
+ portugal_single_fire_events_gremio_state_mod: "Clube Literário Privado"
+ portugal_single_fire_events_gremio_ig_disapproval_mod: "Recusou o Financiamento do Grémio Literário"
+ # portugal_single_fire_events.2
+ portugal_single_fire_events_azores_support_mod: "Doutrinação Religiosa Permitida"
+ portugal_single_fire_events_azores_not_support_mod: "Doutrinação Religiosa Proibida"
+ portugal_single_fire_events_azores_ignore_mod: "Crianças Doutrinadas"
+ portugal_single_fire_events_azores_state_devout_mod: "Doutrinação Religiosa Incentivada"
+ portugal_single_fire_events_azores_state_intelligentsia_mod: "Doutrinação Religiosa Interrompida"
+ # portugal_single_fire_events.3
+ portugal_single_fire_events_law_officers_authority_mod: "Investigando Oficiais da Lei"
+ portugal_single_fire_events_secret_police_expense_mod: "Polícia Secreta Financiada"
+ portugal_single_fire_events_ignored_mod: "Caso de Assassino em Série Ignorado"
+ portugal_single_fire_events_dishonorable_stunt_mod: "Encenação Desonrosa"
+ # portugal_single_fire_events.4
+ portugal_single_fire_events_mildew_epidemic_mod: "Epidemia de Mofo"
+ portugal_single_fire_events_sent_physicians_mod: "Pesquisando Médicos"
+ portugal_single_fire_events_sent_physicians_expense_mod: "Financiou a Pesquisa de Epidemia das Colheitas"
+ portugal_single_fire_events_merchants_compensated_mod: "Compensou os Comerciantes Angustiados"
+ portugal_single_fire_events_praying_mod: "Alívio Clerical à Epidemia"
+ # portugal_single_fire_events.5
+ portugal_single_fire_events_zoo_supported_mod: "Obra de Zoológico"
+ portugal_single_fire_events_zoo_supported_expense_mod: "Obra de Zoológico Financiada"
+ portugal_single_fire_events_zoo_rejected_mod: "Obra de Zoológico Rejeitada"
+ portugal_single_fire_events_zoo_sol_mod: "Zoológico na Cidade"
+ # portugal_single_fire_events.6
+ portugal_single_fire_events_worm_women_witches_mod: "Encenação Pública de Bruxaria"
+ portugal_single_fire_events_zoo_worm_women_free_mod: "Autoridades Interrompidas"
+ portugal_single_fire_events_zoo_worm_women_free_state_mod: "Tratamentos Não Higienizados"

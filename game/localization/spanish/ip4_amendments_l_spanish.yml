@@ -1,0 +1,9 @@
+﻿l_spanish:
+ amendment_test: "$concept_amendment$ de prueba"
+ amendment_test_desc: "Esta descripción corresponde a una enmienda de prueba"
+ REPEAL_AMENDMENT_PENDING: "La [concept_amendment|l] no forma parte de una [concept_law|l] activa"
+ REPEAL_AMENDMENT_NO_GOVERNMENT_OPPOSITION: "Ningún [Concept('concept_interest_group', 'grupo de interés')] del [concept_government|l] se opone a la [concept_amendment|l]"
+ REPEAL_AMENDMENT_WEAK_GOVERNMENT_OPPOSITION: "Los [Concept('concept_interest_group', '$concept_interest_groups$')|l] en el [concept_government|l] que se oponen a la [concept_amendment|l] tienen menos [concept_clout|l] que aquellos que la apoyan"
+ REPEAL_AMENDMENT_ON_COOLDOWN: "No se puede derogar hasta el $DATE|v$"
+ REPEAL_AMENDEMENT_CONFIRMATION: "¿Quieres [Concept('concept_amendment_repeal', 'derogar')] [Amendment.GetName]?[ConcatIfNeitherEmpty('\n\n$DATA_AMENDMENTS_REPEAL_HEADER$\n', Amendment.GetOnRepealEffectsDesc)]  "
+ SPONSOR_MODIFIER_HEADER: "#title [concept_interest_group] patrocinador:#!"

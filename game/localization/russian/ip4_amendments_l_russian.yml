@@ -1,0 +1,9 @@
+﻿l_russian:
+ amendment_test: "Тестовая поправка"
+ amendment_test_desc: "Это описание тестовой поправки"
+ REPEAL_AMENDMENT_PENDING: "Эта [Concept('concept_amendment', 'поправка')] не является частью действующего [Concept('concept_law', 'закона')]"
+ REPEAL_AMENDMENT_NO_GOVERNMENT_OPPOSITION: "Ни одна из [Concept('concept_interest_group', 'заинтересованных групп')] в [Concept('concept_government', 'правительстве')] не выступает против этой [Concept('concept_amendment', 'поправки')]"
+ REPEAL_AMENDMENT_WEAK_GOVERNMENT_OPPOSITION: "[Concept('concept_clout', 'Уровень влияния')] [Concept('concept_interest_group', 'заинтересованных групп')] в [Concept('concept_government', 'правительстве')], выступающих против [Concept('concept_amendment', 'поправки')], ниже, чем у её сторонников"
+ REPEAL_AMENDMENT_ON_COOLDOWN: "Невозможно отменить до $DATE|v$"
+ REPEAL_AMENDEMENT_CONFIRMATION: "Вы хотите [Concept('concept_amendment_repeal', 'отменить')] поправку «[Amendment.GetName]»?[ConcatIfNeitherEmpty('\n\n$DATA_AMENDMENTS_REPEAL_HEADER$\n', Amendment.GetOnRepealEffectsDesc)]  "
+ SPONSOR_MODIFIER_HEADER: "#title Спонсируется [Concept('concept_interest_group', 'заинтересованная группа')]:#!"

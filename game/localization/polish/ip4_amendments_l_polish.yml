@@ -1,0 +1,9 @@
+﻿l_polish:
+ amendment_test: "$concept_amendment$ testowa"
+ amendment_test_desc: "To jest opis poprawki testowej."
+ REPEAL_AMENDMENT_PENDING: "[concept_amendment] nie stanowi części obowiązującego [Concept('concept_law', 'prawa')]"
+ REPEAL_AMENDMENT_NO_GOVERNMENT_OPPOSITION: "[Concept('concept_amendment', 'Poprawce')] nie przeciwstawiają się żadne [Concept('concept_interest_group', '$concept_interest_groups$')|l] w [Concept('concept_government', 'rządzie')]"
+ REPEAL_AMENDMENT_WEAK_GOVERNMENT_OPPOSITION: "[Concept('concept_interest_group', '$concept_interest_groups$')] w [Concept('concept_government', 'rządzie')] sprzeciwiające się [Concept('concept_amendment', 'poprawce')] mają mniejszą [Concept('concept_clout', 'siłę przebicia')] niż grupy ją popierające"
+ REPEAL_AMENDMENT_ON_COOLDOWN: "Można uchylić dopiero w następującym terminie: $DATE|v$"
+ REPEAL_AMENDEMENT_CONFIRMATION: "Czy chcesz [Concept('concept_amendment_repeal', 'uchylić')] następującą poprawkę: [Amendment.GetName|l]?[ConcatIfNeitherEmpty('\n\n$DATA_AMENDMENTS_REPEAL_HEADER$\n', Amendment.GetOnRepealEffectsDesc)]  "
+ SPONSOR_MODIFIER_HEADER: "#title Sponsorowanie [Concept('concept_interest_group', 'grupy interesu')]:#!"

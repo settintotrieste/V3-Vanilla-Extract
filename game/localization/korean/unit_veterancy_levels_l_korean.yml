@@ -1,0 +1,11 @@
+﻿l_korean:
+ no_veterancy: "신병"
+ veterancy1: "정규병"
+ veterancy2: "숙련병"
+ veterancy3: "베테랑"
+ veterancy4: "정예병"
+ ship_veterancy_none: "$no_veterancy$"
+ ship_veterancy_1: "$veterancy1$"
+ ship_veterancy_2: "$veterancy2$"
+ ship_veterancy_3: "$veterancy3$"
+ ship_veterancy_4: "$veterancy4$"

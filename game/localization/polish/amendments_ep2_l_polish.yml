@@ -1,0 +1,13 @@
+﻿l_polish:
+ amendment_frugal_ordinance: "Rozporządzenie w sprawie oszczędzania"
+ amendment_frugal_ordinance_desc: "Rząd ściśle ogranicza i reguluje dostęp plebejuszy do dóbr luksusowych, rozrywki i literatury."
+ amendment_zaibatsu_oligopoly: "Oligopol zaibatsu"
+ amendment_zaibatsu_oligopoly_desc: "Gospodarka została zdominowana przez zamknięty krąg zamożnych korporacji militarno-przemysłowych zaibatsu, pozostających w symbiotycznej relacji z państwem."
+ amendment_zaibatsu_oligopoly_1: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_1_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_zaibatsu_oligopoly_2: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_2_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_taikunate: "Taikunat"
+ amendment_taikunate_desc: "Klan Tokugawa cieszy się specjalnymi przywilejami w ramach systemu parlamentarnego, przy czym głowa klanu sprawuje stałą funkcję szefa rządu."
+ amendment_reformed_shinsengumi: "Następcy shinsengumi"
+ amendment_reformed_shinsengumi_desc: "Państwowa tajna policja ma swoje korzenie w shinsengumi, elitarnej jednostce zbrojnych, której szogunat zlecił utrzymanie porządku w Kioto."

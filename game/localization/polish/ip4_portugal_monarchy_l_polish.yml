@@ -1,0 +1,36 @@
+﻿l_polish:
+ ##### PORTUGAL MONARCHY #####
+ #1 Maria dies while giving birth to 13th child, Carlos becomes the ruler
+ portuguese_monarchs.1.t: "Dobra matka"
+ portuguese_monarchs.1.d: "Pomimo wieloletnich ostrzeżeń ze strony królewskich lekarzy [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName] umiera podczas trzynastego porodu w wieku [ROOT.GetCountry.GetRuler.GetAge] lat."
+ portuguese_monarchs.1.f: "„Jej Wysokość [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] zaczęła zauważać oznaki zbliżającego się rozwiązania wczoraj wieczorem o dziewiątej trzydzieści. Komplikacje podczas porodu wymagały podjęcia przez lekarzy interwencji, dzięki której niemowlę bezpiecznie wydobyto, a przed zabiegiem udzielono mu chrztu.\n\nO godzinie dziesiątej rano osiągnięto zamierzony rezultat wspomnianej interwencji.﻿ Niestety, po upływie półtorej godziny Jej Wysokość, skrajnie wyczerpana, po przyjęciu wszystkich sakramentów, oddała swą duszę Bogu.\n\n– Francisco Elias Rodrigues da Silveira, dr Kessler, Ignacio António da Fonseca Benevides, António Joaquim Farto”.\n\n#italic Gazeta Rządowa#!"
+ portuguese_monarchs.1.a: "Jej potomstwo będzie kontynuować jej dziedzictwo."
+ portuguese_monarchs.1_tt: "Wybrano już odpowiedniego następcę, który założy koronę."
+ #2 Carlos I gets assassinated by radicals and Manuel II becomes the new king
+ portuguese_monarchs.2.t: "Ni stąd, ni zowąd"
+ portuguese_monarchs.2.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName], prawowity następca, ginie z rąk fanatycznych sprawców, gdy rodzinna królewska cieszyła się spokojną przejażdżką swoim powozem."
+ portuguese_monarchs.2.f: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], podróżując otwartym powozem, wpada w zasadzkę Alfreda Luísa da Costy i Manuela Buíçy. Podczas nieszczęśliwej wymiany ognia władca i jego następca zostają zastrzeleni. Zraniono również jego młodszego syna, który w najbliższym czasie zostanie koronowany.\n\nZdaniem niektórych działanie zabójców jest odważnym sprzeciwem wobec represyjnej monarchii, podczas gdy inni uważają, że to gorączkowa próba rozpoczęcia transformacji politycznej.\n\nDochodzenie wykazało, że zabójcy należeli do większej grupy rewolucjonistów zwanej Carbonária, której celem jest utworzenie republiki w państwie o nazwie [ROOT.GetCountry.GetNameNoFormatting]."
+ portuguese_monarchs.2.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] odczuwa niezwykły ciężar korony na głowie w swej nowej roli."
+ portuguese_monarchs.2_tt: "Drugi syn zamordowanego władcy nie odniósł żadnych ran śmiertelnych. Jest to teraz jedyny rozsądny kandydat do tronu."
+ #3 Manuel II leaves the country after Monarchy gets abolished.
+ portuguese_monarchs.3.t: "Lot smoków"
+ portuguese_monarchs.3.d: "Trwające wieki rządy Najjaśniejszego Domu Bragança kończą się w państwie o nazwie [ROOT.GetCountry.GetName]. Mieszkańcy udowodnili, że prawdziwa szlachetność jest w zakorzeniona w ich sercach i przejawia się w ich czynach."
+ portuguese_monarchs.3.f: "Niegdyś na świat przyszedł człowiek, który stał się założycielem rodu wielu królów i królowych rządzących tą samą ziemią, w której wykopano jego grób.\n\nJego ojciec, monarcha Portugalii, nadał mu imię Alfonso w 1337 roku kalendarza gregoriańskiego.\n\nDzisiaj kończy się historia tego dziedzictwa.\n\nJutro stanie się symbolem triumfu zwykłych ludzi w walce przeciwko tym, którzy okrzyknęli się wybrańcami."
+ portuguese_monarchs.3.a: "Ostatni raz wzbijemy się w powietrze."
+ portuguese_monarchs.3_tt: "Król [SCOPE.sCharacter('manuel_scope').GetFullName] musi opuścić państwo, aby zapobiec konfliktowi i wyrządzeniu krzywdy członkom rodziny. Być może już nigdy nie wróci."
+ #4 Cholera outbreak of 1953 - 1956 during Pedro V, where he decides on what to do
+ portuguese_monarchs.4.t: "[SCOPE.sState('outbreak_state').GetName] – wybuch epidemii w tym obszarze administracyjnym"
+ portuguese_monarchs.4.d: "Mówi się o epidemii cholery w obszarze administracyjnym o nazwie [SCOPE.sState('outbreak_state').GetName]. Ludzie otwarcie proszą urzędników o pomoc."
+ portuguese_monarchs.4.f: "– [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] musi wiedzieć, że prasa jest kluczowym źródłem szerzenia wiedzy naukowej wśród naszych poddanych w regionie. Ci, którzy nie umieją czytać, mogą zapytać przyjaciół i rodzinę o najnowsze wieści w sprawie sposobów ochrony przed niewidzialnym zagrożeniem. Heroldowie miejscy również zostali posłani na większość ulic.\n\n– Oczywiście, jak w przypadku każdej katastrofy, w każdym zakątku regionu pojawili się spekulanci wszelkiej maści chcący napełnić sakiewki z pomocą strachu. W takich czasach można się było tego jednak spodziewać."
+ portuguese_monarchs.4.a: "Wyślij pomoc."
+ portuguese_monarchs.4.b: "Musimy się z nimi spotkać na miejscu, aby zwiększyć morale."
+ portuguese_monarchs.4.c: "Niech radzą sobie bez wsparcia."
+ # Modifiers
+ distant_outbreak_aid_mod: "Pomoc w walce z epidemią na odległość"
+ aided_for_outbreak_mod: "Zapewniono pomoc w walce z epidemią"
+ outbreak_site_visit_mod: "Wizyta w miejscu wybuchu epidemii"
+ visited_hospitals_mod: "Wizyta w szpitalach"
+ aided_directly_by_the_ruler_mod: "Pomoc zapewniona przez samego władcę"
+ refused_outbreak_aid_mod: "Odmówiono pomocy w walce z epidemią"
+ outbreak_without_aid_mod: "Epidemia pogarsza się"
+ disease_outbreak_mod: "Epidemia choroby"

@@ -1,0 +1,13 @@
+﻿l_russian:
+ amendment_frugal_ordinance: "Указ о бережливости"
+ amendment_frugal_ordinance_desc: "Доступ простолюдинов к предметам роскоши, развлечениям и литературе строго ограничен и контролируется правительством."
+ amendment_zaibatsu_oligopoly: "Олигополия дзайбацу"
+ amendment_zaibatsu_oligopoly_desc: "В экономике страны ведущую роль играют несколько процветающих военно-промышленных дзайбацу, функционирующих в симбиозе с государством."
+ amendment_zaibatsu_oligopoly_1: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_1_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_zaibatsu_oligopoly_2: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_2_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_taikunate: "Тайкунат"
+ amendment_taikunate_desc: "В этой парламентской системе клан Токугава сохраняет особые привилегии и глава клана является несменяемым главой правительства."
+ amendment_reformed_shinsengumi: "Преемственность Синсэнгуми"
+ amendment_reformed_shinsengumi_desc: "Тайная полиция страны ведёт своё начало от Синсэнгуми, элитного отряда мечников, нанятого бакуфу для поддержания порядка в Киото."

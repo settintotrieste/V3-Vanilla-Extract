@@ -1,0 +1,18 @@
+﻿l_russian:
+ # Stances
+ stance_none: "Нет"
+ stance_conquer_region: "Завоевание региона"
+ stance_protect_region: "Защита региона"
+ stance_colonize_region: "Колонизация региона"
+ # AI Values
+ AI_REGION_STANCE_BASE_VALUE: "#b Базовое значение#!"
+ AI_REGION_STANCE_NUMBER_OF_CLAIMS: "Количество [Concept('concept_claim', 'претензий')]"
+ AI_REGION_STANCE_CAPITAL_REGION: "[Concept('concept_capital_state', 'Столичный')] [Concept('concept_strategic_region', 'регион')]"
+ AI_REGION_STANCE_WANTS_TO_OPEN_UP_JAPAN: "Стремится открыть #b Японию#!"
+ AI_REGION_STANCE_IS_LOYAL_SUBJECT: "#b Верный#! [Concept('concept_subject', 'субъект')]"
+ AI_REGION_STANCE_FREE_REAL_ESTATE: "[Concept('concept_state', 'Области')], принадлежащие [Concept('concept_decentralized_nations', 'децентрализованным государствам')] и [Concept('concept_unrecognized_power', 'непризнанным державам')]"
+ AI_REGION_STANCE_CIVILIZING_MISSION_RESEARCHED: "Исследована технология «[GetTechnology('civilizing_mission').GetName]»"
+ AI_REGION_STANCE_QUININE_RESEARCHED: "Исследована технология «[GetTechnology('quinine').GetName]»"
+ AI_REGION_STANCE_EXISTING_REGION_STANCES: "Существующая позиция"
+ AI_REGION_STANCE_SMALL_COUNTRY: "#v [Country.GetNameNoFormatting]#! — небольшая [Concept('concept_country', 'страна')]"
+ AI_REGION_STANCE_COLONIAL_COUNTRY: "#v [Country.GetNameNoFormatting]#! — [Concept('concept_colony', 'колония')]"

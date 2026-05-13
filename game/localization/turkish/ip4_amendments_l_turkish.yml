@@ -1,0 +1,9 @@
+﻿l_turkish:
+ amendment_test: "$concept_amendment$i Sına"
+ amendment_test_desc: "Test değişikliği için açıklama metnidir."
+ REPEAL_AMENDMENT_PENDING: "[concept_amendment], yürürlükteki bir [Concept('concept_law', 'Kanunun')] parçası değil"
+ REPEAL_AMENDMENT_NO_GOVERNMENT_OPPOSITION: "[Concept('concept_government', 'Hükümette')], [Concept('concept_amendment', 'Değişikliğe')] karşı çıkacak [Concept('concept_interest_group', 'Çıkar Grubu')] yok"
+ REPEAL_AMENDMENT_WEAK_GOVERNMENT_OPPOSITION: "[concept_government] bünyesinde, bu [concept_amendment] teklifine muhalif olan [Concept('concept_interest_group', '$concept_interest_groups$')] destekçilere kıyasla daha düşük [Concept('concept_clout', 'Tesire')] sahip"
+ REPEAL_AMENDMENT_ON_COOLDOWN: "$DATE|v$ tarihine kadar yürürlükten kaldırılamaz"
+ REPEAL_AMENDEMENT_CONFIRMATION: "[Amendment.GetName] değişikliğini [Concept('concept_amendment_repeal', 'Yürürlükten Kaldırmak')] istiyor musun?[ConcatIfNeitherEmpty('\n\n$DATA_AMENDMENTS_REPEAL_HEADER$\n', Amendment.GetOnRepealEffectsDesc)]  "
+ SPONSOR_MODIFIER_HEADER: "#title Destekçi [concept_interest_group]:#!"

@@ -1,0 +1,13 @@
+﻿l_spanish:
+ Test_negotiation_event: "Test negotiation event"
+ Option_1: "Opción"
+ NEGOTIATION_NO_ENACTING_LAW: "No se está [Concept('concept_enactment_of_laws', 'promulgando')] ninguna [concept_law|l]"
+ NEGOTIATION_INTEREST_GROUP_MARGINALIZED: "El grupo de [INTEREST_GROUP.GetName|l] está [concept_marginalized|l]"
+ NEGOTIATION_IG_REFUSES_TO_NEGOTIATE: "El grupo de [INTEREST_GROUP.GetName|l] se niega a [Concept('concept_negotiation', 'negociar')]"
+ NEGOTIATION_IG_NOT_IN_GOVERNMENT_AND_INDIFFERENT: "El grupo de [INTEREST_GROUP.GetName|l] #b no#! está en el [concept_government|l]"
+ NEGOTIATION_IG_ALREADY_APPROVES: "El grupo de [INTEREST_GROUP.GetName|l] ya [Concept('concept_endorse_oppose', 'respalda')] la [concept_law|l] que se está promulgando"
+ NEGOTIATION_COUNTRY_IS_NEGOTIATING: "[GetPlayer.GetName] ya participa en unas [Concept('concept_negotiation', '$concept_negotiations$')|l]"
+ AMENABILITY_LABEL_REFUSE: "#v #r Rechaza#!#![Nbsp](#r [INTEREST_GROUP.MakeScope.ScriptValue('amenability')]#!)"
+ AMENABILITY_LABEL_TENSE: "#v #r [INTEREST_GROUP.GetCustom('NegotiationLevelName')]#!#![Nbsp](#r [INTEREST_GROUP.MakeScope.ScriptValue('amenability')]#!)"
+ AMENABILITY_LABEL_NORMAL: "#v [INTEREST_GROUP.GetCustom('NegotiationLevelName')]#![Nbsp](#b [INTEREST_GROUP.MakeScope.ScriptValue('amenability')]#!)"
+ AMENABILITY_LABEL_FRIENDLY: "#v #g [INTEREST_GROUP.GetCustom('NegotiationLevelName')]#!#![Nbsp](#g [INTEREST_GROUP.MakeScope.ScriptValue('amenability')]#!)"

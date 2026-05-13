@@ -1,0 +1,18 @@
+﻿l_german:
+ # Stances
+ stance_none: "Keine"
+ stance_conquer_region: "Region erobern"
+ stance_protect_region: "Region schützen"
+ stance_colonize_region: "Region kolonisieren"
+ # AI Values
+ AI_REGION_STANCE_BASE_VALUE: "#b Grundwert#!"
+ AI_REGION_STANCE_NUMBER_OF_CLAIMS: "Zahl der [Concept('concept_claim', '$concept_claims$')]"
+ AI_REGION_STANCE_CAPITAL_REGION: "[Concept('concept_capital_state', '$concept_capital_state_short$')]-[Concept('concept_strategic_region', '$concept_strategic_region_short$')]"
+ AI_REGION_STANCE_WANTS_TO_OPEN_UP_JAPAN: "Will #b $JAP$#! öffnen"
+ AI_REGION_STANCE_IS_LOYAL_SUBJECT: "Ist #b loyales#! [concept_subject]"
+ AI_REGION_STANCE_FREE_REAL_ESTATE: "[Concept('concept_state', '$concept_states$')], die von [Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] und [Concept('concept_unrecognized_power', '$concept_unrecognized_powers$n')] gehalten werden"
+ AI_REGION_STANCE_CIVILIZING_MISSION_RESEARCHED: "[GetTechnology('civilizing_mission').GetName] erforscht"
+ AI_REGION_STANCE_QUININE_RESEARCHED: "[GetTechnology('quinine').GetName] erforscht"
+ AI_REGION_STANCE_EXISTING_REGION_STANCES: "Bestehende $concept_strategic_region_stances_short$"
+ AI_REGION_STANCE_SMALL_COUNTRY: "#v [Country.GetAltNameNoFormatting('NOM')|U]#! ist ein kleines [concept_country]"
+ AI_REGION_STANCE_COLONIAL_COUNTRY: "#v [Country.GetAltNameNoFormatting('NOM')|U]#! ist eine [concept_colony]"

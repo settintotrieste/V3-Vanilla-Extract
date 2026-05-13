@@ -1,3 +1,4 @@
 ﻿l_german:
- canal_suez:0 "Sueskanal"
- canal_panama:0 "Panamakanal"
+ canal_suez: "Sueskanal"
+ canal_panama: "Panamakanal"
+ canal_kiel: "Nord-Ostsee-Kanal"

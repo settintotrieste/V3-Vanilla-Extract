@@ -1,0 +1,36 @@
+﻿l_turkish:
+ ##### PORTUGAL MONARCHY #####
+ #1 Maria dies while giving birth to 13th child, Carlos becomes the ruler
+ portuguese_monarchs.1.t: "İyi Anne"
+ portuguese_monarchs.1.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName], kraliyet doktorlarının yıllarca yaptığı uyarılara rağmen [ROOT.GetCountry.GetRuler.GetAge] yaşında on üçüncü doğumunu yaparken hayatını kaybetti."
+ portuguese_monarchs.1.f: "\"Majesteleri [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] dün gece saat dokuz buçuk sularında doğum sancılarını hissetmeye başladı. Doğumun seyri sırasında birtakım zorluklar ortaya çıktı ve bu durum hekimleri ameliyata başvurmaya mecbur bıraktı. Bu müdahale sonucunda bir bebek dünyaya getirildi, ancak annesinin rahminden çıkarılmadan hemen önce acilen vaftiz edildi.\n\nBu operasyonlar sabah saat 10'da sonuçlandı. Ne yazık ki bundan bir buçuk saat sonra, tüm gücü tükenen Majesteleri kutsal törenlerin ardından ruhunu Tanrı'ya teslim etti.\n\n— Francisco Elias Rodrigues da Silveira, Dr. Kessler, Ignacio António da Fonseca Benevides, António Joaquim Farto.\"\n\n#italic Resmî Gazete#!"
+ portuguese_monarchs.1.a: "Mirası, soyu aracılığıyla devam edecek."
+ portuguese_monarchs.1_tt: "Tacı takacak uygun vâris seçildi bile."
+ #2 Carlos I gets assassinated by radicals and Manuel II becomes the new king
+ portuguese_monarchs.2.t: "Birdenbire"
+ portuguese_monarchs.2.d: "Kraliyet ailesi arabalarında huzurlu bir yolculuğun tadını çıkarırken fanatik saldırganlar [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName] ve muhtemel vârisinin canını almayı başardı."
+ portuguese_monarchs.2.f: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], açık bir arabada seyahat ederken Alfredo Luís da Costa ve Manuel Buíça tarafından pusuya düşürüldü. Trajik bir şekilde mermiler kendisine ve vârisine ölümcül şekilde isabet etti ve kısa süre sonra tahta çıkacak küçük oğlunu yaraladı.\n\nBazıları, kralın öldürülmesinin ardındaki nedenleri baskıcı monarşiye karşı cesur bir duruş olarak değerlendirirken diğerleri bunu siyasi dönüşümü tetiklemek için çılgınca bir çaba olarak gördü.\n\nYapılan incelemelerin ardından suikastçıların, [ROOT.GetCountry.GetNameNoFormatting] topraklarında cumhuriyet kurmayı amaçlayan \"Carbonária\" adlı daha büyük bir devrimci grubun parçası olduğu ortaya çıktı."
+ portuguese_monarchs.2.a: "Kraliyet, yeni [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] üzerine büyük sorumluluk yüklüyor."
+ portuguese_monarchs.2_tt: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName] adlı kişinin ikinci oğlu, ölümcül olmayan yaralarla kurtulduğu için yeni hükümdar olabilecek tek makul aday."
+ #3 Manuel II leaves the country after Monarchy gets abolished.
+ portuguese_monarchs.3.t: "Ejderhaların Kaçışı"
+ portuguese_monarchs.3.d: "Pek Huzurlu Bragança Hanedanı'nın yüzyıllar süren saltanatı [ROOT.GetCountry.GetName] topraklarında sona erdi. Bölge halkı, gerçek asaletin kalplerinde ve ellerinde olduğunu başarıyla gösterdi."
+ portuguese_monarchs.3.f: "Bir zamanlar kaderi, tam da mezarının kazıldığı topraklarda birçok kral ve kraliçe yetiştirecek hanedanı kurmak olan bir adam vardı.\n\nPortekiz kralı olan babası tarafından kendisine Gregoryen 1337 yılında Alfonso ismi verilmişti.\n\nBugün o miras sona erdi.\n\nYarın, seçilmiş olduklarını iddia edenlere karşı sıradan halkın zaferi kutlanacak."
+ portuguese_monarchs.3.a: "Son kez yola çıkacağız."
+ portuguese_monarchs.3_tt: "Aile üyeleri arasındaki çatışmayı ve onlara verilecek zararı önlemek amacıyla Kral [SCOPE.sCharacter('manuel_scope').GetFullName] ülkeyi terk etmek zorunda kaldı. Muhtemelen bir daha geri dönmeyecek."
+ #4 Cholera outbreak of 1953 - 1956 during Pedro V, where he decides on what to do
+ portuguese_monarchs.4.t: "[SCOPE.sState('outbreak_state').GetName] topraklarında salgın"
+ portuguese_monarchs.4.d: "[SCOPE.sState('outbreak_state').GetName] topraklarında kolera salgını olduğuna dair haberler geliyor. Halk, yetkililerden açıkça yardım talep ediyor."
+ portuguese_monarchs.4.f: "\"... Evet sayın [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], gazeteler bölgedeki tebaamıza bilimsel bilgiyi ulaştırma konusunda önemli bir kaynak oldu. Okuma yazma bilmeyen kişilerin, kendilerini görünmeyen şeylere karşı korumak için son gelişmeleri arkadaşlarına ve ailelerine sormaları öneriliyor. Ayrıca birçok sokağa tellal gönderildi.\n\nHer felakette olduğu gibi topraklarımızın dört bir yanında hem iyi hem de kötü niyetli kişiler ortaya çıkıp korkuyla kasalarını doldurmaya başladılar ancak bu gibi zamanlarda bunların yaşanması beklenen bir durum.\""
+ portuguese_monarchs.4.a: "Onlara yardım gönder."
+ portuguese_monarchs.4.b: "Morallerini yükseltmek için onları bölgelerinde ziyaret etmeliyiz."
+ portuguese_monarchs.4.c: "Başlarının çaresine baksınlar."
+ # Modifiers
+ distant_outbreak_aid_mod: "Uzak Bölgelere Salgın Yardımı"
+ aided_for_outbreak_mod: "Salgın Yardımı Yapıldı"
+ outbreak_site_visit_mod: "Salgın Bölgesi Ziyareti"
+ visited_hospitals_mod: "Hastaneler Ziyaret Edildi"
+ aided_directly_by_the_ruler_mod: "Doğrudan Hükümdar Yardımı"
+ refused_outbreak_aid_mod: "Salgın Yardımı Reddedildi"
+ outbreak_without_aid_mod: "Salgın Kötüleşti"
+ disease_outbreak_mod: "Hastalık Salgını"

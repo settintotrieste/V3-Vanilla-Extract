@@ -1,0 +1,76 @@
+﻿l_simp_chinese:
+ ##### PORTUGAL SINGLE FIRE EVENTS 1 #####
+ # Events
+ #1 Construction of Gremio Literario
+ portugal_single_fire_events.1.t: "文学协会的建立"
+ portugal_single_fire_events.1.d: "[SCOPE.gsInterestGroup('intelligentsia_scope').GetName]成员一直在推动建立一个被称为“文学协会”的私人文学俱乐部。他们已请求财政和政治支持，以实现这一愿景。"
+ portugal_single_fire_events.1.f: "“蒙上帝恩典，[ROOT.GetCountry.GetNameNoFormatting]及所有领地的[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]，[ROOT.GetCountry.GetRuler.GetFirstNameNoFormatting]，\n\n告知所有见特许状者：国务委员会代表我授权名誉部长兼国务秘书罗德里戈·达·丰塞卡·马加良斯，以协会主席的身份起草管理文学协会的章程……”"
+ portugal_single_fire_events.1.a: "我们完全同意。"
+ portugal_single_fire_events.1.b: "乞求不是追寻知识的方法。"
+ #2 Asylums of [state]
+ portugal_single_fire_events.2.t: "[SCOPE.sState('azores_state_scope').GetName]的收容所"
+ portugal_single_fire_events.2.d: "世俗[SCOPE.gsInterestGroup('intelligentsia_scope').GetName]对奥尔塔弱势儿童收容所向未成年人灌输宗教狂热的消息感到不安。他们要求采取行动保护年轻人免受宗教的影响。"
+ portugal_single_fire_events.2.f: "“我们自由主义者被告知要保持沉默——这是慈善，养活了饥饿的人，根据圣安东尼的说法，#italic 道德建设#!与福音密不可分。我们的回答是：慈善有解放的慈善，也有束缚的慈善，而这是后者。”"
+ portugal_single_fire_events.2.a: "[SCOPE.gsInterestGroup('devout_scope').GetName]有权利塑造[SCOPE.GetRootScope.GetCountry.GetAdjective]的下一代爱国者。"
+ portugal_single_fire_events.2.b: "确实，这有点太过分了。"
+ portugal_single_fire_events.2.c: "你们自己解决。"
+ #3 The Aqueduct Murderer
+ portugal_single_fire_events.3.t: "渡槽杀手"
+ portugal_single_fire_events.3.d: "有多份报告提到了一名被称为“渡槽杀手”的连环杀人犯。据悉，他杀死了数十名受害者，并将尸体扔下阿瓜斯·利夫雷斯渡槽。公众要求立即采取行动。"
+ portugal_single_fire_events.3.f: "黎明时分，灯笼在雾蒙蒙的空气中闪烁，照耀在光滑的石头上。河风搅动着下面的寂静，靴子踩在渡槽的拱门上，发出空洞的回声。然后，一个苍白的身影，一动不动，出现在黑暗的边缘，水滴滴下的地方。"
+ portugal_single_fire_events.3.a: "立即派出经验丰富的司法官员。"
+ portugal_single_fire_events.3.b: "我们正好培训了擅长此类案件的专家。"
+ portugal_single_fire_events.3.c: "组织一场公开表演，献祭一位勇敢的灵魂。"
+ portugal_single_fire_events.3.e: "谋杀？！所有人都知道渡槽是自杀的地方。"
+ #4 The Wine Blight
+ portugal_single_fire_events.4.t: "葡萄枯萎病"
+ portugal_single_fire_events.4.d: "一场霉菌疫病袭击了[SCOPE.sState('madeira_state_scope').GetName]的葡萄园，严重影响了大名鼎鼎的马德拉葡萄酒的生产。外国商人开始恐慌地撤出该岛。"
+ portugal_single_fire_events.4.f: "“在过去五百年酿造的所有葡萄酒中，马德拉葡萄酒是最有特色的，是火与热创造的一种非凡饮品。马德拉的葡萄藤由五个世纪前烧毁的古森林的灰烬供养，根植于大约1400万年前火山喷发形成的石质土壤中。”"
+ portugal_single_fire_events.4.a: "派科学家调查研究，迅速找出解决方案。"
+ portugal_single_fire_events.4.b: "在商人离开前予以补偿。"
+ portugal_single_fire_events.4.c: "让我们高举双手，凝望天空。"
+ #5 Zoological Garden
+ portugal_single_fire_events.5.t: "动物园"
+ portugal_single_fire_events.5.d: "一群充满激情的博士为[SCOPE.sState('capital_scope').GetName]的第一个动物园制定了详细的计划。他们希望得到政府的批准和支持，以实现该项目。"
+ portugal_single_fire_events.5.f: "男孩紧紧握着妈妈戴着手套的手，眼睛从大象摆动的鼻子飘到上方金绿色的羽毛上。每个笼子似乎都是通往另一个世界的大门。猴子活跃地蹦跳，狮子打着哈欠。\n\n在那一刻，[SCOPE.sState('capital_scope').GetNameNoFormatting]就如同课本中的地图一样广阔。"
+ portugal_single_fire_events.5.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]支持。"
+ portugal_single_fire_events.5.b: "然后呢，组建一个鹦鹉议会？"
+ #6 Women of the Worms
+ portugal_single_fire_events.6.t: "蠕虫的女仆"
+ portugal_single_fire_events.6.d: "两名来自[SCOPE.sState('shanghai_state_scope').GetName]的民间治疗师在[SCOPE.sState('capital_scope').GetName]的一家旅馆工作，宣称可以用替代疗法治疗眼病。总督本人也是一名医生，试图阻止她们，但当地人的反对已成为公共秩序问题。"
+ portugal_single_fire_events.6.f: "“她们说这是东方的法术，能通过小魔鬼、黑魔法之类的获得帮助。我宁愿一直瞎着，也不想之后天天看到魔鬼。没错……算了吧。”\n\n格洛里娅厉声回答道：“你不是已经每天早晨都能看到魔鬼在你身边了吗，玛拉？上帝啊，这有什么区别吗？”"
+ portugal_single_fire_events.6.a: "将她们打为女巫，并做出必要的惩罚。"
+ portugal_single_fire_events.6.b: "强迫总督放人以缓解紧张局势。"
+ portugal_single_fire_events.6.c: "把二人驱逐出境，让[SCOPE.sCountry('shanghai_owner_scope').GetName]处理。"
+ # Modifiers
+ # portugal_single_fire_events.1
+ portugal_single_fire_events_gremio_expense_mod: "资助文学协会"
+ portugal_single_fire_events_gremio_ig_approval_mod: "支持文学协会"
+ portugal_single_fire_events_gremio_state_mod: "私人文学俱乐部"
+ portugal_single_fire_events_gremio_ig_disapproval_mod: "拒绝资助文学协会"
+ # portugal_single_fire_events.2
+ portugal_single_fire_events_azores_support_mod: "允许宗教灌输"
+ portugal_single_fire_events_azores_not_support_mod: "禁止宗教灌输"
+ portugal_single_fire_events_azores_ignore_mod: "洗脑儿童"
+ portugal_single_fire_events_azores_state_devout_mod: "鼓励宗教灌输"
+ portugal_single_fire_events_azores_state_intelligentsia_mod: "停止宗教灌输"
+ # portugal_single_fire_events.3
+ portugal_single_fire_events_law_officers_authority_mod: "司法官员调查"
+ portugal_single_fire_events_secret_police_expense_mod: "资助秘密警察"
+ portugal_single_fire_events_ignored_mod: "无视连环杀人案"
+ portugal_single_fire_events_dishonorable_stunt_mod: "可耻的噱头"
+ # portugal_single_fire_events.4
+ portugal_single_fire_events_mildew_epidemic_mod: "霉菌疫病"
+ portugal_single_fire_events_sent_physicians_mod: "研究学者"
+ portugal_single_fire_events_sent_physicians_expense_mod: "资助作物疫病研究"
+ portugal_single_fire_events_merchants_compensated_mod: "补偿陷入困境的商人"
+ portugal_single_fire_events_praying_mod: "教士防疫"
+ # portugal_single_fire_events.5
+ portugal_single_fire_events_zoo_supported_mod: "动物园建造"
+ portugal_single_fire_events_zoo_supported_expense_mod: "资助动物园建造"
+ portugal_single_fire_events_zoo_rejected_mod: "拒绝动物园建造"
+ portugal_single_fire_events_zoo_sol_mod: "城市动物园"
+ # portugal_single_fire_events.6
+ portugal_single_fire_events_worm_women_witches_mod: "女巫噱头"
+ portugal_single_fire_events_zoo_worm_women_free_mod: "干扰政府"
+ portugal_single_fire_events_zoo_worm_women_free_state_mod: "不卫生的治疗"

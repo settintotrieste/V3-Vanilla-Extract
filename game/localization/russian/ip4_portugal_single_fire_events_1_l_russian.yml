@@ -1,0 +1,76 @@
+﻿l_russian:
+ ##### PORTUGAL SINGLE FIRE EVENTS 1 #####
+ # Events
+ #1 Construction of Gremio Literario
+ portugal_single_fire_events.1.t: "Строительство клуба «Гремиу Литерариу»"
+ portugal_single_fire_events.1.d: "[SCOPE.gsInterestGroup('intelligentsia_scope').GetName] хотят учредить частный литературный клуб под названием «Гремиу Литерариу». Они ищут финансовой и политической поддержки, чтобы воплотить эту идею в жизнь."
+ portugal_single_fire_events.1.f: "«Я, [ROOT.GetCountry.GetRuler.GetFirstNameNoFormatting], по воле Божьей [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] [ROOT.GetCountry.GetAltNameNoFormatting('RU_CL_RP')] и всех доминионов,\n\nсообщаю адресатам, что рассмотрела заявление, представленное Cоветом по ходатайству уважаемого министра и государственного секретаря Родригу да Фонсеки Магальяйнша, назначенного председателем комиссии, которой поручена разработка устава общества „Гремиу Литерариу“, и заявляю следующее…»"
+ portugal_single_fire_events.1.a: "Мы великодушно поддержим ваше начинание."
+ portugal_single_fire_events.1.b: "Уговорами знаний не добиться."
+ #2 Asylums of [state]
+ portugal_single_fire_events.2.t: "Приют в области [SCOPE.sState('azores_state_scope').GetName]"
+ portugal_single_fire_events.2.d: "Светские [SCOPE.gsInterestGroup('intelligentsia_scope').GetName|l] обеспокоены тем, что воспитанникам приюта для неблагополучных детей в Орте навязываются религиозные догмы. Они требуют защитить несовершеннолетних от такого влияния."
+ portugal_single_fire_events.2.f: "«Нам, либералам, советовали прикусить языки. Якобы милосердие способно насытить голодного, а #italic нравственное развитие#!, как учил святой Антоний, неотделимо от веры. И всё-таки мы ответим: иногда милосердие дарует свободу, иногда — порабощает. Это как раз второй случай»."
+ portugal_single_fire_events.2.a: "[SCOPE.gsInterestGroup('devout_scope').GetName] имеют полное право влиять на умы нового поколения #tooltippable_name [SCOPE.GetRootScope.GetCountry.GetAdjective|l]их#! патриотов."
+ portugal_single_fire_events.2.b: "Всё действительно зашло слишком далеко."
+ portugal_single_fire_events.2.c: "Разбирайтесь сами."
+ #3 The Aqueduct Murderer
+ portugal_single_fire_events.3.t: "Душегуб с акведука"
+ portugal_single_fire_events.3.d: "Нам поступает множество сообщений о серийном убийце, прозванном «душегубом с акведука». Говорят, он лишил жизни несколько десятков человек, сбросив их с акведука Агуаш-Ливреш. Народ требует скорейшего возмездия."
+ portugal_single_fire_events.3.f: "Свет фонаря мерцал в предрассветном мраке, отражаясь от влажных камней. Стук сапог эхом разносился по мосту, а внизу, над рекой, завывал холодный ветер. Внезапно люди заметили бледную неподвижную фигуру, стоящую у самого края."
+ portugal_single_fire_events.3.a: "Нужно срочно отправить опытных офицеров."
+ portugal_single_fire_events.3.b: "У нас есть специалисты как раз для таких случаев."
+ portugal_single_fire_events.3.c: "Мы превратим эту трагедию в представление."
+ portugal_single_fire_events.3.e: "Это убийца?! Все знают, что он орудует именно на акведуке."
+ #4 The Wine Blight
+ portugal_single_fire_events.4.t: "Гибель винограда"
+ portugal_single_fire_events.4.d: "Виноградники в области [SCOPE.sState('madeira_state_scope').GetName] поражены мучнистой росой, и производство знаменитой мадеры остановлено. Иностранные купцы сильно обеспокоены и начинают покидать остров."
+ portugal_single_fire_events.4.f: "«Из всех вин, появившихся за последние пятьсот лет, знойная мадера наилучшим образом передаёт дух места своего происхождения и времени, в которое она была создана. Виноград для неё выращивают на пепелище древнего леса, на каменистом острове, образовавшемся примерно 14 миллионов лет назад в результате череды извержений»."
+ portugal_single_fire_events.4.a: "Пусть учёные изучат проблему и поскорее найдут решение."
+ portugal_single_fire_events.4.b: "Нужно выплатить компенсацию уезжающим купцам."
+ portugal_single_fire_events.4.c: "Остаётся лишь молиться, воздев очи к небу."
+ #5 Zoological Garden
+ portugal_single_fire_events.5.t: "Зоологический парк"
+ portugal_single_fire_events.5.d: "Группа ветеринаров-энтузиастов подготовила подробные планы первого зоопарка в #tooltippable_name #tooltip:[SCOPE.sState('capital_scope').GetTooltipTag],DATA_STATE_NAME_TOOLTIP,StateTooltip [SCOPE.sState('capital_scope').GetCustom('RU_SL_PP')]#!#!. Чтобы претворить проект в жизнь, им требуется одобрение и поддержка правительства."
+ portugal_single_fire_events.5.f: "Мальчик крепко вцепился в руку матери, затянутую в перчатку. Он заворожённо наблюдает то за плавными изгибами слоновьего хобота, то за сиянием зелёных с золотом перьев. Каждый вольер — это новый удивительный мир. Обезьяны скачут с ветки на ветку, словно ожившие фейерверки, а утробный львиный зевок эхом отзывается в груди ребёнка.\n\nВ этот момент [SCOPE.sState('capital_scope').GetNameNoFormatting] кажется ему не меньше тех огромных пространств, карты которых он видел в учебнике."
+ portugal_single_fire_events.5.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] поддержит этот проект."
+ portugal_single_fire_events.5.b: "Что дальше? Пустим попугаев в парламент?"
+ #6 Women of the Worms
+ portugal_single_fire_events.6.t: "Изгоняющие червей"
+ portugal_single_fire_events.6.d: "Две сотрудницы гостиницы в #tooltippable_name #tooltip:[SCOPE.sState('capital_scope').GetTooltipTag],DATA_STATE_NAME_TOOLTIP,StateTooltip [SCOPE.sState('capital_scope').GetCustom('RU_SL_PP')]#!#! родом из области [SCOPE.sState('shanghai_state_scope').GetName] лечат проблемы со зрением народными методами. Губернатор, врач по образованию, пытается им помешать, но это чрезвычайно злит местных жителей."
+ portugal_single_fire_events.6.f: "«Говорят, эта чёрная магия с Востока обращается к чертям и демоническим силам. Лучше я останусь слепой, чем буду видеть Дьявола до конца своих дней. Ох… Нет уж, спасибо».\n\n«Ты и так каждое утро встречаешь Дьявола, Мара, — гневно парировала Глория. — Так что изменится, скажи мне на милость?»"
+ portugal_single_fire_events.6.a: "Мы обвиним этих знахарок в колдовстве и сделаем что должно."
+ portugal_single_fire_events.6.b: "Пусть губернатор отпустит женщин, чтобы утихомирить толпу."
+ portugal_single_fire_events.6.c: "Мы депортируем дамочек. [SCOPE.sCountry('shanghai_owner_scope').GetName] с ними разберётся."
+ # Modifiers
+ # portugal_single_fire_events.1
+ portugal_single_fire_events_gremio_expense_mod: "Выделены деньги на «Гремиу Литерариу»"
+ portugal_single_fire_events_gremio_ig_approval_mod: "Одобрена идея клуба «Гремиу Литерариу»"
+ portugal_single_fire_events_gremio_state_mod: "Частный литературный клуб"
+ portugal_single_fire_events_gremio_ig_disapproval_mod: "Отказано в финансировании «Гремиу Литерариу»"
+ # portugal_single_fire_events.2
+ portugal_single_fire_events_azores_support_mod: "Разрешено насаждение религии"
+ portugal_single_fire_events_azores_not_support_mod: "Запрещено насаждение религии"
+ portugal_single_fire_events_azores_ignore_mod: "Дети-фанатики"
+ portugal_single_fire_events_azores_state_devout_mod: "Поощряется насаждение религии"
+ portugal_single_fire_events_azores_state_intelligentsia_mod: "Приостановлено насаждение религии"
+ # portugal_single_fire_events.3
+ portugal_single_fire_events_law_officers_authority_mod: "Расследование служителей правопорядка"
+ portugal_single_fire_events_secret_police_expense_mod: "Тайная полиция получает финансирование"
+ portugal_single_fire_events_ignored_mod: "Серия убийств осталась без внимания"
+ portugal_single_fire_events_dishonorable_stunt_mod: "Жестокое представление"
+ # portugal_single_fire_events.4
+ portugal_single_fire_events_mildew_epidemic_mod: "Поражение мучнистой росой"
+ portugal_single_fire_events_sent_physicians_mod: "Исследование учёных"
+ portugal_single_fire_events_sent_physicians_expense_mod: "Выделены деньги на исследование болезни"
+ portugal_single_fire_events_merchants_compensated_mod: "Купцам выплачена компенсация за убытки"
+ portugal_single_fire_events_praying_mod: "Священники борются с болезнью"
+ # portugal_single_fire_events.5
+ portugal_single_fire_events_zoo_supported_mod: "Строительство зоопарка"
+ portugal_single_fire_events_zoo_supported_expense_mod: "Выделены средства на строительство зоопарка"
+ portugal_single_fire_events_zoo_rejected_mod: "Отклонён проект зоопарка"
+ portugal_single_fire_events_zoo_sol_mod: "Городской зоопарк"
+ # portugal_single_fire_events.6
+ portugal_single_fire_events_worm_women_witches_mod: "Публичная борьба с ведьмами"
+ portugal_single_fire_events_zoo_worm_women_free_mod: "Властям не дали вмешаться"
+ portugal_single_fire_events_zoo_worm_women_free_state_mod: "Опасные методы лечения"

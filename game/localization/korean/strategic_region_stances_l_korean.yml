@@ -1,0 +1,18 @@
+﻿l_korean:
+ # Stances
+ stance_none: "없음"
+ stance_conquer_region: "지역 정복"
+ stance_protect_region: "지역 보호"
+ stance_colonize_region: "지역 식민화"
+ # AI Values
+ AI_REGION_STANCE_BASE_VALUE: "#b 기본 수치#!"
+ AI_REGION_STANCE_NUMBER_OF_CLAIMS: "[Concept('concept_claim', '$concept_claims$')] 수"
+ AI_REGION_STANCE_CAPITAL_REGION: "[Concept('concept_capital_state', '$concept_capital_state_short$')] [Concept('concept_strategic_region', '$concept_strategic_region_short$')]"
+ AI_REGION_STANCE_WANTS_TO_OPEN_UP_JAPAN: "#b $JAP$#! 개방을 원함"
+ AI_REGION_STANCE_IS_LOYAL_SUBJECT: "#b 충성파#! [concept_subject]임"
+ AI_REGION_STANCE_FREE_REAL_ESTATE: "[Concept('concept_decentralized_nation', '$concept_decentralized_nations$')] 및 [Concept('concept_unrecognized_power', '$concept_unrecognized_powers$')]이 소유한 [Concept('concept_state', '$concept_states$')]"
+ AI_REGION_STANCE_CIVILIZING_MISSION_RESEARCHED: "[GetTechnology('civilizing_mission').GetName] 연구 완료"
+ AI_REGION_STANCE_QUININE_RESEARCHED: "[GetTechnology('quinine').GetName] 연구 완료"
+ AI_REGION_STANCE_EXISTING_REGION_STANCES: "기존 $concept_strategic_region_stance_short$"
+ AI_REGION_STANCE_SMALL_COUNTRY: "#v [Country.GetNameNoFormatting]#!(은)는 작은 [concept_country]임"
+ AI_REGION_STANCE_COLONIAL_COUNTRY: "#v [Country.GetNameNoFormatting]#!(은)는 [concept_colony]임"

@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ no_veterancy: "新兵蛋子"
+ veterancy1: "训练初成"
+ veterancy2: "训练有素"
+ veterancy3: "经验丰富"
+ veterancy4: "王牌精英"
+ ship_veterancy_none: "$no_veterancy$"
+ ship_veterancy_1: "$veterancy1$"
+ ship_veterancy_2: "$veterancy2$"
+ ship_veterancy_3: "$veterancy3$"
+ ship_veterancy_4: "$veterancy4$"

@@ -1,0 +1,36 @@
+﻿l_spanish:
+ ##### PORTUGAL MONARCHY #####
+ #1 Maria dies while giving birth to 13th child, Carlos becomes the ruler
+ portuguese_monarchs.1.t: "La buena madre"
+ portuguese_monarchs.1.d: "A pesar de años de advertencias de los médicos reales, la [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] [ROOT.GetCountry.GetRuler.GetFirstName] ha muerto durante su decimotercer parto a la edad de [ROOT.GetCountry.GetRuler.GetAge]."
+ portuguese_monarchs.1.f: "«Su Majestad la [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] comenzó a notar contracciones a las nueve y media de anoche. Durante el parto, surgieron complicaciones, lo que obligó a los médicos a recurrir a una intervención, mediante la cual se logró alumbrar a tiempo al infante, que había recibido el bautismo antes del proceso.\n\nLa intervención terminó a las diez de la mañana. Lamentablemente, tras una hora y media y con las fuerzas agotadas, Su Majestad entregó su alma a Dios tras haber recibido la extremaunción».\n\n—Francisco Elias Rodrigues da Silveira, Dr. Kessler, Ignacio António da Fonseca Benevides, António Joaquim Farto.\n\n#italic Boletín Oficial del Estado#!"
+ portuguese_monarchs.1.a: "Su legado perdurará a través de su prole."
+ portuguese_monarchs.1_tt: "Ya se ha elegido a un heredero óptimo para ceñir la corona."
+ #2 Carlos I gets assassinated by radicals and Manuel II becomes the new king
+ portuguese_monarchs.2.t: "De la nada"
+ portuguese_monarchs.2.d: "Unos extremistas han logrado quitarle la vida [ROOT.GetCountry.GetRuler.GetCustom('ES_AlAla')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] [ROOT.GetCountry.GetRuler.GetFirstName] y al heredero aparente mientras la familia real disfrutaba de un pacífico viaje en carruaje."
+ portuguese_monarchs.2.f: "El [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] sufrió una emboscada por parte de Alfredo Luís da Costa y Manuel Buíça mientras viajaba en un carruaje abierto. Por desgracia, los disparos les causaron la muerte a él y a su heredero, al tiempo que hirieron a su hijo menor, que pronto sería coronado.\n\nHay quienes ven en el regicidio una postura desafiante ante una monarquía represiva, mientras que otros lo consideran un esfuerzo sin sentido por provocar la transformación política.\n\nUna vez terminadas las investigaciones, se descubrió que los magnicidas formaban parte de un grupo revolucionario más amplio llamado «Carbonária», cuyo objetivo era establecer una república en [ROOT.GetCountry.GetNameNoFormatting]."
+ portuguese_monarchs.2.a: "Pesada es la corona que porta [ROOT.GetCountry.GetRuler.GetCustom('ES_ElLa')] nuev[ROOT.GetCountry.GetRuler.GetCustom('ES_OA')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l]."
+ portuguese_monarchs.2_tt: "Al no haber sufrido heridas mortales, el segundo hijo [ROOT.GetCountry.GetRuler.GetCustom('ES_DelDela')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] [ROOT.GetCountry.GetRuler.GetFirstName] es el único candidato razonable para convertirse en el nuevo gobernante."
+ #3 Manuel II leaves the country after Monarchy gets abolished.
+ portuguese_monarchs.3.t: "El vuelo de los guivernos"
+ portuguese_monarchs.3.d: "El reinado de siglos de la Serenísima Casa de Braganza ha llegado a su fin en [ROOT.GetCountry.GetName]. Sus habitantes han logrado demostrar que la verdadera nobleza reside en sus corazones y sus manos."
+ portuguese_monarchs.3.f: "Hubo una vez un hombre que comenzó su vida como el futuro fundador de una casa que engendraría gran cantidad reyes y reinas para la misma tierra en la que se cavó su tumba.\n\nEn el año 1337 del calendario gregoriano, su padre, monarca de Portugal, le puso el nombre de Alfonso.\n\nHoy, ese legado ha llegado a su fin.\n\nMañana señalará el triunfo de los plebeyos contra aquellos que aseguraban ser los elegidos."
+ portuguese_monarchs.3.a: "Partiremos, una última vez."
+ portuguese_monarchs.3_tt: "Para evitar conflictos y que atacaran a los miembros de su familia, el rey [SCOPE.sCharacter('manuel_scope').GetFullName] se ha visto en la tesitura de tener que abandonar el país y puede que no vuelva nunca más."
+ #4 Cholera outbreak of 1953 - 1956 during Pedro V, where he decides on what to do
+ portuguese_monarchs.4.t: "Epidemia en [SCOPE.sState('outbreak_state').GetName]"
+ portuguese_monarchs.4.d: "Han llegado noticias sobre una epidemia de cólera en [SCOPE.sState('outbreak_state').GetName]. La gente solicita abiertamente la ayuda del gobierno."
+ portuguese_monarchs.4.f: "«… sí, mi [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l], los periódicos han sido fundamentales para hacer llegar la información científica a los súbditos de la región. Se anima a aquellos que no sepan leer que consulten a sus amigos y familiares sobre los últimos progresos para protegerse de lo invisible. También hay pregoneros en la mayoría de calles.\n\nSin embargo, como ocurre durante toda catástrofe, han surgido especuladores de todo pelaje en cada rincón del estado dispuestos a llenarse los bolsillos a costa del miedo, pero eso es algo que suele ocurrir en momentos como este»."
+ portuguese_monarchs.4.a: "Que les envíen ayuda."
+ portuguese_monarchs.4.b: "Hay que visitar el lugar para levantar la moral del pueblo."
+ portuguese_monarchs.4.c: "Que se apañen solos."
+ # Modifiers
+ distant_outbreak_aid_mod: "Ayuda a distancia para brote epidémico"
+ aided_for_outbreak_mod: "Ayuda recibida para brote epidémico"
+ outbreak_site_visit_mod: "Visita sorpresa al lugar del brote epidémico"
+ visited_hospitals_mod: "Hospitales visitados"
+ aided_directly_by_the_ruler_mod: "Ayuda directa del gobernante"
+ refused_outbreak_aid_mod: "Denegada ayuda para brote epidémico"
+ outbreak_without_aid_mod: "El brote epidémico empeora"
+ disease_outbreak_mod: "Brote epidémico"

@@ -1,0 +1,76 @@
+﻿l_turkish:
+ ##### PORTUGAL SINGLE FIRE EVENTS 1 #####
+ # Events
+ #1 Construction of Gremio Literario
+ portugal_single_fire_events.1.t: "Grémio Literário'nun İnşası"
+ portugal_single_fire_events.1.d: "[SCOPE.gsInterestGroup('intelligentsia_scope').GetName] üyeleri, \"Grémio Literário\" adında özel bir edebiyat kulübü kurma fikrini destekliyor. Bu vizyonu hayata geçirmek için finansal ve siyasi destek talebinde bulundular."
+ portugal_single_fire_events.1.f: "\"Tanrı'nın lütfuyla [ROOT.GetCountry.GetRuler.GetFirstNameNoFormatting], [ROOT.GetCountry.GetNameNoFormatting] topraklarındaki [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] ve tüm Dominyonları,\n\nTüzüğümü alan herkese bildiririm: Devlet Konseyi tarafından, Onursal Bakan ve Dışişleri Sekreteri Rodrigo da Fonseca Magalhães aracılığıyla, Grémio Literário adı verilen derneğin tüzüklerini hazırlamakla görevlendirilen Komisyon Başkanı sıfatıyla bana ilettiği hususlar dikkate alındığında belirtmek isterim ki…\""
+ portugal_single_fire_events.1.a: "Sizi cömertçe onaylıyoruz."
+ portugal_single_fire_events.1.b: "İlim yalvararak aranmaz."
+ #2 Asylums of [state]
+ portugal_single_fire_events.2.t: "[SCOPE.sState('azores_state_scope').GetName] akıl hastaneleri"
+ portugal_single_fire_events.2.d: "Seküler [SCOPE.gsInterestGroup('intelligentsia_scope').GetName], Horta Dezavantajlı Çocuklar için Sığınma Evi'nin reşit olmayanlara dini fanatizm aşıladığı haberinden rahatsız oldu. Gençleri dini dogmalara karşı korumak için harekete geçilmesini talep ediyorlar."
+ portugal_single_fire_events.2.f: "\"Biz liberallere dilimizi tutmamız söyleniyor. Bunun bir hayır işi olduğu, açları doyurduğu, Aziz Anthony'ye göre #italic ahlaki gelişimin#! İncil'den ayrılamayacağı söyleniyor. Biz de şöyle cevap veriyoruz: Özgürleştiren hayır işleri ve bağlayıcı hayır işleri vardır. Bu ikincisidir.\""
+ portugal_single_fire_events.2.a: "[SCOPE.gsInterestGroup('devout_scope').GetName], gelecek nesil [SCOPE.GetRootScope.GetCountry.GetAdjective] vatanseverlerini şekillendirme hakkına sahip."
+ portugal_single_fire_events.2.b: "Evet, bu kadarı da fazla artık."
+ portugal_single_fire_events.2.c: "Kendi aranızda halledin."
+ #3 The Aqueduct Murderer
+ portugal_single_fire_events.3.t: "Su Kemeri Katili"
+ portugal_single_fire_events.3.d: "\"Su Kemeri Katili\" olarak bilinen bir seri katil hakkında çok sayıda ihbarda bulunuldu. İddialara göre onlarca kişiyi öldürüp Águas Livres Su Kemeri'nden aşağı atmış. Halk acilen harekete geçilmesini talep ediyor."
+ portugal_single_fire_events.3.f: "Fenerin ışığı, şafak vakti nemli havada titreşerek kaygan taştan yansıyordu. Nehir rüzgârı aşağıdaki sessizliği bozarken botların sesi, su kemerine çarparak yankılanıyordu. Sonra karanlığın uçurumla birleştiği yerde hareket etmeyen soluk bir figür belirdi."
+ portugal_single_fire_events.3.a: "Hemen deneyimli kolluk kuvvetlerini gönder."
+ portugal_single_fire_events.3.b: "Tam da bu tür vakalar için eğitimli uzmanlarımız var."
+ portugal_single_fire_events.3.c: "Cesur bir ruhu kurban etmek için halka açık gösteri düzenle."
+ portugal_single_fire_events.3.e: "Cinayet mi?! Su kemerinin, boşluğun çağrısına kulak verilen yer olduğunu herkes bilir."
+ #4 The Wine Blight
+ portugal_single_fire_events.4.t: "Şarap Hastalığı"
+ portugal_single_fire_events.4.d: "[SCOPE.sState('madeira_state_scope').GetName] üzüm bağlarında yaşanan küf salgını, ünlü Madeira şarabının üretimini sekteye uğrattı. Yabancı tüccarlar panik hâlinde adadan kaçmaya başladı."
+ portugal_single_fire_events.4.f: "\"Madeira şarabı, son beş yüz yılda üretilen tüm şaraplar arasında ateş ve ısı ile yaratılmış olağanüstü bir içecek olmasıyla döneminin ve coğrafyasının en karakteristik şarabı olarak öne çıkmaktadır. Beş yüzyıl önce yanmış eski bir ormanın külleriyle beslenen asmaları, yaklaşık 14 milyon yıl önce yaşanan volkanik patlamalar nedeniyle oluşmuş kayalık topraklara kök salmıştır.\""
+ portugal_single_fire_events.4.a: "Araştırma yapıp acil bir çözüm bulmaları için bilim insanlarını gönder."
+ portugal_single_fire_events.4.b: "Tüccarlara gitmeden önce tazminat ver."
+ portugal_single_fire_events.4.c: "Ellerimizi kaldırıp gökyüzüne bakalım."
+ #5 Zoological Garden
+ portugal_single_fire_events.5.t: "Hayvanat Bahçesi"
+ portugal_single_fire_events.5.d: "Bir grup tutkulu doktor, [SCOPE.sState('capital_scope').GetName] topraklarındaki ilk hayvanat bahçesi için ayrıntılı planlar hazırladı. Projeyi gerçekleştirmek için hükümetin onayını ve desteğini istiyorlar."
+ portugal_single_fire_events.5.f: "Çocuk, eldiven takmış annesinin elini sıkıca tuttu. Gözleri filin hortumunun sallanışından yukarıdaki yeşil ve altın rengi tüylerin parıltısına kayıyordu. Her kafes başka bir dünyaya açılan kapı gibiydi. Maymunlar canlı havai fişekler gibi zıplıyor, aslanın esnemesi göğsünde yankılanıyordu.\n\n[SCOPE.sState('capital_scope').GetNameNoFormatting], o anda okul kitabındaki haritalar kadar enginmiş gibi hissediyordu."
+ portugal_single_fire_events.5.a: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] onay verdi."
+ portugal_single_fire_events.5.b: "Sırada ne var, papağan parlamentosu mu?"
+ #6 Women of the Worms
+ portugal_single_fire_events.6.t: "Solucan Ustası Kadınlar"
+ portugal_single_fire_events.6.d: "[SCOPE.sState('shanghai_state_scope').GetName] topraklarından iki halk şifacısı, [SCOPE.sState('capital_scope').GetName] bölgesindeki bir otelde çalışıyor ve alternatif yöntemlerle görme sorunlarını tedavi ettiklerini iddia ediyorlar. Kendisi de hekim olan vali onları engellemeye çalışsa da yerel halkın itirazları bunu artık kamu düzeni meselesine dönüştürdü."
+ portugal_single_fire_events.6.f: "\"Bunun şeytani yaratıklardan, kara büyülerden ve benzeri şeylerden yardım isteyen doğu büyülerinden biri olduğu söyleniyor. Sonrasında her gün şeytanı görmektense kör kalmayı tercih ederim. Evet... Yok kalsın.\"\n\nGlória sertçe karşılık verdi. \"Her sabah yanında şeytanı görmüyor musun zaten Mara? Tanrı aşkına ne farkı var?\""
+ portugal_single_fire_events.6.a: "Onları cadı olarak yaftala ve bu tür kişiler için gereken her şeyi yap."
+ portugal_single_fire_events.6.b: "Gerginliği azaltmak için valiyi hanımları serbest bırakmaya zorla."
+ portugal_single_fire_events.6.c: "Onlarla [SCOPE.sCountry('shanghai_owner_scope').GetName] uğraşsın. İkiliyi sınır dışı et."
+ # Modifiers
+ # portugal_single_fire_events.1
+ portugal_single_fire_events_gremio_expense_mod: "Grémio Literário için Finansman Sağlandı"
+ portugal_single_fire_events_gremio_ig_approval_mod: "Grémio Literário Onaylandı"
+ portugal_single_fire_events_gremio_state_mod: "Özel Edebiyat Kulübü"
+ portugal_single_fire_events_gremio_ig_disapproval_mod: "Grémio Literário için Finansman Reddedildi"
+ # portugal_single_fire_events.2
+ portugal_single_fire_events_azores_support_mod: "Dini Fanatizm Aşılamaya İzin Verildi"
+ portugal_single_fire_events_azores_not_support_mod: "Dini Fanatizm Aşılamaya İzin Verilmedi"
+ portugal_single_fire_events_azores_ignore_mod: "Çocuklara Dini Fanatizm Aşılandı"
+ portugal_single_fire_events_azores_state_devout_mod: "Dini Fanatizm Aşılamaya Teşvik Edildi"
+ portugal_single_fire_events_azores_state_intelligentsia_mod: "Dini Fanatizm Aşılaması Durduruldu"
+ # portugal_single_fire_events.3
+ portugal_single_fire_events_law_officers_authority_mod: "Kolluk Kuvvetleri Araştırma Yapıyor"
+ portugal_single_fire_events_secret_police_expense_mod: "Gizli Polise Finansman Sağlandı"
+ portugal_single_fire_events_ignored_mod: "Seri Cinayet Davası Yok Sayıldı"
+ portugal_single_fire_events_dishonorable_stunt_mod: "Onursuz Gösteri"
+ # portugal_single_fire_events.4
+ portugal_single_fire_events_mildew_epidemic_mod: "Küf Salgını"
+ portugal_single_fire_events_sent_physicians_mod: "Hekimler Araştırma Yapıyor"
+ portugal_single_fire_events_sent_physicians_expense_mod: "Mahsul Salgını Araştırması Finanse Edildi"
+ portugal_single_fire_events_merchants_compensated_mod: "Zor Durumdaki Tüccarlara Tazminat Verildi"
+ portugal_single_fire_events_praying_mod: "Ruhban Salgın Yardımı"
+ # portugal_single_fire_events.5
+ portugal_single_fire_events_zoo_supported_mod: "Hayvanat Bahçesi İnşaatı"
+ portugal_single_fire_events_zoo_supported_expense_mod: "Hayvanat Bahçesi İnşaatı Finanse Edildi"
+ portugal_single_fire_events_zoo_rejected_mod: "Hayvanat Bahçesi İnşaatı Reddedildi"
+ portugal_single_fire_events_zoo_sol_mod: "Şehirdeki Hayvanat Bahçesi"
+ # portugal_single_fire_events.6
+ portugal_single_fire_events_worm_women_witches_mod: "Halka Açık Cadı Gösterisi"
+ portugal_single_fire_events_zoo_worm_women_free_mod: "Kesintiye Uğrayan Yetkiler"
+ portugal_single_fire_events_zoo_worm_women_free_state_mod: "Sterilize Edilmemiş Tedaviler"

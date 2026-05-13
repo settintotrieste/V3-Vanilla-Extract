@@ -1,0 +1,36 @@
+﻿l_braz_por:
+ ##### PORTUGAL MONARCHY #####
+ #1 Maria dies while giving birth to 13th child, Carlos becomes the ruler
+ portuguese_monarchs.1.t: "A Boa Mãe"
+ portuguese_monarchs.1.d: "Apesar de anos de alertas dos médicos reais, [ROOT.GetCountry.GetRuler.GetCustom('BR_OA')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName] morreu durante o décimo terceiro parto aos [ROOT.GetCountry.GetRuler.GetAge]."
+ portuguese_monarchs.1.f: "\"Sua Majestade, a [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], começou a ter os sinais de parto às 21h30 de ontem. As complicações surgiram durante esse parto, forçando os médicos a recorrer a operações para que conseguissem retirar o bebê, que foi batizado antes mesmo de vir à luz.\n\nO fim dessas operações se deu às 10h do dia seguinte. Infelizmente, após uma hora e meia, Sua Majestade, já totalmente sem forças, entregou a própria alma a Deus depois de receber todos os sacramentos.\n\n— Francisco Elias Rodrigues da Silveira, Dr. Kessler, Inácio António da Fonseca Benevides, António Joaquim Farto.\"\n\n#italic A Gazeta do Governo#!"
+ portuguese_monarchs.1.a: "O legado viverá por meio dos descendentes."
+ portuguese_monarchs.1_tt: "Um herdeiro digno já foi escolhido para usar a coroa."
+ #2 Carlos I gets assassinated by radicals and Manuel II becomes the new king
+ portuguese_monarchs.2.t: "Surgindo do Nada"
+ portuguese_monarchs.2.d: "Bandidos fanáticos conseguiram tirar a vida [ROOT.GetCountry.GetRuler.GetCustom('BR_DoDa')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName] e do herdeiro aparente enquanto a família real desfrutava de uma viagem tranquila em sua carruagem."
+ portuguese_monarchs.2.f: "O [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] foi emboscado por Alfredo Luís da Costa e Manuel Buíça enquanto viajava em uma carruagem aberta. De maneira trágica, os tiros atingiram a ele e feriram seu filho mais novo, que então passou a ser o próximo na linha de sucessão e seria coroado em breve.\n\nAlguns viram os motivos do regicídio como uma postura ousada contra uma monarquia repressiva, enquanto outros consideraram um esforço desesperado para provocar uma transformação política.\n\nApós as investigações, foi revelado que os assassinos faziam parte de um grupo revolucionário maior chamado \"Carbonária\", que buscava estabelecer uma república no país [ROOT.GetCountry.GetNameNoFormatting]."
+ portuguese_monarchs.2.a: "A coroa pesa sobre a cabeça do novo [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]."
+ portuguese_monarchs.2_tt: "Por ter sobrevivido com ferimentos não fatais, o segundo filho do [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName] é o único candidato plausível a novo governante."
+ #3 Manuel II leaves the country after Monarchy gets abolished.
+ portuguese_monarchs.3.t: "Fuga das Serpes"
+ portuguese_monarchs.3.d: "O reinado secular da Sereníssima Casa de Bragança chegou ao fim no país [ROOT.GetCountry.GetName]. Os moradores conseguiram mostrar que a verdadeira nobreza está no coração e nas mãos."
+ portuguese_monarchs.3.f: "Houve um homem que iniciou a vida como o futuro fundador de uma casa que gerou muitos reis e rainhas, até o solo onde o túmulo dele foi cavado.\n\nSeu pai, o monarca de Portugal, deu a ele o nome Alfonso no ano gregoriano de 1337.\n\nHoje, esse legado chegou ao fim.\n\nO dia de amanhã marcará o triunfo do povo comum contra aqueles que alegavam ser os escolhidos."
+ portuguese_monarchs.3.a: "Nós partiremos uma última vez."
+ portuguese_monarchs.3_tt: "Para evitar conflitos e proteger a família, o Rei [SCOPE.sCharacter('manuel_scope').GetFullName] é forçado a deixar o país, talvez para nunca mais voltar."
+ #4 Cholera outbreak of 1953 - 1956 during Pedro V, where he decides on what to do
+ portuguese_monarchs.4.t: "Surto em [SCOPE.sState('outbreak_state').GetName]"
+ portuguese_monarchs.4.d: "Chegaram notícias de uma epidemia de cólera em [SCOPE.sState('outbreak_state').GetName]. As pessoas estão pedindo ajuda aos oficiais."
+ portuguese_monarchs.4.f: "\"... sim, [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle], os jornais têm sido um meio crucial para espalhar informações científicas aos nossos súditos da região. Aqueles que não sabem ler são incentivados a perguntar a amigos e familiares as novidades sobre como se proteger do invisível. Arautos também foram enviados à maioria das ruas.\n\nNo entanto, assim como em todas as catástrofes, aproveitadores de boa e má índole surgiram de todos os cantos do estado para lucrar com o medo, mas isso já era esperado em tempos assim.\""
+ portuguese_monarchs.4.a: "Enviar ajuda."
+ portuguese_monarchs.4.b: "Precisamos visitá-los para elevar o moral."
+ portuguese_monarchs.4.c: "Eles estão por conta própria."
+ # Modifiers
+ distant_outbreak_aid_mod: "Ajuda a Distância no Surto"
+ aided_for_outbreak_mod: "Auxílio no Surto"
+ outbreak_site_visit_mod: "Visita ao Local do Surto"
+ visited_hospitals_mod: "Visitas aos Hospitais"
+ aided_directly_by_the_ruler_mod: "Ajuda Direta de Governante"
+ refused_outbreak_aid_mod: "Recusou Ajuda no Surto"
+ outbreak_without_aid_mod: "O Surto Piora"
+ disease_outbreak_mod: "Surto de Doença"

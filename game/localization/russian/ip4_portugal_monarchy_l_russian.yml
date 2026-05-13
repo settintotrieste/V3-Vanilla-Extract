@@ -1,0 +1,36 @@
+﻿l_russian:
+ ##### PORTUGAL MONARCHY #####
+ #1 Maria dies while giving birth to 13th child, Carlos becomes the ruler
+ portuguese_monarchs.1.t: "Хорошая мать"
+ portuguese_monarchs.1.d: "Худшие прогнозы придворных докторов сбылись, и [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] [ROOT.GetCountry.GetRuler.GetFirstName] скончалась во время своих тринадцатых по счёту родов. Ей было [ROOT.GetCountry.GetRuler.GetAge]."
+ portuguese_monarchs.1.f: "«Вчера в половину десятого вечера Её Величество [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] почувствовала первые схватки. Однако во время родов возникли серьёзные осложнения. Дитя, ещё не появившееся на свет, крестили, а после врачи успешно извлекли его из материнской утробы.\n\nОперация завершилась в десять утра, однако силы Её Величества, к несчастью, оказались на исходе. Полтора часа спустя она, причастившись, отдала душу Господу».\n\n— Франсиску Элиаш да Сильвейра, доктор Кесслер, Игнасиу Антониу да Фонсека Беневидеш, Антониу Жуакин Фарту\n\n#italic Отрывок из «Правительственной газеты»#!"
+ portuguese_monarchs.1.a: "Её потомки продолжат её дело."
+ portuguese_monarchs.1_tt: "Подходящий наследник престола уже выбран."
+ #2 Carlos I gets assassinated by radicals and Manuel II becomes the new king
+ portuguese_monarchs.2.t: "Гром среди ясного неба"
+ portuguese_monarchs.2.d: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName] и [SelectLocalization(ROOT.GetCountry.GetRuler.IsFemale, 'её', 'его')] наследник были убиты преступниками-фанатиками во время поездки в карете."
+ portuguese_monarchs.2.f: "Во время поездки в открытой карете [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] попал в засаду, устроенную Алфреду Луишем да Костой и Мануэлем Буйсой. К несчастью, король и его наследник были убиты, а младший сын государя, который скоро взойдёт на престол, получил ранение.\n\nНекоторые полагают, что это убийство — протест против репрессивной монархии, другие же расценивают его как отчаянную попытку спровоцировать политические преобразования.\n\nВ ходе расследования выяснилось, что убийцы принадлежат к крупному революционному движению «Карбонария», участники которого стремятся превратить [ROOT.GetCountry.GetAltNameNoFormatting('RU_CL_RP')] в республику."
+ portuguese_monarchs.2.a: "Новый [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l] склоняется под тяжестью короны."
+ portuguese_monarchs.2_tt: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName] имел двух сыновей, но в живых остался лишь младший. Только он может стать новым правителем державы."
+ #3 Manuel II leaves the country after Monarchy gets abolished.
+ portuguese_monarchs.3.t: "Последний полёт виверн"
+ portuguese_monarchs.3.d: "В [ROOT.GetCountry.GetAltName('RU_CL_PP')] завершилось многовековое правление королевской династии Браганса. Наш народ сумел доказать, что истинное благородство скрывается в сердцах и поступках."
+ portuguese_monarchs.3.f: "Однажды на свет появился человек, который позже основал династию, даровавшую земле, где упокоились его останки, целую плеяду королей и королев.\n\nМальчик родился в 1337 году по григорианскому календарю, и отец, правитель Португалии, назвал его Альфонсо.\n\nСегодня род Альфонсо наконец прервался.\n\nЗавтрашний день станет триумфальным для простых людей, решивших выступить против тех, кто возомнил себя избранными."
+ portuguese_monarchs.3.a: "Пора отправиться в последний полёт."
+ portuguese_monarchs.3_tt: "Не желая обострять ситуацию и подвергать риску своих близких, король [SCOPE.sCharacter('manuel_scope').GetFullName] покидает страну, возможно, навсегда."
+ #4 Cholera outbreak of 1953 - 1956 during Pedro V, where he decides on what to do
+ portuguese_monarchs.4.t: "Эпидемия в области [SCOPE.sState('outbreak_state').GetName]"
+ portuguese_monarchs.4.d: "Нам доложили, что в области [SCOPE.sState('outbreak_state').GetName] бушует холера. Люди обращаются к властям за помощью."
+ portuguese_monarchs.4.f: "«Да, [SelectLocalization(ROOT.GetCountry.GetRuler.IsFemale, 'моя', 'мой')] [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle|l], газеты стали главным источником научной информации для наших подданных в этом регионе. Мы рекомендуем неграмотным гражданам узнавать последние новости о борьбе с невидимым врагом у своих друзей и членов семьи. Кроме того, мы отправили глашатаев почти на все улицы города.\n\nКонечно, ситуацией воспользовались шарлатаны всех сортов, желающие нажиться на чужом горе, но это, увы, неизбежное зло, которое приходится терпеть»."
+ portuguese_monarchs.4.a: "Нужно отправить помощь."
+ portuguese_monarchs.4.b: "Мы приедем сами, чтобы подбодрить местных."
+ portuguese_monarchs.4.c: "Пусть справляются своими силами."
+ # Modifiers
+ distant_outbreak_aid_mod: "Отправка помощи в очаг эпидемии"
+ aided_for_outbreak_mod: "Оказана помощь в борьбе с эпидемией"
+ outbreak_site_visit_mod: "Посещение очага эпидемии"
+ visited_hospitals_mod: "Посещены больницы"
+ aided_directly_by_the_ruler_mod: "Помощь оказана лично правителем"
+ refused_outbreak_aid_mod: "Отказано в помощи в борьбе с эпидемией"
+ outbreak_without_aid_mod: "Эпидемия усиливается"
+ disease_outbreak_mod: "Эпидемия"

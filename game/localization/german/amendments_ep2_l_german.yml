@@ -1,0 +1,13 @@
+﻿l_german:
+ amendment_frugal_ordinance: "Kargheitsauflage"
+ amendment_frugal_ordinance_desc: "Der Zugriff der Gemeinen auf Luxuswaren, Unterhaltung und Literatur wird durch die Regierung stark eingeschränkt und reguliert."
+ amendment_zaibatsu_oligopoly: "Zaibatsu-Oligarchie"
+ amendment_zaibatsu_oligopoly_desc: "Die Wirtschaft wird beherrscht von einem geschlossenen Kreis von reichen, militärisch-industriellen Zaibatsu in einer symbiotischen Beziehungen mit dem Staat."
+ amendment_zaibatsu_oligopoly_1: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_1_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_zaibatsu_oligopoly_2: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_2_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_taikunate: "Taikunat"
+ amendment_taikunate_desc: "Der Tokugawa-Clan bewahrt sich Sonderprivilegien innerhalb dieses parlamentarischen Systems, wobei das Oberhaupt des Clans ein dauerhaftes Amt als Regierungsoberhaupt innehat."
+ amendment_reformed_shinsengumi: "Shinsengumi-Vermächtnis"
+ amendment_reformed_shinsengumi_desc: "Die Geheimpolizei des Staates hat ihre Wurzeln in der Shinsengumi, einer Eliteeinheit von Schwertkämpfern, die vom Bakufu mit der Aufrechterhaltung der Ordnung in Kyōto beauftragt wurde."

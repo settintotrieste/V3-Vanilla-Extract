@@ -1,0 +1,36 @@
+﻿l_korean:
+ ##### PORTUGAL MONARCHY #####
+ #1 Maria dies while giving birth to 13th child, Carlos becomes the ruler
+ portuguese_monarchs.1.t: "좋은 어머니"
+ portuguese_monarchs.1.d: "수년간 이어진 왕실 의사들의 경고에도 불구하고, [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName](은)는 열세 번째 출산 중 향년 [ROOT.GetCountry.GetRuler.GetAge]세의 나이로 세상을 떠났다."
+ portuguese_monarchs.1.f: "\"[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] 폐하께서는 어젯밤 아홉 시 반경에 진통이 시작되었음을 느끼셨습니다. 출산 도중 난산이 발생했고, 의사들은 수술에 의존할 수밖에 없었습니다. 그 수술을 통해 예정일에 도달한 영아를 적출했으며, 아이는 적출 전 세례를 받았습니다.\n\n수술은 오전 열 시에 마무리되었습니다. 그러나 그로부터 한 시간 반 후, 모든 기력을 소진한 폐하께서는 성사를 모두 받은 뒤 영혼을 하느님께 맡기셨습니다.\"\n\n- 프란시스쿠 엘리아스 로드리게스 다 실베이라, 케슬러 박사, 이냐시오 안토니우 다 폰세카 베네비데스, 안토니우 주아킴 파르투.\"\n\n#italic 정부 관보#!"
+ portuguese_monarchs.1.a: "그분의 유산은 자손들을 통해 이어질 것이다."
+ portuguese_monarchs.1_tt: "왕위를 계승할 적임자는 이미 정해졌다."
+ #2 Carlos I gets assassinated by radicals and Manuel II becomes the new king
+ portuguese_monarchs.2.t: "갑작스러운 죽음"
+ portuguese_monarchs.2.d: "왕실 가문이 평화롭게 마차 여행을 즐기던 중, 광적인 범인들이 [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName](와)과 왕세자의 목숨을 앗아갔다."
+ portuguese_monarchs.2.f: "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle](은)는 개방된 마차를 타고 이동 중, 알프레두 루이스 다 코스타와 마누엘 부이사에게 습격을 받았다. 비극적으로, 총격은 그와 왕세자에게 치명상을 입혔고, 즉위를 앞둔 둘째 아들 또한 상처를 입었다.\n\n이 암살의 동기에 관해서는 억압적인 군주제에 맞선 과감한 저항이란 의견과, 정치적 변화를 촉발하려는 광기 어린 행동이란 의견이 팽팽하게 충돌했다.\n\n조사 결과, 암살자들은 \"카르보나리아\"라는 대규모 혁명 조직의 일원이었으며, [ROOT.GetCountry.GetNameNoFormatting]에 공화정을 수립하는 것이 그들의 목표라고 한다."
+ portuguese_monarchs.2.a: "새로운 [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]의 머리 위로 왕관이 무겁게 내려앉는다."
+ portuguese_monarchs.2_tt: "치명상을 피한 [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFirstName]의 둘째 아들은 새로운 군주가 될 유일한 합당한 인물임."
+ #3 Manuel II leaves the country after Monarchy gets abolished.
+ portuguese_monarchs.3.t: "와이번의 비상"
+ portuguese_monarchs.3.d: "[ROOT.GetCountry.GetName]에서 수 세기 동안 군림해 온 \"가장 평온한 브라간사 왕가\"의 지배가 끝났다. 주민들은 진정한 고귀함이 피가 아니라 마음과 손에 있음을 증명해 보였다."
+ portuguese_monarchs.3.f: "한 남자가 있었다. 그는 수많은 왕과 여왕을 낳은 왕가의 시조가 될 운명으로 삶을 시작했고, 그의 무덤은 그가 태어난 그 땅에 놓였다.\n\n1337년, 포르투갈의 국왕이었던 그의 아버지는 그에게 알폰수라는 이름을 주었다.\n\n오늘, 그 유산은 끝에 이르렀다.\n\n내일은 자신을 선택받은 자로 부르던 이들에 맞선 평민들의 승리를 알리는 날이 될 것이다."
+ portuguese_monarchs.3.a: "우리는 마지막으로 날아오를 것이다."
+ portuguese_monarchs.3_tt: "가족에게 피해와 갈등을 막기 위해, [SCOPE.sCharacter('manuel_scope').GetFullName] 국왕은 나라를 떠날 수밖에 없었으며 아마 다시 돌아오지 못할 것임."
+ #4 Cholera outbreak of 1953 - 1956 during Pedro V, where he decides on what to do
+ portuguese_monarchs.4.t: "[SCOPE.sState('outbreak_state').GetName]에서의 발병"
+ portuguese_monarchs.4.d: "[SCOPE.sState('outbreak_state').GetName]에서 콜레라 유행병이 발생했다는 소식이 전해졌다. 주민들은 공공연히 관리들에게 원조를 요청하고 있다."
+ portuguese_monarchs.4.f: "\"...예, [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]. 신문은 이 지역 백성들에게 과학 정보를 전달하는 데 있어 결정적인 수단이 되어 왔습니다. 글을 읽지 못하는 이들에게는 가족이나 이웃에게서 최신 정보를 들으라 권하고 있으며, 거리에는 마을 공고인들도 배치되었습니다.\n\n하지만 재앙이 찾아오면 늘 그렇듯, 선의든 악의든 이 상황을 이용해 공포를 돈으로 바꾸려는 이들이 사방에서 나타났습니다. 이런 시기에는 피할 수 없는 일입니다.\""
+ portuguese_monarchs.4.a: "그들에게 원조를 보내라."
+ portuguese_monarchs.4.b: "현지에 직접 방문해 사기를 북돋아야 한다."
+ portuguese_monarchs.4.c: "그들은 스스로 버텨야 한다."
+ # Modifiers
+ distant_outbreak_aid_mod: "먼 지역 감염병 유행 원조"
+ aided_for_outbreak_mod: "감염병 유행 원조"
+ outbreak_site_visit_mod: "감염병 유행 지역 방문"
+ visited_hospitals_mod: "병원 방문"
+ aided_directly_by_the_ruler_mod: "영주가 직접 원조"
+ refused_outbreak_aid_mod: "감염병 유행 원조 거부"
+ outbreak_without_aid_mod: "감염병 유행 악화"
+ disease_outbreak_mod: "감염병 유행"

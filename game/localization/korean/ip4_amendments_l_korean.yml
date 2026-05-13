@@ -1,0 +1,9 @@
+﻿l_korean:
+ amendment_test: "시범 $concept_amendment$"
+ amendment_test_desc: "시범 증보에 대한 설명입니다"
+ REPEAL_AMENDMENT_PENDING: "[concept_amendment]가 활성화된 [concept_law]의 일부가 아님"
+ REPEAL_AMENDMENT_NO_GOVERNMENT_OPPOSITION: "[concept_government] 내에 [Concept('concept_interest_group', '$concept_interest_groups$')]에 반발하는 [concept_amendment] 없음"
+ REPEAL_AMENDMENT_WEAK_GOVERNMENT_OPPOSITION: "[concept_amendment]에 반발 중인 [concept_government] 내 [Concept('concept_interest_group', '$concept_interest_groups$')]들의 [concept_clout]이 지지 중인 이해 집단들의 정치력보다 적음"
+ REPEAL_AMENDMENT_ON_COOLDOWN: "$DATE|v$까지 폐지 불가"
+ REPEAL_AMENDEMENT_CONFIRMATION: "[Amendment.GetName](을)를 [Concept('concept_amendment_repeal', '$concept_repeal$')]하시겠습니까?[ConcatIfNeitherEmpty('\n\n$DATA_AMENDMENTS_REPEAL_HEADER$\n', Amendment.GetOnRepealEffectsDesc)]  "
+ SPONSOR_MODIFIER_HEADER: "#title [concept_interest_group] 후원 중:#!"

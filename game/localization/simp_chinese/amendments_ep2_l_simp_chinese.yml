@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+ amendment_frugal_ordinance: "俭约令"
+ amendment_frugal_ordinance_desc: "平民获取奢侈品、娱乐和文学作品的权利受到政府的严格限制和管制。"
+ amendment_zaibatsu_oligopoly: "财阀垄断"
+ amendment_zaibatsu_oligopoly_desc: "经济已逐渐被一个和政府形成共生关系的、封闭且富足的军工财阀圈层主导。"
+ amendment_zaibatsu_oligopoly_1: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_1_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_zaibatsu_oligopoly_2: "$amendment_zaibatsu_oligopoly$"
+ amendment_zaibatsu_oligopoly_2_desc: "$amendment_zaibatsu_oligopoly_desc$"
+ amendment_taikunate: "大君"
+ amendment_taikunate_desc: "德川氏在这一议会制度中保留着特殊特权，其家主持有政府首脑这一永久职位。"
+ amendment_reformed_shinsengumi: "新选组渊源"
+ amendment_reformed_shinsengumi_desc: "地区的秘密警察机构源起于新选组，这是一支由幕府委任维护京都秩序的精英剑客部队。"
