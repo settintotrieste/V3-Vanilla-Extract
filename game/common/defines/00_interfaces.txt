@@ -81,6 +81,8 @@ NGUI = {
 	MILITARY_COLOR_NEUTRAL = { 0.5 0.5 0.5 1 }		# Gray
 
 	BIG_SWAY_VALUE = 100							# The score adjustment the AI could possibly get for a generous sway, for coloring the numeric preference values in Diplomatic Play popup
+	
+	GRAPH_Y_AXIS_PADDING = 0.05 # Padding fraction applied to graph y-axis bounds: max is multiplied by (1 + padding), min is divided by (1 + padding)
 }
 
 # Liberty Desire Bar
@@ -280,6 +282,9 @@ NGUI = {
 
 	AI_STRATEGIC_REGION_STANCE_TYPE_ICON_FONT = 230
 	AI_STRATEGIC_REGION_STANCE_TYPE_ICON_OFFSET = { 0 40 }
+
+	SHIP_GROUP_ICON_FONT = 60
+	SHIP_GROUP_ICON_OFFSET = { 0 25 }
 
 	SHIP_VETERANCY_LEVEL_ICON_FONT = 40
 	SHIP_VETERANCY_LEVEL_ICON_OFFSET = { 0 10 }

@@ -492,6 +492,25 @@ NFortifications = {
 	TOGGLE_MAP_OBJECTS_IN_RADIUS = 2									# How many cells around fortification entities should be used for hiding map objects (trees)
 }
 
+NCoasts = {
+	LOCATOR_GRID_CELL_SIZE = 1.0				# Size of each grid cell in map units used for sampling coastal points
+	LOCATOR_GRID_EXPAND = 5.0					# How far beyond province bounding box to expand the grid
+	LOCATOR_PROBE_NUM_SAMPLES = 7				# Number of radial samples around each grid point to detect land/water boundary
+	LOCATOR_PROBE_DISTANCE = 1.5 				# Distance from grid point to each radial sample
+	LOCATOR_PROBE_DISTANCE_BEHIND = 3.0 		# Distance behind the water point to check for rivers (skip if land is found)
+	LOCATOR_PROBE_SEARCH_ITERATIONS = 5			# Number of binary search iterations to refine the coastline position
+	LOCATOR_INTERVAL_MIN = 10.0						# Minimum distance between locator water positions
+	LOCATOR_INTERVAL_MAX = 25.0						# Maximum distance between locator water positions (randomized per locator)
+	LOCATOR_PORT_DISTANCE = 5.0					# Minimum distance from port hub to keep locators
+
+	LANDING_ENTITY_DEFAULT = "military_transport_naval_rowboat_generic_entity"				# Default entity spawned before the tech
+	LANDING_ENTITY_ADVANCED = "military_transport_naval_landingcraft_generic_entity"		# Entity spawned after the tech is researched
+	LANDING_TECH = "landing_craft"				# Tech that unlocks the advanced landing entity
+	LANDING_ENTITY_STATE_IDLE = "idle"			# Animation state name for landing entities when they do nothing
+	LANDING_ENTITY_STATE_OPEN = "open"			# Animation state name for landing entities when they land (unfolding the ramp)
+	LANDING_ENTITY_ANGLE_RANDOM = 20.0			# When spawning landing entities, they get a random angle within +/- of this value in degrees around the ideal angle towards the land
+}
+
 NRoutes = {
 	DIRTROAD_BRIDGES = { "dirtroad_bridge_01" }
 	RAILROAD_1_BRIDGES = { "railroad_bridge_01" "railroad_bridge_02" }

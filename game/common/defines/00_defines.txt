@@ -626,7 +626,7 @@ NEconomy = {
 
 	SHIPPING_LANE_MERCHANT_MARINE_COST_SCALING = 0.15	# Added to shipping lane cost multiplier for each multiple of expected distance beyond the first
 	GOODS_DEFAULT_MERCHANT_MARINE_COST_MULTIPLIER = 1	# The merchant marine cost of shipping a single unit of goods (can be overridden in defines)
-	OVERSEAS_INFRASTRUCTURE_MERCHANT_MARINE_COST_MULTIPLIER = 0.2	# Merchant marine cost for each infrastructure usage in overseas state for port connection shipping lanes
+	OVERSEAS_INFRASTRUCTURE_MERCHANT_MARINE_COST_MULTIPLIER = 0.1	# Merchant marine cost for each infrastructure usage in overseas state for port connection shipping lanes
 	MERCHANT_MARINE_GOODS_KEY = "merchant_marine"		# The goods key used for merchant marine demand
 
 	SUPPLY_NETWORK_SHORTAGE_THRESHOLD = 0.5				# If merchant marine sell/buy ratio is lower than this, start applying supply network strength penalties
@@ -707,11 +707,14 @@ NEconomy = {
 	PRESTIGE_GOODS_INPUT_THROUGHPUT_BONUS = 0.2			# Bonus to throughput, scaled against proportion of input goods base value that is prestige goods
 
 	TOLL_RATE_NO_TOLLS = 0.0							# Toll rate on No Tolls setting. Value is multiplied with goods value crossing a strait
-	TOLL_RATE_LOW_TOLLS = 0.10							# Toll rate on Low Tolls setting. Value is multiplied with goods value crossing a strait
-	TOLL_RATE_MEDIUM_TOLLS = 0.20						# Toll rate on Medium Tolls setting. Value is multiplied with goods value crossing a strait
-	TOLL_RATE_HIGH_TOLLS = 0.40							# Toll rate on High Tolls setting. Value is multiplied with goods value crossing a strait
+	TOLL_RATE_LOW_TOLLS = 0.05							# Toll rate on Low Tolls setting. Value is multiplied with goods value crossing a strait
+	TOLL_RATE_MEDIUM_TOLLS = 0.10						# Toll rate on Medium Tolls setting. Value is multiplied with goods value crossing a strait
+	TOLL_RATE_HIGH_TOLLS = 0.20							# Toll rate on High Tolls setting. Value is multiplied with goods value crossing a strait
 	TOLL_RATE_MULTIPLIER_FULL_CONTROL = 2.0				# Multiplie on the above value if a country controls both sides of a strait
 	STRAIT_FULL_CONTROL_TRADE_IMPORTANCE_MULT = 1.5	# Multiplier on strait trade importance when the controller controls both sides of the strait
+	STRAIT_TOLL_RATE_COOLDOWN_MONTHS = 6				# After changing a toll rate on a strait, you must wait this long to change it again
+	STRAIT_ACCESS_SETTING_COOLDOWN_MONTHS = 6			# After changing an access setting on a strait, you must wait this long to change it again
+	STRAIT_SETTING_COOLDOWN_GRACE_PERIOD_DAYS = 7		# After changing a strait setting, it takes this many days before the cooldown activates (to give you a chance to change your mind)
 	MAX_PIRATED_GOODS_PER_HUB = 0.25 					# Max % of goods that can be pirated in one Hub->Hub connection
 	PIRACY_SHIP_SPEED_TO_GOODS_RATIO = 0.003 			# The % of goods trade quantity that are stolen per speed of a ship.
 	PIRATED_GOODS_SALE_DISCOUNT = 0.5 					# How much % value goods we get when being sold and turned into income for the country
@@ -847,9 +850,9 @@ NMilitary = {
 	# Defines below control how much blockade strength is required to fully blockade a state
 	# The base target strength is equal to the state_blockade_resistance_add modifier
 	BLOCKADE_TARGET_STRENGTH_MAXIMUM = 100000					# Required blockade strength cannot be higher than this
-	BLOCKADE_TARGET_STRENGTH_PER_TRADED_UNIT = 0.1				# Each base value of imports/exports in the market area increases required blockade strength by this (only for world market hubs)
-	BLOCKADE_TARGET_STRENGTH_PER_PRODUCED_UNIT = 0.15			# Each base value of goods produced in buildings affected by blockades (such as fisheries and shipyards) increases required blockade strength by this
-	BLOCKADE_TARGET_STRENGTH_PER_MERCHANT_MARINE = 3			# Each convoy passing through the state's port increases required blockade strength by this
+	BLOCKADE_TARGET_STRENGTH_PER_TRADED_UNIT = 0.05				# Each base value of imports/exports in the market area increases required blockade strength by this (only for world market hubs)
+	BLOCKADE_TARGET_STRENGTH_PER_PRODUCED_UNIT = 0.075			# Each base value of goods produced in buildings affected by blockades (such as fisheries and shipyards) increases required blockade strength by this
+	BLOCKADE_TARGET_STRENGTH_PER_MERCHANT_MARINE = 10			# Each convoy passing through the state's port increases required blockade strength by this
 
 	BLOCKADE_WORLD_MARKET_ACCESS_IMPACT_SCALING = 0.75			# Reduction of world market access for blockaded world market hubs, scales against blockade level
 	BLOCKADE_SHIPPING_LANE_IMPACT_SCALING = 0.75				# Reduction of efficiency for blockaded shipping lanes, scales against blockade level of either start or end point, whichever is most blockaded
@@ -1051,6 +1054,8 @@ NDiplomacy = {
 	ALLY_WARGOAL_MAX_MANEUVERS_COST = 25				# When an ally adds a 'free' wargoal in a play, it cannot have a maneuvers cost higher than this
 
 	PERSONAL_UNION_ACTION_NAME = "personal_union"
+	SUPPORT_SEPARATISM_ACTION_NAME = "support_separatism"
+	CULTURAL_MINORITY_MOVEMENT_TYPE = "movement_cultural_minority"
 	INCREASE_AUTONOMY_OF_SELF_NAME = "da_increase_autonomy_of_self"
 	INCREASE_AUTONOMY_OF_SUBJECT_ACTION_NAME = "da_increase_autonomy_of_subject"
 	DECREASE_AUTONOMY_OF_SUBJECT_ACTION_NAME = "da_decrease_autonomy"
@@ -1787,6 +1792,7 @@ NCharacters = {
 	RECRUIT_COMMANDER_POOL_SIZE = 3
 	RECRUIT_COMMANDER_VALUE_MARGINAL = -50
 	RECRUIT_COMMANDER_VALUE_HISTORICAL = 50     # Prioritize showing historical commanders
+	HISTORICAL_USAGE_CHANCE_MULT = 2            # Multiplier applied to CCharacterTemplate chances when the template is flagged historical
 	RECRUIT_COMMANDER_VALUE_AGE_MULT = 0.5
 	RECRUIT_COMMANDER_VALUE_SAME_IGS = -40
 	RECRUIT_COMMANDER_REMOVE_AGE = 55			# removed from the recruit pool when they reach 55 years
@@ -1962,10 +1968,15 @@ NBattle = {
 	SHIP_DEFAULT_READINESS_GAIN = 10				# Default gain if not specified on template
 	SHIP_INITIAL_READINESS = 0.0					# What readiness a ship has at the start of combat
 
-	SHIP_ATTACK_BASE_MISS_CHANCE = 0.2				# Base chance for a ship to miss its attack against another ship. This is further modified by a ship's accuracy
-	SHIP_ATTACK_MIN_MISS_CHANCE = 0.01				# Minimum miss chance when a ship attacks
+	SHIP_ATTACK_BASE_MISS_CHANCE = 0.5				# Miss chance when target speed equals attacker accuracy * SHIP_ATTACK_ACCURACY_SPEED_RATIO
+	SHIP_ATTACK_MIN_MISS_CHANCE = 0.05				# Minimum miss chance (maximum 95% hit chance)
+	SHIP_ATTACK_MAX_MISS_CHANCE = 0.9				# Maximum miss chance (minimum 10% hit chance)
+	SHIP_ATTACK_ACCURACY_SPEED_RATIO = 5			# Each point of accuracy counters this many points of speed
+	SHIP_ATTACK_MISS_PER_SPEED = 0.03				# Miss chance change per point of (effective_speed - accuracy * ratio)
+	SHIP_ATTACK_VISIBILITY_DIVISOR = 15				# Target visibility is divided by this and subtracted from speed for hit calculation
 	SHIP_WITHDRAW_BASE_CHANCE = 0.5					# Base chance for a ship to successfully escape. The ship's speed is added to this.
 	SHIP_WITHDRAW_SPEED_FACTOR = 1.0				# Factor on speed when it's modifying withdraw chance.
+	SUPPLY_SHIP_WITHDRAW_CHANCE_MULT = 0.1			# Multiplier on supply ship withdraw success chance. Lower values make supply ships harder to escape with.
 
 	###### Withdraw Desire Calculation ######
 	## Withdraw desire = ( Damage Desire + Zero Damage Hit Ratio Desire ) * ( 1 + Overwhelming Odds Desire + Exposed Desire + Raiding Desire )
@@ -1997,6 +2008,8 @@ NBattle = {
 	FLEET_UNCONNECTED_MISSION_AREA_TIMEOUT_DAYS = 30		# Number of days that a mission area is allowed to be invalid/unconnected before it gets cleaned up
 	FLEET_INTERCEPT_CHANCE_BASE = 10.0						# The chance (0-100) that a fleet will intercept as a base
 	FLEET_RAID_SUPPLY_CHANCE_BASE = 10.0					# The chance (0-100) that a fleet will raid supply as a base
+	
+	FLEET_RAID_MAX_SUPPLY_LENGTH_DIVISOR = 5				# When deciding how many supply ships can be attacked at once, we cap the divisor for targeted num ships based on supply path length by this
 
 	NAVAL_BATTLE_LOG_INITIAL_SIZE_FACTOR = 8				# Initial reserved log size factor. This is multiplied by the number of ships in a battle to estimate number of entries needed. Too large a value and you allocate too much data, too little and you need to expand the array multiple times which is slow.
 	NAVAL_BATTLE_LOG_ENTRIES_PER_PAGE = 20				# Number of naval battle log entries shown per page in the battle log UI.

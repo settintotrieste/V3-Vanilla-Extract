@@ -2762,7 +2762,7 @@ ship_mod_light_cruiser_propulsion_light = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_light"
 
 	modifier = {
-		ship_movement_speed_add = 10
+		ship_movement_speed_add = 11
 	}
 
 	construction_goods = { # 1140
@@ -2782,7 +2782,7 @@ ship_mod_light_cruiser_propulsion_medium = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_medium"
 
 	modifier = {
-		ship_movement_speed_add = 12.5
+		ship_movement_speed_add = 14
 	}
 
 	construction_goods = { # 1430
@@ -2803,7 +2803,7 @@ ship_mod_light_cruiser_propulsion_high = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_heavy"
 
 	modifier = {
-		ship_movement_speed_add = 15
+		ship_movement_speed_add = 17
 	}
 
 	construction_goods = { # 1830
@@ -4107,6 +4107,81 @@ ship_mod_troop_ship_propulsion_high = {
 	}
 }
 
+ship_mod_supply_ship_armor_light = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_armor_low.dds"
+
+	modifier = {
+		ship_armor_add = 4
+		ship_hit_points_max_add = 150
+	}
+}
+
+ship_mod_supply_ship_armor_medium = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_armor_mid.dds"
+	
+	unlocking_technologies = { ironclad_tech }
+
+	modifier = {
+		ship_armor_add = 10
+		ship_hit_points_max_add = 375
+	}
+}
+
+ship_mod_supply_ship_armor_high = {
+	type = ship_mod_slot_armor
+	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_armor_high.dds"
+	
+	unlocking_technologies = { pre_dreadnought_tech }
+
+	modifier = {
+		ship_armor_add = 20
+		ship_hit_points_max_add = 750
+	}
+}
+
+ship_mod_supply_ship_propulsion_light = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_propulsion_low.dds"
+
+	modifier = {
+		ship_movement_speed_add = 8.5
+	}
+}
+
+ship_mod_supply_ship_propulsion_medium = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_propulsion_mid.dds"
+	
+	unlocking_technologies = { ironclad_tech }
+
+	modifier = {
+		ship_movement_speed_add = 11
+	}
+}
+
+ship_mod_supply_ship_propulsion_high = {
+	type = ship_mod_slot_propulsion
+	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_propulsion_high.dds"
+	
+	unlocking_technologies = { pre_dreadnought_tech }
+
+	modifier = {
+		ship_movement_speed_add = 13
+	}
+}
+
+ship_mod_supply_ship_guns_light = {
+	type = ship_mod_slot_guns
+	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_guns_low.dds"
+}
+
+ship_mod_supply_ship_range_light = {
+	type = ship_mod_slot_range
+	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_range_low.dds"
+}
+
 ship_mod_troop_ship_range_light = {
 	type = ship_mod_slot_range
 	icon = "gfx/interface/icons/military_icons/navy_icons/ship_designer_icons/ship_designer_range_low.dds"
@@ -4330,7 +4405,7 @@ ship_mod_torpedo_boat_propulsion_light = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_light"
 
 	modifier = {
-		ship_movement_speed_add = 4.5
+		ship_movement_speed_add = 8.5
 	}
 
 	construction_goods = { # 390
@@ -4352,7 +4427,7 @@ ship_mod_torpedo_boat_propulsion_medium = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_medium"
 
 	modifier = {
-		ship_movement_speed_add = 6
+		ship_movement_speed_add = 11.5
 	}
 
 	construction_goods = { # 630
@@ -4374,7 +4449,7 @@ ship_mod_torpedo_boat_propulsion_high = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_heavy"
 
 	modifier = {
-		ship_movement_speed_add = 7
+		ship_movement_speed_add = 14
 	}
 
 	construction_goods = { # 960
@@ -4598,7 +4673,7 @@ ship_mod_torpedo_boat_destroyer_propulsion_light = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_light"
 
 	modifier = {
-		ship_movement_speed_add = 6.5
+		ship_movement_speed_add = 8.5
 	}
 
 	construction_goods = { # 630
@@ -4619,7 +4694,7 @@ ship_mod_torpedo_boat_destroyer_propulsion_medium = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_medium"
 
 	modifier = {
-		ship_movement_speed_add = 8.5
+		ship_movement_speed_add = 11.5
 	}
 
 	construction_goods = { # 960
@@ -4640,7 +4715,7 @@ ship_mod_torpedo_boat_destroyer_propulsion_high = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_heavy"
 
 	modifier = {
-		ship_movement_speed_add = 9.5
+		ship_movement_speed_add = 14
 	}
 
 	construction_goods = { # 1380
@@ -5131,7 +5206,7 @@ ship_mod_destroyer_propulsion_light = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_light"
 
 	modifier = {
-		ship_movement_speed_add = 8
+		ship_movement_speed_add = 9
 	}
 
 	construction_goods = { # 920
@@ -5152,7 +5227,7 @@ ship_mod_destroyer_propulsion_medium = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_medium"
 
 	modifier = {
-		ship_movement_speed_add = 10
+		ship_movement_speed_add = 12
 	}
 
 	construction_goods = { # 1400
@@ -5173,7 +5248,7 @@ ship_mod_destroyer_propulsion_high = {
 	clicksound = "event:/SFX/UI/ShipDesigner/shipdesigner_modification_propulsion_heavy"
 
 	modifier = {
-		ship_movement_speed_add = 12
+		ship_movement_speed_add = 15
 	}
 
 	construction_goods = { # 1980

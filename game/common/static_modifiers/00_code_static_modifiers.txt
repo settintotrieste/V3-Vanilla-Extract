@@ -455,7 +455,9 @@ prestige_goods_supply_army = {
 }
 
 prestige_goods_supply_navy = {
-	unit_morale_recovery_mult = 0.25
+	ship_hull_damage_mult = 0.1
+	ship_crew_damage_mult = 0.1
+	ship_armor_mult = 0.1
 }
 
 insurrectionary_ig = {

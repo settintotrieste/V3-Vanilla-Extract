@@ -2,7 +2,7 @@
 ship_names_historical_chinese_capital_ships = {
 	name = "shipname_default_format"
 	selection_weight = 10
-	culture = han
+	country = CHI
 
 	allowed_ship_types = {
 		ship_type_ship_of_the_line
@@ -33,7 +33,7 @@ ship_names_historical_chinese_capital_ships = {
 ship_names_historical_chinese_cruisers = {
 	name = "shipname_default_format"
 	selection_weight = 10
-	culture = han
+	country = CHI
 
 	allowed_ship_types = {
 		ship_type_frigate
@@ -69,7 +69,7 @@ ship_names_historical_chinese_cruisers = {
 ship_names_historical_chinese_destroyers = {
 	name = "shipname_default_format"
 	selection_weight = 10
-	culture = han
+	country = CHI
 
 	allowed_ship_types = {
 		ship_type_torpedo_boat_destroyer
@@ -132,4 +132,3 @@ ship_names_historical_chinese_destroyers = {
 		}
 	}
 }
-

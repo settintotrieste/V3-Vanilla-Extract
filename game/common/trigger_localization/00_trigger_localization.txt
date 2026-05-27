@@ -7844,6 +7844,7 @@ is_invasion_stalled = {
 }
 
 country_can_form_power_bloc = {
+	show_children = yes
 	global = TRIGGER_COUNTRY_CAN_FORM_POWER_BLOC
 	global_not = TRIGGER_COUNTRY_CAN_FORM_POWER_BLOC_NOT
 }

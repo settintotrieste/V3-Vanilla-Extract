@@ -374,3 +374,14 @@ modifier_expanded_shinsengumi_negative = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	interest_group_approval_add = -3
 }
+
+modifier_last_stand_goryokaku = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_morale_loss_mult = -0.50
+	unit_defense_mult = 0.30
+}
+
+modifier_taikun = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	character_prominence_add = 30
+}

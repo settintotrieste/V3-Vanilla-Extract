@@ -4,12 +4,20 @@
 
 	text = {
 		trigger = {
+			character_is_taikun = yes
+		}
+		localization_key = character_title_taikun
+	}
+	text = {
+		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = yes
 		}
 		localization_key = character_title_daimyo
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = yes
 			is_noble = yes
@@ -21,6 +29,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = yes
 			is_noble = yes
@@ -32,6 +41,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = yes
 			is_noble = yes
@@ -43,6 +53,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = yes
 			is_noble = yes
@@ -54,6 +65,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = no
 			is_noble = yes
@@ -65,6 +77,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = no
 			is_noble = yes
@@ -76,6 +89,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = no
 			is_noble = yes
@@ -87,6 +101,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = no
 			is_noble = yes
@@ -98,6 +113,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = yes
 			OR = {
@@ -111,6 +127,7 @@
 	}
 	text = {
 		trigger = {
+			character_is_taikun = no
 			character_is_daimyo = no
 			is_female = no
 			OR = {

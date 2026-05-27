@@ -184,7 +184,7 @@ identity_sovereign_empire = {
 	}
 
 	possible = {
-		has_law = law_type:law_monarchy
+		country_has_monarchy_law = yes
 	}
 
 	can_leave = {

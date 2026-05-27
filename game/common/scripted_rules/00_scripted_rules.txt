@@ -218,15 +218,6 @@ can_sign_treaty_with = {
 	root = {
 		NOT = { is_diplomatic_play_enemy_of = scope:other_country }
 	}
-
-	OR = {
-		has_strategic_adjacency = scope:other_country
-		AND = {
-			has_port_country = yes
-			scope:other_country = { has_port_country = yes }
-		}
-		is_in_same_power_bloc = scope:other_country
-	}
 }
 
 # Evaluated when checking if a country can threaten naval hostilities in a treaty

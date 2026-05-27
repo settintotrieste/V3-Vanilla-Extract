@@ -15234,13 +15234,8 @@ RU_ML_ADJ = {
 		trigger = {
 			exists = market
 			market.owner = {
-			exists = c:AFS
-			this = c:AFS
-			any_state = {
-				owner = c:AFS
-				is_capital = yes
-				region = sr:region_north_africa
-			}
+				c:AFS ?= this
+				capital = { region = sr:region_north_africa }
 			}
 		}
 		localization_key = dyn_c_sahara_free_state_RU_ML_ADJ
