@@ -40,6 +40,7 @@ revolution_pulse_events.1 = {
 			is_incorporated = yes
 			any_scope_culture = {
 				has_homeland = prev
+				NOT = { is_primary_culture_of = ROOT }
 				ROOT = {
 					country_average_culture_pop_acceptance = {
 						culture = prev
@@ -88,6 +89,7 @@ revolution_pulse_events.1 = {
 				is_incorporated = yes
 				any_scope_culture = {
 					has_homeland = prev
+					NOT = { is_primary_culture_of = ROOT }
 					ROOT = {
 						country_average_culture_pop_acceptance = {
 							culture = prev
@@ -100,6 +102,7 @@ revolution_pulse_events.1 = {
 			random_scope_culture = {
 				limit = {
 					has_homeland = prev
+					NOT = { is_primary_culture_of = ROOT }
 					ROOT = {
 						country_average_culture_pop_acceptance = {
 							culture = prev
@@ -2530,6 +2533,7 @@ revolution_pulse_events.17 = {
 			is_incorporated = yes
 			any_scope_pop = {
 				total_size >= 10000
+				pop_has_primary_culture = no
 				pop_acceptance < acceptance_status_3
 			}
 		}
@@ -2571,12 +2575,14 @@ revolution_pulse_events.17 = {
 				is_incorporated = yes
 				any_scope_pop = {
 					total_size >= 10000
+					pop_has_primary_culture = no
 					pop_acceptance < acceptance_status_3
 				}
 			}
 			random_scope_pop = {
 				limit = {
 					total_size >= 10000
+					pop_has_primary_culture = no
 					pop_acceptance < acceptance_status_3
 				}
 				culture = {

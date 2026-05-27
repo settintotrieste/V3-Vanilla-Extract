@@ -389,6 +389,7 @@ citizenship_laws.4 = {
 			}
 		}
 		any_scope_pop = {
+			pop_has_primary_culture = no
 			state = {
 				state_average_culture_pop_acceptance = {
 					culture = PREV.culture
@@ -415,6 +416,7 @@ citizenship_laws.4 = {
 		}
 		random_scope_pop = {
 			limit = {
+				pop_has_primary_culture = no
 				state = {
 					state_average_culture_pop_acceptance = {
 						culture = PREV.culture
@@ -516,6 +518,7 @@ citizenship_laws.5 = {
 			}
 		}
 		any_scope_pop = {
+			pop_has_primary_culture = no
 			state = {
 				state_average_culture_pop_acceptance = {
 					culture = PREV.culture
@@ -544,6 +547,7 @@ citizenship_laws.5 = {
 		}
 		random_scope_pop = {
 			limit = {
+				pop_has_primary_culture = no
 				state = {
 					state_average_culture_pop_acceptance = {
 						culture = PREV.culture
@@ -642,6 +646,7 @@ citizenship_laws.6 = {
 			}
 		}
 		any_scope_pop = {
+			pop_has_primary_culture = no
 			state = {
 				state_average_culture_pop_acceptance = {
 					culture = PREV.culture
@@ -664,6 +669,7 @@ citizenship_laws.6 = {
 		}
 		random_scope_pop = {
 			limit = {
+				pop_has_primary_culture = no
 				state = {
 					state_average_culture_pop_acceptance = {
 						culture = PREV.culture

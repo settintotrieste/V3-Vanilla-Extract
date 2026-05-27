@@ -27,6 +27,7 @@ caudillo.1 = {
 		any_scope_character = {
 			has_role_of_type = general
 		}
+		NOT = { has_journal_entry = je_caudillo }
 	}
 
 	cooldown = { days = never_fire_again_modifier_time }
