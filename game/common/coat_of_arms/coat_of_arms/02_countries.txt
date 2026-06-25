@@ -27343,7 +27343,7 @@ ATB = { # Athabaska. Agglomeration of multiple Athabaskan nations, so this is mo
 	}
 }
 
-MSN = { # Massina. Fellow on Wikipedia had a pattern like this, but didn't cite his sources. Only other thing I could briefly find was that the founder of Massina recieved a flag from Uthman dan Fodio of Sokoto, and Sokoto just has a plain green flag. I'm unsure where this yellow flag with a green crescent and stars pattern comes from then, but it's distinctive from Sokoto's so that counts for something. If you, the reader, have a better flag, please post about it /and cite where the design comes from, ideally pointing to primary sources/ please.
+MSN = { # Massina. Fellow on Wikipedia had a pattern like this, but didn't cite his sources. Only other thing I could briefly find was that the founder of Massina received a flag from Uthman dan Fodio of Sokoto, and Sokoto just has a plain green flag. I'm unsure where this yellow flag with a green crescent and stars pattern comes from then, but it's distinctive from Sokoto's so that counts for something. If you, the reader, have a better flag, please post about it /and cite where the design comes from, ideally pointing to primary sources/ please.
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 

@@ -251,12 +251,6 @@ achievement_everyone_disliked_that = {
 		always = yes
 	}
 	happened = {
-		custom_tooltip = {
-			text = all_has_unnecessary_promotion_tt
-			any_interest_group = {
-				has_modifier = unnecessary_promotion
-				count >= 7
-			}
-		}
+		has_variable = achievement_everyone_disliked_that_var
 	}
 }

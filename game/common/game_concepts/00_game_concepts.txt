@@ -1850,6 +1850,8 @@ concept_regional_company_hq = {}
 
 concept_company_charter = {}
 
+concept_company_category = {}
+
 concept_coup = {}
 
 concept_coup_strength = {}

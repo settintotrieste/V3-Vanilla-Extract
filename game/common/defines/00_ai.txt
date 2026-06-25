@@ -577,7 +577,7 @@
 	NUM_DAYS_TO_REMEMBER_FAILED_FRONT_OR_HQ_ASSIGNMENT = 10 				# For how many days should the AI remember failing to assign a general to a front or HQ (and thus not try with that front again)
 	NUM_DAYS_TO_REMEMBER_FAILED_SUPPLY_ROUTE = 30 							# For how many days should the AI remember that a formation failed to find a supply route to a target
 	NUM_DAYS_TO_REMEMBER_FAILED_NAVAL_INVASION = 100 						# For how many days should the AI remember that a regular formation failed to launch a naval invasion
-	
+
 	# If a front is worth less than this, the AI will not assign any generals to it
 	FRONT_OR_HQ_IMPORTANCE_MIN_SCORE = 50
 
@@ -708,7 +708,8 @@
 	MONEY_SPENDING_MIN_SURPLUS_TO_ADD_SHOULD_HAVE = 2000 # How much of a surplus in absolute money does AI want to have after increasing spending for a 'should-have' project
 	MONEY_SPENDING_MIN_SURPLUS_TO_ADD_WANTS_TO_HAVE = 5000 # How much of a surplus in absolute money does AI want to have after increasing spending for a 'wants-to-have' project
 	MONEY_SPENDING_MIN_SURPLUS_TO_ADD_NICE_TO_HAVE = 10000 # How much of a surplus in absolute money does AI want to have after increasing spending for a 'nice-to-have' project
-	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_SHOULD_HAVE = 15000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'should-have' project, regardless of income ratio
+	MONEY_SPENDING_MIN_SURPLUS_RELATIVE_INCOME_CONVERSION = 5000 # For the above MIN_SURPLUS_TO_ADD values, for each this amount of absolute money, the AI can also pass the check by having at least a 100% relative surplus. IE, if this is set to 4000 and MONEY_SPENDING_MIN_SURPLUS_TO_ADD_SHOULD_HAVE is set to 2000, then the AI will be fine with either a 2000 absolute surplus or a 50% relative surplus.
+	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_SHOULD_HAVE = 15000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'should-have' project, regardless of income ratio.
 	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_WANTS_TO_HAVE = 30000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'wants-to-have' project, regardless of income ratio
 	MONEY_SPENDING_MIN_SURPLUS_TO_IGNORE_RATIO_FOR_NICE_TO_HAVE = 50000 # If AI has this surplus in absolute money, it's always fine to increase spending on a 'nice-to-have' project, regardless of income ratio
 	MONEY_SPENDING_ACCEPTABLE_WAR_DEBT = 0.5 # If the AI has less than this % debt to ceiling, avoid doing cost-cutting at war for 'wants to have' and above
@@ -743,6 +744,7 @@
 	MONEY_SPENDING_BUREAUCRACY_EXCESSIVE_THRESHOLD = 1.30 # If bureaucracy income to expenses is better than this, AI will not improve it
 	MONEY_SPENDING_INFRASTRUCTURE_CRITICAL_THRESHOLD = 0.80 # If infra production to usage is worse than this, AI considers it critical to improve it
 	MONEY_SPENDING_INFRASTRUCTURE_DESIRED_THRESHOLD = 1.20 # If infra production to usage is worse than this, AI wants to improve it
+	MONEY_SPENDING_CANAL_MIN_CONSTRUCTION_FOR_SHOULD_HAVE = 100 # If construction output is less than this, AI will have lower priority to construct canals
 
 	# Below data is used to calculate how much weight the AI places on specific government buildings
 	GOVERNMENT_BUILDING_BASE_VALUE = 1000 # If no ai_value is scripted in the building
@@ -1010,7 +1012,8 @@
 	# Below data is used to calculate AI's desire for peace
 	AI_PEACE_AGREEMENT_BASE_VALUE = -10
 	AI_PEACE_AGREEMENT_WHITE_PEACE_BASE = 10 # If no wargoals are being enforced on either side
-	AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION = 2 # For each month the war goes on add this to the acceptance for a white peace
+	AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION_START_MONTH = 12 # Amount of months before increased peace acceptance from war duration kicks in
+	AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION = 2 # For each month the war goes on after AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION_START_MONTH add this to the acceptance for a white peace
 	AI_PEACE_AGREEMENT_WAR_SUPPORT_FACTOR = -1	# Each point of war support affects peace acceptance by this amoun
 	AI_PEACE_AGREEMENT_UNACCEPTABLE_WARGOAL_VALUE = -1000 # Fixed wargoal value that will be added to peace acceptance if an unacceptable wargoal (such as cut down to size) is being enforced on us
 	AI_PEACE_AGREEMENT_WARGOAL_VALUE_BASE = 10	# How much does the AI value each wargoal (base)
@@ -1035,7 +1038,7 @@
 	AI_CAPITULATE_ENEMY_WARGOAL_FACTOR = -20 # For each wargoal targeting us in the war
 	AI_CAPITULATE_PEACE_DESIRE_FACTOR = 0.5 # Peace desire is multiplied by this when added to capitulation score
 
-	AI_MONTHS_OF_REDUCED_PEACE_DESIRE = 10 # Before this amount of months, reduce AI peace desire
+	AI_MONTHS_OF_REDUCED_PEACE_DESIRE = 12 # Before this amount of months, reduce AI peace desire
 	AI_PEACE_DESIRE_FROM_SHORT_WAR = -10 # Subtract this amount of peace desire for the above number of months (multiplied by AI_MONTHS_OF_REDUCED_PEACE_DESIRE - months of war duration)
 	AI_PEACE_DESIRE_FROM_TURMOIL = 25 # Add this amount of peace desire at 100% radicals
 	AI_PEACE_DESIRE_FROM_DEVASTATION = 50 # Add this amount of peace desire at 100% devastation
@@ -1178,9 +1181,9 @@
 	AI_INTERACTION_MIN_PROMINENCE_CHANCE = 10							# Minimum % chance of being considered regardless of prominence
 
 	SENT_PEACE_DEAL_MEMORY_DURATION_DAYS = 100							# For how many days does the AI remember sending a peace deal in a war and thus will not send another one
-	
+
 	TREATY_FAIRNESS_BASE_SCORE = 10										# The base score for treaty fairness before country acceptances are considered, treaties with an acceptance delta smaller than this will be considered fair to both part
-	
+
 	REJECTED_TREATY_MEMORY_DURATION_DAYS = 365								# For how many days does the AI remember a rejected treaty and refuse any treaties that aren't a significant enough improvement on it
 	REJECTED_TREATY_MIN_ACCEPTANCE_IMPROVEMENT_FOR_NEW_PROPOSAL = 10		# For the AI to have a chance to accept a treaty proposal after recently having rejected a treaty, the new proposal must be this much better than the old one
 	REJECTED_TREATY_UNDER_MIN_ACCEPTANCE_IMPROVEMENT_PENALTY = -1000		# Added to accepance when a treaty proposal isn't sufficiently improved upon within the rejected treaty memory duration

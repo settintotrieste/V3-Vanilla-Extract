@@ -1116,6 +1116,19 @@ ai_strategy_default = {
 			}
 			add = 0.25
 		}
+
+		# British India
+		if = {
+			limit = {
+				has_journal_entry = je_consolidate_colonial_rule
+				scope:enemy_country = {
+					any_scope_state = {
+						is_in_geographic_region = geographic_region_indian_frontier
+					}
+				}
+			}
+			add = 0.25
+		}
 	}
 
 	# Chance each update that the AI is willing to start changing a law (1 = 1%)
@@ -1573,10 +1586,7 @@ ai_strategy_default = {
 						target_is_our_or_fellow_subject = no
 					}
 					scope:target_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_india
-							is_in_geographic_region = geographic_region_burma
-						}
+						is_in_geographic_region = geographic_region_indian_frontier
 					}
 				}
 				add = 50
@@ -3409,11 +3419,9 @@ ai_strategy_default = {
 				scope:target_country = {
 					is_country_type = unrecognized
 					target_is_our_or_fellow_subject = no
+					has_strategic_land_adjacency = root
 					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_india
-							is_in_geographic_region = geographic_region_burma
-						}
+						is_in_geographic_region = geographic_region_indian_frontier
 					}
 				}
 			}
@@ -3429,10 +3437,7 @@ ai_strategy_default = {
 				scope:target_country = {
 					NOT = { is_subject_of = ROOT }
 					any_scope_state = {
-						OR = {
-							is_in_geographic_region = geographic_region_india
-							is_in_geographic_region = geographic_region_burma
-						}
+						is_in_geographic_region = geographic_region_indian_frontier
 					}
 				}
 			}
@@ -3451,7 +3456,6 @@ ai_strategy_default = {
 			}
 			add = 10
 		}
-
 
 		if = { #Russian Caucasus
 			limit = {
@@ -4530,24 +4534,24 @@ ai_strategy_default = {
 	# Using this value in other strategies will function additively
 	max_active_stances = {
 		value = 1
-		
+
 		add = {
 			value = country_rank
 			divide = 2
 		}
-		
+
 		add = {
 			value = navy_size
 			divide = 25
 		}
-		
+
 		if = {
 			limit = {
 				has_strategy = ai_strategy_armed_isolationism
 			}
 			multiply = 0.5
 		}
-		
+
 		min = 1
 		max = 10
 	}
@@ -4647,7 +4651,7 @@ ai_strategy_default = {
 			if = {
 				limit = { has_law_or_variant = law_type:law_professional_navy }
 				add = 10
-			}			
+			}
 			else_if = {
 				limit = { has_law_or_variant = law_type:law_merchant_navy }
 				subtract = 15
@@ -4655,7 +4659,7 @@ ai_strategy_default = {
 			else_if = {
 				limit = { has_law_or_variant = law_type:law_jeune_ecole }
 				subtract = 10
-			}			
+			}
 		}
 		ship_group_cruisers = {
 			value = 60
@@ -4667,7 +4671,7 @@ ai_strategy_default = {
 			if = {
 				limit = { has_law_or_variant = law_type:law_professional_navy }
 				subtract = 10
-			}			
+			}
 			else_if = {
 				limit = { has_law_or_variant = law_type:law_merchant_navy }
 				add = 15
@@ -4675,7 +4679,7 @@ ai_strategy_default = {
 			else_if = {
 				limit = { has_law_or_variant = law_type:law_jeune_ecole }
 				add = 10
-			}			
+			}
 		}
 		ship_group_torpedo_craft = {
 			value = 0
@@ -4683,11 +4687,11 @@ ai_strategy_default = {
 				limit = { has_technology_researched = self_propelled_torpedoes }
 				add = 30
 			}
-			
+
 			if = {
 				limit = { has_law_or_variant = law_type:law_jeune_ecole }
 				add = 20
-			}			
+			}
 		}
 	}
 
@@ -6730,13 +6734,7 @@ ai_strategy_default = {
 					limit = {
 						NOT = { is_country_type = unrecognized }
 						scope:target_country = {
-							is_country_type = unrecognized
-							OR = {
-								is_subject = no
-								top_overlord ?= {
-									is_country_type = unrecognized
-								}
-							}
+							ai_country_is_valid_colonization_target = yes
 						}
 						has_technology_researched = colonization
 						institution_investment_level = {
@@ -6827,23 +6825,9 @@ ai_strategy_default = {
 							c:DEI ?= this
 							scope:target_country = {
 								capital.region = sr:region_indonesia
-								is_country_type = unrecognized
 							}
 						}
 						add = 1000
-					}
-
-					if = {
-						limit = {
-							scope:target_country = {
-								is_subject = yes
-								is_country_type = unrecognized
-								top_overlord ?= {
-									NOT = { is_country_type = unrecognized }
-								}
-							}
-						}
-						multiply = 0.1
 					}
 				}
 
@@ -7129,14 +7113,7 @@ ai_strategy_default = {
 						country_rank > scope:target_country.country_rank
 						NOT = { is_country_type = unrecognized }
 						scope:target_country = {
-							is_country_type = unrecognized
-							NOT = { is_subject_of = root }
-							OR = {
-								is_subject = no
-								top_overlord ?= {
-									is_country_type = unrecognized
-								}
-							}
+							ai_country_is_valid_colonization_target = yes
 						}
 						has_technology_researched = colonization
 						institution_investment_level = {
@@ -7186,23 +7163,9 @@ ai_strategy_default = {
 							c:DEI ?= this
 							scope:target_country = {
 								capital.region = sr:region_indonesia
-								is_country_type = unrecognized
 							}
 						}
 						add = 500
-					}
-
-					if = {
-						limit = {
-							scope:target_country = {
-								is_subject = yes
-								is_country_type = unrecognized
-								top_overlord ?= {
-									NOT = { is_country_type = unrecognized }
-								}
-							}
-						}
-						multiply = 0.1
 					}
 				}
 				if = { # Britain consolidating South Africa
@@ -7214,6 +7177,7 @@ ai_strategy_default = {
 						}
 						scope:target_country = {
 							capital.region = sr:region_southern_africa
+							ai_country_is_valid_colonization_target = yes
 						}
 					}
 					add = 250
@@ -7729,10 +7693,7 @@ ai_strategy_default = {
 						is_country_type = unrecognized
 						target_is_our_or_fellow_subject = no
 						any_scope_state = {
-							OR = {
-								is_in_geographic_region = geographic_region_india
-								is_in_geographic_region = geographic_region_burma
-							}
+							is_in_geographic_region = geographic_region_indian_frontier
 						}
 					}
 				}

@@ -94,8 +94,8 @@ naval_mission_type_piracy = {
             NOT = {
                 any_scope_treaty = {
                     any_scope_article = {
-                        source_country = root.owner
                         has_type = abandon_piracy
+                        source_country ?= root.owner
                     }
                 }
             }
@@ -116,7 +116,8 @@ naval_mission_type_privateer = {
     clicksound = "event:/SFX/UI/NavalBattle/Missions/naval_mission_privateer"
 
     piracy = yes
-    piracy_targets = { hostile }
+    piracy_import_targets = { hostile }
+    piracy_export_targets = { non_allies }
     ai_will_cancel_for_transportation = yes
     experience = 2
 

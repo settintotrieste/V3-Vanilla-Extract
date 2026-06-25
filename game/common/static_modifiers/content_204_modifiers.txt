@@ -662,7 +662,7 @@ modifier_alexander_ii = {
 modifier_nicholas_tsesarevich = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_academics_pol_str_mult = 0.15
-	country_law_enactment_time_mult = -0.10
+	country_law_enactment_speed_mult = 0.10
 }
 
 modifier_alexander_iii = {

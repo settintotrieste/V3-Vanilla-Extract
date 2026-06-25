@@ -22,11 +22,11 @@ ship_type_ship_of_the_line = {
         ship_supply_capacity_add = 40
         ship_carrying_capacity_add = 0.3
         ship_marine_capacity_add = 0.2
-        ship_hull_damage_add = 20
-        ship_crew_damage_add = 10
+        ship_hull_damage_add = 25
+        ship_crew_damage_add = 15
         ship_armor_add = 12
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 2
+        ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 50
         ship_screening_add = 5
         ship_readiness_gain_add = 10
@@ -35,8 +35,8 @@ ship_type_ship_of_the_line = {
         ship_detection_add = 10
         ship_blockade_strength_add = 100
 
-        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.4
-        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.4
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.5
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.5
         ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
     }
@@ -111,11 +111,11 @@ ship_type_monitor = {
         ship_crew_max_add = 200
         ship_movement_speed_add = 4
         ship_supply_capacity_add = 40
-        ship_hull_damage_add = 40
+        ship_hull_damage_add = 60
         ship_crew_damage_add = 20
         ship_armor_add = 20
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 2
+        ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 30
         ship_screening_add = 10
         ship_readiness_gain_add = 10
@@ -186,7 +186,7 @@ ship_type_early_ironclad = {
 
     ship_group = ship_group_capital_ships
 
-    modification_construction_cost = 75
+    modification_construction_cost = 100
 
     can_be_flagship = yes
 
@@ -206,12 +206,12 @@ ship_type_early_ironclad = {
         ship_supply_capacity_add = 50
         ship_carrying_capacity_add = 1.5
         ship_marine_capacity_add = 0.75
-        ship_hull_damage_add = 65
-        ship_crew_damage_add = 30
+        ship_hull_damage_add = 75
+        ship_crew_damage_add = 35
         ship_armor_add = 35
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 2
-        ship_vulnerability_add = 70
+        ship_critical_hit_multiplier_add = 0.25
+        ship_vulnerability_add = 120
         ship_screening_add = 11
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
@@ -219,15 +219,15 @@ ship_type_early_ironclad = {
         ship_detection_add = 20
         ship_blockade_strength_add = 300
 
-        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.4
-        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.4
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.5
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.5
         ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
         ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
     }
 
     construction_goods = {
-        goods_input_iron_add = 2080
-        goods_input_engines_add = 520
+        goods_input_iron_add = 2500
+        goods_input_engines_add = 800
     }
 
     materiel_goods = {
@@ -279,7 +279,7 @@ ship_type_coastal_defense_ship = {
 
     ship_group = ship_group_capital_ships
 
-    modification_construction_cost = 100
+    modification_construction_cost = 75
 
     is_obsolete = {
         has_technology_researched = pre_dreadnought_tech
@@ -295,11 +295,11 @@ ship_type_coastal_defense_ship = {
         ship_crew_max_add = 300
         ship_movement_speed_add = 4
         ship_supply_capacity_add = 40
-        ship_hull_damage_add = 60
+        ship_hull_damage_add = 70
         ship_crew_damage_add = 30
         ship_armor_add = 30
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 2
+        ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 60
         ship_screening_add = 15
         ship_readiness_gain_add = 10
@@ -309,10 +309,10 @@ ship_type_coastal_defense_ship = {
         ship_blockade_strength_add = 100
         ship_max_distance_to_port_add = 1
 
-        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.3
-        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.3
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.5
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.5
         ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
-        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.2
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
     }
 
     distance_to_port_modifier = {
@@ -321,8 +321,8 @@ ship_type_coastal_defense_ship = {
     }
 
     construction_goods = {
-        goods_input_iron_add = 1334
-        goods_input_engines_add = 445
+        goods_input_iron_add = 2500
+        goods_input_engines_add = 800
     }
 
     materiel_goods = {
@@ -374,7 +374,7 @@ ship_type_modern_ironclad = {
 
     ship_group = ship_group_capital_ships
 
-    modification_construction_cost = 85
+    modification_construction_cost = 125
 
     can_be_flagship = yes
 
@@ -394,12 +394,12 @@ ship_type_modern_ironclad = {
         ship_supply_capacity_add = 60
         ship_carrying_capacity_add = 1.8
         ship_marine_capacity_add = 0.9
-        ship_hull_damage_add = 90
+        ship_hull_damage_add = 110
         ship_crew_damage_add = 40
         ship_armor_add = 75
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 2
-        ship_vulnerability_add = 80
+        ship_critical_hit_multiplier_add = 0.25
+        ship_vulnerability_add = 160
         ship_screening_add = 14
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
@@ -407,16 +407,16 @@ ship_type_modern_ironclad = {
         ship_detection_add = 25
         ship_blockade_strength_add = 500
 
-        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.4
-        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.4
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
-        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.66
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.66
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.66
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 1300
-        goods_input_iron_add = 650
-        goods_input_engines_add = 650
+        goods_input_steel_add = 2000
+        goods_input_iron_add = 900
+        goods_input_engines_add = 900
     }
 
     materiel_goods = {
@@ -471,7 +471,7 @@ ship_type_pre_dreadnought = {
 
     ship_group = ship_group_capital_ships
 
-    modification_construction_cost = 100
+    modification_construction_cost = 200
 
     can_be_flagship = yes
 
@@ -491,12 +491,12 @@ ship_type_pre_dreadnought = {
         ship_supply_capacity_add = 65
         ship_carrying_capacity_add = 2.5
         ship_marine_capacity_add = 1.25
-        ship_hull_damage_add = 108
-        ship_crew_damage_add = 40
+        ship_hull_damage_add = 140
+        ship_crew_damage_add = 50
         ship_armor_add = 90
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 2
-        ship_vulnerability_add = 90
+        ship_critical_hit_multiplier_add = 0.25
+        ship_vulnerability_add = 180
         ship_screening_add = 16
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
@@ -504,16 +504,16 @@ ship_type_pre_dreadnought = {
         ship_detection_add = 30
         ship_blockade_strength_add = 1250
 
-        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.4
-        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.4
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
-        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.66
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.66
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.66
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 1560
-        goods_input_iron_add = 1040
-        goods_input_engines_add = 1040
+        goods_input_steel_add = 3000
+        goods_input_iron_add = 2000
+        goods_input_engines_add = 2000
     }
 
     materiel_goods = {
@@ -584,7 +584,7 @@ ship_type_dreadnought = {
 
     ship_group = ship_group_capital_ships
 
-    modification_construction_cost = 125
+    modification_construction_cost = 250
 
     can_be_flagship = yes
 
@@ -596,12 +596,12 @@ ship_type_dreadnought = {
         ship_supply_capacity_add = 70
         ship_carrying_capacity_add = 2.5
         ship_marine_capacity_add = 1.25
-        ship_hull_damage_add = 120
-        ship_crew_damage_add = 50
+        ship_hull_damage_add = 140
+        ship_crew_damage_add = 60
         ship_armor_add = 100
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 2
-        ship_vulnerability_add = 90
+        ship_critical_hit_multiplier_add = 0.25
+        ship_vulnerability_add = 180
         ship_screening_add = 18
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
@@ -609,16 +609,16 @@ ship_type_dreadnought = {
         ship_detection_add = 40
         ship_blockade_strength_add = 1500
 
-        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.4
-        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.4
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
-        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.66
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.66
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.66
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 1950
-        goods_input_iron_add = 1300
-        goods_input_engines_add = 1300
+        goods_input_steel_add = 4000
+        goods_input_iron_add = 2600
+        goods_input_engines_add = 2600
     }
 
     materiel_goods = {
@@ -685,7 +685,7 @@ ship_type_super_dreadnought = {
 
     ship_group = ship_group_capital_ships
 
-    modification_construction_cost = 150
+    modification_construction_cost = 300
 
     can_be_flagship = yes
 
@@ -697,12 +697,12 @@ ship_type_super_dreadnought = {
         ship_supply_capacity_add = 75
         ship_carrying_capacity_add = 3
         ship_marine_capacity_add = 1.5
-        ship_hull_damage_add = 135
-        ship_crew_damage_add = 55
+        ship_hull_damage_add = 170
+        ship_crew_damage_add = 60
         ship_armor_add = 110
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 2
-        ship_vulnerability_add = 100
+        ship_critical_hit_multiplier_add = 0.25
+        ship_vulnerability_add = 200
         ship_screening_add = 20
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
@@ -710,16 +710,16 @@ ship_type_super_dreadnought = {
         ship_detection_add = 50
         ship_blockade_strength_add = 2000
 
-        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.4
-        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.4
-        ship_battle_against_ship_type_submarine_accuracy_mult = -0.5
-        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.3
+        ship_battle_against_ship_type_torpedo_boat_accuracy_mult = -0.66
+        ship_battle_against_ship_type_torpedo_boat_destroyer_accuracy_mult = -0.66
+        ship_battle_against_ship_type_submarine_accuracy_mult = -0.66
+        ship_battle_against_ship_type_destroyer_accuracy_mult = -0.5
     }
 
     construction_goods = {
-        goods_input_steel_add = 2600
-        goods_input_iron_add = 1300
-        goods_input_engines_add = 1300
+        goods_input_steel_add = 5200
+        goods_input_iron_add = 2600
+        goods_input_engines_add = 2600
     }
 
     materiel_goods = {
@@ -817,11 +817,11 @@ ship_type_frigate = {
         ship_crew_max_add = 500
         ship_movement_speed_add = 3.0
         ship_supply_capacity_add = 9
-        ship_hull_damage_add = 17
+        ship_hull_damage_add = 20
         ship_crew_damage_add = 3
         ship_armor_add = 5
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 1.5
+        ship_critical_hit_multiplier_add = 0.1
         ship_vulnerability_add = 2.5
         ship_screening_add = 15
         ship_readiness_gain_add = 10
@@ -906,7 +906,7 @@ ship_type_iron_frigate = {
         ship_crew_damage_add = 10
         ship_armor_add = 17
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 1.5
+        ship_critical_hit_multiplier_add = 0.1
         ship_vulnerability_add = 4.5
         ship_screening_add = 25
         ship_readiness_gain_add = 10
@@ -977,11 +977,11 @@ ship_type_troop_ship = {
         ship_crew_max_add = 200
         ship_movement_speed_add = 4.5
         ship_supply_capacity_add = 55
-        ship_hull_damage_add = 21
-        ship_crew_damage_add = 6
+        ship_hull_damage_add = 25
+        ship_crew_damage_add = 10
         ship_armor_add = 8
         ship_critical_hit_chance_add = 0.05
-        ship_critical_hit_multiplier_add = 1.25
+        ship_critical_hit_multiplier_add = 0.1
         ship_vulnerability_add = 100
         ship_screening_add = 5
         ship_readiness_gain_add = 10
@@ -1057,11 +1057,11 @@ ship_type_protected_cruiser = {
         ship_crew_max_add = 800
         ship_movement_speed_add = 5
         ship_supply_capacity_add = 50
-        ship_hull_damage_add = 76
+        ship_hull_damage_add = 95
         ship_crew_damage_add = 20
         ship_armor_add = 63
         ship_critical_hit_chance_add = 0.1
-        ship_critical_hit_multiplier_add = 1.75
+        ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 60
         ship_screening_add = 35
         ship_readiness_gain_add = 10
@@ -1149,11 +1149,11 @@ ship_type_armored_cruiser = {
         ship_crew_max_add = 700
         ship_movement_speed_add = 4.5
         ship_supply_capacity_add = 60
-        ship_hull_damage_add = 91
-        ship_crew_damage_add = 25
+        ship_hull_damage_add = 130
+        ship_crew_damage_add = 30
         ship_armor_add = 75
         ship_critical_hit_chance_add = 0.1
-        ship_critical_hit_multiplier_add = 2.0
+        ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 10
         ship_screening_add = 45
         ship_readiness_gain_add = 10
@@ -1232,11 +1232,11 @@ ship_type_light_cruiser = {
         ship_crew_max_add = 500
         ship_movement_speed_add = 5
         ship_supply_capacity_add = 65
-        ship_hull_damage_add = 102
-        ship_crew_damage_add = 25
+        ship_hull_damage_add = 130
+        ship_crew_damage_add = 35
         ship_armor_add = 85
         ship_critical_hit_chance_add = 0.1
-        ship_critical_hit_multiplier_add = 2
+        ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 10
         ship_screening_add = 50
         ship_readiness_gain_add = 10
@@ -1320,11 +1320,11 @@ ship_type_seaplane_tender = {
         ship_crew_max_add = 300
         ship_movement_speed_add = 4
         ship_supply_capacity_add = 40
-        ship_hull_damage_add = 102
-        ship_crew_damage_add = 10
+        ship_hull_damage_add = 120
+        ship_crew_damage_add = 15
         ship_armor_add = 85
         ship_critical_hit_chance_add = 0.15
-        ship_critical_hit_multiplier_add = 2
+        ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 50
         ship_screening_add = 10
         ship_readiness_gain_add = 10
@@ -1387,7 +1387,7 @@ ship_type_aircraft_carrier = {
 
     ship_group = ship_group_cruisers
 
-    modification_construction_cost = 140
+    modification_construction_cost = 200
 
     can_be_flagship = yes
 
@@ -1399,11 +1399,11 @@ ship_type_aircraft_carrier = {
         ship_crew_max_add = 600 # ~ including air crew
         ship_movement_speed_add = 5
         ship_supply_capacity_add = 75
-        ship_hull_damage_add = 112
-        ship_crew_damage_add = 15
+        ship_hull_damage_add = 150
+        ship_crew_damage_add = 40
         ship_armor_add = 93
         ship_critical_hit_chance_add = 0.15
-        ship_critical_hit_multiplier_add = 2.5
+        ship_critical_hit_multiplier_add = 0.5
         ship_vulnerability_add = 100
         ship_screening_add = 10
         ship_readiness_gain_add = 10
@@ -1414,9 +1414,9 @@ ship_type_aircraft_carrier = {
     }
 
     construction_goods = {
-        goods_input_steel_add = 1950
-        goods_input_iron_add = 650
-        goods_input_engines_add = 650
+        goods_input_steel_add = 2500
+        goods_input_iron_add = 900
+        goods_input_engines_add = 900
     }
 
     materiel_goods = {
@@ -1495,11 +1495,11 @@ ship_type_torpedo_boat = {
         ship_crew_max_add = 200
         ship_movement_speed_add = 8
         ship_supply_capacity_add = 9
-        ship_hull_damage_add = 35
-        ship_crew_damage_add = 15
+        ship_hull_damage_add = 45
+        ship_crew_damage_add = 25
         ship_armor_add = 9
         ship_critical_hit_chance_add = 0.15
-        ship_critical_hit_multiplier_add = 1.5
+        ship_critical_hit_multiplier_add = 0.1
         ship_vulnerability_add = 20
         ship_screening_add = 50
         ship_readiness_gain_add = 10
@@ -1578,11 +1578,11 @@ ship_type_torpedo_boat_destroyer = {
         ship_crew_max_add = 200
         ship_movement_speed_add = 8
         ship_supply_capacity_add = 9
-        ship_hull_damage_add = 40
-        ship_crew_damage_add = 25
+        ship_hull_damage_add = 50
+        ship_crew_damage_add = 30
         ship_armor_add = 20
         ship_critical_hit_chance_add = 0.10
-        ship_critical_hit_multiplier_add = 2.0
+        ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 40
         ship_screening_add = 100
         ship_readiness_gain_add = 10
@@ -1657,11 +1657,11 @@ ship_type_submarine = {
         ship_crew_max_add = 200
         ship_movement_speed_add = 3
         ship_supply_capacity_add = 9
-        ship_hull_damage_add = 50
-        ship_crew_damage_add = 20
+        ship_hull_damage_add = 65
+        ship_crew_damage_add = 30
         ship_armor_add = 10
         ship_critical_hit_chance_add = 0.15
-        ship_critical_hit_multiplier_add = 2.5
+        ship_critical_hit_multiplier_add = 0.5
         ship_vulnerability_add = 5
         ship_screening_add = 5
         ship_readiness_gain_add = 10
@@ -1732,11 +1732,11 @@ ship_type_destroyer = {
         ship_crew_max_add = 200
         ship_movement_speed_add = 10
         ship_supply_capacity_add = 40
-        ship_hull_damage_add = 50
-        ship_crew_damage_add = 20
+        ship_hull_damage_add = 65
+        ship_crew_damage_add = 30
         ship_armor_add = 25
         ship_critical_hit_chance_add = 0.15
-        ship_critical_hit_multiplier_add = 2.5
+        ship_critical_hit_multiplier_add = 0.5
         ship_vulnerability_add = 50
         ship_screening_add = 150
         ship_readiness_gain_add = 10
@@ -1851,7 +1851,7 @@ ship_type_supply_ship = {
             ship_mod_supply_ship_range_light
         }
     }
-	
+
     default_modifications = {
         ship_mod_slot_armor = ship_mod_supply_ship_armor_light
 		ship_mod_slot_propulsion = ship_mod_supply_ship_propulsion_light

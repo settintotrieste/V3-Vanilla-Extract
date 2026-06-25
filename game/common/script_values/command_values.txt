@@ -445,17 +445,24 @@ naval_battle_size = {
 				scope:military_formation = {
 					add = this.detection
 				}
-				divide = scope:military_formation.num_ships_not_in_battle
+				divide = {
+					value = scope:military_formation.num_ships_not_in_battle
+					min = 1
+				}
 			}
 			multiply = {
 				scope:enemy_military_formation = {
 					add = this.visibility
 				}
-				divide = scope:enemy_military_formation.num_ships_not_in_battle
+				divide = {
+					value = scope:enemy_military_formation.num_ships_not_in_battle
+					min = 1
+				}
 			}
 			divide = {
 				add = scope:military_formation.num_ships_not_in_battle
 				add = scope:enemy_military_formation.num_ships_not_in_battle
+				min = 1
 			}
 		}
 	}

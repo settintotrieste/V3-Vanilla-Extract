@@ -857,7 +857,7 @@ character_morocco_ruler_succession_chain_effect = {
 		}
 		owner = {
 			create_character = {
-				template = MOR_muhammad_al_v_alawi
+				template = MOR_muhammad_v_al_alawi
 			}
 		}
 	}

@@ -1141,9 +1141,7 @@ je_unify_afghanistan = {
 
 	is_shown_in_lobby = {
 		has_dlc_feature = ep1_content #spheres of influence
-		capital ?= {
-			region = sr:region_greater_persia
-		}
+        is_in_geographic_region = geographic_region_greater_afghanistan
 		OR = {
 			country_has_primary_culture = cu:pashtun
 			country_has_primary_culture = cu:tajik
@@ -1154,9 +1152,7 @@ je_unify_afghanistan = {
 	scripted_button = je_afghan_unification_appeal_to_britain_button
 
 	possible = {
-		capital ?= {
-			region = sr:region_greater_persia
-		}
+        is_in_geographic_region = geographic_region_greater_afghanistan
 		OR = {
 			country_has_primary_culture = cu:pashtun
 			country_has_primary_culture = cu:tajik
