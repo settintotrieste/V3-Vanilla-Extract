@@ -475,7 +475,13 @@ utilitarian.4 = {
 
 	option = {
 		name = utilitarian.4.a
-		default_option = yes
+		trigger = {
+			authority >= 50
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+		highlighted_option = yes
 		change_relations = {
 			country = scope:relevant_overlord
 			value = -10
@@ -487,6 +493,7 @@ utilitarian.4 = {
 	}
 	option = {
 		name = utilitarian.4.b
+		default_option = yes
 		change_relations = {
 			country = scope:relevant_overlord
 			value = 10

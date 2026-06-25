@@ -117,7 +117,15 @@ tax.1 = {
 	option = { # promise to keep taxes low
 		name = tax.1.b
 		ai_chance = {
-			base = 10
+			base = 1
+			modifier = {
+				trigger = {
+					scope:antitax_rebels ?= {
+						political_movement_radicalism >= 0.75
+					}
+				}
+				add = 9
+			}
 		}
 		# lose less success chance
 		add_enactment_modifier = {
