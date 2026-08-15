@@ -570,6 +570,8 @@
 	SUPPLY_SHIP_ALLOCATION_HIGH_RATIO = 0.5							# If current supply ships are below this ratio of wanted, AI uses High supply construction allocation
 	SUPPLY_SHIP_ALLOCATION_LOW_RATIO = 1.0							# If current supply ships are above this ratio of wanted, AI uses Low supply construction allocation
 	SUPPLY_SHIP_ALLOCATION_VERY_LOW_RATIO = 1.5						# If current supply ships are above this ratio of wanted, AI uses Very Low supply construction allocation
+	DISBAND_EXCESS_SUPPLY_SHIPS_MIN_RATIO = 2.0						# AI only decommissions available supply ships when they exceed this ratio of wanted, then goes down to wanted
+	DISBAND_EXCESS_SUPPLY_SHIPS_MAX_COUNT = 10						# Maximum number of excess supply ships the AI will decommission per update
 
     # Below data is used for General Orders:
 	HQ_DEFENSE_MIN_THEATER_SCORE = 100								# Theater of local HQ must have at least this importance score to have a minimum garrison

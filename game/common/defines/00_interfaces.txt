@@ -80,6 +80,9 @@ NGUI = {
 	MILITARY_COLOR_ENEMY = { 0.5 0.04 0.02 1 }		# Red
 	MILITARY_COLOR_NEUTRAL = { 0.5 0.5 0.5 1 }		# Gray
 
+	NAVAL_MISSION_HIGHLIGHT_FRIENDLY_COLOR = { 0.47 0.88 1.0 1 }	# Blue - highlight for sea regions where friendly fleets are on a naval mission (matches the round_highlight_blue marker highlight)
+	NAVAL_MISSION_HIGHLIGHT_ENEMY_COLOR = { 1.0 0.30 0.30 1 }		# Red - highlight for sea regions where enemy fleets are on a naval mission
+
 	BIG_SWAY_VALUE = 100							# The score adjustment the AI could possibly get for a generous sway, for coloring the numeric preference values in Diplomatic Play popup
 
 	GRAPH_Y_AXIS_PADDING = 0.05 # Padding fraction applied to graph y-axis bounds: max is multiplied by (1 + padding), min is divided by (1 + padding)
@@ -227,14 +230,14 @@ NGUI = {
 }
 
 NGUI = {
-	BUILDING_OWNERSHIP_COLOR_PLAYER_GOVERNMENT = { 1 0.674 0.454 1 }
+	BUILDING_OWNERSHIP_COLOR_PLAYER_GOVERNMENT = { 0.20 0.40 0.90 1 }
 	BUILDING_OWNERSHIP_COLOR_PLAYER_POPS = { 0.41 0.67 0.74 1 }
 	BUILDING_OWNERSHIP_COLOR_PLAYER_COMPANY = { 0.41 0.67 0.74 1 }
-	BUILDING_OWNERSHIP_COLOR_NON_PLAYER_COMPANY = { 0.41 0.67 0.74 1 }
-	BUILDING_OWNERSHIP_COLOR_LOCAL_NON_PLAYER_GOVERNMENT = { 0.95 0.95 0.95 1 }
-	BUILDING_OWNERSHIP_COLOR_LOCAL_NON_PLAYER_POPS = { 0.95 0.95 0.95 1 }
-	BUILDING_OWNERSHIP_COLOR_OTHER_COUNTRIES_GOVERNMENT = { 0.9 0.9 0.4 1 }
-	BUILDING_OWNERSHIP_COLOR_OTHER_COUNTRIES_POPS = { 0.9 0.9 0.4 1 }
+	BUILDING_OWNERSHIP_COLOR_NON_PLAYER_COMPANY = { 1 0.674 0.454 1 }
+	BUILDING_OWNERSHIP_COLOR_LOCAL_NON_PLAYER_GOVERNMENT = { 0.9 0.50 0.2 1 }
+	BUILDING_OWNERSHIP_COLOR_LOCAL_NON_PLAYER_POPS = { 1 0.674 0.454 1 }
+	BUILDING_OWNERSHIP_COLOR_OTHER_COUNTRIES_GOVERNMENT = { 0.9 0.50 0.2 1 }
+	BUILDING_OWNERSHIP_COLOR_OTHER_COUNTRIES_POPS = { 1 0.674 0.454 1 }
 }
 
 NGUI = {

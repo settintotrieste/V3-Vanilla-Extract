@@ -10,6 +10,7 @@
 
 		# Validation
 		has_other_stakeholder
+		validate_conflicts_war_goals_all
 		validate_conflicts_existing_subject
 	}
 

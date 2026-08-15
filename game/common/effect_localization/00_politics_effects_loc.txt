@@ -199,6 +199,12 @@ add_amendment = {
 	third = ADD_AMENDMENT_THIRD
 }
 
+add_amendment_timeout = {
+	global = ADD_AMENDMENT_TIMEOUT_GLOBAL
+	first = ADD_AMENDMENT_TIMEOUT_FIRST
+	third = ADD_AMENDMENT_TIMEOUT_THIRD
+}
+
 remove_amendment = {
 	global = REMOVE_AMENDMENT_GLOBAL
 	first = REMOVE_AMENDMENT_FIRST

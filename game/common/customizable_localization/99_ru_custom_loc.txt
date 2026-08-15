@@ -21226,7 +21226,7 @@ RU_SL_CM_RP = {
 
 ## GENITIVE | РОДИТЕЛЬНЫЙ ##
 RU_SL_RP = {
-	type = state_region
+	type = state
 	log_loc_errors = no
 	text = {
 		trigger = {
@@ -29346,7 +29346,7 @@ RU_SL_CM_DP = {
 
 ## DATIVE | ДАТЕЛЬНЫЙ ##
 RU_SL_DP = {
-	type = state_region
+	type = state
 	log_loc_errors = no
 	text = {
 		trigger = {
@@ -37466,7 +37466,7 @@ RU_SL_CM_VP = {
 
 ## ACCUSATIVE | ВИНИТЕЛЬНЫЙ ##
 RU_SL_VP = {
-	type = state_region
+	type = state
 	log_loc_errors = no
 	text = {
 		trigger = {
@@ -45586,7 +45586,7 @@ RU_SL_CM_TP = {
 
 ## INSTRUMENTAL | ТВОРИТЕЛЬНЫЙ ##
 RU_SL_TP = {
-	type = state_region
+	type = state
 	log_loc_errors = no
 	text = {
 		trigger = {
@@ -53706,7 +53706,7 @@ RU_SL_CM_PP = {
 
 ## PREPOSITIONAL | ПРЕДЛОЖНЫЙ ##
 RU_SL_PP = {
-	type = state_region
+	type = state
 	log_loc_errors = no
 	text = {
 		trigger = {
@@ -61827,7 +61827,7 @@ RU_SL_CM_ADJ = {
 
 # ПРИЛАГАТЕЛЬНЫЕ ОБЛАСТЕЙ
 RU_SL_ADJ = {
-	type = state_region
+	type = state
 	log_loc_errors = no
 	text = {
 		trigger = {

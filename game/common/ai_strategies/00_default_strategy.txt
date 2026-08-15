@@ -5194,6 +5194,8 @@ ai_strategy_default = {
 		# Certain Great Powers care about Egyptian-Ottoman conflict in the early game
 		if = {
 			limit = {
+				exists = c:TUR
+				exists = c:EGY
 				OR = {
 					has_variable = veiled_protectorate_support_ottomans
 					has_variable = veiled_protectorate_support_egypt

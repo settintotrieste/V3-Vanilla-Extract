@@ -1171,3 +1171,55 @@ rebind_prestige_good_company = {
 		}
 	}
 }
+
+# Used from on_company_disbanded for a single generic prestige good. When the
+# company being disbanded (scope:company) is the one that had unlocked $JE$'s
+# good, its unlock variable is lost with it. If no other company in the country
+# still holds that unlock, re-add the matching prestige-good JE so a future
+# qualifying company can earn the good again. The disbanded company still exists
+# and still holds the variable when this runs, so count >= 2 means another holder
+# remains and the good is not actually lost. Runs in country scope.
+re_add_prestige_good_je_if_lost = {
+	if = {
+		limit = {
+			scope:company ?= {
+				has_variable = $UNLOCK_VAR$
+			}
+			NOT = {
+				any_company = {
+					count >= 2
+					has_variable = $UNLOCK_VAR$
+				}
+			}
+			NOT = {
+				has_journal_entry = $JE$
+			}
+		}
+		add_journal_entry = {
+			type = $JE$
+		}
+	}
+}
+
+# Called once from on_company_disbanded. Re-adds any generic prestige-good JE
+# whose good was solely produced by the company being disbanded, covering the
+# case where the JE had already completed (and was therefore removed) before the
+# company was dissolved.
+re_add_disbanded_company_prestige_good_jes = {
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_clothes_var JE = je_prestige_goods_clothes }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_groceries_var JE = je_prestige_goods_groceries }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_furniture_var JE = je_prestige_goods_furniture }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_fertilizer_var JE = je_prestige_goods_fertilizer }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_tools_var JE = je_prestige_goods_tools }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_fish_var JE = je_prestige_goods_fish }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_meat_var JE = je_prestige_goods_meat }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_coffee_var JE = je_prestige_goods_coffee }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_steel_var JE = je_prestige_goods_steel }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_opium_var JE = je_prestige_goods_opium }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_small_arms_var JE = je_prestige_goods_small_arms }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_artillery_var JE = je_prestige_goods_artillery }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_merchant_marine_var JE = je_prestige_goods_merchant_marine }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_grain_var JE = je_prestige_goods_grain }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_paper_var JE = je_prestige_goods_paper }
+	re_add_prestige_good_je_if_lost = { UNLOCK_VAR = prestige_good_generic_explosives_var JE = je_prestige_goods_explosives }
+}

@@ -109,6 +109,10 @@ concept_building = {
 
 concept_building_group = {}
 
+concept_coastal_building = {
+	texture = "gfx/interface/icons/coastal_building_icons/coastal_building_icon.dds"
+}
+
 concept_company = {
 	texture = "gfx/interface/main_hud/companies_btn.dds"
 	is_loading_tip = yes

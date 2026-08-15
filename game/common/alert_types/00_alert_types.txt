@@ -1112,3 +1112,16 @@ insufficient_supply_maintenance_alert = {
 	type = alert
 	color = yellow
 }
+
+unreachable_ship_construction_fleet_alert = {
+	script_context = player_country
+	texture = "gfx/interface/icons/alert_icons/unreachable_ship_construction_fleet_alert.dds"
+
+	valid = {
+		has_unreachable_ship_construction_fleet = yes
+	}
+
+	open_panel = construction|ships
+	type = important_action
+	color = yellow
+}

@@ -9264,3 +9264,33 @@ days_since_movement_defeated = {
 	third = TRIGGER_DAYS_SINCE_MOVEMENT_DEFEATED_THIRD
 	third_not = TRIGGER_DAYS_SINCE_MOVEMENT_DEFEATED_THIRD_NOT
 }
+
+has_tag = {
+	global = TRIGGER_HAS_TAG
+	global_not = TRIGGER_HAS_TAG_NOT
+}
+
+container_exists = {
+	global = TRIGGER_CONTAINER_EXISTS
+	global_not = TRIGGER_CONTAINER_EXISTS_NOT
+}
+
+has_parent = {
+	global = TRIGGER_HAS_PARENT
+	global_not = TRIGGER_HAS_PARENT_NOT
+}
+
+has_name = {
+	global = TRIGGER_HAS_NAME
+	global_not = TRIGGER_HAS_NAME_NOT
+}
+
+has_any_tags = {
+	global = TRIGGER_HAS_ANY_TAGS
+	global_not = TRIGGER_HAS_ANY_TAGS_NOT
+}
+
+has_tags = {
+	global = TRIGGER_HAS_TAGS
+	global_not = TRIGGER_HAS_TAGS_NOT
+}
