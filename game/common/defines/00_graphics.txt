@@ -17,6 +17,11 @@
 	HEAT_MAP_COLOR_TO = 	{ 0.1  0.4  0.2  1.5 }
 	HEAT_MAP_MIN_ALPHA = 0.4                                    # Used in the Interest Group and Market Map Mode
 
+	### STATE VALUE MAP MODE ###
+	STATE_VALUE_COLOR_PERSPECTIVE = { 0 0.2 0.5 @opacity }		# Blue, held by the country being evaluated
+	STATE_VALUE_COLOR_PLAYER = { 0.5 0.04 0.02 @opacity }		# Red, held by the player
+	STATE_VALUE_COLOR_OTHER = { 0.11 0.46 0.05 @opacity }		# Green, held by anyone else
+
 	### HIGHLIGHT ###
 	HIGHLIGHT_COLOR = { 1 1 1 0.5 }								# White
 	HIGHLIGHT_INTERACTION_COLOR = { 1 0.57 0.15 0.5 }			# Golden
@@ -493,16 +498,6 @@ NFortifications = {
 }
 
 NCoasts = {
-	LOCATOR_GRID_CELL_SIZE = 1.0				# Size of each grid cell in map units used for sampling coastal points
-	LOCATOR_GRID_EXPAND = 5.0					# How far beyond province bounding box to expand the grid
-	LOCATOR_PROBE_NUM_SAMPLES = 7				# Number of radial samples around each grid point to detect land/water boundary
-	LOCATOR_PROBE_DISTANCE = 1.5 				# Distance from grid point to each radial sample
-	LOCATOR_PROBE_DISTANCE_BEHIND = 3.0 		# Distance behind the water point to check for rivers (skip if land is found)
-	LOCATOR_PROBE_SEARCH_ITERATIONS = 5			# Number of binary search iterations to refine the coastline position
-	LOCATOR_INTERVAL_MIN = 10.0						# Minimum distance between locator water positions
-	LOCATOR_INTERVAL_MAX = 25.0						# Maximum distance between locator water positions (randomized per locator)
-	LOCATOR_PORT_DISTANCE = 5.0					# Minimum distance from port hub to keep locators
-
 	LANDING_ENTITY_DEFAULT = "military_transport_naval_rowboat_generic_entity"				# Default entity spawned before the tech
 	LANDING_ENTITY_ADVANCED = "military_transport_naval_landingcraft_generic_entity"		# Entity spawned after the tech is researched
 	LANDING_TECH = "landing_craft"				# Tech that unlocks the advanced landing entity

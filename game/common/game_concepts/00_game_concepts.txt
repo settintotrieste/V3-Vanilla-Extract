@@ -1325,7 +1325,6 @@ concept_commander = {}
 
 concept_war_support = {}
 
-concept_war_exhaustion = {}
 
 concept_pop_qualifications = {}
 

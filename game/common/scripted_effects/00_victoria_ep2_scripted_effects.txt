@@ -272,7 +272,7 @@ country_generate_japanese_shogun = {
 	}
 }
 
-country_ezo_generate_next_japanese_shogun = { # Used in the Ezo content - 
+country_ezo_generate_next_japanese_shogun = { # Used in the Ezo content -
 	if = {
 		limit = {
 			is_template_used = JAP_ienari_tokugawa
@@ -424,7 +424,7 @@ country_ezo_setup = {
 		c:EZO ?= {
 			copy_laws = scope:tokugawa_scope
 			activate_law = law_type:law_presidential_republic
-			hidden_effect = { 
+			hidden_effect = {
 				activate_law = law_type:law_intermediate_edo_system
 			}
 			scope:tokugawa_exile_leader_scope ?= {
@@ -2158,7 +2158,7 @@ evaluate_matsumae_curse = {
 				kill_character = yes
 			}
 			11 = {
-				
+
 			}
 		}
 	}
@@ -2664,8 +2664,12 @@ transition_off_of_monarchy_effects = {
 	if = {
 		limit = {
 			NOR = {
+				game_date <= 1836.1.2
 				has_journal_entry = je_abolish_monarchy
 				has_variable = monarchy_stamped_out_var
+				ig:ig_landowners ?= {
+					has_ideology = ideology:ideology_republican_paternalistic
+				}
 			}
 		}
 		set_variable = {

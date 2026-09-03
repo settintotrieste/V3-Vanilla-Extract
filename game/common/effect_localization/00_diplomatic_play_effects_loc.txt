@@ -47,9 +47,9 @@ add_war_war_support = {
     global_neg = ADD_WAR_WAR_SUPPORT_NEG
 }
 
-add_war_exhaustion = {
-    global = ADD_WAR_EXHAUSTION
-    global_neg = ADD_WAR_EXHAUSTION_NEG
+add_war_support_change = {
+    global = ADD_WAR_SUPPORT_CHANGE
+    global_neg = ADD_WAR_SUPPORT_CHANGE_NEG
 }
 
 create_diplomatic_play = {

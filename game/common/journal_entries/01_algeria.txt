@@ -64,7 +64,7 @@
 
 	transferable = no
 
-		
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	weight = 5000
@@ -191,30 +191,11 @@ je_the_algerian_departements = {
 			90 = 0
 			10 = algeria_events.6
 		}
-		effect = {
-			every_scope_state = { # In case the states are lost as a result of a secession or the like
-				limit = {
-					OR = {
-						state_region = s:STATE_ORAN
-						state_region = s:STATE_ALGIERS
-						state_region = s:STATE_CONSTANTINE
-					}
-					is_incorporated = no
-					NOT = {
-						has_modifier = crushed_algerian_resistance
-					}
-				}
-				add_modifier = {
-					name = crushed_algerian_resistance
-					days = very_long_modifier_time
-				}
-			}
-		}
 	}
 
 	transferable = no
 
-		
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	weight = 5000
@@ -254,7 +235,7 @@ je_reconquest_of_algeria = {
 
 	transferable = yes
 
-		
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	weight = 5000
@@ -289,7 +270,7 @@ je_french_foreign_legion = {
 
 	transferable = yes
 
-		
+
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	weight = 5000

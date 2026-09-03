@@ -665,6 +665,17 @@ ai_will_incorporate_state = {
 	state_population >= define:NAI|INCORPORATE_STATE_MIN_POPULATION
 }
 
+ai_colony_will_incorporate_state = {
+	OR = {
+		region = root.capital.region
+		any_neighbouring_state = {
+			owner = root
+			is_incorporated = yes
+		}
+	}
+	state_population >= define:NAI|INCORPORATE_STATE_MIN_POPULATION
+}
+
 ai_opium_dealer_no_alliance_trigger = {
 	game_date <= 1840.1.1
 	OR = {

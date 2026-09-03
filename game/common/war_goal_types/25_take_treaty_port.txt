@@ -15,6 +15,8 @@
 		conflicts_with_annex_state
 	}
 
+	contestion_type = control_target_state
+
 	target_type = state
 
 	possible = {
@@ -213,6 +215,10 @@
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = territorial
 	}
 
 	ai = {

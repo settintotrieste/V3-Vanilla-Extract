@@ -2628,7 +2628,7 @@ ideology_pacifist = { # Average Progressiveness - 0
 						attacker_warleader ?= { this = ROOT.owner }
 						has_war_support = {
 							target = root.owner
-							value < 0
+							value < 50
 						}
 					}
 				}
@@ -2749,7 +2749,7 @@ ideology_pacifist = { # Average Progressiveness - 0
 						attacker_warleader ?= { this = ROOT.owner }
 						has_war_support = {
 							target = root.owner
-							value < 0
+							value < 50
 						}
 					}
 				}

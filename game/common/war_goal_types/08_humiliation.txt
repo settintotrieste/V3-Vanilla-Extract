@@ -31,7 +31,7 @@
 
 		add = {
 			desc = "MANEUVERS_BASE_VALUE"
-			value = 20
+			value = 10
 		}
 	}
 
@@ -41,6 +41,10 @@
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = no_mirror
 	}
 
 	ai = {

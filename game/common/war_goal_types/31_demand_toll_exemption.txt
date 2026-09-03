@@ -11,6 +11,8 @@
 		validate_conflicts_war_goals_all
 	}
 
+	contestion_type = control_any_target_country_state
+
 	target_type = treaty_article
 
 	possible = {
@@ -70,6 +72,11 @@
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = swap
+		type = break_enforced_treaties
 	}
 
 	ai = {

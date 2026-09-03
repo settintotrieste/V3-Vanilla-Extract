@@ -1475,7 +1475,25 @@ country_ahead_of_time_research_penalty_mult={
 	}
 }
 
-country_war_exhaustion_casualties_mult={
+country_war_support_battles_increase_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_war_support_battles_decrease_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_war_support_casualties_mult={
 	decimals=1
 	color=bad
 	percent=yes

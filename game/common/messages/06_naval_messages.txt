@@ -1,0 +1,9 @@
+﻿enemy_world_market_hub_moved = {
+	type = state
+	group = "naval_blockade_change_notification_group"
+
+	texture = "gfx/interface/icons/notification_icons/trade_route.dds"
+
+	notification_type = toast
+	color = bad
+}

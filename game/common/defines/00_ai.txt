@@ -17,6 +17,21 @@
 	GOVERNMENT_MONEY_SPENDING_ENABLED = yes  	 # If this is set to no, the AI for government money spending will be disabled
 	GOVERNMENT_AUTHORITY_SPENDING_ENABLED = yes  # If this is set to no, the AI for authority spending will be disabled
 	TAX_LEVEL_CHANGES_ENABLED = yes	 			 # If this is set to no, the AI will not change its tax levels (but might still use consumption taxes if GOVERNMENT_AUTHORITY_SPENDING_ENABLED = yes)
+	GOVERNMENT_WAGE_LEVEL_CHANGES_ENABLED = yes	 # If this is set to no, the AI will not change its government wage levels
+	MILITARY_WAGE_LEVEL_CHANGES_ENABLED = yes	 # If this is set to no, the AI will not change its military wage levels
+	CHANGE_GOVERNMENT_WAGE_LEVEL_START_OF_GAME_DAYS_TO_WAIT = 30 # Don't change government wage levels for this amount of days after bookmark initialization, so that economic state has a chance to stabilize
+	CHANGE_MILITARY_WAGE_LEVEL_START_OF_GAME_DAYS_TO_WAIT = 30 # Don't change military wage levels for this amount of days after bookmark initialization, so that economic state has a chance to stabilize
+	BASELINE_GOVERNMENT_WAGE_LEVEL = medium	 	 # The government wage level the AI will keep most of the time as a baseline, and return to when it has no reason to deviate
+	BASELINE_MILITARY_WAGE_LEVEL = medium	 	 # The military wage level the AI will keep most of the time as a baseline, and return to when it has no reason to deviate
+	WAGE_CUT_INCOME_RATIO_THRESHOLD = 1.05	 # If income to expenses ratio is this or below, the AI will cut wages a level
+	WAGE_RESTORE_INCOME_RATIO_THRESHOLD = 1.25	 # If income to expenses ratio is this or above, the AI will restore wages a level towards its baseline
+	WAGE_RAISE_MIN_INCOME_RATIO = 1.3	 # Income to expenses ratio the AI needs to still have after the change before raising wages above its baseline
+	MILITARY_WAGE_CUT_CREDIT_RATIO = 0.5	 # At this amount of debt to max credit ratio, the AI will cut military wages to stave off bankruptcy
+	WAGE_RAISE_MIN_GOLD_RESERVE_FRACTION = 0.2	 # The AI needs at least this fraction of gold reserves before raising wages above its baseline
+	WAGE_CUT_MAX_RADICALS_FRACTION = 0.3	 # At this fraction of radicals in the country, the AI will stop cutting government wages to avoid making unrest worse
+	WAGE_CUT_SIGNIFICANT_DEBT_RATIO = 0.25	 # At this amount of debt to max credit ratio, the AI will cut government wages even if its income still covers its expenses
+	WAGE_CUT_MIN_WEEKS_OF_GOLD_RESERVES = 20	 # If the AI has enough gold reserves to cover its deficit for this long, it will ride the shortfall out rather than cut wages
+	WAGE_RAISE_MIN_BALANCE_TO_IGNORE_RATIO = 30000	 # Absolute weekly surplus that lets the AI raise wages even when its income to expenses ratio is too low
 	PRODUCTION_BUILDING_CONSTRUCTION_ENABLED = yes	 # If this is set to no, the country-level AI will not construct any production buildings
 	AUTONOMOUS_INVESTMENT_CONSTRUCTION_ENABLED = yes # If this is set to no, the autonomous investment AI won't construct anything even if the game rule for it is enabled
 
@@ -561,6 +576,12 @@
 
 	MIN_SHIPS_TO_TRANSFER = 5										# AI will not transfer ships between fleets unless at least this many are being transferred
 	SHIP_TRANSFER_BASE_VALUE_PER_CONSTRUCTION_POINT = 150			# Base £ per construction point used for AI ship valuation (e.g. ship_transfer treaty acceptance). Above the empirical ~£40/CP replacement cost so that target-side acceptance scores clear int32 truncation for mid-tier capital ships at multi-year bindings.
+	SELL_OBSOLETE_SHIP_ASK_FACTOR = 0.8								# Fraction of ai_ship_value the AI asks for when bundling a ship_transfer with money_transfer — a discount vs fair value so the buyer has positive net acceptance on the bundle.
+	SELL_OBSOLETE_SHIPS_BATCH_RATIO = 0.2							# Fraction of marked-obsolete ships to include in a single sell proposal (at least 1, at most SELL_OBSOLETE_SHIPS_BATCH_MAX).
+	SELL_OBSOLETE_SHIPS_BATCH_MAX = 5								# Hard cap on ships per sell proposal to avoid bundles nobody wants to buy.
+	SELL_OBSOLETE_SHIPS_DECLINED_MEMORY_DAYS = 1825					# For how many days the AI remembers that a country turned down one of its ship sales, and will not offer that country another one.
+	OBSOLETE_SHIP_DISBAND_GRACE_DAYS = 100							# Once a ship is marked for disposal, the AI will try to sell it for this many days before disbanding it outright (unless crew is critically blocked).
+
 	DISBAND_OBSOLETE_SHIP_CREW_RATIO = 0.8							# If the ratio of crew needed to max available sailors exceeds this value, the AI will immediately decommission obsolete ships
 	DISBAND_OBSOLETE_SHIPS_MAX_COUNT = 5							# Maximum number of obsolete ships the AI will decommission per update
 	DISBAND_OBSOLETE_SHIPS_MAX_RATIO = 0.05							# Maximum ratio of total ships the AI will decommission per update
@@ -732,9 +753,10 @@
 	MONEY_SPENDING_MILITARY_EXCESSIVE_THRESHOLD = 2.0 # If actual-to-wanted number of barracks is above this, AI considers it a target for cutting spending when needed
 	MONEY_SPENDING_MILITARY_WRONG_UNIT_TYPE_MULTIPLIER = 0.01 # Score multiplier for decreasing spending on barracks that lack combat units of the type we want to disband
 	MONEY_SPENDING_FORTIFICATIONS_CRITICAL_THRESHOLD = 0.5 # If actual-to-wanted number of fortifications is below this, AI increases priority to construct them
-	MONEY_SPENDING_CONSTRUCTION_TOO_LARGE_INVESTMENT_POOL_FACTOR = 0.75 # The higher this is, the more the AI will invest into construction when their investment pool has grown too large for their construction capacity (capped at 1)
+	MONEY_SPENDING_CONSTRUCTION_TOO_LARGE_INVESTMENT_POOL_FACTOR = 0.75 # The higher this is, the more the AI will invest into construction when their investment pool has grown too large for their construction capacity
 	MONEY_SPENDING_CONSTRUCTION_CRITICAL_THRESHOLD = 0.75 # If actual-to-wanted construction production is below this, AI considers it very important to get more
 	MONEY_SPENDING_CONSTRUCTION_EXCESSIVE_THRESHOLD = 1.05 # If actual-to-wanted construction production is at least this, AI considers it nice to have
+	MONEY_SPENDING_CONSTRUCTION_MAX_INVESTMENT_POOL_WEEKS = 52 # If the investment pool holds at least this many weeks of incoming investment, the AI treats being below the critical construction threshold as a must-have
 	MONEY_SPENDING_SHIP_CONSTRUCTION_CRITICAL_THRESHOLD = 0.75 # If actual-to-wanted ship construction production is below this, AI considers it very important to get more
 	MONEY_SPENDING_SHIP_CONSTRUCTION_EXCESSIVE_THRESHOLD = 1.05 # If actual-to-wanted ship construction production is at least this, AI considers it nice to have
 	MONEY_SPENDING_INNOVATION_DESIRED_THRESHOLD = 1.0 # If innovation production compared to cap is worse than this, AI considers it important to improve
@@ -1013,10 +1035,8 @@
 
 	# Below data is used to calculate AI's desire for peace
 	AI_PEACE_AGREEMENT_BASE_VALUE = -10
-	AI_PEACE_AGREEMENT_WHITE_PEACE_BASE = 10 # If no wargoals are being enforced on either side
-	AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION_START_MONTH = 12 # Amount of months before increased peace acceptance from war duration kicks in
-	AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION = 2 # For each month the war goes on after AI_PEACE_AGREEMENT_WHITE_PEACE_WAR_DURATION_START_MONTH add this to the acceptance for a white peace
-	AI_PEACE_AGREEMENT_WAR_SUPPORT_FACTOR = -1	# Each point of war support affects peace acceptance by this amoun
+	AI_PEACE_AGREEMENT_WHITE_PEACE_BASE = 20 # If no wargoals are being enforced on either side
+	AI_PEACE_AGREEMENT_WAR_SUPPORT_MAX = 100	# War support contributes linearly to peace acceptance, zero at the penalty threshold and reaching this magnitude at the floor and once confidently winning
 	AI_PEACE_AGREEMENT_UNACCEPTABLE_WARGOAL_VALUE = -1000 # Fixed wargoal value that will be added to peace acceptance if an unacceptable wargoal (such as cut down to size) is being enforced on us
 	AI_PEACE_AGREEMENT_WARGOAL_VALUE_BASE = 10	# How much does the AI value each wargoal (base)
 	AI_PEACE_AGREEMENT_WARGOAL_VALUE_MIN = -1000 # Wargoal value cannot be lower than this
@@ -1024,31 +1044,28 @@
 	AI_PEACE_AGREEMENT_WARGOAL_VALUE_SCALED = 0.5	# How much does the AI value each wargoal (scaled with maneuver cost)
 	AI_PEACE_AGREEMENT_ALLY_WARGOAL_MULT = 1 # For each wargoal that our allies are pressing, apply wargoal value * this
 	AI_PEACE_AGREEMENT_SELF_WARGOAL_MULT = 3 # For each wargoal we have that's being pressed, apply wargoal value * this
-	AI_PEACE_AGREEMENT_ENEMY_WARGOAL_SELF_MULT = -8 # For each wargoal that the enemy is pressing against us, apply wargoal value * this
+	AI_PEACE_AGREEMENT_ENEMY_WARGOAL_SELF_MULT = -5 # For each wargoal that the enemy is pressing against us, apply wargoal value * this
 	AI_PEACE_AGREEMENT_ENEMY_WARGOAL_ALLY_MULT = -1 # For each wargoal that's being pressed against our allies, apply wargoal value * this
-	AI_PEACE_AGREEMENT_NON_CONTESTED_ENEMY_WARGOAL_MULT = 5 # Value of wargoals held by enemy that aren't being contested is multiplied by this
-	AI_PEACE_AGREEMENT_ACHIEVABLE_ALLY_WARGOAL = -1.5 # For each wargoal our side holds that isn't being pressed where the target will run out of war support before the holder does (multiplies self/ally wargoal value)
-	AI_PEACE_AGREEMENT_ACHIEVABLE_ENEMY_WARGOAL = -0.9 # For each wargoal the enemy side holds (pressed or not) where the target will run out of war support before the holder does (multiplies self/ally enemy wargoal value)
-	AI_PEACE_AGREEMENT_WAR_SUPPORT_TO_HOLD_ON_TO_ACHIEVABLE_WARGOALS = 0 # Below this war support an AI will be much more open to ceding achievable wargoals to the enemy in a peace deal
+	AI_PEACE_AGREEMENT_NON_CONTESTED_ENEMY_WARGOAL_MULT = 3 # Value of wargoals held by enemy that aren't being contested is multiplied by this
+	AI_PEACE_AGREEMENT_ACHIEVABLE_ALLY_WARGOAL = -1.5 # For each wargoal our side holds that we occupy or are advancing on
+	AI_PEACE_AGREEMENT_ACHIEVABLE_ENEMY_WARGOAL = -0.75 # For each wargoal the enemy side occupies or is advancing on
+	AI_PEACE_AGREEMENT_WAR_SUPPORT_TO_HOLD_ON_TO_ACHIEVABLE_WARGOALS = 25 # Below this war support an AI will be much more open to ceding achievable wargoals to the enemy in a peace deal
 	AI_PEACE_AGREEMENT_PEACE_DESIRE_FACTOR = 1.0 # Peace desire is multiplied by this when added to peace agreement acceptance score
 
 	AI_CAPITULATE_COMPLETELY_DEFEATED = 1000 # If entire allied side is 100% occupied
 	AI_CAPITULATE_BASE_VALUE = -25
 	AI_CAPITULATE_WAR_LEADER_FACTOR = -25 # If warleader
-	AI_CAPITULATE_WAR_SUPPORT_FACTOR = -1
+	AI_CAPITULATE_WAR_SUPPORT_MAX = 100 # War support contributes linearly to capitulation desire, zero at the penalty threshold and reaching this magnitude at the floor and once confidently winning
 	AI_CAPITULATE_SELF_WARGOAL_FACTOR = -5 # For each wargoal we hold in the war
-	AI_CAPITULATE_ENEMY_WARGOAL_FACTOR = -20 # For each wargoal targeting us in the war
+	AI_CAPITULATE_ENEMY_WARGOAL_MULT = 0.2 # For each wargoal targeting us in the war, its peace-deal cession value multiplied by this
+	AI_CAPITULATE_ENEMY_FOLDS_FIRST = -1000 # Applied once if an enemy that is able to capitulate has a higher capitulation desire than us, so we expect them to fold first
+	AI_CAPITULATE_ENEMY_FOLDS_FIRST_MIN_DESIRE = -25 # The enemy-folds-first factor is only applied when our own capitulation desire is at least this high, i.e. we are close enough to capitulating for it to matter
 	AI_CAPITULATE_PEACE_DESIRE_FACTOR = 0.5 # Peace desire is multiplied by this when added to capitulation score
 
-	AI_MONTHS_OF_REDUCED_PEACE_DESIRE = 12 # Before this amount of months, reduce AI peace desire
-	AI_PEACE_DESIRE_FROM_SHORT_WAR = -10 # Subtract this amount of peace desire for the above number of months (multiplied by AI_MONTHS_OF_REDUCED_PEACE_DESIRE - months of war duration)
-	AI_PEACE_DESIRE_FROM_TURMOIL = 25 # Add this amount of peace desire at 100% radicals
-	AI_PEACE_DESIRE_FROM_DEVASTATION = 50 # Add this amount of peace desire at 100% devastation
-	AI_PEACE_DESIRE_FROM_LOYALISTS = -25 # Subtract this amount of peace desire at 100% loyalists
-	AI_PEACE_DESIRE_FROM_DEBT_LEVEL = 200 # Add this amount of peace desire at 100% debt level
-	AI_PEACE_DESIRE_FROM_BANKRUPTCY = 200 # Add this amount of peace desire when bankrupt
-	AI_PEACE_DESIRE_FROM_GOLD_RESERVES = -25 # Subtract this amount of peace desire at 100% gold reserves
 	AI_PEACE_DESIRE_FROM_FORCE_BALANCE = 50 # Up to this amount is added or subtracted from war support based on DIPLO_PLAY_FORCE_BALANCE_SCALE of the two sides
+	AI_PEACE_DESIRE_FROM_SIDE_WAR_SUPPORT = 200 # Up to this amount of peace desire from the gap between our side's and the enemy side's aggregate war support (scaled by the signed square of the normalized gap)
+	AI_SIDE_WAR_SUPPORT_WAR_LEADER_MULT = 3.0 # A war leader's war support counts this many times as much when aggregating a side's war support
+	AI_SIDE_WAR_SUPPORT_NEGOTIATOR_MULT = 2.0 # A peace negotiator's war support counts this many times as much when aggregating a side's war support
 	AI_PEACE_DESIRE_FACTOR_FROM_ANNEXATION = 0.5 # If peace will cause the country to be annexed then all positive peace desire factors will be multiplied by this value
 
 	# AI country-specific goal data

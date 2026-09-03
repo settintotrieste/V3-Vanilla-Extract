@@ -1513,6 +1513,16 @@ wargoal_removed = {
 	color = neutral
 }
 
+wargoal_enforced = {
+	type = diplomatic_play
+	group = "wargoal_notification_group"
+
+	texture = "gfx/interface/icons/notification_icons/diplomatic_play.dds"
+
+	notification_type = feed
+	color = neutral
+}
+
 invasion_started = {
 	type = country
 	group = "invasion_notification_group"
@@ -1856,6 +1866,16 @@ diplo_play_declare_neutrality_notification = {
 
 	notification_type = none
 	color = neutral
+}
+
+diplo_play_subject_backstab_overlord_notification = {
+	type = diplomatic_play
+	group = "diplo_play_subject_backstab_overlord_notification_group"
+
+	texture = "gfx/interface/icons/notification_icons/diplomatic_play.dds"
+
+	notification_type = toast
+	color = bad
 }
 
 price_report = {

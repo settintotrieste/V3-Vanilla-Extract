@@ -47,6 +47,10 @@
 		# script effect on top of the predefined code effect
 	}
 
+	mirrored_wargoal = {
+		method = restore_subject
+	}
+
 	ai = {
 		is_significant_demand = yes
 	}

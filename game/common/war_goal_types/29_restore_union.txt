@@ -1,12 +1,14 @@
 ﻿restore_union = {
 	icon = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
 
-	kind = custom
+	kind = make_subject
+	subject_type = subject_type_personal_union
 
 	settings = {
 		require_target_be_part_of_war
 		turns_into_subject
 		requires_interest
+		assent_required
 
 		# Validation
 		conflicts_with_make_subject
@@ -153,12 +155,6 @@
 		# script effect on top of the predefined code effect
 		scope:target_country ?= {
 			activate_law = law_type:law_monarchy
-		}
-		ROOT = {
-			create_diplomatic_pact = {
-				country = scope:target_country
-				type = personal_union
-			}
 		}
 	}
 

@@ -3415,9 +3415,9 @@ check_area = {
 	global_not = TRIGGER_CHECK_AREA_NOT
 }
 
-has_war_exhaustion = {
-	global = TRIGGER_HAS_WAR_EXHAUSTION
-	global_not = TRIGGER_HAS_WAR_EXHAUSTION_NOT
+has_war_support_change = {
+	global = TRIGGER_HAS_WAR_SUPPORT_CHANGE
+	global_not = TRIGGER_HAS_WAR_SUPPORT_CHANGE_NOT
 }
 
 is_mobilized = {
@@ -5083,6 +5083,15 @@ scaled_debt = {
 	first_not = TRIGGER_SCALED_DEBT_FIRST_NOT
 	third = TRIGGER_SCALED_DEBT_THIRD
 	third_not = TRIGGER_SCALED_DEBT_THIRD_NOT
+}
+
+weeks_until_bankruptcy = {
+	global = TRIGGER_WEEKS_UNTIL_BANKRUPTCY
+	global_not = TRIGGER_WEEKS_UNTIL_BANKRUPTCY_NOT
+	first = TRIGGER_WEEKS_UNTIL_BANKRUPTCY_FIRST
+	first_not = TRIGGER_WEEKS_UNTIL_BANKRUPTCY_FIRST_NOT
+	third = TRIGGER_WEEKS_UNTIL_BANKRUPTCY_THIRD
+	third_not = TRIGGER_WEEKS_UNTIL_BANKRUPTCY_THIRD_NOT
 }
 
 scaled_gold_reserves = {
@@ -9243,6 +9252,13 @@ has_any_naval_only_hostilities = {
 	none_not = TRIGGER_HAS_ANY_NAVAL_ONLY_HOSTILITIES_NONE_NOT
 	third = TRIGGER_HAS_ANY_NAVAL_ONLY_HOSTILITIES_THIRD
 	third_not = TRIGGER_HAS_ANY_NAVAL_ONLY_HOSTILITIES_THIRD_NOT
+}
+
+has_sufficient_sailors = {
+	none = TRIGGER_HAS_SUFFICIENT_SAILORS_NONE
+	none_not = TRIGGER_HAS_SUFFICIENT_SAILORS_NONE_NOT
+	third = TRIGGER_HAS_SUFFICIENT_SAILORS_THIRD
+	third_not = TRIGGER_HAS_SUFFICIENT_SAILORS_THIRD_NOT
 }
 
 company_owned_levels = {
