@@ -1015,7 +1015,7 @@ french_pretenders_pulse.10 = {
 		any_scope_war = {
 		    has_war_support = {
 		        target = ROOT
-		        value > 10
+		        value > 55
 		    }
 		}
 	}
