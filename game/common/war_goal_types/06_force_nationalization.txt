@@ -28,6 +28,9 @@
 		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
 	}
 
+	fill_per_week = 2
+	deplete_per_week = 2
+
 	maneuvers = {
 		value = 0
 

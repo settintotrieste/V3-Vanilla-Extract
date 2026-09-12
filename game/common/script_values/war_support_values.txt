@@ -45,11 +45,16 @@ war_support_from_duration = {
 	multiply = define:NWar|WAR_SUPPORT_CHANGE_DURATION_DRAIN_PER_MONTH
 }
 
+# A war the country did not pick weighs on the lobbies differently: objecting to it carries less, backing it carries more
 war_support_from_anti_war_lobby_clout = {
 	add = "lobby_war_opposition(scope:war)"
 	divide = define:NWar|WAR_SUPPORT_CHANGE_LOBBY_CLOUT_MAX_AT
 	max = 1
 	multiply = define:NWar|WAR_SUPPORT_CHANGE_ANTI_WAR_LOBBY_CLOUT_FACTOR
+	if = {
+		limit = { scope:war = { is_on_defending_side = root } }
+		multiply = define:NWar|WAR_SUPPORT_CHANGE_DEFENSIVE_WAR_ANTI_WAR_LOBBY_MULT
+	}
 }
 
 war_support_from_lobby_clout = {
@@ -57,6 +62,10 @@ war_support_from_lobby_clout = {
 	divide = define:NWar|WAR_SUPPORT_CHANGE_LOBBY_CLOUT_MAX_AT
 	max = 1
 	multiply = define:NWar|WAR_SUPPORT_CHANGE_PRO_WAR_LOBBY_CLOUT_FACTOR
+	if = {
+		limit = { scope:war = { is_on_defending_side = root } }
+		multiply = define:NWar|WAR_SUPPORT_CHANGE_DEFENSIVE_WAR_PRO_WAR_LOBBY_MULT
+	}
 }
 
 war_support_from_country_turmoil = {
@@ -84,6 +93,47 @@ war_support_from_fervor = {
 	}
 }
 
+war_support_from_gdp = {
+	value = "scope:war.gdp_change_since_war_start(root)"
+	save_temporary_value_as = temp_gdp_change
+
+	value = 0
+	if = {
+		limit = { scope:temp_gdp_change > 0 }
+		add = {
+			value = scope:temp_gdp_change
+			max = define:NWar|WAR_SUPPORT_CHANGE_GDP_GROWTH_MAX_AT
+			subtract = define:NWar|WAR_SUPPORT_CHANGE_GDP_TOLERANCE
+			min = 0
+			divide = {
+				value = define:NWar|WAR_SUPPORT_CHANGE_GDP_GROWTH_MAX_AT
+				subtract = define:NWar|WAR_SUPPORT_CHANGE_GDP_TOLERANCE
+			}
+			multiply = define:NWar|WAR_SUPPORT_CHANGE_GDP_GROWTH_FACTOR
+		}
+	}
+	else = {
+		add = {
+			# The collapse side needs no cap of its own: GDP cannot fall by more than everything the country had
+			value = scope:temp_gdp_change
+			multiply = -1
+			subtract = define:NWar|WAR_SUPPORT_CHANGE_GDP_TOLERANCE
+			min = 0
+			divide = {
+				value = 1
+				subtract = define:NWar|WAR_SUPPORT_CHANGE_GDP_TOLERANCE
+			}
+			multiply = define:NWar|WAR_SUPPORT_CHANGE_GDP_DECLINE_FACTOR
+		}
+	}
+}
+
+# Tuned to outweigh the economic damage of losing the land, so being carved up hardens a country rather than breaking it
+war_support_from_lost_land = {
+	value = "scope:war.land_lost_since_war_start(root)"
+	multiply = define:NWar|WAR_SUPPORT_CHANGE_LOST_LAND_FACTOR
+}
+
 war_support_from_gold_reserves = {
 	if = {
 		limit = { gold_reserves_limit > 0 }
@@ -104,6 +154,7 @@ war_support_from_looming_bankruptcy = {
 	if = {
 		limit = {
 			taking_loans = yes
+			in_default = no
 			weeks_until_bankruptcy < define:NWar|WAR_SUPPORT_CHANGE_BANKRUPTCY_LOOMING_WEEKS
 		}
 		value = define:NWar|WAR_SUPPORT_CHANGE_BANKRUPTCY_LOOMING_WEEKS
@@ -115,22 +166,43 @@ war_support_from_looming_bankruptcy = {
 	}
 }
 
+war_support_from_bankruptcy = {
+	if = {
+		limit = {
+			in_default = yes
+		}
+		value = define:NWar|WAR_SUPPORT_CHANGE_BANKRUPTCY_IMMINENT_EFFECT
+	}
+}
+
+# Only says anything when the subject is actually fighting this war alongside its overlord: not when the overlord stayed out of it, and not when the subject is fighting the overlord itself
 war_support_from_subject_attitude = {
 	if = {
-		limit = { attitude_towards_overlord = rebellious }
-		add = define:NWar|WAR_SUPPORT_CHANGE_REBELLIOUS_SUBJECT_EFFECT
-	}
-	else_if = {
-		limit = { attitude_towards_overlord = defiant }
-		add = define:NWar|WAR_SUPPORT_CHANGE_DEFIANT_SUBJECT_EFFECT
-	}
-	else_if = {
-		limit = { attitude_towards_overlord = aloof }
-		add = define:NWar|WAR_SUPPORT_CHANGE_ALOOF_SUBJECT_EFFECT
-	}
-	else_if = {
-		limit = { attitude_towards_overlord = loyal }
-		add = define:NWar|WAR_SUPPORT_CHANGE_LOYAL_SUBJECT_EFFECT
+		limit = {
+			is_ai = yes
+			is_subject = yes
+			scope:war = {
+				is_war_participant = root
+				is_war_participant = root.overlord
+				NOT = { is_fighting_overlord_in_war = root }
+			}
+		}
+		if = {
+			limit = { attitude_towards_overlord = rebellious }
+			add = define:NWar|WAR_SUPPORT_CHANGE_REBELLIOUS_SUBJECT_EFFECT
+		}
+		else_if = {
+			limit = { attitude_towards_overlord = defiant }
+			add = define:NWar|WAR_SUPPORT_CHANGE_DEFIANT_SUBJECT_EFFECT
+		}
+		else_if = {
+			limit = { attitude_towards_overlord = aloof }
+			add = define:NWar|WAR_SUPPORT_CHANGE_ALOOF_SUBJECT_EFFECT
+		}
+		else_if = {
+			limit = { attitude_towards_overlord = loyal }
+			add = define:NWar|WAR_SUPPORT_CHANGE_LOYAL_SUBJECT_EFFECT
+		}
 	}
 }
 
@@ -141,9 +213,10 @@ war_support_from_loyalists = {
 	multiply = define:NWar|WAR_SUPPORT_CHANGE_LOYALISTS_FACTOR
 }
 
-# Wars where a goal cannot actually be taken have nothing pulling the two sides together, so a stalled demand converges war support on the neutral point:
-# the side being asked for what the enemy cannot take digs in, and the side asking for what it cannot take loses heart. Time-gated exactly like war goal progress.
-war_support_from_stalled_goal_convergence = {
+# Wars where a goal cannot actually be taken have nothing pulling the two sides together, so a stalled demand converges war support on the neutral point.
+# Split in two so the breakdown can say which half is acting; they are mutually exclusive, one applying only below the neutral point and the other only above it.
+# Both are time-gated exactly like war goal progress.
+war_support_from_stalled_goal_against_us = {
 	if = {
 		limit = {
 			scope:war_support < define:NDiplomacy|WAR_SUPPORT_DRIFT_TARGET
@@ -157,7 +230,10 @@ war_support_from_stalled_goal_convergence = {
 		multiply = define:NWar|WAR_SUPPORT_CHANGE_STALLED_GOAL_CONVERGENCE
 		multiply = "scope:war.war_goal_time_ramp"
 	}
-	else_if = {
+}
+
+war_support_from_stalled_goal_held_by_us = {
+	if = {
 		limit = {
 			scope:war_support > define:NDiplomacy|WAR_SUPPORT_DRIFT_TARGET
 			scope:war = { has_stalled_wargoal_held_by = root }
@@ -177,6 +253,16 @@ war_support_from_rivalry = {
 	if = {
 		limit = { scope:war = { is_at_war_with_rival = root } }
 		add = define:NWar|WAR_SUPPORT_CHANGE_RIVAL_BOOST
+	}
+}
+
+war_support_from_journal_entries = {
+	if = {
+		limit = { has_journal_entry = je_the_first_carlist_war }
+		add = {
+			value = 10.0
+			desc = "je_the_first_carlist_war"
+		}
 	}
 }
 
@@ -206,18 +292,26 @@ war_support_change = {
 	save_temporary_value_as = temp_war_support_from_lobby_clout
 	value = war_support_from_gold_reserves
 	save_temporary_value_as = temp_war_support_from_gold_reserves
+	value = war_support_from_gdp
+	save_temporary_value_as = temp_war_support_from_gdp
+	value = war_support_from_lost_land
+	save_temporary_value_as = temp_war_support_from_lost_land
 	value = war_support_from_taking_loans
 	save_temporary_value_as = temp_war_support_from_taking_loans
 	value = war_support_from_looming_bankruptcy
 	save_temporary_value_as = temp_war_support_from_looming_bankruptcy
+	value = war_support_from_bankruptcy
+	save_temporary_value_as = temp_war_support_from_bankruptcy
 	value = war_support_from_subject_attitude
 	save_temporary_value_as = temp_war_support_from_subject_attitude
 	value = war_support_from_loyalists
 	save_temporary_value_as = temp_war_support_from_loyalists
 	value = war_support_from_rivalry
 	save_temporary_value_as = temp_war_support_from_rivalry
-	value = war_support_from_stalled_goal_convergence
-	save_temporary_value_as = temp_war_support_from_stalled_goal_convergence
+	value = war_support_from_stalled_goal_against_us
+	save_temporary_value_as = temp_war_support_from_stalled_goal_against_us
+	value = war_support_from_stalled_goal_held_by_us
+	save_temporary_value_as = temp_war_support_from_stalled_goal_held_by_us
 	# end save temp values
 
 	# Sum of signed contributions: positive raises war support, negative lowers it.
@@ -354,6 +448,27 @@ war_support_change = {
 	}
 
 	if = {
+		limit = {
+			OR = {
+				scope:temp_war_support_from_gdp >= 0.01
+				scope:temp_war_support_from_gdp <= -0.01
+			}
+		}
+		add = {
+			add = scope:temp_war_support_from_gdp
+			desc = "WAR_SUPPORT_CHANGE_FROM_GDP"
+		}
+	}
+
+	if = {
+		limit = { scope:temp_war_support_from_lost_land >= 0.01 }
+		add = {
+			add = scope:temp_war_support_from_lost_land
+			desc = "WAR_SUPPORT_CHANGE_FROM_LOST_LAND"
+		}
+	}
+
+	if = {
 		limit = { scope:temp_war_support_from_taking_loans <= -0.01 }
 		add = {
 			add = scope:temp_war_support_from_taking_loans
@@ -366,6 +481,14 @@ war_support_change = {
 		add = {
 			add = scope:temp_war_support_from_looming_bankruptcy
 			desc = "WAR_SUPPORT_CHANGE_FROM_LOOMING_BANKRUPTCY"
+		}
+	}
+
+	if = {
+		limit = { scope:temp_war_support_from_bankruptcy <= -0.01 }
+		add = {
+			add = scope:temp_war_support_from_bankruptcy
+			desc = "WAR_SUPPORT_CHANGE_FROM_BANKRUPTCY"
 		}
 	}
 
@@ -399,18 +522,22 @@ war_support_change = {
 	}
 
 	if = {
-		limit = {
-			OR = {
-				scope:temp_war_support_from_stalled_goal_convergence >= 0.01
-				scope:temp_war_support_from_stalled_goal_convergence <= -0.01
-			}
-		}
+		limit = { scope:temp_war_support_from_stalled_goal_against_us >= 0.01 }
 		add = {
-			add = scope:temp_war_support_from_stalled_goal_convergence
-			desc = "WAR_SUPPORT_CHANGE_FROM_STALLED_GOAL_CONVERGENCE"
+			add = scope:temp_war_support_from_stalled_goal_against_us
+			desc = "WAR_SUPPORT_CHANGE_FROM_STALLED_GOALS_AGAINST_US"
 		}
 	}
 
-	max = define:NWar|WAR_SUPPORT_CHANGE_MAX
-	min = define:NWar|WAR_SUPPORT_CHANGE_MIN
+	if = {
+		limit = { scope:temp_war_support_from_stalled_goal_held_by_us <= -0.01 }
+		add = {
+			add = scope:temp_war_support_from_stalled_goal_held_by_us
+			desc = "WAR_SUPPORT_CHANGE_FROM_STALLED_GOALS_HELD_BY_US"
+		}
+	}
+
+	# Special, needs to support different loc keys so doesn't use the temp method
+	add = war_support_from_journal_entries
 }
+

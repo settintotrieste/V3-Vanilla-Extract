@@ -1,4 +1,6 @@
-﻿base_impose_law_weight= {
+﻿ai_strongly_desires_state_value_threshold = 50 # TODO: Turn this into a proper define
+
+base_impose_law_weight= {
 	value = 0.01
 
 	# Impose law is a fairly hostile act, AIs should use it mostly when angry at a subject
@@ -182,7 +184,7 @@ wanted_army_size_script_value = {
 		limit = { has_technology_researched = mobile_armor }
 		multiply = 0.8
 	}
-	
+
 	# General multiplier for easy adjustment
 	multiply = 1.0
 
@@ -240,7 +242,7 @@ wanted_army_size_script_value = {
 		}
 		multiply = 1.5 # More eager to enlarge army in general during the makhzen je
 	}
-	
+
 	# Multiply final value by diplomatic pact expenses ratio - countries paying a lot to pacts have lower spending ambitions
 	multiply = {
 		value = 1
@@ -340,15 +342,15 @@ wanted_marines_size_script_value = {
 		limit = { country_rank = rank_value:major_power }
 		add = 2
 	}
-	
+
 	# General multiplier for easy adjustment
 	multiply = 0.5
-	
+
 	# Less marines before we have steel ships
 	if = {
 		limit = { NOT = { has_technology_researched = ironclad_tech } }
 		multiply = 0.5
-	}	
+	}
 
 	# Factor in strategies
 	if = {
@@ -365,7 +367,7 @@ wanted_marines_size_script_value = {
 		multiply = 0.5
 	}
 	if = {
-		limit = { 
+		limit = {
 			OR = {
 				country_rank < rank_value:minor_power
 				is_country_type = unrecognized
@@ -374,13 +376,13 @@ wanted_marines_size_script_value = {
 		}
 		multiply = 0
 	}
-	
+
 	# Multiply final value by diplomatic pact expenses ratio - countries paying a lot to pacts have lower spending ambitions
 	multiply = {
 		value = 1
 		subtract = diplomatic_pact_expense_ratio
 	}
-	
+
 	max = total_marine_capacity
 }
 
@@ -437,10 +439,10 @@ wanted_navy_size_script_value = {
 		limit = { country_rank = rank_value:major_power }
 		add = 10
 	}
-	
+
 	# General multiplier for easy adjustment
 	multiply = 0.75
-	
+
 	# More advanced ships require more crew
 	if = {
 		limit = { has_technology_researched = ironclad_tech }
@@ -489,12 +491,12 @@ wanted_navy_size_script_value = {
 		limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
 		multiply = 0.25
 	}
-	
+
 	# Multiply final value by diplomatic pact expenses ratio - countries paying a lot to pacts have lower spending ambitions
 	multiply = {
 		value = 1
 		subtract = diplomatic_pact_expense_ratio
-	}	
+	}
 
 	# Journal related AI behaviours, choose this if you DO care about the exact number of ships
 	if = {
@@ -669,4 +671,12 @@ ship_mod_merchant_navy_doctrine = {
 		limit = { has_law = law_type:law_merchant_navy }
 		multiply = ship_mod_doctrine_boost
 	}
+}
+
+#root = country deciding whether to accept the demand
+#scope:initiator = country making the demand
+#scope:target_country = country deciding whether to accept the demand
+#scope:diplomatic_play_type = type of diplomatic play the demand is for
+diplomatic_play_acceptance = {
+	value = 0
 }

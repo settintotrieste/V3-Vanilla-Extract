@@ -412,7 +412,7 @@ static_treaty_acceptance = {
 	if = {
 		limit = {
 			NOT = { exists = scope:is_renegotiation }
-			scope:treaty_options ?= {			
+			scope:treaty_options ?= {
 				is_historical_treaty = yes
 				remaining_binding_period > 0
 			}
@@ -543,7 +543,7 @@ ai_threaten_naval_hostilities_chance = {
 
 		if = { # Less likely unless we have a hostile attitude
 			limit = {
-				OR = {
+				NOR = {
 					has_attitude = {
 						who = scope:other_country
 						attitude = antagonistic

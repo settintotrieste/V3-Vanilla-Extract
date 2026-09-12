@@ -19,7 +19,7 @@ ai_strongly_desires_target_state = {
 				has_strategic_land_adjacency = scope:target_state # Will limit its ambitions to land borders
 				AND = {
 					scope:target_state.region ?= capital.region # Will try to annex states in its capital region regardless of whether they border it or not
-					can_reach_target_state = yes
+					can_reach_target_state = { TARGET_STATE = scope:target_state }
 				}
 			}
 		}
@@ -51,7 +51,7 @@ ai_desires_target_state = {
 				has_strategic_land_adjacency = scope:target_state # Will limit its ambitions to land borders
 				AND = {
 					scope:target_state.region ?= capital.region # Will try to annex states in its capital region regardless of whether they border it or not
-					can_reach_target_state = yes
+					can_reach_target_state = { TARGET_STATE = scope:target_state }
 				}
 			}
 		}
@@ -61,7 +61,7 @@ ai_desires_target_state = {
 				has_strategy = ai_strategy_colonial_expansion
 			}
 			scope:target_state.owner = { is_country_type = unrecognized }
-			can_reach_target_state = yes  # Willing to go overseas to acquire territories
+			can_reach_target_state = { TARGET_STATE = scope:target_state }  # Willing to go overseas to acquire territories
 		}
 		AND = { # AI wants nearby states if gifted them by overlord
 			has_strategic_adjacency = scope:target_state
@@ -152,7 +152,7 @@ ai_has_enact_weight_modifier_journal_entries = {
 }
 
 has_je_conquest_reason = {
-	can_reach_target_country = yes
+	can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 
 	OR = {
 		AND = {
@@ -330,7 +330,7 @@ has_je_conquest_reason = {
 					}
 				}
 			}
-			can_reach_target_country = yes
+			can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 		}
 
 		AND = {
@@ -386,7 +386,7 @@ has_je_conquest_reason = {
 }
 
 has_je_subjugation_reason = {
-	can_reach_target_country = yes
+	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
 
 	OR = {
 		AND = {
@@ -394,17 +394,15 @@ has_je_subjugation_reason = {
 				has_journal_entry = je_sick_man_syria
 				has_journal_entry = je_veiled_protectorate
 			}
-			exists = c:EGY
-			$TARGET$ = c:EGY
+			c:EGY ?= $TARGET$
 		}
 		AND = { # Open up Japan
 			has_strategy = ai_strategy_economic_imperialism
 			has_technology_researched = nationalism # Just to make sure it doesn't happen immediately in 1836
 			country_rank = rank_value:great_power
 			navy_size >= 25
-			scope:target_country = {
-				exists = c:JAP
-				c:JAP ?= THIS
+			$TARGET$ = {
+				c:JAP ?= this
 				has_law_or_variant = law_type:law_isolationism
 				gdp >= 5000000
 			}
@@ -445,16 +443,14 @@ has_je_subjugation_reason = {
 }
 
 has_je_befriend_reason = {
-	can_reach_target_country = yes
+	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
 	country_rank <= $TARGET$.country_rank
 
 	OR = {
 		AND = {
-			exists = c:RSM
-			THIS = {
-				has_journal_entry = je_risorgimento
-			}
+			has_journal_entry = je_risorgimento
 			has_variable = rsm_friendship
+			c:RSM ?= $TARGET$
 		}
 
 		AND = {
@@ -493,7 +489,7 @@ has_je_befriend_reason = {
 
 		AND = {
 			has_variable = sided_with_korean_gov
-			scope:target_country = {
+			$TARGET$ = {
 				country_has_primary_culture = cu:korean
 				is_revolutionary = no
 			}
@@ -501,7 +497,7 @@ has_je_befriend_reason = {
 
 		AND = {
 			has_variable = sided_with_korean_rebels
-			scope:target_country = {
+			$TARGET$ = {
 				country_has_primary_culture = cu:korean
 				is_revolutionary = yes
 			}
@@ -517,16 +513,14 @@ has_je_befriend_reason = {
 }
 
 has_je_protect_reason = {
-	can_reach_target_country = yes
+	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
 	country_rank > $TARGET$.country_rank
 
 	OR = {
 		AND = {
-			exists = c:RSM
-			THIS = {
-				has_journal_entry = je_risorgimento
-			}
+			has_journal_entry = je_risorgimento
 			has_variable = rsm_friendship
+			c:RSM ?= $TARGET$
 		}
 
 		AND = {
@@ -561,7 +555,7 @@ has_je_protect_reason = {
 
 		AND = {
 			has_variable = sided_with_korean_gov
-			scope:target_country = {
+			$TARGET$ = {
 				country_has_primary_culture = cu:korean
 				is_revolutionary = no
 			}
@@ -569,7 +563,7 @@ has_je_protect_reason = {
 
 		AND = {
 			has_variable = sided_with_korean_rebels
-			scope:target_country = {
+			$TARGET$ = {
 				country_has_primary_culture = cu:korean
 				is_revolutionary = yes
 			}

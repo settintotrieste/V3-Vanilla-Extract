@@ -32,6 +32,9 @@
 		}
 	}
 
+	fill_per_week = 2
+	deplete_per_week = 2
+
 	maneuvers = {
 		value = 0
 

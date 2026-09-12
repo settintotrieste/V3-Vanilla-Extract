@@ -275,7 +275,7 @@ ai_strategy_territorial_expansion = {
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				has_strategic_adjacency = scope:target_country
 				scope:target_country.country_rank <= root.country_rank
 			}
@@ -1112,7 +1112,7 @@ ai_strategy_economic_imperialism = {
 						NOT = { scope:target_country = { is_subject_of = root } }
 						has_technology_researched = nationalism  # Just to make sure it doesn't happen immediately in 1836
 						country_rank = rank_value:great_power
-						navy_size >= 25
+						can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 						scope:target_country = {
 							country_has_primary_culture = cu:japanese
 							has_law_or_variant = law_type:law_isolationism
@@ -1125,7 +1125,7 @@ ai_strategy_economic_imperialism = {
 				else_if = {
 					limit = {
 						NOT = { scope:target_country = { is_subject_of = root } }
-						has_strategic_adjacency = scope:target_country
+						can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 						scope:target_country = {
 							has_law_or_variant = law_type:law_isolationism
 							gdp >= 2000000
@@ -1142,9 +1142,8 @@ ai_strategy_economic_imperialism = {
 						root.country_rank > scope:target_country.country_rank
 						scope:target_country.country_rank < rank_value:major_power
 						scope:target_country = {
-							NOR = {
+							NOT = {
 								has_law_or_variant = law_type:law_free_trade
-								has_law_or_variant = law_type:law_isolationism
 							}
 						}
 					}
@@ -1156,6 +1155,12 @@ ai_strategy_economic_imperialism = {
 							scope:target_country = { is_country_type = unrecognized }
 						}
 						add = 50
+					}
+					else_if = {
+						limit = {
+							scope:target_country = { NOT = { is_country_type = unrecognized } }
+						}
+						add = -25
 					}
 				}
 			}
@@ -1169,7 +1174,7 @@ ai_strategy_economic_imperialism = {
 					}
 					add = 50
 				}
-				if = {
+				else_if = {
 					limit = {
 						scope:target_country = { NOT = { is_country_type = unrecognized } }
 					}
@@ -1200,7 +1205,7 @@ ai_strategy_economic_imperialism = {
 	treaty_port_value = {
 		if = {
 			limit = {
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 				scope:target_country = {
 					has_law_or_variant = law_type:law_isolationism
 					gdp >= 2000000 # Not worth doing against very small markets
@@ -1221,7 +1226,7 @@ ai_strategy_economic_imperialism = {
 		# Eager to reclaim a treaty port from a country that recently reneged on the agreement we inherited to them
 		if = {
 			limit = {
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 				has_variable = wants_treaty_port_revenge_against
 				var:wants_treaty_port_revenge_against ?= scope:target_country
 			}
@@ -1237,7 +1242,7 @@ ai_strategy_economic_imperialism = {
 			if = {
 				limit = {
 					country_rank = rank_value:great_power
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 					scope:target_country = {
 						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000 # Not worth doing against small markets
@@ -1270,7 +1275,7 @@ ai_strategy_economic_imperialism = {
 			if = {
 				limit = {
 					country_rank = rank_value:great_power
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 					scope:target_country = {
 						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000 # Not worth doing against small markets
@@ -1517,7 +1522,7 @@ ai_strategy_unify_germany = {
 						}
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = {
 				value = 100
@@ -1812,7 +1817,7 @@ ai_strategy_unify_italy = {
 						}
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = {
 				value = 100
@@ -2094,7 +2099,7 @@ ai_strategy_unify_ethiopia = {
 						}
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = {
 				value = 100
@@ -2110,7 +2115,7 @@ ai_strategy_unify_ethiopia = {
 					scope:target_country = {
 						has_journal_entry = je_age_of_princes
 					}
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 300
 			}
@@ -2135,7 +2140,7 @@ ai_strategy_unify_ethiopia = {
 
 				if = {
 					limit = {
-						can_reach_target_country = no
+						NOT = { can_reach_target_country = { TARGET_COUNTRY = scope:target_country } }
 					}
 					add = 150
 				}
@@ -2152,7 +2157,7 @@ ai_strategy_unify_ethiopia = {
 						}
 					}
 				}
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			score = {
 				value = 500
@@ -2279,7 +2284,7 @@ ai_strategy_unify_china = {
 						}
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = {
 				value = 100
@@ -2295,7 +2300,7 @@ ai_strategy_unify_china = {
 					scope:target_country = {
 						has_journal_entry = je_reunify_china
 					}
-					can_reach_target_country = yes
+					can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 				}
 				add = 300
 			}
@@ -2315,7 +2320,7 @@ ai_strategy_unify_china = {
 
 				if = {
 					limit = {
-						can_reach_target_country = no
+						NOT = { can_reach_target_country = { TARGET_COUNTRY = scope:target_country } }
 					}
 					add = 150
 				}
@@ -2327,7 +2332,7 @@ ai_strategy_unify_china = {
 				scope:target_country = {
 					has_journal_entry = je_reunify_china
 				}
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			score = {
 				value = 500
@@ -3111,7 +3116,7 @@ ai_strategy_restore_natural_borders = {
 		conquer = {
 			trigger = {
 				NOT = { scope:target_country = { is_subject_of = root } }
-				can_reach_target_country = yes
+				can_reach_target_country = { TARGET_COUNTRY = scope:target_country }
 			}
 			score = {
 				if = {
@@ -3369,7 +3374,7 @@ ai_strategy_prussia_of_the_balkans = {
 						is_homeland = cu:bulgarian
 					}
 				}
-				can_reach_target_state = yes
+				can_reach_target_state = { TARGET_STATE = scope:target_state }
 			}
 			add = {
 				value = 100
@@ -3384,7 +3389,7 @@ ai_strategy_prussia_of_the_balkans = {
 		}
 		return_state = {
 			add = 1000
-	}
+		}
 		conquer_state = {
 			if = {
 				limit = {
@@ -3400,7 +3405,7 @@ ai_strategy_prussia_of_the_balkans = {
 						}
 					}
 				}
-				add = 250
+				add = 100
 			}
 		}
 	}

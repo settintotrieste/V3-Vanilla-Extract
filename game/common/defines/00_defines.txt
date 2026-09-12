@@ -940,7 +940,11 @@ NMilitary = {
 
 NDiplomacy = {
 	DEFAULT_DIPLOMATIC_PLAY = "dp_default_treaty_article"
-	DEFAULT_WAR_GOAL_IS_HUMILIATION = yes # If this is false, default war goal is instead money transfer
+
+	# Default wargoal on the defender side,	only works for country-target wargoals.
+	# If treaty article is used, this will be money transfer.
+	# If left empty, no default wargoal is added.
+	DEFAULT_WAR_GOAL = ""
 
 	DEFAULT_TRUCE_MONTHS = 60
 	PEACE_DEAL_DURATION_IN_DAYS = 30
@@ -1162,6 +1166,8 @@ NDiplomacy = {
 	WAR_SUPPORT_RADICALIZATION_THRESHOLD = 25				# At or below this war support (the red band) the low-war-support penalties begin (combat malus + radicalization); severity grows non-linearly toward war support 0
 	WAR_SUPPORT_RADICALIZATION_CURVE_LINEARITY = 0.58		# Shape of the low-war-support severity curve for radicalization: 1 = linear from the threshold, 0 = quadratic (back-loaded toward war support 0); 0.58 gives ~0.3 severity at war support 15
 	WAR_SUPPORT_MILITARY_MALUS_CURVE_LINEARITY = 0.58		# Shape of the low-war-support severity curve for the combat malus (same meaning as WAR_SUPPORT_RADICALIZATION_CURVE_LINEARITY)
+	WAR_SUPPORT_LIBERTY_DESIRE_CURVE_LINEARITY = 0.58		# Shape of the low-war-support severity curve for a subject's Liberty Desire, applied in liberty_desire_weekly_change (same meaning as WAR_SUPPORT_RADICALIZATION_CURVE_LINEARITY)
+	WAR_SUPPORT_LIBERTY_DESIRE_WEEKLY_MAX = 1				# Weekly Liberty Desire a subject fighting alongside its overlord gains at war support 0, scaled down by the curve above towards the threshold
 
 	# Definitions for all the diplomatic catalysts that are called from code instead of script
 	# If these are changed, they also need to be changed in the database and vice versa
@@ -2065,10 +2071,10 @@ NWar = {
 	WAR_SUPPORT_CHANGE_TURMOIL_MAX_AT = 0.5						# Turmoil at or above this gives the full turmoil effect
 	WAR_SUPPORT_CHANGE_DEVASTATION_FACTOR = -2.0				# Per beat at 100% population-weighted devastation; lowers war support
 	WAR_SUPPORT_CHANGE_ANTI_WAR_LOBBY_CLOUT_FACTOR = -1.0		# At or above WAR_SUPPORT_CHANGE_LOBBY_CLOUT_MAX_AT clout opposed to the war; lowers war support
-	WAR_SUPPORT_CHANGE_PRO_WAR_LOBBY_CLOUT_FACTOR = 1.0			# At or above WAR_SUPPORT_CHANGE_LOBBY_CLOUT_MAX_AT clout supporting the war; raises war support
+	WAR_SUPPORT_CHANGE_PRO_WAR_LOBBY_CLOUT_FACTOR = 0.5			# At or above WAR_SUPPORT_CHANGE_LOBBY_CLOUT_MAX_AT clout supporting the war; raises war support
 	WAR_SUPPORT_CHANGE_LOBBY_CLOUT_MAX_AT = 0.25				# Lobby clout at or above this gives the full lobby effect
-	WAR_SUPPORT_CHANGE_MAX = 50								# War support change can never exceed this
-	WAR_SUPPORT_CHANGE_MIN = -50								# War support can now rise, so the net weekly change may be positive (a support gain)
+	WAR_SUPPORT_CHANGE_DEFENSIVE_WAR_ANTI_WAR_LOBBY_MULT = 0.0	# Opposition to a war the country is being attacked in carries this much of its usual weight
+	WAR_SUPPORT_CHANGE_DEFENSIVE_WAR_PRO_WAR_LOBBY_MULT = 2.0	# Support for a war the country is being attacked in carries this much of its usual weight
 	WAR_SUPPORT_CHANGE_SHORT_WAR_MONTHS = 6					# A war is still new for this many months; the short-war bonus decays to nothing across them
 	WAR_SUPPORT_CHANGE_SHORT_WAR_PER_MONTH = 0.2			# Per beat, per month remaining of the short-war window; the mirror of the duration drain
 	WAR_SUPPORT_WAR_GOAL_RAMP_START_MONTHS = 6				# War goal progress counts for nothing before this many months of war
@@ -2079,7 +2085,7 @@ NWar = {
 	WAR_SUPPORT_CHANGE_GOLD_RESERVES_FACTOR = 0.25			# Per beat at full gold reserves; scales with the fraction of the reserve limit held
 	WAR_SUPPORT_CHANGE_TAKING_LOANS_EFFECT = -0.25			# Per beat while taking loans to fund the war
 	WAR_SUPPORT_CHANGE_BANKRUPTCY_LOOMING_WEEKS = 20		# Insolvency this many weeks away at the current deficit is where the ramp below starts biting
-	WAR_SUPPORT_CHANGE_BANKRUPTCY_IMMINENT_EFFECT = -0.5	# Per beat at the moment of insolvency; scales down to nothing at the week count above
+	WAR_SUPPORT_CHANGE_BANKRUPTCY_IMMINENT_EFFECT = -1.0	# Per beat while in default, and the full-strength end of the looming ramp above, which scales down to nothing at the week count above
 	WAR_SUPPORT_CHANGE_LOYAL_SUBJECT_EFFECT = 0.25			# Per beat for loyal subject in overlord's war
 	WAR_SUPPORT_CHANGE_ALOOF_SUBJECT_EFFECT = -0.1			# Per beat for aloof subject in overlord's war
 	WAR_SUPPORT_CHANGE_DEFIANT_SUBJECT_EFFECT = -0.5		# Per beat for defiant subject in overlord's war
@@ -2091,6 +2097,14 @@ NWar = {
 	WAR_SUPPORT_CHANGE_WAR_GOAL_ADVANCING_MULT = 0.01		# Multiplier on a war goal's impact per beat while the holder is merely advancing on it; TUNING vs CalcImpact scale
 	WAR_SUPPORT_CHANGE_WAR_GOAL_OCCUPYING_MULT = 0.02		# Multiplier on a war goal's impact per beat while occupying it
 	WAR_SUPPORT_CHANGE_WAR_GOAL_ENFORCED_MULT = 0.02		# Multiplier on a war goal's impact per beat while it has been enforced and is still held
+	WAR_SUPPORT_CHANGE_WAR_GOAL_MAX = 2.0					# Most war support a side can gain per beat from its war goal progress, no matter how many goals it holds
+	WAR_SUPPORT_CHANGE_WAR_GOAL_MIN = -2.0					# Most war support a side can lose per beat to the other side's war goal progress
+	WAR_SUPPORT_CHANGE_GDP_TOLERANCE = 0.1					# GDP within this fraction either side of what it was on entering the war is ordinary market movement and has no effect; the factors below ramp up from nothing at the edge of this band
+	WAR_SUPPORT_CHANGE_GDP_DECLINE_FACTOR = -2.0			# Per beat at a total collapse of the wartime economy; scales with how far GDP has fallen below what it was when the country entered the war
+	WAR_SUPPORT_CHANGE_GDP_GROWTH_FACTOR = 0.5				# Per beat at or above WAR_SUPPORT_CHANGE_GDP_GROWTH_MAX_AT growth since entering the war; deliberately weaker than the decline factor above
+	WAR_SUPPORT_CHANGE_GDP_GROWTH_MAX_AT = 0.5				# GDP growth since entering the war at or above this gives the full wartime boom effect
+	WAR_SUPPORT_CHANGE_LOST_LAND_FACTOR = 3.0				# Per beat when land worth the country's entire pre-war economy has been taken from it by war goal enforcement; scales with how much was lost. Deliberately larger than the GDP decline factor above so that losing land rallies a country rather than breaking it
+	WAR_SUPPORT_CHANGE_LOST_LAND_UNINCORPORATED_MULT = 0.33	# Land that was not incorporated counts for this fraction of its economic worth when it is lost; incorporated land counts in full
 	OCCUPATION_STATE_BASE_WEIGHT = 1
 	OCCUPATION_STATE_POP_WEIGHT = 1
 	OCCUPATION_STATE_POP_DIVISOR = 1000						# A state's population is divided by this before the pop weight is applied, to keep it on a comparable scale to the other terms
