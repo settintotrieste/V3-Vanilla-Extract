@@ -1804,10 +1804,11 @@ has_any_strait_control = {
 has_any_strait_province  = {
 	global = TRIGGER_HAS_ANY_STRAIT
 	global_not = TRIGGER_HAS_ANY_STRAIT_NOT
-	first = TRIGGER_HAS_ANY_STRAIT_FIRST
-	first_not = TRIGGER_HAS_ANY_STRAIT_FIRST_NOT
-	third = TRIGGER_HAS_ANY_STRAIT_THIRD
-	third_not = TRIGGER_HAS_ANY_STRAIT_THIRD_NOT
+}
+
+has_any_potential_strait_province = {
+	global = TRIGGER_HAS_ANY_POTENTIAL_STRAIT
+	global_not = TRIGGER_HAS_ANY_POTENTIAL_STRAIT_NOT
 }
 
 has_military_strait_access_through = {

@@ -1632,7 +1632,7 @@ catalyst_diplomatic_strategy_changed = {
 
 		type = all
 		chance = {
-			value = 0.05
+			value = 0.15
 
 			if = {
 				limit = {

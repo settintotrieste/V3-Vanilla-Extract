@@ -1,5 +1,26 @@
 ﻿ai_strongly_desires_state_value_threshold = 50 # TODO: Turn this into a proper define
 
+# Ambition weights for state_value in game/common/ai_strategies/00_default_strategy.txt
+ai_state_ambition_floor = 0
+ai_state_ambition_max = 1.5
+ai_state_ambition_claim_weight = 1.0
+ai_state_ambition_homeland_weight = 0.8
+ai_state_ambition_capital_region_weight = 0.6
+ai_state_ambition_split_state_weight = 0.5
+ai_state_ambition_overlord_gift_weight = 0.4
+ai_state_ambition_colonial_weight = 0.4
+ai_state_ambition_border_weight = 0.25
+ai_state_ambition_sphere_weight = 0.15
+
+# Base scores for hostile attitudes
+ai_systemic_conquest_score = 200
+ai_systemic_subjugation_score = 150
+ai_systemic_befriend_score = 100
+ai_systemic_protect_score = 100
+
+# Multiplier to default aggression of recognized nations set in the default strategy only
+ai_unjustified_war_restraint = 0.15
+
 base_impose_law_weight= {
 	value = 0.01
 

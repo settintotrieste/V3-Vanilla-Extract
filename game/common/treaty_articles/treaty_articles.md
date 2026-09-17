@@ -1,4 +1,4 @@
-# Notes
+﻿# Notes
 
 ## party, not party
 Unless otherwise specified, in this document any mention of "party" or
@@ -279,13 +279,18 @@ If the trigger returns true, then the specific thing we're looking at is valid
 #### valid_triggers scope
 The valid triggers have the following scopes available:
 - `root`: Source country for the article (or potentially first otherwise)
-- `scope:article`: the article in question. Do note that not all inputs have been set at this point.
 - `scope:input`: the specific input we're looking at right now. E.g. if this is `state_valid_trigger` then `input` might be say `STATE_SVEALAND`
 - `scope:other_country`: the other country that isn't the root
+
+Note that `scope:article` is NOT available here, and neither are `source_country`,
+`target_country`, `first_country` or `second_country`. Use `root` for the source (or first)
+party and `scope:other_country` for the other one. The AI's `input_filters` look almost
+identical but do additionally get `scope:article`.
 
 Specifically for the goods valid trigger:
 - `scope:goods`: the goods input we're looking at
 - `scope:market_goods`: the same goods, but as a market goods for the source country market
+- `scope:other_market_goods`: the same goods, but as a market goods for the other country's market
 
 ### Min/Max Quantity triggers
 What the min or max quantity input is allowed to be for an article with that input
@@ -384,7 +389,15 @@ This is the first "layer" of validation on articles
 ### visible scopes
 Within the visible trigger, the following scope objects are accessible:
 - `root`: the country this trigger is evaluated on
-- This trigger is checked for both countries
+- `scope:other_country` refers to the opposite party in the treaty
+
+For directed articles this trigger is checked once, with `root` as the prospective source
+party and `scope:other_country` as the prospective target. For mutual articles it is checked
+once per ordering, so no assumptions can be made about which party is which.
+
+`source_country`, `target_country`, `first_country` and `second_country` do NOT exist in this
+trigger. Referencing one of them logs `Undefined event target` and makes the surrounding
+trigger evaluate to false, which hides the article completely.
 
 ## possible (default: empty)
 This trigger controls whether the article type is at all possible to consider between two parties
@@ -395,6 +408,27 @@ It also automatically runs the visible trigger, so you don't need to include any
 Within the possible trigger, the following scope objects are accessible:
 - `root`: the country this trigger is evaluated on
 - `scope:other_country` refers to the opposite party in the treaty
+
+The same restriction as for `visible` applies: the role-named country scopes do not exist
+here, only `root` and `scope:other_country`.
+
+## requirement_to_maintain (default: empty)
+Any number of these blocks can be added to set up the requirements to both propose and
+maintain an article. `can_ratify` checks all of them, so they do not need to be duplicated
+there.
+
+### requirement_to_maintain scopes
+These are evaluated both while a treaty is being drafted and while an article is in force, so
+they see the same scopes as `can_ratify`:
+- `root`: the article in question, NOT a country
+- `scope:article` the article in question, same as `root`
+- `scope:treaty` refers to the treaty
+- the kind scopes listed under `can_ratify` below
+- `scope:is_treaty_active`: only set once the treaty is in force, never while drafting
+
+Use `exists = scope:is_treaty_active` to make a requirement apply only to an article that is
+already in force, for example one that should break when the target loses control of something
+but should not block ratification in the first place.
 
 ## can_ratify (default: empty)
 This trigger controls whether the parties are allowed to ratify a treaty that
@@ -407,8 +441,9 @@ so you don't need to include those here.
 
 ### can_ratify scopes
 Within the can_ratify trigger, the following scope objects are accessible:
-- `root`: the country this trigger is evaluated on
-- `scope:article` the article in question
+- `root`: the article in question, NOT a country. Always name the party you mean with one of
+  the scopes below rather than writing a country trigger straight into `can_ratify`
+- `scope:article` the article in question, same as `root`
 - `scope:treaty` refers to the treaty that is being negotiated
 
 ONLY for mutual articles:
@@ -523,6 +558,14 @@ Does not get reevaluated every time the AI tries to add an article, so it's more
 #### inherent_accept_score scopes
 - `root`: The country we're looking to check the acceptance on.
 - `scope:article`: The article in question with whatever inputs it might have
+- `scope:is_treaty_active`: only set when the treaty is already in force, so test it with `exists`
+- `scope:is_renegotiation`: only set when the treaty is being renegotiated, so test it with `exists`
+
+There is no `scope:treaty` here, and there is no way to reach it: `scope:article` is a
+TreatyArticleOptions while the `treaty` link only accepts a TreatyArticle, so
+`scope:article.treaty` does not resolve either. This is deliberate, since this score is not
+reevaluated per treaty change. Anything that needs the treaty itself, such as its binding
+period, belongs in `contextual_accept_score` instead.
 
 ONLY for mutual articles:
 - `scope:first_country` is one of the parties that would be bound by the treaty if it entered into force
@@ -595,7 +638,8 @@ And the following depending on relevant inputs:
 - `scope:building`
 - `scope:law`
 - `scope:goods`
-- `scope:market_goods`
+- `scope:market_goods`: the goods as a market goods for the target country's market
+- `scope:own_market_goods`: the goods as a market goods for the war goal holder's own market
 
 #### Maneuvers
 Script value

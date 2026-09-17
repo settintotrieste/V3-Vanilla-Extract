@@ -1061,7 +1061,7 @@ can_reach_target_country = {
 		has_strategic_land_adjacency = $TARGET_COUNTRY$
 		AND = {
 			has_port_country = yes
-			carrying_capacity >= 50
+			carrying_capacity >= 25
 			$TARGET_COUNTRY$ = { capital = { has_coastal_access = yes } }
 			$TARGET_COUNTRY$ = {
 				any_scope_state = {
@@ -1079,7 +1079,7 @@ can_be_reached_by_target_country = {
 		AND = {
 			capital = { has_coastal_access = yes }
 			$TARGET_COUNTRY$ = { has_port_country = yes }
-			$TARGET_COUNTRY$ = { carrying_capacity >= 50 }
+			$TARGET_COUNTRY$ = { carrying_capacity >= 25 }
 		}
 	}
 }
@@ -1089,7 +1089,7 @@ can_reach_target_state = {
 	OR = {
 		has_strategic_land_adjacency = $TARGET_STATE$
 		AND = {
-			carrying_capacity >= 50
+			carrying_capacity >= 25
 			has_port_country = yes
 			$TARGET_STATE$ = { is_coastal = yes }
 		}

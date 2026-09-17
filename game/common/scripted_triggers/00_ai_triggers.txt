@@ -8,66 +8,82 @@ harsh_ai_behavior_trigger = {
 	scope:target_country = { is_player = yes }
 }
 
-ai_strongly_desires_target_state = {
-	OR = {
-		AND = {
-			has_secret_goal = { # AI wants to conquer the state owner
-				who = scope:target_state.owner
-				secret_goal = conquer
-			}
-			OR = {
-				has_strategic_land_adjacency = scope:target_state # Will limit its ambitions to land borders
-				AND = {
-					scope:target_state.region ?= capital.region # Will try to annex states in its capital region regardless of whether they border it or not
-					can_reach_target_state = { TARGET_STATE = scope:target_state }
-				}
+# root = country
+# scope:target_state = state
+# scope:target_country = state owner
+ai_state_ambition_claim = {
+	scope:target_state = { has_claim_by = root }
+}
+
+ai_state_ambition_homeland = {
+	scope:target_state = { is_homeland_of_country_cultures = root }
+}
+
+ai_state_ambition_capital_region = {
+	scope:target_state.region ?= capital.region # Always desire states in home region
+	can_reach_target_state = { TARGET_STATE = scope:target_state }
+}
+
+ai_state_ambition_split_state = { # The AI wants to unify split states
+	scope:target_state = {
+		is_split_state = yes
+		state_region = {
+			any_scope_state = {
+				owner = root
+				is_treaty_port = no
 			}
 		}
-		scope:target_state = { has_claim_by = root } # AI always wants claims
 	}
 }
 
-ai_desires_target_state = {
-	OR = {
-		ai_strongly_desires_target_state = yes
-		scope:target_state = { is_homeland_of_country_cultures = root } # AI is interested in homelands
-		AND = { # AI wants to unify split states
-			scope:target_state = {
-				is_split_state = yes
-				state_region = {
-					any_scope_state = {
-						owner = root
-						is_treaty_port = no
-					}
+ai_state_ambition_border = {
+	has_strategic_land_adjacency = scope:target_state
+}
+
+ai_state_ambition_colonial = {
+	scope:target_country = { ai_country_is_valid_colonization_target = yes }
+	can_reach_target_state = { TARGET_STATE = scope:target_state }
+}
+
+ai_state_ambition_overlord_gift = { # The AI wants nearby states if gifted them by its overlord
+	has_strategic_adjacency = scope:target_state
+	any_overlord_or_above = { this = scope:target_country }
+}
+
+ai_state_ambition_sphere = {
+	can_reach_target_state = { TARGET_STATE = scope:target_state }
+	scope:target_state.region ?= {
+		root = {
+			OR = {
+				has_strategic_region_interest_tier = {
+					strategic_region = prev
+					value >= interest_tier_effect_can_start_diplomatic_plays_min_tier
+				}
+				has_region_stance = {
+					region = prev
+					stance = stance_conquer_region
+				}
+				has_region_stance = {
+					region = prev
+					stance = stance_colonize_region
 				}
 			}
-		}
-		AND = { # Aggressive AI wants nearby land
-			OR = {
-				has_strategy = ai_strategy_world_revolution
-				has_strategy = ai_strategy_territorial_expansion
-			}
-			OR = {
-				has_strategic_land_adjacency = scope:target_state # Will limit its ambitions to land borders
-				AND = {
-					scope:target_state.region ?= capital.region # Will try to annex states in its capital region regardless of whether they border it or not
-					can_reach_target_state = { TARGET_STATE = scope:target_state }
-				}
-			}
-		}
-		AND = { # Colonialist AI wants colonies
-			OR = {
-				has_strategy = ai_strategy_economic_imperialism
-				has_strategy = ai_strategy_colonial_expansion
-			}
-			scope:target_state.owner = { is_country_type = unrecognized }
-			can_reach_target_state = { TARGET_STATE = scope:target_state }  # Willing to go overseas to acquire territories
-		}
-		AND = { # AI wants nearby states if gifted them by overlord
-			has_strategic_adjacency = scope:target_state
-			any_overlord_or_above = { this = scope:target_country }
 		}
 	}
+}
+
+# A state the AI treats as a core national interest rather than an opportunity
+ai_state_has_core_ambition = {
+	OR = {
+		ai_state_ambition_claim = yes
+		ai_state_ambition_homeland = yes
+		ai_state_ambition_capital_region = yes
+		ai_state_ambition_split_state = yes
+	}
+}
+
+ai_state_is_invalid_target = {
+	scope:target_country = { is_still_learning = yes } # Be nice to tutorial players
 }
 
 has_enactment_je_or_law_commitment = {
@@ -567,6 +583,117 @@ has_je_protect_reason = {
 				country_has_primary_culture = cu:korean
 				is_revolutionary = yes
 			}
+		}
+	}
+}
+
+ai_has_systemic_conquest_reason = {
+	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
+
+	OR = {
+		$TARGET$ = { # They hold states we claim
+			any_scope_state = { has_claim_by = root }
+		}
+
+		$TARGET$ = { # They hold our cultural homelands
+			any_scope_state = { is_homeland_of_country_cultures = root }
+		}
+
+		has_diplomatic_pact = { # Our Rival
+			who = $TARGET$
+			type = rivalry
+		}
+
+		AND = { # Larger nations competing with eachother
+			has_overlapping_interests = $TARGET$
+			country_rank >= rank_value:major_power
+			$TARGET$ = { country_rank >= rank_value:major_power }
+		}
+
+		AND = { # Our glorious right to self-determination..
+			is_subject_of = $TARGET$
+			liberty_desire >= 50
+		}
+
+		AND = { # ..and our ungrateful rebellious subjects!
+			$TARGET$ = {
+				is_subject_of = root
+				liberty_desire >= 50
+			}
+		}
+
+		AND = { # Global pariah
+			country_rank >= rank_value:great_power
+			$TARGET$ = { infamy >= infamy_threshold:pariah }
+		}
+	}
+}
+
+ai_has_systemic_subjugation_reason = {
+	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
+	country_rank > $TARGET$.country_rank
+	$TARGET$.country_rank <= rank_value:minor_power
+
+	OR = {
+		$TARGET$ = { ai_country_is_valid_colonization_target = yes }
+		AND = {
+			has_overlapping_interests = $TARGET$
+			relations:root <= relations_threshold:poor
+			NOT = { is_in_customs_union_with = $TARGET$ }
+			$TARGET$ = {
+				is_subject = no
+				NOT = { is_subject_of = root }
+			}
+		}
+		AND = { # Rebellious subject
+			$TARGET$ = {
+				is_subject_of = root
+				liberty_desire >= 50
+			}
+		}
+	}
+}
+
+ai_has_systemic_befriend_reason = {
+	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
+	country_rank <= $TARGET$.country_rank
+
+	OR = {
+		AND = { # A stronger country we already have good relations with
+			has_overlapping_interests = $TARGET$
+			$TARGET$ = { relations:root >= relations_threshold:cordial }
+		}
+		any_rival_country = { # Potential ally against rival
+			has_overlapping_interests = $TARGET$
+		}
+	}
+}
+
+ai_has_systemic_protect_reason = {
+	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
+	country_rank > $TARGET$.country_rank
+
+	OR = {
+		AND = { # A weaker independent country
+			has_overlapping_interests = $TARGET$
+			$TARGET$ = { is_subject = no }
+		}
+		any_rival_country = { # Potential buffer state against rival
+			has_strategic_adjacency = $TARGET$
+		}
+	}
+}
+
+# Recognised country should hold each other to a standard that unrecognised nations arent subject to
+ai_conquest_requires_justification = {
+	NOR = {
+		is_country_type = unrecognized
+		is_country_type = decentralized
+	}
+	$TARGET$ = {
+		NOR = {
+			is_country_type = unrecognized
+			is_country_type = decentralized
 		}
 	}
 }

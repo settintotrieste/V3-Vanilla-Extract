@@ -21,6 +21,10 @@
 	STATE_VALUE_COLOR_PERSPECTIVE = { 0 0.2 0.5 @opacity }		# Blue, held by the country being evaluated
 	STATE_VALUE_COLOR_PLAYER = { 0.5 0.04 0.02 @opacity }		# Red, held by the player
 	STATE_VALUE_COLOR_OTHER = { 0.11 0.46 0.05 @opacity }		# Green, held by anyone else
+	STATE_INFAMY_COLOR_OWNED = { 0 0.2 0.5 @opacity }			# Blue, already held by the country being read
+	STATE_INFAMY_COLOR_LOW = { 0.85 0.72 0.25 @opacity }		# Yellow, below Infamous
+	STATE_INFAMY_COLOR_MID = { 0.80 0.40 0.05 @opacity }		# Orange, between Infamous and Notorious
+	STATE_INFAMY_COLOR_HIGH = { 0.60 0.08 0.05 @opacity }		# Red, Notorious and above
 
 	### HIGHLIGHT ###
 	HIGHLIGHT_COLOR = { 1 1 1 0.5 }								# White

@@ -78,7 +78,7 @@
 				hidden_effect = {
 					create_diplomatic_catalyst = {
 						type = catalyst_recognition_requested
-						target = scope:source_country
+						target = scope:article_options.source_country
 					}
 				}
 			}

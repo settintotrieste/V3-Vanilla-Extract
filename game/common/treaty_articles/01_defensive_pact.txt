@@ -434,21 +434,6 @@
 					add = -1000
 				}
 			}
-
-			if = {
-				limit = {
-					NOT = { exists = scope:is_treaty_active }
-					exists = scope:treaty
-					scope:treaty.binding_period >= 1825
-				}
-				subtract = {
-					desc = "DIPLOMATIC_ACCEPTANCE_BINDING_PERIOD"
-					value = scope:treaty.binding_period
-					divide = 3650
-					subtract = 25
-					max = 50
-				}
-			}			
 		}
 
 		contextual_accept_score = {
@@ -517,6 +502,20 @@
 						desc = "LOBBY_OPPORTUNITY_BONUS"
 						value = 5
 					}
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = { exists = scope:is_treaty_active }
+					scope:treaty.binding_period >= 1825
+				}
+				subtract = {
+					desc = "DIPLOMATIC_ACCEPTANCE_BINDING_PERIOD"
+					value = scope:treaty.binding_period
+					divide = 3650
+					subtract = 25
+					max = 50
 				}
 			}
 		}

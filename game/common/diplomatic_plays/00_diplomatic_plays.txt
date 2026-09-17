@@ -199,6 +199,27 @@ dp_liberate_country = {
 	on_war_end = {}
 }
 
+dp_release_as_subject = {
+	war_goal = release_as_subject
+
+	texture = "gfx/interface/icons/war_goals/liberate_country.dds"
+
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		NOT = { is_subject_of = scope:target_country }
+		diplomatic_play_has_no_relations_blockers = yes
+	}
+
+	ai_acceptance_max = 90
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
 dp_independence = {
 	requires_interest_marker = no
 
@@ -269,6 +290,8 @@ dp_increase_autonomy = {
 		}
 	}
 
+	ai_acceptance_max = 90
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -304,6 +327,8 @@ dp_reduce_autonomy = {
 			}
 		}
 	}
+
+	ai_acceptance_max = 90
 
 	on_weekly_pulse = {}
 
@@ -572,6 +597,8 @@ dp_revolution = {
 		}
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -615,6 +642,8 @@ dp_secession = {
 			is_home_country_for = scope:initiator
 		}
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
@@ -700,6 +729,8 @@ dp_taiping_rebellion = {
 			is_home_country_for = scope:target_country
 		}
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
@@ -801,8 +832,8 @@ dp_demand_strait_access = {
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
-			has_any_strait_province = scope:target_country
-			has_any_strait_control = scope:target_country
+			has_any_strait_province = yes
+			has_any_strait_control = yes
 		}
 		custom_tooltip = {
 			text = dp_demand_strait_access_already_has_access_tt
@@ -898,8 +929,8 @@ dp_demand_no_strait_closure = {
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			NOT = { is_subject_of = root }
-			has_any_strait_province = scope:target_country
-			has_any_strait_control = scope:target_country
+			has_any_strait_province = yes
+			has_any_strait_control = yes
 			custom_tooltip = {
 				text = dp_demand_no_strait_closure_already_bound_tt
 				can_close_straits = yes
@@ -932,6 +963,8 @@ dp_native_uprising = {
 	possible = {
 		is_country_type = decentralized
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
@@ -995,6 +1028,8 @@ dp_unify_germany = {
 		}
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -1021,6 +1056,8 @@ dp_unify_italy = {
 		has_technology_researched = nationalism
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -1046,6 +1083,8 @@ dp_unify_scandinavia = {
 		NOT = { is_country_type = decentralized }
 		has_technology_researched = pan-nationalism
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
@@ -1077,6 +1116,8 @@ dp_unify_ethiopia = {
 			aggressive_diplomatic_plays_permitted = yes
 		}
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
@@ -1119,6 +1160,8 @@ dp_unify_china = {
 		}
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -1151,6 +1194,8 @@ dp_unify_arabia = {
 			}
 		}
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
@@ -1201,6 +1246,8 @@ dp_unify_india = {
 		}
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -1236,6 +1283,8 @@ dp_unify_indonesia = {
 		}
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -1265,6 +1314,8 @@ dp_unify_andes = {
 			can_form_nation = FND
 		}
 	}
+
+	ai_acceptance_max = 75
 }
 
 dp_leadership_germany = {
@@ -1282,6 +1333,8 @@ dp_leadership_germany = {
 	possible = {
 		has_technology_researched = nationalism
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
@@ -1306,6 +1359,8 @@ dp_leadership_italy = {
 		has_technology_researched = nationalism
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -1329,6 +1384,8 @@ dp_leadership_scandinavia = {
 		has_technology_researched = pan-nationalism
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -1351,6 +1408,8 @@ dp_leadership_andes = {
 	possible = {
 		has_technology_researched = pan-nationalism
 	}
+
+	ai_acceptance_max = 75
 }
 
 dp_humiliation = {
@@ -1361,6 +1420,8 @@ dp_humiliation = {
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
 	}
+
+	ai_acceptance_max = 90
 
 	on_weekly_pulse = {}
 
@@ -1468,6 +1529,8 @@ dp_unify_yugoslavia = {
 		has_technology_researched = pan-nationalism
 	}
 
+	ai_acceptance_max = 75
+
 	on_weekly_pulse = {}
 
 	on_war_begins = {}
@@ -1490,6 +1553,8 @@ dp_leadership_yugoslavia = {
 	possible = {
 		has_technology_researched = nationalism
 	}
+
+	ai_acceptance_max = 75
 
 	on_weekly_pulse = {}
 
