@@ -280,7 +280,7 @@
 	DIPLO_PLAY_STRONG_ARMY_THRESHOLD = 1.0 # If our army strength compared to the average for each country involved in the play is at least than this, strong army effects will start to apply
 	DIPLO_PLAY_STRONG_ARMY_MAX = 3.0 # Maximum strong army effects apply at this threshold
 	DIPLO_PLAY_FORCE_BALANCE_SCALE = 4.0 # At this military-strength-to-enemies ratio, max effects from the balance of the two sides' militaries is applied
-	DIPLO_PLAY_FORCE_BALANCE_NAVY_FACTOR = 0.1 # Naval power projection counts for this much compared to army power projection when determining military strength to enemies
+	DIPLO_PLAY_FORCE_BALANCE_NAVY_WEIGHT = 0.1 # How much weight the navy strength ratio carries relative to the army strength ratio when comparing military strength to enemies
 	DIPLO_PLAY_FORCE_BALANCE_MOBILIZATION_FACTOR = 1.0 # A country's military forces are considered to be ( 1 + this * fully mobilized unit ratio ) much stronger in a play for purposes of confidence, etc
 	DIPLO_PLAY_STATE_STABILITY_UNINCORPORATED_WEIGHT_MULT = 0.25 # Weight for devastation, radicals & loyalists in unincorporated states is multiplied by this
 	DIPLO_PLAY_CONTAINMENT_PLAY_FACTOR = 100 # Added to preference for initiator in a containment play if the country is a Great Power
@@ -1305,6 +1305,7 @@
 	COMFORTABLE_HQ_NAVY_SIZE = 10  									# What the AI will want to at least station in an HQ to consider the HQ vital
 	NAVAL_HQ_IMPORTANCE_MIN_SCORE = 2                              	# Any naval HQ with score less than this gets ignored
 	STRATEGIC_REGION_STANCE_NONE_STRING = "stance_none"
+	REGIONAL_OBJECTIVE_RANDOM_FACTOR = 1 # The higher this is, the more random AI regional objective selection will be
 	DIPLO_PROPOSAL_TO_AI_COOLDOWN_MONTHS = 24 # Do not make the same exact proposal to another AI for this amount of months
 	SELL_OBSOLETE_SHIPS_BUYER_MIN_WANTED_NAVY = 10
 	SELL_OBSOLETE_SHIPS_OFFER_QUIET_MONTHS = 6

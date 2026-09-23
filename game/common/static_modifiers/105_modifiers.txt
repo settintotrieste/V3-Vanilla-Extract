@@ -433,7 +433,7 @@ changed_cartridges = {
 
 overseas_service_exemption = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-	country_prestige_from_navy_power_projection_mult = -0.1
+	country_prestige_from_navy_combat_power_mult = -0.1
 }
 
 promised_no_proselytization = {
@@ -685,7 +685,7 @@ fearless_navy = {
 
 not_just_for_show = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_prestige_from_navy_power_projection_mult = 0.1
+	country_prestige_from_navy_combat_power_mult = 0.1
 }
 
 safer_convoys = {
@@ -705,7 +705,7 @@ gunship_diplomacy = {
 
 mighty_navy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_prestige_from_navy_power_projection_mult = 0.1
+	country_prestige_from_navy_combat_power_mult = 0.1
 }
 
 instrument_of_fear = {

@@ -72,6 +72,27 @@ ai_state_ambition_sphere = {
 	}
 }
 
+ai_state_ambition_regional_objective = {
+	can_reach_target_state = { TARGET_STATE = scope:target_state }
+	scope:target_state.region ?= {
+		root = {
+			OR = {
+				has_regional_objective = {
+					region = prev
+					type = ai_regional_objective_acquire_states
+				}
+				AND = {
+					has_regional_objective = {
+						region = prev
+						type = ai_regional_objective_recover_claims
+					}
+					scope:target_state = { has_claim_by = root }
+				}
+			}
+		}
+	}
+}
+
 # A state the AI treats as a core national interest rather than an opportunity
 ai_state_has_core_ambition = {
 	OR = {
@@ -79,6 +100,7 @@ ai_state_has_core_ambition = {
 		ai_state_ambition_homeland = yes
 		ai_state_ambition_capital_region = yes
 		ai_state_ambition_split_state = yes
+		ai_state_ambition_regional_objective = yes
 	}
 }
 
@@ -587,6 +609,59 @@ has_je_protect_reason = {
 	}
 }
 
+ai_is_regional_objective_local_country = {
+	any_scope_regional_objective = {
+		type = $TYPE$
+		is_completed = no
+		region = {
+			$TARGET$ = { is_local_country = prev }
+		}
+	}
+}
+
+ai_is_regional_objective_state = {
+	any_scope_regional_objective = {
+		type = $TYPE$
+		is_completed = no
+		region = { $STATE$.region = this }
+	}
+}
+
+ai_is_regional_objective_subjugate_target = {
+	any_scope_regional_objective = {
+		type = aro:ai_regional_objective_subjugate_country
+		is_completed = no
+		region = {
+			root = {
+				"root.variable_map(aro_subjugate_country_map|prev)" ?= { this = $TARGET$ }
+			}
+		}
+	}
+}
+
+ai_is_regional_objective_protect_target = {
+	any_scope_regional_objective = {
+		type = aro:ai_regional_objective_protect_country
+		is_completed = no
+		region = {
+			root = {
+				"root.variable_map(aro_protect_country_map|prev)" ?= { this = $TARGET$ }
+			}
+		}
+	}
+}
+
+ai_has_regional_objective_befriend_reason = {
+	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
+	country_rank > $TARGET$.country_rank
+	$TARGET$ = { relations:root <= relations_threshold:cordial }
+
+	ai_is_regional_objective_local_country = {
+		TYPE = aro:ai_regional_objective_befriend_countries
+		TARGET = $TARGET$
+	}
+}
+
 ai_has_systemic_conquest_reason = {
 	can_reach_target_country = { TARGET_COUNTRY = $TARGET$ }
 
@@ -626,6 +701,11 @@ ai_has_systemic_conquest_reason = {
 			country_rank >= rank_value:great_power
 			$TARGET$ = { infamy >= infamy_threshold:pariah }
 		}
+
+		ai_is_regional_objective_local_country = {
+			TYPE = aro:ai_regional_objective_acquire_states
+			TARGET = $TARGET$
+		}
 	}
 }
 
@@ -651,6 +731,8 @@ ai_has_systemic_subjugation_reason = {
 				liberty_desire >= 50
 			}
 		}
+
+		ai_is_regional_objective_subjugate_target = { TARGET = $TARGET$ }
 	}
 }
 
@@ -681,6 +763,8 @@ ai_has_systemic_protect_reason = {
 		any_rival_country = { # Potential buffer state against rival
 			has_strategic_adjacency = $TARGET$
 		}
+
+		ai_is_regional_objective_protect_target = { TARGET = $TARGET$ }
 	}
 }
 

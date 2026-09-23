@@ -477,7 +477,7 @@ armoured_doctrine = {
 
 armoured_high_seas_fleet = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_prestige_from_navy_power_projection_mult = 0.1
+	country_prestige_from_navy_combat_power_mult = 0.1
 }
 
 safer_shores = {

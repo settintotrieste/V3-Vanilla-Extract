@@ -422,16 +422,13 @@
 			}
 		}
 
+		infamy_severity = 0.4
+
 		infamy = {
 			value = 0
 
-			scope:state = {
+			scope:state ?= {
 				add = state_infamy_value
-			}
-
-			multiply = {
-				desc = "INFAMY_WAR_GOAL_SEVERITY"
-				value = 0.4
 			}
 		}
 	}

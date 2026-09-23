@@ -56,6 +56,12 @@ some_war_goal = {
 		value = 15
 	}
 
+	impact_mult = {
+		# script value, optional, defaults to 1
+		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
+		value = 0.25
+	}
+
 	on_enforced = {
 		# script effect on top of the predefined code effect
 		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
@@ -277,6 +283,9 @@ How many maneuvers it costs to select this war goal
 
 ### Infamy
 How much infamy it costs to claim this war goal
+
+### Impact Mult
+Scales the war goal's impact, which is otherwise derived from its maneuvers cost and infamy. Impact decides how much war support the goal swings each beat while it is being advanced or held, how bold the AI is about the play and how readily it backs down, and how much Earn Recognition progress enforcing it grants. Optional; defaults to 1, and a value below 1 makes the goal count for less than its maneuvers and infamy would suggest.
 
 ### On enforced
 Additional script effects that you might want the war goal to execute. Do note that validation will not automatically take this into account and you will need to add validation settings as appropriate to avoid conflicts with other war goals.

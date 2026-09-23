@@ -40,9 +40,22 @@
 		}
 	}
 
+	infamy_min = define:NDiplomacy|WAR_GOAL_INFAMY_MAJOR_DEMAND_MIN
+	infamy_max = define:NDiplomacy|WAR_GOAL_INFAMY_MAJOR_DEMAND_MAX
+
 	infamy = {
-		# script value
-		value = 5
+		value = 0
+
+		add = {
+			desc = "INFAMY_FORCE_NATIONALIZATION_OWNED_GDP"
+			value = "gdp_owned_by(scope:target_country)"
+			divide = {
+				value = global_gdp
+				min = 1
+			}
+			multiply = define:NDiplomacy|WAR_GOAL_INFAMY_FORCE_NATIONALIZATION_GDP_WEIGHT
+			multiply = define:NDiplomacy|WAR_GOAL_INFAMY_WORLD_SHARE_SCALE
+		}
 
 		multiply = {
 			desc = "country_infamy_generation_against_unrecognized_mult"
@@ -141,11 +154,6 @@
 				}
 				add = interest_tier_effect_infamy_cost_decrease_medium_value
 			}
-		}
-
-		min = {
-			desc = "INFAMY_MINIMUM_VALUE"
-			value = 5
 		}
 	}
 

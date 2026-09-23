@@ -11,7 +11,7 @@
 		validate_conflicts_war_goals_all
 	}
 
-	contestion_type = control_any_target_country_state
+	contestion_type = control_all_own_states
 
 	target_type = country
 

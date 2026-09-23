@@ -1897,6 +1897,8 @@ concept_strategic_region_stance = {
 	texture = "gfx/interface/icons/tiered_interests/ai_strategic_region_stances_icons/stance_none.dds"
 }
 
+concept_regional_objective = {}
+
 concept_radicalized_interest_group = {
 	texture = "gfx/interface/icons/politics_icons/radicalized.dds"
 }

@@ -4,6 +4,7 @@
 ai_state_ambition_floor = 0
 ai_state_ambition_max = 1.5
 ai_state_ambition_claim_weight = 1.0
+ai_state_ambition_regional_objective_weight = 1.0
 ai_state_ambition_homeland_weight = 0.8
 ai_state_ambition_capital_region_weight = 0.6
 ai_state_ambition_split_state_weight = 0.5
@@ -17,6 +18,12 @@ ai_systemic_conquest_score = 200
 ai_systemic_subjugation_score = 150
 ai_systemic_befriend_score = 100
 ai_systemic_protect_score = 100
+
+ai_regional_objective_conquest_score = 400
+ai_regional_objective_subjugation_score = 300
+ai_regional_objective_reconcile_score = 200
+ai_regional_objective_protect_score = 200
+ai_regional_objective_subject_value = 50
 
 # Multiplier to default aggression of recognized nations set in the default strategy only
 ai_unjustified_war_restraint = 0.15
@@ -470,12 +477,16 @@ wanted_navy_size_script_value = {
 		multiply = 1.15
 	}
 	if = {
+		limit = { has_technology_researched = pre_dreadnought_tech }
+		multiply = 1.25
+	}
+	if = {
 		limit = { has_technology_researched = dreadnought_tech }
 		multiply = 1.25
 	}
 	if = {
 		limit = { has_technology_researched = battleship_tech }
-		multiply = 1.25
+		multiply = 1.15
 	}
 
 	# Journal related AI behaviours, choose this if you DONT care about the exact number of ships
@@ -525,6 +536,28 @@ wanted_navy_size_script_value = {
 			has_journal_entry = je_hawaii
 		}
 		min = 25
+	}
+}
+
+# The country's ship count, era-adjusted since navies get more expensive with better tech
+navy_size_adjusted_by_tech = {
+	value = navy_size
+
+	if = {
+		limit = { has_technology_researched = ironclad_tech }
+		divide = 1.15
+	}
+	if = {
+		limit = { has_technology_researched = pre_dreadnought_tech }
+		divide = 1.25
+	}
+	if = {
+		limit = { has_technology_researched = dreadnought_tech }
+		divide = 1.25
+	}
+	if = {
+		limit = { has_technology_researched = battleship_tech }
+		divide = 1.15
 	}
 }
 

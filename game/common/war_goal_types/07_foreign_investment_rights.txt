@@ -50,16 +50,15 @@
 		}
 	}
 
+	infamy_severity = 0.05
+	infamy_min = define:NDiplomacy|WAR_GOAL_INFAMY_MODERATE_DEMAND_MIN
+	infamy_max = define:NDiplomacy|WAR_GOAL_INFAMY_MODERATE_DEMAND_MAX
+
 	infamy = {
 		value = 0
 
 		scope:target_country = {
 			add = country_infamy_value
-		}
-
-		multiply = {
-			desc = "INFAMY_WAR_GOAL_SEVERITY"
-			value = 0.05
 		}
 
 		multiply = {
@@ -93,16 +92,6 @@
 				}
 				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_REBELLING_SUBJECT_MULT
 			}
-		}
-
-		min = {
-			desc = "INFAMY_MINIMUM_VALUE"
-			value = define:NDiplomacy|WAR_GOAL_INFAMY_MODERATE_DEMAND_MIN
-		}
-
-		max = {
-			desc = "INFAMY_MAXIMUM_VALUE"
-			value = define:NDiplomacy|WAR_GOAL_INFAMY_MODERATE_DEMAND_MAX
 		}
 	}
 

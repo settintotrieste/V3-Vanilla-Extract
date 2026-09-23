@@ -197,7 +197,7 @@ modifier_renewed_diplomatic_efforts = {
 modifier_a_show_of_strength = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	country_prestige_from_army_power_projection_mult = 0.1
-	country_prestige_from_navy_power_projection_mult = 0.1
+	country_prestige_from_navy_combat_power_mult = 0.1
 }
 
 modifier_spain_basque_integration_aid = {

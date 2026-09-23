@@ -683,7 +683,7 @@ modifier_george_i = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_engineers_pol_str_mult = 0.10
 	country_academics_pol_str_mult = 0.10
-	country_prestige_from_navy_power_projection_mult = 0.10
+	country_prestige_from_navy_combat_power_mult = 0.10
 }
 
 modifier_michael_ii = {

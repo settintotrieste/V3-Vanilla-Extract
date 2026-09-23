@@ -1,0 +1,17 @@
+﻿ai_ship_category_battle_line = {
+}
+
+ai_ship_category_coastal_defense = {
+}
+
+ai_ship_category_screens = {
+}
+
+ai_ship_category_torpedo_craft = {
+}
+
+ai_ship_category_carriers = {
+}
+
+ai_ship_category_transports = {
+}

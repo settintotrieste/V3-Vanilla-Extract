@@ -2,7 +2,6 @@
 	icon = "gfx/interface/icons/war_goals/liberate_country.dds"
 
 	kind = release_as_subject
-	subject_type = subject_type_dominion
 
 	settings = {
 		require_target_be_part_of_war
@@ -37,6 +36,8 @@
 		}
 	}
 
+	infamy_severity = 0.6
+
 	infamy = {
 		value = 0
 
@@ -47,11 +48,6 @@
 					add = state_infamy_value
 				}
 			}
-		}
-
-		multiply = {
-			desc = "INFAMY_WAR_GOAL_SEVERITY"
-			value = 0.6
 		}
 	}
 

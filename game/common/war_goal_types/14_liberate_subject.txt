@@ -44,26 +44,25 @@
 		}
 	}
 
+	infamy_severity = {
+		value = 0.2
+
+		# No infamy if target has high liberty desire
+		if = {
+			limit = {
+				scope:target_country = {
+					liberty_desire >= define:NDiplomacy|WAR_GOAL_INCREASE_AUTONOMY_MIN_LIBERTY_DESIRE
+				}
+			}
+			multiply = 0
+		}
+	}
+
 	infamy = {
 		value = 0
 
 		scope:target_country = {
 			add = country_infamy_value
-		}
-
-		multiply = {
-			desc = "INFAMY_WAR_GOAL_SEVERITY"
-			value = 0.2
-
-			# A subject restive enough to demand autonomy on its own is no outrage to free
-			if = {
-				limit = {
-					scope:target_country = {
-						liberty_desire >= define:NDiplomacy|WAR_GOAL_INCREASE_AUTONOMY_MIN_LIBERTY_DESIRE
-					}
-				}
-				multiply = 0
-			}
 		}
 	}
 

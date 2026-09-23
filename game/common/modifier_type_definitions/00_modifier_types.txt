@@ -397,7 +397,7 @@ country_prestige_from_army_power_projection_mult={
 	}
 }
 
-country_prestige_from_navy_power_projection_mult={
+country_prestige_from_navy_combat_power_mult={
 	decimals=0
 	color=good
 	percent=yes
@@ -2729,6 +2729,15 @@ country_ship_group_supply_ships_construction_efficiency_add = {
 	}
 }
 
+country_ship_type_early_troop_ship_construction_efficiency_add = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 country_ship_type_troop_ship_construction_efficiency_add = {
 	decimals=0
 	color=good
@@ -2782,16 +2791,16 @@ country_ship_crew_starting_veterancy_experience_mult = {
 	}
 }
 
-ship_interest_gain_add = {
-	decimals=1
+ship_power_projection_add = {
+	decimals=0
 	color=good
 	game_data={
 		ai_value=0
 	}
 }
 
-ship_interest_gain_mult = {
-	decimals=1
+ship_power_projection_mult = {
+	decimals=0
 	color=good
 	percent=yes
 	game_data={

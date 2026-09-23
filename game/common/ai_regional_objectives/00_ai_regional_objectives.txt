@@ -1,0 +1,280 @@
+﻿# Generic objectives
+ai_regional_objective_acquire_states = {
+	stances = { stance_conquer_region stance_colonize_region }
+
+	possible = {
+		scope:target_region = {
+			any_scope_state = {
+				NOT = { owner = root }
+			}
+		}
+	}
+
+	on_create = {
+		save_temporary_scope_value_as = {
+			name = aro_target_region_state_num
+			value = {
+				scope:target_region = {
+					every_scope_state = {
+						limit = {
+							owner = root
+						}
+						add = 1
+					}
+				}
+				min = 0
+			}
+		}
+		add_to_variable_map = {
+			name = aro_acquire_states_map
+			key = scope:target_region
+			value = scope:aro_target_region_state_num
+		}
+	}
+
+	complete = {
+		scope:target_region = {
+			any_scope_state = {
+				owner = root
+				count > "root.variable_map(aro_acquire_states_map|scope:target_region)" # TODO: consider a prefiltered list of potential targets instead
+			}
+		}
+	}
+
+	on_complete = {
+		remove_from_variable_map = {
+			name = aro_acquire_states_map
+			key = scope:target_region
+		}
+	}
+
+	weight = {
+		value = 10
+
+		if = {
+			limit = { scope:target_stance = srs:stance_conquer_region }
+			add = 10
+		}
+	}
+}
+
+ai_regional_objective_recover_claims = {
+	stances = { stance_conquer_region stance_colonize_region stance_protect_region }
+
+	possible = {
+		scope:target_region = {
+			any_scope_state = {
+				has_claim_by = root
+			}
+		}
+	}
+
+	complete = { # TODO: check for success/failure?
+		scope:target_region = {
+			NOT = {
+				any_scope_state = {
+					has_claim_by = root
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10
+
+		if = {
+			limit = {
+				scope:target_stance = {
+					OR = {
+						this = srs:stance_conquer_region
+						this = srs:stance_colonize_region
+					}
+				}
+			}
+			add = 90 # Prioritize if available
+		}
+	}
+}
+
+ai_regional_objective_subjugate_country = { # TODO: expose the target to the player
+	stances = { stance_conquer_region stance_colonize_region }
+
+	possible = {
+		scope:target_region = {
+			any_scope_country = {
+				is_subject = no
+				country_rank < root.country_rank
+				ai_subject_value:root > 0
+			}
+		}
+	}
+
+	on_create = {
+		scope:target_region = {
+			ordered_scope_country = {
+				limit = {
+					is_subject = no
+					country_rank < root.country_rank
+				}
+				order_by = ai_subject_value:root
+				position = 0
+				save_temporary_scope_as = aro_subjugate_country_target
+			}
+		}
+		add_to_variable_map = {
+			name = aro_subjugate_country_map
+			key = scope:target_region
+			value = scope:aro_subjugate_country_target
+		}
+	}
+
+	complete = {
+		"variable_map(aro_subjugate_country_map|scope:target_region)" ?= {
+			is_subject_of = root
+		}
+	}
+
+	on_complete = {
+		remove_from_variable_map = {
+			name = aro_subjugate_country_map
+			key = scope:target_region
+		}
+	}
+
+	weight = {
+		value = 10
+
+		if = {
+			limit = {
+				scope:target_stance = srs:stance_colonize_region
+			}
+			add = 10
+		}
+	}
+}
+
+ai_regional_objective_befriend_countries = {
+	stances = { stance_protect_region }
+
+	possible = {
+		scope:target_region = {
+			any_scope_country = {
+				country_rank < root.country_rank
+				relations:root <= relations_threshold:cordial
+				count >= 1
+			}
+		}
+	}
+
+	on_create = {
+		save_temporary_scope_value_as = {
+			name = aro_befriend_countries_num
+			value = {
+				scope:target_region = {
+					every_scope_country = {
+						limit = {
+							country_rank < root.country_rank
+							relations:root <= relations_threshold:cordial
+						}
+						add = 1
+					}
+				}
+				min = 0
+			}
+		}
+		add_to_variable_map = {
+			name = aro_befriend_countries_map
+			key = scope:target_region
+			value = scope:aro_befriend_countries_num
+		}
+	}
+
+	complete = {
+		scope:target_region = {
+			any_scope_country = {
+				country_rank < root.country_rank
+				relations:root <= relations_threshold:cordial
+				count < "root.variable_map(aro_befriend_countries_map|scope:target_region)"
+			}
+		}
+	}
+
+	on_complete = {
+		remove_from_variable_map = {
+			name = aro_befriend_countries_map
+			key = scope:target_region
+		}
+	}
+
+	weight = {
+		value = 10
+	}
+}
+
+ai_regional_objective_protect_country = { # TODO: expose the target to the player
+	stances = { stance_protect_region }
+
+	possible = {
+		scope:target_region = {
+			any_scope_country = {
+				country_rank < root.country_rank
+				is_subject = no
+				any_neighbouring_state = {
+					owner = {
+						has_diplomatic_pact = {
+							who = root
+							type = rivalry
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_create = {
+		scope:target_region = {
+			random_scope_country = {
+				limit = {
+					country_rank < root.country_rank
+					is_subject = no
+					any_neighbouring_state = {
+						owner = {
+							has_diplomatic_pact = {
+								who = root
+								type = rivalry
+							}
+						}
+					}
+				}
+				save_temporary_scope_as = aro_protect_country_target
+			}
+		}
+		add_to_variable_map = {
+			name = aro_protect_country_map
+			key = scope:target_region
+			value = scope:aro_protect_country_target
+		}
+	}
+
+	complete = {
+		"variable_map(aro_protect_country_map|scope:target_region)" ?= {
+			OR = {
+				has_treaty_alliance_with = { TARGET = root }
+				has_treaty_defensive_pact_with = { TARGET = root }
+				has_treaty_guarantee_independence_with = { TARGET = root }
+				is_subject_of = root
+			}
+		}
+	}
+
+	on_complete = {
+		remove_from_variable_map = {
+			name = aro_protect_country_map
+			key = scope:target_region
+		}
+	}
+
+	weight = {
+		value = 10
+	}
+}

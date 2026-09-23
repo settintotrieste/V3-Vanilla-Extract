@@ -62,16 +62,13 @@
 		}
 	}
 
+	infamy_severity = 0.1
+
 	infamy = {
 		value = 0
 
 		scope:target_state = {
 			add = state_infamy_value
-		}
-
-		multiply = {
-			desc = "INFAMY_WAR_GOAL_SEVERITY"
-			value = 0.4
 		}
 
 		multiply = {

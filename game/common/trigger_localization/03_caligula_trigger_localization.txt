@@ -7,3 +7,12 @@ is_land_adjacent_to_state = {
 	third = TRIGGER_IS_LAND_ADJACENT_TO_STATE_THIRD
 	third_not = TRIGGER_IS_LAND_ADJACENT_TO_STATE_THIRD_NOT
 }
+
+gdp_owned_by = {
+	global = TRIGGER_GDP_OWNED_BY
+	global_not = TRIGGER_GDP_OWNED_BY_NOT
+	first = TRIGGER_GDP_OWNED_BY_FIRST
+	first_not = TRIGGER_GDP_OWNED_BY_FIRST_NOT
+	third = TRIGGER_GDP_OWNED_BY_THIRD
+	third_not = TRIGGER_GDP_OWNED_BY_THIRD_NOT
+}

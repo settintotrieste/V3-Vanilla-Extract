@@ -118,6 +118,11 @@
 				type = ship_type:ship_type_frigate
 				count = 2
 			}
+
+			ship = {
+				type = ship_type:ship_type_early_troop_ship
+				count = 2
+			}
 		}
 
 		create_military_formation = {
@@ -132,6 +137,11 @@
 			ship = { # United States, Hudson
 				type = ship_type:ship_type_frigate
 				count = 2
+			}
+
+			ship = {
+				type = ship_type:ship_type_early_troop_ship
+				count = 4
 			}
 		}
 		create_military_formation = {

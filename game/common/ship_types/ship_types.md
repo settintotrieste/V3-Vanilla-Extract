@@ -4,6 +4,9 @@
 	# Which group the ship type belongs to
 	ship_group = <ship group key>
 
+	# Which AI-only category the ship type belongs to, see common/ai_ship_categories
+	ai_ship_category = <ai ship category key>
+
 	# Goods cost for a ship when built
 	construction_goods = { modifier }
 

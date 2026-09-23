@@ -1,6 +1,7 @@
 ﻿# Capital Ships
 ship_type_ship_of_the_line = {
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 50
 
@@ -15,6 +16,7 @@ ship_type_ship_of_the_line = {
     }
 
     modifier = {
+        ship_power_projection_add = 100
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1600
         ship_crew_max_add = 800
@@ -56,8 +58,6 @@ ship_type_ship_of_the_line = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_ship_of_the_line.dds"
 
-    ai_weight = 2
-
     modifications = {
         ship_mod_slot_armor = {
             ship_mod_ship_of_the_line_armor_light
@@ -94,6 +94,7 @@ ship_type_ship_of_the_line = {
 ship_type_monitor = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_coastal_defense
 
     modification_construction_cost = 60
 
@@ -106,6 +107,7 @@ ship_type_monitor = {
     }
 
     modifier = {
+        ship_power_projection_add = 35
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1600
         ship_crew_max_add = 200
@@ -153,8 +155,6 @@ ship_type_monitor = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_monitor.dds"
 
-    ai_weight = 0.1
-
     modifications = {
         ship_mod_slot_armor = {
             ship_mod_monitor_armor_light
@@ -185,6 +185,7 @@ ship_type_monitor = {
 ship_type_early_ironclad = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 100
 
@@ -199,6 +200,7 @@ ship_type_early_ironclad = {
     }
 
     modifier = {
+        ship_power_projection_add = 190
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2800
         ship_crew_max_add = 1000
@@ -213,7 +215,7 @@ ship_type_early_ironclad = {
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 120
         ship_screening_add = 11
-        ship_readiness_gain_add = 10
+        ship_readiness_gain_add = 15
         ship_accuracy_add = 5
         ship_visibility_add = 40
         ship_detection_add = 20
@@ -241,8 +243,6 @@ ship_type_early_ironclad = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_early_ironclad.dds"
-
-    ai_weight = 2
 
     modifications = {
         ship_mod_slot_armor = {
@@ -278,6 +278,7 @@ ship_type_early_ironclad = {
 ship_type_coastal_defense_ship = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_coastal_defense
 
     modification_construction_cost = 75
 
@@ -290,6 +291,7 @@ ship_type_coastal_defense_ship = {
     }
 
     modifier = {
+        ship_power_projection_add = 55
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2600
         ship_crew_max_add = 300
@@ -337,8 +339,6 @@ ship_type_coastal_defense_ship = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_coastal_defense_ship.dds"
 
-    ai_weight = 0.1
-
     modifications = {
         ship_mod_slot_armor = {
             ship_mod_coastal_defense_ship_armor_light
@@ -373,6 +373,7 @@ ship_type_coastal_defense_ship = {
 ship_type_modern_ironclad = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 125
 
@@ -387,6 +388,7 @@ ship_type_modern_ironclad = {
     }
 
     modifier = {
+        ship_power_projection_add = 210
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 3400
         ship_crew_max_add = 1100
@@ -399,9 +401,9 @@ ship_type_modern_ironclad = {
         ship_armor_add = 75
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 160
+        ship_vulnerability_add = 140
         ship_screening_add = 14
-        ship_readiness_gain_add = 10
+        ship_readiness_gain_add = 20
         ship_accuracy_add = 5
         ship_visibility_add = 45
         ship_detection_add = 25
@@ -430,8 +432,6 @@ ship_type_modern_ironclad = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_modern_ironclad.dds"
-
-    ai_weight = 2
 
     modifications = {
         ship_mod_slot_armor = {
@@ -470,6 +470,7 @@ ship_type_modern_ironclad = {
 ship_type_pre_dreadnought = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 200
 
@@ -484,6 +485,7 @@ ship_type_pre_dreadnought = {
     }
 
     modifier = {
+        ship_power_projection_add = 345
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 3800
         ship_crew_max_add = 1100
@@ -498,7 +500,7 @@ ship_type_pre_dreadnought = {
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 180
         ship_screening_add = 16
-        ship_readiness_gain_add = 10
+        ship_readiness_gain_add = 25
         ship_accuracy_add = 5
         ship_visibility_add = 60
         ship_detection_add = 30
@@ -527,8 +529,6 @@ ship_type_pre_dreadnought = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_pre_dreadnought.dds"
-
-    ai_weight = 2
 
     modifications = {
         ship_mod_slot_armor = {
@@ -583,12 +583,14 @@ ship_type_dreadnought = {
     }
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 250
 
     can_be_flagship = yes
 
     modifier = {
+        ship_power_projection_add = 435
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 4200
         ship_crew_max_add = 1200
@@ -603,7 +605,7 @@ ship_type_dreadnought = {
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 180
         ship_screening_add = 18
-        ship_readiness_gain_add = 10
+        ship_readiness_gain_add = 45
         ship_accuracy_add = 5
         ship_visibility_add = 80
         ship_detection_add = 40
@@ -632,8 +634,6 @@ ship_type_dreadnought = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_dreadnought.dds"
-
-    ai_weight = 2
 
     modifications = {
         ship_mod_slot_armor = {
@@ -684,12 +684,14 @@ ship_type_dreadnought = {
 ship_type_super_dreadnought = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
 
     modification_construction_cost = 300
 
     can_be_flagship = yes
 
     modifier = {
+        ship_power_projection_add = 465
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 4800
         ship_crew_max_add = 1200
@@ -704,7 +706,7 @@ ship_type_super_dreadnought = {
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 200
         ship_screening_add = 20
-        ship_readiness_gain_add = 10
+        ship_readiness_gain_add = 50
         ship_accuracy_add = 5
         ship_visibility_add = 100
         ship_detection_add = 50
@@ -734,8 +736,6 @@ ship_type_super_dreadnought = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_capital_ships.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_super_dreadnought.dds"
-
-    ai_weight = 2
 
     modifications = {
         ship_mod_slot_armor = {
@@ -798,6 +798,7 @@ ship_type_super_dreadnought = {
 ship_type_frigate = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 20
 
@@ -812,6 +813,7 @@ ship_type_frigate = {
     }
 
     modifier = {
+        ship_power_projection_add = 100
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 700
         ship_crew_max_add = 500
@@ -823,7 +825,7 @@ ship_type_frigate = {
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.1
         ship_vulnerability_add = 2.5
-        ship_screening_add = 15
+        ship_screening_add = 70
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 5
@@ -845,8 +847,6 @@ ship_type_frigate = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_frigate.dds"
-
-    ai_weight = 1.5
 
     modifications = {
         ship_mod_slot_armor = {
@@ -883,6 +883,7 @@ ship_type_frigate = {
 ship_type_iron_frigate = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 25
 
@@ -897,6 +898,7 @@ ship_type_iron_frigate = {
     }
 
     modifier = {
+        ship_power_projection_add = 175
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1200
         ship_crew_max_add = 600
@@ -908,7 +910,7 @@ ship_type_iron_frigate = {
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.1
         ship_vulnerability_add = 4.5
-        ship_screening_add = 25
+        ship_screening_add = 175
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 10
@@ -934,8 +936,6 @@ ship_type_iron_frigate = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_iron_frigate.dds"
-
-    ai_weight = 1.5
 
     modifications = {
         ship_mod_slot_armor = {
@@ -966,8 +966,81 @@ ship_type_iron_frigate = {
     }
 }
 
+ship_type_early_troop_ship = {
+    ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_transports
+
+    modification_construction_cost = 15
+
+    is_obsolete = {
+        has_technology_researched = ironclad_tech
+    }
+
+    is_very_obsolete = {
+        has_technology_researched = monitor_tech
+    }
+
+    modifier = {
+        ship_construction_progress_max_add = 15
+        ship_hit_points_max_add = 750
+        ship_crew_max_add = 150
+        ship_movement_speed_add = 3.0
+        ship_supply_capacity_add = 35
+        ship_armor_add = 3
+        ship_vulnerability_add = 25
+        ship_readiness_gain_add = 10
+        ship_accuracy_add = 5
+        ship_visibility_add = 10
+        ship_detection_add = 5
+        ship_carrying_capacity_add = 0.85
+        ship_marine_capacity_add = 0.2
+    }
+
+    construction_goods = {
+        goods_input_hardwood_add = 345
+        goods_input_fabric_add = 170
+    }
+
+    materiel_goods = {
+        goods_input_grain_add = 1
+        goods_input_hardwood_add = 0.1
+    }
+
+    icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
+    profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_troop_ship.dds"
+
+    modifications = {
+        ship_mod_slot_armor = {
+            ship_mod_early_troop_ship_armor_light
+            ship_mod_early_troop_ship_armor_medium
+            ship_mod_early_troop_ship_armor_high
+        }
+        ship_mod_slot_guns = {
+            ship_mod_early_troop_ship_guns_light
+            ship_mod_early_troop_ship_guns_medium
+            ship_mod_early_troop_ship_guns_high
+        }
+        ship_mod_slot_propulsion = {
+            ship_mod_early_troop_ship_propulsion_light
+            ship_mod_early_troop_ship_propulsion_medium
+            ship_mod_early_troop_ship_propulsion_high
+        }
+        ship_mod_slot_range = {
+            ship_mod_early_troop_ship_range_light
+            ship_mod_early_troop_ship_range_medium
+            ship_mod_early_troop_ship_range_high
+        }
+    }
+
+    default_modifications = {
+        ship_mod_slot_armor = ship_mod_early_troop_ship_armor_light
+        ship_mod_slot_propulsion = ship_mod_early_troop_ship_propulsion_light
+    }
+}
+
 ship_type_troop_ship = {
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_transports
 
     modification_construction_cost = 25
 
@@ -982,15 +1055,15 @@ ship_type_troop_ship = {
         ship_armor_add = 8
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.1
-        ship_vulnerability_add = 100
+        ship_vulnerability_add = 25
         ship_screening_add = 5
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 10
         ship_detection_add = 10
         ship_blockade_strength_add = 5
-        ship_carrying_capacity_add = 1
-        ship_marine_capacity_add = 0.25
+        ship_carrying_capacity_add = 1.25
+        ship_marine_capacity_add = 0.4
     }
 
     construction_goods = {
@@ -1008,8 +1081,6 @@ ship_type_troop_ship = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_troop_ship.dds"
-
-    ai_weight = 2
 
     modifications = {
         ship_mod_slot_armor = {
@@ -1038,6 +1109,7 @@ ship_type_troop_ship = {
 ship_type_protected_cruiser = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 70
 
@@ -1052,9 +1124,10 @@ ship_type_protected_cruiser = {
     }
 
     modifier = {
+        ship_power_projection_add = 220
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1800
-        ship_crew_max_add = 800
+        ship_crew_max_add = 750
         ship_movement_speed_add = 5
         ship_supply_capacity_add = 50
         ship_hull_damage_add = 95
@@ -1062,8 +1135,8 @@ ship_type_protected_cruiser = {
         ship_armor_add = 63
         ship_critical_hit_chance_add = 0.1
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 60
-        ship_screening_add = 35
+        ship_vulnerability_add = 12
+        ship_screening_add = 190
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 10
@@ -1089,8 +1162,6 @@ ship_type_protected_cruiser = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_protected_cruiser.dds"
-
-    ai_weight = 1.5
 
     modifications = {
         ship_mod_slot_armor = {
@@ -1130,32 +1201,30 @@ ship_type_protected_cruiser = {
 ship_type_armored_cruiser = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 60
 
     can_be_flagship = yes
 
     is_obsolete = {
-        has_technology_researched = dreadnought_tech
-    }
-
-    is_very_obsolete = {
         has_technology_researched = battleship_tech
     }
 
     modifier = {
+        ship_power_projection_add = 245
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2200
         ship_crew_max_add = 700
         ship_movement_speed_add = 4.5
         ship_supply_capacity_add = 60
-        ship_hull_damage_add = 130
+        ship_hull_damage_add = 115
         ship_crew_damage_add = 30
         ship_armor_add = 75
         ship_critical_hit_chance_add = 0.1
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 10
-        ship_screening_add = 45
+        ship_screening_add = 250
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 10
@@ -1181,8 +1250,6 @@ ship_type_armored_cruiser = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_armored_cruiser.dds"
-
-    ai_weight = 1.5
 
     modifications = {
         ship_mod_slot_armor = {
@@ -1221,24 +1288,26 @@ ship_type_armored_cruiser = {
 ship_type_light_cruiser = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
 
     modification_construction_cost = 80
 
     can_be_flagship = yes
 
     modifier = {
+        ship_power_projection_add = 255
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2600
         ship_crew_max_add = 500
         ship_movement_speed_add = 5
         ship_supply_capacity_add = 65
-        ship_hull_damage_add = 130
+        ship_hull_damage_add = 115
         ship_crew_damage_add = 35
         ship_armor_add = 85
         ship_critical_hit_chance_add = 0.1
         ship_critical_hit_multiplier_add = 0.25
         ship_vulnerability_add = 10
-        ship_screening_add = 50
+        ship_screening_add = 270
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 15
@@ -1260,13 +1329,10 @@ ship_type_light_cruiser = {
         goods_input_ammunition_add = 0.1
     }
 
-    unlocking_technologies = { dreadnought_tech }
+    unlocking_technologies = { battleship_tech }
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_light_cruiser.dds"
-
-    ai_weight = 1.5
-    ai_weight = 1.5
 
     modifications = {
         ship_mod_slot_armor = {
@@ -1305,6 +1371,7 @@ ship_type_light_cruiser = {
 ship_type_seaplane_tender = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_carriers
 
     modification_construction_cost = 110
 
@@ -1315,6 +1382,7 @@ ship_type_seaplane_tender = {
     }
 
     modifier = {
+        ship_power_projection_add = 135
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2200
         ship_crew_max_add = 300
@@ -1351,8 +1419,6 @@ ship_type_seaplane_tender = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_seaplane_tender.dds"
 
-    ai_weight = 2
-
     modifications = {
         ship_mod_slot_armor = {
             ship_mod_seaplane_tender_armor_light
@@ -1386,6 +1452,7 @@ ship_type_seaplane_tender = {
 ship_type_aircraft_carrier = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_carriers
 
     modification_construction_cost = 200
 
@@ -1394,6 +1461,7 @@ ship_type_aircraft_carrier = {
     combat_power_multiplier = 2.0
 
     modifier = {
+        ship_power_projection_add = 275
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2200
         ship_crew_max_add = 600 # ~ including air crew
@@ -1433,8 +1501,6 @@ ship_type_aircraft_carrier = {
 
     icon = "gfx/interface/icons/ships/ship_category/ship_group_cruisers.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_aircraft_carrier.dds"
-
-    ai_weight = 2
 
     modifications = {
         ship_mod_slot_armor = {
@@ -1478,6 +1544,7 @@ ship_type_aircraft_carrier = {
 ship_type_torpedo_boat = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
 
     modification_construction_cost = 30
 
@@ -1490,6 +1557,7 @@ ship_type_torpedo_boat = {
     }
 
     modifier = {
+        ship_power_projection_add = 110
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1200
         ship_crew_max_add = 200
@@ -1531,8 +1599,6 @@ ship_type_torpedo_boat = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_torpedo_craft.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_torpedo_boat.dds"
 
-    ai_weight = 1.5
-
     modifications = {
         ship_mod_slot_armor = {
             ship_mod_torpedo_boat_armor_light
@@ -1563,6 +1629,7 @@ ship_type_torpedo_boat = {
 ship_type_torpedo_boat_destroyer = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
 
     modification_construction_cost = 50
 
@@ -1573,6 +1640,7 @@ ship_type_torpedo_boat_destroyer = {
     }
 
     modifier = {
+        ship_power_projection_add = 145
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1700
         ship_crew_max_add = 200
@@ -1614,8 +1682,6 @@ ship_type_torpedo_boat_destroyer = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_torpedo_craft.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_torpedo_boat_destroyer.dds"
 
-    ai_weight = 2
-
     modifications = {
         ship_mod_slot_armor = {
             ship_mod_torpedo_boat_destroyer_armor_light
@@ -1648,10 +1714,12 @@ ship_type_torpedo_boat_destroyer = {
 ship_type_submarine = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
 
     modification_construction_cost = 80
 
     modifier = {
+        ship_power_projection_add = 55
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2500
         ship_crew_max_add = 200
@@ -1692,8 +1760,6 @@ ship_type_submarine = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_torpedo_craft.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_submarine.dds"
 
-    ai_weight = 2
-
     modifications = {
         ship_mod_slot_armor = {
             ship_mod_submarine_armor_light
@@ -1721,12 +1787,14 @@ ship_type_submarine = {
 ship_type_destroyer = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
 
     modification_construction_cost = 80
 
     can_be_flagship = yes
 
     modifier = {
+        ship_power_projection_add = 200
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2500
         ship_crew_max_add = 200
@@ -1770,8 +1838,6 @@ ship_type_destroyer = {
     icon = "gfx/interface/icons/ships/ship_category/ship_group_torpedo_craft.dds"
     profile_texture = "gfx/interface/icons/ships/ship_types/silhouette_destroyer.dds"
 
-    ai_weight = 2
-
     modifications = {
         ship_mod_slot_armor = {
             ship_mod_destroyer_armor_light
@@ -1805,6 +1871,7 @@ ship_type_destroyer = {
 
 ship_type_supply_ship = {
     ship_group = ship_group_supply_ships
+    ai_ship_category = ai_ship_category_transports
 
     base_construction_cost = 25
 

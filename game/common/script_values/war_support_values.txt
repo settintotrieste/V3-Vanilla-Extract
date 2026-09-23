@@ -139,14 +139,36 @@ war_support_from_gold_reserves = {
 		limit = { gold_reserves_limit > 0 }
 		add = gold_reserves
 		divide = gold_reserves_limit
+		max = 1
 		multiply = define:NWar|WAR_SUPPORT_CHANGE_GOLD_RESERVES_FACTOR
 	}
 }
 
 war_support_from_taking_loans = {
 	if = {
-		limit = { taking_loans = yes }
-		add = define:NWar|WAR_SUPPORT_CHANGE_TAKING_LOANS_EFFECT
+		limit = {
+			taking_loans = yes
+			credit > 0
+		}
+		add = principal
+		divide = credit
+		max = 1
+		multiply = define:NWar|WAR_SUPPORT_CHANGE_TAKING_LOANS_EFFECT
+	}
+}
+
+war_support_from_servicing_debt = {
+	if = {
+		limit = {
+			taking_loans = no
+			principal > 0
+			credit > 0
+		}
+		add = principal
+		divide = credit
+		max = 1
+		multiply = define:NWar|WAR_SUPPORT_CHANGE_TAKING_LOANS_EFFECT
+		multiply = define:NWar|WAR_SUPPORT_CHANGE_SERVICING_DEBT_MULT
 	}
 }
 
@@ -298,6 +320,8 @@ war_support_change = {
 	save_temporary_value_as = temp_war_support_from_lost_land
 	value = war_support_from_taking_loans
 	save_temporary_value_as = temp_war_support_from_taking_loans
+	value = war_support_from_servicing_debt
+	save_temporary_value_as = temp_war_support_from_servicing_debt
 	value = war_support_from_looming_bankruptcy
 	save_temporary_value_as = temp_war_support_from_looming_bankruptcy
 	value = war_support_from_bankruptcy
@@ -473,6 +497,14 @@ war_support_change = {
 		add = {
 			add = scope:temp_war_support_from_taking_loans
 			desc = "WAR_SUPPORT_CHANGE_FROM_TAKING_LOANS"
+		}
+	}
+
+	if = {
+		limit = { scope:temp_war_support_from_servicing_debt <= -0.01 }
+		add = {
+			add = scope:temp_war_support_from_servicing_debt
+			desc = "WAR_SUPPORT_CHANGE_FROM_SERVICING_DEBT"
 		}
 	}
 
