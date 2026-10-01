@@ -1056,6 +1056,7 @@ caucasuswar_end.1 = {
 		NOT = {
 			has_variable = circassia_defeated
 		}
+		NOT = { war_may_restore_country = CIR }
 	}
 
 	immediate = {
@@ -1272,6 +1273,7 @@ caucasuswar_end.3 = {
 		NOT = {
 			has_variable = imamate_defeated
 		}
+		NOT = { war_may_restore_country = CHC }
 	}
 
 	immediate = {

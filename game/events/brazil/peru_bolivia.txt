@@ -717,7 +717,7 @@ peru_bolivia_events.8 = {
 				c:SPU ?= this
 				OR = {
 					NOT = {
-						exists = c:SPU
+						exists = c:NPU
 					}
 					c:NPU ?= { is_subject = yes }
 				}

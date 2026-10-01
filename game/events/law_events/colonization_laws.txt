@@ -27,6 +27,7 @@ colonization.1 = {
 		any_country = {
 			is_subject_of = ROOT
 			country_is_colonial_or_company = yes
+			NOT = { has_war_with = root }
 		}
 		NOR = {
 			has_modifier = decolonization
@@ -42,6 +43,7 @@ colonization.1 = {
 			limit = {
 				is_subject_of = ROOT
 				country_is_colonial_or_company = yes
+				NOT = { has_war_with = root }
 			}
 			save_scope_as = colony_scope
 		}

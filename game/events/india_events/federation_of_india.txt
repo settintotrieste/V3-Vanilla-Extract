@@ -352,6 +352,7 @@ federation_of_india.4 = {
 	trigger = {
 		any_princely_state = {
 			is_subject_of = ROOT
+			NOT = { has_war_with = root }
 			relations:ROOT >= relations_threshold:amicable
 			liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
 			is_player = no
@@ -363,6 +364,7 @@ federation_of_india.4 = {
 		random_princely_state = {
 			limit = {
 				is_subject_of = ROOT
+				NOT = { has_war_with = root }
 				relations:ROOT >= relations_threshold:amicable
 				liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
 				is_player = no

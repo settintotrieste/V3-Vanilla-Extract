@@ -577,9 +577,9 @@ spanish_africa.5 = { # Gibraltar owned completely, "The Pillars of Hercules"
 			c:SPA ?= this
 			c:IBE ?= this
 		}
-		owns_entire_state_region = STATE_AL_RIF
-		owns_entire_state_region = STATE_LOWER_ANDALUSIA
-		owns_entire_state_region = STATE_UPPER_ANDALUSIA
+		owns_entire_state_region_uncontested = STATE_AL_RIF
+		owns_entire_state_region_uncontested = STATE_LOWER_ANDALUSIA
+		owns_entire_state_region_uncontested = STATE_UPPER_ANDALUSIA
 	}
 
 	cooldown = { days = never_fire_again_modifier_time }
