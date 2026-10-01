@@ -186,6 +186,7 @@ je_confederation_of_the_rhine = {
 
 	fail = {
 		exists = c:RHN
+		NOT = { c:RHN ?= { is_at_war_with_overlord = yes } }
 		c:RHN ?= {
 			NOT = {
 				is_subject_of = ROOT

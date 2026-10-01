@@ -53,8 +53,9 @@
 	}
 
 	invalid = {
+		NOT = { c:SEQ ?= { is_at_war_with_overlord = yes } }
 		OR = {
-			NOT = { owns_entire_state_region = STATE_GEORGIA }
+			NOT = { owns_entire_or_is_contesting_state_region = STATE_GEORGIA }
 			NOT = {
 				AND = {
 					exists = c:SEQ
@@ -63,6 +64,7 @@
 				}
 			}
 		}
+		NOT = { war_may_restore_country = SEQ }
 	}
 
 	weight = 200

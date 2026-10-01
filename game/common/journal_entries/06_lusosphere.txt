@@ -218,9 +218,8 @@ je_portugal_united_kingdom = {
     }
 
 	invalid = {
-		NOT = {
-			exists = c:BRZ
-		}
+		NOT = { exists = c:BRZ }
+		NOT = { war_may_restore_country = BRZ }
 	}
 
 	on_fail = {

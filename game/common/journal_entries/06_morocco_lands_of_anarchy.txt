@@ -35,7 +35,7 @@
 				add_modifier = {
 					name = state_of_anarchy_scaled_mod
 					multiplier = {
-						value = var:al_rif_progress_bar_current_var
+						value = root.var:al_rif_progress_bar_current_var
 						divide = -100
 						add = 5.15
 					}
@@ -52,7 +52,7 @@
 				add_modifier = {
 					name = state_of_anarchy_scaled_mod
 					multiplier = {
-						value = var:marrakech_progress_bar_current_var
+						value = root.var:marrakech_progress_bar_current_var
 						divide = -100
 						add = 5.15
 					}
@@ -69,7 +69,7 @@
 				add_modifier = {
 					name = state_of_anarchy_scaled_mod
 					multiplier = {
-						value = var:inner_morocco_progress_bar_current_var
+						value = root.var:inner_morocco_progress_bar_current_var
 						divide = -100
 						add = 5.15
 					}
@@ -97,7 +97,7 @@
             		add_modifier = {
             			name = state_of_anarchy_scaled_mod
             			multiplier = {
-            				value = var:al_rif_progress_bar_current_var
+            				value = root.var:al_rif_progress_bar_current_var
             				divide = -100
             				add = 5.15
             			}
@@ -115,7 +115,7 @@
             		add_modifier = {
             			name = state_of_anarchy_scaled_mod
             			multiplier = {
-            				value = var:marrakech_progress_bar_current_var
+            				value = root.var:marrakech_progress_bar_current_var
             				divide = -100
             				add = 5.15
             			}
@@ -134,7 +134,7 @@
             		add_modifier = {
             			name = state_of_anarchy_scaled_mod
             			multiplier = {
-            				value = var:inner_morocco_progress_bar_current_var
+            				value = root.var:inner_morocco_progress_bar_current_var
             				divide = -100
             				add = 5.15
             			}

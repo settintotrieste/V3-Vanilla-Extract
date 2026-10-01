@@ -92,6 +92,12 @@
 		NOT = {
 			is_subject_of = scope:overlord_scope
 		}
+		NOT = {
+			OR = {
+				has_war_with = scope:overlord_scope
+				is_at_war_with_overlord = yes
+			}
+		}
 	}
 
 	on_complete = {
@@ -167,6 +173,12 @@ je_british_dictate_military = {
 	invalid = {
 		NOT = {
 			is_subject_of = scope:overlord_scope
+		}
+		NOT = {
+			OR = {
+				has_war_with = scope:overlord_scope
+				is_at_war_with_overlord = yes
+			}
 		}
 	}
 
@@ -384,6 +396,12 @@ je_british_dictate_universities = {
 	invalid = {
 		NOT = {
 			is_subject_of = scope:overlord_scope
+		}
+		NOT = {
+			OR = {
+				has_war_with = scope:overlord_scope
+				is_at_war_with_overlord = yes
+			}
 		}
 	}
 

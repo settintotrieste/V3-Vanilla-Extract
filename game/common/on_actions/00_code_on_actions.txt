@@ -1510,6 +1510,14 @@ on_monthly_pulse_country = {
 
 		if = {
 			limit = {
+				is_ai = yes
+				NOT = { is_country_type = decentralized }
+			}
+			ai_assemble_decree_state_maps = yes
+		}
+
+		if = {
+			limit = {
 				is_subject = yes
 				has_modifier = modifier_not_recognized_by_spain
 				top_overlord ?= {
@@ -6254,23 +6262,31 @@ on_political_movement_supported_law_cancelled = {
 	}
 }
 
+# Fires when a goal is taken via occupation timer during a war. Goals that are not reversed before the end of the war also fire on_wargoal_enforced at the conclusion of peace.
 # Root = Country
 # scope:actor = the country that enforced the wargoal
 # scope:target = the country the wargoal was enforced against
 # scope:diplomatic_play = the relevant diplomatic play
 # scope:wargoal_impact = the impact of the wargoal enforced
-# scope:enforced_by_timer = only set when this was won by holding the objective mid-war rather than settled in a peace
+# scope:war_goal_enforced = the wargoal that was enforced
+on_wargoal_enforced_by_timer = {
+	effect = {
+		scope:diplomatic_play ?= {
+			post_notification = wargoal_enforced
+		}
+	}
+}
+
+# Fires when a goal is taken in such a manner that it cannot be reversed - from diplomatic demands, capitulation, peace deals and so on
+# Also fires for all wargoals taken via occupation timer and not reversed before the end of war, at the conclusion of peace, in addition to prior on_wargoal_enforced_by_timer
+# Root = Country
+# scope:actor = the country that enforced the wargoal
+# scope:target = the country the wargoal was enforced against
+# scope:diplomatic_play = the relevant diplomatic play
+# scope:wargoal_impact = the impact of the wargoal enforced
 # scope:war_goal_enforced = the wargoal that was enforced
 on_wargoal_enforced = {
 	effect = {
-		# Enforcement mid-war changes the world with no peace summary to explain it, so the whole play is told
-		if = {
-			limit = { exists = scope:enforced_by_timer }
-			scope:diplomatic_play ?= {
-				post_notification = wargoal_enforced
-			}
-		}
-
 		# Any war victory over the country that reneged on our inherited treaty ports settles the grudge
 		if = {
 			limit = {
@@ -6295,11 +6311,6 @@ on_wargoal_enforced = {
 			}
 			set_variable = { name = enforced_wargoal_on_enemy days = 90 }
 		}
-		set_variable = {
-            name = recently_won_war
-            days = 1825
-            value = yes
-        }
 		### Narrative war-end events
         if = { # Paris Commune - Commune victory event
         	limit = {
@@ -6738,6 +6749,33 @@ on_wargoal_enforced = {
 		}
 	}
 }
+
+# Root = Country
+# scope:war = the war that just ended
+# scope:diplomatic_play = the play the war belonged to
+# scope:enemy_country = the leader of the other side
+# scope:benefitted_from_wargoal = set if this country held a war goal that was enforced at any point
+# scope:victim_of_wargoal = set if a war goal was enforced against this country at any point
+
+on_won_war = {
+	effect = {
+		if = {
+			limit = { exists = scope:benefitted_from_wargoal }
+			set_variable = { name = recently_won_war days = 1825 value = yes }
+		}
+	}
+}
+
+on_lost_war = {
+	effect = {
+		if = {
+			limit = { exists = scope:victim_of_wargoal }
+			set_variable = { name = recently_lost_war days = 1825 value = yes }
+		}
+	}
+}
+
+on_inconclusive_war = {}
 
 # Root = Interest Group
 on_ig_resigned_government = {

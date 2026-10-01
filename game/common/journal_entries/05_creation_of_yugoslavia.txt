@@ -111,6 +111,7 @@
 
 	fail = {
 		is_subject = yes
+		NOT = { is_at_war_with_overlord = yes }
 	}
 
 	on_fail = {

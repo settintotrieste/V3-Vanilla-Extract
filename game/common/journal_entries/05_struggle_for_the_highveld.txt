@@ -58,6 +58,7 @@
 	}
 
 	complete = {
+		is_at_war = no
 		# Cape Colony must exert direct or indirect control over all of IRL South Africa and Swaziland and Lesotho
 		trigger_if = {
 			limit = {

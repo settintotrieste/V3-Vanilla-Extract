@@ -143,6 +143,12 @@
 				NOT = {
 					is_subject_of = scope:overlord_scope
 				}
+				NOT = {
+					OR = {
+						has_war_with = scope:overlord_scope
+						is_at_war_with_overlord = yes
+					}
+				}
 			}
 		}
 	}
@@ -236,12 +242,19 @@ je_india_nationalism_britain = {
 
 	invalid = {
 		OR = {
-			NOT = {
-				exists = scope:india_scope
+			AND = {
+				NOT = { exists = scope:india_scope }
+				NOT = { war_may_restore_country = BIC }
 			}
 			scope:india_scope ?= {
 				NOT = {
 					is_subject_of = ROOT
+				}
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_at_war_with_overlord = yes
+					}
 				}
 			}
 		}

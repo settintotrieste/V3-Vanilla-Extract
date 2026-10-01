@@ -58,6 +58,19 @@ low_war_support_effects_alert = {
 	color = red
 }
 
+war_goal_at_risk_of_being_dropped_alert = {
+	script_context = player_war
+	texture = "gfx/interface/icons/alert_icons/has_no_war_goal.dds"
+
+	valid = {
+		has_war_goal_at_risk_of_being_dropped = scope:actor
+	}
+
+	open_panel = war_panel
+	type = alert
+	color = red
+}
+
 has_no_research_alert = {
 	script_context = player_country
 	texture = "gfx/interface/icons/alert_icons/has_no_research.dds"

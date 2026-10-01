@@ -396,10 +396,10 @@ je_spa_economic_regeneration_mining = {
                 has_journal_entry = je_spa_economic_regeneration_master
             }
             NOT = {
-                has_state_in_state_region = STATE_BASQUE_COUNTRY
-                has_state_in_state_region = STATE_ASTURIAS
-                has_state_in_state_region = STATE_LOWER_ANDALUSIA
-                has_state_in_state_region = STATE_MURCIA
+                has_or_is_contesting_state_in_state_region = STATE_BASQUE_COUNTRY
+                has_or_is_contesting_state_in_state_region = STATE_ASTURIAS
+                has_or_is_contesting_state_in_state_region = STATE_LOWER_ANDALUSIA
+                has_or_is_contesting_state_in_state_region = STATE_MURCIA
             }
         }
     }

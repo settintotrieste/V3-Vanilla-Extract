@@ -188,6 +188,7 @@ je_reunify_central_america = {
 	}
 
 	complete = {
+		is_at_war = no
 		any_scope_state = {
 			state_region = s:STATE_SAN_SALVADOR
 		}

@@ -32,7 +32,10 @@
 
 	fail = {
 		OR = {
-			is_subject = yes
+			AND = {
+				is_subject = yes
+				NOT = { is_at_war_with_overlord = yes }
+			}
 			custom_tooltip = {
 				text = five_deaths_in_a_row_tt
 				var:sikh_dead_maharajas_var >= 5

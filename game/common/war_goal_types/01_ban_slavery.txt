@@ -50,7 +50,16 @@
 	}
 
 	infamy_severity = 0.1
-	infamy_min = define:NDiplomacy|WAR_GOAL_INFAMY_MAJOR_DEMAND_MIN
+	infamy_min = {
+		value = define:NDiplomacy|WAR_GOAL_INFAMY_MAJOR_DEMAND_MIN
+
+		if = {
+			limit = {
+				modifier:country_ban_slavery_no_infamy_bool = yes
+			}
+			value = 0
+		}
+	}
 	infamy_max = define:NDiplomacy|WAR_GOAL_INFAMY_MAJOR_DEMAND_MAX
 
 	infamy = {
@@ -92,6 +101,18 @@
 				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_REBELLING_SUBJECT_MULT
 			}
 		}
+
+		multiply = {
+			desc = "INFAMY_FROM_BAN_SLAVERY_NO_INFAMY"
+			value = 1
+
+			if = {
+				limit = {
+					modifier:country_ban_slavery_no_infamy_bool = yes
+				}
+				value = 0
+			}
+		}
 	}
 
 	on_enforced = {
@@ -105,5 +126,6 @@
 
 	ai = {
 		is_significant_demand = no
+		settles_grievance = yes
 	}
 }

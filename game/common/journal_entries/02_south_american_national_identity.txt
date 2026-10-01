@@ -542,6 +542,7 @@ je_south_american_national_identity = {
 	}
 
 	complete = {
+		is_at_war = no
 		NOR = {
 			trigger_if = {
 				limit = {

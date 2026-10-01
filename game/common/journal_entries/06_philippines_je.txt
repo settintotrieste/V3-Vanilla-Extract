@@ -123,12 +123,8 @@
 
     fail = {
         OR = {
-            NOT = { 
-                has_state_in_state_region = STATE_LUZON
-            }
-            NOT = { 
-                has_state_in_state_region = STATE_VISAYAS
-            }
+            NOT = { has_or_is_contesting_state_in_state_region = STATE_LUZON }
+            NOT = { has_or_is_contesting_state_in_state_region = STATE_VISAYAS }
         }
     }
 

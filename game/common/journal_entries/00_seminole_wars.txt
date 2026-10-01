@@ -60,10 +60,10 @@
 	fail = {
 		OR = {
 			c:SML ?= {
-				owns_entire_state_region = STATE_FLORIDA
+				owns_entire_state_region_uncontested = STATE_FLORIDA
 			}
 			c:MSC ?= {
-				owns_entire_state_region = STATE_FLORIDA
+				owns_entire_state_region_uncontested = STATE_FLORIDA
 			}
 		}
 	}

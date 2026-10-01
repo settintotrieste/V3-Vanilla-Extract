@@ -15,6 +15,8 @@ ship_type_ship_of_the_line = {
         has_technology_researched = monitor_tech
     }
 
+    vulnerability_exploitation = 65
+
     modifier = {
         ship_power_projection_add = 100
         ship_construction_progress_max_add = 25
@@ -29,7 +31,7 @@ ship_type_ship_of_the_line = {
         ship_armor_add = 12
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 50
+        ship_vulnerability_add = 48
         ship_screening_add = 5
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
@@ -106,6 +108,8 @@ ship_type_monitor = {
         has_technology_researched = dreadnought_tech
     }
 
+    vulnerability_exploitation = 50
+
     modifier = {
         ship_power_projection_add = 35
         ship_construction_progress_max_add = 25
@@ -118,8 +122,8 @@ ship_type_monitor = {
         ship_armor_add = 20
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 30
-        ship_screening_add = 10
+        ship_vulnerability_add = 17
+        ship_screening_add = 5
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 15
@@ -199,6 +203,8 @@ ship_type_early_ironclad = {
         has_technology_researched = pre_dreadnought_tech
     }
 
+    vulnerability_exploitation = 75
+
     modifier = {
         ship_power_projection_add = 190
         ship_construction_progress_max_add = 25
@@ -213,8 +219,8 @@ ship_type_early_ironclad = {
         ship_armor_add = 35
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 120
-        ship_screening_add = 11
+        ship_vulnerability_add = 70
+        ship_screening_add = 5
         ship_readiness_gain_add = 15
         ship_accuracy_add = 5
         ship_visibility_add = 40
@@ -290,6 +296,8 @@ ship_type_coastal_defense_ship = {
         has_technology_researched = dreadnought_tech
     }
 
+    vulnerability_exploitation = 55
+
     modifier = {
         ship_power_projection_add = 55
         ship_construction_progress_max_add = 25
@@ -302,8 +310,8 @@ ship_type_coastal_defense_ship = {
         ship_armor_add = 30
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 60
-        ship_screening_add = 15
+        ship_vulnerability_add = 36
+        ship_screening_add = 10
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 25
@@ -387,6 +395,8 @@ ship_type_modern_ironclad = {
         has_technology_researched = dreadnought_tech
     }
 
+    vulnerability_exploitation = 90
+
     modifier = {
         ship_power_projection_add = 210
         ship_construction_progress_max_add = 25
@@ -401,8 +411,8 @@ ship_type_modern_ironclad = {
         ship_armor_add = 75
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 140
-        ship_screening_add = 14
+        ship_vulnerability_add = 79
+        ship_screening_add = 10
         ship_readiness_gain_add = 20
         ship_accuracy_add = 5
         ship_visibility_add = 45
@@ -484,6 +494,8 @@ ship_type_pre_dreadnought = {
         has_technology_researched = battleship_tech
     }
 
+    vulnerability_exploitation = 125
+
     modifier = {
         ship_power_projection_add = 345
         ship_construction_progress_max_add = 25
@@ -498,8 +510,8 @@ ship_type_pre_dreadnought = {
         ship_armor_add = 90
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 180
-        ship_screening_add = 16
+        ship_vulnerability_add = 90
+        ship_screening_add = 10
         ship_readiness_gain_add = 25
         ship_accuracy_add = 5
         ship_visibility_add = 60
@@ -589,6 +601,8 @@ ship_type_dreadnought = {
 
     can_be_flagship = yes
 
+    vulnerability_exploitation = 125
+
     modifier = {
         ship_power_projection_add = 435
         ship_construction_progress_max_add = 25
@@ -603,8 +617,8 @@ ship_type_dreadnought = {
         ship_armor_add = 100
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 180
-        ship_screening_add = 18
+        ship_vulnerability_add = 99
+        ship_screening_add = 10
         ship_readiness_gain_add = 45
         ship_accuracy_add = 5
         ship_visibility_add = 80
@@ -690,6 +704,8 @@ ship_type_super_dreadnought = {
 
     can_be_flagship = yes
 
+    vulnerability_exploitation = 140
+
     modifier = {
         ship_power_projection_add = 465
         ship_construction_progress_max_add = 25
@@ -704,8 +720,8 @@ ship_type_super_dreadnought = {
         ship_armor_add = 110
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 200
-        ship_screening_add = 20
+        ship_vulnerability_add = 111
+        ship_screening_add = 10
         ship_readiness_gain_add = 50
         ship_accuracy_add = 5
         ship_visibility_add = 100
@@ -812,6 +828,8 @@ ship_type_frigate = {
         has_technology_researched = monitor_tech
     }
 
+    vulnerability_exploitation = 45
+
     modifier = {
         ship_power_projection_add = 100
         ship_construction_progress_max_add = 25
@@ -824,7 +842,7 @@ ship_type_frigate = {
         ship_armor_add = 5
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.1
-        ship_vulnerability_add = 2.5
+        ship_vulnerability_add = 4
         ship_screening_add = 70
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
@@ -897,6 +915,8 @@ ship_type_iron_frigate = {
         has_technology_researched = pre_dreadnought_tech
     }
 
+    vulnerability_exploitation = 75
+
     modifier = {
         ship_power_projection_add = 175
         ship_construction_progress_max_add = 25
@@ -909,8 +929,8 @@ ship_type_iron_frigate = {
         ship_armor_add = 17
         ship_critical_hit_chance_add = 0.05
         ship_critical_hit_multiplier_add = 0.1
-        ship_vulnerability_add = 4.5
-        ship_screening_add = 175
+        ship_vulnerability_add = 4
+        ship_screening_add = 100
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 10
@@ -1123,6 +1143,8 @@ ship_type_protected_cruiser = {
         has_technology_researched = battleship_tech
     }
 
+    vulnerability_exploitation = 100
+
     modifier = {
         ship_power_projection_add = 220
         ship_construction_progress_max_add = 25
@@ -1135,8 +1157,8 @@ ship_type_protected_cruiser = {
         ship_armor_add = 63
         ship_critical_hit_chance_add = 0.1
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 12
-        ship_screening_add = 190
+        ship_vulnerability_add = 9
+        ship_screening_add = 105
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 10
@@ -1211,6 +1233,8 @@ ship_type_armored_cruiser = {
         has_technology_researched = battleship_tech
     }
 
+    vulnerability_exploitation = 125
+
     modifier = {
         ship_power_projection_add = 245
         ship_construction_progress_max_add = 25
@@ -1223,8 +1247,8 @@ ship_type_armored_cruiser = {
         ship_armor_add = 75
         ship_critical_hit_chance_add = 0.1
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 10
-        ship_screening_add = 250
+        ship_vulnerability_add = 4
+        ship_screening_add = 140
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 10
@@ -1294,6 +1318,8 @@ ship_type_light_cruiser = {
 
     can_be_flagship = yes
 
+    vulnerability_exploitation = 140
+
     modifier = {
         ship_power_projection_add = 255
         ship_construction_progress_max_add = 25
@@ -1306,8 +1332,8 @@ ship_type_light_cruiser = {
         ship_armor_add = 85
         ship_critical_hit_chance_add = 0.1
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 10
-        ship_screening_add = 270
+        ship_vulnerability_add = 4
+        ship_screening_add = 150
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 15
@@ -1381,6 +1407,8 @@ ship_type_seaplane_tender = {
         has_technology_researched = carrier_tech
     }
 
+    vulnerability_exploitation = 110
+
     modifier = {
         ship_power_projection_add = 135
         ship_construction_progress_max_add = 25
@@ -1393,8 +1421,8 @@ ship_type_seaplane_tender = {
         ship_armor_add = 85
         ship_critical_hit_chance_add = 0.15
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 50
-        ship_screening_add = 10
+        ship_vulnerability_add = 28
+        ship_screening_add = 5
         ship_readiness_gain_add = 10
         ship_accuracy_add = 15
         ship_visibility_add = 25
@@ -1460,6 +1488,8 @@ ship_type_aircraft_carrier = {
 
     combat_power_multiplier = 2.0
 
+    vulnerability_exploitation = 140
+
     modifier = {
         ship_power_projection_add = 275
         ship_construction_progress_max_add = 25
@@ -1472,8 +1502,8 @@ ship_type_aircraft_carrier = {
         ship_armor_add = 93
         ship_critical_hit_chance_add = 0.15
         ship_critical_hit_multiplier_add = 0.5
-        ship_vulnerability_add = 100
-        ship_screening_add = 10
+        ship_vulnerability_add = 56
+        ship_screening_add = 5
         ship_readiness_gain_add = 10
         ship_accuracy_add = 20
         ship_visibility_add = 100
@@ -1556,6 +1586,8 @@ ship_type_torpedo_boat = {
         has_technology_researched = destroyer
     }
 
+    vulnerability_exploitation = 90
+
     modifier = {
         ship_power_projection_add = 110
         ship_construction_progress_max_add = 25
@@ -1568,14 +1600,17 @@ ship_type_torpedo_boat = {
         ship_armor_add = 9
         ship_critical_hit_chance_add = 0.15
         ship_critical_hit_multiplier_add = 0.1
-        ship_vulnerability_add = 20
-        ship_screening_add = 50
+        ship_vulnerability_add = 12
+        ship_screening_add = 30
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 5
         ship_detection_add = 10
         ship_blockade_strength_add = 25
 
+        ship_battle_against_ship_type_early_ironclad_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_monitor_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_coastal_defense_ship_hull_damage_mult = 2.0
         ship_battle_against_ship_type_modern_ironclad_hull_damage_mult = 2.0
         ship_battle_against_ship_type_pre_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_dreadnought_hull_damage_mult = 2.0
@@ -1639,6 +1674,8 @@ ship_type_torpedo_boat_destroyer = {
         has_technology_researched = destroyer
     }
 
+    vulnerability_exploitation = 125
+
     modifier = {
         ship_power_projection_add = 145
         ship_construction_progress_max_add = 25
@@ -1651,14 +1688,17 @@ ship_type_torpedo_boat_destroyer = {
         ship_armor_add = 20
         ship_critical_hit_chance_add = 0.10
         ship_critical_hit_multiplier_add = 0.25
-        ship_vulnerability_add = 40
-        ship_screening_add = 100
+        ship_vulnerability_add = 24
+        ship_screening_add = 55
         ship_readiness_gain_add = 10
         ship_accuracy_add = 5
         ship_visibility_add = 10
         ship_detection_add = 25
         ship_blockade_strength_add = 50
 
+        ship_battle_against_ship_type_early_ironclad_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_monitor_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_coastal_defense_ship_hull_damage_mult = 2.0
         ship_battle_against_ship_type_modern_ironclad_hull_damage_mult = 2.0
         ship_battle_against_ship_type_pre_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_dreadnought_hull_damage_mult = 2.0
@@ -1718,6 +1758,8 @@ ship_type_submarine = {
 
     modification_construction_cost = 80
 
+    vulnerability_exploitation = 125
+
     modifier = {
         ship_power_projection_add = 55
         ship_construction_progress_max_add = 25
@@ -1730,7 +1772,7 @@ ship_type_submarine = {
         ship_armor_add = 10
         ship_critical_hit_chance_add = 0.15
         ship_critical_hit_multiplier_add = 0.5
-        ship_vulnerability_add = 5
+        ship_vulnerability_add = 4
         ship_screening_add = 5
         ship_readiness_gain_add = 10
         ship_accuracy_add = 7
@@ -1738,6 +1780,9 @@ ship_type_submarine = {
         ship_detection_add = 20
         ship_blockade_strength_add = 25
 
+        ship_battle_against_ship_type_early_ironclad_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_monitor_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_coastal_defense_ship_hull_damage_mult = 2.0
         ship_battle_against_ship_type_modern_ironclad_hull_damage_mult = 2.0
         ship_battle_against_ship_type_pre_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_dreadnought_hull_damage_mult = 2.0
@@ -1793,6 +1838,8 @@ ship_type_destroyer = {
 
     can_be_flagship = yes
 
+    vulnerability_exploitation = 140
+
     modifier = {
         ship_power_projection_add = 200
         ship_construction_progress_max_add = 25
@@ -1805,8 +1852,8 @@ ship_type_destroyer = {
         ship_armor_add = 25
         ship_critical_hit_chance_add = 0.15
         ship_critical_hit_multiplier_add = 0.5
-        ship_vulnerability_add = 50
-        ship_screening_add = 150
+        ship_vulnerability_add = 28
+        ship_screening_add = 85
         ship_readiness_gain_add = 10
         ship_accuracy_add = 6
         ship_visibility_add = 20
@@ -1815,6 +1862,9 @@ ship_type_destroyer = {
         ship_carrying_capacity_add = 0.15
         ship_marine_capacity_add = 0.075
 
+        ship_battle_against_ship_type_early_ironclad_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_monitor_hull_damage_mult = 2.0
+        ship_battle_against_ship_type_coastal_defense_ship_hull_damage_mult = 2.0
         ship_battle_against_ship_type_modern_ironclad_hull_damage_mult = 2.0
         ship_battle_against_ship_type_pre_dreadnought_hull_damage_mult = 2.0
         ship_battle_against_ship_type_dreadnought_hull_damage_mult = 2.0

@@ -37,7 +37,7 @@
                 }
             }
         }
-        owns_entire_state_region = STATE_WEST_GALICIA
+        owns_entire_state_region_uncontested = STATE_WEST_GALICIA
     }
     on_complete = {
         trigger_event = { id = krakow.2 }
@@ -54,8 +54,9 @@
             }
         }
         NOT = {
-            owns_entire_state_region = STATE_WEST_GALICIA
+            owns_entire_or_is_contesting_state_region = STATE_WEST_GALICIA
         }
+        NOT = { war_may_restore_country = KRA }
     }
 
     timeout = 3650

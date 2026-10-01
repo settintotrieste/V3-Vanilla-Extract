@@ -238,7 +238,7 @@ je_cuba_espanol = { # cuba stays with Spain
                 liberty_desire_weekly_progress > 0
                 liberty_desire >= 75
             }
-            is_subject = no
+            is_independent_and_not_being_subjugated = yes
         }
     }
 
@@ -434,7 +434,7 @@ je_cuba_independencia = { # viva cuba
             custom_tooltip = {
                 text = je_cuba_has_gained_independence
                 c:CUB ?= {
-                    is_subject = no
+                    is_independent_and_not_being_subjugated = yes
                 }
             }
             custom_tooltip = { #slave revolt case

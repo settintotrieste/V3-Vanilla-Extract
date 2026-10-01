@@ -1,5 +1,11 @@
 ﻿ai_strongly_desires_state_value_threshold = 50 # TODO: Turn this into a proper define
 
+# How much the AI weighs the countries it would hurt with a strait setting (fallout_for links, summed dependence 0-100 per country) against the setting's own benefits in strait_scores
+ai_strait_fallout_weight = 0.25
+
+# How much the AI values strait toll income in strait_scores, per percent of its GDP earned a year
+ai_strait_toll_income_weight = 3
+
 # Ambition weights for state_value in game/common/ai_strategies/00_default_strategy.txt
 ai_state_ambition_floor = 0
 ai_state_ambition_max = 1.5
@@ -733,4 +739,19 @@ ship_mod_merchant_navy_doctrine = {
 #scope:diplomatic_play_type = type of diplomatic play the demand is for
 diplomatic_play_acceptance = {
 	value = 0
+}
+
+#root = state; agricultural building levels for AI decree targeting, with subsistence counted at half weight
+ai_decree_agricultural_levels_script_value = {
+	value = "state_has_building_group_levels(bg_agriculture)"
+	add = "state_has_building_group_levels(bg_ranching)"
+	add = "state_has_building_group_levels(bg_plantations)"
+	subtract = {
+		value = "state_has_building_group_levels(bg_subsistence_agriculture)"
+		multiply = 0.5
+	}
+	subtract = {
+		value = "state_has_building_group_levels(bg_subsistence_ranching)"
+		multiply = 0.5
+	}
 }

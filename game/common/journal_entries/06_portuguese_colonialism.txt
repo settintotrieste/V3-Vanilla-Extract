@@ -141,6 +141,7 @@
 								country_is_colonial_or_company = yes
 								is_subject_of = ROOT
 							}
+							has_war_with = ROOT
 						}
 					}
 				}
@@ -152,6 +153,7 @@
 								country_is_colonial_or_company = yes
 								is_subject_of = ROOT
 							}
+							has_war_with = ROOT
 						}
 					}
 				}
@@ -168,7 +170,10 @@
 			hidden_trigger = {
 				has_variable = rejected_colonialism_ambitions_var
 			}
-			is_subject = yes
+			AND = {
+				is_subject = yes
+				NOT = { is_at_war_with_overlord = yes }
+			}
 		}
 	}
 
@@ -269,6 +274,7 @@ je_the_pink_map = {
 								country_is_colonial_or_company = yes
 								is_subject_of = ROOT
 							}
+							has_war_with = ROOT
 						}
 					}
 				}
@@ -280,6 +286,7 @@ je_the_pink_map = {
 								country_is_colonial_or_company = yes
 								is_subject_of = ROOT
 							}
+							has_war_with = ROOT
 						}
 					}
 				}
@@ -291,6 +298,7 @@ je_the_pink_map = {
 								country_is_colonial_or_company = yes
 								is_subject_of = ROOT
 							}
+							has_war_with = ROOT
 						}
 					}
 				}
@@ -304,6 +312,7 @@ je_the_pink_map = {
 
 	invalid = {
 		is_subject = yes
+		NOT = { is_at_war_with_overlord = yes }
 	}
 
 	on_invalid = {

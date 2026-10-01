@@ -359,6 +359,7 @@ empiricism = {
 	modifier = {
 		country_influence_mult = 0.25
 		country_diplomatic_play_maneuvers_mult = 0.25
+		country_infamy_generation_mult = -0.05
 		country_institution_schools_max_investment_add = 1
 		state_education_access_wealth_add = 0.005
 	}
@@ -657,6 +658,7 @@ psychiatry = {
 	modifier = {
 		country_influence_mult = 0.25
 		country_diplomatic_play_maneuvers_mult = 0.25
+		country_infamy_generation_mult = -0.05
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
 
@@ -698,6 +700,7 @@ nationalism = {
 	modifier = {
 		country_authority_mult = 0.1
 		country_voting_power_mult = 0.1
+		country_homeland_infamy_reduction_bool = yes
 	}
 
 	unlocking_technologies = {
@@ -830,6 +833,7 @@ human_rights = {
 
 	modifier = {
 		country_institution_social_security_max_investment_add = 1
+		country_ban_slavery_no_infamy_bool = yes
 	}
 
 	unlocking_technologies = {
@@ -1188,6 +1192,7 @@ pan-nationalism = {
 		country_authority_mult = 0.1
 		country_support_separatism_strength_mult = 0.25
 		country_voting_power_mult = 0.1
+		country_shared_language_infamy_reduction_bool = yes
 	}
 
 	unlocking_technologies = {
@@ -1285,6 +1290,7 @@ philosophical_pragmatism = {
 	modifier = {
 		country_influence_mult = 0.25
 		country_diplomatic_play_maneuvers_mult = 0.25
+		country_infamy_generation_mult = -0.05
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 		state_literacy_growth_add = 0.0001
 	}
@@ -1511,6 +1517,7 @@ psychoanalysis = {
 	modifier = {
 		country_influence_mult = 0.25
 		country_diplomatic_play_maneuvers_mult = 0.25
+		country_infamy_generation_mult = -0.05
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
 
@@ -1684,6 +1691,7 @@ behaviorism = {
 	modifier = {
 		country_influence_mult = 0.5
 		country_diplomatic_play_maneuvers_mult = 0.5
+		country_infamy_generation_mult = -0.05
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
 

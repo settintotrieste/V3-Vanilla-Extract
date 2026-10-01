@@ -32,15 +32,9 @@
 	monthly_progress = {
 		if = {
 			limit = {
-				s:STATE_FLORIDA = {
-					any_scope_state = {
-						owner = {
-							OR = {
-								c:USA ?= this
-								c:CSA ?= this
-							}
-						}
-					}
+				OR = {
+					c:USA ?= { has_or_is_contesting_state_in_state_region = STATE_FLORIDA }
+					c:CSA ?= { has_or_is_contesting_state_in_state_region = STATE_FLORIDA }
 				}
 				OR = {
 					exists = c:CUB

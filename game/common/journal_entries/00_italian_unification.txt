@@ -114,6 +114,7 @@
 	}
 
 	fail = {
+		is_at_war = no
 		custom_tooltip = {
 			text = owns_no_italian_homelands_tt
 			NOT = {

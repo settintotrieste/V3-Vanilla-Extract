@@ -89,6 +89,7 @@
 	}
 
 	fail = {
+		is_at_war = no
 		custom_tooltip = {
 			text = scramble_for_africa_fail_tt
 			NOR = {

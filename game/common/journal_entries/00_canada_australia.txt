@@ -61,7 +61,7 @@
 	}
 
 	invalid = {
-		is_subject = no
+		is_independent_and_not_being_subjugated = yes
 	}
 
 	weight = 100
@@ -185,7 +185,7 @@ je_australia_aus = {
 	}
 
 	invalid = {
-		is_subject = no
+		is_independent_and_not_being_subjugated = yes
 	}
 
 

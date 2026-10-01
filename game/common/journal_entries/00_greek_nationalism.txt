@@ -207,7 +207,10 @@
 
 	fail = {
 		OR = {
-			is_subject = yes
+			AND = {
+				is_subject = yes
+				NOT = { is_at_war_with_overlord = yes }
+			}
 		 	AND = {
 				country_rank < rank_value:minor_power
 				gold_reserves < 0

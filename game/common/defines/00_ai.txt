@@ -38,7 +38,7 @@
 	CHANGE_STRATEGY_THRESHOLD = 100	# At this threshold of 'change points', the AI will roll a new strategy
 	CHANGE_STRATEGY_INCREASE_WEEKLY_CHANCE = 20 # Chance per week of AI gaining a 'change point' towards rolling a new strategy (1 = 1%)
 
-	CHANGE_STRATEGY_POLITICAL_NEW_RULER = 100 # How many 'change points' are added to each strategy when a country gets a new ruler
+	CHANGE_STRATEGY_POLITICAL_NEW_REGIME = 100 # How many 'change points' are added to the political strategy when a country gets a new regime: either a new ruler, or a new government formed in the grace period after an election
 	CHANGE_STRATEGY_POLITICAL_REGIME_CHANGE = 100 # How many 'change points' are added to each strategy when a country is the target of a regime change
 	CHANGE_STRATEGY_POLITICAL_LAW_ENACTED = 25 # How many 'change points' are added to politics strategy when a law is enacted
 
@@ -232,6 +232,7 @@
 	CONTAINMENT_PLAY_PARTICIPATION_RANK = 7 # Ranks of this value or above should be keen on joining containment plays to beat down threats
 
 	START_DIPLO_PLAY_RANDOM_FACTOR = 2.0 # The higher this is, the more random AI will be on where to target when starting diplo plays
+	START_DIPLO_PLAY_MIN_WARGOAL_SCORE = 20 # The initial wargoal needs at least this value for AI to start a diplo play with it
 	START_DIPLO_PLAY_DAYS_TO_WAIT = 90 # Don't start any diplomatic plays for this many days after game start, to give the AI time to organize
 	START_DIPLO_PLAY_ALLY_STRENGTH_WEIGHT = 0.75 # Consider participants that will for sure join a side with this amount of their forces
 	START_DIPLO_PLAY_LIKELY_ALLY_STRENGTH_WEIGHT = 0.5 # Consider participants that will likely to join a side with this amount of their forces
@@ -1056,10 +1057,14 @@
 	AI_CAPITULATE_BASE_VALUE = -25
 	AI_CAPITULATE_WAR_LEADER_FACTOR = -25 # If warleader
 	AI_CAPITULATE_WAR_SUPPORT_MAX = 100 # War support contributes linearly to capitulation desire, zero at the penalty threshold and reaching this magnitude at the floor and once confidently winning
-	AI_CAPITULATE_SELF_WARGOAL_FACTOR = -5 # For each wargoal we hold in the war
+	AI_CAPITULATE_SELF_WARGOAL_FACTOR = -5 # For each wargoal we hold in the war that we control
+	AI_CAPITULATE_SELF_WARGOAL_MIN = -15 # The wargoals we hold cannot lower capitulation desire by more than this in total
 	AI_CAPITULATE_ENEMY_WARGOAL_MULT = 0.2 # For each wargoal targeting us in the war, its peace-deal cession value multiplied by this
+	AI_CAPITULATE_CONTESTED_ENEMY_WARGOAL_MIN = -25 # The wargoals targeting us that the enemy controls cannot lower capitulation desire by more than this in total; uncontrolled wargoals are not capped
+	AI_CAPITULATE_NON_CONTESTED_ENEMY_WARGOAL_MULT = 10 # Value of wargoals targeting us that the enemy does not control is multiplied by this when considering capitulation
 	AI_CAPITULATE_ENEMY_FOLDS_FIRST = -1000 # Applied once if an enemy that is able to capitulate has a higher capitulation desire than us, so we expect them to fold first
 	AI_CAPITULATE_ENEMY_FOLDS_FIRST_MIN_DESIRE = -25 # The enemy-folds-first factor is only applied when our own capitulation desire is at least this high, i.e. we are close enough to capitulating for it to matter
+	AI_CAPITULATE_DEFEATED_MIN_DESIRE = 0 # In a revolution, secession or native uprising, a participant at minimum war support has its capitulation desire raised to at least this
 	AI_CAPITULATE_PEACE_DESIRE_FACTOR = 0.5 # Peace desire is multiplied by this when added to capitulation score
 
 	AI_PEACE_DESIRE_FROM_FORCE_BALANCE = 50 # Up to this amount is added or subtracted from war support based on DIPLO_PLAY_FORCE_BALANCE_SCALE of the two sides
@@ -1088,6 +1093,8 @@
 	GOAL_ANTAGONIZE_CONQUER_SCORE_MAX = 200 # Total score of territory we want to take cannot exceed this
 	GOAL_ANTAGONIZE_TREATY_PORT_SCORE_MULT = 0.5 # Multiplied by the total score of the treaty ports we want to take from them
 	GOAL_ANTAGONIZE_TREATY_PORT_SCORE_MAX = 100 # Total score of treaty ports we want to take cannot exceed this
+	GOAL_ANTAGONIZE_STRAIT_SCORE_MULT = 100 # Multiplied by the worst strait grievance we hold against them (dependence x grievance multiplier, 0-1)
+	GOAL_ANTAGONIZE_STRAIT_SCORE_MAX = 100 # Score from strait grievances cannot exceed this
 	GOAL_ANTAGONIZE_DOMINATE_SCORE_MULT = 1.0 # Multiplied by the total score of make-subject wargoals we want to enforce on them
 	GOAL_ANTAGONIZE_DOMINATE_SCORE_MAX = 200
 	GOAL_ANTAGONIZE_RIVAL_FACTOR = 100

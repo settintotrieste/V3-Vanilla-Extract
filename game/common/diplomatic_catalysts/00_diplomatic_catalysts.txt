@@ -2857,7 +2857,7 @@ catalyst_orchestrate_coup_fizzled = {
 
 # Triggered when a strait controller raises tolls to High
 catalyst_strait_toll_high = {
-	category = cc_relations_change
+	category = cc_strait_tolls
 
 	political_lobby_creation = {
 		lobby_anti_country = {
@@ -2876,15 +2876,19 @@ catalyst_strait_toll_high = {
 
 	ai_country_goal_recalculation = {
 		type = more_hostile
-		chance = {
-			value = 1.0
+		chance = { # Scales with how much worse this made the country's grievance on the strait
+			value = scope:value_after
+			subtract = scope:value_before
+			multiply = 0.025
+			min = 0
+			max = 1
 		}
 	}
 }
 
 # Triggered when a strait controller reduces tolls from High
 catalyst_strait_toll_reduced = {
-	category = cc_relations_change
+	category = cc_strait_tolls
 
 	political_lobby_creation = {
 		lobby_pro_country = {
@@ -2903,8 +2907,12 @@ catalyst_strait_toll_reduced = {
 
 	ai_country_goal_recalculation = {
 		type = more_friendly
-		chance = {
-			value = 1.0
+		chance = { # Scales with how much this eased the country's grievance on the strait
+			value = scope:value_before
+			subtract = scope:value_after
+			multiply = 0.025
+			min = 0
+			max = 1
 		}
 	}
 }
@@ -2926,15 +2934,19 @@ catalyst_strait_no_military = {
 
 	ai_country_goal_recalculation = {
 		type = more_hostile
-		chance = {
-			value = 0.1
+		chance = { # Scales with how much worse this made the country's grievance on the strait
+			value = scope:value_after
+			subtract = scope:value_before
+			multiply = 0.006
+			min = 0
+			max = 1
 		}
 	}
 }
 
 # Triggered when a strait is reopened — countries that regain access
 catalyst_strait_opened = {
-	category = cc_relations_change
+	category = cc_strait_access
 
 	political_lobby_creation = {
 		lobby_pro_country = {
@@ -2949,15 +2961,19 @@ catalyst_strait_opened = {
 
 	ai_country_goal_recalculation = {
 		type = more_friendly
-		chance = {
-			value = 0.1
+		chance = { # Scales with how much this eased the country's grievance on the strait
+			value = scope:value_before
+			subtract = scope:value_after
+			multiply = 0.006
+			min = 0
+			max = 1
 		}
 	}
 }
 
 # Triggered when a strait is partially reopened — Closed to NoMilitary, restoring economic access
 catalyst_strait_partially_opened = {
-	category = cc_relations_change
+	category = cc_strait_access
 
 	political_lobby_creation = {
 		lobby_pro_country = {
@@ -2972,8 +2988,12 @@ catalyst_strait_partially_opened = {
 
 	ai_country_goal_recalculation = {
 		type = more_friendly
-		chance = {
-			value = 0.1
+		chance = { # Scales with how much this eased the country's grievance on the strait
+			value = scope:value_before
+			subtract = scope:value_after
+			multiply = 0.006
+			min = 0
+			max = 1
 		}
 	}
 }
@@ -2995,8 +3015,12 @@ catalyst_strait_closed = {
 
 	ai_country_goal_recalculation = {
 		type = more_hostile
-		chance = {
-			value = 0.25
+		chance = { # Scales with how much worse this made the country's grievance on the strait
+			value = scope:value_after
+			subtract = scope:value_before
+			multiply = 0.01
+			min = 0
+			max = 1
 		}
 	}
 }

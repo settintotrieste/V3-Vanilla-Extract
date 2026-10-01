@@ -55,6 +55,7 @@
 					text = opiumwars_fail_tt
 					has_journal_entry = je_opium_wars
 				}
+				NOT = { has_war_with = root }
 				OR = {
 					has_treaty_foreign_investment_rights_with = { TARGET = root }
 					#has_treaty_port_in_market = root.market
@@ -129,6 +130,7 @@ je_opium_wars = {
 				}
 			}
 		}
+		NOT = { has_war_with = scope:target }
 		hidden_trigger = {
 			scope:target = {
 				has_modifier = opium_wars_lost

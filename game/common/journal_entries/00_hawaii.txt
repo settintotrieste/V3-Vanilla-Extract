@@ -54,6 +54,7 @@
 
 	fail = {
 		is_subject = yes
+		NOT = { is_at_war_with_overlord = yes }
 	}
 
 	on_fail = {
@@ -108,8 +109,9 @@ je_hawaiian_interest = { #JE for GPs so that they can see the situation is ongoi
 		OR = {
 			c:HAW ?= {
 				is_subject_of = ROOT
+				NOT = { has_war_with = root }
 			}
-			owns_entire_state_region = STATE_HAWAIIAN_ISLANDS
+			owns_entire_state_region_uncontested = STATE_HAWAIIAN_ISLANDS
 		}
 	}
 

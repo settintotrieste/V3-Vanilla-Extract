@@ -47,6 +47,7 @@
 				NOT = { c:SCH ?= this }
 				exists = c:DEN
 			}
+			NOT = { has_war_with = c:DEN }
 			custom_tooltip = {
 				text = je_schleswig_holstein_question_state_ownership_desc
 				any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }

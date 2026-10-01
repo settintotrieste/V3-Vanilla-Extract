@@ -48,6 +48,13 @@ ai_regional_objective_acquire_states = {
 		}
 	}
 
+	on_invalid = {
+		remove_from_variable_map = {
+			name = aro_acquire_states_map
+			key = scope:target_region
+		}
+	}
+
 	weight = {
 		value = 10
 
@@ -141,6 +148,13 @@ ai_regional_objective_subjugate_country = { # TODO: expose the target to the pla
 		}
 	}
 
+	on_invalid = {
+		remove_from_variable_map = {
+			name = aro_subjugate_country_map
+			key = scope:target_region
+		}
+	}
+
 	weight = {
 		value = 10
 
@@ -200,6 +214,13 @@ ai_regional_objective_befriend_countries = {
 	}
 
 	on_complete = {
+		remove_from_variable_map = {
+			name = aro_befriend_countries_map
+			key = scope:target_region
+		}
+	}
+
+	on_invalid = {
 		remove_from_variable_map = {
 			name = aro_befriend_countries_map
 			key = scope:target_region
@@ -268,6 +289,13 @@ ai_regional_objective_protect_country = { # TODO: expose the target to the playe
 	}
 
 	on_complete = {
+		remove_from_variable_map = {
+			name = aro_protect_country_map
+			key = scope:target_region
+		}
+	}
+
+	on_invalid = {
 		remove_from_variable_map = {
 			name = aro_protect_country_map
 			key = scope:target_region

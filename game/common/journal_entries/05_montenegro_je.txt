@@ -222,6 +222,7 @@
 				is_country_alive = yes
 			}
 		}
+		NOT = { war_may_restore_country = TUR }
 	}
 
 	on_complete = {
@@ -270,13 +271,10 @@
 	}
 
 	fail = {
-		trigger_if = { #putting this in to avoid errors
-			limit = {
-				exists = c:TUR
-			}
-			c:MON ?= {
-				is_subject_of = c:TUR
-			}
+		exists = c:TUR
+		c:MON ?= {
+			is_subject_of = c:TUR
+			NOT = { has_war_with = c:TUR }
 		}
 	}
 
@@ -420,7 +418,10 @@ je_mon_state_formation = {
 
 	fail = {
 		OR = {
-			is_subject_of = c:TUR
+			AND = {
+				is_subject_of = c:TUR
+				NOT = { has_war_with = c:TUR }
+			}
 			any_diplomatic_play = {
 				initiator_is = root
 			}
@@ -477,12 +478,8 @@ je_mon_austria_alliance = {
 
 	invalid = { #p:x90A0E0.state.owner might work better
 		exists = c:AUS
-		NOT = {
-			s:STATE_MONTENEGRO = {
-				any_scope_state = {
-					owner = c:AUS
-				}
-			}
+		c:AUS ?= {
+			NOT = { has_or_is_contesting_state_in_state_region = STATE_MONTENEGRO }
 		}
 	}
 
@@ -735,14 +732,16 @@ je_tur_raided = {
 
 	complete = {
 		OR = {
-			NOT = {
-				exists = c:MON
+			AND = {
+				NOT = { exists = c:MON }
+				NOT = { war_may_restore_country = MON }
 			}
 			c:MON ?= {
 				OR = {
 					is_country_alive = no
 					is_subject_of = ROOT
 				 }
+				NOT = { has_war_with = root }
 			}
 		}
 	}

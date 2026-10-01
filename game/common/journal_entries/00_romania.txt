@@ -124,10 +124,17 @@ je_all_for_one = {
             hidden_trigger = {
                 exists = c:ROM
                 NOT = { c:ROM ?= THIS }
+                NOT = { has_war_with = c:ROM }
             }
             NOT = { exists = scope:romania_lesser_union_partner }
             scope:romania_lesser_union_partner = {
                 NOT = { is_subject_of = ROOT }
+                NOT = {
+                    OR = {
+                        has_war_with = root
+                        is_at_war_with_overlord = yes
+                    }
+                }
             }
         }
     }

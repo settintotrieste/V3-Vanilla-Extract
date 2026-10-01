@@ -106,6 +106,8 @@
 				}
 			}
 		}
+		NOT = { has_war_with = c:TUR }
+		NOT = { war_may_restore_country = TUR }
 	}
 
 	on_complete = {

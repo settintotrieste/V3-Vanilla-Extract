@@ -145,6 +145,7 @@ je_caucasian_war = {
     }
 
     complete = {
+        is_at_war = no
         custom_tooltip = {
             text = caucasus_secured_tt
             NOT = {
@@ -244,15 +245,9 @@ je_caucasian_war = {
         custom_tooltip = {
             text = caucasus_lost_tt
             NOT = {
-                any_scope_state = {
-                    state_region = s:STATE_DAGESTAN
-                }
-                any_scope_state = {
-                    state_region = s:STATE_KUBAN
-                }
-                any_scope_state = {
-                    state_region = s:STATE_NORTH_CAUCASUS
-                }
+                has_or_is_contesting_state_in_state_region = STATE_DAGESTAN
+                has_or_is_contesting_state_in_state_region = STATE_KUBAN
+                has_or_is_contesting_state_in_state_region = STATE_NORTH_CAUCASUS
             }
         }
     }
@@ -284,12 +279,14 @@ je_caucasian_war = {
     invalid = {
         OR = {
             c:CIR ?= {
+                NOT = { is_at_war_with_overlord = yes }
                 is_subject = yes
                 NOT = {
                     is_subject_of = ROOT
                 }
             }
             c:CHC ?= {
+                NOT = { is_at_war_with_overlord = yes }
                 is_subject = yes
                 NOT = {
                     is_subject_of = ROOT
@@ -588,6 +585,9 @@ je_caucasian_war_circassia = {
     }
 
     complete = {
+        c:RUS ?= {
+            NOT = { has_war_with = root }
+        }
         custom_tooltip = {
             text = russia_out_of_kuban_tt
             c:RUS ?= {
@@ -698,6 +698,9 @@ je_caucasian_war_imamate = {
     }
 
     complete = {
+        c:RUS ?= {
+            NOT = { has_war_with = root }
+        }
         custom_tooltip = {
             text = russia_out_of_dagestan_tt
             c:RUS ?= {
@@ -851,15 +854,33 @@ je_pacify_the_steppes = {
             NOT = {
                 is_subject_of = ROOT
             }
+            NOT = {
+                OR = {
+                    has_war_with = root
+                    is_at_war_with_overlord = yes
+                }
+            }
         }
         c:UZH ?= {
             NOT = {
                 is_subject_of = ROOT
             }
+            NOT = {
+                OR = {
+                    has_war_with = root
+                    is_at_war_with_overlord = yes
+                }
+            }
         }
         c:OZH ?= {
             NOT = {
                 is_subject_of = ROOT
+            }
+            NOT = {
+                OR = {
+                    has_war_with = root
+                    is_at_war_with_overlord = yes
+                }
             }
         }
     }

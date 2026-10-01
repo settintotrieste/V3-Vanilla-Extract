@@ -46,9 +46,9 @@
 	}
 
 	fail = {
-		NOT = { has_state_in_state_region = STATE_ORAN }
-		NOT = { has_state_in_state_region = STATE_ALGIERS }
-		NOT = { has_state_in_state_region = STATE_CONSTANTINE }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_ORAN }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_ALGIERS }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_CONSTANTINE }
 	}
 
 	on_fail = {
@@ -177,9 +177,9 @@ je_the_algerian_departements = {
 	}
 
 	fail = {
-		NOT = { has_state_in_state_region = STATE_ORAN }
-		NOT = { has_state_in_state_region = STATE_ALGIERS }
-		NOT = { has_state_in_state_region = STATE_CONSTANTINE }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_ORAN }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_ALGIERS }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_CONSTANTINE }
 	}
 
 	on_fail = {
@@ -222,14 +222,14 @@ je_reconquest_of_algeria = {
 	}
 
 	fail = {
-		NOT = { has_state_in_state_region = STATE_ORAN }
-		NOT = { has_state_in_state_region = STATE_ALGIERS }
-		NOT = { has_state_in_state_region = STATE_CONSTANTINE }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_ORAN }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_ALGIERS }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_CONSTANTINE }
 		trigger_if = {
 			limit = {
 				c:TUG ?= this
 			}
-			NOT = { has_state_in_state_region = STATE_EAST_SAHARA }
+			NOT = { has_or_is_contesting_state_in_state_region = STATE_EAST_SAHARA }
 		}
 	}
 
@@ -263,9 +263,9 @@ je_french_foreign_legion = {
 	}
 
 	fail = {
-		NOT = { has_state_in_state_region = STATE_ORAN }
-		NOT = { has_state_in_state_region = STATE_ALGIERS }
-		NOT = { has_state_in_state_region = STATE_CONSTANTINE }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_ORAN }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_ALGIERS }
+		NOT = { has_or_is_contesting_state_in_state_region = STATE_CONSTANTINE }
 	}
 
 	transferable = yes

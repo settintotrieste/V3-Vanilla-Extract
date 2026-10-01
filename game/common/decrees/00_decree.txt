@@ -228,24 +228,22 @@ decree_promote_social_mobility = {
 
 	ai_weight = {
 		value = 0
-
 		if = {
 			limit = {
-				literacy_rate < 0.25
+				scope:country.total_population > 0
 			}
-			add = 75
-		}
-		if = {
-			limit = {
-				literacy_rate < 0.5
+			add = {
+				value = 1
+				subtract = literacy_rate
+				multiply = 100
 			}
-			add = 75
-		}
-		if = {
-			limit = {
-				literacy_rate < 0.75
+			multiply = {
+				value = state_population
+				divide = scope:country.total_population
+				multiply = 20
+				min = 0
+				max = 2
 			}
-			add = 50
 		}
 		if = {
 			limit = {
@@ -269,6 +267,18 @@ decree_promote_social_mobility = {
 				}
 			}
 			multiply = 1.5
+		}
+		if = {
+			limit = {
+				is_incorporated = no
+			}
+			multiply = 0.25
+		}
+		if = {
+			limit = {
+				is_capital = yes
+			}
+			multiply = 2
 		}
 
 		# Content overrides
@@ -616,7 +626,7 @@ decree_encourage_manufacturing_industry = {
 					is_building_group = bg_manufacturing
 				}
 			}
-			add = 50
+			add = 5
 		}
 		if = {
 			limit = {
@@ -625,7 +635,7 @@ decree_encourage_manufacturing_industry = {
 					count >= 3
 				}
 			}
-			add = 50
+			add = 10
 		}
 		if = {
 			limit = {
@@ -634,7 +644,23 @@ decree_encourage_manufacturing_industry = {
 					count >= 5
 				}
 			}
-			add = 50
+			add = 15
+		}
+		if = {
+			limit = {
+				scope:country ?= {
+					has_variable_map = industrial_states_map
+					is_key_in_variable_map = {
+						name = industrial_states_map
+						target = root
+					}
+				}
+			}
+			add = {
+				value = 5
+				subtract = "scope:country.variable_map(industrial_states_map|root)"
+				multiply = 20
+			}
 		}
 		if = {
 			limit = {
@@ -688,7 +714,7 @@ decree_encourage_agricultural_industry = {
 					}
 				}
 			}
-			add = 50
+			add = 5
 		}
 		if = {
 			limit = {
@@ -701,7 +727,7 @@ decree_encourage_agricultural_industry = {
 					count >= 3
 				}
 			}
-			add = 50
+			add = 10
 		}
 		if = {
 			limit = {
@@ -714,7 +740,23 @@ decree_encourage_agricultural_industry = {
 					count >= 5
 				}
 			}
-			add = 50
+			add = 15
+		}
+		if = {
+			limit = {
+				scope:country ?= {
+					has_variable_map = agricultural_states_map
+					is_key_in_variable_map = {
+						name = agricultural_states_map
+						target = root
+					}
+				}
+			}
+			add = {
+				value = 5
+				subtract = "scope:country.variable_map(agricultural_states_map|root)"
+				multiply = 20
+			}
 		}
 		if = {
 			limit = {
@@ -776,7 +818,7 @@ decree_encourage_resource_industry = {
 					}
 				}
 			}
-			add = 50
+			add = 5
 		}
 		if = {
 			limit = {
@@ -791,7 +833,7 @@ decree_encourage_resource_industry = {
 					count >= 3
 				}
 			}
-			add = 50
+			add = 10
 		}
 		if = {
 			limit = {
@@ -806,7 +848,23 @@ decree_encourage_resource_industry = {
 					count >= 5
 				}
 			}
-			add = 50
+			add = 15
+		}
+		if = {
+			limit = {
+				scope:country ?= {
+					has_variable_map = resource_states_map
+					is_key_in_variable_map = {
+						name = resource_states_map
+						target = root
+					}
+				}
+			}
+			add = {
+				value = 5
+				subtract = "scope:country.variable_map(resource_states_map|root)"
+				multiply = 20
+			}
 		}
 		if = {
 			limit = {
@@ -853,7 +911,7 @@ decree_greener_grass_campaign = {
 					occupancy < 0.75
 				}
 			}
-			add = 50
+			add = 10
 		}
 		if = {
 			limit = {
@@ -862,7 +920,7 @@ decree_greener_grass_campaign = {
 					occupancy < 0.5
 				}
 			}
-			add = 50
+			add = 15
 		}
 		if = {
 			limit = {
@@ -871,7 +929,7 @@ decree_greener_grass_campaign = {
 					occupancy < 0.25
 				}
 			}
-			add = 50
+			add = 25
 		}
 		if = {
 			limit = {
@@ -934,7 +992,7 @@ decree_greener_grass_campaign = {
 				is_incorporated = no
 				scope:country = { NOT = { has_law_or_variant = law_type:law_colonial_resettlement } } # Already gives a hefty migration bonus
 			}
-			multiply = 2.0
+			multiply = 3.0
 		}
 		if = {
 			limit = {
@@ -966,7 +1024,7 @@ decree_enlistment_efforts = {
 					count >= 5
 				}
 			}
-			add = 25
+			add = 5
 		}
 		if = {
 			limit = {
@@ -975,7 +1033,7 @@ decree_enlistment_efforts = {
 					count >= 10
 				}
 			}
-			add = 50
+			add = 10
 		}
 		if = {
 			limit = {
@@ -984,7 +1042,23 @@ decree_enlistment_efforts = {
 					count >= 25
 				}
 			}
-			add = 75
+			add = 15
+		}
+		if = {
+			limit = {
+				scope:country ?= {
+					has_variable_map = army_states_map
+					is_key_in_variable_map = {
+						name = army_states_map
+						target = root
+					}
+				}
+			}
+			add = {
+				value = 5
+				subtract = "scope:country.variable_map(army_states_map|root)"
+				multiply = 20
+			}
 		}
 
 		if = {
@@ -998,25 +1072,6 @@ decree_enlistment_efforts = {
 				}
 			}
 			multiply = 5.0
-		}
-
-		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_naval_administration
-					count >= 5
-				}
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_naval_administration
-					count >= 10
-				}
-			}
-			add = 50
 		}
 	}
 }

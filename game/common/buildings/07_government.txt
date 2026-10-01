@@ -90,7 +90,7 @@ building_university = {
 					has_building = building_university
 				}
 			}
-			add = 500
+			add = 10000
 		}
 	}
 }

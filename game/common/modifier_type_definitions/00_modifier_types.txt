@@ -397,7 +397,7 @@ country_prestige_from_army_power_projection_mult={
 	}
 }
 
-country_prestige_from_navy_combat_power_mult={
+country_prestige_from_navy_power_projection_mult={
 	decimals=0
 	color=good
 	percent=yes
@@ -3336,6 +3336,33 @@ ship_battle_against_ship_type_destroyer_accuracy_mult = {
 	}
 }
 
+
+ship_battle_against_ship_type_early_ironclad_hull_damage_mult = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+ship_battle_against_ship_type_monitor_hull_damage_mult = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+ship_battle_against_ship_type_coastal_defense_ship_hull_damage_mult = {
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
 
 ship_battle_against_ship_type_modern_ironclad_hull_damage_mult = {
 	decimals=0

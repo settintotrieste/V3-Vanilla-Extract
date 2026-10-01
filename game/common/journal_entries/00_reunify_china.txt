@@ -35,6 +35,7 @@
 	}
 
 	complete = {
+		is_at_war = no
 		trigger_if = {
 			limit = {
 				global_var:chinese_central_government ?= this

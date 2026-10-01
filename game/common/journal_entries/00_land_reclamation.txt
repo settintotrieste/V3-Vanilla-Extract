@@ -35,8 +35,8 @@
 
 	fail = {
 		OR = {
-			NOT = { owns_entire_state_region = STATE_FRIESLAND }
-			NOT = { owns_entire_state_region = STATE_HOLLAND }
+			NOT = { owns_entire_or_is_contesting_state_region = STATE_FRIESLAND }
+			NOT = { owns_entire_or_is_contesting_state_region = STATE_HOLLAND }
 		}
 	}
 

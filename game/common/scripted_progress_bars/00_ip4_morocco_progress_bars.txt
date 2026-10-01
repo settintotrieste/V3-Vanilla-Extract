@@ -162,12 +162,8 @@ lands_of_anarchy_tribes_of_marrakech_bar = {
 			# The state is not ours anymore
 			if = {
 				limit = {
-					s:STATE_MARRAKECH = {
-						NOT = {
-							any_scope_state = {
-								owner = root.owner
-							}
-						}
+					root = {
+						NOT = { has_or_is_contesting_state_in_state_region = STATE_MARRAKECH }
 					}
 				}
 				subtract = {
@@ -352,12 +348,8 @@ lands_of_anarchy_tribes_of_al_rif_bar = {
 			# The state is not ours anymore
 			if = {
 				limit = {
-					s:STATE_AL_RIF = {
-						NOT = {
-							any_scope_state = {
-								owner = root
-							}
-						}
+					root = {
+						NOT = { has_or_is_contesting_state_in_state_region = STATE_AL_RIF }
 					}
 				}
 				subtract = {
@@ -532,12 +524,8 @@ lands_of_anarchy_tribes_of_inner_morocco_bar = {
 			# The state is not ours anymore
 			if = {
 				limit = {
-					s:STATE_INNER_MOROCCO = {
-						NOT = {
-							any_scope_state = {
-								owner = root
-							}
-						}
+					root = {
+						NOT = { has_or_is_contesting_state_in_state_region = STATE_INNER_MOROCCO }
 					}
 				}
 				subtract = {

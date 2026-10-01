@@ -1103,16 +1103,11 @@ dp_unify_ethiopia = {
 	}
 
 	possible = {
-		NOT = { exists = c:ETH }
 		NOT = { is_country_type = decentralized }
 		is_subject = no
-		has_journal_entry = je_age_of_princes
+		is_ethiopia_unification_pair = { TARGET = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-			custom_tooltip = {
-				text = ETH_tt
-				can_form_nation = ETH
-			}
 			aggressive_diplomatic_plays_permitted = yes
 		}
 	}
@@ -1142,21 +1137,11 @@ dp_unify_china = {
 	possible = {
 		NOT = { is_country_type = decentralized }
 		is_subject = no
-		OR = {
-			has_journal_entry = je_reunify_china
-			global_var:chinese_central_government ?= THIS
-			c:CHI ?= this
-		}
+		is_china_unification_pair = { TARGET = scope:target_country }
 
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			aggressive_diplomatic_plays_permitted = yes
-			OR = {
-				has_journal_entry = je_reunify_china
-				global_var:chinese_central_government ?= THIS
-				country_has_primary_culture = cu:han
-				country_has_primary_culture = cu:manchu
-			}
 		}
 	}
 
@@ -1179,19 +1164,14 @@ dp_unify_arabia = {
 	}
 
 	possible = {
-		NOT = { exists = c:ARA }
 		NOT = { is_country_type = decentralized }
 		has_technology_researched = pan-nationalism
 		is_subject = no
-		can_form_nation = ARA
+		is_arabia_unification_pair = { TARGET = scope:target_country }
 
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			aggressive_diplomatic_plays_permitted = yes
-			custom_tooltip = {
-				text = ARA_tt
-				can_form_nation = ARA
-			}
 		}
 	}
 
@@ -1220,29 +1200,10 @@ dp_unify_india = {
 		NOT = { is_country_type = decentralized }
 		has_technology_researched = pan-nationalism
 		is_subject = no
-		OR = {
-			custom_tooltip = {
-				text = BHT_tt
-				can_form_nation = BHT
-			}
-			c:BHT ?= this
-		}
+		is_india_unification_pair = { TARGET = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			aggressive_diplomatic_plays_permitted = yes
-			OR = {
-				custom_tooltip = {
-					text = BHT_tt
-					can_form_nation = BHT
-				}
-				AND = {
-					is_in_geographic_region = geographic_region_india
-					custom_tooltip = {
-						text = indian_primary_culture_tt
-						has_indian_primary_culture = yes
-					}
-				}
-			}
 		}
 	}
 
@@ -1265,21 +1226,13 @@ dp_unify_indonesia = {
 	}
 
 	possible = {
-		NOT = { exists = c:IDN }
 		NOT = { is_country_type = decentralized }
 		has_technology_researched = pan-nationalism
 		is_subject = no
-		custom_tooltip = {
-			text = IDN_tt
-			can_form_nation = IDN
-		}
+		is_indonesia_unification_pair = { TARGET = scope:target_country }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			aggressive_diplomatic_plays_permitted = yes
-			custom_tooltip = {
-				text = IDN_tt
-				can_form_nation = IDN
-			}
 		}
 	}
 
