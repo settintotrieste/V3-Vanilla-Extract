@@ -207,7 +207,7 @@ liberty_desire_weekly_change = { #AKA liberty_desire_weekly_progress
 	# Special - Pacify the Steppes
 	if = {
 		limit = {
-			root.first_country = { has_journal_entry = je_pacify_the_steppes }
+			root.first_country = { is_involved_in_journal_entry = je_pacify_the_steppes }
 			root.second_country = { has_government_type = gov_zhuz }
 		}
 		add = {
@@ -941,6 +941,72 @@ liberty_desire_weekly_change = { #AKA liberty_desire_weekly_progress
 		}
 	}
 
+	# Special Values - Communism
+
+	if = {
+		limit = {
+			ROOT.second_country ?= {
+				has_radical_leftist_government = no
+				has_radical_leftist_economy = no
+			}
+			ROOT.first_country ?= {
+				OR = {
+					has_radical_leftist_government = yes
+					has_radical_leftist_economy = yes
+				}
+			}
+		}
+		add = {
+			if = {
+				limit = {
+					ROOT.first_country ?= {
+						has_radical_leftist_government = yes
+					}
+				}
+				add = 0.5
+			}
+			if = {
+				limit = {
+					ROOT.first_country ?= {
+						has_radical_leftist_economy = yes
+					}
+				}
+				add = 0.5
+			}
+			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_OVERLORD_COMMUNIST"
+		}
+	}
+
+	if = {
+		limit = {
+			ROOT.second_country ?= {
+				OR = {
+					has_radical_leftist_government = yes
+					has_radical_leftist_economy = yes
+				}
+			}
+			ROOT.first_country ?= {
+				has_radical_leftist_government = no
+				has_radical_leftist_economy = no
+			}
+		}
+		add = {
+			if = {
+				limit = {
+					has_radical_leftist_government = yes
+				}
+				add = 0.5
+			}
+			if = {
+				limit = {
+					has_radical_leftist_economy = yes
+				}
+				add = 0.5
+			}
+			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_SUBJECT_COMMUNIST"
+		}
+	}
+
 	save_temporary_value_as = pre_scaling_value
 
 	#apply scaling
@@ -1060,6 +1126,35 @@ support_separatism_radicalism = {
 		}
 	}
 	max = 0.5
+}
+
+# root = evaluating country
+treaty_binding_period_commitment_acceptance = {
+	value = 0
+
+	if = {
+		limit = {
+			NOT = { exists = scope:is_treaty_active }
+			scope:treaty.binding_period > 1825
+		}
+
+		if = {
+			limit = {
+				scope:source_country ?= this
+			}
+			value = scope:treaty.binding_period
+			subtract = 1825
+			divide = 365
+			multiply = -2
+			min = -50
+		}
+		else = {
+			value = scope:treaty.binding_period
+			subtract = 1825
+			divide = 365
+			max = 25
+		}
+	}
 }
 
 

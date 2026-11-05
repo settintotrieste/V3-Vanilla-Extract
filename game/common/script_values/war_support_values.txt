@@ -128,6 +128,11 @@ war_support_from_gdp = {
 	}
 }
 
+war_support_from_blockade = {
+	value = "scope:war.blockaded_gdp_share(root)"
+	multiply = define:NWar|WAR_SUPPORT_CHANGE_BLOCKADE_FACTOR
+}
+
 # Tuned to outweigh the economic damage of losing the land, so being carved up hardens a country rather than breaking it
 war_support_from_lost_land = {
 	value = "scope:war.land_lost_since_war_start(root)"
@@ -249,7 +254,13 @@ war_support_from_stalled_goal_against_us = {
 		divide = define:NDiplomacy|WAR_SUPPORT_DRIFT_TARGET
 		min = 0
 		max = 1
-		multiply = define:NWar|WAR_SUPPORT_CHANGE_STALLED_GOAL_CONVERGENCE
+		if = {
+			limit = { scope:war = { has_stalled_state_wargoal_against = root } }
+			multiply = define:NWar|WAR_SUPPORT_CHANGE_STALLED_STATE_GOAL_CONVERGENCE
+		}
+		else = {
+			multiply = define:NWar|WAR_SUPPORT_CHANGE_STALLED_GOAL_CONVERGENCE
+		}
 		multiply = "scope:war.war_goal_time_ramp"
 	}
 }
@@ -286,6 +297,38 @@ war_support_from_journal_entries = {
 			desc = "je_the_first_carlist_war"
 		}
 	}
+	if = {
+		limit = {
+			has_variable = rcw_russian_faction
+			has_global_variable = rcw_exhaustion_level
+			global_var:rcw_exhaustion_level >= 1
+			scope:war.diplomatic_play = {
+				OR = {
+					is_diplomatic_play_type = dp_unify_russia
+					is_diplomatic_play_type = dp_revolution
+				}
+			}
+		}
+		add = {
+			value = enemy_occupation
+			if = {
+				limit = { global_var:rcw_exhaustion_level >= 4 }
+				multiply = -2.0
+			}
+			else_if = {
+				limit = { global_var:rcw_exhaustion_level >= 3 }
+				multiply = -1.0
+			}
+			else_if = {
+				limit = { global_var:rcw_exhaustion_level >= 2 }
+				multiply = -0.5
+			}
+			else = {
+				multiply = -0.25
+			}
+			desc = "WAR_SUPPORT_CHANGE_FROM_RCW_EXHAUSTION"
+		}
+	}
 }
 
 war_support_change = {
@@ -316,6 +359,10 @@ war_support_change = {
 	save_temporary_value_as = temp_war_support_from_gold_reserves
 	value = war_support_from_gdp
 	save_temporary_value_as = temp_war_support_from_gdp
+	value = war_support_from_blockade
+	save_temporary_value_as = temp_war_support_from_blockade
+	value = "scope:war.enemy_pressure(root)"
+	save_temporary_value_as = temp_enemy_pressure
 	value = war_support_from_lost_land
 	save_temporary_value_as = temp_war_support_from_lost_land
 	value = war_support_from_taking_loans
@@ -414,26 +461,47 @@ war_support_change = {
 	}
 
 	if = {
-		limit = { scope:temp_war_support_from_country_turmoil <= -0.01 }
+		limit = {
+			scope:temp_war_support_from_country_turmoil <= -0.01
+			scope:temp_enemy_pressure > 0
+		}
 		add = {
 			add = scope:temp_war_support_from_country_turmoil
 			desc = "WAR_SUPPORT_CHANGE_FROM_TURMOIL"
+			multiply = {
+				value = scope:temp_enemy_pressure
+				desc = "WAR_SUPPORT_CHANGE_ENEMY_PRESSURE"
+			}
 		}
 	}
 
 	if = {
-		limit = { scope:temp_war_support_from_devastation <= -0.01 }
+		limit = {
+			scope:temp_war_support_from_devastation <= -0.01
+			scope:temp_enemy_pressure > 0
+		}
 		add = {
 			add = scope:temp_war_support_from_devastation
 			desc = "WAR_SUPPORT_CHANGE_FROM_DEVASTATION"
+			multiply = {
+				value = scope:temp_enemy_pressure
+				desc = "WAR_SUPPORT_CHANGE_ENEMY_PRESSURE"
+			}
 		}
 	}
 
 	if = {
-		limit = { scope:temp_war_support_from_anti_war_lobby_clout <= -0.01 }
+		limit = {
+			scope:temp_war_support_from_anti_war_lobby_clout <= -0.01
+			scope:temp_enemy_pressure > 0
+		}
 		add = {
 			add = scope:temp_war_support_from_anti_war_lobby_clout
 			desc = "WAR_OPPOSITION_FROM_LOBBIES"
+			multiply = {
+				value = scope:temp_enemy_pressure
+				desc = "WAR_SUPPORT_CHANGE_ENEMY_PRESSURE"
+			}
 		}
 	}
 
@@ -472,15 +540,33 @@ war_support_change = {
 	}
 
 	if = {
+		limit = { scope:temp_war_support_from_gdp >= 0.01 }
+		add = {
+			add = scope:temp_war_support_from_gdp
+			desc = "WAR_SUPPORT_CHANGE_FROM_GDP"
+		}
+	}
+
+	if = {
 		limit = {
-			OR = {
-				scope:temp_war_support_from_gdp >= 0.01
-				scope:temp_war_support_from_gdp <= -0.01
-			}
+			scope:temp_war_support_from_gdp <= -0.01
+			scope:temp_enemy_pressure > 0
 		}
 		add = {
 			add = scope:temp_war_support_from_gdp
 			desc = "WAR_SUPPORT_CHANGE_FROM_GDP"
+			multiply = {
+				value = scope:temp_enemy_pressure
+				desc = "WAR_SUPPORT_CHANGE_ENEMY_PRESSURE"
+			}
+		}
+	}
+
+	if = {
+		limit = { scope:temp_war_support_from_blockade <= -0.01 }
+		add = {
+			add = scope:temp_war_support_from_blockade
+			desc = "WAR_SUPPORT_CHANGE_FROM_BLOCKADE"
 		}
 	}
 
@@ -493,34 +579,62 @@ war_support_change = {
 	}
 
 	if = {
-		limit = { scope:temp_war_support_from_taking_loans <= -0.01 }
+		limit = {
+			scope:temp_war_support_from_taking_loans <= -0.01
+			scope:temp_enemy_pressure > 0
+		}
 		add = {
 			add = scope:temp_war_support_from_taking_loans
 			desc = "WAR_SUPPORT_CHANGE_FROM_TAKING_LOANS"
+			multiply = {
+				value = scope:temp_enemy_pressure
+				desc = "WAR_SUPPORT_CHANGE_ENEMY_PRESSURE"
+			}
 		}
 	}
 
 	if = {
-		limit = { scope:temp_war_support_from_servicing_debt <= -0.01 }
+		limit = {
+			scope:temp_war_support_from_servicing_debt <= -0.01
+			scope:temp_enemy_pressure > 0
+		}
 		add = {
 			add = scope:temp_war_support_from_servicing_debt
 			desc = "WAR_SUPPORT_CHANGE_FROM_SERVICING_DEBT"
+			multiply = {
+				value = scope:temp_enemy_pressure
+				desc = "WAR_SUPPORT_CHANGE_ENEMY_PRESSURE"
+			}
 		}
 	}
 
 	if = {
-		limit = { scope:temp_war_support_from_looming_bankruptcy <= -0.01 }
+		limit = {
+			scope:temp_war_support_from_looming_bankruptcy <= -0.01
+			scope:temp_enemy_pressure > 0
+		}
 		add = {
 			add = scope:temp_war_support_from_looming_bankruptcy
 			desc = "WAR_SUPPORT_CHANGE_FROM_LOOMING_BANKRUPTCY"
+			multiply = {
+				value = scope:temp_enemy_pressure
+				desc = "WAR_SUPPORT_CHANGE_ENEMY_PRESSURE"
+			}
 		}
 	}
 
 	if = {
-		limit = { scope:temp_war_support_from_bankruptcy <= -0.01 }
+		limit = {
+			scope:temp_war_support_from_bankruptcy <= -0.01
+			scope:temp_enemy_pressure > 0
+		}
 		add = {
 			add = scope:temp_war_support_from_bankruptcy
 			desc = "WAR_SUPPORT_CHANGE_FROM_BANKRUPTCY"
+			multiply = {
+				value = scope:temp_enemy_pressure
+				desc = "WAR_SUPPORT_CHANGE_ENEMY_PRESSURE"
+			}
 		}
 	}
 

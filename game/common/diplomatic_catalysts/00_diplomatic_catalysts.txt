@@ -1560,7 +1560,6 @@ catalyst_state_conquered = {
 				}
 				multiply = 0.5
 			}
-
 			if = {
 				limit = {
 					"relations(scope:target_country)" > relations_threshold:poor
@@ -3021,6 +3020,258 @@ catalyst_strait_closed = {
 			multiply = 0.01
 			min = 0
 			max = 1
+		}
+	}
+}
+
+# Triggered when a country adopts a radical leftist government
+catalyst_socialist_government = {
+	category = cc_revolution
+
+	ai_country_goal_recalculation = {
+		trigger = {
+			has_radical_leftist_government = yes
+		}
+		type = more_friendly
+		chance = { value = 1.0 }
+	}
+
+	ai_country_goal_recalculation = {
+		trigger = {
+			has_radical_leftist_government = no
+		}
+		type = only_hostile
+		chance = { value = 1.0 }
+	}
+
+	political_lobby_creation = {
+		lobby_anti_country = {
+			value = 0.0
+
+			if = {
+				limit = {
+					has_radical_leftist_government = no
+				}
+				add = 0.25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}
+		}
+		lobby_anti_overlord = {
+			value = 0.0
+
+			if = {
+				limit = {
+					has_radical_leftist_government = no
+				}
+				add = 0.25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}
+		}
+		lobby_pro_country = {
+			value = 0.0
+
+			if = {
+				limit = {
+					has_radical_leftist_government = yes
+				}
+				add = 0.25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}
+		}
+		lobby_pro_overlord = {
+			value = 0.0
+
+			if = {
+				limit = {
+					has_radical_leftist_government = yes
+				}
+				add = 0.25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}
+		}
+	}
+}
+
+# Triggered when a country adopts a radical leftist economy
+catalyst_socialist_economy = {
+	category = cc_revolution
+
+	ai_country_goal_recalculation = {
+		trigger = {
+			OR = {
+				has_radical_leftist_government = yes
+				has_radical_leftist_economy = yes
+			}
+		}
+		type = more_friendly
+		chance = { value = 1.0 }
+	}
+
+	ai_country_goal_recalculation = {
+		trigger = {
+			has_radical_leftist_government = no
+			has_radical_leftist_economy = no
+		}
+		type = only_hostile
+		chance = { value = 1.0 }
+	}
+
+	political_lobby_creation = {
+		lobby_anti_country = {
+			value = 0.0
+
+			if = {
+				limit = {
+					has_radical_leftist_government = no
+					has_radical_leftist_economy = no
+				}
+				add = 0.25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}
+		}
+		lobby_anti_overlord = {
+			value = 0.0
+
+			if = {
+				limit = {
+					has_radical_leftist_government = no
+					has_radical_leftist_economy = no
+				}
+				add = 0.25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}
+		}
+		lobby_pro_country = {
+			value = 0.0
+
+			if = {
+				limit = {
+					OR = {
+						has_radical_leftist_government = yes
+						has_radical_leftist_economy = yes
+					}
+				}
+				add = 0.25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}
+		}
+		lobby_pro_overlord = {
+			value = 0.0
+
+			if = {
+				limit = {
+					OR = {
+						has_radical_leftist_government = yes
+						has_radical_leftist_economy = yes
+					}
+				}
+				add = 0.25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}
 		}
 	}
 }

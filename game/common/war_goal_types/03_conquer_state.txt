@@ -58,6 +58,7 @@
 		value = 0
 
 		scope:target_state = {
+			save_temporary_scope_as = infamy_ignores_claim
 			add = state_infamy_value
 		}
 

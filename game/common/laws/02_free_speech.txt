@@ -31,6 +31,11 @@ law_outlawed_dissent = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
+
+		if = {
+			limit = { divided_monarchists_ai_rejects_law = yes }
+			add = -750
+		}
 	}
 }
 
@@ -89,6 +94,11 @@ law_right_of_assembly = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
+
+		if = {
+			limit = { congress_poland_ai_rejects_law = yes }
+			add = -750
+		}
 	}
 }
 
@@ -132,6 +142,11 @@ law_protected_speech = {
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
+		}
+
+		if = {
+			limit = { congress_poland_ai_rejects_law = yes }
+			add = -750
 		}
 	}
 }

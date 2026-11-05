@@ -141,6 +141,8 @@
 			}
 			ig:ig_landowners ?= {
 				set_interest_group_name = ig_gentry_assembly
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_russian_patriarchal
 			}
 		}
 		else_if = { # Roman Landowners
@@ -226,7 +228,7 @@
 				}
 			}
 		}
-		else_if = { # South American Caudillos/republicans
+		else_if = { # Aristocracy of Officials
 			limit = {
 				country_has_primary_culture = cu:norwegian
 			}

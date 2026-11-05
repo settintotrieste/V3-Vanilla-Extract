@@ -24,7 +24,7 @@
 		# trigger in addition to some basic validation code-side
 		# scopes: root = holder, creator_country, diplomatic_play, target_country, target_state, stakeholder, target_region, article_options
 		scope:target_country = {
-			has_any_strait_province = yes
+			has_any_strait_province_in_hierarchy = yes
 			has_any_strait_control = yes
 		}
 

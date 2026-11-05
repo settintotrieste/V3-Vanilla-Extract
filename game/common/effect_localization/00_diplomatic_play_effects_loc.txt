@@ -8,10 +8,12 @@ remove_target_backers = {
 
 add_initiator_backers = {
     global = ADD_INITIATOR_BACKERS
+    first = ADD_INITIATOR_BACKERS_FIRST
 }
 
 add_target_backers = {
     global = ADD_TARGET_BACKERS
+    first = ADD_TARGET_BACKERS_FIRST
 }
 
 add_escalation = {
@@ -110,4 +112,10 @@ add_liberty_desire = {
 
 resolve_play_for = {
     global = RESOLVE_PLAY_FOR
+}
+
+leave_plays_supporting = {
+	global = LEAVE_PLAYS_SUPPORTING
+	first = LEAVE_PLAYS_SUPPORTING_FIRST
+	third = LEAVE_PLAYS_SUPPORTING_THIRD
 }

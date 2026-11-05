@@ -26,6 +26,11 @@
 			is_diplomatic_play_committed_participant = no
 		}
 
+		custom_tooltip = {
+			text = DIPLOMATIC_PACT_REQUIREMENT_CAN_BE_SUBJUGATED
+			scope:target_country = { modifier:country_cannot_be_subjugated_bool ?= no }
+		}
+
 		power_bloc = {
 			current_cohesion_percentage >= 0.5
 		}

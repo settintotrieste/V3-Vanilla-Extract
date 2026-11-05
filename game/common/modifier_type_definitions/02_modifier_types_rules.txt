@@ -116,6 +116,14 @@ state_disallow_incorporation_bool={
 	}
 }
 
+state_disallow_barracks_construction_bool={
+	color=bad
+	boolean=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 state_allow_assimilation_in_homeland_bool = {
 	color=good
 	boolean=yes
@@ -256,6 +264,22 @@ country_must_have_movement_to_enact_laws_bool={
 country_disallow_aggressive_plays_bool={
 	decimals=1
 	color=neutral
+	boolean=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_disallow_army_creation_bool={
+	color=bad
+	boolean=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_disallow_military_ship_construction_bool={
+	color=bad
 	boolean=yes
 	game_data={
 		ai_value=0

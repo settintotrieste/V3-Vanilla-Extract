@@ -216,6 +216,16 @@ is_indonesia_unification_pair = {
 	}
 }
 
+is_russia_unification_pair = {
+	has_variable = rcw_russian_faction
+	$TARGET$ = {
+		custom_tooltip = {
+			text = rcw_russian_faction_tt
+			has_variable = rcw_russian_faction
+		}
+	}
+}
+
 is_scripted_unification_conquest = {
 	OR = {
 		is_china_unification_pair = { TARGET = $TARGET$ }
@@ -223,5 +233,15 @@ is_scripted_unification_conquest = {
 		is_arabia_unification_pair = { TARGET = $TARGET$ }
 		is_india_unification_pair = { TARGET = $TARGET$ }
 		is_indonesia_unification_pair = { TARGET = $TARGET$ }
+		is_russia_unification_pair = { TARGET = $TARGET$ }
+	}
+}
+
+has_any_strait_province_in_hierarchy = {
+	OR = {
+		has_any_strait_province = yes
+		any_subject_or_below = {
+			has_any_strait_province = yes
+		}
 	}
 }

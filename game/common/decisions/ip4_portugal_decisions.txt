@@ -91,6 +91,7 @@ decision_depose_ruling_dynasty = {
 					value <= disapprove
 				}
 			}
+			is_busy = no
 			loyalty < define:NCharacters|LOYALTY_UNCERTAIN_THRESHOLD
 			trigger_if = {
 				limit = {
@@ -120,6 +121,7 @@ decision_depose_ruling_dynasty = {
 					}
 				}
 				var:monthly_cached_commander_coup_strength >= root.country_coup_resistance
+				is_busy = no
 				loyalty < define:NCharacters|LOYALTY_UNCERTAIN_THRESHOLD
 			}
 			order_by = popularity

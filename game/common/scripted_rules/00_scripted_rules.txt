@@ -142,7 +142,7 @@ can_join_side_in_diplomatic_play = {
 		is_direct_subject_of = scope:enemy_country
 		scope:enemy_country = { is_direct_subject_of = root }
 		is_direct_subject_of = scope:target_country
-		scope:target_country = { is_direct_subject_of = root }
+		scope:target_country = { is_subject_of = root }
 	}
 }
 

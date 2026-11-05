@@ -71,6 +71,56 @@
 			}
 			annex = scope:target_country
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_player = yes
+					NOR = {
+						has_global_variable = nemo_chain_started_global_var
+						has_game_rule = no_fantastical_content
+					}
+					OR = {
+						real_month = 10
+						real_month = 11
+					}
+				}
+				random_list = {
+					10 = {
+						set_global_variable = nemo_chain_started_global_var
+						set_variable = {
+							name = nemo_raid_count_var
+							value = 0
+						}
+						random_list = {
+							1 = {
+								set_variable = {
+									name = nemo_raid_limit_var
+									value = 2
+								}
+							}
+							1 = {
+								set_variable = {
+									name = nemo_raid_limit_var
+									value = 3
+								}
+							}
+						}
+						create_character = {
+							template = nemo_prince
+							on_created = {
+								set_character_immortal = yes
+								place_character_in_void = 700
+							}
+							save_scope_as = nemo_scope
+						}
+						post_notification = nemo_appears_notification
+						set_variable = nemo_pending_raid_var
+					}
+					90 = {
+					}
+				}
+			}
+		}
 	}
 
 	ai = {

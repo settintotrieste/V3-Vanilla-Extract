@@ -1009,6 +1009,8 @@ any_civil_war_all = {
 }
 any_civil_war_count = {
 	global = TRIGGER_ANY_CIVIL_WAR_COUNT
+	first = TRIGGER_ANY_CIVIL_WAR_COUNT_FIRST
+	third = TRIGGER_ANY_CIVIL_WAR_COUNT_THIRD
 }
 any_civil_war_percent = {
 	global = TRIGGER_ANY_CIVIL_WAR_PERCENT
@@ -1524,6 +1526,8 @@ is_defender_in_battle_ship = {
 is_interest_group_type = {
 	global = TRIGGER_IS_INTEREST_GROUP_TYPE
 	global_not = TRIGGER_IS_INTEREST_GROUP_TYPE_NOT
+	first = TRIGGER_IS_INTEREST_GROUP_TYPE
+	first_not = TRIGGER_IS_INTEREST_GROUP_TYPE_NOT
 	third = TRIGGER_IS_INTEREST_GROUP_TYPE_THIRD
 	third_not = TRIGGER_IS_INTEREST_GROUP_TYPE_THIRD_NOT
 }
@@ -1604,6 +1608,8 @@ has_consumption_tax = {
 infrastructure = {
 	global = TRIGGER_INFRASTRUCTURE
 	global_not = TRIGGER_INFRASTRUCTURE_NOT
+	third = TRIGGER_INFRASTRUCTURE_THIRD
+	third_not = TRIGGER_INFRASTRUCTURE_THIRD_NOT
 }
 
 infrastructure_delta = {
@@ -1696,6 +1702,8 @@ has_any_secessionists_broken_out = {
 	global_not = TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_NOT
 	first = TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_FIRST
 	first_not = TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_FIRST_NOT
+	third = TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_THIRD
+	third_not = TRIGGER_HAS_ANY_SECESSIONISTS_BROKEN_OUT_THIRD_NOT
 }
 
 num_dead = {
@@ -2006,6 +2014,8 @@ any_scope_state_all_in_state_region = {
 }
 
 any_scope_state_in_strategic_region = {
+	none = TRIGGER_ANY_SCOPE_STATE
+	none_not = TRIGGER_ANY_SCOPE_STATE_NOT
 	global = TRIGGER_ANY_SCOPE_STATE
 	global_not = TRIGGER_ANY_SCOPE_STATE_NOT
 	first = TRIGGER_ANY_SCOPE_STATE_IN_STRATEGIC_REGION_FIRST
@@ -2015,6 +2025,8 @@ any_scope_state_in_strategic_region = {
 }
 
 any_scope_state_count_in_strategic_region = {
+	none = TRIGGER_ANY_SCOPE_STATE_COUNT
+	none_not = TRIGGER_ANY_SCOPE_STATE_COUNT_NOT
 	global = TRIGGER_ANY_SCOPE_STATE_COUNT
 	first = TRIGGER_ANY_SCOPE_STATE_COUNT_IN_STRATEGIC_REGION_FIRST
 	third = TRIGGER_ANY_SCOPE_STATE_COUNT_IN_STRATEGIC_REGION_THIRD
@@ -2654,6 +2666,8 @@ has_any_secessionists_growing = {
 	global_not = TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_NOT
 	first = TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_FIRST
 	first_not = TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_FIRST_NOT
+	third = TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_THIRD
+	third_not = TRIGGER_HAS_ANY_SECESSIONISTS_GROWING_THIRD_NOT
 }
 
 average_incorporated_country_infrastructure = {
@@ -2975,6 +2989,15 @@ is_member_of_any_lobby = {
 building_has_goods_shortage = {
 	global = TRIGGER_BUILDING_HAS_GOODS_SHORTAGE
 	global_not = TRIGGER_BUILDING_HAS_GOODS_SHORTAGE_NOT
+}
+
+num_building_assets_of_type = {
+	global = TRIGGER_NUM_BUILDING_ASSETS_OF_TYPE
+	global_not = TRIGGER_NUM_BUILDING_ASSETS_OF_TYPE_NOT
+	first = TRIGGER_NUM_BUILDING_ASSETS_OF_TYPE_FIRST
+	first_not = TRIGGER_NUM_BUILDING_ASSETS_OF_TYPE_FIRST_NOT
+	third = TRIGGER_NUM_BUILDING_ASSETS_OF_TYPE_THIRD
+	third_not = TRIGGER_NUM_BUILDING_ASSETS_OF_TYPE_THIRD_NOT
 }
 
 movement_can_cause_obstinance = {
@@ -3367,7 +3390,9 @@ any_interest_group = {
 	global = TRIGGER_ANY_INTEREST_GROUP
 	global_not = TRIGGER_ANY_INTEREST_GROUP_NOT
 	first = TRIGGER_ANY_INTEREST_GROUP_FIRST
+	first_not = TRIGGER_ANY_INTEREST_GROUP_FIRST_NOT
 	third = TRIGGER_ANY_INTEREST_GROUP_THIRD
+	third_not = TRIGGER_ANY_INTEREST_GROUP_THIRD_NOT
 	none = TRIGGER_ANY_INTEREST_GROUP
 }
 any_interest_group_all = {
@@ -3632,8 +3657,8 @@ primary_cultures_percent_country = {
 religion_percent_state = {
 	global = TRIGGER_RELIGION_PERCENT_STATE
 	global_not = TRIGGER_RELIGION_PERCENT_STATE_NOT
-	third = TRIGGER_RELIGION_PERCENT_STATE_FIRST
-	third_not = TRIGGER_RELIGION_PERCENT_STATE_FIRST_NOT
+	first = TRIGGER_RELIGION_PERCENT_STATE_FIRST
+	first_not = TRIGGER_RELIGION_PERCENT_STATE_FIRST_NOT
 	third = TRIGGER_RELIGION_PERCENT_STATE_THIRD
 	third_not = TRIGGER_RELIGION_PERCENT_STATE_THIRD_NOT
 }
@@ -3656,15 +3681,19 @@ has_potential_resource = {
 
 any_diplomatic_play = {
 	global = TRIGGER_ANY_DIPLOMATIC_PLAY
+	first = TRIGGER_ANY_DIPLOMATIC_PLAY
 }
 any_diplomatic_play_all = {
 	global = TRIGGER_ANY_DIPLOMATIC_PLAY_ALL
+	first = TRIGGER_ANY_DIPLOMATIC_PLAY_ALL
 }
 any_diplomatic_play_count = {
 	global = TRIGGER_ANY_DIPLOMATIC_PLAY_COUNT
+	first = TRIGGER_ANY_DIPLOMATIC_PLAY_COUNT
 }
 any_diplomatic_play_percent = {
 	global = TRIGGER_ANY_DIPLOMATIC_PLAY_PERCENT
+	first = TRIGGER_ANY_DIPLOMATIC_PLAY_PERCENT
 }
 
 institution_investment_level = {
@@ -3810,6 +3839,13 @@ remaining_career_length = {
 	none_not = TRIGGER_REMAINING_CAREER_LENGTH_NONE_NOT
 }
 
+current_career_length = {
+	third = TRIGGER_CURRENT_CAREER_LENGTH_THIRD
+	third_not = TRIGGER_CURRENT_CAREER_LENGTH_THIRD_NOT
+	none = TRIGGER_CURRENT_CAREER_LENGTH_NONE
+	none_not = TRIGGER_CURRENT_CAREER_LENGTH_NONE_NOT
+}
+
 is_incorporated = {
 	global = TRIGGER_IS_INCORPORATED
 	global_not = TRIGGER_IS_INCORPORATED_NOT
@@ -3922,6 +3958,8 @@ has_discrimination_trait = {
 	global_not = TRIGGER_HAS_DISCRIMINATION_TRAIT_NOT
 	none = TRIGGER_HAS_DISCRIMINATION_TRAIT_NONE
 	none_not = TRIGGER_HAS_DISCRIMINATION_TRAIT_NONE_NOT
+	third = TRIGGER_HAS_DISCRIMINATION_TRAIT
+	third_not = TRIGGER_HAS_DISCRIMINATION_TRAIT_NOT
 }
 
 has_discrimination_trait_group = {
@@ -4199,6 +4237,8 @@ any_scope_building_all = {
 }
 any_scope_building_count = {
 	global = TRIGGER_ANY_SCOPE_BUILDING_COUNT
+	first = TRIGGER_ANY_SCOPE_BUILDING_COUNT
+	third = TRIGGER_ANY_SCOPE_BUILDING_COUNT
 }
 any_scope_building_percent = {
 	global = TRIGGER_ANY_SCOPE_BUILDING_PERCENT
@@ -4218,6 +4258,8 @@ any_scope_building_in_state_all = {
 }
 any_scope_building_in_state_count = {
 	global = TRIGGER_ANY_SCOPE_BUILDING_COUNT
+	first = TRIGGER_ANY_SCOPE_BUILDING_COUNT
+	third = TRIGGER_ANY_SCOPE_BUILDING_COUNT
 }
 any_scope_building_in_state_percent = {
 	global = TRIGGER_ANY_SCOPE_BUILDING_PERCENT
@@ -4296,8 +4338,8 @@ enacting_any_law = {
 	first = TRIGGER_ENACTING_ANY_LAW_FIRST
 	first_not = TRIGGER_ENACTING_ANY_LAW_FIRST_NOT
 
-	global = TRIGGER_ENACTING_ANY_LAW_THIRD
-    global_not = TRIGGER_ENACTING_ANY_LAW_THIRD_NOT
+	third = TRIGGER_ENACTING_ANY_LAW_THIRD
+    third_not = TRIGGER_ENACTING_ANY_LAW_THIRD_NOT
 }
 
 is_advancing_on_front = {
@@ -4747,6 +4789,11 @@ has_strategic_land_adjacency = {
 	third_not = TRIGGER_HAS_STRATEGIC_ADJACENCY_THIRD_NOT
 }
 
+connects_important_war_theaters = {
+	global = TRIGGER_CONNECTS_IMPORTANT_WAR_THEATERS
+	global_not = TRIGGER_CONNECTS_IMPORTANT_WAR_THEATERS_NOT
+}
+
 is_adjacent_to_market = {
 	global = TRIGGER_IS_ADJACENT_TO_MARKET
 	global_not = TRIGGER_IS_ADJACENT_TO_MARKET_NOT
@@ -5063,6 +5110,8 @@ any_political_movement_all = {
 }
 any_political_movement_count = {
 	global = TRIGGER_ANY_POLITICAL_MOVEMENT_COUNT
+	first = TRIGGER_ANY_POLITICAL_MOVEMENT_COUNT
+	third = TRIGGER_ANY_POLITICAL_MOVEMENT_COUNT
 }
 any_political_movement_percent = {
 	global = TRIGGER_ANY_POLITICAL_MOVEMENT_PERCENT
@@ -5440,6 +5489,16 @@ has_any_regional_objective = {
 	global_not = TRIGGER_HAS_ANY_REGIONAL_OBJECTIVE_NOT
 }
 
+is_regional_objective_target_country = {
+	global = TRIGGER_IS_REGIONAL_OBJECTIVE_TARGET_COUNTRY
+	global_not = TRIGGER_IS_REGIONAL_OBJECTIVE_TARGET_COUNTRY_NOT
+}
+
+is_regional_objective_target_state = {
+	global = TRIGGER_IS_REGIONAL_OBJECTIVE_TARGET_STATE
+	global_not = TRIGGER_IS_REGIONAL_OBJECTIVE_TARGET_STATE_NOT
+}
+
 is_active = {
 	global = TRIGGER_IS_ACTIVE
 	global_not = TRIGGER_IS_ACTIVE_NOT
@@ -5540,29 +5599,29 @@ political_movement_support = {
 political_movement_popular_support = {
 	global = TRIGGER_POLITICAL_MOVEMENT_POPULAR_SUPPORT
 	global_not = TRIGGER_POLITICAL_MOVEMENT_POPULAR_SUPPORT_NOT
-	global = TRIGGER_POLITICAL_MOVEMENT_POPULAR_SUPPORT_THIRD
-	third = TRIGGER_POLITICAL_MOVEMENT_POPULAR_SUPPORT_THIRD_NOT
+	third = TRIGGER_POLITICAL_MOVEMENT_POPULAR_SUPPORT_THIRD
+	third_not = TRIGGER_POLITICAL_MOVEMENT_POPULAR_SUPPORT_THIRD_NOT
 }
 
 political_movement_wealth_support = {
 	global = TRIGGER_POLITICAL_MOVEMENT_WEALTH_SUPPORT
 	global_not = TRIGGER_POLITICAL_MOVEMENT_WEALTH_SUPPORT_NOT
-	global = TRIGGER_POLITICAL_MOVEMENT_WEALTH_SUPPORT_THIRD
-	third = TRIGGER_POLITICAL_MOVEMENT_WEALTH_SUPPORT_THIRD_NOT
+	third = TRIGGER_POLITICAL_MOVEMENT_WEALTH_SUPPORT_THIRD
+	third_not = TRIGGER_POLITICAL_MOVEMENT_WEALTH_SUPPORT_THIRD_NOT
 }
 
 political_movement_military_support = {
 	global = TRIGGER_POLITICAL_MOVEMENT_MILITARY_SUPPORT
 	global_not = TRIGGER_POLITICAL_MOVEMENT_MILITARY_SUPPORT_NOT
-	global = TRIGGER_POLITICAL_MOVEMENT_MILITARY_SUPPORT_THIRD
-	third = TRIGGER_POLITICAL_MOVEMENT_MILITARY_SUPPORT_THIRD_NOT
+	third = TRIGGER_POLITICAL_MOVEMENT_MILITARY_SUPPORT_THIRD
+	third_not = TRIGGER_POLITICAL_MOVEMENT_MILITARY_SUPPORT_THIRD_NOT
 }
 
 political_movement_identity_support = {
 	global = TRIGGER_POLITICAL_MOVEMENT_IDENTITY_SUPPORT
 	global_not = TRIGGER_POLITICAL_MOVEMENT_IDENTITY_SUPPORT_NOT
-	global = TRIGGER_POLITICAL_MOVEMENT_IDENTITY_SUPPORT_THIRD
-	third = TRIGGER_POLITICAL_MOVEMENT_IDENTITY_SUPPORT_THIRD_NOT
+	third = TRIGGER_POLITICAL_MOVEMENT_IDENTITY_SUPPORT_THIRD
+	third_not = TRIGGER_POLITICAL_MOVEMENT_IDENTITY_SUPPORT_THIRD_NOT
 }
 
 custom_tooltip = {
@@ -5585,6 +5644,7 @@ any_overlord_or_above = {
 }
 any_overlord_or_above_all = {
 	global = TRIGGER_ANY_OVERLORD_OR_ABOVE_ALL
+	first = TRIGGER_ANY_OVERLORD_OR_ABOVE_ALL
 }
 any_overlord_or_above_count = {
 	global = TRIGGER_ANY_OVERLORD_OR_ABOVE_COUNT
@@ -6694,6 +6754,7 @@ compare_value_not_equal = {
 
 legitimacy_greater_than = {
 	global = TRIGGER_LEGITIMACY_GREATER_THAN
+	first = TRIGGER_LEGITIMACY_GREATER_THAN
 }
 legitimacy_less_than = {
 	global = TRIGGER_LEGITIMACY_LESS_THAN
@@ -6708,6 +6769,11 @@ legitimacy_greater_or_equal = {
 }
 legitimacy_less_or_equal = {
 	global = TRIGGER_LEGITIMACY_LESS_OR_EQUAL
+	global_not = TRIGGER_LEGITIMACY_LESS_OR_EQUAL_NOT
+	first = TRIGGER_LEGITIMACY_LESS_OR_EQUAL
+	first_not = TRIGGER_LEGITIMACY_LESS_OR_EQUAL_NOT
+	third = TRIGGER_LEGITIMACY_LESS_OR_EQUAL
+	third_not = TRIGGER_LEGITIMACY_LESS_OR_EQUAL_NOT
 }
 legitimacy_equal = {
 	global = TRIGGER_LEGITIMACY_EQUAL
@@ -7390,6 +7456,37 @@ global_gdp_not_equal = {
 	third = TRIGGER_GLOBAL_GDP_NOT_EQUAL
 }
 
+global_average_gdp_per_capita_greater_than = {
+	global = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_GREATER_THAN
+	first = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_GREATER_THAN
+	third = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_GREATER_THAN
+}
+global_average_gdp_per_capita_less_than = {
+	global = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_LESS_THAN
+	first = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_LESS_THAN
+	third = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_LESS_THAN
+}
+global_average_gdp_per_capita_greater_or_equal = {
+	global = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_GREATER_OR_EQUAL
+	first = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_GREATER_OR_EQUAL
+	third = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_GREATER_OR_EQUAL
+}
+global_average_gdp_per_capita_less_or_equal = {
+	global = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_LESS_OR_EQUAL
+	first = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_LESS_OR_EQUAL
+	third = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_LESS_OR_EQUAL
+}
+global_average_gdp_per_capita_equal = {
+	global = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_EQUAL
+	first = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_EQUAL
+	third = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_EQUAL
+}
+global_average_gdp_per_capita_not_equal = {
+	global = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_NOT_EQUAL
+	first = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_NOT_EQUAL
+	third = TRIGGER_GLOBAL_AVERAGE_GDP_PER_CAPITA_NOT_EQUAL
+}
+
 value_greater_than = {
 	global = TRIGGER_VALUE_GREATER_THAN
 }
@@ -7990,6 +8087,20 @@ is_in_exile_pool = {
 	third_not = TRIGGER_IS_IN_EXILE_POOL_THIRD_NOT
 }
 
+is_in_regional_exile_pool = {
+	global = TRIGGER_IS_IN_REGIONAL_EXILE_POOL
+	global_not = TRIGGER_IS_IN_REGIONAL_EXILE_POOL_NOT
+	third = TRIGGER_IS_IN_REGIONAL_EXILE_POOL_THIRD
+	third_not = TRIGGER_IS_IN_REGIONAL_EXILE_POOL_THIRD_NOT
+}
+
+has_regional_exile_pool_access = {
+	global = TRIGGER_HAS_REGIONAL_EXILE_POOL_ACCESS
+	global_not = TRIGGER_HAS_REGIONAL_EXILE_POOL_ACCESS_NOT
+	third = TRIGGER_HAS_REGIONAL_EXILE_POOL_ACCESS_THIRD
+	third_not = TRIGGER_HAS_REGIONAL_EXILE_POOL_ACCESS_THIRD_NOT
+}
+
 is_exile = {
 	global = TRIGGER_IS_EXILE
 	global_not = TRIGGER_IS_EXILE_NOT
@@ -8586,6 +8697,8 @@ lobby_join_weight_not_equal = {
 any_lobby_member = {
 	global = TRIGGER_ANY_LOBBY_MEMBER
 	global_not = TRIGGER_ANY_LOBBY_MEMBER_NOT
+	third = TRIGGER_ANY_LOBBY_MEMBER
+	third_not = TRIGGER_ANY_LOBBY_MEMBER_NOT
 }
 any_lobby_member_all = {
 	global = TRIGGER_ANY_LOBBY_MEMBER_ALL
@@ -8630,6 +8743,8 @@ is_considered_adjacent_due_to_wargoals = {
 any_diplomatically_relevant_country = {
 	global = TRIGGER_ANY_DIPLOMATICALLY_RELEVANT_COUNTRY
 	global_not = TRIGGER_ANY_DIPLOMATICALLY_RELEVANT_COUNTRY_NOT
+	first = TRIGGER_ANY_DIPLOMATICALLY_RELEVANT_COUNTRY_FIRST
+	first_not = TRIGGER_ANY_DIPLOMATICALLY_RELEVANT_COUNTRY_FIRST_NOT
 }
 any_diplomatically_relevant_country_all = {
 	global = TRIGGER_ANY_DIPLOMATICALLY_RELEVANT_COUNTRY_ALL
@@ -9023,6 +9138,8 @@ any_scope_treaty_all = {
 }
 any_scope_treaty_count = {
 	global = TRIGGER_ANY_SCOPE_TREATY_COUNT
+	first = TRIGGER_ANY_SCOPE_TREATY_COUNT
+	third = TRIGGER_ANY_SCOPE_TREATY_COUNT
 }
 any_scope_treaty_percent = {
 	global = TRIGGER_ANY_SCOPE_TREATY_PERCENT
@@ -9358,6 +9475,7 @@ any_strategic_region_count = {
 }
 any_strategic_region_percent = {
 	global = TRIGGER_ANY_STRATEGIC_REGION_PERCENT
+	first = TRIGGER_ANY_STRATEGIC_REGION_PERCENT
 }
 
 any_country_strategic_region = {
@@ -9547,6 +9665,33 @@ relative_carrying_capacity = {
 	third_not = TRIGGER_RELATIVE_CARRYING_CAPACITY
 }
 
+has_military_reach = {
+	global = TRIGGER_HAS_MILITARY_REACH
+	global_not = TRIGGER_HAS_MILITARY_REACH_NOT
+	first = TRIGGER_HAS_MILITARY_REACH
+	first_not = TRIGGER_HAS_MILITARY_REACH_NOT
+	third = TRIGGER_HAS_MILITARY_REACH
+	third_not = TRIGGER_HAS_MILITARY_REACH_NOT
+}
+
+military_reach = {
+	global = TRIGGER_MILITARY_REACH
+	global_not = TRIGGER_MILITARY_REACH
+	first = TRIGGER_MILITARY_REACH
+	first_not = TRIGGER_MILITARY_REACH
+	third = TRIGGER_MILITARY_REACH
+	third_not = TRIGGER_MILITARY_REACH
+}
+
+shippable_army_strength_against = {
+	global = TRIGGER_SHIPPABLE_ARMY_STRENGTH_AGAINST
+	global_not = TRIGGER_SHIPPABLE_ARMY_STRENGTH_AGAINST
+	first = TRIGGER_SHIPPABLE_ARMY_STRENGTH_AGAINST
+	first_not = TRIGGER_SHIPPABLE_ARMY_STRENGTH_AGAINST
+	third = TRIGGER_SHIPPABLE_ARMY_STRENGTH_AGAINST
+	third_not = TRIGGER_SHIPPABLE_ARMY_STRENGTH_AGAINST
+}
+
 gdp_change_since_war_start = {
 	global = TRIGGER_GDP_CHANGE_SINCE_WAR_START
 	global_not = TRIGGER_GDP_CHANGE_SINCE_WAR_START_NOT
@@ -9557,6 +9702,16 @@ land_lost_since_war_start = {
 	global_not = TRIGGER_LAND_LOST_SINCE_WAR_START_NOT
 }
 
+blockaded_gdp_share = {
+	global = TRIGGER_BLOCKADED_GDP_SHARE
+	global_not = TRIGGER_BLOCKADED_GDP_SHARE_NOT
+}
+
+enemy_pressure = {
+	global = TRIGGER_ENEMY_PRESSURE
+	global_not = TRIGGER_ENEMY_PRESSURE_NOT
+}
+
 is_fighting_overlord_in_war = {
 	global = TRIGGER_IS_FIGHTING_OVERLORD_IN_WAR
 	global_not = TRIGGER_IS_FIGHTING_OVERLORD_IN_WAR_NOT
@@ -9565,4 +9720,15 @@ is_fighting_overlord_in_war = {
 is_on_defending_side = {
 	global = TRIGGER_IS_ON_DEFENDING_SIDE
 	global_not = TRIGGER_IS_ON_DEFENDING_SIDE_NOT
+}
+
+any_scope_je_involved = {
+	global = TRIGGER_ANY_SCOPE_JE_INVOLVED
+	first = TRIGGER_ANY_SCOPE_JE_INVOLVED_FIRST
+	third = TRIGGER_ANY_SCOPE_JE_INVOLVED
+}
+
+civil_war_origin_country_equal = {
+	global = TRIGGER_CIVIL_WAR_ORIGIN_COUNTRY_EQUAL
+	global_not = TRIGGER_CIVIL_WAR_ORIGIN_COUNTRY_EQUAL_NOT
 }

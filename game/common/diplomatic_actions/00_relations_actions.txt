@@ -331,7 +331,6 @@ damage_relations = {
 							has_radical_leftist_government = yes
 						}
 					}
-
 				}
 				multiply = 2
 			}
@@ -400,4 +399,3 @@ damage_relations = {
 		}
 	}
 }
-

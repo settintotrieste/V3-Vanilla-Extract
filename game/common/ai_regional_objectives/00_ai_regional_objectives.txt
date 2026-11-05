@@ -5,30 +5,28 @@ ai_regional_objective_acquire_states = {
 	possible = {
 		scope:target_region = {
 			any_scope_state = {
-				NOT = { owner = root }
+				aro_is_acquire_states_candidate = yes
 			}
 		}
 	}
 
 	on_create = {
-		save_temporary_scope_value_as = {
-			name = aro_target_region_state_num
-			value = {
-				scope:target_region = {
-					every_scope_state = {
-						limit = {
-							owner = root
-						}
-						add = 1
+		scope:target_region = {
+			ordered_scope_state = {
+				limit = {
+					aro_is_acquire_states_candidate = yes
+				}
+				order_by = "root.military_reach(this)"
+				max = 3
+				check_range_bounds = no
+				root = {
+					add_to_variable_map = {
+						name = aro_acquire_states_targets
+						key = prev.state_region
+						value = scope:target_region
 					}
 				}
-				min = 0
 			}
-		}
-		add_to_variable_map = {
-			name = aro_acquire_states_map
-			key = scope:target_region
-			value = scope:aro_target_region_state_num
 		}
 	}
 
@@ -36,22 +34,58 @@ ai_regional_objective_acquire_states = {
 		scope:target_region = {
 			any_scope_state = {
 				owner = root
-				count > "root.variable_map(aro_acquire_states_map|scope:target_region)" # TODO: consider a prefiltered list of potential targets instead
+				aro_is_acquire_states_target = yes
 			}
 		}
 	}
 
+	invalid = {
+		NOT = {
+			scope:target_region = {
+				any_scope_state = {
+					NOT = { owner = root }
+					aro_is_acquire_states_target = yes
+				}
+			}
+		}
+	}
+
+	state_target = {
+		scope:target_state = {
+			NOT = { owner = root }
+			aro_is_acquire_states_target = yes
+		}
+	}
+
 	on_complete = {
-		remove_from_variable_map = {
-			name = aro_acquire_states_map
-			key = scope:target_region
+		scope:target_region = {
+			every_scope_state = {
+				limit = {
+					aro_is_acquire_states_target = yes
+				}
+				root = {
+					remove_from_variable_map = {
+						name = aro_acquire_states_targets
+						key = prev.state_region
+					}
+				}
+			}
 		}
 	}
 
 	on_invalid = {
-		remove_from_variable_map = {
-			name = aro_acquire_states_map
-			key = scope:target_region
+		scope:target_region = {
+			every_scope_state = {
+				limit = {
+					aro_is_acquire_states_target = yes
+				}
+				root = {
+					remove_from_variable_map = {
+						name = aro_acquire_states_targets
+						key = prev.state_region
+					}
+				}
+			}
 		}
 	}
 
@@ -86,6 +120,12 @@ ai_regional_objective_recover_claims = {
 		}
 	}
 
+	state_target = {
+		scope:target_state = {
+			has_claim_by = root
+		}
+	}
+
 	weight = {
 		value = 10
 
@@ -103,12 +143,13 @@ ai_regional_objective_recover_claims = {
 	}
 }
 
-ai_regional_objective_subjugate_country = { # TODO: expose the target to the player
+ai_regional_objective_subjugate_country = {
 	stances = { stance_conquer_region stance_colonize_region }
 
 	possible = {
 		scope:target_region = {
 			any_scope_country = {
+				is_local_country = scope:target_region
 				is_subject = no
 				country_rank < root.country_rank
 				ai_subject_value:root > 0
@@ -120,6 +161,7 @@ ai_regional_objective_subjugate_country = { # TODO: expose the target to the pla
 		scope:target_region = {
 			ordered_scope_country = {
 				limit = {
+					is_local_country = scope:target_region
 					is_subject = no
 					country_rank < root.country_rank
 				}
@@ -139,6 +181,19 @@ ai_regional_objective_subjugate_country = { # TODO: expose the target to the pla
 		"variable_map(aro_subjugate_country_map|scope:target_region)" ?= {
 			is_subject_of = root
 		}
+	}
+
+	invalid = {
+		NOT = {
+			"variable_map(aro_subjugate_country_map|scope:target_region)" ?= {
+				is_local_country = scope:target_region
+				any_scope_state = { region = scope:target_region }
+			}
+		}
+	}
+
+	country_target = {
+		"variable_map(aro_subjugate_country_map|scope:target_region)" ?= scope:target_country
 	}
 
 	on_complete = {
@@ -173,9 +228,7 @@ ai_regional_objective_befriend_countries = {
 	possible = {
 		scope:target_region = {
 			any_scope_country = {
-				country_rank < root.country_rank
-				relations:root <= relations_threshold:cordial
-				count >= 1
+				aro_is_befriend_countries_target = { REGION = scope:target_region }
 			}
 		}
 	}
@@ -187,8 +240,7 @@ ai_regional_objective_befriend_countries = {
 				scope:target_region = {
 					every_scope_country = {
 						limit = {
-							country_rank < root.country_rank
-							relations:root <= relations_threshold:cordial
+							aro_is_befriend_countries_target = { REGION = scope:target_region }
 						}
 						add = 1
 					}
@@ -206,10 +258,15 @@ ai_regional_objective_befriend_countries = {
 	complete = {
 		scope:target_region = {
 			any_scope_country = {
-				country_rank < root.country_rank
-				relations:root <= relations_threshold:cordial
+				aro_is_befriend_countries_target = { REGION = scope:target_region }
 				count < "root.variable_map(aro_befriend_countries_map|scope:target_region)"
 			}
+		}
+	}
+
+	country_target = {
+		scope:target_country = {
+			aro_is_befriend_countries_target = { REGION = scope:target_region }
 		}
 	}
 
@@ -232,12 +289,13 @@ ai_regional_objective_befriend_countries = {
 	}
 }
 
-ai_regional_objective_protect_country = { # TODO: expose the target to the player
+ai_regional_objective_protect_country = {
 	stances = { stance_protect_region }
 
 	possible = {
 		scope:target_region = {
 			any_scope_country = {
+				is_local_country = scope:target_region
 				country_rank < root.country_rank
 				is_subject = no
 				any_neighbouring_state = {
@@ -256,6 +314,7 @@ ai_regional_objective_protect_country = { # TODO: expose the target to the playe
 		scope:target_region = {
 			random_scope_country = {
 				limit = {
+					is_local_country = scope:target_region
 					country_rank < root.country_rank
 					is_subject = no
 					any_neighbouring_state = {
@@ -286,6 +345,19 @@ ai_regional_objective_protect_country = { # TODO: expose the target to the playe
 				is_subject_of = root
 			}
 		}
+	}
+
+	invalid = {
+		NOT = {
+			"variable_map(aro_protect_country_map|scope:target_region)" ?= {
+				is_local_country = scope:target_region
+				any_scope_state = { region = scope:target_region }
+			}
+		}
+	}
+
+	country_target = {
+		"variable_map(aro_protect_country_map|scope:target_region)" ?= scope:target_country
 	}
 
 	on_complete = {

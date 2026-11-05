@@ -89,6 +89,20 @@
 				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_REBELLING_SUBJECT_MULT
 			}
 		}
+
+		multiply = {
+			desc = "INFAMY_FROM_UNIFY_RUSSIA"
+			value = 1
+
+			if = {
+				limit = {
+					scope:diplomatic_play ?= {
+						is_diplomatic_play_type = dp_unify_russia
+					}
+				}
+				multiply = rcw_unify_russia_annex_infamy_mult
+			}
+		}
 	}
 
 	on_enforced = {

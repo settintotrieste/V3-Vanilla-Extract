@@ -51,8 +51,34 @@ static_treaty_acceptance = {
 	}
 
 	add = {
-		value = "scope:other_country.modifier:country_diplomatic_reputation_add"
 		desc = "DIPLOMATIC_REPUTATION_REASON"
+		value = "scope:other_country.modifier:country_diplomatic_reputation_add"
+		if = {
+			limit = {
+				root = {
+					NOT = {
+						has_law_or_variant = law_type:law_council_republic
+					}
+				}
+				scope:other_country = {
+					has_law_or_variant = law_type:law_council_republic
+				}
+			}
+			subtract = {
+				value = "scope:other_country.modifier:country_other_country_socialist_government_hostility_impact_add"
+				multiply = {
+					value = 1
+					add = "scope:other_country.modifier:country_other_country_socialist_government_hostility_impact_mult"
+				}
+			}
+			subtract = {
+				value = "scope:other_country.modifier:country_other_country_socialist_government_hostility_impact_add"
+				multiply = {
+					value = 1
+					add = "scope:other_country.modifier:country_other_country_socialist_government_hostility_impact_mult"
+				}
+			}
+		}
 	}
 
 	subtract = {
@@ -149,13 +175,15 @@ static_treaty_acceptance = {
 		}
 		if = {
 			limit = {
-				has_attitude = {
-					who = scope:other_country
-					attitude = cooperative
-				}
-				has_attitude = {
-					who = scope:other_country
-					attitude = protective
+				OR = {
+					has_attitude = {
+						who = scope:other_country
+						attitude = cooperative
+					}
+					has_attitude = {
+						who = scope:other_country
+						attitude = protective
+					}
 				}
 			}
 			value = 10
@@ -191,6 +219,58 @@ static_treaty_acceptance = {
 				}
 			}
 			value = -50
+		}
+	}
+
+	add = {
+		desc = "DIPLOMATIC_ACCEPTANCE_OVERLORD_ATTITUDE"
+		if = {
+			limit = {
+				is_subject = yes
+				NOT = { scope:other_country = top_overlord }
+				NOR = {
+					has_attitude = {
+						who = top_overlord
+						attitude = rebellious
+					}
+					has_attitude = {
+						who = top_overlord
+						attitude = defiant
+					}
+					has_attitude = {
+						who = top_overlord
+						attitude = antagonistic
+					}
+					has_attitude = {
+						who = top_overlord
+						attitude = belligerent
+					}
+					has_attitude = {
+						who = top_overlord
+						attitude = domineering
+					}
+				}
+				top_overlord = {
+					OR = {
+						has_attitude = {
+							who = scope:other_country
+							attitude = antagonistic
+						}
+						has_attitude = {
+							who = scope:other_country
+							attitude = domineering
+						}
+						has_attitude = {
+							who = scope:other_country
+							attitude = belligerent
+						}
+						any_rival_country = {
+							this = scope:other_country
+						}
+					}
+				}
+			}
+			value = -25
 		}
 	}
 
@@ -431,6 +511,20 @@ static_treaty_acceptance = {
 		add = {
 			desc = "TRIGGER_IS_HISTORICAL_TREATY_NONE"
 			value = 1000
+		}
+	}
+	else_if = {
+		limit = {
+			exists = scope:is_renegotiation
+			exists = scope:bad_faith_factor
+			scope:treaty_options.amended_treaty ?= {
+				is_historical_treaty = yes
+				remaining_binding_period > 0
+			}
+		}
+		add = {
+			desc = "TRIGGER_IS_HISTORICAL_TREATY_NONE"
+			value = -1000
 		}
 	}
 }

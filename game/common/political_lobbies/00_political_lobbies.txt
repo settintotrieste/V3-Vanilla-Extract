@@ -232,6 +232,7 @@
 					limit = {
 						OR = {
 							has_ideology = ideology:ideology_liberal
+							has_ideology = ideology:ideology_universalist
 							has_paternalist_ideology = yes
 						}
 					}
@@ -407,6 +408,7 @@
 				limit = {
 					OR = {
 						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_militarist
 						has_ideology = ideology:ideology_military_absolutist
 						leader ?= {
 							OR = {
@@ -1108,6 +1110,7 @@ lobby_anti_country = {
 						OR = {
 							has_ideology = ideology:ideology_paternalistic
 							has_ideology = ideology:ideology_liberal
+							has_ideology = ideology:ideology_universalist
 							has_ideology = ideology:ideology_magnatial
 							ig_has_carlist_ideology = yes
 							has_ideology = ideology:ideology_moderantist
@@ -1263,6 +1266,7 @@ lobby_anti_country = {
 				limit = {
 					OR = {
 						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_militarist
 						has_ideology = ideology:ideology_military_absolutist
 						leader ?= {
 							OR = {
@@ -1825,6 +1829,7 @@ lobby_pro_overlord = {
 				limit = {
 					OR = {
 						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_militarist
 						has_ideology = ideology:ideology_military_absolutist
 						leader ?= {
 							OR = {
@@ -2240,6 +2245,7 @@ lobby_anti_overlord = {
 				limit = {
 					OR = {
 						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_militarist
 						has_ideology = ideology:ideology_military_absolutist
 						leader ?= {
 							OR = {
